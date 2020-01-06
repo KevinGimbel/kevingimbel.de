@@ -4,26 +4,26 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/tutorial/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/tutorial/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/tutorial/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/tutorial/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/tutorial/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/tutorial/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/tutorial/</id>
+        <id>https://kevingimbel.de/tags/tutorial/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Pseudo Product Flags]]></title>
-            <link href="https://www.kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://www.kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://www.kevingimbel.de/2013/11/pseudo-product-flags/</id>
+                <id>https://kevingimbel.de/2013/11/pseudo-product-flags/</id>
             
             
             <published>2013-11-24T00:00:00+00:00</published>
@@ -143,11 +143,11 @@
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -157,11 +157,11 @@
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/interface" term="interface" label="interface" />
+                                <category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/tags/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     

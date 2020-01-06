@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>work on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
-    <link>https://www.kevingimbel.de/categories/work/</link>
+    <link>https://kevingimbel.de/categories/work/</link>
     <description>Recent content in work on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.kevingimbel.de/categories/work/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevingimbel.de/categories/work/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Labels in GMail</title>
-      <link>https://www.kevingimbel.de/2014/01/labels-in-gmail/</link>
+      <link>https://kevingimbel.de/2014/01/labels-in-gmail/</link>
       <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2014/01/labels-in-gmail/</guid>
+      <guid>https://kevingimbel.de/2014/01/labels-in-gmail/</guid>
       <description>In case your company is using GMail Business there&#39;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;ldquo;View&amp;rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</description>
     </item>
     

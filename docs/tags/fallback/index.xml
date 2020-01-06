@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fallback on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
-    <link>https://www.kevingimbel.de/tags/fallback/</link>
+    <link>https://kevingimbel.de/tags/fallback/</link>
     <description>Recent content in fallback on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.kevingimbel.de/tags/fallback/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevingimbel.de/tags/fallback/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Safe calc usage in CSS</title>
-      <link>https://www.kevingimbel.de/2020/01/safe-calc-usage-in-css/</link>
+      <link>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2020/01/safe-calc-usage-in-css/</guid>
+      <guid>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</guid>
       <description>calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
 The problem with calc is that if it doesn&#39;t work you may get a unexpected result. Take the following code for example:</description>
     </item>

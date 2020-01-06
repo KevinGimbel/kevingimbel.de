@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wildpark on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
-    <link>https://www.kevingimbel.de/tags/wildpark/</link>
+    <link>https://kevingimbel.de/tags/wildpark/</link>
     <description>Recent content in wildpark on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.kevingimbel.de/tags/wildpark/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevingimbel.de/tags/wildpark/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fasanerie</title>
-      <link>https://www.kevingimbel.de/photography/fasanerie/</link>
+      <link>https://kevingimbel.de/photography/fasanerie/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/photography/fasanerie/</guid>
+      <guid>https://kevingimbel.de/photography/fasanerie/</guid>
       <description>&amp;ldquo;Fasanerie&amp;rdquo; is the name of a local wildlife and forest park. It&#39;s free to enter and a very nice place to spent a family day.
 All images were edited with Darktable, a free open source Adobe Lightroom alternative.</description>
     </item>

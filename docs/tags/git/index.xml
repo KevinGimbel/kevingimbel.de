@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
-    <link>https://www.kevingimbel.de/tags/git/</link>
+    <link>https://kevingimbel.de/tags/git/</link>
     <description>Recent content in git on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Jan 2017 21:28:38 +0100</lastBuildDate>
     
-	<atom:link href="https://www.kevingimbel.de/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevingimbel.de/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deploy a static site with git</title>
-      <link>https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/</link>
+      <link>https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/</link>
       <pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate>
       
-      <guid>https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/</guid>
+      <guid>https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/</guid>
       <description>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to Hugo hosted on Uberspace. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed ($ hugo) it compiles the site from Markdown and HTML templates into a public directory with lots of folders and HTML files.</description>
     </item>
     

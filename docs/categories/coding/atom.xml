@@ -4,28 +4,28 @@
     
     
     
-            <link href="https://www.kevingimbel.de/categories/coding/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/categories/coding/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/categories/coding/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/categories/coding/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/categories/coding/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/categories/coding/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/categories/coding/</id>
+        <id>https://kevingimbel.de/categories/coding/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Hugo aliases and redirects]]></title>
-            <link href="https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates" />
-                <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
-                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates" />
+                <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/</id>
+                <id>https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/</id>
             
             
             <published>2020-01-06T00:00:00+00:00</published>
@@ -62,9 +62,9 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -74,11 +74,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_site" term="static_site" label="static_site" />
+                                <category scheme="https://kevingimbel.de/tags/static_site" term="static_site" label="static_site" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/seo" term="seo" label="seo" />
+                                <category scheme="https://kevingimbel.de/tags/seo" term="seo" label="seo" />
                             
                         
                     
@@ -89,15 +89,15 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[Hugo: ignore _index.md in list templates]]></title>
-            <link href="https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
-                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
+                <id>https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
             
             
             <published>2020-01-03T00:00:00+00:00</published>
@@ -121,11 +121,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -135,11 +135,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
                             
                         
                     
@@ -150,15 +150,15 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[Hugo: compare dates to flag old content]]></title>
-            <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-                <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
             
-                <id>https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</id>
+                <id>https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</id>
             
             
             <published>2020-01-02T00:00:00+00:00</published>
@@ -196,11 +196,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -210,11 +210,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
                             
                         
                     
@@ -225,15 +225,15 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[Safe calc usage in CSS]]></title>
-            <link href="https://www.kevingimbel.de/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
-                <link href="https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://www.kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://www.kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://www.kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
+                <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
+                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
             
-                <id>https://www.kevingimbel.de/2020/01/safe-calc-usage-in-css/</id>
+                <id>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</id>
             
             
             <published>2020-01-01T00:00:00+00:00</published>
@@ -271,11 +271,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -285,11 +285,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/calc" term="calc" label="calc" />
+                                <category scheme="https://kevingimbel.de/tags/calc" term="calc" label="calc" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/fallback" term="fallback" label="fallback" />
+                                <category scheme="https://kevingimbel.de/tags/fallback" term="fallback" label="fallback" />
                             
                         
                     
@@ -300,12 +300,12 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[Mastodon Embed Shortcode for hugo]]></title>
-            <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</id>
+                <id>https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</id>
             
             
             <published>2018-09-12T00:00:00+00:00</published>
@@ -385,9 +385,9 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -397,11 +397,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/shortcode" term="shortcode" label="shortcode" />
+                                <category scheme="https://kevingimbel.de/tags/shortcode" term="shortcode" label="shortcode" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/mastodon" term="mastodon" label="mastodon" />
+                                <category scheme="https://kevingimbel.de/tags/mastodon" term="mastodon" label="mastodon" />
                             
                         
                     
@@ -412,12 +412,12 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[TIL: Bash select]]></title>
-            <link href="https://www.kevingimbel.de/2018/04/til-bash-select/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2018/04/til-bash-select/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
             
-                <id>https://www.kevingimbel.de/2018/04/til-bash-select/</id>
+                <id>https://kevingimbel.de/2018/04/til-bash-select/</id>
             
             
             <published>2018-04-18T00:00:00+00:00</published>
@@ -477,9 +477,9 @@ Your answer: _
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                             
                         
                     
@@ -489,11 +489,11 @@ Your answer: _
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/til" term="til" label="til" />
+                                <category scheme="https://kevingimbel.de/tags/til" term="til" label="til" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/shell" term="shell" label="shell" />
+                                <category scheme="https://kevingimbel.de/tags/shell" term="shell" label="shell" />
                             
                         
                     
@@ -504,15 +504,15 @@ Your answer: _
         
         <entry>
             <title type="html"><![CDATA[CSS Custom Properties and a new look]]></title>
-            <link href="https://www.kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
-                <link href="https://www.kevingimbel.de/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
-                <link href="https://www.kevingimbel.de/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
-                <link href="https://www.kevingimbel.de/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
-                <link href="https://www.kevingimbel.de/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
+                <link href="https://kevingimbel.de/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
+                <link href="https://kevingimbel.de/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
+                <link href="https://kevingimbel.de/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
+                <link href="https://kevingimbel.de/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
+                <link href="https://kevingimbel.de/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
             
-                <id>https://www.kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</id>
+                <id>https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</id>
             
             
             <published>2017-11-26T10:56:13+01:00</published>
@@ -700,9 +700,9 @@ Your answer: _
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -712,15 +712,15 @@ Your answer: _
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/redesign" term="redesign" label="redesign" />
+                                <category scheme="https://kevingimbel.de/tags/redesign" term="redesign" label="redesign" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/personal" term="personal" label="personal" />
+                                <category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/modernization" term="modernization" label="modernization" />
+                                <category scheme="https://kevingimbel.de/tags/modernization" term="modernization" label="modernization" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/accessibility" term="accessibility" label="accessibility" />
+                                <category scheme="https://kevingimbel.de/tags/accessibility" term="accessibility" label="accessibility" />
                             
                         
                     
@@ -731,14 +731,14 @@ Your answer: _
         
         <entry>
             <title type="html"><![CDATA[Using the Terminal: The Prompt]]></title>
-            <link href="https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
-                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/</id>
+                <id>https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/</id>
             
             
             <published>2017-03-29T18:34:37+01:00</published>
@@ -751,7 +751,7 @@ Your answer: _
 <p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it'll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
 <h2 id="preface-vim">Preface: VIM</h2>
 <blockquote>
-<p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/
+<p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/
 #the-prompt">skip to the next section</a></p>
 </blockquote>
 <p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It's a bit weird to get used to at first but once you know your way around you'll become quite productive with it. It's easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
@@ -974,11 +974,11 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -988,11 +988,11 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/apps" term="apps" label="apps" />
+                                <category scheme="https://kevingimbel.de/tags/apps" term="apps" label="apps" />
                             
                         
                     
@@ -1003,12 +1003,12 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
         
         <entry>
             <title type="html"><![CDATA[Deploy a static site with git]]></title>
-            <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/</id>
+                <id>https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/</id>
             
             
             <published>2017-01-17T21:28:38+01:00</published>
@@ -1018,7 +1018,7 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
             <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let's Encrypt</a> to create SSL certificates and use HTTPS.</p>
 <h3 id="so-what-is-a-static-site">So, what is a &ldquo;static site&rdquo;?</h3>
 <blockquote>
-<p>If you already know the answer, <a href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
+<p>If you already know the answer, <a href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
 ">skip to the next section</a>!</p>
 </blockquote>
 <p>As the name suggest a static site is - well - <em>static</em>. There's no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
@@ -1099,11 +1099,11 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                             
                         
                     
@@ -1113,13 +1113,13 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/git" term="git" label="git" />
+                                <category scheme="https://kevingimbel.de/tags/git" term="git" label="git" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/deployment" term="deployment" label="deployment" />
+                                <category scheme="https://kevingimbel.de/tags/deployment" term="deployment" label="deployment" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
                             
                         
                     
@@ -1130,14 +1130,14 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
         
         <entry>
             <title type="html"><![CDATA[Bash script: ws]]></title>
-            <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
-                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://www.kevingimbel.de/2017/01/bash-script-ws/</id>
+                <id>https://kevingimbel.de/2017/01/bash-script-ws/</id>
             
             
             <published>2017-01-12T19:22:48+01:00</published>
@@ -1207,11 +1207,11 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                             
                         
                     
@@ -1221,17 +1221,17 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cli" term="cli" label="cli" />
+                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
+                                <category scheme="https://kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/automation" term="automation" label="automation" />
+                                <category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
                             
                         
                     
@@ -1242,15 +1242,15 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
         
         <entry>
             <title type="html"><![CDATA[Writing NodeJS cli tools]]></title>
-            <link href="https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://www.kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
             
-                <id>https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/</id>
+                <id>https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/</id>
             
             
             <published>2017-01-09T18:02:48+01:00</published>
@@ -1401,11 +1401,11 @@ echo &quot;Hello World!&quot;
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
+                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -1415,11 +1415,11 @@ echo &quot;Hello World!&quot;
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
+                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cli" term="cli" label="cli" />
+                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
                             
                         
                     
@@ -1430,12 +1430,12 @@ echo &quot;Hello World!&quot;
         
         <entry>
             <title type="html"><![CDATA[Gotcha: dockerignore]]></title>
-            <link href="https://www.kevingimbel.de/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-                <link href="https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
             
-                <id>https://www.kevingimbel.de/2016/12/gotcha-dockerignore/</id>
+                <id>https://kevingimbel.de/2016/12/gotcha-dockerignore/</id>
             
             
             <published>2016-12-21T18:02:42+01:00</published>
@@ -1465,9 +1465,9 @@ echo &quot;Hello World!&quot;
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                             
                         
                     
@@ -1477,9 +1477,9 @@ echo &quot;Hello World!&quot;
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/docker" term="docker" label="docker" />
+                                <category scheme="https://kevingimbel.de/tags/docker" term="docker" label="docker" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/development" term="development" label="development" />
+                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
                             
                         
                     
@@ -1490,11 +1490,11 @@ echo &quot;Hello World!&quot;
         
         <entry>
             <title type="html"><![CDATA[Farewell Jekyll, Hello Hugo]]></title>
-            <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
+                <link href="https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
             
-                <id>https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</id>
+                <id>https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</id>
             
             
             <published>2016-11-16T19:04:42+01:00</published>
@@ -1526,9 +1526,9 @@ $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</s
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -1538,13 +1538,13 @@ $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</s
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/go" term="go" label="go" />
+                                <category scheme="https://kevingimbel.de/tags/go" term="go" label="go" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/development" term="development" label="development" />
+                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/personal" term="personal" label="personal" />
+                                <category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal" />
                             
                         
                     
@@ -1555,11 +1555,11 @@ $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</s
         
         <entry>
             <title type="html"><![CDATA[Speed up your Jekyll workflow]]></title>
-            <link href="https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
             
-                <id>https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</id>
+                <id>https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</id>
             
             
             <published>2015-12-16T00:00:00+00:00</published>
@@ -1593,11 +1593,11 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/categories/cms" term="cms" label="cms" />
                             
                         
                     
@@ -1607,11 +1607,11 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
+                                <category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/ruby" term="ruby" label="ruby" />
+                                <category scheme="https://kevingimbel.de/tags/ruby" term="ruby" label="ruby" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/development" term="development" label="development" />
+                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
                             
                         
                     
@@ -1622,10 +1622,10 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
         
         <entry>
             <title type="html"><![CDATA[ReactJS - Hello World!]]></title>
-            <link href="https://www.kevingimbel.de/2015/05/reactjs-hello-world/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/05/reactjs-hello-world/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2015/05/reactjs-hello-world/</id>
+                <id>https://kevingimbel.de/2015/05/reactjs-hello-world/</id>
             
             
             <published>2015-05-07T00:00:00+00:00</published>
@@ -1733,11 +1733,11 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -1747,7 +1747,7 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/react" term="react" label="react" />
+                                <category scheme="https://kevingimbel.de/tags/react" term="react" label="react" />
                             
                         
                     
@@ -1758,15 +1758,15 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
         
         <entry>
             <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
-            <link href="https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
-                <link href="https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://www.kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
+                <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/</id>
+                <id>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</id>
             
             
             <published>2015-03-10T00:00:00+00:00</published>
@@ -1977,11 +1977,11 @@ on which we don't have any influence.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -1991,11 +1991,11 @@ on which we don't have any influence.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                             
                         
                     
@@ -2006,13 +2006,13 @@ on which we don't have any influence.</p>
         
         <entry>
             <title type="html"><![CDATA[Snippet: SASS Source Maps with Gulp]]></title>
-            <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
             
-                <id>https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/</id>
+                <id>https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/</id>
             
             
             <published>2015-01-22T00:00:00+00:00</published>
@@ -2072,13 +2072,13 @@ image to view it in full-size.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
+                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -2088,13 +2088,13 @@ image to view it in full-size.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/gulp" term="gulp" label="gulp" />
+                                <category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/sass" term="sass" label="sass" />
+                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
                             
                         
                     
@@ -2105,14 +2105,14 @@ image to view it in full-size.</p>
         
         <entry>
             <title type="html"><![CDATA[Getting into vim - again]]></title>
-            <link href="https://www.kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
-                <link href="https://www.kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+                <link href="https://kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
+                <link href="https://kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
             
-                <id>https://www.kevingimbel.de/2015/01/getting-into-vim-again/</id>
+                <id>https://kevingimbel.de/2015/01/getting-into-vim-again/</id>
             
             
             <published>2015-01-21T00:00:00+00:00</published>
@@ -2225,9 +2225,9 @@ return to my beloved Sublime Text 3.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -2237,11 +2237,11 @@ return to my beloved Sublime Text 3.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/vim" term="vim" label="vim" />
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
                             
                         
                     
@@ -2252,11 +2252,11 @@ return to my beloved Sublime Text 3.</p>
         
         <entry>
             <title type="html"><![CDATA[Snippet: theme-color for Android 5.0]]></title>
-            <link href="https://www.kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://www.kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/</id>
+                <id>https://kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/</id>
             
             
             <published>2014-11-21T00:00:00+00:00</published>
@@ -2282,11 +2282,11 @@ the page and in the multi-tasking overview.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -2296,11 +2296,11 @@ the page and in the multi-tasking overview.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/android" term="android" label="android" />
+                                <category scheme="https://kevingimbel.de/tags/android" term="android" label="android" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
+                                <category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/html" term="html" label="html" />
+                                <category scheme="https://kevingimbel.de/tags/html" term="html" label="html" />
                             
                         
                     
@@ -2311,11 +2311,11 @@ the page and in the multi-tasking overview.</p>
         
         <entry>
             <title type="html"><![CDATA[Magento: Add fields to the Admin Backend]]></title>
-            <link href="https://www.kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="related" type="text/html" title="Magento: get and set variables in config.xml" />
+                <link href="https://kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="related" type="text/html" title="Magento: get and set variables in config.xml" />
             
-                <id>https://www.kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/</id>
+                <id>https://kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/</id>
             
             
             <published>2014-08-27T00:00:00+00:00</published>
@@ -2443,13 +2443,13 @@ structure of Magento.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/magento" term="magento" label="magento" />
+                                <category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/php" term="php" label="php" />
+                                <category scheme="https://kevingimbel.de/categories/php" term="php" label="php" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/backend" term="backend" label="backend" />
+                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
                             
                         
                     
@@ -2459,11 +2459,11 @@ structure of Magento.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/magento" term="magento" label="magento" />
+                                <category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/xml" term="xml" label="xml" />
+                                <category scheme="https://kevingimbel.de/tags/xml" term="xml" label="xml" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/php" term="php" label="php" />
+                                <category scheme="https://kevingimbel.de/tags/php" term="php" label="php" />
                             
                         
                     
@@ -2474,15 +2474,15 @@ structure of Magento.</p>
         
         <entry>
             <title type="html"><![CDATA[Endless Multi-Dimensional Navigation]]></title>
-            <link href="https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://www.kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://www.kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</id>
+                <id>https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</id>
             
             
             <published>2014-08-22T00:00:00+00:00</published>
@@ -2545,13 +2545,13 @@ very similar to <code>this</code>, yet even more flexible!</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
                             
                         
                     
@@ -2561,7 +2561,7 @@ very similar to <code>this</code>, yet even more flexible!</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                             
                         
                     
@@ -2572,15 +2572,15 @@ very similar to <code>this</code>, yet even more flexible!</p>
         
         <entry>
             <title type="html"><![CDATA[Conditional CSS]]></title>
-            <link href="https://www.kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://www.kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://www.kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://www.kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
+                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://www.kevingimbel.de/2014/07/conditional-css/</id>
+                <id>https://kevingimbel.de/2014/07/conditional-css/</id>
             
             
             <published>2014-07-31T00:00:00+00:00</published>
@@ -2705,9 +2705,9 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -2717,9 +2717,9 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/tags/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -2730,14 +2730,14 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
         
         <entry>
             <title type="html"><![CDATA[A closer look to closure]]></title>
-            <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://www.kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://www.kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/</id>
+                <id>https://kevingimbel.de/2014/07/a-closer-look-to-closure/</id>
             
             
             <published>2014-07-20T00:00:00+00:00</published>
@@ -2819,11 +2819,11 @@ declares myFunction in the globale scope.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -2833,11 +2833,11 @@ declares myFunction in the globale scope.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/closure" term="closure" label="closure" />
+                                <category scheme="https://kevingimbel.de/tags/closure" term="closure" label="closure" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/scoping" term="scoping" label="scoping" />
+                                <category scheme="https://kevingimbel.de/tags/scoping" term="scoping" label="scoping" />
                             
                         
                     
@@ -2848,12 +2848,12 @@ declares myFunction in the globale scope.</p>
         
         <entry>
             <title type="html"><![CDATA[Noobish VIM]]></title>
-            <link href="https://www.kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
-                <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+                <link href="https://kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
             
-                <id>https://www.kevingimbel.de/2014/07/noobish-vim/</id>
+                <id>https://kevingimbel.de/2014/07/noobish-vim/</id>
             
             
             <published>2014-07-13T00:00:00+00:00</published>
@@ -2892,9 +2892,9 @@ completly to VIM to dig into it and see if it can replace Sublime Text one day.<
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -2904,9 +2904,9 @@ completly to VIM to dig into it and see if it can replace Sublime Text one day.<
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/vim" term="vim" label="vim" />
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                             
                         
                     
@@ -2917,11 +2917,11 @@ completly to VIM to dig into it and see if it can replace Sublime Text one day.<
         
         <entry>
             <title type="html"><![CDATA[Useful Web Developer Tools]]></title>
-            <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
             
-                <id>https://www.kevingimbel.de/2014/06/useful-web-developer-tools/</id>
+                <id>https://kevingimbel.de/2014/06/useful-web-developer-tools/</id>
             
             
             <published>2014-06-13T00:00:00+00:00</published>
@@ -3005,9 +3005,9 @@ colored, good looking bash prompt.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -3017,11 +3017,11 @@ colored, good looking bash prompt.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
+                                <category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
                             
                         
                     
@@ -3032,10 +3032,10 @@ colored, good looking bash prompt.</p>
         
         <entry>
             <title type="html"><![CDATA[Magento: get and set variables in config.xml]]></title>
-            <link href="https://www.kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/</id>
+                <id>https://kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/</id>
             
             
             <published>2014-05-27T00:00:00+00:00</published>
@@ -3108,9 +3108,9 @@ have a fallback. In this case it just goes to the generic info eMail of the clie
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/magento" term="magento" label="magento" />
+                                <category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento" />
                             
                         
                     
@@ -3120,9 +3120,9 @@ have a fallback. In this case it just goes to the generic info eMail of the clie
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/magento" term="magento" label="magento" />
+                                <category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/mvc" term="mvc" label="mvc" />
+                                <category scheme="https://kevingimbel.de/tags/mvc" term="mvc" label="mvc" />
                             
                         
                     
@@ -3133,11 +3133,11 @@ have a fallback. In this case it just goes to the generic info eMail of the clie
         
         <entry>
             <title type="html"><![CDATA[Vim - first impression]]></title>
-            <link href="https://www.kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+                <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
             
-                <id>https://www.kevingimbel.de/2014/05/vim-first-impression/</id>
+                <id>https://kevingimbel.de/2014/05/vim-first-impression/</id>
             
             
             <published>2014-05-26T00:00:00+00:00</published>
@@ -3260,9 +3260,9 @@ visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -3272,9 +3272,9 @@ visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/vim" term="vim" label="vim" />
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
                             
                         
                     
@@ -3285,13 +3285,13 @@ visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
         
         <entry>
             <title type="html"><![CDATA[Passing Arguments in JavaScript]]></title>
-            <link href="https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://www.kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/</id>
+                <id>https://kevingimbel.de/2014/05/passing-arguments-in-javascript/</id>
             
             
             <published>2014-05-23T00:00:00+00:00</published>
@@ -3376,13 +3376,13 @@ Calling the function would now look like this:</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -3392,7 +3392,7 @@ Calling the function would now look like this:</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                             
                         
                     
@@ -3403,12 +3403,12 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Pure JavaScript slider]]></title>
-            <link href="https://www.kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://www.kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://www.kevingimbel.de/2014/02/pure-javascript-slider/</id>
+                <id>https://kevingimbel.de/2014/02/pure-javascript-slider/</id>
             
             
             <published>2014-02-22T00:00:00+00:00</published>
@@ -3491,13 +3491,13 @@ Calling the function would now look like this:</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -3507,7 +3507,7 @@ Calling the function would now look like this:</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                             
                         
                     
@@ -3518,11 +3518,11 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Bullgit loves Jekyll]]></title>
-            <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+                <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
             
-                <id>https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/</id>
+                <id>https://kevingimbel.de/2014/01/bullgit-loves-jekyll/</id>
             
             
             <published>2014-01-06T00:00:00+00:00</published>
@@ -3683,9 +3683,9 @@ Calling the function would now look like this:</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -3695,11 +3695,11 @@ Calling the function would now look like this:</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
+                                <category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
                             
                         
                     
@@ -3710,14 +3710,14 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Web Development in 2014]]></title>
-            <link href="https://www.kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://www.kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://www.kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://www.kevingimbel.de/2014/01/web-development-in-2014/</id>
+                <id>https://kevingimbel.de/2014/01/web-development-in-2014/</id>
             
             
             <published>2014-01-02T00:00:00+00:00</published>
@@ -3910,11 +3910,11 @@ Calling the function would now look like this:</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
+                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -3924,7 +3924,7 @@ Calling the function would now look like this:</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                             
                         
                     
@@ -3935,11 +3935,11 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Brackets vs. Sublime Text]]></title>
-            <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
             
-                <id>https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/</id>
+                <id>https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/</id>
             
             
             <published>2013-12-25T00:00:00+00:00</published>
@@ -3976,9 +3976,9 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -3988,11 +3988,11 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
+                                <category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/software" term="software" label="software" />
+                                <category scheme="https://kevingimbel.de/tags/software" term="software" label="software" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                             
                         
                     
@@ -4003,13 +4003,13 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
         
         <entry>
             <title type="html"><![CDATA[Pseudo Product Flags]]></title>
-            <link href="https://www.kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://www.kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://www.kevingimbel.de/2013/11/pseudo-product-flags/</id>
+                <id>https://kevingimbel.de/2013/11/pseudo-product-flags/</id>
             
             
             <published>2013-11-24T00:00:00+00:00</published>
@@ -4129,11 +4129,11 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -4143,11 +4143,11 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/interface" term="interface" label="interface" />
+                                <category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/tags/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -4158,11 +4158,11 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
         
         <entry>
             <title type="html"><![CDATA[To infinity and beyond]]></title>
-            <link href="https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/</id>
+                <id>https://kevingimbel.de/2013/11/to-infinity-and-beyond/</id>
             
             
             <published>2013-11-18T00:00:00+00:00</published>
@@ -4219,11 +4219,11 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -4233,9 +4233,9 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/vanilla_js" term="vanilla_js" label="vanilla_js" />
+                                <category scheme="https://kevingimbel.de/tags/vanilla_js" term="vanilla_js" label="vanilla_js" />
                             
                         
                     
@@ -4246,12 +4246,12 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
         
         <entry>
             <title type="html"><![CDATA[Custom Radio Buttons]]></title>
-            <link href="https://www.kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://www.kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://www.kevingimbel.de/2013/10/custom-radio-buttons/</id>
+                <id>https://kevingimbel.de/2013/10/custom-radio-buttons/</id>
             
             
             <published>2013-10-28T00:00:00+00:00</published>
@@ -4307,9 +4307,9 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -4319,11 +4319,11 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/interface" term="interface" label="interface" />
+                                <category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/design" term="design" label="design" />
+                                <category scheme="https://kevingimbel.de/tags/design" term="design" label="design" />
                             
                         
                     
@@ -4334,10 +4334,10 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
         
         <entry>
             <title type="html"><![CDATA[Ghost in the shell]]></title>
-            <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2013/10/ghost-in-the-shell/</id>
+                <id>https://kevingimbel.de/2013/10/ghost-in-the-shell/</id>
             
             
             <published>2013-10-16T00:00:00+00:00</published>
@@ -4434,11 +4434,11 @@ Regardless of all the good aspects, overall I'm disappointed by Ghost. I'll stic
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/backend" term="backend" label="backend" />
+                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
                             
                         
                     
@@ -4448,9 +4448,9 @@ Regardless of all the good aspects, overall I'm disappointed by Ghost. I'll stic
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
+                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
                             
                         
                     
@@ -4461,10 +4461,10 @@ Regardless of all the good aspects, overall I'm disappointed by Ghost. I'll stic
         
         <entry>
             <title type="html"><![CDATA[i-js]]></title>
-            <link href="https://www.kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2013/10/i-js/</id>
+                <id>https://kevingimbel.de/2013/10/i-js/</id>
             
             
             <published>2013-10-14T00:00:00+00:00</published>
@@ -4510,9 +4510,9 @@ For example you may thing: <em>&ldquo;I want to get the Object with the class na
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
                             
                         
                     
@@ -4522,7 +4522,7 @@ For example you may thing: <em>&ldquo;I want to get the Object with the class na
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                             
                         
                     
@@ -4533,11 +4533,11 @@ For example you may thing: <em>&ldquo;I want to get the Object with the class na
         
         <entry>
             <title type="html"><![CDATA[From 0 To Sass]]></title>
-            <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://www.kevingimbel.de/2013/10/from-0-to-sass/</id>
+                <id>https://kevingimbel.de/2013/10/from-0-to-sass/</id>
             
             
             <published>2013-10-02T00:00:00+00:00</published>
@@ -4710,9 +4710,9 @@ If you want to have an example what the <code>style.scss</code> would look like,
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -4722,11 +4722,11 @@ If you want to have an example what the <code>style.scss</code> would look like,
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/sass" term="sass" label="sass" />
+                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
+                                <category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
                             
                         
                     
@@ -4737,10 +4737,10 @@ If you want to have an example what the <code>style.scss</code> would look like,
         
         <entry>
             <title type="html"><![CDATA[A bit sticky]]></title>
-            <link href="https://www.kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2013/09/a-bit-sticky/</id>
+                <id>https://kevingimbel.de/2013/09/a-bit-sticky/</id>
             
             
             <published>2013-09-20T00:00:00+00:00</published>
@@ -4806,9 +4806,9 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -4818,7 +4818,7 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                             
                         
                     
@@ -4829,10 +4829,10 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
         
         <entry>
             <title type="html"><![CDATA[Endless scrolling]]></title>
-            <link href="https://www.kevingimbel.de/2013/09/endless-scrolling/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/09/endless-scrolling/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2013/09/endless-scrolling/</id>
+                <id>https://kevingimbel.de/2013/09/endless-scrolling/</id>
             
             
             <published>2013-09-01T00:00:00+00:00</published>
@@ -4851,9 +4851,9 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
+                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
                             
                         
                     
@@ -4863,13 +4863,13 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/code" term="code" label="code" />
+                                <category scheme="https://kevingimbel.de/tags/code" term="code" label="code" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/ui" term="ui" label="UI" />
+                                <category scheme="https://kevingimbel.de/tags/ui" term="ui" label="UI" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/ux" term="ux" label="UX" />
+                                <category scheme="https://kevingimbel.de/tags/ux" term="ux" label="UX" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/thoughts" term="thoughts" label="thoughts" />
+                                <category scheme="https://kevingimbel.de/tags/thoughts" term="thoughts" label="thoughts" />
                             
                         
                     
@@ -4880,10 +4880,10 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
         
         <entry>
             <title type="html"><![CDATA[Is this :valid?]]></title>
-            <link href="https://www.kevingimbel.de/2013/08/is-this-valid/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/08/is-this-valid/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2013/08/is-this-valid/</id>
+                <id>https://kevingimbel.de/2013/08/is-this-valid/</id>
             
             
             <published>2013-08-16T00:00:00+00:00</published>
@@ -4927,9 +4927,9 @@ When the user starts typing the color will be red, as soon as he writes <code>yo
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -4942,10 +4942,10 @@ When the user starts typing the color will be red, as soon as he writes <code>yo
         
         <entry>
             <title type="html"><![CDATA[px vs em]]></title>
-            <link href="https://www.kevingimbel.de/2013/08/px-vs-em/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/08/px-vs-em/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2013/08/px-vs-em/</id>
+                <id>https://kevingimbel.de/2013/08/px-vs-em/</id>
             
             
             <published>2013-08-15T00:00:00+00:00</published>
@@ -4980,9 +4980,9 @@ So if you create a new responsive website, and you should always do so, do your 
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     

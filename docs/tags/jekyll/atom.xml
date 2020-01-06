@@ -4,24 +4,24 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/jekyll/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/jekyll/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/jekyll/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/jekyll/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/jekyll/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/jekyll/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/jekyll/</id>
+        <id>https://kevingimbel.de/tags/jekyll/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Speed up your Jekyll workflow]]></title>
-            <link href="https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
             
-                <id>https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</id>
+                <id>https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</id>
             
             
             <published>2015-12-16T00:00:00+00:00</published>
@@ -55,11 +55,11 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/categories/cms" term="cms" label="cms" />
                             
                         
                     
@@ -69,11 +69,11 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
+                                <category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/ruby" term="ruby" label="ruby" />
+                                <category scheme="https://kevingimbel.de/tags/ruby" term="ruby" label="ruby" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/development" term="development" label="development" />
+                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
                             
                         
                     
@@ -84,11 +84,11 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
         
         <entry>
             <title type="html"><![CDATA[Bullgit loves Jekyll]]></title>
-            <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+                <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
             
-                <id>https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/</id>
+                <id>https://kevingimbel.de/2014/01/bullgit-loves-jekyll/</id>
             
             
             <published>2014-01-06T00:00:00+00:00</published>
@@ -249,9 +249,9 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -261,11 +261,11 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
+                                <category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
                             
                         
                     

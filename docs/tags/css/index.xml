@@ -2,96 +2,96 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>css on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
-    <link>https://www.kevingimbel.de/tags/css/</link>
+    <link>https://kevingimbel.de/tags/css/</link>
     <description>Recent content in css on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.kevingimbel.de/tags/css/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevingimbel.de/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Safe calc usage in CSS</title>
-      <link>https://www.kevingimbel.de/2020/01/safe-calc-usage-in-css/</link>
+      <link>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2020/01/safe-calc-usage-in-css/</guid>
+      <guid>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</guid>
       <description>calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
 The problem with calc is that if it doesn&#39;t work you may get a unexpected result. Take the following code for example:</description>
     </item>
     
     <item>
       <title>CSS Custom Properties and a new look</title>
-      <link>https://www.kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</link>
+      <link>https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</link>
       <pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate>
       
-      <guid>https://www.kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</guid>
+      <guid>https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</guid>
       <description>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (aka CSS variables).</description>
     </item>
     
     <item>
       <title>Getting into Performance Measurement</title>
-      <link>https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/</link>
+      <link>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</link>
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/</guid>
+      <guid>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</guid>
       <description>I&#39;ve spent the past week developing some features for our own website at work. We&#39;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&#39;s way easier to keep an overview and with a good overview of data flow and available data it&#39;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</description>
     </item>
     
     <item>
       <title>Conditional CSS</title>
-      <link>https://www.kevingimbel.de/2014/07/conditional-css/</link>
+      <link>https://kevingimbel.de/2014/07/conditional-css/</link>
       <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2014/07/conditional-css/</guid>
+      <guid>https://kevingimbel.de/2014/07/conditional-css/</guid>
       <description>While there&#39;s a lot of talking about CSS writing styles, organization styles and if it&#39;s maybe better or not to avoid pre-processors or frameworks there&#39;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&#39;d like to talk a bit about conditional CSS that I&#39;ve been using in production and that I think can improve the overall logic of CSS.</description>
     </item>
     
     <item>
       <title>Web Development in 2014</title>
-      <link>https://www.kevingimbel.de/2014/01/web-development-in-2014/</link>
+      <link>https://kevingimbel.de/2014/01/web-development-in-2014/</link>
       <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2014/01/web-development-in-2014/</guid>
+      <guid>https://kevingimbel.de/2014/01/web-development-in-2014/</guid>
       <description>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&#39;s one thing that I&#39;d like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&#39;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</description>
     </item>
     
     <item>
       <title>Pseudo Product Flags</title>
-      <link>https://www.kevingimbel.de/2013/11/pseudo-product-flags/</link>
+      <link>https://kevingimbel.de/2013/11/pseudo-product-flags/</link>
       <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2013/11/pseudo-product-flags/</guid>
+      <guid>https://kevingimbel.de/2013/11/pseudo-product-flags/</guid>
       <description>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &amp;ldquo;Problem&amp;rdquo; with this task was that it&#39;s not only a few different length, it&#39;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &amp;ldquo;fixed&amp;rdquo; solution, like applying a max-width of let&#39;s say 20em, isn&#39;t the best solution for this so I ended up creating a flexible solution.</description>
     </item>
     
     <item>
       <title>Custom Radio Buttons</title>
-      <link>https://www.kevingimbel.de/2013/10/custom-radio-buttons/</link>
+      <link>https://kevingimbel.de/2013/10/custom-radio-buttons/</link>
       <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2013/10/custom-radio-buttons/</guid>
+      <guid>https://kevingimbel.de/2013/10/custom-radio-buttons/</guid>
       <description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&#39;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
 A few years ago I had to do this once and I remember doing it with an image and background-position but as of today I really love pseudo elements and &amp;ldquo;Look-Ma-No-Image!</description>
     </item>
     
     <item>
       <title>From 0 To Sass</title>
-      <link>https://www.kevingimbel.de/2013/10/from-0-to-sass/</link>
+      <link>https://kevingimbel.de/2013/10/from-0-to-sass/</link>
       <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2013/10/from-0-to-sass/</guid>
+      <guid>https://kevingimbel.de/2013/10/from-0-to-sass/</guid>
       <description>If you&#39;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&#39;s fair to say that they&#39;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
 Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</description>
     </item>
     
     <item>
       <title>A bit sticky</title>
-      <link>https://www.kevingimbel.de/2013/09/a-bit-sticky/</link>
+      <link>https://kevingimbel.de/2013/09/a-bit-sticky/</link>
       <pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2013/09/a-bit-sticky/</guid>
+      <guid>https://kevingimbel.de/2013/09/a-bit-sticky/</guid>
       <description>I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it&#39;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
 position:sticky is a pretty handy feature that allows you to stick an element to the top of the page (or wherever you want) until the parent element is moved out of the screen.
 Basic Markup To get an idea of how position:sticky works I made some basic markup.</description>

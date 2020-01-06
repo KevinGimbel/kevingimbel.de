@@ -1,4 +1,4 @@
-baseURL = "https://www.kevingimbel.de"
+baseURL = "https://kevingimbel.de"
 languageCode = "en-us"
 title = "Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer"
 theme = ["hugo-atom-feed"]

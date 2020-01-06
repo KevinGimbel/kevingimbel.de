@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>javascript on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
-    <link>https://www.kevingimbel.de/tags/javascript/</link>
+    <link>https://kevingimbel.de/tags/javascript/</link>
     <description>Recent content in javascript on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Jan 2017 18:02:48 +0100</lastBuildDate>
     
-	<atom:link href="https://www.kevingimbel.de/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevingimbel.de/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Writing NodeJS cli tools</title>
-      <link>https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/</link>
+      <link>https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/</link>
       <pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate>
       
-      <guid>https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/</guid>
+      <guid>https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/</guid>
       <description>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, creating apache vhosts files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.
 Shebang  If you already know what a Shebang is skip to the next section</description>
     </item>
     
     <item>
       <title>Getting into Performance Measurement</title>
-      <link>https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/</link>
+      <link>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</link>
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/</guid>
+      <guid>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</guid>
       <description>I&#39;ve spent the past week developing some features for our own website at work. We&#39;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&#39;s way easier to keep an overview and with a good overview of data flow and available data it&#39;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</description>
     </item>
     
     <item>
       <title>Endless Multi-Dimensional Navigation</title>
-      <link>https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</link>
+      <link>https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</link>
       <pubDate>Fri, 22 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</guid>
+      <guid>https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</guid>
       <description>The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on CodePen. My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an open class). The JavaScript for this looks like this:
 var d = document, trigger = d.</description>
     </item>
     
     <item>
       <title>A closer look to closure</title>
-      <link>https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/</link>
+      <link>https://kevingimbel.de/2014/07/a-closer-look-to-closure/</link>
       <pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/</guid>
+      <guid>https://kevingimbel.de/2014/07/a-closer-look-to-closure/</guid>
       <description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&#39;s good to have at least basic understanding of JavaScript.
 So before I start I&#39;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description>
     </item>
     
     <item>
       <title>Passing Arguments in JavaScript</title>
-      <link>https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/</link>
+      <link>https://kevingimbel.de/2014/05/passing-arguments-in-javascript/</link>
       <pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/</guid>
+      <guid>https://kevingimbel.de/2014/05/passing-arguments-in-javascript/</guid>
       <description>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &amp;ldquo;Secrets of the JavaScript Ninja&amp;rdquo; by the amazing John Resig and try to play around with JavaScript whenever I&#39;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&#39;t check for every possible thingy. Anyway, I&#39;ll cover this in a small write-up aka a blog post.</description>
     </item>
     
     <item>
       <title>Pure JavaScript slider</title>
-      <link>https://www.kevingimbel.de/2014/02/pure-javascript-slider/</link>
+      <link>https://kevingimbel.de/2014/02/pure-javascript-slider/</link>
       <pubDate>Sat, 22 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2014/02/pure-javascript-slider/</guid>
+      <guid>https://kevingimbel.de/2014/02/pure-javascript-slider/</guid>
       <description>The great thing when you&#39;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&#39;m very proud of my back to top script even though it&#39;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&#39;t be that much fun. However, I made another JavaScript thing I&#39;m proud of: A pure JavaScript slider.</description>
     </item>
     
     <item>
       <title>To infinity and beyond</title>
-      <link>https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/</link>
+      <link>https://kevingimbel.de/2013/11/to-infinity-and-beyond/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/</guid>
+      <guid>https://kevingimbel.de/2013/11/to-infinity-and-beyond/</guid>
       <description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&#39;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&#39;m doing. Yesterday night&#39;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&#39;s where the title comes from.</description>
     </item>
     
     <item>
       <title>i-js</title>
-      <link>https://www.kevingimbel.de/2013/10/i-js/</link>
+      <link>https://kevingimbel.de/2013/10/i-js/</link>
       <pubDate>Mon, 14 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.kevingimbel.de/2013/10/i-js/</guid>
+      <guid>https://kevingimbel.de/2013/10/i-js/</guid>
       <description>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.
 After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to I and here comes the fun part: While learning JS I build i.</description>
     </item>

@@ -4,28 +4,28 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/cms/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/cms/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/cms/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/cms/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/cms/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/cms/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/cms/</id>
+        <id>https://kevingimbel.de/tags/cms/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Hugo: ignore _index.md in list templates]]></title>
-            <link href="https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
-                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
+                <id>https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
             
             
             <published>2020-01-03T00:00:00+00:00</published>
@@ -49,11 +49,11 @@
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -63,11 +63,11 @@
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
                             
                         
                     
@@ -78,15 +78,15 @@
         
         <entry>
             <title type="html"><![CDATA[Hugo: compare dates to flag old content]]></title>
-            <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-                <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
             
-                <id>https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</id>
+                <id>https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</id>
             
             
             <published>2020-01-02T00:00:00+00:00</published>
@@ -124,11 +124,11 @@
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -138,11 +138,11 @@
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
                             
                         
                     
@@ -153,11 +153,11 @@
         
         <entry>
             <title type="html"><![CDATA[Bullgit loves Jekyll]]></title>
-            <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+                <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
             
-                <id>https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/</id>
+                <id>https://kevingimbel.de/2014/01/bullgit-loves-jekyll/</id>
             
             
             <published>2014-01-06T00:00:00+00:00</published>
@@ -318,9 +318,9 @@
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -330,11 +330,11 @@
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
+                                <category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
                             
                         
                     
@@ -345,10 +345,10 @@
         
         <entry>
             <title type="html"><![CDATA[Ghost in the shell]]></title>
-            <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2013/10/ghost-in-the-shell/</id>
+                <id>https://kevingimbel.de/2013/10/ghost-in-the-shell/</id>
             
             
             <published>2013-10-16T00:00:00+00:00</published>
@@ -445,11 +445,11 @@ Regardless of all the good aspects, overall I'm disappointed by Ghost. I'll stic
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/backend" term="backend" label="backend" />
+                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
                             
                         
                     
@@ -459,9 +459,9 @@ Regardless of all the good aspects, overall I'm disappointed by Ghost. I'll stic
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
+                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
                             
                         
                     

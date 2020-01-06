@@ -4,24 +4,24 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/software/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/software/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/software/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/software/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/software/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/software/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/software/</id>
+        <id>https://kevingimbel.de/tags/software/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Brackets vs. Sublime Text]]></title>
-            <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
             
-                <id>https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/</id>
+                <id>https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/</id>
             
             
             <published>2013-12-25T00:00:00+00:00</published>
@@ -58,9 +58,9 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -70,11 +70,11 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
+                                <category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/software" term="software" label="software" />
+                                <category scheme="https://kevingimbel.de/tags/software" term="software" label="software" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                             
                         
                     

@@ -4,24 +4,24 @@
     
     
     
-            <link href="https://www.kevingimbel.de/categories/php/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/categories/php/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/categories/php/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/categories/php/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/categories/php/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/categories/php/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/categories/php/</id>
+        <id>https://kevingimbel.de/categories/php/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Magento: Add fields to the Admin Backend]]></title>
-            <link href="https://www.kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="related" type="text/html" title="Magento: get and set variables in config.xml" />
+                <link href="https://kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="related" type="text/html" title="Magento: get and set variables in config.xml" />
             
-                <id>https://www.kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/</id>
+                <id>https://kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/</id>
             
             
             <published>2014-08-27T00:00:00+00:00</published>
@@ -149,13 +149,13 @@ structure of Magento.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/magento" term="magento" label="magento" />
+                                <category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/php" term="php" label="php" />
+                                <category scheme="https://kevingimbel.de/categories/php" term="php" label="php" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/backend" term="backend" label="backend" />
+                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
                             
                         
                     
@@ -165,11 +165,11 @@ structure of Magento.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/magento" term="magento" label="magento" />
+                                <category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/xml" term="xml" label="xml" />
+                                <category scheme="https://kevingimbel.de/tags/xml" term="xml" label="xml" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/php" term="php" label="php" />
+                                <category scheme="https://kevingimbel.de/tags/php" term="php" label="php" />
                             
                         
                     

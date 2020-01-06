@@ -4,25 +4,25 @@
     
     
     
-            <link href="https://www.kevingimbel.de/categories/devops/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/categories/devops/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/categories/devops/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/categories/devops/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/categories/devops/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/categories/devops/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/categories/devops/</id>
+        <id>https://kevingimbel.de/categories/devops/</id>
     
         
         <entry>
             <title type="html"><![CDATA[TIL: Bash select]]></title>
-            <link href="https://www.kevingimbel.de/2018/04/til-bash-select/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2018/04/til-bash-select/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
             
-                <id>https://www.kevingimbel.de/2018/04/til-bash-select/</id>
+                <id>https://kevingimbel.de/2018/04/til-bash-select/</id>
             
             
             <published>2018-04-18T00:00:00+00:00</published>
@@ -82,9 +82,9 @@ Your answer: _
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                             
                         
                     
@@ -94,11 +94,11 @@ Your answer: _
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/til" term="til" label="til" />
+                                <category scheme="https://kevingimbel.de/tags/til" term="til" label="til" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/shell" term="shell" label="shell" />
+                                <category scheme="https://kevingimbel.de/tags/shell" term="shell" label="shell" />
                             
                         
                     
@@ -109,14 +109,14 @@ Your answer: _
         
         <entry>
             <title type="html"><![CDATA[Using the Terminal: The Prompt]]></title>
-            <link href="https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
-                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/</id>
+                <id>https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/</id>
             
             
             <published>2017-03-29T18:34:37+01:00</published>
@@ -129,7 +129,7 @@ Your answer: _
 <p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it'll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
 <h2 id="preface-vim">Preface: VIM</h2>
 <blockquote>
-<p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/
+<p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/
 #the-prompt">skip to the next section</a></p>
 </blockquote>
 <p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It's a bit weird to get used to at first but once you know your way around you'll become quite productive with it. It's easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
@@ -352,11 +352,11 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -366,11 +366,11 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/apps" term="apps" label="apps" />
+                                <category scheme="https://kevingimbel.de/tags/apps" term="apps" label="apps" />
                             
                         
                     
@@ -381,12 +381,12 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
         
         <entry>
             <title type="html"><![CDATA[Deploy a static site with git]]></title>
-            <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/</id>
+                <id>https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/</id>
             
             
             <published>2017-01-17T21:28:38+01:00</published>
@@ -396,7 +396,7 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
             <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let's Encrypt</a> to create SSL certificates and use HTTPS.</p>
 <h3 id="so-what-is-a-static-site">So, what is a &ldquo;static site&rdquo;?</h3>
 <blockquote>
-<p>If you already know the answer, <a href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
+<p>If you already know the answer, <a href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
 ">skip to the next section</a>!</p>
 </blockquote>
 <p>As the name suggest a static site is - well - <em>static</em>. There's no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
@@ -477,11 +477,11 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                             
                         
                     
@@ -491,13 +491,13 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/git" term="git" label="git" />
+                                <category scheme="https://kevingimbel.de/tags/git" term="git" label="git" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/deployment" term="deployment" label="deployment" />
+                                <category scheme="https://kevingimbel.de/tags/deployment" term="deployment" label="deployment" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
                             
                         
                     
@@ -508,14 +508,14 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
         
         <entry>
             <title type="html"><![CDATA[Bash script: ws]]></title>
-            <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
-                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://www.kevingimbel.de/2017/01/bash-script-ws/</id>
+                <id>https://kevingimbel.de/2017/01/bash-script-ws/</id>
             
             
             <published>2017-01-12T19:22:48+01:00</published>
@@ -585,11 +585,11 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                             
                         
                     
@@ -599,17 +599,17 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cli" term="cli" label="cli" />
+                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
+                                <category scheme="https://kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/automation" term="automation" label="automation" />
+                                <category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
                             
                         
                     
@@ -620,12 +620,12 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
         
         <entry>
             <title type="html"><![CDATA[Gotcha: dockerignore]]></title>
-            <link href="https://www.kevingimbel.de/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-                <link href="https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
             
-                <id>https://www.kevingimbel.de/2016/12/gotcha-dockerignore/</id>
+                <id>https://kevingimbel.de/2016/12/gotcha-dockerignore/</id>
             
             
             <published>2016-12-21T18:02:42+01:00</published>
@@ -655,9 +655,9 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
                             
                         
                     
@@ -667,9 +667,9 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/docker" term="docker" label="docker" />
+                                <category scheme="https://kevingimbel.de/tags/docker" term="docker" label="docker" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/development" term="development" label="development" />
+                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
                             
                         
                     

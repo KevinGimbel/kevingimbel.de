@@ -4,28 +4,28 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/nodejs/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/nodejs/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/nodejs/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/nodejs/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/nodejs/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/nodejs/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/nodejs/</id>
+        <id>https://kevingimbel.de/tags/nodejs/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Writing NodeJS cli tools]]></title>
-            <link href="https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://www.kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
             
-                <id>https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/</id>
+                <id>https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/</id>
             
             
             <published>2017-01-09T18:02:48+01:00</published>
@@ -176,11 +176,11 @@ echo &quot;Hello World!&quot;
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
+                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -190,11 +190,11 @@ echo &quot;Hello World!&quot;
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
+                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cli" term="cli" label="cli" />
+                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
                             
                         
                     
@@ -205,10 +205,10 @@ echo &quot;Hello World!&quot;
         
         <entry>
             <title type="html"><![CDATA[Ghost in the shell]]></title>
-            <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://www.kevingimbel.de/2013/10/ghost-in-the-shell/</id>
+                <id>https://kevingimbel.de/2013/10/ghost-in-the-shell/</id>
             
             
             <published>2013-10-16T00:00:00+00:00</published>
@@ -305,11 +305,11 @@ Regardless of all the good aspects, overall I'm disappointed by Ghost. I'll stic
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/backend" term="backend" label="backend" />
+                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
                             
                         
                     
@@ -319,9 +319,9 @@ Regardless of all the good aspects, overall I'm disappointed by Ghost. I'll stic
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
+                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
                             
                         
                     

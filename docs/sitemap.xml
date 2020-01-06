@@ -3,937 +3,937 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.kevingimbel.de/blog/</loc>
+    <loc>https://kevingimbel.de/blog/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/</loc>
+    <loc>https://kevingimbel.de/categories/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/coding/</loc>
+    <loc>https://kevingimbel.de/categories/coding/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/frontend/</loc>
+    <loc>https://kevingimbel.de/categories/frontend/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/</loc>
+    <loc>https://kevingimbel.de/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/hugo/</loc>
+    <loc>https://kevingimbel.de/tags/hugo/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/</loc>
+    <loc>https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/seo/</loc>
+    <loc>https://kevingimbel.de/tags/seo/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/static_site/</loc>
+    <loc>https://kevingimbel.de/tags/static_site/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/</loc>
+    <loc>https://kevingimbel.de/tags/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/cms/</loc>
+    <loc>https://kevingimbel.de/tags/cms/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</loc>
+    <loc>https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/static_website/</loc>
+    <loc>https://kevingimbel.de/tags/static_website/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/tutorial/</loc>
+    <loc>https://kevingimbel.de/categories/tutorial/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/art/</loc>
+    <loc>https://kevingimbel.de/art/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/art/</loc>
+    <loc>https://kevingimbel.de/categories/art/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/header/</loc>
+    <loc>https://kevingimbel.de/tags/header/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</loc>
+    <loc>https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/illustration/</loc>
+    <loc>https://kevingimbel.de/tags/illustration/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/art/mastodon-header/</loc>
+    <loc>https://kevingimbel.de/art/mastodon-header/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/sketch/</loc>
+    <loc>https://kevingimbel.de/tags/sketch/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/calc/</loc>
+    <loc>https://kevingimbel.de/tags/calc/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/css/</loc>
+    <loc>https://kevingimbel.de/tags/css/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/fallback/</loc>
+    <loc>https://kevingimbel.de/tags/fallback/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2020/01/safe-calc-usage-in-css/</loc>
+    <loc>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/canon/</loc>
+    <loc>https://kevingimbel.de/tags/canon/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/canon_eos_1000d/</loc>
+    <loc>https://kevingimbel.de/tags/canon_eos_1000d/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/photography/foggy-forest/</loc>
+    <loc>https://kevingimbel.de/photography/foggy-forest/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/forest/</loc>
+    <loc>https://kevingimbel.de/tags/forest/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/landscape/</loc>
+    <loc>https://kevingimbel.de/tags/landscape/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/nature/</loc>
+    <loc>https://kevingimbel.de/tags/nature/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/photography/</loc>
+    <loc>https://kevingimbel.de/photography/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/photography/</loc>
+    <loc>https://kevingimbel.de/categories/photography/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/darktable/</loc>
+    <loc>https://kevingimbel.de/tags/darktable/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/photography/fasanerie/</loc>
+    <loc>https://kevingimbel.de/photography/fasanerie/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/fujifilm/</loc>
+    <loc>https://kevingimbel.de/tags/fujifilm/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/fujifilm_x30/</loc>
+    <loc>https://kevingimbel.de/tags/fujifilm_x30/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/macro/</loc>
+    <loc>https://kevingimbel.de/tags/macro/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/mushroom/</loc>
+    <loc>https://kevingimbel.de/tags/mushroom/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/wildpark/</loc>
+    <loc>https://kevingimbel.de/tags/wildpark/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/city/</loc>
+    <loc>https://kevingimbel.de/tags/city/</loc>
     <lastmod>2019-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/photography/wiesbaden-walk-in-the-city/</loc>
+    <loc>https://kevingimbel.de/photography/wiesbaden-walk-in-the-city/</loc>
     <lastmod>2019-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/street_photography/</loc>
+    <loc>https://kevingimbel.de/tags/street_photography/</loc>
     <lastmod>2019-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/wiesbaden/</loc>
+    <loc>https://kevingimbel.de/tags/wiesbaden/</loc>
     <lastmod>2019-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/fallout/</loc>
+    <loc>https://kevingimbel.de/tags/fallout/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2018/11/fallout-76-b.e.t.a/</loc>
+    <loc>https://kevingimbel.de/2018/11/fallout-76-b.e.t.a/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/games/</loc>
+    <loc>https://kevingimbel.de/categories/games/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/mmo/</loc>
+    <loc>https://kevingimbel.de/tags/mmo/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/playstation/</loc>
+    <loc>https://kevingimbel.de/tags/playstation/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/playstation_4/</loc>
+    <loc>https://kevingimbel.de/tags/playstation_4/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/rpg/</loc>
+    <loc>https://kevingimbel.de/tags/rpg/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/mastodon/</loc>
+    <loc>https://kevingimbel.de/tags/mastodon/</loc>
     <lastmod>2018-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</loc>
+    <loc>https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</loc>
     <lastmod>2018-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/shortcode/</loc>
+    <loc>https://kevingimbel.de/tags/shortcode/</loc>
     <lastmod>2018-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/photography/imbiss/</loc>
+    <loc>https://kevingimbel.de/photography/imbiss/</loc>
     <lastmod>2018-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/mainz/</loc>
+    <loc>https://kevingimbel.de/tags/mainz/</loc>
     <lastmod>2018-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/bash/</loc>
+    <loc>https://kevingimbel.de/tags/bash/</loc>
     <lastmod>2018-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/devops/</loc>
+    <loc>https://kevingimbel.de/categories/devops/</loc>
     <lastmod>2018-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/shell/</loc>
+    <loc>https://kevingimbel.de/tags/shell/</loc>
     <lastmod>2018-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/til/</loc>
+    <loc>https://kevingimbel.de/tags/til/</loc>
     <lastmod>2018-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2018/04/til-bash-select/</loc>
+    <loc>https://kevingimbel.de/2018/04/til-bash-select/</loc>
     <lastmod>2018-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/accessibility/</loc>
+    <loc>https://kevingimbel.de/tags/accessibility/</loc>
     <lastmod>2017-11-26T10:56:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</loc>
+    <loc>https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</loc>
     <lastmod>2017-11-26T10:56:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/modernization/</loc>
+    <loc>https://kevingimbel.de/tags/modernization/</loc>
     <lastmod>2017-11-26T10:56:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/personal/</loc>
+    <loc>https://kevingimbel.de/tags/personal/</loc>
     <lastmod>2017-11-26T10:56:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/redesign/</loc>
+    <loc>https://kevingimbel.de/tags/redesign/</loc>
     <lastmod>2017-11-26T10:56:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/04/2017-week-10-11-12-13/</loc>
+    <loc>https://kevingimbel.de/2017/04/2017-week-10-11-12-13/</loc>
     <lastmod>2017-04-02T13:34:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/personal/</loc>
+    <loc>https://kevingimbel.de/categories/personal/</loc>
     <lastmod>2017-04-02T13:34:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/review/</loc>
+    <loc>https://kevingimbel.de/tags/review/</loc>
     <lastmod>2017-04-02T13:34:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/apps/</loc>
+    <loc>https://kevingimbel.de/tags/apps/</loc>
     <lastmod>2017-03-29T18:34:37+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/productivity/</loc>
+    <loc>https://kevingimbel.de/tags/productivity/</loc>
     <lastmod>2017-03-29T18:34:37+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/</loc>
+    <loc>https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/</loc>
     <lastmod>2017-03-29T18:34:37+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/workflow/</loc>
+    <loc>https://kevingimbel.de/tags/workflow/</loc>
     <lastmod>2017-03-29T18:34:37+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/03/2017-week-8-and-9/</loc>
+    <loc>https://kevingimbel.de/2017/03/2017-week-8-and-9/</loc>
     <lastmod>2017-03-05T19:43:16+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/02/2017-week-seven/</loc>
+    <loc>https://kevingimbel.de/2017/02/2017-week-seven/</loc>
     <lastmod>2017-02-18T14:03:26+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/02/2017-week-five/</loc>
+    <loc>https://kevingimbel.de/2017/02/2017-week-five/</loc>
     <lastmod>2017-02-08T08:51:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/01/2017-week-four/</loc>
+    <loc>https://kevingimbel.de/2017/01/2017-week-four/</loc>
     <lastmod>2017-01-29T12:44:43+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/01/2017-week-three/</loc>
+    <loc>https://kevingimbel.de/2017/01/2017-week-three/</loc>
     <lastmod>2017-01-22T11:44:43+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/</loc>
+    <loc>https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/</loc>
     <lastmod>2017-01-17T21:28:38+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/deployment/</loc>
+    <loc>https://kevingimbel.de/tags/deployment/</loc>
     <lastmod>2017-01-17T21:28:38+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/git/</loc>
+    <loc>https://kevingimbel.de/tags/git/</loc>
     <lastmod>2017-01-17T21:28:38+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/tools/</loc>
+    <loc>https://kevingimbel.de/categories/tools/</loc>
     <lastmod>2017-01-17T21:28:38+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/01/2017-week-two/</loc>
+    <loc>https://kevingimbel.de/2017/01/2017-week-two/</loc>
     <lastmod>2017-01-15T17:05:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/automation/</loc>
+    <loc>https://kevingimbel.de/tags/automation/</loc>
     <lastmod>2017-01-12T19:22:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/01/bash-script-ws/</loc>
+    <loc>https://kevingimbel.de/2017/01/bash-script-ws/</loc>
     <lastmod>2017-01-12T19:22:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/cli/</loc>
+    <loc>https://kevingimbel.de/tags/cli/</loc>
     <lastmod>2017-01-12T19:22:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/scripting/</loc>
+    <loc>https://kevingimbel.de/tags/scripting/</loc>
     <lastmod>2017-01-12T19:22:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/javascript/</loc>
+    <loc>https://kevingimbel.de/tags/javascript/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/nodejs/</loc>
+    <loc>https://kevingimbel.de/tags/nodejs/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/nodejs/</loc>
+    <loc>https://kevingimbel.de/categories/nodejs/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/</loc>
+    <loc>https://kevingimbel.de/2017/01/writing-nodejs-cli-tools/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/01/2017-week-one/</loc>
+    <loc>https://kevingimbel.de/2017/01/2017-week-one/</loc>
     <lastmod>2017-01-08T18:02:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2017/01/2016-a-short-review/</loc>
+    <loc>https://kevingimbel.de/2017/01/2016-a-short-review/</loc>
     <lastmod>2017-01-01T14:37:28+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/development/</loc>
+    <loc>https://kevingimbel.de/tags/development/</loc>
     <lastmod>2016-12-27T15:05:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2016/12/goodbye-ubuntu-hello-mac/</loc>
+    <loc>https://kevingimbel.de/2016/12/goodbye-ubuntu-hello-mac/</loc>
     <lastmod>2016-12-27T15:05:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/hardware/</loc>
+    <loc>https://kevingimbel.de/tags/hardware/</loc>
     <lastmod>2016-12-27T15:05:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/thoughts/</loc>
+    <loc>https://kevingimbel.de/categories/thoughts/</loc>
     <lastmod>2016-12-27T15:05:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/docker/</loc>
+    <loc>https://kevingimbel.de/tags/docker/</loc>
     <lastmod>2016-12-21T18:02:42+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2016/12/gotcha-dockerignore/</loc>
+    <loc>https://kevingimbel.de/2016/12/gotcha-dockerignore/</loc>
     <lastmod>2016-12-21T18:02:42+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</loc>
+    <loc>https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</loc>
     <lastmod>2016-11-16T19:04:42+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/go/</loc>
+    <loc>https://kevingimbel.de/tags/go/</loc>
     <lastmod>2016-11-16T19:04:42+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/cms/</loc>
+    <loc>https://kevingimbel.de/categories/cms/</loc>
     <lastmod>2015-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/jekyll/</loc>
+    <loc>https://kevingimbel.de/tags/jekyll/</loc>
     <lastmod>2015-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/ruby/</loc>
+    <loc>https://kevingimbel.de/tags/ruby/</loc>
     <lastmod>2015-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</loc>
+    <loc>https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</loc>
     <lastmod>2015-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2015/08/a-beginners-guide-to-drum-and-bass/</loc>
+    <loc>https://kevingimbel.de/2015/08/a-beginners-guide-to-drum-and-bass/</loc>
     <lastmod>2015-08-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/mixtape/</loc>
+    <loc>https://kevingimbel.de/tags/mixtape/</loc>
     <lastmod>2015-08-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/music/</loc>
+    <loc>https://kevingimbel.de/categories/music/</loc>
     <lastmod>2015-08-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/soundcloud/</loc>
+    <loc>https://kevingimbel.de/tags/soundcloud/</loc>
     <lastmod>2015-08-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/react/</loc>
+    <loc>https://kevingimbel.de/tags/react/</loc>
     <lastmod>2015-05-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2015/05/reactjs-hello-world/</loc>
+    <loc>https://kevingimbel.de/2015/05/reactjs-hello-world/</loc>
     <lastmod>2015-05-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/</loc>
+    <loc>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</loc>
     <lastmod>2015-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/tools/</loc>
+    <loc>https://kevingimbel.de/tags/tools/</loc>
     <lastmod>2015-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/gulp/</loc>
+    <loc>https://kevingimbel.de/tags/gulp/</loc>
     <lastmod>2015-01-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/javascript/</loc>
+    <loc>https://kevingimbel.de/categories/javascript/</loc>
     <lastmod>2015-01-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/sass/</loc>
+    <loc>https://kevingimbel.de/tags/sass/</loc>
     <lastmod>2015-01-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/</loc>
+    <loc>https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/</loc>
     <lastmod>2015-01-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/editor/</loc>
+    <loc>https://kevingimbel.de/tags/editor/</loc>
     <lastmod>2015-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2015/01/getting-into-vim-again/</loc>
+    <loc>https://kevingimbel.de/2015/01/getting-into-vim-again/</loc>
     <lastmod>2015-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/vim/</loc>
+    <loc>https://kevingimbel.de/tags/vim/</loc>
     <lastmod>2015-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/android/</loc>
+    <loc>https://kevingimbel.de/tags/android/</loc>
     <lastmod>2014-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/chrome/</loc>
+    <loc>https://kevingimbel.de/tags/chrome/</loc>
     <lastmod>2014-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/html/</loc>
+    <loc>https://kevingimbel.de/tags/html/</loc>
     <lastmod>2014-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/</loc>
+    <loc>https://kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/</loc>
     <lastmod>2014-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/backend/</loc>
+    <loc>https://kevingimbel.de/categories/backend/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/magento/</loc>
+    <loc>https://kevingimbel.de/categories/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/magento/</loc>
+    <loc>https://kevingimbel.de/tags/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/</loc>
+    <loc>https://kevingimbel.de/2014/08/magento-add-fields-to-the-admin-backend/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/php/</loc>
+    <loc>https://kevingimbel.de/categories/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/php/</loc>
+    <loc>https://kevingimbel.de/tags/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/xml/</loc>
+    <loc>https://kevingimbel.de/tags/xml/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</loc>
+    <loc>https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</loc>
     <lastmod>2014-08-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/07/conditional-css/</loc>
+    <loc>https://kevingimbel.de/2014/07/conditional-css/</loc>
     <lastmod>2014-07-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/frontend/</loc>
+    <loc>https://kevingimbel.de/tags/frontend/</loc>
     <lastmod>2014-07-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/</loc>
+    <loc>https://kevingimbel.de/2014/07/a-closer-look-to-closure/</loc>
     <lastmod>2014-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/closure/</loc>
+    <loc>https://kevingimbel.de/tags/closure/</loc>
     <lastmod>2014-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/scoping/</loc>
+    <loc>https://kevingimbel.de/tags/scoping/</loc>
     <lastmod>2014-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/07/noobish-vim/</loc>
+    <loc>https://kevingimbel.de/2014/07/noobish-vim/</loc>
     <lastmod>2014-07-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/06/useful-web-developer-tools/</loc>
+    <loc>https://kevingimbel.de/2014/06/useful-web-developer-tools/</loc>
     <lastmod>2014-06-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/</loc>
+    <loc>https://kevingimbel.de/2014/05/magento-get-and-set-variables-in-config.xml/</loc>
     <lastmod>2014-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/mvc/</loc>
+    <loc>https://kevingimbel.de/tags/mvc/</loc>
     <lastmod>2014-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/05/vim-first-impression/</loc>
+    <loc>https://kevingimbel.de/2014/05/vim-first-impression/</loc>
     <lastmod>2014-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/</loc>
+    <loc>https://kevingimbel.de/2014/05/passing-arguments-in-javascript/</loc>
     <lastmod>2014-05-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/03/mixtape-february-2014/</loc>
+    <loc>https://kevingimbel.de/2014/03/mixtape-february-2014/</loc>
     <lastmod>2014-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/02/pure-javascript-slider/</loc>
+    <loc>https://kevingimbel.de/2014/02/pure-javascript-slider/</loc>
     <lastmod>2014-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/01/fatboy-slim-why-try-harder/</loc>
+    <loc>https://kevingimbel.de/2014/01/fatboy-slim-why-try-harder/</loc>
     <lastmod>2014-01-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/boiler_room/</loc>
+    <loc>https://kevingimbel.de/tags/boiler_room/</loc>
     <lastmod>2014-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/01/digitalism-boiler-room-at-melt-2013/</loc>
+    <loc>https://kevingimbel.de/2014/01/digitalism-boiler-room-at-melt-2013/</loc>
     <lastmod>2014-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/gmail/</loc>
+    <loc>https://kevingimbel.de/tags/gmail/</loc>
     <lastmod>2014-01-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/01/labels-in-gmail/</loc>
+    <loc>https://kevingimbel.de/2014/01/labels-in-gmail/</loc>
     <lastmod>2014-01-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/categories/work/</loc>
+    <loc>https://kevingimbel.de/categories/work/</loc>
     <lastmod>2014-01-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/</loc>
+    <loc>https://kevingimbel.de/2014/01/bullgit-loves-jekyll/</loc>
     <lastmod>2014-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/01/mixtape-2013/</loc>
+    <loc>https://kevingimbel.de/2014/01/mixtape-2013/</loc>
     <lastmod>2014-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/music/</loc>
+    <loc>https://kevingimbel.de/tags/music/</loc>
     <lastmod>2014-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2014/01/web-development-in-2014/</loc>
+    <loc>https://kevingimbel.de/2014/01/web-development-in-2014/</loc>
     <lastmod>2014-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/</loc>
+    <loc>https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/</loc>
     <lastmod>2013-12-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/software/</loc>
+    <loc>https://kevingimbel.de/tags/software/</loc>
     <lastmod>2013-12-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/tooling/</loc>
+    <loc>https://kevingimbel.de/tags/tooling/</loc>
     <lastmod>2013-12-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/12/how-i-got-employed/</loc>
+    <loc>https://kevingimbel.de/2013/12/how-i-got-employed/</loc>
     <lastmod>2013-12-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/job/</loc>
+    <loc>https://kevingimbel.de/tags/job/</loc>
     <lastmod>2013-12-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/work/</loc>
+    <loc>https://kevingimbel.de/tags/work/</loc>
     <lastmod>2013-12-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/interface/</loc>
+    <loc>https://kevingimbel.de/tags/interface/</loc>
     <lastmod>2013-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/11/pseudo-product-flags/</loc>
+    <loc>https://kevingimbel.de/2013/11/pseudo-product-flags/</loc>
     <lastmod>2013-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/tutorial/</loc>
+    <loc>https://kevingimbel.de/tags/tutorial/</loc>
     <lastmod>2013-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/</loc>
+    <loc>https://kevingimbel.de/2013/11/to-infinity-and-beyond/</loc>
     <lastmod>2013-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/vanilla_js/</loc>
+    <loc>https://kevingimbel.de/tags/vanilla_js/</loc>
     <lastmod>2013-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/10/custom-radio-buttons/</loc>
+    <loc>https://kevingimbel.de/2013/10/custom-radio-buttons/</loc>
     <lastmod>2013-10-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/design/</loc>
+    <loc>https://kevingimbel.de/tags/design/</loc>
     <lastmod>2013-10-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/10/ghost-in-the-shell/</loc>
+    <loc>https://kevingimbel.de/2013/10/ghost-in-the-shell/</loc>
     <lastmod>2013-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/10/i-js/</loc>
+    <loc>https://kevingimbel.de/2013/10/i-js/</loc>
     <lastmod>2013-10-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/community/</loc>
+    <loc>https://kevingimbel.de/tags/community/</loc>
     <lastmod>2013-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/10/join-a-dev-group/</loc>
+    <loc>https://kevingimbel.de/2013/10/join-a-dev-group/</loc>
     <lastmod>2013-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/10/from-0-to-sass/</loc>
+    <loc>https://kevingimbel.de/2013/10/from-0-to-sass/</loc>
     <lastmod>2013-10-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/09/a-bit-sticky/</loc>
+    <loc>https://kevingimbel.de/2013/09/a-bit-sticky/</loc>
     <lastmod>2013-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/code/</loc>
+    <loc>https://kevingimbel.de/tags/code/</loc>
     <lastmod>2013-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/09/endless-scrolling/</loc>
+    <loc>https://kevingimbel.de/2013/09/endless-scrolling/</loc>
     <lastmod>2013-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/thoughts/</loc>
+    <loc>https://kevingimbel.de/tags/thoughts/</loc>
     <lastmod>2013-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/ui/</loc>
+    <loc>https://kevingimbel.de/tags/ui/</loc>
     <lastmod>2013-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/tags/ux/</loc>
+    <loc>https://kevingimbel.de/tags/ux/</loc>
     <lastmod>2013-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/08/is-this-valid/</loc>
+    <loc>https://kevingimbel.de/2013/08/is-this-valid/</loc>
     <lastmod>2013-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/08/px-vs-em/</loc>
+    <loc>https://kevingimbel.de/2013/08/px-vs-em/</loc>
     <lastmod>2013-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/2013/08/hello-world/</loc>
+    <loc>https://kevingimbel.de/2013/08/hello-world/</loc>
     <lastmod>2013-08-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/about/</loc>
+    <loc>https://kevingimbel.de/about/</loc>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/legal/</loc>
+    <loc>https://kevingimbel.de/legal/</loc>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/now/</loc>
+    <loc>https://kevingimbel.de/now/</loc>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/recipes/</loc>
+    <loc>https://kevingimbel.de/recipes/</loc>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/recipes/2019-12-01-simple-pancakes/</loc>
+    <loc>https://kevingimbel.de/recipes/2019-12-01-simple-pancakes/</loc>
   </url>
   
   <url>
-    <loc>https://www.kevingimbel.de/thanks/</loc>
+    <loc>https://kevingimbel.de/thanks/</loc>
   </url>
   
 </urlset>

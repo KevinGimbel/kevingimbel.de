@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>scripting on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
-    <link>https://www.kevingimbel.de/tags/scripting/</link>
+    <link>https://kevingimbel.de/tags/scripting/</link>
     <description>Recent content in scripting on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jan 2017 19:22:48 +0100</lastBuildDate>
     
-	<atom:link href="https://www.kevingimbel.de/tags/scripting/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevingimbel.de/tags/scripting/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bash script: ws</title>
-      <link>https://www.kevingimbel.de/2017/01/bash-script-ws/</link>
+      <link>https://kevingimbel.de/2017/01/bash-script-ws/</link>
       <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
       
-      <guid>https://www.kevingimbel.de/2017/01/bash-script-ws/</guid>
+      <guid>https://kevingimbel.de/2017/01/bash-script-ws/</guid>
       <description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description>
     </item>
     

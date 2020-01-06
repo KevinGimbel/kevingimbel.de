@@ -4,28 +4,28 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/tools/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/tools/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/tools/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/tools/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/tools/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/tools/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/tools/</id>
+        <id>https://kevingimbel.de/tags/tools/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
-            <link href="https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
-                <link href="https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://www.kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
+                <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/</id>
+                <id>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</id>
             
             
             <published>2015-03-10T00:00:00+00:00</published>
@@ -236,11 +236,11 @@ on which we don't have any influence.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -250,11 +250,11 @@ on which we don't have any influence.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                             
                         
                     
@@ -265,14 +265,14 @@ on which we don't have any influence.</p>
         
         <entry>
             <title type="html"><![CDATA[Getting into vim - again]]></title>
-            <link href="https://www.kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
-                <link href="https://www.kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+                <link href="https://kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
+                <link href="https://kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
             
-                <id>https://www.kevingimbel.de/2015/01/getting-into-vim-again/</id>
+                <id>https://kevingimbel.de/2015/01/getting-into-vim-again/</id>
             
             
             <published>2015-01-21T00:00:00+00:00</published>
@@ -385,9 +385,9 @@ return to my beloved Sublime Text 3.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -397,11 +397,11 @@ return to my beloved Sublime Text 3.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/vim" term="vim" label="vim" />
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
                             
                         
                     
@@ -412,11 +412,11 @@ return to my beloved Sublime Text 3.</p>
         
         <entry>
             <title type="html"><![CDATA[Useful Web Developer Tools]]></title>
-            <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
             
-                <id>https://www.kevingimbel.de/2014/06/useful-web-developer-tools/</id>
+                <id>https://kevingimbel.de/2014/06/useful-web-developer-tools/</id>
             
             
             <published>2014-06-13T00:00:00+00:00</published>
@@ -500,9 +500,9 @@ colored, good looking bash prompt.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -512,11 +512,11 @@ colored, good looking bash prompt.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
+                                <category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
                             
                         
                     

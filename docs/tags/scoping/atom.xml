@@ -4,27 +4,27 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/scoping/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/scoping/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/scoping/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/scoping/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/scoping/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/scoping/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/scoping/</id>
+        <id>https://kevingimbel.de/tags/scoping/</id>
     
         
         <entry>
             <title type="html"><![CDATA[A closer look to closure]]></title>
-            <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://www.kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://www.kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://www.kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/</id>
+                <id>https://kevingimbel.de/2014/07/a-closer-look-to-closure/</id>
             
             
             <published>2014-07-20T00:00:00+00:00</published>
@@ -106,11 +106,11 @@ declares myFunction in the globale scope.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
                             
                         
                     
@@ -120,11 +120,11 @@ declares myFunction in the globale scope.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/closure" term="closure" label="closure" />
+                                <category scheme="https://kevingimbel.de/tags/closure" term="closure" label="closure" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/scoping" term="scoping" label="scoping" />
+                                <category scheme="https://kevingimbel.de/tags/scoping" term="scoping" label="scoping" />
                             
                         
                     

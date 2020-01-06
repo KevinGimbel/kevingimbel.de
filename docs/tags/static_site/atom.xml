@@ -4,28 +4,28 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/static_site/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/static_site/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/static_site/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/static_site/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/static_site/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/static_site/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/static_site/</id>
+        <id>https://kevingimbel.de/tags/static_site/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Hugo aliases and redirects]]></title>
-            <link href="https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates" />
-                <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
-                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates" />
+                <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/</id>
+                <id>https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/</id>
             
             
             <published>2020-01-06T00:00:00+00:00</published>
@@ -62,9 +62,9 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
                             
                         
                     
@@ -74,11 +74,11 @@ aliases:
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/static_site" term="static_site" label="static_site" />
+                                <category scheme="https://kevingimbel.de/tags/static_site" term="static_site" label="static_site" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/seo" term="seo" label="seo" />
+                                <category scheme="https://kevingimbel.de/tags/seo" term="seo" label="seo" />
                             
                         
                     

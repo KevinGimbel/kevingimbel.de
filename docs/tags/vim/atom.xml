@@ -4,27 +4,27 @@
     
     
     
-            <link href="https://www.kevingimbel.de/tags/vim/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://www.kevingimbel.de/tags/vim/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://www.kevingimbel.de/tags/vim/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:10:09+01:00</updated>
+            <link href="https://kevingimbel.de/tags/vim/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/vim/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/vim/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:34:36+01:00</updated>
     
     
     
     
-        <id>https://www.kevingimbel.de/tags/vim/</id>
+        <id>https://kevingimbel.de/tags/vim/</id>
     
         
         <entry>
             <title type="html"><![CDATA[Getting into vim - again]]></title>
-            <link href="https://www.kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
-                <link href="https://www.kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
-                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+                <link href="https://kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
+                <link href="https://kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
             
-                <id>https://www.kevingimbel.de/2015/01/getting-into-vim-again/</id>
+                <id>https://kevingimbel.de/2015/01/getting-into-vim-again/</id>
             
             
             <published>2015-01-21T00:00:00+00:00</published>
@@ -137,9 +137,9 @@ return to my beloved Sublime Text 3.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -149,11 +149,11 @@ return to my beloved Sublime Text 3.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/vim" term="vim" label="vim" />
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
                             
                         
                     
@@ -164,12 +164,12 @@ return to my beloved Sublime Text 3.</p>
         
         <entry>
             <title type="html"><![CDATA[Noobish VIM]]></title>
-            <link href="https://www.kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
-                <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+                <link href="https://kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
             
-                <id>https://www.kevingimbel.de/2014/07/noobish-vim/</id>
+                <id>https://kevingimbel.de/2014/07/noobish-vim/</id>
             
             
             <published>2014-07-13T00:00:00+00:00</published>
@@ -208,9 +208,9 @@ completly to VIM to dig into it and see if it can replace Sublime Text one day.<
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -220,9 +220,9 @@ completly to VIM to dig into it and see if it can replace Sublime Text one day.<
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/vim" term="vim" label="vim" />
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                             
                         
                     
@@ -233,11 +233,11 @@ completly to VIM to dig into it and see if it can replace Sublime Text one day.<
         
         <entry>
             <title type="html"><![CDATA[Vim - first impression]]></title>
-            <link href="https://www.kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+                <link href="https://kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
             
-                <id>https://www.kevingimbel.de/2014/05/vim-first-impression/</id>
+                <id>https://kevingimbel.de/2014/05/vim-first-impression/</id>
             
             
             <published>2014-05-26T00:00:00+00:00</published>
@@ -360,9 +360,9 @@ visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
                              
-                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
                             
                         
                     
@@ -372,9 +372,9 @@ visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
                         
                             
                              
-                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
                              
-                                <category scheme="https://www.kevingimbel.de/tags/vim" term="vim" label="vim" />
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
                             
                         
                     
