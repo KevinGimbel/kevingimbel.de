@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/tags/mmo/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/mmo/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/mmo/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T18:34:36+01:00</updated>
+    <updated>2020-01-06T19:01:26+01:00</updated>
     
     
     
@@ -84,11 +84,12 @@
 <p>Overall the gameplay is pretty similar to Fallout 4. Weapons behave similar but there's one big difference. In single-player Fallout games the player can use V.A.T.S the Vault-Tec Assisted Targeting System which slows down (or pre Fallout 5 stops) the time and allows to target specific body parts. The player can plan the next shots or hits based on the number of Action Points they have. Since Fallout 76 is entirely online (and PVP everywhere; More below) time cannot be stopped. Instead V.A.T.S functions as an auto aiming  system. Once V.A.T.S has been activated you can &ldquo;just shoot&rdquo; and will hit or miss, depending on the percentage change displayed. This works surprisingly well but in heated situations with a lot of enemies (&ldquo;a lot&rdquo; being everything above 5 for me 😅) I missed the slowing or stopping of time to tactically analyze a situation - combat has become a tick more hectic.</p>
 <section class="side-by-side">
   
-<div class="left wide"><img src="/images/posts/2018/fallout-76-beta/throwing_knife_op.gif" alt="&ldquo;Using a throwing knife against a Super Mutant&rdquo;"></div>
-
-<div class="right small"><p>The gif shows a throwing knife being thrown at a Super Mutant. The Mutant has a low level (5) but is still killed with one hit - throwing knives can output quite the damage for some reason. I assume they'll be nerfed before launch.</p>
+<div class="left wide">
+    <img src="/images/posts/2018/fallout-76-beta/throwing_knife_op.gif" alt="&ldquo;Using a throwing knife against a Super Mutant&rdquo;"> </div>
+<div class="right small">
+    <p>The gif shows a throwing knife being thrown at a Super Mutant. The Mutant has a low level (5) but is still killed with one hit - throwing knives can output quite the damage for some reason. I assume they'll be nerfed before launch.</p>
 <p>Throwing knives can be crafted from the beginning of the game and offer a viable throwable weapon for the first few level. They can be equipped alongside other weapons, just like grenades in Fallout 3, Fallout: New Vegas, and Fallout 4.</p>
-</div>
+ </div>
 
 </section>
 
@@ -108,31 +109,34 @@
 <p>Once an attribute is chosen the PC gets a pack of cards. These cards represent the perks from previous games; They can for example give a 10% damage boost to a certain weapon type or enhance the resistance against environmental damage. If the PC wants to be melee focused they'd pick &ldquo;Strength&rdquo; and hope for cards that give damage to melee attacks. During my playtime I received cards like &ldquo;+10% damage to one-handed melee&rdquo;. It is possible to receive a card two times, e.g. two times &ldquo;+10% damage to one-handed melee&rdquo;. In this case the two cards can be combined to one stronger card that gives more damage bonuses.</p>
 <section class="side-by-side">
   
-<div class="left wide"><img src="/images/posts/2018/fallout-76-beta/card_ranks.png" alt="&ldquo;Three ranks available for a card&rdquo;"></div>
-
-<div class="right small"><p>The image shows three ranks for the card &ldquo;Pack Rat&rdquo; which decreases the weight of junk - a card that I absolutely require with my play style.</p>
+<div class="left wide">
+    <img src="/images/posts/2018/fallout-76-beta/card_ranks.png" alt="&ldquo;Three ranks available for a card&rdquo;"> </div>
+<div class="right small">
+    <p>The image shows three ranks for the card &ldquo;Pack Rat&rdquo; which decreases the weight of junk - a card that I absolutely require with my play style.</p>
 <p>The second image shows how two cards are combined into a new, higher level card.</p>
 <p>Throwing knives can be crafted from the beginning of the game and offer a viable throwable weapon for the first few level. They can be equipped alongside other weapons, just like grenades in Fallout 3, Fallout: New Vegas, and Fallout 4.</p>
-</div>
+ </div>
 
 </section>
 
 <section class="side-by-side">
   
-<div class="left wide"><img src="/images/posts/2018/fallout-76-beta/card_rank-up.png" alt="&ldquo;Two cards which can be ranked-up&rdquo;"></div>
-
-<div class="right small">When the player owns two cards of the same type they can be combined. The menu shows the new card which will be created. Card have different ranks or &ldquo;values&rdquo; in the top left. The two rank one cards are combined into a single rank 2 card. So far the highest rank I could see was rank three, but this is of course subject to change!</div>
+<div class="left wide">
+    <img src="/images/posts/2018/fallout-76-beta/card_rank-up.png" alt="&ldquo;Two cards which can be ranked-up&rdquo;"> </div>
+<div class="right small">
+    When the player owns two cards of the same type they can be combined. The menu shows the new card which will be created. Card have different ranks or &ldquo;values&rdquo; in the top left. The two rank one cards are combined into a single rank 2 card. So far the highest rank I could see was rank three, but this is of course subject to change! </div>
 
 </section>
 
 <section class="side-by-side">
   
-<div class="left wide"><img src="/images/posts/2018/fallout-76-beta/card_inventory.png" alt="&ldquo;A selection of cards for different SPECIAL attributes&rdquo;"></div>
-
-<div class="right small"><p>Over time the player will have more cards than available slots. Each level in a SPECIAL attribute allows to use one more card (in value/rank). In the image my <strong>Strength</strong> S.P.E.C.I.A.L attribute is level three. I can therefore use cards with a combined value of three, for example the selected &ldquo;Pack Rat&rdquo; card and one other level 1 card.</p>
+<div class="left wide">
+    <img src="/images/posts/2018/fallout-76-beta/card_inventory.png" alt="&ldquo;A selection of cards for different SPECIAL attributes&rdquo;"> </div>
+<div class="right small">
+    <p>Over time the player will have more cards than available slots. Each level in a SPECIAL attribute allows to use one more card (in value/rank). In the image my <strong>Strength</strong> S.P.E.C.I.A.L attribute is level three. I can therefore use cards with a combined value of three, for example the selected &ldquo;Pack Rat&rdquo; card and one other level 1 card.</p>
 <p>This system kind-of prevents people from being overpowered, though some people might be lucky and get very good cards. While this is a complete break with the more traditional perk system I enjoyed it during the beta. Cards can be changed at any time so you can use the &ldquo;Pack Rat&rdquo; card when you're carrying to much and a melee bonus card when you're about to start a fight.</p>
 <p>During the Beta I always swapped to the Hacker card I got which increases my Hacker rank +1. Since my rank was 0 I could use this to hack terminals on demand - quite handy! If I wasn't near a terminal I used the &ldquo;Licensed Plumber&rdquo; card so my pipe weapons break 60% slower and are cheaper to repair.</p>
-</div>
+ </div>
 
 </section>
 

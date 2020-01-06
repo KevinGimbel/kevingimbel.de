@@ -1,1 +1,2 @@
-<div class="right {{ .Get "class"}}">{{ .Inner | markdownify }}</div>
+<div class="right {{ .Get "class"}}">{{ if eq (.Get "is_html") "true" }} {{ .Inner | safeHTML }} {{ else }}
+    {{ .Inner | markdownify }} {{ end }}</div>
