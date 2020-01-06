@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "_default/index.html" }}
+{{ end }}
+<main id="main" class="main">
+    {{ .Content }}
+
+    <h2>Latest content</h2>
+
+    <h3>Latest articles</h3>
+    {{ range (where .Site.Pages "Section" "blog").GroupByDate "2006" | first 2 }}
+    {{ range last 1 .Pages }}
+    {{ if ne .WordCount  0 }}
+    <article class="article article--in-list">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        {{ with .Params.intro_text }}
+        <h4>{{ . | markdownify }}</h4>
+        {{ end }}
+        <p>Type: {{ .Type }}</p>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .Permalink }}">View post 👉</a>
+    </article>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+
+    <h3>Latest photos</h3>
+    {{ range (where .Site.Pages "Section" "photography").GroupByDate "2006" }}
+    {{ range last 1 .Pages }}
+    {{ if ne .WordCount  0 }}
+    <article class="article article--in-list">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        {{ with .Params.intro_text }}
+        <h4>{{ . | markdownify }}</h4>
+        {{ end }}
+        <p>Type: {{ .Type }}</p>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .Permalink }}">View gallery 👉</a>
+    </article>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+</main>
+{{ end }}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[html on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/html/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/html/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/html/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/html/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Snippet: theme-color for Android 5.0]]></title>
+            <link href="https://www.kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+            
+                <id>https://www.kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/</id>
+            
+            
+            <published>2014-11-21T00:00:00+00:00</published>
+            <updated>2014-11-21T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with
+this multi-tasking. In fact, all recently opened tabs are available via the multi-tasking button (square to the down
+right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you
+can switch between apps and websites seamlessly you can also set your own status bar colors for chrome which are used on
+the page and in the multi-tasking overview.</p>
+<h3 id="oneliner">One-liner!</h3>
+<p>All it takes is a simple one-liner of HTML: a <code>&lt;meta&gt;</code>-tag!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;theme-color&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#5677fc&#34;</span>&gt;
+</code></pre></div><p>The content can be any valid CSS color and that's it - nothing more to do!</p>
+<h3 id="results">Results</h3>
+<!-- raw HTML omitted -->
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/android" term="android" label="android" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/html" term="html" label="html" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[hugo on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/hugo/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/hugo/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/hugo/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/hugo/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Hugo aliases and redirects]]></title>
+            <link href="https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates" />
+                <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+            
+                <id>https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/</id>
+            
+            
+            <published>2020-01-06T00:00:00+00:00</published>
+            <updated>2020-01-06T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title <code>Hello world</code> would be available at <code>kevingimbel.de/hello-world</code>. With the new format this includes the section, year, and month, so for example <code>kevingimbel.de/blog/2020/01/hello-world</code>.</p>
+<p>To prevent all old URLs from failing with a 404 I added aliases to all old posts. <a href="https://gohugo.io/content-management/urls/#aliases">The documentation on aliases</a> is pretty short and they're a straight-forward, powerful tool to make content available under multiple URL paths. Just add an alias list to the front-matter of the post.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+title: <span style="color:#e6db74">&#34;My awesome post&#34;</span>
+aliases:
+  - /my-awesome-post/
+  - /<span style="color:#ae81ff">2020</span><span style="color:#ae81ff">-1</span>/
+---
+</code></pre></div><p>The above would make the post available at <code>kevingimbel.de/2020-1/</code>, <code>kevingimbel.de/my-awesome-post/</code>, and <code>kevingimbel.de/blog/2020/01/my-awesome-post</code>.</p>
+<p>Hugo creates a HTML page for each alias with the following content</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;https://example.com/posts/my-intended-url&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;canonical&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://example.com/posts/my-intended-url&#34;</span>/&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;robots&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noindex&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content-type&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/html; charset=utf-8&#34;</span>/&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;refresh&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0; url=https://example.com/posts/my-intended-url&#34;</span>/&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>The line <code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=https://example.com/posts/my-intended-url&quot;/&gt;</code> refreshes the page after 0 seconds (immediately) and redirects to the new page at <code>https://example.com/posts/my-intended-url</code>.</p>
+<p>With this little bit of extra work all old URLs should work and just redirect to the new pages.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/static_site" term="static_site" label="static_site" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/seo" term="seo" label="seo" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Hugo: ignore _index.md in list templates]]></title>
+            <link href="https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+            
+                <id>https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
+            
+            
+            <published>2020-01-03T00:00:00+00:00</published>
+            <updated>2020-01-03T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>While creating my new website I also added more sections, namely a <a href="/blog/">blog</a>, <a href="/photography/">photography</a>, and <a href="/art/">art</a> section. All of these use list templates and render &ldquo;article&rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named <code>_index.md</code> for that. This file can be used to create index pages for lists.</p>
+<p>When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my <code>article-preview.html</code> template that is used to render article previews.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if ne .File.LogicalName &#34;_index.md&#34; }}
+&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article article--in-list&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-heading-{{ .File.UniqueID }}&#34;</span>&gt;
+    [...]
+&lt;/<span style="color:#f92672">article</span>&gt;
+{{ end }}
+</code></pre></div><p><code>{{ if ne .File.LogicalName &quot;_index.md&quot; }}</code> checks if the file name is not <code>_index.md</code> - this will ignore all <code>_index.md</code> files from being rendered with the <code>article-preview.html</code> template.</p>
+<p>It does the job but feels wrong and hacky, so if you know a better solution, please let me know on <a href="https://github.com/kevingimbel/kevingimbel.de" title="Report issue on GitHub">GitHub</a> or <a href="https://bullgit.party/@kevin" title="Contact me on Mastodon">Mastodon</a>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Hugo: compare dates to flag old content]]></title>
+            <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+            
+                <id>https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</id>
+            
+            
+            <published>2020-01-02T00:00:00+00:00</published>
+            <updated>2020-01-02T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo <a href="https://gohugo.io/functions/math/">Math</a> function and <a href="https://gohugo.io/variables/page/#page-variables">Date</a> values it can be accomplished in automated-enough fashion.</p>
+<h3 id="partial">Partial</h3>
+<p>First I created a new partial named <code>single-header.html</code> and added it to all my <code>single.html</code> templates. The file contains the following code which I will explain step by step.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $now := int (now.Format &#34;2006&#34;) }}
+{{ $article_age := sub $now (int (.Date.Format &#34;2006&#34;)) }}
+
+{{ if gt $article_age 4 }}
+&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;age-note&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt;ATTENTION!&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;This article is over 4 years old, it may be outdated!&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">section</span>&gt;
+{{ end }}
+</code></pre></div><p>The magic all happens in the first 2 lines. First the &ldquo;now&rdquo; time is retrieved, this is the build time - not the current time when the page is loaded in the browser. Then we calculate the different using the Hugo built-in  <code>sub</code> function, giving the two dates in year format (<code>2020</code>, <code>2015</code>, &hellip;) as arguments.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$article_age :<span style="color:#f92672">=</span> sub $now <span style="color:#f92672">(</span>int <span style="color:#f92672">(</span>.Date.Format <span style="color:#e6db74">&#34;2006&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+<span style="color:#75715e"># For an aricle written in 2013 the code looks like</span>
+<span style="color:#75715e"># $article_age = sub 2020 2013</span>
+</code></pre></div><p>After filling in all variables and doing the subtraction, the <code>$article_age</code> variable contains an integer, like <code>7</code> or <code>3</code>. The next line of code checks if the number <code>$article_age</code> is greater than 4, which means the article is older than 4 years. If this is true, the note is displayed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if gt $article_age 4 }}
+    $article_age is greater than 4
+{{ end }}
+</code></pre></div><p>Because we are doing a <code>gt</code> (greater than) comparison only articles that are older than 4 years (5 and more) will be flagged.</p>
+<h2 id="see-it-in-action">See it in action</h2>
+<p>A live example can be seen on my page, for example in the <a href="/blog/2013-08-12-hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Mastodon Embed Shortcode for hugo]]></title>
+            <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+            
+                <id>https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</id>
+            
+            
+            <published>2018-09-12T00:00:00+00:00</published>
+            <updated>2018-09-12T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>You may know that <a href="https://github.com/kevingimbel/hugo-shortcodes">I made some shortcodes for Hugo</a>, the static site generator I am using to create this website. So far I made a shortcode for <a href="https://caniuse.com">caniuse.com</a> and <a href="https://codepen.io">codepen.io</a> which allow to embed CodePen and &ldquo;Can I Use&rdquo; embeds easily with Hugos build-in Shortcode system.</p>
+<p>Today I made another one which allows embeds from Mastodon, the decentralized Twitter-like social network. An example embed is shown below.</p>
+
+
+
+
+
+
+<iframe src= "https://mastodon.social/@kevingimbel/100700713283716694/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="600" height="333"></iframe>
+
+<p>The Source Code can be found <a href="https://github.com/kevingimbel/hugo-shortcodes/tree/master/mastodon">on GitHub.com</a></p>
+<h2 id="configuration">Configuration</h2>
+<p>The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. <a href="https://mastodon.social/@kevingimbel/100700713283716694"><a href="https://mastodon.social/@kevingimbel/100700713283716694">https://mastodon.social/@kevingimbel/100700713283716694</a></a>.</p>
+<pre><code>{{&lt; mastodon status=&quot;https://mastodon.social/@kevingimbel/100700713283716694&quot; &gt;}}
+</code></pre><p>Additional parameters:</p>
+<pre><code># All parameters
+{{&lt; mastodon status=&quot;https://mastodon.social/@kevingimbel/100700713283716694&quot; width=&quot;1000&quot; height=&quot;500&quot; &gt;}}
+</code></pre><p>Below is a short description for each parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status</code>| The link to the status</td>
+<td></td>
+</tr>
+<tr>
+<td><code>width</code>| The width of the iframe</td>
+<td></td>
+</tr>
+<tr>
+<td><code>height</code>| The height of the iframe</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>
+
+
+
+
+
+<iframe src= "https://mastodon.social/@rootsworks/100666238685414786/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" height="333"></iframe>
+
+
+
+
+
+
+
+<iframe src= "https://mastodon.social/@prashere/539624/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="300" height="333"></iframe>
+
+
+
+
+
+
+
+<iframe src= "https://octodon.social/@spacekookie/100680807257148198/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="800" height="333"></iframe>
+</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/shortcode" term="shortcode" label="shortcode" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/mastodon" term="mastodon" label="mastodon" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Deploy a static site with git]]></title>
+            <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+            
+                <id>https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/</id>
+            
+            
+            <published>2017-01-17T21:28:38+01:00</published>
+            <updated>2017-01-17T21:28:38+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let's Encrypt</a> to create SSL certificates and use HTTPS.</p>
+<h3 id="so-what-is-a-static-site">So, what is a &ldquo;static site&rdquo;?</h3>
+<blockquote>
+<p>If you already know the answer, <a href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
+">skip to the next section</a>!</p>
+</blockquote>
+<p>As the name suggest a static site is - well - <em>static</em>. There's no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
+&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page wrap&#34;</span> <span style="color:#a6e22e">aria-labeldyby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
+  &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-header&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;/<span style="color:#f92672">header</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-body&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
+    {{ .Content }}
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">section</span>&gt;
+{{ end }}
+</code></pre></div><p>These 10 lines of code make up the default for single pages without a custom template. The words in curly brackets (e.g. <code>{{ .Content }}</code>) are variables filled by Hugo when the template is compiled. <code>{{ define &quot;main&quot; }}</code> defines the <code>main</code> block used inside the <a href="https://github.com/kevingimbel/kevingimbel.com/blob/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts/_default/baseof.html#L36-L38"><code>baseof.html</code> template</a>. All these templates make up the final site. So, despite being &ldquo;static&rdquo; when finished a static site is not so static! It can be flexible and you can use template logic like conditions (<code>if/else</code>, <code>with</code>), loops (<code>range</code>), and with Hugo even custom <a href="http://gohugo.io/extras/shortcodes/">shortcodes inside your markdown</a>.</p>
+<p>At the end of the day we get a static site. This site is compiled from our source files and consists of folders (for URLs) and files (lots of <code>index.html</code> files!) so our server (apache, nginx, a node app) can deliver the content to the client. You might know that by default apache will serve any files such as <code>index.html</code> or <code>index.htm</code> when a route is requested unless you use a dynamic system such as PHP, Ruby, or NodeJS to serve your files. When you load this article at <a href="https://kevingimbel.com/deploy-a-static-site-with-git/">https://kevingimbel.com/deploy-a-static-site-with-git/</a> you request a folder, <code>deploy-a-static-site-with-git</code>, located inside the web root directory of my server and the <code>index.html</code> file inside this folder gets served to you by Apache. This is the basics how static websites work - they're simply HTML files and folders!</p>
+<h3 id="deploying-a-static-site">Deploying a static site</h3>
+<p>So far we learned  that static sites are &ldquo;just&rdquo; folders and HTML files when generated. The only dependency they have to make them work is a Web Server. This can be apache, nginx, IIS, a simple nodeJS app, or even <code>python -m SimpleHTTPServer</code>. The most basic deployment for our website would be to upload the content of the generated folder (<code>public</code>) to our server using FTP. You might remember that this was the standard for having a website in the 90s were all websites were coded in Frames or tables. My first &ldquo;real website&rdquo; around 2008 was deployed that way. It was a mess.</p>
+<p>What I did might be over-engineering in some way. I have all my source code in git so I set up a git repository on my server and push to this repository whenever I want to publish a new blog post, fix an issue, or change some templates/CSS. What's important about the repository is that it needs to be a <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server">bare repository</a>.</p>
+<h4 id="setting-up-the-git-repository">Setting up the git repository</h4>
+<p>The repository can be in any directory on your server which your user (the one you login with ssh) has access to. It should not be your web server root, that is <code>/var/www/</code> or <code>/var/www/html/</code> depending on your system since the files inside the bare repo could be exposed to the public this way. I created a directory outside the web server root in my users <code>home</code> directory, namely <code>$HOME/repository/kevingimbel.com</code>. The steps to setup the bare repository are as follows.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh youruser@yourserver
+$ mkdir -p $HOME/repository/kevingimbel.com
+$ cd $HOME/repository/kevingimbel.com
+$ git clone --bare https://github.com/kevingimbel/kevingimbel.com
+</code></pre></div><p>These commands create the <code>repository</code> directory with a sub-directory <code>kevingimbel.com</code> inside. Inside this new directory I clone the git repository from GitHub with the <a href="https://git-scm.com/docs/git#git---bare"><code>--bare</code></a> flag set. This will not checkout the source code but instead setup a git repository which we can push to or pull from - just like we would do from GitHub. What we need to build the static site is <code>hugo</code> as executable on the server -and the source code of the site. &ldquo;Wait!&rdquo; I hear you say, &ldquo;Didn't you just say there <em>is no source code?!</em>&rdquo; - that's right. The bare repository holds no source code but it can <em>be pushed to</em>! When we push our code to this remote we can use a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git hook</a> to execute a set of scripts when a push is received. To do so, we use the <code>post-receive</code> hook. There are examples for each hook inside your newly created directory, e.g. <code>$HOME/repository/kevingimbel.com/hooks</code>.</p>
+<h4 id="the-postreceive-hook">The post-receive hook</h4>
+<p>The <code>post-receive</code> hook is executed after the git repository receives a new push. There are also <code>pre-</code> hooks which are executed before certain actions take place. You can use <code>pre-commit</code> for example to run a set of tests before you are able to write a commit message. I did this in for my example <a href="https://github.com/kevingimbel/nodesh/blob/master/scripts/pre-commit">node cli script nodesh</a> to run <a href="https://mochajs.org/">mocha</a> before I am able to commit. If a test fails and mocha exits with a non 0 code the commit is aborted. To build our static site after we push to the repository we will use the <code>post-receive</code> hook.</p>
+<p>The <code>post-receive</code> hook I use can be found <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive">on GitHub</a>. The <code>post-receive</code> hook is a bash script which has access to a lot of built-in functions as well as all your users functions when a <code>source ~/.bash_profile</code> line is added to the top.</p>
+<pre><code>#!/bin/sh
+
+source ~/.bash_profile
+
+repository_path=$HOME/repositories/kevingimbel.com
+project_path=$HOME/subdomains/html
+hugo_file_path=$HOME/hugosrc
+css_path=$hugo_file_path/themes/kevingimbel/static/css
+css_file=$css_path/style.css
+base_theme_file=$hugo_file_path/themes/kevingimbel/layouts/_default/baseof.html
+while read oldrev newrev refname
+do
+    # Get the name of the current branch
+    branch=$(git rev-parse --symbolic --abbrev-ref $refname)
+
+    # Checkout master branch
+    if [ &quot;$branch&quot; = &quot;master&quot; ]; then
+      git --work-tree=$hugo_file_path --git-dir=$repository_path checkout -f master
+
+      # Get checksum of file
+      file_shasum=$(shasum $css_file | awk -F' ' '{ print $1 }')
+
+      # declare name of new CSS file
+      new_css_file_name=&quot;style.$file_shasum.css&quot;
+
+      # move style.css to the new CSS name (rename)
+      mv $css_file $css_path/$new_css_file_name
+
+      # replace name in template before hugo is build
+      sed -i &quot;s/style\.css/${new_css_file_name}/g&quot; $base_theme_file
+
+      hugo -b=&quot;https://kevingimbel.com&quot; -d=&quot;$project_path&quot; -s=&quot;$hugo_file_path&quot;
+    fi
+done
+</code></pre><p>There happens quite a lot in my <code>post-receive</code> but the most import parts are the  <code>git checkout</code> with the <a href="https://git-scm.com/docs/git#git---work-treeltpathgt"><code>--work-tree</code></a> and <a href="https://git-scm.com/docs/git#git---git-dirltpathgt"><code>--git-dir</code></a> to tell git were the git repository is (<code>--git-dir</code>) and were the files should be checked-out to (<code>--work-tree</code>). I checkout the files to <code>$HOME/hugosrc</code>where the source code of my website is placed just like on GitHub. I then <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive#L33-L42">do some magic</a> to re-write my <code>style.css</code> file to a hashed-file. This is used to force browsers to re-load the CSS when the file has changed. After the style.css re-write is done and the css path inside the  <code>baseof.html</code> template is changed I build the site with <code>hugo</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo -b<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://kevingimbel.com&#34;</span> -d<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$project_path<span style="color:#e6db74">&#34;</span> -s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$hugo_file_path<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p><code>-b</code> is the base url, <code>-d</code> is the destination and <code>-s</code> is the source. This way the static site is generated into my document root folder ($home/subdomains/html) with the new source files checked-out by git into the <code>$HOME/hugosrc</code> directory. Hugo generates the site and logs all output to the terminal - which is nice to have. In case of a build error hugo stops and does not overwrite the existing, working site. This is also nice to have.</p>
+<p>What's important is that the <code>post-receive</code> hook is executable, so you have to run <code>$ chmod +x post-receive</code> to set the <code>x</code> (or e<code>x</code>ecute) permission on the file.</p>
+<h4 id="pushing-to-the-new-repository">Pushing to the new repository</h4>
+<p>To push your code to the new repository you need to add it as a <a href="https://git-scm.com/docs/git-remote">remote</a> to your local git repository. To do so, use <code>git remote add</code> filling in the remote name and remote url parameters.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># git remote add $name $url</span>
+$ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/repository/gitrepo
+</code></pre></div><p>Afterwards you are able to push your code with <code>git push production master</code>.</p>
+<p>And that's it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/git" term="git" label="git" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/deployment" term="deployment" label="deployment" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Farewell Jekyll, Hello Hugo]]></title>
+            <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
+            
+                <id>https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</id>
+            
+            
+            <published>2016-11-16T19:04:42+01:00</published>
+            <updated>2016-11-16T19:04:42+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.</p>
+<p>This very site you read right now is build with <a href="http://gohugo.io">Hugo</a>, a static site generator build by <a href="http://spf13.com/">Steve Francia</a>, <a href="https://github.com/bep">Bjørn Erik Pedersen</a> and a lot of <a href="https://github.com/spf13/hugo/graphs/contributors">contributors</a>. Hugo is written in <a href="https://golang.org/">Go</a> a programming language created at Google I have <a href="https://github.com/kevingimbel?language=go&amp;tab=repositories">been interested in lately</a>.
+For me personally Go provides a lot of new challenges and things to learn. I worked with Front-End technologies like HTML and CSS as well as scripting languages like PHP and JavaScript for the better part of the past 6-7 years; &ldquo;professionally&rdquo; and officially since 2014. Go is entirely different to what I am used to and I like it. I enjoy playing around with it where in the past year or so I lost a big part of my passion for programming in the languages I already know. But why move away from Jekyll? And why choose Go?</p>
+<h3 id="ruby">Ruby</h3>
+<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don't have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
+<h3 id="go">Go</h3>
+<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it's as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17_Linux-64bit.tar.gz
+$ tar -xzvf hugo_0.17_Linux-64bit.tar.gz
+$ ln -s hugo_0.17_linux_amd64 hugo
+$ chmod +x hugo
+$ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>/hugo ~/bin
+</code></pre></div><p>Another reason why I chose Hugo over <a href="https://www.staticgen.com/">any other static site generators</a> is because it is under active development thanks to <a href="https://github.com/bep">Bjørn Erik Pedersen</a>, has <a href="https://gohugo.io/overview/introduction/">excellent docs</a> and an active community.</p>
+<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I'm not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
+<p>As of today it's not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
+<p>Some things are still not working as I would like but I'll eventually get to them. After all, a personal website is always a work in progress.</p>
+<p><em>Farewell Jekyll, it's been a pleasure for the past three years.</em></p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/go" term="go" label="go" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/development" term="development" label="development" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/personal" term="personal" label="personal" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

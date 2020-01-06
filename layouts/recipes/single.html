@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "recipes/single.html" }}
+{{ end }}
+<main id="main" class="main">
+    <header>
+        <h3>Ingredients</h3>
+        <table style="min-width: 300px;">
+            <tbody>
+                {{ range .Params.ingredients }}
+                <tr>
+                    <td>{{ .name }}</td>
+                    <td>{{ .amount }}{{ .unit }}</td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </header>
+
+    <article class="article-content">
+        {{ .Content }}
+    </article>
+
+
+    <section class="tags-categories">
+        {{ partial "categories.html" . }}
+        {{ partial "tags.html" . }}
+    </section>
+
+    {{ partial "support.html" }}
+    {{ partial "author.html" }}
+</main>
+{{ end }}

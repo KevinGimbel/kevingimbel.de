@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[tools on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/tools/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/tools/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/tools/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/tools/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
+            <link href="https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
+                <link href="https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://www.kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+            
+                <id>https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/</id>
+            
+            
+            <published>2015-03-10T00:00:00+00:00</published>
+            <updated>2015-03-10T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>I've spent the past week developing some features for our own website at work.
+We're using WordPress and I almost always enjoy working with WordPress beside
+Magento projects, it's way easier to keep an overview and with a good overview
+of data flow and available data it's easier to measure and find performance
+bottleneck. In the following post I want to examine my workflow and the way I
+refactored our code base to increase the speed and overall performance of our
+site.</p>
+<h3 id="mesuring-load-times">Mesuring load times</h3>
+<h4 id="webpagetestorg">WebPageTest.org</h4>
+<p>With <a href="http://webpagetest.org">WebPageTest.org</a> it is quite easy to measure load
+times, render times, asset loading times and non cached assets. WPT even shows
+which assets should be cached or served via a CDN. Initially it checks for First
+View  and Repeat View and outputs a table of numbers and fancy graphics. The
+thing I've been most interested in were First View and Content Breakdown. The
+Content Breakdown showed that ~66% of our landing page consist of images so
+optimizing these images (see below) was a natural approach to boost performance.
+When testing with WebPageTest I like to select the second fastest Internet
+connection and a location somewhere relevant (for this site America, for our own
+somewhere in Germany).</p>
+<p>Then I watch the videos and see how the loading wents on. At first it was a
+blank page and after 2.5s the page &ldquo;suddenly&rdquo; rendered all content at once. This
+was not the desired behavior and so I started testing more.</p>
+<h4 id="chrome-developer-tools">(Chrome) Developer Tools</h4>
+<p>Using the Developer Tools I cleared the cache and measured a &ldquo;fresh&rdquo; load of our
+site to see how content is loaded and where rendering starts. It turned out that
+rendering was blocked by several JavaScript files (third party) and Google
+Fonts, which where loaded from within our CSS files as well as the high amount
+of non-optimized images. All these things can be seen in the Network Tab.</p>
+<p>In Chrome there are 2 vertical lines - blue and red. The blue line marks the
+time at which the <code>DOMContentLoaded</code> event is fired, that is when the DOM is
+ready to be manipulated by JavaScript. The red line marks the moment where the
+<code>load</code> event fires. This event indicates that all content (CSS, JavaScript,
+Images, etc.) has been loaded.</p>
+<blockquote>
+<p>Measuring performance and finding obvious bottlenecks has become fairly easy
+nowadays. With Tools like <a href="http://webpagetest.org">WebPageTest.org</a>, Developer
+Tools or automated testing suits there are a ton of ways to analyze a
+the loading behavior of a website.</p>
+</blockquote>
+<p>With these two tools I started tracking down the various performance issues.
+First of all the blocking JavaScript and a bit of unused code.</p>
+<h3 id="unused-code">Unused Code</h3>
+<p>While checking the Network Tab in Chrome Dev Tools I've seen that out of 16 Requests
+one JavaScript Analytics Library was blocking the
+rendering by almost 600-800ms. Because it was barely used I removed this one so
+there was already a big improvement by removing unused or barely used code - one
+should always check for unused plugins, libs and CSS - this is the most basic
+&ldquo;improvement&rdquo; and optimization.</p>
+<blockquote>
+<p>Regularly refactor your code base to see where unused code exists or
+code can be optimized. By ueing a Pre-Processor it's easy to remove the code
+from production but keep it for later by using an <a href="http://sass-guidelin.es/#main-file">import system</a>.</p>
+</blockquote>
+<h3 id="minify">Minify</h3>
+<p>Minifying files is always a good thing. No doubt. Use
+<a href="https://github.com/mishoo/UglifyJS">Uglify</a> for JavaScript
+and your favorite pre-proccessor's compress function.</p>
+<h3 id="images">Images</h3>
+<p>Next I found that our landing page is pretty image heavy, especially with a big
+banner image. To reduce the size I searched for plugins to automate the process
+but couldn't find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
+Command Line tool for PNG optimization. With this tool I could reduce the size
+of almost any image by 50-70% which again reduced the load time by 100-200ms.</p>
+<blockquote>
+<p>Always optimize images, either with a tool before uploading them or with a
+Plugin. Not optimizing images is a waste of time (literally) and bad for users.</p>
+</blockquote>
+<h3 id="fonts">Fonts</h3>
+<p>As I mentioned earlier, rendering was also blocked by Google Fonts being
+directly included into our Stylesheets. Out of curiosity I checked if loading it
+asynchronously via the provided snippet from Google Fonts would help and indeed
+it did! We saved almost 100ms simply by loading the Font files asynchronously.</p>
+<p>On the very First View this can make the content &lsquo;jump&rsquo; a bit because the
+initial view loads with a fallback font (sans-serif, for example) and then once
+the Font is loaded from Google's CDN it replaces the old font with the new font
+on-the-fly. This may looks ugly and if you absolutely can not live with it you
+must take the 100ms-slower Pill and include the fonts in your CSS where they'll
+be loaded before the CSS is rendered - therefore no delay.</p>
+<p>Below is the function that'll load the fonts via a script tag that as the
+<code>async</code> attribute set.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">google</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">families</span><span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#39;Open+Sans:400,300,600:latin&#39;</span> ] }
+};
+(<span style="color:#66d9ef">function</span>() {
+ <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wf</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+ <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;https:&#39;</span> <span style="color:#f92672">==</span> document.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">protocol</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;https&#39;</span>
+   <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;http&#39;</span>) <span style="color:#f92672">+</span>
+ <span style="color:#e6db74">&#39;://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;</span>;
+ <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text/javascript&#39;</span>;
+ <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">async</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;true&#39;</span>;
+ <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span>
+ document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#39;script&#39;</span>)[<span style="color:#ae81ff">0</span>];
+ <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">wf</span>, <span style="color:#a6e22e">s</span>);
+ })(); 
+</code></pre></div><blockquote>
+<p>Font rendering from within CSS can block the overall load time of the CSS
+file. Splitting out the fonts from the CSS and loading them via JavaScript (if
+possible) may increase the initial load time of the website.</p>
+</blockquote>
+<h3 id="serverside-optimizations">Server-side optimizations</h3>
+<p>There's quite a lot to do when optimizing from the server side. From things like
+optimizing Queries, Caching Queries to using the variety of Apache or Nginx
+Modules and settings to optimize the servers workflow. While we have our site at
+a specific WordPress Hoster our access to server features is mainly limited to
+their admin interface and using the <code>.htaccess</code> - which is what I did.</p>
+<h4 id="expire-dates">Expire Dates</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># caching for 1 month
+&lt;<span style="color:#f92672">IfModule</span> <span style="color:#a6e22e">mod_expires</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">c</span>&gt;
+ ExpiresActive On
+ ExpiresByType text/css &#34;access plus 1 month&#34;
+ ExpiresByType text/javascript &#34;access plus 1 month&#34;
+ ExpiresByType text/html &#34;access plus 1 month&#34;
+ ExpiresByType application/javascript &#34;access plus 1 month&#34;
+ ExpiresByType image/gif &#34;access plus 1 month&#34;
+ ExpiresByType image/jpeg &#34;access plus 1 month&#34;
+ ExpiresByType image/png &#34;access plus 1 month&#34;
+ ExpiresByType image/x-icon &#34;access plus 1 month&#34;
+
+  &lt;<span style="color:#f92672">FilesMatch</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">gif</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">jpe</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">png</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">ico</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">)</span><span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;
+    Header set Cache-Control &#34;public&#34;
+  &lt;/<span style="color:#f92672">FilesMatch</span>&gt;
+&lt;/<span style="color:#f92672">IfModule</span>&gt;
+</code></pre></div><h4 id="compression-with-moddeflate">Compression with mod_deflate</h4>
+<p>With this snippet above we tell the server to cache certain file types by 1
+month (if they don't change of course). This way the server can sent back the
+files from its cache instead of re-generating the files all the time. Next I
+used <code>mod_deflate</code> to compress the files before they are sent to the client.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># Deflate Compression by FileType
+&lt;<span style="color:#f92672">IfModule</span> <span style="color:#a6e22e">mod_deflate</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">c</span>&gt;
+ AddOutputFilterByType DEFLATE text/plain
+ AddOutputFilterByType DEFLATE text/html
+ AddOutputFilterByType DEFLATE text/xml
+ AddOutputFilterByType DEFLATE text/css
+ AddOutputFilterByType DEFLATE text/javascript
+ AddOutputFilterByType DEFLATE application/xml
+ AddOutputFilterByType DEFLATE application/xhtml+xml
+ AddOutputFilterByType DEFLATE application/rss+xml
+ AddOutputFilterByType DEFLATE application/atom_xml
+ AddOutputFilterByType DEFLATE application/javascript
+ AddOutputFilterByType DEFLATE application/x-javascript
+&lt;/<span style="color:#f92672">IfModule</span>&gt;
+</code></pre></div><p>Now all our files are cached and gzip (compressed). Additionally our Hoster has
+its own cache (Varnish) which should benefit to our sites overall performance, too.</p>
+<blockquote>
+<p>Use your servers configuration to serve compressed and/or cached files instead
+of re-generating the files on every request. Make sure to cache static content
+like images, javascript or css.</p>
+</blockquote>
+<h3 id="lazyload-javascript">Lazy-load JavaScript</h3>
+<p>We've been using our own delayed load for JavaScript assets ever since I started
+working at <a href="http://synoa.de">Synoa</a>. We use the following function to include
+our minified JavaScript after the DOM is loaded, if possible.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">loadAfterDom</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">script</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">body</span>;
+  
+  <span style="color:#a6e22e">script</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text/javascript&#39;</span>;
+  <span style="color:#a6e22e">script</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;path/to/main.min.js&#39;</span>;
+  
+  document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">script</span>);
+}
+<span style="color:#75715e">// load the script when the DOM is constructed
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(window.<span style="color:#a6e22e">addEventListener</span>) {
+  window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#a6e22e">loadAfterDom</span>, <span style="color:#66d9ef">false</span>);
+} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(window.<span style="color:#a6e22e">attachEvent</span>) {
+  window.<span style="color:#a6e22e">attachEvent</span>(<span style="color:#e6db74">&#39;load&#39;</span>, <span style="color:#a6e22e">loadAfterDom</span>);  
+} <span style="color:#66d9ef">else</span> {
+  window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadAfterDom</span>;  
+}
+</code></pre></div><p>This little script loads the <code>main.min.js</code> file after the DOM is constructed so
+it doesn't block the rendering of the page.</p>
+<blockquote>
+<p>Lazy loading JavaScript only works when JavaScript is not needed for the
+initial view (which it shouldn't). When you need JavaScript on render time to
+hide elements, for example, it may be better to hide them initially and show them after the
+page is loaded!</p>
+</blockquote>
+<h3 id="what-could-be-done-next">What could be done next?</h3>
+<p>Next we could think about inlining our Critical Path CSS using a Grunt or Gulp
+task, as Google PageSpeed suggests all the time. I've yet never done this before
+and need to try it before I can say if it's worth or not.</p>
+<p>In another round we could review the entire code base and replace the legacy
+Compass compiler with modern, <a href="https://github.com/sass/node-sass">node-sass</a> and
+<a href="https://github.com/sass/libsass">Libsass</a>, a C++ implementation of Sass that is
+a lot faster than Ruby, to increase compile performance. Most of the vendor
+prefixing is done using own mixins or compass functions (which are legacy), so
+handing the prefixing job to <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>
+is another desirable improvement.</p>
+<h3 id="result">Result</h3>
+<p>At this point, our website performs at 900ms-1.2s in load time for the front page
+and 700-800ms for most sub pages. Yet there is still optimization that need to
+be done, especially the question on how to integrate the optimization into
+everyone's workflow. While developers could use a grunt/gulp/cli task the people
+who actually write content need an easy way to handle the optimization of
+uploaded files. The last resort of more optimization is the server respond time
+on which we don't have any influence.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/css" term="css" label="css" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Getting into vim - again]]></title>
+            <link href="https://www.kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
+                <link href="https://www.kevingimbel.de/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+            
+                <id>https://www.kevingimbel.de/2015/01/getting-into-vim-again/</id>
+            
+            
+            <published>2015-01-21T00:00:00+00:00</published>
+            <updated>2015-01-21T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>It's been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
+VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I've already written about
+<a href="/noobish-vim/">turning Sublime Text into VIM mode</a> and my <a href="/vim-first-impressions/">very first VIM impression</a>, but
+back then I just copy &amp; pasted everything I found on the Internet into my <code>.vimrc</code>. Now with the new year I thought some
+new thing to learn could be fun and I got back into <em>really</em> working with VIM.</p>
+<h2 id="config-first">Config first</h2>
+<p>The past week I've done all my daily work at <a href="http://synoa.de">Synoa</a> in VIM. My current <code>.vimrc</code> is divided into 4
+sections which I'll explain below.</p>
+<h3 id="plugins">Plugins</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; Enable Pathogen to manage plugins</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">execute</span> <span style="color:#a6e22e">pathogen</span>#<span style="color:#a6e22e">infect</span>()<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I've replaced Vundle with Pathogen to load Plugins because to my (still noobish) eye it looks better and more easy to
+use. Pathogen auto-loads all Plugins that are placed inside <code>~/.vim/bundle/</code> - currently the only Plugin I'm using is
+Emmet, because I'd never ever use an editor again that's missing Emmet. The way Emmet works in VIM is a little bit weird
+because of the different modes and key mappings when you come from a Sublime Text 2/3 background. Basically, you need to
+hit <code>[CTRL]+[C]+[,]</code> after every Emmet snippet - beside that it works as expected.</p>
+<h3 id="writin-style-and-syntax">Writin style and syntax</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; enable syntax highlighting</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">syntax</span> <span style="color:#a6e22e">on</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34;setting the terminal color to 256 and theme</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; to Bad Wolf, which is places in ~/.vim/colors</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">t_Co</span>=<span style="color:#ae81ff">256</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">colorscheme</span> <span style="color:#a6e22e">badwolf</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">showmode</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">showcmd</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">modeline</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">ruler</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; line number</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">number</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">tabstop</span>=<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">shiftwidth</span>=<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">expandtab</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">backspace</span>=<span style="color:#a6e22e">indent</span>,<span style="color:#a6e22e">eol</span>,<span style="color:#a6e22e">start</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">smartindent</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">formatoptions</span>+=<span style="color:#a6e22e">t</span> <span style="color:#75715e">&#34; wikia said I need this</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">tw</span>=<span style="color:#ae81ff">120</span> <span style="color:#75715e">&#34; text width</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">colorcolumn</span>=<span style="color:#ae81ff">120</span> <span style="color:#75715e">&#34; adds a ruler to the right side of Vim</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">scrolloff</span>=<span style="color:#ae81ff">15</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">wmh</span>=<span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I must admit that most of the VIM syntax and writing styles is still copy pasted from all over the Internet. In the
+first block I'm setting the colorshemes and basic VIM UI (show mode, show CMD, have a mode line; use a ruler). In the
+second block there's settings for line numbers (always nice to have!) and tab width (2 spaces, always), smartindent (so
+new lines can be auto-indented), general text width (where to place the ruler), scroll off by X lines so I never scroll
+down to the end of the screen and the wmh (window min height) - this one is used so tabs in split view don't take up any
+space.</p>
+<h3 id="key-mappings">Key mappings</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; The &lt;Enter&gt; command behind each mapping executes the</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; command directly. Otherwise the command would be written</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; to the VIM &#39;console&#39; thing</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; start spell checking when hitting F5</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">F5</span>&gt; :<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">spell</span> <span style="color:#a6e22e">spelllang</span>=<span style="color:#a6e22e">en_us</span> &lt;<span style="color:#a6e22e">Enter</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; switch to previous tab</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">nmap</span> &lt;<span style="color:#a6e22e">F2</span>&gt; :<span style="color:#a6e22e">tabp</span> &lt;<span style="color:#a6e22e">Enter</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; switch to next tab</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">nmap</span> &lt;<span style="color:#a6e22e">F3</span>&gt; :<span style="color:#a6e22e">tabn</span> &lt;<span style="color:#a6e22e">Enter</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; hold CTRL + k (up) or j (down)</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">J</span>&gt; &lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">W</span>&gt;<span style="color:#a6e22e">j</span>&lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">W</span>&gt;<span style="color:#a6e22e">_</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">K</span>&gt; &lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">W</span>&gt;<span style="color:#a6e22e">k</span>&lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">W</span>&gt;<span style="color:#a6e22e">_</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; remove information in which line the non-active file currently is</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; auto-expand path (opening files like :tabedit %%/)</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">cabbr</span> &lt;<span style="color:#a6e22e">expr</span>&gt; %% <span style="color:#a6e22e">expand</span>(<span style="color:#e6db74">&#39;%:p:h&#39;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Mostly my key mappings have stayed the same, F5 is used for spell checking (which comes very handy!), F2 and F3 are used
+to navigate between open tabs. The important part here is the <code>&lt;Enter&gt;</code> behind each command. This way the command will
+be executed immediately, otherwise it is written into the little command line at the bottom of VIM.</p>
+<p>New here is the mapping to switch between split view windows. When opening a new file with <code>:sp</code> I can now navigate
+using <code>[CTRL]+[C]</code> and <code>j</code> to go &ldquo;down&rdquo; or <code>k</code> to go up - this is really handy.</p>
+<p>The last line has been the break-through for me in beeing productive with VIM. When working with Magento and CSS, I
+often need to open many files in the same directory, yet I tend to start inside the root. Normally I'd have to write all
+the path to where I am, like <code>:tabedit skin/frontend/namespace/default/scss/</code> when I'm inside a Magento skin folder.
+With this little helper I can type <code>:tabedit %%/</code> and once I write the <code>/</code> the path will expand to the current
+directory.</p>
+<h3 id="no-backups-no-swap">No backups, no swap!</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; No backups and no swap file</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nobackup</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">noswapfile</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>The last part is still the same. Since I'm using git and branches for everything I don't need any kind of backup or swap
+file since I could always revert anything.</p>
+<h2 id="working-in-vim">Working in VIM</h2>
+<p>With these configurations I started to work in VIM. I tried changing and adjusting the themes a bit and in the end found my
+self with a dark theme (bad wolf; a Doctor Who reference!) after using Tomorrow Night (light) for almost half a year. So
+far after seven days the only thing I'm really missing from time to time is Sublime Texts Multi Cursor Feature and
+&ldquo;Search in Folder&rdquo; to find stuff inside the whole project. There are plugins for the later feature and multi cursor
+editing can be archive using weird, cryptic command combinations but I'm not familiar yet with either of these. So far I
+enjoy the destraction free enviorment I'm working in and only start Sublime Text when I can't find a particular
+template.</p>
+<p>Since I've used Sublime Text in Vintage Mode for almost 6 months I'm feeling comfortable enough with the basic
+operations of using <code>y</code>ank, <code>d</code>elete or <code>p</code>ut to move around lines and edit code, <code>dit</code> (delete in tags) or <code>ei&quot;</code> (edit
+iin &ldquo;) are things I don't use that often because they take too much time when they don't work right from the start.</p>
+<p>Other then some hardcore-users I'm also using my mouse wheel and the arrow keys to navigate inside VIM. I feel a lot
+more comfortable doing it this way than I'd feel using only <code>h, j, k, l</code>. After all I liked to get into VIM and I'll see
+how it can benefit to my workflow or if it'll stay in my way at the end - like all other editors I've tried - and I'll
+return to my beloved Sublime Text 3.</p>
+<p>Keep up with my advimtures (ha punny!) by subscribing to the <a href="/atom.xml">Atom Feed</a> or by following me on
+<a href="https://twitter.com/_kevinatari">Twitter</a>:</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/vim" term="vim" label="vim" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/editor" term="editor" label="editor" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Useful Web Developer Tools]]></title>
+            <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+            
+                <id>https://www.kevingimbel.de/2014/06/useful-web-developer-tools/</id>
+            
+            
+            <published>2014-06-13T00:00:00+00:00</published>
+            <updated>2014-06-13T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload,
+Pre-Processors, shortcuts - all that stuff. It's always great to save some time, especially for repeating tasks or
+challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.</p>
+<h2 id="browserbased">Browser-based</h2>
+<p>The following tools are all for Chrome because I use Chrome for most of my development. If you're using another browser
+this section will not be relevant and you can skip to the next list.</p>
+<h3 id="web-developer">Web Developer</h3>
+<p><a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Web Developer</a> is my personal
+number 1 Chrome extension. It's packed with all kinds of functions like responsive previews, disable
+actions (for JavaScript, Cookies, CSS) and what so not - in fact I'm pretty sure this extension can do anything you'll
+ever need on the front-end.</p>
+<h3 id="awesome-screenshot">Awesome Screenshot</h3>
+<p>Even though it is not my main screenshot tool (more later), <a href="https://chrome.google.com/webstore/detail/awesome-screenshot-captur/alelhddbbhepgpmgidjdcjakblofbmce">Awesome
+Screenshot</a> really
+is handy when it comes to quickly taking screenshots inside the browser. It can capture selections, visible parts and
+even the whole website into one picture. The main reason I have this plugin is the easy way of writing into the
+screenshots, adding notes or drawing rectangles and circles - that's really the only reason I have this extension.</p>
+<h3 id="wappalyzer">Wappalyzer</h3>
+<p><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg">Wappalyzer</a> shows frameworks and
+software used to build the page you're currently on. This tool is really sweet and I only use it because I've been
+looking into the source code of several websites to find hints on the used software. Wappalyzer can also show CSS
+Frameworks (like Bootstrap or Foundation), JavaScript Frameworks (like jQuery and Prototype), Web Servers (Nginx or
+Apache), Operating Systems (that one's interesting I've no idea how this works) or programming languages (Ruby, PHP).
+Wappalyzer also sends anonymous informations to its <a href="https://wappalyzer.com/">Web Platform</a> where you can see statistics
+on used software. (This can be turned off in the settings).</p>
+<h3 id="colorzilla">ColorZilla</h3>
+<p><a href="https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp">ColorZilla</a> is a really simple
+and easy-to-use tool with the purpose to get color informations from a website. It can be used by clicking the icon or
+setting a custom shortcut.</p>
+<h3 id="soundcloud">SoundCloud</h3>
+<p>Not really a development tool but lots of <a href="https://soundcloud.com/atarijunge/likes">good music</a></p>
+<h2 id="non-browserbased">Non Browser-based</h2>
+<h3 id="sublime-text-3">Sublime Text 3</h3>
+<p>After trying a lot of different editors (Some IDE-like, some Sublime Text like) I always came back to Sublime Text
+after some while. It's stable, easy to use, easy to customize and has tons of plugins that can enhance your workflow.
+Some of my absolute favorite plugins are:</p>
+<ul>
+<li><a href="http://emmet.io">Emmet</a>, Ex-Zen Coding for generating code from stuff like this <code>(div&gt;.header&gt;.body&gt;p{Test})*5</code></li>
+<li><a href="http://wbond.net/sublime_packages/sftp">(S)FTP Plugin</a> Like the name says, used for (S)FTP deployment</li>
+<li><a href="https://sublime.wbond.net/installation">Package Control</a> easily install packages from within sublime.</li>
+</ul>
+<h3 id="screencloud">ScreenCloud</h3>
+<p><a href="http://screencloud.net">ScreenCloud</a> is my number 1 in-OS screenshot tool. It's capable of SFTP uploads, Dropbox
+uploads, imgur uploads or local file saves so it has everything I need with 3 options of capturing the screen, the active
+window or a selection. It's also multi-OS and runs on Mac, Windows and Linux.</p>
+<h2 id="command-line">Command Line</h2>
+<p>Sweet, sweet command line. Since I switched from Windows 7 to Ubuntu somewhere in summer 2013 I absolutely love the
+command line. It's so much easier to navigate through files, find stuff, copy/delete/move/rename stuff - it's just way
+faster. My Command Line is opened 24/7 and always there to get me access to whatever I want. So here follows some of my
+favorite Command Line based tools.</p>
+<h3 id="gulp">Gulp</h3>
+<p>After fiddling around with <a href="http://gruntjs.com">Grunt</a> for quite some time I just recently switched to <a href="http://gulpjs.com">Gulp</a> due to the fact that is is A LOT easier, more logical and faster (as I can tell). However, I'll have to see it in real big projects first I guess. As of now, it powers this sites JS and CSS compression and compiling.</p>
+<h3 id="image-magick">Image Magick</h3>
+<p><a href="http://www.imagemagick.org/">Image Magick</a> is a simple command line tool to convert or even create images. I must admit
+that I'm using it mostly to resize images. Usage is as simple as <code>$ convert myimg.png -resize 100 myimg_100.png</code>, this
+will resize myimg.png to 100px width and save it as myimg_100.png.</p>
+<h3 id="vim">VIM</h3>
+<p>It's been about 2-3 weeks now that I've started to use vim more often and I currently really like it for writing
+articles or README files and such like.  Developing in it still feels weird but well, maybe someday.
+I'm also continuously updating <a href="https://github.com/kevingimbel/config/blob/master/.vimrc">my .vimrc</a> on GitHub. In Vim
+I'm also using the <a href="http://emmet.io">Emmet</a> Plugin but the handling of it is a bit weird. In fact I haven't really found
+out how exactly Emmet works with Vim. I'm used to have Emmet support all the time and no different modes like VISUAL,
+INSERT and COMMAND - so in any of these Emmet works. Anyway, if you know how it works give me a shout!</p>
+<h3 id="bash">Bash</h3>
+<p>That's not a tool. Or is it? Anyway, I'd like to share my Bash Colors with you, they're also in the <a href="https://github.com/kevingimbel/config/blob/master/shell-color">config GitHub
+repo</a> and given the fact they're standard non-fancy they
+should work on almost all systems. Just edit your <code>.bashrc</code> or <code>.bash_profile</code> and add the PS1 line to it to have a
+colored, good looking bash prompt.</p>
+<p>So, what tools am I missing? Anything that's a absolute must-have? <a href="https://twitter.com/_kevinatari">Hit me up</a>!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

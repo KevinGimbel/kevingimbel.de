@@ -1,0 +1,16 @@
+{{ $taxonomy := "categories" }}
+{{ with .Param $taxonomy }}
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        {{ range $index, $cat := . }}
+        {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $cat) -}}
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under {{ $cat }}"
+                href="{{ .Permalink }}">{{ $cat | urlize }}</a>
+        </li>
+        {{- end -}}
+        {{- end -}}
+    </ul>
+</section>
+{{ end }}

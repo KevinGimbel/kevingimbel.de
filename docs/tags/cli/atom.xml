@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[cli on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/cli/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/cli/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/cli/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/cli/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Bash script: ws]]></title>
+            <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
+                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+            
+                <id>https://www.kevingimbel.de/2017/01/bash-script-ws/</id>
+            
+            
+            <published>2017-01-12T19:22:48+01:00</published>
+            <updated>2017-01-12T19:22:48+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>For the past year or so I had a little function in my <code>.bash_profile</code> file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called <code>ws</code> and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the <code>~/Development</code> directory. If I want to get to a project I would normally navigate like <code>cd ~/Development/private/github/kevingimbel/kevingimbel.com</code> - even with tab completion I am too lazy to type this every time I want to work on my website, so I wrote a script for it!</p>
+<h3 id="the-script-ws">The script: <code>ws</code></h3>
+<p>The script is actually a shell function and it looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">function</span> ws<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  local workspace<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/Development</span><span style="color:#e6db74">&#34;</span>
+	<span style="color:#75715e"># $1 is the target directory</span>
+  local target_dir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+  <span style="color:#75715e"># We start searching from the workspace dir</span>
+  cd $workspace
+  <span style="color:#75715e"># -maxdepth is the max directories to go &#34;down&#34;</span>
+  <span style="color:#75715e"># head -n1 gives back the first result</span>
+  workspace_path<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find . -maxdepth <span style="color:#ae81ff">3</span> -type d -name <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*</span>$target_dir<span style="color:#e6db74">*</span><span style="color:#e6db74">&#34;</span> | head -n1<span style="color:#66d9ef">)</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">else</span>
+    cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">fi</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let's explore it line by line.</p>
+<p>With <code>function ws()</code> we declare the function name. In shell scripts a function name has parentheses after it tho it does not take arguments this way (If you know why this is, <a href="https://github.com/kevingimbel/kevingimbel.com/issues">open an issue and explain it please</a> or <a href="https://twitter.com/_kevinatari">tweet me</a>!). The next lines declare a local variable, <code>workspace</code> and then <code>target_dir=$1</code> were I assign whatever is passed to the function as being the target directory the user is trying to find. Then, I execute <code>cd $workspace</code> to go to the workspace directory and start a search with <code>workspace_path=$(find -maxdepth 3 -type d -name &quot;*$target_dir*&quot; | head -n1)</code> - now that might look weird. What happens here is the following:</p>
+<ul>
+<li>We declare a variable, <code>workspace_path</code></li>
+<li>We execute a function with <code>$()</code></li>
+<li>We use <code>find . -maxdepth 3 -type d -name &quot;*$target_dor*&quot;</code> to search for a <code>d</code>irectory with a name similar to <code>$target_dir</code> (the variable from earlier)</li>
+<li>We then pipe (<code>|</code>) the output from find to <code>head</code> and read in the first line <code>-n1</code> - this is the first match</li>
+<li>The return value from <code>$(find ... | head -n1)</code> is then available in the <code>$workspace_path</code> variable</li>
+</ul>
+<p><code>$workspace_path</code> now holds whatever directory was found - or nothing. This is why we check if it is empty (<code>-z &quot;$workspace_path&quot;</code>) in the <code>if</code> block.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">else</span>
+  cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that's it! Some examples can be seen in the screenshot below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/bash-ws/bash-ws-function-in-use.png"
+      alt="Using the ws function to navigate through my workspace"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Using the ws function to navigate through my workspace
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>I am sure the <code>ws</code> function can be improved more but it has served my needs well so far. One optimisation might be to use the second argument, <code>$2</code>, as parameter for <code>-maxdepth</code>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cli" term="cli" label="cli" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/automation" term="automation" label="automation" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Writing NodeJS cli tools]]></title>
+            <link href="https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://www.kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://www.kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://www.kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://www.kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+            
+                <id>https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/</id>
+            
+            
+            <published>2017-01-09T18:02:48+01:00</published>
+            <updated>2017-01-09T18:02:48+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
+<h3 id="shebang">Shebang</h3>
+<blockquote>
+<p>If you already know what a Shebang is skip to <a href="/writing-nodejs-cli-tools/#writing-a-tiny-node-cli-script">the next section</a></p>
+</blockquote>
+<p>Shell Scripts always start with a <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Shebang</a> on the first line. This line is used to indicate which program is used to execute the following script. For Bash scripts the Shebang is <code>#!/bin/bash</code>. What the OS or program loader does when executing the script is the following. Consider this sample script named <code>hello.sh</code></p>
+<pre><code>#!/bin/bash
+echo &quot;Hello World!&quot;
+</code></pre><p>When it is executed from the command line (cli) with <code>./hello.sh</code> the operating system executes the script (<code>echo &quot;Hello World!&quot;</code>) with <code>/bin/bash</code>. Equally, you could run <code>/bin/bash ./hello.sh</code>. When programming a bash script you can also set it to exit on every error, either with <code>set -e</code> or with a shebang similar to <code>#!/bin/bash -e</code>. The screenshot below demonstrates the difference when running a invalid shell script <code>bad.sh</code>.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/node-cli/shell-shebang-example.png"
+      alt="Executing a invalid bash script without shebang and with shebang and -e flag"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Executing a invalid bash script without shebang and with shebang and -e flag
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>As you can see without the <code>#!/bin/bash -e</code> shebang the script will execute even after an error occurred - this might not be intended behavior. Anyway, the topic of this post is node and the Shebang in node is essential. NodeJS Scripts are JavaScript and cannot be run - like shell scripts - without an Shebang to tell the system to invoke them with node. The NodeJS Shebang looks a bit different and specifies the &ldquo;environment&rdquo; or <code>env</code> with <code>/usr/bin/env</code>. The Shebang then reads <code>#!/usr/bin/env node</code>. Without the Shebang NodeJS scripts will fail immediately after being invoked as seen in the following screenshot.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/node-cli/node-without-and-with-shebang.png"
+      alt="Node Script executed with and without shebang"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Node Script executed with and without shebang
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>While it is not necessarily needed for scripts written in in Shell/Bash the Shebang cannot be omitted from NodeJS scripts intended to be run as command line program.</p>
+<p>Well, that has been a fun excursion into the world of shell scripting. Back to node!</p>
+<h3 id="writing-a-tiny-node-cli-script">Writing a tiny node cli script</h3>
+<p>Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let's keep it simple. We will greet the person executing the script.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">#!/usr/bin/env node
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USER</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+}
+
+<span style="color:#a6e22e">sayHello</span>()
+</code></pre></div><p>Let's save the script and run it with <code>$ node hello.js</code> from the command line.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/node-cli/node-running-hello-js.png"
+      alt="Running the hello.js script"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Running the hello.js script
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Now that's interesting: The script greets the currently logged-in user! That's the case because we make use of the <code>process</code> variable which holds information about the current environment - the <code>env</code> object for example holds your environment variables. Add a new function to <code>hello.js</code> to see the output.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">printEnv</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>)
+}
+
+<span style="color:#a6e22e">printEnv</span>()
+</code></pre></div><p>You will see the <code>USER</code> variable is part of the environment object and holds the name of the logged-in user. This way node scripts can access terminal variables and use them. Run <code>export _test=123</code> and then <code>node hello.js</code> - <code>_test</code> is now part of the environment. By using the Environment we can make a script execute different tasks depending on the environment, as seen in the next snippet.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">log</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">level</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) =&gt; {
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;production&#39;</span>) {
+    <span style="color:#a6e22e">writeLogFile</span>(<span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">level</span>)
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">message</span>)
+  }
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">writeLogFile</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">level</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Not implemented&#39;</span>)
+  <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">exit</span>(<span style="color:#ae81ff">1</span>)
+}
+
+<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;This is a test!&#34;</span>)
+</code></pre></div><p>Here we have a log function which either runs the <code>writeLogFile</code> function when in production mode or logs to the console if we are in any other mode (development for example.)</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/node-cli/node-using-process-environment.png"
+      alt="Making use of the environment in a node cli script"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Making use of the environment in a node cli script
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>As you can see in the screenshot depending on the <code>NODE_ENV</code> variable a different function is executed. The environment can be set inline (<code>$ export NODE_ENV=production</code>) for the duration of the shell session or it can be set permanent, e.g. by adding it to the shell runtime file (<code>~/.zshrc</code> or <code>~/.bashrc</code>). You may also noticed the <code>process.exit(1)</code> inside the <code>writeLogFile</code> function. The <code>exit</code> function enables us to use exit codes to indicate if our script ended successful or not to other processes. If a script exits with <code>0</code> it was successful, everything else is considered an error. To see how a script exits you can run <code>echo $?</code> inside a terminal.</p>
+<p>You can read more about exit codes in <a href="http://www.tldp.org/LDP/abs/html/exit-status.html">the resources of TLDP</a>.</p>
+<p>So far we learned that Node CLI scripts:</p>
+<ul>
+<li>need a shebang, <code>#!/usr/bin/env node</code></li>
+<li>are written in regular JavaScript</li>
+<li>can access the environment</li>
+<li>can exit using <code>process.exit(exit_code)</code></li>
+<li>can utilize lots of Node packages</li>
+</ul>
+<p>And that's it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cli" term="cli" label="cli" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

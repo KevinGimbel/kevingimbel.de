@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "_default/single.html" }}
+{{ end }}
+<main id="main" class="main">
+    <article class="article-content">
+        {{ .Content }}
+    </article>
+
+    {{ partial "support.html" }}
+    {{ partial "author.html" }}
+</main>
+{{ end }}

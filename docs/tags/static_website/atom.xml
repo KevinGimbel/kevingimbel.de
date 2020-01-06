@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[static_website on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/static_website/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/static_website/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/static_website/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/static_website/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Hugo: ignore _index.md in list templates]]></title>
+            <link href="https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+            
+                <id>https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
+            
+            
+            <published>2020-01-03T00:00:00+00:00</published>
+            <updated>2020-01-03T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>While creating my new website I also added more sections, namely a <a href="/blog/">blog</a>, <a href="/photography/">photography</a>, and <a href="/art/">art</a> section. All of these use list templates and render &ldquo;article&rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named <code>_index.md</code> for that. This file can be used to create index pages for lists.</p>
+<p>When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my <code>article-preview.html</code> template that is used to render article previews.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if ne .File.LogicalName &#34;_index.md&#34; }}
+&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article article--in-list&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-heading-{{ .File.UniqueID }}&#34;</span>&gt;
+    [...]
+&lt;/<span style="color:#f92672">article</span>&gt;
+{{ end }}
+</code></pre></div><p><code>{{ if ne .File.LogicalName &quot;_index.md&quot; }}</code> checks if the file name is not <code>_index.md</code> - this will ignore all <code>_index.md</code> files from being rendered with the <code>article-preview.html</code> template.</p>
+<p>It does the job but feels wrong and hacky, so if you know a better solution, please let me know on <a href="https://github.com/kevingimbel/kevingimbel.de" title="Report issue on GitHub">GitHub</a> or <a href="https://bullgit.party/@kevin" title="Contact me on Mastodon">Mastodon</a>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Hugo: compare dates to flag old content]]></title>
+            <link href="https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+            
+                <id>https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</id>
+            
+            
+            <published>2020-01-02T00:00:00+00:00</published>
+            <updated>2020-01-02T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo <a href="https://gohugo.io/functions/math/">Math</a> function and <a href="https://gohugo.io/variables/page/#page-variables">Date</a> values it can be accomplished in automated-enough fashion.</p>
+<h3 id="partial">Partial</h3>
+<p>First I created a new partial named <code>single-header.html</code> and added it to all my <code>single.html</code> templates. The file contains the following code which I will explain step by step.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $now := int (now.Format &#34;2006&#34;) }}
+{{ $article_age := sub $now (int (.Date.Format &#34;2006&#34;)) }}
+
+{{ if gt $article_age 4 }}
+&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;age-note&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt;ATTENTION!&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;This article is over 4 years old, it may be outdated!&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">section</span>&gt;
+{{ end }}
+</code></pre></div><p>The magic all happens in the first 2 lines. First the &ldquo;now&rdquo; time is retrieved, this is the build time - not the current time when the page is loaded in the browser. Then we calculate the different using the Hugo built-in  <code>sub</code> function, giving the two dates in year format (<code>2020</code>, <code>2015</code>, &hellip;) as arguments.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$article_age :<span style="color:#f92672">=</span> sub $now <span style="color:#f92672">(</span>int <span style="color:#f92672">(</span>.Date.Format <span style="color:#e6db74">&#34;2006&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+<span style="color:#75715e"># For an aricle written in 2013 the code looks like</span>
+<span style="color:#75715e"># $article_age = sub 2020 2013</span>
+</code></pre></div><p>After filling in all variables and doing the subtraction, the <code>$article_age</code> variable contains an integer, like <code>7</code> or <code>3</code>. The next line of code checks if the number <code>$article_age</code> is greater than 4, which means the article is older than 4 years. If this is true, the note is displayed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if gt $article_age 4 }}
+    $article_age is greater than 4
+{{ end }}
+</code></pre></div><p>Because we are doing a <code>gt</code> (greater than) comparison only articles that are older than 4 years (5 and more) will be flagged.</p>
+<h2 id="see-it-in-action">See it in action</h2>
+<p>A live example can be seen on my page, for example in the <a href="/blog/2013-08-12-hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Bullgit loves Jekyll]]></title>
+            <link href="https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+            
+                <id>https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/</id>
+            
+            
+            <published>2014-01-06T00:00:00+00:00</published>
+            <updated>2014-01-06T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>After having a static HTML Page for about 6 months, we at <a href="http://bullg.it">bullgit</a> just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:</p>
+<ul>
+<li>Jekyll is built-in GitHub pages</li>
+<li>Jekyll is easy-to-learn and easy to maintain</li>
+<li>No-Database handling of Data (see <a href="https://github.com/bullgit/bullgit.github.io/blob/master/_data/members.yml">the list of members we use</a>)</li>
+<li>Everyone can clone the repo and run it locally</li>
+</ul>
+<p>So basically, as soon as you have a Project on GitHub or an organization like <a href="http://twitter.com/bullgit">bullgit</a> you can use the power of Jekyll to make your page easy to use and easy to change even for new members. We don't even use the Blog function of Jekyll (yet), we just have a front-page rendered with some Ajax to load all the Repos.</p>
+<h3 id="the-basic-jekyll-code">The basic Jekyll code</h3>
+<p>As I always like to remember in Jekyll posts: Jekyll builds static HTML pages but isn't that static at all. There is a lot of dynamics because files can be included into others, layouts are defined through the <a href="http://kevingimbel.com/jekyll-guide/first-page/">Front Matter</a> and you're basically free to create whatever Front Matter and Data you want.</p>
+<p>The <code>index.html</code> looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">    --<span style="color:#e6db74">-
+</span><span style="color:#e6db74">   </span><span style="color:#e6db74"> </span><span style="color:#e6db74">layout: front-page</span>
+    title: 
+    ---
+</code></pre></div><p>That's it, the whole structure is loaded from a Layout file based in <code>/_layouts/</code>, this file is called <code>front-page.html</code>. This <strong>only</strong> holds the <code>&lt;body&gt;</code> content for the front-page, the header and footer are - equal like you'd do it in PHP or other languages - included from <code>header.html</code> and <code>footer.html</code> on every page. So even though it is &ldquo;static&rdquo;, when you change <code>header.html</code> all files will get updated and the new header is available everywhere.</p>
+<p>You can work like this, with <code>{% include file.html %}</code> and Layouts in the Front Matter for every file and kind of content you like. It is even possible to create a <a href="http://kevingimbel.com/atom.xml">atom.xml</a> that serves people wo like to subscribe to your posts.</p>
+<p>However, back to the bullgit. I discovered a awesome feature about Jekyll I didn't knew before: Data handling. When you create a folder called <code>_data</code> in your root directory you can put every kind of text-based data inside a *.yml file and load it in every page of your site.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># let&#39;s assume this is members.yml</span>
+- name: Tim
+  twitter: timpietrusky
+  
+  github: timpietrusky
+  codepen: timpietrusky
+  gravatar: http://www.gravatar.com/avatar/13a9550a854af911366d9f5deb785cd6?s=<span style="color:#ae81ff">200</span>
+
+- name: Max
+  twitter: MyXoToD
+  
+  github: myxotod
+  codepen: MyXoToD
+  gravatar: http://www.gravatar.com/avatar/a284083f6f4f9446723adf3b97b90151?s=<span style="color:#ae81ff">200</span>
+
+- name: Kevin
+  twitter: _kevinatari
+  
+  github: kevingimbel
+  codepen: kevingimbel
+  gravatar: http://www.gravatar.com/avatar/6d391d8c3a528122f3f6c991821350ac?s=<span style="color:#ae81ff">200</span>  
+</code></pre></div><p>After the file is saved you can loop through its content like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% raw %}
+{% for member in site.data.member %}
+    &lt;<span style="color:#f92672">h3</span>&gt;{{ member.name }}&lt;/<span style="color:#f92672">h3</span>&gt;
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://twitter.com/{{member.twitter}}&#34;</span>&gt;{{ member.twitter }}&lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ member.url }}&#34;</span>&gt; {{ member.url }} &lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://codepen.io/{{ member.codepen }}&#34;</span>&gt;{{ member.codepen }}&lt;/<span style="color:#f92672">a</span>&gt;
+{% endfor %}
+{% endraw %}
+</code></pre></div><p>That's it, the result is a <code>h3</code> for every member holding its name and 3 links holding the Twitter, Personal Website and CodePen URL, this way new members can be added easily - only one of us has to edit the <code>members.yml</code> file and the page gets updated a few seconds after.</p>
+<h3 id="github-api">GitHub API</h3>
+<p>As I mentioned above we're using GitHub's API to get all our repos on the front-page. This was pretty easy to be honest, even for a JavaScript and API beginner like I am.</p>
+<p>As I always do I avoided jQuery for this because I think it is a waste of Requests to load jQuery if I only use a minimal of its functionality. So I wrote the Ajax request by hand. The comments describe what goes one.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">// Loading a new Ajax Request and saving it
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// to the variable xml
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">xml</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>();
+
+    <span style="color:#75715e">// opening the connection to GitHub&#39;s REPO API
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Method: GET
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Source 
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Asynchronous: false 
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// For some reasons asynch: true results doubled results
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">xml</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;https://api.github.com/orgs/bullgit/repos&#34;</span>, <span style="color:#66d9ef">false</span>);
+
+    <span style="color:#75715e">// when the state changed (data received )
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">xml</span>.<span style="color:#a6e22e">onreadystatechange</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+        <span style="color:#75715e">// controller for the grid system
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span>;
+        <span style="color:#75715e">// we take the response
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">xml</span>.<span style="color:#a6e22e">responseText</span>;
+        <span style="color:#75715e">// put it into a new var and parse it 
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">res</span>);
+
+        
+        <span style="color:#75715e">// then run over ALL THE BULLGIT
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// running reverse because github goes from oldest to newest
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">--</span> ) {
+
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;homepage&#39;</span>] <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;homepage&#39;</span>] <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;&#39;</span> )
+                      <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;https://github.com/&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;full_name&#39;</span>] 
+                      <span style="color:#f92672">:</span> <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;homepage&#39;</span>]; 
+
+            <span style="color:#75715e">// if it&#39;s the first item
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) {
+                <span style="color:#75715e">// create a layout for the first featured project
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">layout</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;article class=&#39;content--wrap  featured--article&#39;&gt;&#34;</span> <span style="color:#f92672">+</span>
+                         <span style="color:#e6db74">&#34;&lt;h2&gt;&#34;</span> <span style="color:#f92672">+</span>
+                            <span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#39;&lt;a href=&#34;%s&#34;&gt;%s&lt;/a&gt;&#39;</span>, <span style="color:#a6e22e">url</span>, <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;name&#39;</span>]) <span style="color:#f92672">+</span> 
+                        <span style="color:#e6db74">&#34;&lt;/h2&gt;&#34;</span> <span style="color:#f92672">+</span>
+                            <span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#39;&lt;p&gt;%s&lt;/p&gt;&#39;</span>, <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;description&#39;</span>]) <span style="color:#f92672">+</span>
+                         <span style="color:#e6db74">&#34;&lt;/article&gt;&#34;</span>;
+
+                <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;[data-js=featured-project]&#34;</span>); 
+
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;               
+            } <span style="color:#66d9ef">else</span> {
+
+              <span style="color:#75715e">// output = document.querySelector(&#34;[data-js=old-projects]&#34;);
+</span><span style="color:#75715e"></span>
+            <span style="color:#75715e">// create a layout for all other projects
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">layout</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;article class=&#39;project&#39;&gt;&#34;</span> <span style="color:#f92672">+</span>
+                         <span style="color:#e6db74">&#34;&lt;h3 class=&#39;project--headline&#39;&gt;&#34;</span> <span style="color:#f92672">+</span>
+                            <span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#39;&lt;a href=&#34;%s&#34;&gt;%s&lt;/a&gt;&#39;</span>, <span style="color:#a6e22e">url</span>, <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;name&#39;</span>]) <span style="color:#f92672">+</span> 
+                        <span style="color:#e6db74">&#34;&lt;/h3&gt;&#34;</span> <span style="color:#f92672">+</span>
+                             <span style="color:#e6db74">&#34;&lt;p&gt;&#34;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;description&#39;</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&lt;/p&gt;&#34;</span> <span style="color:#f92672">+</span>
+                         <span style="color:#e6db74">&#34;&lt;/article&gt;&#34;</span>;
+
+                <span style="color:#75715e">// select an output @TODO[Kevin]: Re-think logic...
+</span><span style="color:#75715e"></span>              <span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">j</span>) {
+                <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+                  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;[data-column=&#39;1&#39;]&#34;</span>);
+                  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;case 1: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; --- &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;name&#39;</span>])
+                  <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>;
+                  <span style="color:#66d9ef">break</span>;
+                <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+                  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;[data-column=&#39;2&#39;]&#34;</span>);
+                  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;case 2: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; --- &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;name&#39;</span>])
+                  <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+                  <span style="color:#66d9ef">break</span>;
+                <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+                  <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+              }  
+            }       
+            <span style="color:#75715e">// and adding our brand-new bullshit to it.
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">output</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">layout</span>;
+        }
+    };
+
+    <span style="color:#75715e">// sending data
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">xml</span>.<span style="color:#a6e22e">send</span>();
+</code></pre></div><p>Another piece if JavaScript is used to add the Script after the DOM is fully loaded, as suggested by <a href="http://twitter.com/timpietrusky">Tim</a> to speed up the overall loading speed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">// Add a script element as a child of the body
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">downloadJSAtOnload</span>() {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+        <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;assets/js/main.js&#39;</span>;
+        document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">element</span>);
+    }
+
+    <span style="color:#75715e">// Check for browser support of event handling capability
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">addEventListener</span>) {
+        window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;load&#34;</span>, <span style="color:#a6e22e">downloadJSAtOnload</span>, <span style="color:#66d9ef">false</span>);
+    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">attachEvent</span>) {
+        window.<span style="color:#a6e22e">attachEvent</span>(<span style="color:#e6db74">&#34;onload&#34;</span>, <span style="color:#a6e22e">downloadJSAtOnload</span>);
+    } <span style="color:#66d9ef">else</span> {
+        window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">downloadJSAtOnload</span>;
+    }
+</code></pre></div><p>Those are just a few of the benefits of Jekyll and, because we're a &ldquo;GitHub only&rdquo; organization we switched so it's easier to scale the site. Building a Blog would now only take a some time because we're already running Jekyll and just have to add one more layout. That's it, the basics of our brand-new <a href="http://bullg.it">bullgit</a> page.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cms" term="cms" label="cms" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

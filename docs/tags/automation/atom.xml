@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[automation on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/automation/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/automation/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/automation/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/automation/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Bash script: ws]]></title>
+            <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
+                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+            
+                <id>https://www.kevingimbel.de/2017/01/bash-script-ws/</id>
+            
+            
+            <published>2017-01-12T19:22:48+01:00</published>
+            <updated>2017-01-12T19:22:48+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>For the past year or so I had a little function in my <code>.bash_profile</code> file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called <code>ws</code> and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the <code>~/Development</code> directory. If I want to get to a project I would normally navigate like <code>cd ~/Development/private/github/kevingimbel/kevingimbel.com</code> - even with tab completion I am too lazy to type this every time I want to work on my website, so I wrote a script for it!</p>
+<h3 id="the-script-ws">The script: <code>ws</code></h3>
+<p>The script is actually a shell function and it looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">function</span> ws<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  local workspace<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/Development</span><span style="color:#e6db74">&#34;</span>
+	<span style="color:#75715e"># $1 is the target directory</span>
+  local target_dir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+  <span style="color:#75715e"># We start searching from the workspace dir</span>
+  cd $workspace
+  <span style="color:#75715e"># -maxdepth is the max directories to go &#34;down&#34;</span>
+  <span style="color:#75715e"># head -n1 gives back the first result</span>
+  workspace_path<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find . -maxdepth <span style="color:#ae81ff">3</span> -type d -name <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*</span>$target_dir<span style="color:#e6db74">*</span><span style="color:#e6db74">&#34;</span> | head -n1<span style="color:#66d9ef">)</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">else</span>
+    cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">fi</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let's explore it line by line.</p>
+<p>With <code>function ws()</code> we declare the function name. In shell scripts a function name has parentheses after it tho it does not take arguments this way (If you know why this is, <a href="https://github.com/kevingimbel/kevingimbel.com/issues">open an issue and explain it please</a> or <a href="https://twitter.com/_kevinatari">tweet me</a>!). The next lines declare a local variable, <code>workspace</code> and then <code>target_dir=$1</code> were I assign whatever is passed to the function as being the target directory the user is trying to find. Then, I execute <code>cd $workspace</code> to go to the workspace directory and start a search with <code>workspace_path=$(find -maxdepth 3 -type d -name &quot;*$target_dir*&quot; | head -n1)</code> - now that might look weird. What happens here is the following:</p>
+<ul>
+<li>We declare a variable, <code>workspace_path</code></li>
+<li>We execute a function with <code>$()</code></li>
+<li>We use <code>find . -maxdepth 3 -type d -name &quot;*$target_dor*&quot;</code> to search for a <code>d</code>irectory with a name similar to <code>$target_dir</code> (the variable from earlier)</li>
+<li>We then pipe (<code>|</code>) the output from find to <code>head</code> and read in the first line <code>-n1</code> - this is the first match</li>
+<li>The return value from <code>$(find ... | head -n1)</code> is then available in the <code>$workspace_path</code> variable</li>
+</ul>
+<p><code>$workspace_path</code> now holds whatever directory was found - or nothing. This is why we check if it is empty (<code>-z &quot;$workspace_path&quot;</code>) in the <code>if</code> block.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">else</span>
+  cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that's it! Some examples can be seen in the screenshot below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/bash-ws/bash-ws-function-in-use.png"
+      alt="Using the ws function to navigate through my workspace"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Using the ws function to navigate through my workspace
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>I am sure the <code>ws</code> function can be improved more but it has served my needs well so far. One optimisation might be to use the second argument, <code>$2</code>, as parameter for <code>-maxdepth</code>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cli" term="cli" label="cli" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/automation" term="automation" label="automation" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

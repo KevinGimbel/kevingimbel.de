@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Labels in GMail</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    
+    <header class="intro-text">
+        Labels in GMail
+    </header>
+    
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2014-01-08 00:00:00 &#43;0000 UTC">08. Jan 2014</time>  </p>
+            <p>In case your company is using <a href="http://www.google.com/intx/de/enterprise/apps/business/campaign/business-email-by-google-de.html?utm_campaign=emea-smb-apps-bkws-de&amp;utm_medium=cpc&amp;utm_source=google&amp;utm_term=gmail%20business">GMail Business</a> there's one thing that comes to your daily work-life I really love about GMail: <strong>Labels</strong>. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &ldquo;View&rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</p>
+<p>Unfortunately they're kinda hidden and not really promoted by Google. To set up automatic labels you first you need to click the <strong>gear</strong> in the upper right, then <strong>Settings</strong> and then, in the top navigation just below the search input <strong>Filters</strong>. Now there's a &ldquo;Create new Filter&rdquo; link you should click. (I personally always search for this link because it is not highlighted in any way).</p>
+<p>However, a dialog pops up where you can enter a bunch of stuff: From, To, Subject, Has words, Has not words, Has Attachment and Don't include chats. Pretty obvious what can be done here, right? Indeed but the thing is: When you work with a CallTracker system most of the input emails are not from a specific eMail so filtering after an eMail address is not an option. I currently stick with filtering the Subject Line for everything project. I'll give a example:</p>
+<ul>
+<li>Project Name: Project X</li>
+<li>CallTracker Schemata: &ldquo;[Project X - TASK #1 ] Description of the Task&hellip;&rdquo;</li>
+<li>Expected Subject from Clients/Colleags: &ldquo;Project X&rdquo;, &ldquo;project-x.com&rdquo;, &ldquo;Project-X&rdquo;</li>
+</ul>
+<p>So the rule I'd define here for the subject would be the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> <span style="color:#75715e"># Subject</span>
+ <span style="color:#e6db74">&#34;Project X&#34;</span> OR project-x.com OR <span style="color:#e6db74">&#34;[Project X&#34;</span> OR <span style="color:#e6db74">&#34;Project-X&#34;</span>
+</code></pre></div><p>The <strong>OR</strong> tells GMail to look for any of these Subject lines and put a label on it. The quotes are only used if there's a space between the words.
+This rule covers the CallTracker as well as the other eMail Subjects so that everything gets sorted automatically into it's own Label view. I also try to match the Brand color with the Label color to have a visual difference for myself.</p>
+<!-- raw HTML omitted -->
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under work"
+                href="https://www.kevingimbel.de/categories/work/">work</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://www.kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with gmail"
+                href="https://www.kevingimbel.de/tags/gmail/">gmail</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with productivity"
+                href="https://www.kevingimbel.de/tags/productivity/">productivity</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with workflow"
+                href="https://www.kevingimbel.de/tags/workflow/">workflow</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - 2020 Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/blog/2014-01-08-labels-in-gmail.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

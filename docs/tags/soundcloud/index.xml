@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>soundcloud on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/soundcloud/</link>
+    <description>Recent content in soundcloud on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Aug 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/soundcloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Beginners Guide to Drum and Bass</title>
+      <link>https://www.kevingimbel.de/2015/08/a-beginners-guide-to-drum-and-bass/</link>
+      <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2015/08/a-beginners-guide-to-drum-and-bass/</guid>
+      <description>It&#39;s been quite a while since I last posted a Mixtape but luckily I just happened to create one the other day for a friend, hoping to get her into Drum and Bass. So here it is, &amp;ldquo;A Beginners Guide to Drum and Bass&amp;rdquo; with a selection of tracks from liquid to harder Drum and Bass. Enjoy!
+See all Mixtapes</description>
+    </item>
+    
+    <item>
+      <title>Mixtape: February 2014</title>
+      <link>https://www.kevingimbel.de/2014/03/mixtape-february-2014/</link>
+      <pubDate>Sun, 02 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2014/03/mixtape-february-2014/</guid>
+      <description>Another month passed and a new mixtape arrived. My favorites of February 2014. Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>Mixtape: 2013</title>
+      <link>https://www.kevingimbel.de/2014/01/mixtape-2013/</link>
+      <pubDate>Sun, 05 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2014/01/mixtape-2013/</guid>
+      <description>I like to make Mixtapes (or playlists) on SoundCloud and this one is my &amp;ldquo;Best of 2013&amp;rdquo; Mixtape featuring my favorites of Drum and Bass, Electro and Dubstep. Enjoy!</description>
+    </item>
+    
+  </channel>
+</rss>

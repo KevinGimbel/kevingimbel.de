@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[docker on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/docker/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/docker/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/docker/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/docker/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Gotcha: dockerignore]]></title>
+            <link href="https://www.kevingimbel.de/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
+            
+                <id>https://www.kevingimbel.de/2016/12/gotcha-dockerignore/</id>
+            
+            
+            <published>2016-12-21T18:02:42+01:00</published>
+            <updated>2016-12-21T18:02:42+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Today I was caught off-guard by a docker &ldquo;bug&rdquo; - or so I thought at first. I tried to boot up a project with <code>docker-compose up</code> like I do since <a href="/goodbye-ubuntu-hello-mac">switching to a Mac</a>. Unusual was that <code>docker-compose</code> stopped at the build step and would not finish the boot. After some confusion and after checking the projects <code>docker-compose.yml</code> configuration file I went to GitHub to see the newest <a href="https://github.com/docker/for-mac/issues">docker for mac issues</a> because I was using the beta release and thought a recent update might broke a thing or two. Looking at the issues I found a similar <a href="https://github.com/docker/for-mac/issues/1063">issue in docker/for-mac</a> and commented with my setup and output of <code>docker-compose --verbose up</code> only to realize a good 30 minutes later my setup was the problem all along.</p>
+<p>While the configuration files were all correct, I made a mistake and did not provide a <code>.dockerignore</code> file. Without the <code>.dockerignore</code> two 6GB SQL dumps in the same directory which were mounted into the docker container which made the docker daemon crash / hang up. The simple solution was to create the following <code>.dockerignore</code> file.</p>
+<pre><code># database directory on the host
+.db
+# all sql and gz files
+*.sql
+*.gz
+</code></pre><p>Afterwards the <code>docker-compose</code> started without any issues because it now had a build context of around 400MB instead of 13GB.</p>
+<p>Lesson learned: Always make sure your <code>.dockerignore</code> is setup right and ignores all big files! The full file looks as follows:</p>
+<pre><code>node_modules
+.sass-cache
+.db
+*.sql
+*.gz
+.git
+</code></pre>]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/docker" term="docker" label="docker" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/development" term="development" label="development" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

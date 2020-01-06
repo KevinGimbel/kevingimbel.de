@@ -1,0 +1,16 @@
+{{ $date := .Date.Format "02. Jan 2006" }}
+{{ $last_updated := .Lastmod.Format "02. Jan 2006" }}
+{{ $now := int (now.Format "2006") }}
+{{ $article_age := sub $now (int (.Date.Format "2006")) }}
+
+{{ if gt $article_age 4 }}
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+{{ end }}
+
+
+<p>Written on <time datetime="{{ .Date }}">{{ $date }}</time> {{ if ne $date $last_updated }}, last <a href="#update"
+        title="View update">updated</a>
+    {{ .Lastmod.Format "02. Jan 2006" }} {{ end }} </p>

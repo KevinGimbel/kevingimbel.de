@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tooling on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/tooling/</link>
+    <description>Recent content in tooling on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/tooling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Brackets vs. Sublime Text</title>
+      <link>https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/</link>
+      <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2013/12/brackets-vs.-sublime-text/</guid>
+      <description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&#39;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&#39;ve been using for the last two years or so.</description>
+    </item>
+    
+    <item>
+      <title>From 0 To Sass</title>
+      <link>https://www.kevingimbel.de/2013/10/from-0-to-sass/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2013/10/from-0-to-sass/</guid>
+      <description>If you&#39;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&#39;s fair to say that they&#39;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
+Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</description>
+    </item>
+    
+  </channel>
+</rss>

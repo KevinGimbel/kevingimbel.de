@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "photography/single.html" }}
+{{ end }}
+<main id="main" class="main">
+    <article class="article-content">
+        {{ .Content }}
+
+        {{ range .Resources.ByType "image" }}
+        {{ $img := . }}
+        {{ if eq $.Page.Params.keep_original "true"}}
+        <figure>
+            <img src="{{ $img.RelPermalink }}" />
+            <figcaption>
+                <p>{{ .Name }}</p>
+            </figcaption>
+        </figure>
+        {{ else }}
+        <figure>
+            <picture>
+                <source srcset="{{ ($img.Resize "1200x q100").RelPermalink }}" media="(max-width: 1200px)">
+                <source srcset="{{ ($img.Resize "1000x q100").RelPermalink }}" media="(max-width: 1000px)">
+                <source srcset="{{ ($img.Resize "7600x q100").RelPermalink }}" media="(max-width: 640px)">
+                <img src="{{ ($img.Resize "1600x q100").RelPermalink }}" />
+            </picture>
+            <figcaption>
+                <p>{{ .Name }}</p>
+            </figcaption>
+        </figure>
+        {{ end }}
+        {{ end }}
+    </article>
+    <section class="tags-categories">
+        {{ partial "categories.html" . }}
+        {{ partial "tags.html" . }}
+    </section>
+
+    {{ partial "support.html" }}
+    {{ partial "author.html" }}
+</main>
+{{ end }}

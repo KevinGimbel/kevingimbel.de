@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vim - first impression</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    
+    <header class="intro-text">
+        Vim - first impression
+    </header>
+    
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2014-05-26 00:00:00 &#43;0000 UTC">26. May 2014</time>  </p>
+            <p>When I first looked at Vim it was a very short experience that was literally as follows</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	<span style="color:#75715e"># from the command line</span>
+	vim test.md
+	*vim opens*
+	<span style="color:#e6db74">&#34;What&#39;s that?&#34;</span>
+	*CTRL + C* 
+	<span style="color:#e6db74">&#34;How do I even close this?!&#34;</span>
+	*opens browser, googles <span style="color:#e6db74">&#34;how to close VIM&#34;</span>*
+	ESC + :q
+</code></pre></div><p>That was it and that was my Vim experience for quite some time. However, lately I see more and more people talking
+about Vim being the single best editor for everything - no matter what language one writes. A site notice here: I
+still use Sublime Text (2) daily and love it, I have it configured as I like, have all my Plugin and color schemes
+and it just feels great. I tried some other editors like <a href="/brackets-vs-sublime-text/">Brackets</a> and
+<a href="https://atom.io">Atom</a>, also <a href="http://www.jetbrains.com/webstorm/">WebStorm</a> and <a href="http://www.jetbrains.com/phpstorm/">PhpStorm</a>. The later two are great as IDEs but are not the way I like to write code because both are a lot slower than a
+simple text editor like atom, sublime of vim. I guess that's the downside of having an IDE - for me it was too much (I still recommend
+trying them, maybe they enhance your workflow). Atom is really like a  clone of Sublime Text running Web Technologies at
+it's heart (Sublime Text is written in Python).</p>
+<p><img src="https://i.kevingimbel.me/sc/vim_markdown.png" alt="&ldquo;Vim while writing a article&rdquo;" title="Vim while writing an article"></p>
+<p>Anyway, back to Vim. Vim is, what surprised me first, a command line-based editor, there is a Graphic UI version called
+gVim but I wanted to see how I can customize the command line one. Just like the normal bash has a
+<code>.bashrc</code> Vim has its own <code>.vimrc</code> which defines the settings for all its (advanced) functionality and settings. When
+you open Vim with from the command line with <code>vim my-file.md</code> you'll see a black editor with some &ldquo;~&rdquo; on the left.
+You're now in &ldquo;normal&rdquo; mode and need to tab <code>i</code> to start <code>i</code>nserting stuff. From within the insert mode its really like
+any other editor. When you leave the insert mode (by pressing <code>ESC</code>) you're back in the &ldquo;Normal&rdquo; mode where you can
+easily navigate through your file and delete stuff. Deleting works pretty cool I guess, just double tab <code>d</code> to delete a
+whole sentence or <code>x</code> to delete the character below the cursor. Or fancy stuff like <code>d + arrow up/down</code> to delete a
+whole paragraph.</p>
+<p>So basically everything in Vim is bound to keys and those keys can be combined (like <code>d</code>elete + up) and I am sure
+there's even more power inside Vim when it comes to text manipulation, navigation, replacements, etc. Anyway, as long as
+I haven't found out what stuff is possible I'll just share my <code>.vimrc</code> with you.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">	{% <span style="color:#a6e22e">raw</span> %}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">	&#34; vim:fdm=marker</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nocompatible</span> <span style="color:#75715e">&#34; required by Vundle</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">filetype</span> <span style="color:#a6e22e">off</span> <span style="color:#75715e">&#34; required by Vundle</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; Vundle Settings {{{</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">	&#34; set the runtime path to include Vundle and initialize</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">rtp</span>+=~<span style="color:#e6db74">/.vim/</span><span style="color:#a6e22e">bundle</span>/<span style="color:#a6e22e">Vundle</span>.<span style="color:#a6e22e">vim</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">call</span> <span style="color:#a6e22e">vundle</span>#<span style="color:#a6e22e">begin</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; make Vundle manage itself.</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">Plugin</span> <span style="color:#e6db74">&#39;gmarik/Vundle.vim&#39;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; Emmet - I just can not work without this powerful helper</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">Plugin</span> <span style="color:#e6db74">&#39;mattn/emmet-vim&#39;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; Vim Airline is some kind of fancy status bar thingy I guess.</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">Plugin</span> <span style="color:#e6db74">&#39;bling/vim-airline&#39;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; this needs to be called after all Plugins are loaded</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">call</span> <span style="color:#a6e22e">vundle</span>#<span style="color:#a6e22e">end</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">filetype</span> <span style="color:#a6e22e">plugin</span> <span style="color:#a6e22e">indent</span> <span style="color:#a6e22e">on</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; }}}</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; Syntax highlighting and vim style {{{</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; enable syntax highlighting</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">syntax</span> <span style="color:#a6e22e">on</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34;setting the color scheme to github, which is places in ~/.vim/colors</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">t_Co</span>=<span style="color:#ae81ff">256</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">colorscheme</span> <span style="color:#a6e22e">Tomorrow</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; vim Airline settings</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">	&#34; set airline to be displayed all the time (default is only in split mode)</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">laststatus</span>=<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">g</span>:<span style="color:#a6e22e">airline_left_sep</span> = <span style="color:#e6db74">&#39;▶&#39;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">g</span>:<span style="color:#a6e22e">airline_right_sep</span> = <span style="color:#e6db74">&#39;◀&#39;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; line number</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">number</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">	&#34; }}}</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; write settings {{{</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">tabstop</span>=<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">shiftwidth</span>=<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">backspace</span>=<span style="color:#a6e22e">indent</span>,<span style="color:#a6e22e">eol</span>,<span style="color:#a6e22e">start</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">smarttab</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">formatoptions</span>+=<span style="color:#a6e22e">t</span> <span style="color:#75715e">&#34; wikia said I need this</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">tw</span>=<span style="color:#ae81ff">120</span> <span style="color:#75715e">&#34; text width</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">colorcolumn</span>=<span style="color:#ae81ff">120</span> <span style="color:#75715e">&#34; addes a ruler to the right side of Vim</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">	&#34; }}}</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">	&#34; No backups and no swap file</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nobackup</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">noswapfile</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	{% <span style="color:#a6e22e">endraw</span> %}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>So that's quite some stuff I guess. First of all, <a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is the Plugin manager
+for Vim, there are others but I chose this one because it is 99% written in VimL. This little thingy helps me keep track
+of Plugins I use. Friendly.
+<code>syntax on</code> simply turn on syntax highlighting. <code>set t_Co=256</code> sets the terminal colors to 256 colors so the
+<code>colorscheme Tomorrow</code> (<a href="https://github.com/chriskempson/tomorrow-theme">here</a>) works. Next up is Airline, a &ldquo;better
+statusbar&rdquo; for Vim. I saw this on a screenshot once and searched for it, what I first found was
+<a href="https://github.com/Lokaltog/powerline">Powerline</a> but I then saw <a href="https://github.com/bling/vim-airline">Airline</a> and
+chose it because it is written in VimL and I - as of now - try to avoid language mixin because I think it's a good idea
+to keep Vim &ldquo;clean&rdquo; as long as possible. Airline can show in what mode I am, what Git Branch I'm on, and a lot of other
+stuff I haven't configured yet. I guess that'll be another blog post. The <code>airline_left_sep</code> and <code>airline_right_sep</code> are
+the separators of the statusline (see the screenshot below, the seperators are down after &ldquo;Normal&rdquo; and before the &ldquo;1%&quot;)  which at the moment don't look as cool as I thought - have to fix this. Next up
+tabstops, shiftwidth (self explaining), backspace (I've no idea what this is but saw it in any .vimrc I found)
+smarttabs, text width so Vim doesn't write until the end of the screen (I like small gaps to the right) and colorcolumn,
+which is a ruler-like thingy to visually show the max text width. Last stuff: No backups, no swap files, according to a blog
+post I found this isn't needed when working with version controls such as git.</p>
+<p>The weird looking brackets are used to &ldquo;auto-close&rdquo; this section so that when I open my file only the description is
+visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
+<p><img src="https://i.kevingimbel.me/sc/sc-26-01-13.png" alt="Vim with auto-closed sections" title="Vim with auto-closed sections"></p>
+<p>So that's it, my tiny Vim experience and setup. As with every config things you can grab a copy of my <code>.vimrc</code> in the
+<a href="https://github.com/kevingimbel/config/blob/master/.vimrc">Github Config Repo</a>.</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://www.kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tools"
+                href="https://www.kevingimbel.de/categories/tools/">tools</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with editor"
+                href="https://www.kevingimbel.de/tags/editor/">editor</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with vim"
+                href="https://www.kevingimbel.de/tags/vim/">vim</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - 2020 Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/blog/2014-05-26-vim-first-impressions.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

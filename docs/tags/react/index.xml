@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/react/</link>
+    <description>Recent content in react on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ReactJS - Hello World!</title>
+      <link>https://www.kevingimbel.de/2015/05/reactjs-hello-world/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2015/05/reactjs-hello-world/</guid>
+      <description>This article is the first in a series about ReactJS, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &amp;ldquo;background&amp;rdquo;, featuring administrative screens such as the Ads Managment.
+React itself says one very important and true thing about itself:
+ Lots of people use React as the V in MVC.</description>
+    </item>
+    
+  </channel>
+</rss>

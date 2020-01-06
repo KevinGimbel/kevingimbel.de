@@ -1,0 +1,67 @@
+baseURL = "https://www.kevingimbel.de"
+languageCode = "en-us"
+title = "Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer"
+theme = ["hugo-atom-feed"]
+publishDir = "docs"
+[params]
+# Toggle "template hints" 
+# debug = true
+
+[permalinks]
+    blog = "/:year/:month/:title/"
+
+[[params.now]]
+location = "Wiesbaden, Germany"
+    [[params.now.doing]]
+    thing = "reading [Die Tyrannei des Schmetterlings](https://de.wikipedia.org/wiki/Die_Tyrannei_des_Schmetterlings) by [Frank Schätzing](https://de.wikipedia.org/wiki/Frank_Sch%C3%A4tzing)"
+    [[params.now.doing]]
+    thing = "learning [Rust](https://rust-lang.org)"
+    [[params.now.doing]]
+    thing = "learning Spanish"
+
+[menu]
+
+    [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    URL = "/"
+    Weight = 10
+
+    [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
+
+    [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    URL = "/blog/"
+    Weight = 30
+
+    [[menu.main]]
+    identifier = "photography"
+    name = "Photography"
+    URL = "/photography/"
+    Weight = 40
+
+    [[menu.main]]
+    identifier = "Art"
+    name = "Art"
+    URL = "/art/"
+    Weight = 50
+
+    [[menu.main]]
+    identifier = "Now"
+    name = "Now"
+    URL = "/now/"
+    Weight = 60
+
+
+[outputs]
+  # <domain>/atom.xml
+  home = ["HTML", "RSS", "ATOM"]     # default = ["HTML", "RSS"]
+  # <domain>/posts/atom.xml
+  section = ["HTML", "RSS", "ATOM"]  # default = ["HTML", "RSS"]
+  # <domain>/tags/mytag/atom.xml, <domain>/categories/mycat/atom.xml
+  taxonomy = ["HTML", "RSS", "ATOM"] # default = ["HTML", "RSS"]

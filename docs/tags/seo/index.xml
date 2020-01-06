@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>seo on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/seo/</link>
+    <description>Recent content in seo on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo aliases and redirects</title>
+      <link>https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2020/01/hugo-aliases-and-redirects/</guid>
+      <description>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title Hello world would be available at kevingimbel.de/hello-world. With the new format this includes the section, year, and month, so for example kevingimbel.de/blog/2020/01/hello-world.
+To prevent all old URLs from failing with a 404 I added aliases to all old posts.</description>
+    </item>
+    
+  </channel>
+</rss>

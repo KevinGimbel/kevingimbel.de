@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magento: Add fields to the Admin Backend</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    
+    <header class="intro-text">
+        Magento: Add fields to the Admin Backend
+    </header>
+    
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2014-08-27 00:00:00 &#43;0000 UTC">27. Aug 2014</time>  </p>
+            <p>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely
+<em>System-&gt;Config-&gt;Catalog</em> where the user could later insert some SKUs to control which products are shown on the home
+page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a
+settings page. Not only was this rather complex it was also way too &ldquo;over engineered&rdquo; for a simple thing like a text
+field. So I continued searching and found <a href="http://prattski.com/2008/09/29/magento-add-custom-module-for-custom-admin-config-options/">this
+post</a> about creating fields
+in the backend only with XML.</p>
+<p>That was easy and fair enough I thought and so I gave it a try. First however I created a Module in
+<code>app/code/community/Synoa</code> (<em>community</em> because this can be reused and is not directly project specific). My folder
+structure is really simple since I don't need much:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-app/code/community
+ -Synoa
+  -FeaturedProducts
+   -etc
+    -config.xml
+    -system.xml
+</code></pre></div><p>In <code>config.xml</code> is the default Module configuration. In my case the following XML.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+ <span style="color:#f92672">&lt;config</span><span style="color:#f92672">&gt;</span>
+   <span style="color:#f92672">&lt;modules</span><span style="color:#f92672">&gt;</span>
+     <span style="color:#f92672">&lt;Synoa_FeaturedProducts</span><span style="color:#f92672">&gt;</span>
+       <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>0.0.1<span style="color:#f92672">&lt;/version&gt;</span>
+     <span style="color:#f92672">&lt;/Synoa_FeaturedProducts&gt;</span>
+   <span style="color:#f92672">&lt;/modules&gt;</span>
+<span style="color:#f92672">&lt;/config&gt;</span>
+</code></pre></div><p>The really important and <strong>amazing</strong> part happens in <code>system.xml</code>. The way of adding fields as shown below shows how
+amazingly flexible Magento can be. When I tried it out and found that it worked right away I was really impressed.
+Magento's Module System, where the Module Name is equal to the folder it is in, e.g. <code>Mage_Core_Block_Html_Link</code> is in
+<code>Mage/Core/Block/Html/Link.php</code>, also applies to this XML configuration.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;config</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;sections</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;catalog</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;groups</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;featured_products</span> <span style="color:#a6e22e">translate=</span><span style="color:#e6db74">&#34;label&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Featured Products<span style="color:#f92672">&lt;/label&gt;</span>
+        <span style="color:#f92672">&lt;frontend_type</span><span style="color:#f92672">&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
+        <span style="color:#f92672">&lt;sort_order</span><span style="color:#f92672">&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
+        <span style="color:#f92672">&lt;show_in_default</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
+        <span style="color:#f92672">&lt;show_in_website</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
+        <span style="color:#f92672">&lt;show_in_store</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
+        <span style="color:#f92672">&lt;fields</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;product_skus</span> <span style="color:#a6e22e">translate=</span><span style="color:#e6db74">&#34;label&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Insert product skus here<span style="color:#f92672">&lt;/label&gt;</span>
+            <span style="color:#f92672">&lt;frontend_type</span><span style="color:#f92672">&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
+            <span style="color:#f92672">&lt;sort_order</span><span style="color:#f92672">&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
+            <span style="color:#f92672">&lt;show_in_default</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
+            <span style="color:#f92672">&lt;show_in_website</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
+            <span style="color:#f92672">&lt;show_in_store</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
+          <span style="color:#f92672">&lt;/product_skus&gt;</span>
+        <span style="color:#f92672">&lt;/fields&gt;</span>
+      <span style="color:#f92672">&lt;/featured_products&gt;</span>
+    <span style="color:#f92672">&lt;/groups&gt;</span>
+  <span style="color:#f92672">&lt;/catalog&gt;</span>
+<span style="color:#f92672">&lt;/sections&gt;</span>
+<span style="color:#f92672">&lt;/config&gt;</span>
+</code></pre></div><p>Well quite a lot of stuff happens here, let's break that down.</p>
+<h3 id="sections">Sections</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"> <span style="color:#f92672">&lt;sections</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;catalog</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;/catalog&gt;</span>
+ <span style="color:#f92672">&lt;/sections&gt;</span>
+</code></pre></div><p>This part defines in what menu (in the backend on the left) the new fields will be inserted. In this case it's the
+Catalog Menu and there the first Sub-Menu point (which is also named Catalog).</p>
+<h3 id="groups">Groups</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;groups</span><span style="color:#f92672">&gt;</span>
+ <span style="color:#f92672">&lt;group_name</span><span style="color:#f92672">&gt;</span>
+ <span style="color:#f92672">&lt;/group_name&gt;</span>
+<span style="color:#f92672">&lt;/groups&gt;</span>
+</code></pre></div><p>Groups define the &ldquo;containers&rdquo; for settings. These are the boxes on the right part of the screen. Because describing it
+is rather stupid, here's a picture of the new admin menu and it's container (the group).
+![&ldquo;Custom field in the backend.&quot;](<a href="https://i.kevingimbel.me/sc/Screenshot">https://i.kevingimbel.me/sc/Screenshot</a> at 13-52-42.png)</p>
+<p>Lastly inside the group the content is defined. The wrapping tag can have any valid XML name you want, in my case it is
+<code>&lt;featured_products&gt;</code> the <code>translate=&quot;label&quot;</code> attribute tells Magento to translate the label if there is a translation
+available, either in <code>translate.csv</code> or <code>myCompany_MyModule.csv</code> - that's up to you.</p>
+<p>Inside the container is more stuff that could need some explanation.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;my_namespace</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Featured Products<span style="color:#f92672">&lt;/label&gt;</span>
+  <span style="color:#f92672">&lt;frontend_type</span><span style="color:#f92672">&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
+  <span style="color:#f92672">&lt;sort_order</span><span style="color:#f92672">&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
+  <span style="color:#f92672">&lt;show_in_default</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
+  <span style="color:#f92672">&lt;show_in_website</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
+  <span style="color:#f92672">&lt;show_in_store</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
+<span style="color:#f92672">&lt;my_namespace</span><span style="color:#f92672">/&gt;</span>
+</code></pre></div><ul>
+<li><code>label</code> - The label to show at the top (headline)</li>
+<li><code>frontend_type</code>- type of the field in the frontend</li>
+<li><code>sort_order</code> - position in the list</li>
+<li><code>show_in_default</code> - available in default view</li>
+<li><code>show_in_website</code> - available in website view</li>
+<li><code>show_in_store</code> - available in default store view
+The show tags determine in what store config &ldquo;scope&rdquo; (after setting it in the top right) the option is available.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fields</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;product_skus</span> <span style="color:#a6e22e">translate=</span><span style="color:#e6db74">&#34;label&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Insert product skus here (csv, e.g 123, 144, 255)<span style="color:#f92672">&lt;/label&gt;</span>
+    <span style="color:#f92672">&lt;frontend_type</span><span style="color:#f92672">&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
+    <span style="color:#f92672">&lt;sort_order</span><span style="color:#f92672">&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
+    <span style="color:#f92672">&lt;show_in_default</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
+    <span style="color:#f92672">&lt;show_in_website</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
+    <span style="color:#f92672">&lt;show_in_store</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
+  <span style="color:#f92672">&lt;/product_skus&gt;</span>
+<span style="color:#f92672">&lt;/fields&gt;</span>
+</code></pre></div><ul>
+<li><code>label</code> - Label on the left (field description)</li>
+<li><code>sort_order</code>- position <em>inside</em> the list</li>
+</ul>
+<p>I'm not entirely sure what the store variables do here, but I guess they configure if and where the field can be
+<code>echo</code>ed in the frontend.</p>
+<p>And that's it. Without a single line of PHP fields can be added to the backend in Magento. Retrieving the values of
+those fields is also easy, as the following example shows.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;catalog/featured_products/product_skus&#39;</span>); <span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>The logic here is simply <code>section/groupname/fieldname</code>. This fits pretty good with the previously mentioned folder
+structure of Magento.</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://www.kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under magento"
+                href="https://www.kevingimbel.de/categories/magento/">magento</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under php"
+                href="https://www.kevingimbel.de/categories/php/">php</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under backend"
+                href="https://www.kevingimbel.de/categories/backend/">backend</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with magento"
+                href="https://www.kevingimbel.de/tags/magento/">magento</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with xml"
+                href="https://www.kevingimbel.de/tags/xml/">xml</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with php"
+                href="https://www.kevingimbel.de/tags/php/">php</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - 2020 Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/blog/2014-08-27-magento-set-get-variables-backend.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

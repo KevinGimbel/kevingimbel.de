@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hugo: ignore _index.md in list templates</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    
+    <header class="intro-text">
+        How I ignore _index.md files in my list templates
+    </header>
+
+    
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            <h1>Hugo: ignore _index.md in list templates</h1>
+            
+            
+
+
+
+
+
+
+
+<p>Written on <time datetime="2020-01-03 00:00:00 &#43;0000 UTC">03. Jan 2020</time>  </p>
+            <p>While creating my new website I also added more sections, namely a <a href="/blog/">blog</a>, <a href="/photography/">photography</a>, and <a href="/art/">art</a> section. All of these use list templates and render &ldquo;article&rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named <code>_index.md</code> for that. This file can be used to create index pages for lists.</p>
+<p>When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my <code>article-preview.html</code> template that is used to render article previews.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if ne .File.LogicalName &#34;_index.md&#34; }}
+&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article article--in-list&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-heading-{{ .File.UniqueID }}&#34;</span>&gt;
+    [...]
+&lt;/<span style="color:#f92672">article</span>&gt;
+{{ end }}
+</code></pre></div><p><code>{{ if ne .File.LogicalName &quot;_index.md&quot; }}</code> checks if the file name is not <code>_index.md</code> - this will ignore all <code>_index.md</code> files from being rendered with the <code>article-preview.html</code> template.</p>
+<p>It does the job but feels wrong and hacky, so if you know a better solution, please let me know on <a href="https://github.com/kevingimbel/kevingimbel.de" title="Report issue on GitHub">GitHub</a> or <a href="https://bullgit.party/@kevin" title="Contact me on Mastodon">Mastodon</a>.</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://www.kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under frontend"
+                href="https://www.kevingimbel.de/categories/frontend/">frontend</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://www.kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with hugo"
+                href="https://www.kevingimbel.de/tags/hugo/">hugo</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with cms"
+                href="https://www.kevingimbel.de/tags/cms/">cms</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with static_website"
+                href="https://www.kevingimbel.de/tags/static_website/">static_website</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - 2020 Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/blog/2020-01-03-ignore-index-files-list.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

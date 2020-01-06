@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>static_website on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/static_website/</link>
+    <description>Recent content in static_website on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/static_website/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo: ignore _index.md in list templates</title>
+      <link>https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</guid>
+      <description>While creating my new website I also added more sections, namely a blog, photography, and art section. All of these use list templates and render &amp;ldquo;article&amp;rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named _index.md for that. This file can be used to create index pages for lists.
+When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my article-preview.</description>
+    </item>
+    
+    <item>
+      <title>Hugo: compare dates to flag old content</title>
+      <link>https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</guid>
+      <description>With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo Math function and Date values it can be accomplished in automated-enough fashion.
+Partial First I created a new partial named single-header.</description>
+    </item>
+    
+    <item>
+      <title>Bullgit loves Jekyll</title>
+      <link>https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/</link>
+      <pubDate>Mon, 06 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2014/01/bullgit-loves-jekyll/</guid>
+      <description>After having a static HTML Page for about 6 months, we at bullgit just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:
+ Jekyll is built-in GitHub pages Jekyll is easy-to-learn and easy to maintain No-Database handling of Data (see the list of members we use) Everyone can clone the repo and run it locally  So basically, as soon as you have a Project on GitHub or an organization like bullgit you can use the power of Jekyll to make your page easy to use and easy to change even for new members.</description>
+    </item>
+    
+  </channel>
+</rss>

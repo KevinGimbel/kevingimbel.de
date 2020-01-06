@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "blog/single.html" }}
+{{ end }}
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            {{ with .Params.intro_text }}
+            <h1>{{ $.Page.Title }}</h1>
+            {{ end }}
+            {{ partial "single-header.html" . }}
+            {{ .Content }}
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        {{ partial "categories.html" . }}
+        {{ partial "tags.html" . }}
+    </section>
+
+    {{ partial "support.html" }}
+    {{ partial "author.html" }}
+</main>
+{{ end }}

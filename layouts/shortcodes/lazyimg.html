@@ -1,0 +1,11 @@
+{{ $src := index .Params "src" }}
+{{ $srcOnDisk := (printf "/static%s" $src) }}
+{{ $caption := index .Params "caption" }}
+{{ with (imageConfig $srcOnDisk) }}
+  <figure>
+  <img src="" data-lazyload="{{ $src }}" alt="" width="{{ .Width }}" height="{{ .Height }}" onload="this.setAttribute('height', 'auto');" onerror="this.style.background='var(--color-accent-secondary)';"/>
+  {{ with $caption }}
+  <figcaption><p>{{ . }}</p></figcaption>
+  {{ end }}
+  </figure>
+{{ end }}

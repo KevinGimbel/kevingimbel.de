@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hardware on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/hardware/</link>
+    <description>Recent content in hardware on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Dec 2016 15:05:59 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Goodbye Ubuntu, Hello Mac</title>
+      <link>https://www.kevingimbel.de/2016/12/goodbye-ubuntu-hello-mac/</link>
+      <pubDate>Tue, 27 Dec 2016 15:05:59 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2016/12/goodbye-ubuntu-hello-mac/</guid>
+      <description>Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it&#39;s odd to switch to MacOS.</description>
+    </item>
+    
+  </channel>
+</rss>

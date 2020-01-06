@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/style.css">
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+</head>
+
+<body>
+    {{ with .Page.Params.intro_text }}
+    <header class="intro-text">
+        {{ . | markdownify }}
+    </header>
+
+    {{ else }}
+    <header class="intro-text">
+        {{ .Title }}
+    </header>
+    {{ end }}
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main">
+            {{- $currentPage := . -}}
+            {{- range $.Site.Menus.main -}}
+            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                <a href="{{ .URL }}">
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>{{- end -}}
+        </ul>
+    </nav>
+
+    {{- block "main" . -}}
+    {{- end -}}
+
+    <footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - {{ now.Format "2006" }} Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/{{ .File }}">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    {{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
+    <script async src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+    {{ end }}
+
+    {{ if ($.Page.Scratch.Get "include_codepen") "true" }}
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    {{ end }}
+
+    {{ if ($.Page.Scratch.Get "include_mastodon") "true" }}
+    <script src="https://mastodon.social/embed.js" async="async"></script>
+    {{ end }}
+</body>
+
+</html>

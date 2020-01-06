@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[mastodon on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/mastodon/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/mastodon/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/mastodon/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/mastodon/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Mastodon Embed Shortcode for hugo]]></title>
+            <link href="https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+            
+                <id>https://www.kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</id>
+            
+            
+            <published>2018-09-12T00:00:00+00:00</published>
+            <updated>2018-09-12T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>You may know that <a href="https://github.com/kevingimbel/hugo-shortcodes">I made some shortcodes for Hugo</a>, the static site generator I am using to create this website. So far I made a shortcode for <a href="https://caniuse.com">caniuse.com</a> and <a href="https://codepen.io">codepen.io</a> which allow to embed CodePen and &ldquo;Can I Use&rdquo; embeds easily with Hugos build-in Shortcode system.</p>
+<p>Today I made another one which allows embeds from Mastodon, the decentralized Twitter-like social network. An example embed is shown below.</p>
+
+
+
+
+
+
+<iframe src= "https://mastodon.social/@kevingimbel/100700713283716694/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="600" height="333"></iframe>
+
+<p>The Source Code can be found <a href="https://github.com/kevingimbel/hugo-shortcodes/tree/master/mastodon">on GitHub.com</a></p>
+<h2 id="configuration">Configuration</h2>
+<p>The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. <a href="https://mastodon.social/@kevingimbel/100700713283716694"><a href="https://mastodon.social/@kevingimbel/100700713283716694">https://mastodon.social/@kevingimbel/100700713283716694</a></a>.</p>
+<pre><code>{{&lt; mastodon status=&quot;https://mastodon.social/@kevingimbel/100700713283716694&quot; &gt;}}
+</code></pre><p>Additional parameters:</p>
+<pre><code># All parameters
+{{&lt; mastodon status=&quot;https://mastodon.social/@kevingimbel/100700713283716694&quot; width=&quot;1000&quot; height=&quot;500&quot; &gt;}}
+</code></pre><p>Below is a short description for each parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status</code>| The link to the status</td>
+<td></td>
+</tr>
+<tr>
+<td><code>width</code>| The width of the iframe</td>
+<td></td>
+</tr>
+<tr>
+<td><code>height</code>| The height of the iframe</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>
+
+
+
+
+
+<iframe src= "https://mastodon.social/@rootsworks/100666238685414786/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" height="333"></iframe>
+
+
+
+
+
+
+
+<iframe src= "https://mastodon.social/@prashere/539624/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="300" height="333"></iframe>
+
+
+
+
+
+
+
+<iframe src= "https://octodon.social/@spacekookie/100680807257148198/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="800" height="333"></iframe>
+</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/shortcode" term="shortcode" label="shortcode" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/mastodon" term="mastodon" label="mastodon" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

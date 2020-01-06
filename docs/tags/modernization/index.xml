@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>modernization on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/modernization/</link>
+    <description>Recent content in modernization on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Nov 2017 10:56:13 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/modernization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CSS Custom Properties and a new look</title>
+      <link>https://www.kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</link>
+      <pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</guid>
+      <description>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (aka CSS variables).</description>
+    </item>
+    
+  </channel>
+</rss>

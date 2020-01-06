@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "_default/now.html" }}
+{{ end }}
+<main id="main" class="main">
+    <article class="article-content">
+        {{ .Content }}
+
+        {{ range .Site.Params.now }}
+        <p>I am currently in {{ .location }}. Right now I am:</p>
+
+        <ul>
+            {{ range .doing }}
+            <li>{{ .thing | markdownify }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </article>
+    {{ partial "support.html" }}
+    {{ partial "author.html" }}
+</main>
+{{ end }}

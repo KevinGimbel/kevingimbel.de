@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>street_photography on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/street_photography/</link>
+    <description>Recent content in street_photography on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/street_photography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>City Walk Wiesbaden</title>
+      <link>https://www.kevingimbel.de/photography/wiesbaden-walk-in-the-city/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/photography/wiesbaden-walk-in-the-city/</guid>
+      <description>Some pictures I took while walking through the city of Wiesbaden.
+All images in this post were taken with my Fujifilm X30 camera.</description>
+    </item>
+    
+    <item>
+      <title>Imbiss</title>
+      <link>https://www.kevingimbel.de/photography/imbiss/</link>
+      <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/photography/imbiss/</guid>
+      <description>Neon sign at night, taken during some festivities in Mainz, Germany.</description>
+    </item>
+    
+  </channel>
+</rss>

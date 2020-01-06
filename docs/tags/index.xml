@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <link>https://www.kevingimbel.de/tags/</link>
+    <description>Recent content in Tags on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.kevingimbel.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hugo</title>
+      <link>https://www.kevingimbel.de/tags/hugo/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seo</title>
+      <link>https://www.kevingimbel.de/tags/seo/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/seo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static_site</title>
+      <link>https://www.kevingimbel.de/tags/static_site/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/static_site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cms</title>
+      <link>https://www.kevingimbel.de/tags/cms/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/cms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static_website</title>
+      <link>https://www.kevingimbel.de/tags/static_website/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/static_website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>header</title>
+      <link>https://www.kevingimbel.de/tags/header/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/header/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>illustration</title>
+      <link>https://www.kevingimbel.de/tags/illustration/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/illustration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sketch</title>
+      <link>https://www.kevingimbel.de/tags/sketch/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/sketch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>calc</title>
+      <link>https://www.kevingimbel.de/tags/calc/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/calc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://www.kevingimbel.de/tags/css/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fallback</title>
+      <link>https://www.kevingimbel.de/tags/fallback/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/fallback/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>canon</title>
+      <link>https://www.kevingimbel.de/tags/canon/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/canon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>canon_eos_1000d</title>
+      <link>https://www.kevingimbel.de/tags/canon_eos_1000d/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/canon_eos_1000d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>forest</title>
+      <link>https://www.kevingimbel.de/tags/forest/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/forest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>landscape</title>
+      <link>https://www.kevingimbel.de/tags/landscape/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/landscape/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nature</title>
+      <link>https://www.kevingimbel.de/tags/nature/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/nature/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>darktable</title>
+      <link>https://www.kevingimbel.de/tags/darktable/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/darktable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fujifilm</title>
+      <link>https://www.kevingimbel.de/tags/fujifilm/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/fujifilm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fujifilm_x30</title>
+      <link>https://www.kevingimbel.de/tags/fujifilm_x30/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/fujifilm_x30/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macro</title>
+      <link>https://www.kevingimbel.de/tags/macro/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/macro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mushroom</title>
+      <link>https://www.kevingimbel.de/tags/mushroom/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/mushroom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wildpark</title>
+      <link>https://www.kevingimbel.de/tags/wildpark/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/wildpark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>city</title>
+      <link>https://www.kevingimbel.de/tags/city/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/city/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>street_photography</title>
+      <link>https://www.kevingimbel.de/tags/street_photography/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/street_photography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wiesbaden</title>
+      <link>https://www.kevingimbel.de/tags/wiesbaden/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/wiesbaden/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fallout</title>
+      <link>https://www.kevingimbel.de/tags/fallout/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/fallout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mmo</title>
+      <link>https://www.kevingimbel.de/tags/mmo/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/mmo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playstation</title>
+      <link>https://www.kevingimbel.de/tags/playstation/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/playstation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playstation_4</title>
+      <link>https://www.kevingimbel.de/tags/playstation_4/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/playstation_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rpg</title>
+      <link>https://www.kevingimbel.de/tags/rpg/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/rpg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mastodon</title>
+      <link>https://www.kevingimbel.de/tags/mastodon/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/mastodon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcode</title>
+      <link>https://www.kevingimbel.de/tags/shortcode/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/shortcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mainz</title>
+      <link>https://www.kevingimbel.de/tags/mainz/</link>
+      <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/mainz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://www.kevingimbel.de/tags/bash/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://www.kevingimbel.de/tags/shell/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>til</title>
+      <link>https://www.kevingimbel.de/tags/til/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/til/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>accessibility</title>
+      <link>https://www.kevingimbel.de/tags/accessibility/</link>
+      <pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/accessibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>modernization</title>
+      <link>https://www.kevingimbel.de/tags/modernization/</link>
+      <pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/modernization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>personal</title>
+      <link>https://www.kevingimbel.de/tags/personal/</link>
+      <pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redesign</title>
+      <link>https://www.kevingimbel.de/tags/redesign/</link>
+      <pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/redesign/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://www.kevingimbel.de/tags/review/</link>
+      <pubDate>Sun, 02 Apr 2017 13:34:13 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apps</title>
+      <link>https://www.kevingimbel.de/tags/apps/</link>
+      <pubDate>Wed, 29 Mar 2017 18:34:37 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>productivity</title>
+      <link>https://www.kevingimbel.de/tags/productivity/</link>
+      <pubDate>Wed, 29 Mar 2017 18:34:37 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workflow</title>
+      <link>https://www.kevingimbel.de/tags/workflow/</link>
+      <pubDate>Wed, 29 Mar 2017 18:34:37 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/workflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deployment</title>
+      <link>https://www.kevingimbel.de/tags/deployment/</link>
+      <pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://www.kevingimbel.de/tags/git/</link>
+      <pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://www.kevingimbel.de/tags/automation/</link>
+      <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>https://www.kevingimbel.de/tags/cli/</link>
+      <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scripting</title>
+      <link>https://www.kevingimbel.de/tags/scripting/</link>
+      <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/scripting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://www.kevingimbel.de/tags/javascript/</link>
+      <pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://www.kevingimbel.de/tags/nodejs/</link>
+      <pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://www.kevingimbel.de/tags/development/</link>
+      <pubDate>Tue, 27 Dec 2016 15:05:59 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://www.kevingimbel.de/tags/hardware/</link>
+      <pubDate>Tue, 27 Dec 2016 15:05:59 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://www.kevingimbel.de/tags/docker/</link>
+      <pubDate>Wed, 21 Dec 2016 18:02:42 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://www.kevingimbel.de/tags/go/</link>
+      <pubDate>Wed, 16 Nov 2016 19:04:42 +0100</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jekyll</title>
+      <link>https://www.kevingimbel.de/tags/jekyll/</link>
+      <pubDate>Wed, 16 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://www.kevingimbel.de/tags/ruby/</link>
+      <pubDate>Wed, 16 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mixtape</title>
+      <link>https://www.kevingimbel.de/tags/mixtape/</link>
+      <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/mixtape/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>soundcloud</title>
+      <link>https://www.kevingimbel.de/tags/soundcloud/</link>
+      <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/soundcloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://www.kevingimbel.de/tags/react/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://www.kevingimbel.de/tags/tools/</link>
+      <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gulp</title>
+      <link>https://www.kevingimbel.de/tags/gulp/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/gulp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sass</title>
+      <link>https://www.kevingimbel.de/tags/sass/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/sass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>editor</title>
+      <link>https://www.kevingimbel.de/tags/editor/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://www.kevingimbel.de/tags/vim/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://www.kevingimbel.de/tags/android/</link>
+      <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>https://www.kevingimbel.de/tags/chrome/</link>
+      <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://www.kevingimbel.de/tags/html/</link>
+      <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>magento</title>
+      <link>https://www.kevingimbel.de/tags/magento/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/magento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://www.kevingimbel.de/tags/php/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xml</title>
+      <link>https://www.kevingimbel.de/tags/xml/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/xml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>frontend</title>
+      <link>https://www.kevingimbel.de/tags/frontend/</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>closure</title>
+      <link>https://www.kevingimbel.de/tags/closure/</link>
+      <pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/closure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scoping</title>
+      <link>https://www.kevingimbel.de/tags/scoping/</link>
+      <pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/scoping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mvc</title>
+      <link>https://www.kevingimbel.de/tags/mvc/</link>
+      <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/mvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boiler_room</title>
+      <link>https://www.kevingimbel.de/tags/boiler_room/</link>
+      <pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/boiler_room/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gmail</title>
+      <link>https://www.kevingimbel.de/tags/gmail/</link>
+      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/gmail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>https://www.kevingimbel.de/tags/music/</link>
+      <pubDate>Sun, 05 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://www.kevingimbel.de/tags/software/</link>
+      <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tooling</title>
+      <link>https://www.kevingimbel.de/tags/tooling/</link>
+      <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/tooling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>job</title>
+      <link>https://www.kevingimbel.de/tags/job/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/job/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>work</title>
+      <link>https://www.kevingimbel.de/tags/work/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interface</title>
+      <link>https://www.kevingimbel.de/tags/interface/</link>
+      <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://www.kevingimbel.de/tags/tutorial/</link>
+      <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vanilla_js</title>
+      <link>https://www.kevingimbel.de/tags/vanilla_js/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/vanilla_js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://www.kevingimbel.de/tags/design/</link>
+      <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>community</title>
+      <link>https://www.kevingimbel.de/tags/community/</link>
+      <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/community/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>https://www.kevingimbel.de/tags/code/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thoughts</title>
+      <link>https://www.kevingimbel.de/tags/thoughts/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/thoughts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UI</title>
+      <link>https://www.kevingimbel.de/tags/ui/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UX</title>
+      <link>https://www.kevingimbel.de/tags/ux/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kevingimbel.de/tags/ux/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

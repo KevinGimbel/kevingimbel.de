@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "taxonomy/tag.html" }}
+{{ end }}
+<main id="main" class="main">
+    {{ .Content }}
+
+    {{ range .Data.Pages }}
+    {{ .Render "article-preview" }}
+    {{ end }}
+</main>
+{{ end }}

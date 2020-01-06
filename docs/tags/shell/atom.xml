@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[shell on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/tags/shell/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/tags/shell/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/tags/shell/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/tags/shell/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[TIL: Bash select]]></title>
+            <link href="https://www.kevingimbel.de/2018/04/til-bash-select/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+            
+                <id>https://www.kevingimbel.de/2018/04/til-bash-select/</id>
+            
+            
+            <published>2018-04-18T00:00:00+00:00</published>
+            <updated>2018-04-18T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>I was recently researching different bash prompts and stumbled upon an <a href="https://unix.stackexchange.com/a/193660/136550" title="StackExchange answer for question 'In which situations are PS2, PS3, PS4 used as the prompt?'">StackExchange answer</a> which explains the different prompt types (<code>PS1</code>, <code>PS2</code>, <code>PS3</code>, and <code>PS4</code>). The answer explains how the PS3 prompt is used for commands like <code>select</code>. I did not know about select before, so that's the real <abbr title="Today I learned">TIL</abbr>
+ here!</p>
+<blockquote>
+<p>[&hellip;] PS3 is shown when the select command is waiting for input [&hellip;]</p>
+</blockquote>
+<p>So the <code>PS3</code> prompt is shown when a bash program is waiting for user input, and it turns out that the <code>select</code> bash command is used for creating a &ldquo;choice&rdquo; <abbr title="User Interface">UI</abbr>
+ in bash. So what does that mean and how does it work?</p>
+<h2 id="asking-interactive-questions-in-bash">Asking interactive questions in Bash</h2>
+<p>Let's assume we have a shell script called <code>make-project</code> which bootstraps some project stuff, for example configuration files. We could provide the user with an option to choose a format from a list of available configuration formats like <code>XML</code> or <code>JSON</code>.</p>
+<p>We can handle these options via shell arguments like <code>make-project -format xml</code>, but we could also ask questions interactively using <code>select</code>.</p>
+<p>The script looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># Default format</span>
+format<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xml&#34;</span>
+
+<span style="color:#75715e"># Ask a question</span>
+echo <span style="color:#e6db74">&#34;Which configuration format do you prefer?&#34;</span>
+<span style="color:#75715e"># Create the &#34;UI&#34; with a choice option</span>
+<span style="color:#66d9ef">select</span> f in xml json; <span style="color:#66d9ef">do</span>
+  format<span style="color:#f92672">=</span>$f
+  <span style="color:#75715e"># Break to end the select after something was selected</span>
+  break;
+<span style="color:#66d9ef">done</span>
+
+echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Format: </span>$format<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>The <code>select</code> function takes a variable name (<code>f</code> above) and a list of possible values (<code>xml json</code>) which is seperated by spaces.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">select</span> myvariable in value1 value2 value3; <span style="color:#66d9ef">do</span>
+  <span style="color:#75715e"># $myvariable will be value1, value2, or value3</span>
+  selectedValue <span style="color:#f92672">=</span> $myvariable
+  break;
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>When our little <code>make-project</code> script is run it would looks like this (in Bash 4.4 on Mac OS):</p>
+<pre><code>$ ./make-project.sh
+Which configuration format do you prefer?
+1) xml
+2) json
+#? _
+</code></pre><p>The last line, <code>#?</code>, is the <code>PS3</code> prompt and <code>_</code> is the cursor position. The user can now enter a number (1 for <code>xml</code> or 2 for <code>json</code>) and the selection would be captured and assigned to the <code>format</code> variable in our script. If we add <code>export PS3=&quot;Your answer: &quot;</code> to the script it will replace the default PS3 prompt for your script as shown below.</p>
+<pre><code>$ ./make-project.sh
+Which configuration format do you prefer?
+1) xml
+2) json
+Your answer: _
+</code></pre><p><code>select</code> is a clean and simple way to create a interactive UI! I tried the code with the <code>zsh</code> and <code>fish</code> shell and it looks the same.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/til" term="til" label="til" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/shell" term="shell" label="shell" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

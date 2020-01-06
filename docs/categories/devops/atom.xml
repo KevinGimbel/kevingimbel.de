@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[devops on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer]]></title>
+    
+    
+    
+            <link href="https://www.kevingimbel.de/categories/devops/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.kevingimbel.de/categories/devops/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://www.kevingimbel.de/categories/devops/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-01-06T18:10:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://www.kevingimbel.de/categories/devops/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[TIL: Bash select]]></title>
+            <link href="https://www.kevingimbel.de/2018/04/til-bash-select/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+            
+                <id>https://www.kevingimbel.de/2018/04/til-bash-select/</id>
+            
+            
+            <published>2018-04-18T00:00:00+00:00</published>
+            <updated>2018-04-18T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>I was recently researching different bash prompts and stumbled upon an <a href="https://unix.stackexchange.com/a/193660/136550" title="StackExchange answer for question 'In which situations are PS2, PS3, PS4 used as the prompt?'">StackExchange answer</a> which explains the different prompt types (<code>PS1</code>, <code>PS2</code>, <code>PS3</code>, and <code>PS4</code>). The answer explains how the PS3 prompt is used for commands like <code>select</code>. I did not know about select before, so that's the real <abbr title="Today I learned">TIL</abbr>
+ here!</p>
+<blockquote>
+<p>[&hellip;] PS3 is shown when the select command is waiting for input [&hellip;]</p>
+</blockquote>
+<p>So the <code>PS3</code> prompt is shown when a bash program is waiting for user input, and it turns out that the <code>select</code> bash command is used for creating a &ldquo;choice&rdquo; <abbr title="User Interface">UI</abbr>
+ in bash. So what does that mean and how does it work?</p>
+<h2 id="asking-interactive-questions-in-bash">Asking interactive questions in Bash</h2>
+<p>Let's assume we have a shell script called <code>make-project</code> which bootstraps some project stuff, for example configuration files. We could provide the user with an option to choose a format from a list of available configuration formats like <code>XML</code> or <code>JSON</code>.</p>
+<p>We can handle these options via shell arguments like <code>make-project -format xml</code>, but we could also ask questions interactively using <code>select</code>.</p>
+<p>The script looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># Default format</span>
+format<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xml&#34;</span>
+
+<span style="color:#75715e"># Ask a question</span>
+echo <span style="color:#e6db74">&#34;Which configuration format do you prefer?&#34;</span>
+<span style="color:#75715e"># Create the &#34;UI&#34; with a choice option</span>
+<span style="color:#66d9ef">select</span> f in xml json; <span style="color:#66d9ef">do</span>
+  format<span style="color:#f92672">=</span>$f
+  <span style="color:#75715e"># Break to end the select after something was selected</span>
+  break;
+<span style="color:#66d9ef">done</span>
+
+echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Format: </span>$format<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>The <code>select</code> function takes a variable name (<code>f</code> above) and a list of possible values (<code>xml json</code>) which is seperated by spaces.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">select</span> myvariable in value1 value2 value3; <span style="color:#66d9ef">do</span>
+  <span style="color:#75715e"># $myvariable will be value1, value2, or value3</span>
+  selectedValue <span style="color:#f92672">=</span> $myvariable
+  break;
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>When our little <code>make-project</code> script is run it would looks like this (in Bash 4.4 on Mac OS):</p>
+<pre><code>$ ./make-project.sh
+Which configuration format do you prefer?
+1) xml
+2) json
+#? _
+</code></pre><p>The last line, <code>#?</code>, is the <code>PS3</code> prompt and <code>_</code> is the cursor position. The user can now enter a number (1 for <code>xml</code> or 2 for <code>json</code>) and the selection would be captured and assigned to the <code>format</code> variable in our script. If we add <code>export PS3=&quot;Your answer: &quot;</code> to the script it will replace the default PS3 prompt for your script as shown below.</p>
+<pre><code>$ ./make-project.sh
+Which configuration format do you prefer?
+1) xml
+2) json
+Your answer: _
+</code></pre><p><code>select</code> is a clean and simple way to create a interactive UI! I tried the code with the <code>zsh</code> and <code>fish</code> shell and it looks the same.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/til" term="til" label="til" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/shell" term="shell" label="shell" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Using the Terminal: The Prompt]]></title>
+            <link href="https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+            
+                <id>https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/</id>
+            
+            
+            <published>2017-03-29T18:34:37+01:00</published>
+            <updated>2017-03-29T18:34:37+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>The Terminal (or <em>bash</em>, <em>shell</em>, <em>console</em>) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already <a href="/bash-script-ws/">wrote about one custom script named <code>ws</code></a> which enhances my daily workflows. This article marks the first of many to come about using and configuring your terminal. This tutorial is written for MacOS and Linux, though most of it will work on Windows 10 if you use Bash.</p>
+<p>To get started with this tutorial open up your terminal. If you don't know how to open a terminal your first mission is to find out how! (<em>Hint: Google is your friend!</em>). Once the terminal is open we can start with some basic operations.</p>
+<p><em>Note:</em> On newer Windows versions you should use Bash if available! This tutorial will probably not work with older Windows Verisons (XP, 7, maybe even 8) and the Windows Terminal (e.g. CMD).</p>
+<p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it'll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
+<h2 id="preface-vim">Preface: VIM</h2>
+<blockquote>
+<p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://www.kevingimbel.de/2017/03/using-the-terminal-the-prompt/
+#the-prompt">skip to the next section</a></p>
+</blockquote>
+<p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It's a bit weird to get used to at first but once you know your way around you'll become quite productive with it. It's easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/vim-empty-file.png"
+      alt="An empty file opened in VIM"
+       />
+    
+  
+  <figcaption>
+    <p>
+      An empty file opened in VIM
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>To start writing text we need to enter Input Mode. This is done by typing an <code>i</code>. Afterwards, we can write. VIM has three different modes: Input, Visual and Normal. To leave a mode and return to normal, you need to press <code>ESC</code>. Visual Mode can be used to select multiple lines or copy/paste things around. Insert Mode is mainly used for writing text and Normal Mode is used for navigation, e.g to move to the Top of a file (<code>gg</code>) or bottom of a file (<code>SHIFT+G</code>). VIM works a lot with shortcuts which is why we can edit text files so fast with it. Consider the following example HTML tag.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;some-class-name another-class-name yet more classes&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>To remove all classes and add a new class name you would move your mouse to the line, select everything between <code>&quot;</code> and <code>&quot;</code>, and then enter the new class name. In VIM, you can enter Normal Mode, place the cursor inside the element and press <code>ci&quot;</code> (<em>change in &ldquo;</em>). The entrie text will be removed and VIM enters Insert Mode inside the <code>&quot;&quot;</code>. To change a word, you write <code>cw</code>. To write text inside the tag, <code>cit</code> (change in tag) and the cursor is placed inside the <code>&lt;div&gt;</code>. Additional to the default movement and replacing there are plugins to make this even faster or smarter, like <a href="https://github.com/tpope/vim-surround">surround.vim</a>.</p>
+<p>So, VIM is quite an editor. Get used to it, you'll thank me later! What we need to know for basic file editing and this tutorial is the following:</p>
+<ul>
+<li><code>i</code> is pressed to enter Insert Mode</li>
+<li><code>ESC</code> is pressed to exit a mode, e.g. Insert or Visual</li>
+<li>all commands starting with <code>:</code> are executed by pressing the <code>&lt;Enter&gt;</code> key, e.g. <code>:wq&lt;Enter&gt;</code></li>
+<li><code>:</code> is pressed to enter a command (literally type a <code>:</code>, e.g. with <code>SHIFT+.</code> or wherever it is on your keyboard)</li>
+<li><code>:w</code> means <code>write</code>. To write a file, press <code>SHIFT+.</code>, then <code>w</code>, then <code>Enter</code>.</li>
+<li>To quit the editor, write <code>:q</code>, then <code>Enter</code>. To force quit without saving, type <code>:q!</code>, then <code>Enter</code></li>
+<li>Moving the cursor is done with UP, DOWN, RIGHT, and LEFT Arrow Keys or <code>h,j,k,l</code> in Normal Mode or Visual Mode
+<ul>
+<li><code>h</code> = left</li>
+<li><code>j</code> = down</li>
+<li><code>k</code> = up</li>
+<li><code>l</code> = right</li>
+</ul>
+</li>
+</ul>
+<p>Lots of VIM Tips can be found in the <a href="http://vim.wikia.com/wiki/Vim_Tips_Wiki">VIM Wikia</a>.</p>
+<h2 id="the-prompt">The Prompt</h2>
+<p>One your terminal is open you should see a Dollar Sign (<code>$</code>) or similar symbol, like shown below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~ $
+</code></pre></div><p>This is the Prompt. The Prompt shows the current directory (<code>~</code>) and most of the time has a fixed sign, e.g. <code>$</code>. Other prompts might use symbols like <code># </code>, <code>%` </code>bash-3.2$<code>or</code>kevin@ubuntu: $`. The prompt is configurable and comes with different defaults depending on the operating system. So, each line below is how a prompt may look.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kevin@MacBook-Pro: ~ $
+~/Development #
+/usr/share/docs %
+root@ubuntu: / $
+</code></pre></div><p>The Prompt can be changed by updating the <code>PS1</code> environment variable. Environment variables are available to the entire system and can be used to configure programs or create shortcuts. The <code>PS1</code> is defined inside the <code>.bashrc</code>, <code>.zshrc</code>, or other shell runtime file. If you are not sure which shell your are using, run <code>echo $SHELL</code> which gives back a string like <code>/bin/zsh</code> or <code>/bin/bash</code>. To change the PS1, open the config file (either <code>.bashrc</code> or <code>.zshrc</code>) inside an editor like <code>vim</code> - from the command line.</p>
+<pre><code>$ vim $HOME/.bashrc
+</code></pre><p>If the files is not empty, go to the bottom (<code>SHIFT+G</code> in vim) and enter input mode (press <code>i</code>). Write the following, then save the file and quit:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MY CUSTOM PROMPT &#34;</span>
+</code></pre></div><blockquote>
+<p><em>Note:</em> To write a file in VIM, press <code>:</code> and then type <code>w</code> and press enter.</p>
+</blockquote>
+<p>Now we need to reload the configuration file (<code>.bashrc</code>) by typing <code>source ~/.bashrc</code> into the terminal and hitting enter. The prompt now looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">MY CUSTOM PROMPT
+</code></pre></div><p>Congrats, your first custom prompt! That's not a useful prompt, however, because it will always show <code>MY CUSTOM PROMPT</code>. A prompt that shows the current directory would be more useful. As it happens, we can use variables inside the Prompt and there are pre-defined variables which hold informations like the current directory, the current logged-in user, the hostname, and man more! Let's start with the working directory - the directory on the file system we are currently in. The working directory is stored inside the <code>\W</code> variable and we can use it like so</p>
+<pre><code>$ vim ~/.bashrc
+export PS1=&quot;\W $&quot;
+</code></pre><p>Save the fie (<code>:wq</code>) and reload the configuration with <code>source ~/.bashrc</code>. The prompt now looks like shown below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-simple-working-directory.png"
+      alt="A simple prompt showing the Working Directory"
+       />
+    
+  
+  <figcaption>
+    <p>
+      A simple prompt showing the Working Directory
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>The first part before the <code>$</code> will be different for you, depending on where on your computer you currently are. To find out where you are, type <code>pwd</code> which shows the current path. You will see that <code>pwd</code> shows a lot more than what we see in the prompt! That is because the variable <code>\W</code> holds only the current directory without a full path. To get the full path, we need to use <code>\w</code>. Change your <code>.bashrc</code> file so the <code>PS1</code> uses the <code>\w</code> variable, reload the configuration (<code>source ~/.bashrc</code>) and see what happens. Your prompt should look similar to the one below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-long-working-directory.png"
+      alt="Using \w, we get the full path from the HOME directory"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Using \w, we get the full path from the HOME directory
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>The full directory path can be helpful but it can also get really long. I like to have a line break in my <code>PS1</code> so that I can enter text below the directory listing. To have a line break add a <code>\n</code> character before <code>$</code> - the <code>$</code>-symbol will then move to the next line as shown below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-with-new-line.png"
+      alt="A terminal prompt with a new line"
+       />
+    
+  
+  <figcaption>
+    <p>
+      A terminal prompt with a new line
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Looking good! The last thing we need - or I want - is to have some color in my prompt so that it's easier to recognize the path or see the hostname - to add color we can either use escape characters like <code>\[\033[34m\]</code> or - what I prefer - <code>tput</code>. You can <a href="http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">read more on escape characters</a> if you wish. I will focus on <a href="https://linux.die.net/man/1/tput"><code>tput</code></a>. I like to define my color variables first and then use them later. To define a variable in shell scripting write <code>variableName=&quot;value&quot;</code>. If you need to execute a program to get your variable value, you have to surround it with <code>$()</code>. For example to read the content of the file <code>test.txt</code> into the variable <code>content</code>, you'd write <code>content=&quot;$(cat test.txt)&quot;</code>.</p>
+<p>Define and use colors in <code>.bashrc</code> or <code>.zshrc</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># predefine variables</span>
+ps1_green<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput setaf 2<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+ps1_yellow<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput setaf 3<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+ps1_reset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput sgr0<span style="color:#66d9ef">)</span><span style="color:#e6db74">\e[m</span><span style="color:#e6db74">&#34;</span>
+export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$ps1_green<span style="color:#e6db74">\w\n</span>$ps1_yellow<span style="color:#e6db74">\$</span>$ps1_reset<span style="color:#e6db74"> </span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><p><em>Note: A great reference for this technique is <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">this handy list</a></em></p>
+<p>In my testing I needed to use <code>\e[m</code> to properly reset the new lines. Otherwise commands would sometimes become cluttered when navigating back with <code>arrow up</code>.</p>
+<p>So that's it for the first part of customizing and using the terminal. Below are some of the <code>tput</code> colors from <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">linux.101hacks.com</a> - mostly as a reference for myself. 😁</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tput bold</code></td>
+<td>Turn on <strong>bold</strong> text</td>
+</tr>
+<tr>
+<td><code>tput smul</code></td>
+<td>Begin underline mode</td>
+</tr>
+<tr>
+<td><code>tput rmul</code></td>
+<td>Exit underline mode</td>
+</tr>
+<tr>
+<td><code>tput sgr0</code></td>
+<td>Reset code, turns off all attributes</td>
+</tr>
+<tr>
+<td><code>tput setaf</code></td>
+<td>Set forground color using <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape</a></td>
+</tr>
+<tr>
+<td><code>tput setab</code></td>
+<td>Set background color using <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape</a></td>
+</tr>
+</tbody>
+</table>
+<p>And here are the 8 color codes you can combine with <code>tput setaf</code> and <code>tput setab</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>Black</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>Red</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Green</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td>Blue</td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td>Magenta</td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td>Cyan</td>
+</tr>
+<tr>
+<td><code>7</code></td>
+<td>White</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/apps" term="apps" label="apps" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Deploy a static site with git]]></title>
+            <link href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+            
+                <id>https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/</id>
+            
+            
+            <published>2017-01-17T21:28:38+01:00</published>
+            <updated>2017-01-17T21:28:38+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let's Encrypt</a> to create SSL certificates and use HTTPS.</p>
+<h3 id="so-what-is-a-static-site">So, what is a &ldquo;static site&rdquo;?</h3>
+<blockquote>
+<p>If you already know the answer, <a href="https://www.kevingimbel.de/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
+">skip to the next section</a>!</p>
+</blockquote>
+<p>As the name suggest a static site is - well - <em>static</em>. There's no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
+&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page wrap&#34;</span> <span style="color:#a6e22e">aria-labeldyby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
+  &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-header&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;/<span style="color:#f92672">header</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-body&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
+    {{ .Content }}
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">section</span>&gt;
+{{ end }}
+</code></pre></div><p>These 10 lines of code make up the default for single pages without a custom template. The words in curly brackets (e.g. <code>{{ .Content }}</code>) are variables filled by Hugo when the template is compiled. <code>{{ define &quot;main&quot; }}</code> defines the <code>main</code> block used inside the <a href="https://github.com/kevingimbel/kevingimbel.com/blob/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts/_default/baseof.html#L36-L38"><code>baseof.html</code> template</a>. All these templates make up the final site. So, despite being &ldquo;static&rdquo; when finished a static site is not so static! It can be flexible and you can use template logic like conditions (<code>if/else</code>, <code>with</code>), loops (<code>range</code>), and with Hugo even custom <a href="http://gohugo.io/extras/shortcodes/">shortcodes inside your markdown</a>.</p>
+<p>At the end of the day we get a static site. This site is compiled from our source files and consists of folders (for URLs) and files (lots of <code>index.html</code> files!) so our server (apache, nginx, a node app) can deliver the content to the client. You might know that by default apache will serve any files such as <code>index.html</code> or <code>index.htm</code> when a route is requested unless you use a dynamic system such as PHP, Ruby, or NodeJS to serve your files. When you load this article at <a href="https://kevingimbel.com/deploy-a-static-site-with-git/">https://kevingimbel.com/deploy-a-static-site-with-git/</a> you request a folder, <code>deploy-a-static-site-with-git</code>, located inside the web root directory of my server and the <code>index.html</code> file inside this folder gets served to you by Apache. This is the basics how static websites work - they're simply HTML files and folders!</p>
+<h3 id="deploying-a-static-site">Deploying a static site</h3>
+<p>So far we learned  that static sites are &ldquo;just&rdquo; folders and HTML files when generated. The only dependency they have to make them work is a Web Server. This can be apache, nginx, IIS, a simple nodeJS app, or even <code>python -m SimpleHTTPServer</code>. The most basic deployment for our website would be to upload the content of the generated folder (<code>public</code>) to our server using FTP. You might remember that this was the standard for having a website in the 90s were all websites were coded in Frames or tables. My first &ldquo;real website&rdquo; around 2008 was deployed that way. It was a mess.</p>
+<p>What I did might be over-engineering in some way. I have all my source code in git so I set up a git repository on my server and push to this repository whenever I want to publish a new blog post, fix an issue, or change some templates/CSS. What's important about the repository is that it needs to be a <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server">bare repository</a>.</p>
+<h4 id="setting-up-the-git-repository">Setting up the git repository</h4>
+<p>The repository can be in any directory on your server which your user (the one you login with ssh) has access to. It should not be your web server root, that is <code>/var/www/</code> or <code>/var/www/html/</code> depending on your system since the files inside the bare repo could be exposed to the public this way. I created a directory outside the web server root in my users <code>home</code> directory, namely <code>$HOME/repository/kevingimbel.com</code>. The steps to setup the bare repository are as follows.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh youruser@yourserver
+$ mkdir -p $HOME/repository/kevingimbel.com
+$ cd $HOME/repository/kevingimbel.com
+$ git clone --bare https://github.com/kevingimbel/kevingimbel.com
+</code></pre></div><p>These commands create the <code>repository</code> directory with a sub-directory <code>kevingimbel.com</code> inside. Inside this new directory I clone the git repository from GitHub with the <a href="https://git-scm.com/docs/git#git---bare"><code>--bare</code></a> flag set. This will not checkout the source code but instead setup a git repository which we can push to or pull from - just like we would do from GitHub. What we need to build the static site is <code>hugo</code> as executable on the server -and the source code of the site. &ldquo;Wait!&rdquo; I hear you say, &ldquo;Didn't you just say there <em>is no source code?!</em>&rdquo; - that's right. The bare repository holds no source code but it can <em>be pushed to</em>! When we push our code to this remote we can use a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git hook</a> to execute a set of scripts when a push is received. To do so, we use the <code>post-receive</code> hook. There are examples for each hook inside your newly created directory, e.g. <code>$HOME/repository/kevingimbel.com/hooks</code>.</p>
+<h4 id="the-postreceive-hook">The post-receive hook</h4>
+<p>The <code>post-receive</code> hook is executed after the git repository receives a new push. There are also <code>pre-</code> hooks which are executed before certain actions take place. You can use <code>pre-commit</code> for example to run a set of tests before you are able to write a commit message. I did this in for my example <a href="https://github.com/kevingimbel/nodesh/blob/master/scripts/pre-commit">node cli script nodesh</a> to run <a href="https://mochajs.org/">mocha</a> before I am able to commit. If a test fails and mocha exits with a non 0 code the commit is aborted. To build our static site after we push to the repository we will use the <code>post-receive</code> hook.</p>
+<p>The <code>post-receive</code> hook I use can be found <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive">on GitHub</a>. The <code>post-receive</code> hook is a bash script which has access to a lot of built-in functions as well as all your users functions when a <code>source ~/.bash_profile</code> line is added to the top.</p>
+<pre><code>#!/bin/sh
+
+source ~/.bash_profile
+
+repository_path=$HOME/repositories/kevingimbel.com
+project_path=$HOME/subdomains/html
+hugo_file_path=$HOME/hugosrc
+css_path=$hugo_file_path/themes/kevingimbel/static/css
+css_file=$css_path/style.css
+base_theme_file=$hugo_file_path/themes/kevingimbel/layouts/_default/baseof.html
+while read oldrev newrev refname
+do
+    # Get the name of the current branch
+    branch=$(git rev-parse --symbolic --abbrev-ref $refname)
+
+    # Checkout master branch
+    if [ &quot;$branch&quot; = &quot;master&quot; ]; then
+      git --work-tree=$hugo_file_path --git-dir=$repository_path checkout -f master
+
+      # Get checksum of file
+      file_shasum=$(shasum $css_file | awk -F' ' '{ print $1 }')
+
+      # declare name of new CSS file
+      new_css_file_name=&quot;style.$file_shasum.css&quot;
+
+      # move style.css to the new CSS name (rename)
+      mv $css_file $css_path/$new_css_file_name
+
+      # replace name in template before hugo is build
+      sed -i &quot;s/style\.css/${new_css_file_name}/g&quot; $base_theme_file
+
+      hugo -b=&quot;https://kevingimbel.com&quot; -d=&quot;$project_path&quot; -s=&quot;$hugo_file_path&quot;
+    fi
+done
+</code></pre><p>There happens quite a lot in my <code>post-receive</code> but the most import parts are the  <code>git checkout</code> with the <a href="https://git-scm.com/docs/git#git---work-treeltpathgt"><code>--work-tree</code></a> and <a href="https://git-scm.com/docs/git#git---git-dirltpathgt"><code>--git-dir</code></a> to tell git were the git repository is (<code>--git-dir</code>) and were the files should be checked-out to (<code>--work-tree</code>). I checkout the files to <code>$HOME/hugosrc</code>where the source code of my website is placed just like on GitHub. I then <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive#L33-L42">do some magic</a> to re-write my <code>style.css</code> file to a hashed-file. This is used to force browsers to re-load the CSS when the file has changed. After the style.css re-write is done and the css path inside the  <code>baseof.html</code> template is changed I build the site with <code>hugo</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo -b<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://kevingimbel.com&#34;</span> -d<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$project_path<span style="color:#e6db74">&#34;</span> -s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$hugo_file_path<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p><code>-b</code> is the base url, <code>-d</code> is the destination and <code>-s</code> is the source. This way the static site is generated into my document root folder ($home/subdomains/html) with the new source files checked-out by git into the <code>$HOME/hugosrc</code> directory. Hugo generates the site and logs all output to the terminal - which is nice to have. In case of a build error hugo stops and does not overwrite the existing, working site. This is also nice to have.</p>
+<p>What's important is that the <code>post-receive</code> hook is executable, so you have to run <code>$ chmod +x post-receive</code> to set the <code>x</code> (or e<code>x</code>ecute) permission on the file.</p>
+<h4 id="pushing-to-the-new-repository">Pushing to the new repository</h4>
+<p>To push your code to the new repository you need to add it as a <a href="https://git-scm.com/docs/git-remote">remote</a> to your local git repository. To do so, use <code>git remote add</code> filling in the remote name and remote url parameters.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># git remote add $name $url</span>
+$ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/repository/gitrepo
+</code></pre></div><p>Afterwards you are able to push your code with <code>git push production master</code>.</p>
+<p>And that's it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/git" term="git" label="git" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/deployment" term="deployment" label="deployment" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Bash script: ws]]></title>
+            <link href="https://www.kevingimbel.de/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://www.kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://www.kevingimbel.de/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
+                <link href="https://www.kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+            
+                <id>https://www.kevingimbel.de/2017/01/bash-script-ws/</id>
+            
+            
+            <published>2017-01-12T19:22:48+01:00</published>
+            <updated>2017-01-12T19:22:48+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>For the past year or so I had a little function in my <code>.bash_profile</code> file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called <code>ws</code> and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the <code>~/Development</code> directory. If I want to get to a project I would normally navigate like <code>cd ~/Development/private/github/kevingimbel/kevingimbel.com</code> - even with tab completion I am too lazy to type this every time I want to work on my website, so I wrote a script for it!</p>
+<h3 id="the-script-ws">The script: <code>ws</code></h3>
+<p>The script is actually a shell function and it looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">function</span> ws<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  local workspace<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/Development</span><span style="color:#e6db74">&#34;</span>
+	<span style="color:#75715e"># $1 is the target directory</span>
+  local target_dir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+  <span style="color:#75715e"># We start searching from the workspace dir</span>
+  cd $workspace
+  <span style="color:#75715e"># -maxdepth is the max directories to go &#34;down&#34;</span>
+  <span style="color:#75715e"># head -n1 gives back the first result</span>
+  workspace_path<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find . -maxdepth <span style="color:#ae81ff">3</span> -type d -name <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*</span>$target_dir<span style="color:#e6db74">*</span><span style="color:#e6db74">&#34;</span> | head -n1<span style="color:#66d9ef">)</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">else</span>
+    cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">fi</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let's explore it line by line.</p>
+<p>With <code>function ws()</code> we declare the function name. In shell scripts a function name has parentheses after it tho it does not take arguments this way (If you know why this is, <a href="https://github.com/kevingimbel/kevingimbel.com/issues">open an issue and explain it please</a> or <a href="https://twitter.com/_kevinatari">tweet me</a>!). The next lines declare a local variable, <code>workspace</code> and then <code>target_dir=$1</code> were I assign whatever is passed to the function as being the target directory the user is trying to find. Then, I execute <code>cd $workspace</code> to go to the workspace directory and start a search with <code>workspace_path=$(find -maxdepth 3 -type d -name &quot;*$target_dir*&quot; | head -n1)</code> - now that might look weird. What happens here is the following:</p>
+<ul>
+<li>We declare a variable, <code>workspace_path</code></li>
+<li>We execute a function with <code>$()</code></li>
+<li>We use <code>find . -maxdepth 3 -type d -name &quot;*$target_dor*&quot;</code> to search for a <code>d</code>irectory with a name similar to <code>$target_dir</code> (the variable from earlier)</li>
+<li>We then pipe (<code>|</code>) the output from find to <code>head</code> and read in the first line <code>-n1</code> - this is the first match</li>
+<li>The return value from <code>$(find ... | head -n1)</code> is then available in the <code>$workspace_path</code> variable</li>
+</ul>
+<p><code>$workspace_path</code> now holds whatever directory was found - or nothing. This is why we check if it is empty (<code>-z &quot;$workspace_path&quot;</code>) in the <code>if</code> block.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">else</span>
+  cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that's it! Some examples can be seen in the screenshot below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/bash-ws/bash-ws-function-in-use.png"
+      alt="Using the ws function to navigate through my workspace"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Using the ws function to navigate through my workspace
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>I am sure the <code>ws</code> function can be improved more but it has served my needs well so far. One optimisation might be to use the second argument, <code>$2</code>, as parameter for <code>-maxdepth</code>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/cli" term="cli" label="cli" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/bash" term="bash" label="bash" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/automation" term="automation" label="automation" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Gotcha: dockerignore]]></title>
+            <link href="https://www.kevingimbel.de/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://www.kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://www.kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
+            
+                <id>https://www.kevingimbel.de/2016/12/gotcha-dockerignore/</id>
+            
+            
+            <published>2016-12-21T18:02:42+01:00</published>
+            <updated>2016-12-21T18:02:42+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Today I was caught off-guard by a docker &ldquo;bug&rdquo; - or so I thought at first. I tried to boot up a project with <code>docker-compose up</code> like I do since <a href="/goodbye-ubuntu-hello-mac">switching to a Mac</a>. Unusual was that <code>docker-compose</code> stopped at the build step and would not finish the boot. After some confusion and after checking the projects <code>docker-compose.yml</code> configuration file I went to GitHub to see the newest <a href="https://github.com/docker/for-mac/issues">docker for mac issues</a> because I was using the beta release and thought a recent update might broke a thing or two. Looking at the issues I found a similar <a href="https://github.com/docker/for-mac/issues/1063">issue in docker/for-mac</a> and commented with my setup and output of <code>docker-compose --verbose up</code> only to realize a good 30 minutes later my setup was the problem all along.</p>
+<p>While the configuration files were all correct, I made a mistake and did not provide a <code>.dockerignore</code> file. Without the <code>.dockerignore</code> two 6GB SQL dumps in the same directory which were mounted into the docker container which made the docker daemon crash / hang up. The simple solution was to create the following <code>.dockerignore</code> file.</p>
+<pre><code># database directory on the host
+.db
+# all sql and gz files
+*.sql
+*.gz
+</code></pre><p>Afterwards the <code>docker-compose</code> started without any issues because it now had a build context of around 400MB instead of 13GB.</p>
+<p>Lesson learned: Always make sure your <code>.dockerignore</code> is setup right and ignores all big files! The full file looks as follows:</p>
+<pre><code>node_modules
+.sass-cache
+.db
+*.sql
+*.gz
+.git
+</code></pre>]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://www.kevingimbel.de/categories/devops" term="devops" label="devops" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/docker" term="docker" label="docker" />
+                             
+                                <category scheme="https://www.kevingimbel.de/tags/development" term="development" label="development" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
