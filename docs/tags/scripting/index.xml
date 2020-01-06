@@ -13,10 +13,10 @@
     
     <item>
       <title>Bash script: ws</title>
-      <link>https://kevingimbel.de/2017/01/bash-script-ws/</link>
+      <link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link>
       <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
       
-      <guid>https://kevingimbel.de/2017/01/bash-script-ws/</guid>
+      <guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid>
       <description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description>
     </item>
     

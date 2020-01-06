@@ -13,40 +13,40 @@
     
     <item>
       <title>Hugo aliases and redirects</title>
-      <link>https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/</link>
+      <link>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</link>
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/</guid>
+      <guid>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</guid>
       <description>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title Hello world would be available at kevingimbel.de/hello-world. With the new format this includes the section, year, and month, so for example kevingimbel.de/blog/2020/01/hello-world.
 To prevent all old URLs from failing with a 404 I added aliases to all old posts.</description>
     </item>
     
     <item>
       <title>Hugo: ignore _index.md in list templates</title>
-      <link>https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</link>
+      <link>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</guid>
+      <guid>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</guid>
       <description>While creating my new website I also added more sections, namely a blog, photography, and art section. All of these use list templates and render &amp;ldquo;article&amp;rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named _index.md for that. This file can be used to create index pages for lists.
 When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my article-preview.</description>
     </item>
     
     <item>
       <title>Hugo: compare dates to flag old content</title>
-      <link>https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</link>
+      <link>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</guid>
+      <guid>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</guid>
       <description>With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo Math function and Date values it can be accomplished in automated-enough fashion.
 Partial First I created a new partial named single-header.</description>
     </item>
     
     <item>
       <title>Mastodon Embed Shortcode for hugo</title>
-      <link>https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</link>
+      <link>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</link>
       <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</guid>
+      <guid>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</guid>
       <description>You may know that I made some shortcodes for Hugo, the static site generator I am using to create this website. So far I made a shortcode for caniuse.com and codepen.io which allow to embed CodePen and &amp;ldquo;Can I Use&amp;rdquo; embeds easily with Hugos build-in Shortcode system.
 Today I made another one which allows embeds from Mastodon, the decentralized Twitter-like social network. An example embed is shown below.
  The Source Code can be found on GitHub.</description>
@@ -54,19 +54,19 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     <item>
       <title>Deploy a static site with git</title>
-      <link>https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/</link>
+      <link>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</link>
       <pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate>
       
-      <guid>https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/</guid>
+      <guid>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</guid>
       <description>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to Hugo hosted on Uberspace. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed ($ hugo) it compiles the site from Markdown and HTML templates into a public directory with lots of folders and HTML files.</description>
     </item>
     
     <item>
       <title>Farewell Jekyll, Hello Hugo</title>
-      <link>https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</link>
+      <link>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</link>
       <pubDate>Wed, 16 Nov 2016 19:04:42 +0100</pubDate>
       
-      <guid>https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</guid>
+      <guid>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</guid>
       <description>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.
 This very site you read right now is build with Hugo, a static site generator build by Steve Francia, Bjørn Erik Pedersen and a lot of contributors.</description>
     </item>

@@ -13,28 +13,28 @@
     
     <item>
       <title>Getting into vim - again</title>
-      <link>https://kevingimbel.de/2015/01/getting-into-vim-again/</link>
+      <link>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2015/01/getting-into-vim-again/</guid>
+      <guid>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</guid>
       <description>It&#39;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&#39;ve already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp;amp; pasted everything I found on the Internet into my .</description>
     </item>
     
     <item>
       <title>Noobish VIM</title>
-      <link>https://kevingimbel.de/2014/07/noobish-vim/</link>
+      <link>https://kevingimbel.de/blog/2014/07/noobish-vim/</link>
       <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2014/07/noobish-vim/</guid>
+      <guid>https://kevingimbel.de/blog/2014/07/noobish-vim/</guid>
       <description>Since I&#39;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &amp;ldquo;good&amp;rdquo; way to integrate it into my daily workflow. Since I&#39;m working in a relativley small company it&#39;s most of the time stressy to get all things done and to keep an overview - so long story short: There&#39;s not much time for new tools that don&#39;t increase my workflow directly. VIM is one of these tools that don&#39;t fully support my workflow at the moment.</description>
     </item>
     
     <item>
       <title>Vim - first impression</title>
-      <link>https://kevingimbel.de/2014/05/vim-first-impression/</link>
+      <link>https://kevingimbel.de/blog/2014/05/vim-first-impression/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2014/05/vim-first-impression/</guid>
+      <guid>https://kevingimbel.de/blog/2014/05/vim-first-impression/</guid>
       <description>When I first looked at Vim it was a very short experience that was literally as follows
 # from the command line vim test.md *vim opens* &amp;#34;What&amp;#39;s that?&amp;#34; *CTRL + C* &amp;#34;How do I even close this?!&amp;#34; *opens browser, googles &amp;#34;how to close VIM&amp;#34;* ESC + :q That was it and that was my Vim experience for quite some time. However, lately I see more and more people talking about Vim being the single best editor for everything - no matter what language one writes.</description>
     </item>

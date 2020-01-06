@@ -13,47 +13,47 @@
     
     <item>
       <title>Using the Terminal: The Prompt</title>
-      <link>https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/</link>
+      <link>https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/</link>
       <pubDate>Wed, 29 Mar 2017 18:34:37 +0100</pubDate>
       
-      <guid>https://kevingimbel.de/2017/03/using-the-terminal-the-prompt/</guid>
+      <guid>https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/</guid>
       <description>The Terminal (or bash, shell, console) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &amp;hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already wrote about one custom script named ws which enhances my daily workflows.</description>
     </item>
     
     <item>
       <title>Bash script: ws</title>
-      <link>https://kevingimbel.de/2017/01/bash-script-ws/</link>
+      <link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link>
       <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
       
-      <guid>https://kevingimbel.de/2017/01/bash-script-ws/</guid>
+      <guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid>
       <description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description>
     </item>
     
     <item>
       <title>Snippet: SASS Source Maps with Gulp</title>
-      <link>https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/</link>
+      <link>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</link>
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/</guid>
+      <guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid>
       <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&#39;s bigger!</description>
     </item>
     
     <item>
       <title>Useful Web Developer Tools</title>
-      <link>https://kevingimbel.de/2014/06/useful-web-developer-tools/</link>
+      <link>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</link>
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2014/06/useful-web-developer-tools/</guid>
+      <guid>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</guid>
       <description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&#39;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
 Browser-based The following tools are all for Chrome because I use Chrome for most of my development.</description>
     </item>
     
     <item>
       <title>Labels in GMail</title>
-      <link>https://kevingimbel.de/2014/01/labels-in-gmail/</link>
+      <link>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</link>
       <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2014/01/labels-in-gmail/</guid>
+      <guid>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</guid>
       <description>In case your company is using GMail Business there&#39;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;ldquo;View&amp;rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</description>
     </item>
     

@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/tags/fallback/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/fallback/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/fallback/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T19:02:47+01:00</updated>
+    <updated>2020-01-07T00:24:24+01:00</updated>
     
     
     
@@ -17,15 +17,15 @@
         
         <entry>
             <title type="html"><![CDATA[Safe calc usage in CSS]]></title>
-            <link href="https://kevingimbel.de/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
-                <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
+                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
+                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
             
-                <id>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</id>
+                <id>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</id>
             
             
             <published>2020-01-01T00:00:00+00:00</published>

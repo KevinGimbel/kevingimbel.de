@@ -13,10 +13,10 @@
     
     <item>
       <title>Mastodon Embed Shortcode for hugo</title>
-      <link>https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</link>
+      <link>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</link>
       <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</guid>
+      <guid>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</guid>
       <description>You may know that I made some shortcodes for Hugo, the static site generator I am using to create this website. So far I made a shortcode for caniuse.com and codepen.io which allow to embed CodePen and &amp;ldquo;Can I Use&amp;rdquo; embeds easily with Hugos build-in Shortcode system.
 Today I made another one which allows embeds from Mastodon, the decentralized Twitter-like social network. An example embed is shown below.
  The Source Code can be found on GitHub.</description>

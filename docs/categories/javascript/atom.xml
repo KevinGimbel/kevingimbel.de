@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/categories/javascript/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/javascript/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/javascript/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T19:02:47+01:00</updated>
+    <updated>2020-01-07T00:24:24+01:00</updated>
     
     
     
@@ -17,13 +17,13 @@
         
         <entry>
             <title type="html"><![CDATA[Snippet: SASS Source Maps with Gulp]]></title>
-            <link href="https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
             
-                <id>https://kevingimbel.de/2015/01/snippet-sass-source-maps-with-gulp/</id>
+                <id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id>
             
             
             <published>2015-01-22T00:00:00+00:00</published>
@@ -116,15 +116,15 @@ image to view it in full-size.</p>
         
         <entry>
             <title type="html"><![CDATA[Endless Multi-Dimensional Navigation]]></title>
-            <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</id>
+                <id>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</id>
             
             
             <published>2014-08-22T00:00:00+00:00</published>
@@ -214,14 +214,14 @@ very similar to <code>this</code>, yet even more flexible!</p>
         
         <entry>
             <title type="html"><![CDATA[A closer look to closure]]></title>
-            <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2014/07/a-closer-look-to-closure/</id>
+                <id>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</id>
             
             
             <published>2014-07-20T00:00:00+00:00</published>
@@ -332,13 +332,13 @@ declares myFunction in the globale scope.</p>
         
         <entry>
             <title type="html"><![CDATA[Passing Arguments in JavaScript]]></title>
-            <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2014/05/passing-arguments-in-javascript/</id>
+                <id>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</id>
             
             
             <published>2014-05-23T00:00:00+00:00</published>
@@ -450,12 +450,12 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Pure JavaScript slider]]></title>
-            <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2014/02/pure-javascript-slider/</id>
+                <id>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</id>
             
             
             <published>2014-02-22T00:00:00+00:00</published>
@@ -565,11 +565,11 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[To infinity and beyond]]></title>
-            <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2013/11/to-infinity-and-beyond/</id>
+                <id>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</id>
             
             
             <published>2013-11-18T00:00:00+00:00</published>
@@ -653,10 +653,10 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[i-js]]></title>
-            <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/10/i-js/</id>
+                <id>https://kevingimbel.de/blog/2013/10/i-js/</id>
             
             
             <published>2013-10-14T00:00:00+00:00</published>

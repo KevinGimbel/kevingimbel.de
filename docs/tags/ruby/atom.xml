@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/tags/ruby/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/ruby/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/ruby/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T19:02:47+01:00</updated>
+    <updated>2020-01-07T00:24:24+01:00</updated>
     
     
     
@@ -17,11 +17,11 @@
         
         <entry>
             <title type="html"><![CDATA[Speed up your Jekyll workflow]]></title>
-            <link href="https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
             
-                <id>https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</id>
+                <id>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</id>
             
             
             <published>2015-12-16T00:00:00+00:00</published>

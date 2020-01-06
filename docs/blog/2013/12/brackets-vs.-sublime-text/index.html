@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brackets vs. Sublime Text</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    
+    <header class="intro-text">
+        Brackets vs. Sublime Text
+    </header>
+    
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2013-12-25 00:00:00 &#43;0000 UTC">25. Dec 2013</time>  </p>
+            <p>I first tried <a href="http://brackets.io">Brackets</a> back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside <a href="http://www.vim.org/">VIM</a> it is <em>the</em> editor I read quite a lot about latly. My first impression was: &ldquo;<em>Wow, that's a simple, clean editor!</em>&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I've been using for the last two years or so.</p>
+<h2 id="functionality">Functionality</h2>
+<h3 id="highlighting">Highlighting</h3>
+<p>Bracket as well as Sublime Text comes with Syntax Highlighting for almost everything one needs: HTML, SCSS, CSS, JavaScript, Ruby, Python - all of these can be highlighted by default which, in my opinion, is a standard these days. However, as far as I can tell it is easier to customize the Highlight settings in Sublime Text (2) and with the standard Monokai Theme Sublime has a better highlighting than Brackets. Another point is that there is no way (as far as I found) to set a highlight language before saving a file in Brackets - so I can't have Markdown Highlighting for this post unless I save it once which is possible in Sublime Text.</p>
+<h3 id="plugins--installation">Plugins + Installation</h3>
+<p>Both editor support additional plugins to enhance the workflow. Both support <a href="http://emmet.io">Emmet</a> which is by far my most needed Plugin as well as FTP Solutions to upload on safe. Both of these are important plugin for my workflow because when developing on a (S)FTP Dev System uploading on save without another program running is a lot faster. I love it. In Sublime Text the easiest way to add new Plugin is through the <a href="https://sublime.wbond.net/installation">Package Controller</a> - Brackets comes with a build-in Package Manager that makes it super easy to add new Plugins. Here the point goes to Brackets for already build-in Package Management.</p>
+<h3 id="ui--ux">UI / UX</h3>
+<p>Both Editors have a clean and simple to understand UI. The only real difference that's notable in my opinion is that Brackets has open files on the top-left sidebar while Sublime Text has them on top organized as tabs (as well as in the sidebar when displayed). This is a difference at first when you come from Sublime Text and in my opinion it's easier to have open files at the top. Nevertheless in both editors it's possible to go through all open files by hitting <code>CMD + Tab</code> which comes very handy. A huge downside of Brackets is that it's not possible to have new files unsaved and then close the editor. In Sublime unsaved files stays as unsaved inside the editor until it is opened the next time. I really like this because in case of a sudden system crash, an electricity failure or whatever else files can still be found after re-booting. Highfive Sublime Text.</p>
+<p>~Another thing I really miss in Brackets and I got unbelievable used to is multi-select. In Sublime Text it's possible to select multiple points inside a document when holding CMD while clicking inside the document so you can edit as many rows as you want at once - unbelievable useful!~<br>
+As <a href="https://github.com/GuidoJansen">Guido Jansen</a> pointed out in <a href="https://github.com/kevingimbel/kevingimbel.github.io/issues/4">Issue #4</a> brackets now supports multiple lines.</p>
+<h3 id="live-preview">Live Preview</h3>
+<p>Bracket comes with a Live Preview functionality that allows to display a file inside the browser that'll be updated in real time as you type. I couldn't think of a scenario where I'd need a real-time preview of my file to be honest but it's a cool feature anyway.</p>
+<h3 id="autocomplete">Auto-Complete</h3>
+<p>Both Sublime Text and Brackets have auto-complete for CSS. While Sublime Text &ldquo;only&rdquo; supports basic auto-complete (e.g. typing <code>'hei' + tab</code> will get you <code>height: </code>) Brackets supports to &ldquo;Quick Edit&rdquo; colors (right-click on a color or use <code>CMD+E</code> when hovering it) to bring up a color dialog as show below. This is a nice feature when trying to find a color.</p>
+<p><img src="https://i.kevingimbel.me/sc/screenshot-53-24.png" alt="Quick Edit Colors in Brackets" title="Quick Edit Colors in Brackets"></p>
+<p>Another thing both support is the auto-closing of HTML tags (e.g. <code>&lt;article&gt;</code> will get you <code>&lt;article&gt;&lt;/article&gt;</code>).
+Unfortunately Brackets does not query SCSS variables. When you define your variables in Sublime and type <code>$color--</code> Sublime Text shows all variables starting with <code>$color--</code> - that's a thing I really miss in Brackets.</p>
+<h3 id="debugging">Debugging</h3>
+<p>Brackets comes with build-in JSHint support which is really useful especially for JavaScript beginners like I'm one. You can see in-editor what errors you made - really great!
+I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-in is just a great feature. What I'm missing on the other hand is spell-checking. As non-native English speaker spell-checking is always a great thing.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I'm impressed by Brackets, it's a simple and great editor and I'll definitely keep an eye on it. It's a good, free alternative to Sublime Text 2 (which costs 75$) and worth a try. However, depending on my current workflow I'll stick to Sublime Text for most of my work.</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tools"
+                href="https://kevingimbel.de/categories/tools/">tools</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with tooling"
+                href="https://kevingimbel.de/tags/tooling/">tooling</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with software"
+                href="https://kevingimbel.de/tags/software/">software</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with editor"
+                href="https://kevingimbel.de/tags/editor/">editor</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - 2020 Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-12-25-brackets-vs-sublime-text.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

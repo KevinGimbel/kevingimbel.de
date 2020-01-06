@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Noobish VIM</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    
+    <header class="intro-text">
+        Noobish VIM
+    </header>
+    
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2014-07-13 00:00:00 &#43;0000 UTC">13. Jul 2014</time>  </p>
+            <p>Since I'm still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it
+into my daily workflow. Since I'm working in a relativley small company it's most of the time stressy to get all things
+done and to keep an overview - so long story short: There's not much time for new tools that don't increase my workflow
+directly. VIM is one of these tools that don't fully support my workflow at the moment. While on one hand being good at
+dealing with text and stuff, it is on the other hand (not-so-easily) capable of stuff like (S)FTP sync, auto complete
+through Emmet (I still don't really get how this works in VIM) and the most important thing: It's hard to switch from
+Sublime Text. I'm so used to Sublime Text and it's shortcuts, multi-cursor, easy-to-use UI, plugins and what so not.</p>
+<p>Anyway, there is a way to make Sublime Text behave more vim-ish. Originally I was searching for a Plugin or something or
+a config file to get some VIM keybindings into my safe-zone Sublime Text enviroment. Turns out Sublime Test has this
+built-in. In the &ldquo;ignore_packages&rdquo; settings is a package called &ldquo;Vintage&rdquo;. If this line is changed like seen below</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	// ignore nothing 
+	<span style="color:#e6db74">&#34;ignored_packages&#34;</span>: <span style="color:#f92672">[</span><span style="color:#f92672">]</span>
+</code></pre></div><p>Sublime Text will switch into &ldquo;Vintage&rdquo; mode which basically is VIM-like. It will have the default VIM modes (Command,
+Insert, Visual) and all the keybindings. By default it will still start in Insert Mode, to switch this just set the
+following inside the user settings:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	// always start/open files in Command Mode 
+	<span style="color:#e6db74">&#34;vintage_start_in_command_mode&#34;</span>: true
+</code></pre></div><p>With these two settings Sublime Text is ready to run in Vi(m|n)tage mode. This means in particular most (or all?) Vim
+commands are available and can be used such as ci&rdquo; (change in &ldquo;&quot;), x or r (delete character; replace character below the
+cursor in command mode), y and p (yank and put; copy/paste) and so on. I've been working this way for about one week now
+and I must say that I really like it. It doesn't hold me back, I can still enjoy my other plugins and if I'm ever
+feeling lost I can still use all of Sublime Text's features. So that's it, my current setup to get a around some VIM
+stuff while still being productive and fast daily. In my free-time and when writing articles I've almost switched
+completly to VIM to dig into it and see if it can replace Sublime Text one day.</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tools"
+                href="https://kevingimbel.de/categories/tools/">tools</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with vim"
+                href="https://kevingimbel.de/tags/vim/">vim</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with editor"
+                href="https://kevingimbel.de/tags/editor/">editor</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - 2020 Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2014-07-13-noobish-vim.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

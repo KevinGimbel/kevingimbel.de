@@ -8,7 +8,10 @@ publishDir = "docs"
 # debug = true
 
 [permalinks]
-    blog = "/:year/:month/:title/"
+    blog = "/:section/:year/:month/:title/"
+    photography = "/:section/:year/:month/:title/"
+    recipes = "/:section/:year/:month/:title/"
+    art = "/:section/:year/:month/:title/"
 
 [[params.now]]
 location = "Wiesbaden, Germany"

@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/tags/css/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/css/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/css/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T19:02:47+01:00</updated>
+    <updated>2020-01-07T00:24:24+01:00</updated>
     
     
     
@@ -17,15 +17,15 @@
         
         <entry>
             <title type="html"><![CDATA[Safe calc usage in CSS]]></title>
-            <link href="https://kevingimbel.de/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
-                <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
+                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
+                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
             
-                <id>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</id>
+                <id>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</id>
             
             
             <published>2020-01-01T00:00:00+00:00</published>
@@ -92,15 +92,15 @@
         
         <entry>
             <title type="html"><![CDATA[CSS Custom Properties and a new look]]></title>
-            <link href="https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
-                <link href="https://kevingimbel.de/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
-                <link href="https://kevingimbel.de/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
-                <link href="https://kevingimbel.de/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
-                <link href="https://kevingimbel.de/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
+                <link href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
+                <link href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
+                <link href="https://kevingimbel.de/blog/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
+                <link href="https://kevingimbel.de/blog/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
+                <link href="https://kevingimbel.de/blog/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
             
-                <id>https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</id>
+                <id>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</id>
             
             
             <published>2017-11-26T10:56:13+01:00</published>
@@ -319,15 +319,15 @@
         
         <entry>
             <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
-            <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
-                <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
+                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</id>
+                <id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id>
             
             
             <published>2015-03-10T00:00:00+00:00</published>
@@ -567,15 +567,15 @@ on which we don't have any influence.</p>
         
         <entry>
             <title type="html"><![CDATA[Conditional CSS]]></title>
-            <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
+                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2014/07/conditional-css/</id>
+                <id>https://kevingimbel.de/blog/2014/07/conditional-css/</id>
             
             
             <published>2014-07-31T00:00:00+00:00</published>
@@ -725,14 +725,14 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
         
         <entry>
             <title type="html"><![CDATA[Web Development in 2014]]></title>
-            <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2014/01/web-development-in-2014/</id>
+                <id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id>
             
             
             <published>2014-01-02T00:00:00+00:00</published>
@@ -950,13 +950,13 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
         
         <entry>
             <title type="html"><![CDATA[Pseudo Product Flags]]></title>
-            <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2013/11/pseudo-product-flags/</id>
+                <id>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</id>
             
             
             <published>2013-11-24T00:00:00+00:00</published>
@@ -1105,12 +1105,12 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
         
         <entry>
             <title type="html"><![CDATA[Custom Radio Buttons]]></title>
-            <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2013/10/custom-radio-buttons/</id>
+                <id>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</id>
             
             
             <published>2013-10-28T00:00:00+00:00</published>
@@ -1193,11 +1193,11 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
         
         <entry>
             <title type="html"><![CDATA[From 0 To Sass]]></title>
-            <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2013/10/from-0-to-sass/</id>
+                <id>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</id>
             
             
             <published>2013-10-02T00:00:00+00:00</published>
@@ -1397,10 +1397,10 @@ If you want to have an example what the <code>style.scss</code> would look like,
         
         <entry>
             <title type="html"><![CDATA[A bit sticky]]></title>
-            <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/09/a-bit-sticky/</id>
+                <id>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</id>
             
             
             <published>2013-09-20T00:00:00+00:00</published>

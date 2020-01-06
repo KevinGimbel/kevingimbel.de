@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Getting into Performance Measurement</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    
+    <header class="intro-text">
+        Getting into Performance Measurement
+    </header>
+    
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2015-03-10 00:00:00 &#43;0000 UTC">10. Mar 2015</time>  </p>
+            <p>I've spent the past week developing some features for our own website at work.
+We're using WordPress and I almost always enjoy working with WordPress beside
+Magento projects, it's way easier to keep an overview and with a good overview
+of data flow and available data it's easier to measure and find performance
+bottleneck. In the following post I want to examine my workflow and the way I
+refactored our code base to increase the speed and overall performance of our
+site.</p>
+<h3 id="mesuring-load-times">Mesuring load times</h3>
+<h4 id="webpagetestorg">WebPageTest.org</h4>
+<p>With <a href="http://webpagetest.org">WebPageTest.org</a> it is quite easy to measure load
+times, render times, asset loading times and non cached assets. WPT even shows
+which assets should be cached or served via a CDN. Initially it checks for First
+View  and Repeat View and outputs a table of numbers and fancy graphics. The
+thing I've been most interested in were First View and Content Breakdown. The
+Content Breakdown showed that ~66% of our landing page consist of images so
+optimizing these images (see below) was a natural approach to boost performance.
+When testing with WebPageTest I like to select the second fastest Internet
+connection and a location somewhere relevant (for this site America, for our own
+somewhere in Germany).</p>
+<p>Then I watch the videos and see how the loading wents on. At first it was a
+blank page and after 2.5s the page &ldquo;suddenly&rdquo; rendered all content at once. This
+was not the desired behavior and so I started testing more.</p>
+<h4 id="chrome-developer-tools">(Chrome) Developer Tools</h4>
+<p>Using the Developer Tools I cleared the cache and measured a &ldquo;fresh&rdquo; load of our
+site to see how content is loaded and where rendering starts. It turned out that
+rendering was blocked by several JavaScript files (third party) and Google
+Fonts, which where loaded from within our CSS files as well as the high amount
+of non-optimized images. All these things can be seen in the Network Tab.</p>
+<p>In Chrome there are 2 vertical lines - blue and red. The blue line marks the
+time at which the <code>DOMContentLoaded</code> event is fired, that is when the DOM is
+ready to be manipulated by JavaScript. The red line marks the moment where the
+<code>load</code> event fires. This event indicates that all content (CSS, JavaScript,
+Images, etc.) has been loaded.</p>
+<blockquote>
+<p>Measuring performance and finding obvious bottlenecks has become fairly easy
+nowadays. With Tools like <a href="http://webpagetest.org">WebPageTest.org</a>, Developer
+Tools or automated testing suits there are a ton of ways to analyze a
+the loading behavior of a website.</p>
+</blockquote>
+<p>With these two tools I started tracking down the various performance issues.
+First of all the blocking JavaScript and a bit of unused code.</p>
+<h3 id="unused-code">Unused Code</h3>
+<p>While checking the Network Tab in Chrome Dev Tools I've seen that out of 16 Requests
+one JavaScript Analytics Library was blocking the
+rendering by almost 600-800ms. Because it was barely used I removed this one so
+there was already a big improvement by removing unused or barely used code - one
+should always check for unused plugins, libs and CSS - this is the most basic
+&ldquo;improvement&rdquo; and optimization.</p>
+<blockquote>
+<p>Regularly refactor your code base to see where unused code exists or
+code can be optimized. By ueing a Pre-Processor it's easy to remove the code
+from production but keep it for later by using an <a href="http://sass-guidelin.es/#main-file">import system</a>.</p>
+</blockquote>
+<h3 id="minify">Minify</h3>
+<p>Minifying files is always a good thing. No doubt. Use
+<a href="https://github.com/mishoo/UglifyJS">Uglify</a> for JavaScript
+and your favorite pre-proccessor's compress function.</p>
+<h3 id="images">Images</h3>
+<p>Next I found that our landing page is pretty image heavy, especially with a big
+banner image. To reduce the size I searched for plugins to automate the process
+but couldn't find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
+Command Line tool for PNG optimization. With this tool I could reduce the size
+of almost any image by 50-70% which again reduced the load time by 100-200ms.</p>
+<blockquote>
+<p>Always optimize images, either with a tool before uploading them or with a
+Plugin. Not optimizing images is a waste of time (literally) and bad for users.</p>
+</blockquote>
+<h3 id="fonts">Fonts</h3>
+<p>As I mentioned earlier, rendering was also blocked by Google Fonts being
+directly included into our Stylesheets. Out of curiosity I checked if loading it
+asynchronously via the provided snippet from Google Fonts would help and indeed
+it did! We saved almost 100ms simply by loading the Font files asynchronously.</p>
+<p>On the very First View this can make the content &lsquo;jump&rsquo; a bit because the
+initial view loads with a fallback font (sans-serif, for example) and then once
+the Font is loaded from Google's CDN it replaces the old font with the new font
+on-the-fly. This may looks ugly and if you absolutely can not live with it you
+must take the 100ms-slower Pill and include the fonts in your CSS where they'll
+be loaded before the CSS is rendered - therefore no delay.</p>
+<p>Below is the function that'll load the fonts via a script tag that as the
+<code>async</code> attribute set.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">google</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">families</span><span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#39;Open+Sans:400,300,600:latin&#39;</span> ] }
+};
+(<span style="color:#66d9ef">function</span>() {
+ <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wf</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+ <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;https:&#39;</span> <span style="color:#f92672">==</span> document.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">protocol</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;https&#39;</span>
+   <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;http&#39;</span>) <span style="color:#f92672">+</span>
+ <span style="color:#e6db74">&#39;://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;</span>;
+ <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text/javascript&#39;</span>;
+ <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">async</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;true&#39;</span>;
+ <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span>
+ document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#39;script&#39;</span>)[<span style="color:#ae81ff">0</span>];
+ <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">wf</span>, <span style="color:#a6e22e">s</span>);
+ })(); 
+</code></pre></div><blockquote>
+<p>Font rendering from within CSS can block the overall load time of the CSS
+file. Splitting out the fonts from the CSS and loading them via JavaScript (if
+possible) may increase the initial load time of the website.</p>
+</blockquote>
+<h3 id="serverside-optimizations">Server-side optimizations</h3>
+<p>There's quite a lot to do when optimizing from the server side. From things like
+optimizing Queries, Caching Queries to using the variety of Apache or Nginx
+Modules and settings to optimize the servers workflow. While we have our site at
+a specific WordPress Hoster our access to server features is mainly limited to
+their admin interface and using the <code>.htaccess</code> - which is what I did.</p>
+<h4 id="expire-dates">Expire Dates</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># caching for 1 month
+&lt;<span style="color:#f92672">IfModule</span> <span style="color:#a6e22e">mod_expires</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">c</span>&gt;
+ ExpiresActive On
+ ExpiresByType text/css &#34;access plus 1 month&#34;
+ ExpiresByType text/javascript &#34;access plus 1 month&#34;
+ ExpiresByType text/html &#34;access plus 1 month&#34;
+ ExpiresByType application/javascript &#34;access plus 1 month&#34;
+ ExpiresByType image/gif &#34;access plus 1 month&#34;
+ ExpiresByType image/jpeg &#34;access plus 1 month&#34;
+ ExpiresByType image/png &#34;access plus 1 month&#34;
+ ExpiresByType image/x-icon &#34;access plus 1 month&#34;
+
+  &lt;<span style="color:#f92672">FilesMatch</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">gif</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">jpe</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">png</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">ico</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">)</span><span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;
+    Header set Cache-Control &#34;public&#34;
+  &lt;/<span style="color:#f92672">FilesMatch</span>&gt;
+&lt;/<span style="color:#f92672">IfModule</span>&gt;
+</code></pre></div><h4 id="compression-with-moddeflate">Compression with mod_deflate</h4>
+<p>With this snippet above we tell the server to cache certain file types by 1
+month (if they don't change of course). This way the server can sent back the
+files from its cache instead of re-generating the files all the time. Next I
+used <code>mod_deflate</code> to compress the files before they are sent to the client.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># Deflate Compression by FileType
+&lt;<span style="color:#f92672">IfModule</span> <span style="color:#a6e22e">mod_deflate</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">c</span>&gt;
+ AddOutputFilterByType DEFLATE text/plain
+ AddOutputFilterByType DEFLATE text/html
+ AddOutputFilterByType DEFLATE text/xml
+ AddOutputFilterByType DEFLATE text/css
+ AddOutputFilterByType DEFLATE text/javascript
+ AddOutputFilterByType DEFLATE application/xml
+ AddOutputFilterByType DEFLATE application/xhtml+xml
+ AddOutputFilterByType DEFLATE application/rss+xml
+ AddOutputFilterByType DEFLATE application/atom_xml
+ AddOutputFilterByType DEFLATE application/javascript
+ AddOutputFilterByType DEFLATE application/x-javascript
+&lt;/<span style="color:#f92672">IfModule</span>&gt;
+</code></pre></div><p>Now all our files are cached and gzip (compressed). Additionally our Hoster has
+its own cache (Varnish) which should benefit to our sites overall performance, too.</p>
+<blockquote>
+<p>Use your servers configuration to serve compressed and/or cached files instead
+of re-generating the files on every request. Make sure to cache static content
+like images, javascript or css.</p>
+</blockquote>
+<h3 id="lazyload-javascript">Lazy-load JavaScript</h3>
+<p>We've been using our own delayed load for JavaScript assets ever since I started
+working at <a href="http://synoa.de">Synoa</a>. We use the following function to include
+our minified JavaScript after the DOM is loaded, if possible.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">loadAfterDom</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">script</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">body</span>;
+  
+  <span style="color:#a6e22e">script</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text/javascript&#39;</span>;
+  <span style="color:#a6e22e">script</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;path/to/main.min.js&#39;</span>;
+  
+  document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">script</span>);
+}
+<span style="color:#75715e">// load the script when the DOM is constructed
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(window.<span style="color:#a6e22e">addEventListener</span>) {
+  window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#a6e22e">loadAfterDom</span>, <span style="color:#66d9ef">false</span>);
+} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(window.<span style="color:#a6e22e">attachEvent</span>) {
+  window.<span style="color:#a6e22e">attachEvent</span>(<span style="color:#e6db74">&#39;load&#39;</span>, <span style="color:#a6e22e">loadAfterDom</span>);  
+} <span style="color:#66d9ef">else</span> {
+  window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadAfterDom</span>;  
+}
+</code></pre></div><p>This little script loads the <code>main.min.js</code> file after the DOM is constructed so
+it doesn't block the rendering of the page.</p>
+<blockquote>
+<p>Lazy loading JavaScript only works when JavaScript is not needed for the
+initial view (which it shouldn't). When you need JavaScript on render time to
+hide elements, for example, it may be better to hide them initially and show them after the
+page is loaded!</p>
+</blockquote>
+<h3 id="what-could-be-done-next">What could be done next?</h3>
+<p>Next we could think about inlining our Critical Path CSS using a Grunt or Gulp
+task, as Google PageSpeed suggests all the time. I've yet never done this before
+and need to try it before I can say if it's worth or not.</p>
+<p>In another round we could review the entire code base and replace the legacy
+Compass compiler with modern, <a href="https://github.com/sass/node-sass">node-sass</a> and
+<a href="https://github.com/sass/libsass">Libsass</a>, a C++ implementation of Sass that is
+a lot faster than Ruby, to increase compile performance. Most of the vendor
+prefixing is done using own mixins or compass functions (which are legacy), so
+handing the prefixing job to <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>
+is another desirable improvement.</p>
+<h3 id="result">Result</h3>
+<p>At this point, our website performs at 900ms-1.2s in load time for the front page
+and 700-800ms for most sub pages. Yet there is still optimization that need to
+be done, especially the question on how to integrate the optimization into
+everyone's workflow. While developers could use a grunt/gulp/cli task the people
+who actually write content need an easy way to handle the optimization of
+uploaded files. The last resort of more optimization is the server respond time
+on which we don't have any influence.</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under frontend"
+                href="https://kevingimbel.de/categories/frontend/">frontend</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with javascript"
+                href="https://kevingimbel.de/tags/javascript/">javascript</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with tools"
+                href="https://kevingimbel.de/tags/tools/">tools</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with css"
+                href="https://kevingimbel.de/tags/css/">css</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - 2020 Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-03-10-getting-into-performance-measurement.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

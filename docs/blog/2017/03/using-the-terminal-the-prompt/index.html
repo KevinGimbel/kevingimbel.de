@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Using the Terminal: The Prompt</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    
+    <header class="intro-text">
+        Using the Terminal: The Prompt
+    </header>
+    
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+
+
+<p>Written on <time datetime="2017-03-29 18:34:37 &#43;0100 &#43;0100">29. Mar 2017</time>  </p>
+            <p>The Terminal (or <em>bash</em>, <em>shell</em>, <em>console</em>) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already <a href="/bash-script-ws/">wrote about one custom script named <code>ws</code></a> which enhances my daily workflows. This article marks the first of many to come about using and configuring your terminal. This tutorial is written for MacOS and Linux, though most of it will work on Windows 10 if you use Bash.</p>
+<p>To get started with this tutorial open up your terminal. If you don't know how to open a terminal your first mission is to find out how! (<em>Hint: Google is your friend!</em>). Once the terminal is open we can start with some basic operations.</p>
+<p><em>Note:</em> On newer Windows versions you should use Bash if available! This tutorial will probably not work with older Windows Verisons (XP, 7, maybe even 8) and the Windows Terminal (e.g. CMD).</p>
+<p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it'll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
+<h2 id="preface-vim">Preface: VIM</h2>
+<blockquote>
+<p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/
+#the-prompt">skip to the next section</a></p>
+</blockquote>
+<p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It's a bit weird to get used to at first but once you know your way around you'll become quite productive with it. It's easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/vim-empty-file.png"
+      alt="An empty file opened in VIM"
+       />
+    
+  
+  <figcaption>
+    <p>
+      An empty file opened in VIM
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>To start writing text we need to enter Input Mode. This is done by typing an <code>i</code>. Afterwards, we can write. VIM has three different modes: Input, Visual and Normal. To leave a mode and return to normal, you need to press <code>ESC</code>. Visual Mode can be used to select multiple lines or copy/paste things around. Insert Mode is mainly used for writing text and Normal Mode is used for navigation, e.g to move to the Top of a file (<code>gg</code>) or bottom of a file (<code>SHIFT+G</code>). VIM works a lot with shortcuts which is why we can edit text files so fast with it. Consider the following example HTML tag.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;some-class-name another-class-name yet more classes&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>To remove all classes and add a new class name you would move your mouse to the line, select everything between <code>&quot;</code> and <code>&quot;</code>, and then enter the new class name. In VIM, you can enter Normal Mode, place the cursor inside the element and press <code>ci&quot;</code> (<em>change in &ldquo;</em>). The entrie text will be removed and VIM enters Insert Mode inside the <code>&quot;&quot;</code>. To change a word, you write <code>cw</code>. To write text inside the tag, <code>cit</code> (change in tag) and the cursor is placed inside the <code>&lt;div&gt;</code>. Additional to the default movement and replacing there are plugins to make this even faster or smarter, like <a href="https://github.com/tpope/vim-surround">surround.vim</a>.</p>
+<p>So, VIM is quite an editor. Get used to it, you'll thank me later! What we need to know for basic file editing and this tutorial is the following:</p>
+<ul>
+<li><code>i</code> is pressed to enter Insert Mode</li>
+<li><code>ESC</code> is pressed to exit a mode, e.g. Insert or Visual</li>
+<li>all commands starting with <code>:</code> are executed by pressing the <code>&lt;Enter&gt;</code> key, e.g. <code>:wq&lt;Enter&gt;</code></li>
+<li><code>:</code> is pressed to enter a command (literally type a <code>:</code>, e.g. with <code>SHIFT+.</code> or wherever it is on your keyboard)</li>
+<li><code>:w</code> means <code>write</code>. To write a file, press <code>SHIFT+.</code>, then <code>w</code>, then <code>Enter</code>.</li>
+<li>To quit the editor, write <code>:q</code>, then <code>Enter</code>. To force quit without saving, type <code>:q!</code>, then <code>Enter</code></li>
+<li>Moving the cursor is done with UP, DOWN, RIGHT, and LEFT Arrow Keys or <code>h,j,k,l</code> in Normal Mode or Visual Mode
+<ul>
+<li><code>h</code> = left</li>
+<li><code>j</code> = down</li>
+<li><code>k</code> = up</li>
+<li><code>l</code> = right</li>
+</ul>
+</li>
+</ul>
+<p>Lots of VIM Tips can be found in the <a href="http://vim.wikia.com/wiki/Vim_Tips_Wiki">VIM Wikia</a>.</p>
+<h2 id="the-prompt">The Prompt</h2>
+<p>One your terminal is open you should see a Dollar Sign (<code>$</code>) or similar symbol, like shown below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~ $
+</code></pre></div><p>This is the Prompt. The Prompt shows the current directory (<code>~</code>) and most of the time has a fixed sign, e.g. <code>$</code>. Other prompts might use symbols like <code># </code>, <code>%` </code>bash-3.2$<code>or</code>kevin@ubuntu: $`. The prompt is configurable and comes with different defaults depending on the operating system. So, each line below is how a prompt may look.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kevin@MacBook-Pro: ~ $
+~/Development #
+/usr/share/docs %
+root@ubuntu: / $
+</code></pre></div><p>The Prompt can be changed by updating the <code>PS1</code> environment variable. Environment variables are available to the entire system and can be used to configure programs or create shortcuts. The <code>PS1</code> is defined inside the <code>.bashrc</code>, <code>.zshrc</code>, or other shell runtime file. If you are not sure which shell your are using, run <code>echo $SHELL</code> which gives back a string like <code>/bin/zsh</code> or <code>/bin/bash</code>. To change the PS1, open the config file (either <code>.bashrc</code> or <code>.zshrc</code>) inside an editor like <code>vim</code> - from the command line.</p>
+<pre><code>$ vim $HOME/.bashrc
+</code></pre><p>If the files is not empty, go to the bottom (<code>SHIFT+G</code> in vim) and enter input mode (press <code>i</code>). Write the following, then save the file and quit:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MY CUSTOM PROMPT &#34;</span>
+</code></pre></div><blockquote>
+<p><em>Note:</em> To write a file in VIM, press <code>:</code> and then type <code>w</code> and press enter.</p>
+</blockquote>
+<p>Now we need to reload the configuration file (<code>.bashrc</code>) by typing <code>source ~/.bashrc</code> into the terminal and hitting enter. The prompt now looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">MY CUSTOM PROMPT
+</code></pre></div><p>Congrats, your first custom prompt! That's not a useful prompt, however, because it will always show <code>MY CUSTOM PROMPT</code>. A prompt that shows the current directory would be more useful. As it happens, we can use variables inside the Prompt and there are pre-defined variables which hold informations like the current directory, the current logged-in user, the hostname, and man more! Let's start with the working directory - the directory on the file system we are currently in. The working directory is stored inside the <code>\W</code> variable and we can use it like so</p>
+<pre><code>$ vim ~/.bashrc
+export PS1=&quot;\W $&quot;
+</code></pre><p>Save the fie (<code>:wq</code>) and reload the configuration with <code>source ~/.bashrc</code>. The prompt now looks like shown below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-simple-working-directory.png"
+      alt="A simple prompt showing the Working Directory"
+       />
+    
+  
+  <figcaption>
+    <p>
+      A simple prompt showing the Working Directory
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>The first part before the <code>$</code> will be different for you, depending on where on your computer you currently are. To find out where you are, type <code>pwd</code> which shows the current path. You will see that <code>pwd</code> shows a lot more than what we see in the prompt! That is because the variable <code>\W</code> holds only the current directory without a full path. To get the full path, we need to use <code>\w</code>. Change your <code>.bashrc</code> file so the <code>PS1</code> uses the <code>\w</code> variable, reload the configuration (<code>source ~/.bashrc</code>) and see what happens. Your prompt should look similar to the one below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-long-working-directory.png"
+      alt="Using \w, we get the full path from the HOME directory"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Using \w, we get the full path from the HOME directory
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>The full directory path can be helpful but it can also get really long. I like to have a line break in my <code>PS1</code> so that I can enter text below the directory listing. To have a line break add a <code>\n</code> character before <code>$</code> - the <code>$</code>-symbol will then move to the next line as shown below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-with-new-line.png"
+      alt="A terminal prompt with a new line"
+       />
+    
+  
+  <figcaption>
+    <p>
+      A terminal prompt with a new line
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Looking good! The last thing we need - or I want - is to have some color in my prompt so that it's easier to recognize the path or see the hostname - to add color we can either use escape characters like <code>\[\033[34m\]</code> or - what I prefer - <code>tput</code>. You can <a href="http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">read more on escape characters</a> if you wish. I will focus on <a href="https://linux.die.net/man/1/tput"><code>tput</code></a>. I like to define my color variables first and then use them later. To define a variable in shell scripting write <code>variableName=&quot;value&quot;</code>. If you need to execute a program to get your variable value, you have to surround it with <code>$()</code>. For example to read the content of the file <code>test.txt</code> into the variable <code>content</code>, you'd write <code>content=&quot;$(cat test.txt)&quot;</code>.</p>
+<p>Define and use colors in <code>.bashrc</code> or <code>.zshrc</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># predefine variables</span>
+ps1_green<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput setaf 2<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+ps1_yellow<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput setaf 3<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+ps1_reset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput sgr0<span style="color:#66d9ef">)</span><span style="color:#e6db74">\e[m</span><span style="color:#e6db74">&#34;</span>
+export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$ps1_green<span style="color:#e6db74">\w\n</span>$ps1_yellow<span style="color:#e6db74">\$</span>$ps1_reset<span style="color:#e6db74"> </span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><p><em>Note: A great reference for this technique is <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">this handy list</a></em></p>
+<p>In my testing I needed to use <code>\e[m</code> to properly reset the new lines. Otherwise commands would sometimes become cluttered when navigating back with <code>arrow up</code>.</p>
+<p>So that's it for the first part of customizing and using the terminal. Below are some of the <code>tput</code> colors from <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">linux.101hacks.com</a> - mostly as a reference for myself. 😁</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tput bold</code></td>
+<td>Turn on <strong>bold</strong> text</td>
+</tr>
+<tr>
+<td><code>tput smul</code></td>
+<td>Begin underline mode</td>
+</tr>
+<tr>
+<td><code>tput rmul</code></td>
+<td>Exit underline mode</td>
+</tr>
+<tr>
+<td><code>tput sgr0</code></td>
+<td>Reset code, turns off all attributes</td>
+</tr>
+<tr>
+<td><code>tput setaf</code></td>
+<td>Set forground color using <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape</a></td>
+</tr>
+<tr>
+<td><code>tput setab</code></td>
+<td>Set background color using <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape</a></td>
+</tr>
+</tbody>
+</table>
+<p>And here are the 8 color codes you can combine with <code>tput setaf</code> and <code>tput setab</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>Black</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>Red</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Green</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td>Blue</td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td>Magenta</td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td>Cyan</td>
+</tr>
+<tr>
+<td><code>7</code></td>
+<td>White</td>
+</tr>
+</tbody>
+</table>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under devops"
+                href="https://kevingimbel.de/categories/devops/">devops</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with workflow"
+                href="https://kevingimbel.de/tags/workflow/">workflow</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with productivity"
+                href="https://kevingimbel.de/tags/productivity/">productivity</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with apps"
+                href="https://kevingimbel.de/tags/apps/">apps</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2013 - 2020 Kevin Gimbel. See <a
+                    href="https://github.com/kevingimbel/kevingimbel.com/blob/master/LICENSE"
+                    title="View license on GitHub.com">License</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin"
+                        rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science"
+                        title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a
+                        href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2017-03-29-using-the-terminal-part-1.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a
+                        href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span
+                        class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

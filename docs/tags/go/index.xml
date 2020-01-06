@@ -13,10 +13,10 @@
     
     <item>
       <title>Farewell Jekyll, Hello Hugo</title>
-      <link>https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</link>
+      <link>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</link>
       <pubDate>Wed, 16 Nov 2016 19:04:42 +0100</pubDate>
       
-      <guid>https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/</guid>
+      <guid>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</guid>
       <description>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.
 This very site you read right now is build with Hugo, a static site generator build by Steve Francia, Bjørn Erik Pedersen and a lot of contributors.</description>
     </item>

@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/tags/soundcloud/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/soundcloud/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/soundcloud/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T19:02:47+01:00</updated>
+    <updated>2020-01-07T00:24:24+01:00</updated>
     
     
     
@@ -17,12 +17,12 @@
         
         <entry>
             <title type="html"><![CDATA[A Beginners Guide to Drum and Bass]]></title>
-            <link href="https://kevingimbel.de/2015/08/a-beginners-guide-to-drum-and-bass/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/03/mixtape-february-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Mixtape: February 2014" />
-                <link href="https://kevingimbel.de/2014/01/mixtape-2013/?utm_source=atom_feed" rel="related" type="text/html" title="Mixtape: 2013" />
+                <link href="https://kevingimbel.de/blog/2014/03/mixtape-february-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Mixtape: February 2014" />
+                <link href="https://kevingimbel.de/blog/2014/01/mixtape-2013/?utm_source=atom_feed" rel="related" type="text/html" title="Mixtape: 2013" />
             
-                <id>https://kevingimbel.de/2015/08/a-beginners-guide-to-drum-and-bass/</id>
+                <id>https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/</id>
             
             
             <published>2015-08-13T00:00:00+00:00</published>
@@ -63,11 +63,11 @@
         
         <entry>
             <title type="html"><![CDATA[Mixtape: February 2014]]></title>
-            <link href="https://kevingimbel.de/2014/03/mixtape-february-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/03/mixtape-february-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/01/mixtape-2013/?utm_source=atom_feed" rel="related" type="text/html" title="Mixtape: 2013" />
+                <link href="https://kevingimbel.de/blog/2014/01/mixtape-2013/?utm_source=atom_feed" rel="related" type="text/html" title="Mixtape: 2013" />
             
-                <id>https://kevingimbel.de/2014/03/mixtape-february-2014/</id>
+                <id>https://kevingimbel.de/blog/2014/03/mixtape-february-2014/</id>
             
             
             <published>2014-03-02T00:00:00+00:00</published>
@@ -107,10 +107,10 @@
         
         <entry>
             <title type="html"><![CDATA[Mixtape: 2013]]></title>
-            <link href="https://kevingimbel.de/2014/01/mixtape-2013/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/01/mixtape-2013/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2014/01/mixtape-2013/</id>
+                <id>https://kevingimbel.de/blog/2014/01/mixtape-2013/</id>
             
             
             <published>2014-01-05T00:00:00+00:00</published>

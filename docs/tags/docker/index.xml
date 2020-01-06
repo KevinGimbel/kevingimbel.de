@@ -13,10 +13,10 @@
     
     <item>
       <title>Gotcha: dockerignore</title>
-      <link>https://kevingimbel.de/2016/12/gotcha-dockerignore/</link>
+      <link>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</link>
       <pubDate>Wed, 21 Dec 2016 18:02:42 +0100</pubDate>
       
-      <guid>https://kevingimbel.de/2016/12/gotcha-dockerignore/</guid>
+      <guid>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</guid>
       <description>Today I was caught off-guard by a docker &amp;ldquo;bug&amp;rdquo; - or so I thought at first. I tried to boot up a project with docker-compose up like I do since switching to a Mac. Unusual was that docker-compose stopped at the build step and would not finish the boot. After some confusion and after checking the projects docker-compose.yml configuration file I went to GitHub to see the newest docker for mac issues because I was using the beta release and thought a recent update might broke a thing or two.</description>
     </item>
     

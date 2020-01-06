@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/categories/frontend/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/frontend/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/frontend/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T19:02:47+01:00</updated>
+    <updated>2020-01-07T00:24:24+01:00</updated>
     
     
     
@@ -17,15 +17,15 @@
         
         <entry>
             <title type="html"><![CDATA[Hugo aliases and redirects]]></title>
-            <link href="https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates" />
-                <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
-                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates" />
+                <link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://kevingimbel.de/2020/01/hugo-aliases-and-redirects/</id>
+                <id>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</id>
             
             
             <published>2020-01-06T00:00:00+00:00</published>
@@ -89,15 +89,15 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[Hugo: ignore _index.md in list templates]]></title>
-            <link href="https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
-                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
+                <link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://kevingimbel.de/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
+                <id>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
             
             
             <published>2020-01-03T00:00:00+00:00</published>
@@ -150,15 +150,15 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[Hugo: compare dates to flag old content]]></title>
-            <link href="https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-                <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-                <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+                <link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
+                <link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
+                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
             
-                <id>https://kevingimbel.de/2020/01/hugo-compare-dates-to-flag-old-content/</id>
+                <id>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</id>
             
             
             <published>2020-01-02T00:00:00+00:00</published>
@@ -225,15 +225,15 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[Safe calc usage in CSS]]></title>
-            <link href="https://kevingimbel.de/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
-                <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
+                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
+                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
             
-                <id>https://kevingimbel.de/2020/01/safe-calc-usage-in-css/</id>
+                <id>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</id>
             
             
             <published>2020-01-01T00:00:00+00:00</published>
@@ -300,12 +300,12 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[Mastodon Embed Shortcode for hugo]]></title>
-            <link href="https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
             
-                <id>https://kevingimbel.de/2018/09/mastodon-embed-shortcode-for-hugo/</id>
+                <id>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</id>
             
             
             <published>2018-09-12T00:00:00+00:00</published>
@@ -412,15 +412,15 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[CSS Custom Properties and a new look]]></title>
-            <link href="https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
-                <link href="https://kevingimbel.de/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
-                <link href="https://kevingimbel.de/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
-                <link href="https://kevingimbel.de/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
-                <link href="https://kevingimbel.de/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
+                <link href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
+                <link href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
+                <link href="https://kevingimbel.de/blog/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
+                <link href="https://kevingimbel.de/blog/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
+                <link href="https://kevingimbel.de/blog/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
             
-                <id>https://kevingimbel.de/2017/11/css-custom-properties-and-a-new-look/</id>
+                <id>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</id>
             
             
             <published>2017-11-26T10:56:13+01:00</published>
@@ -639,10 +639,10 @@ aliases:
         
         <entry>
             <title type="html"><![CDATA[ReactJS - Hello World!]]></title>
-            <link href="https://kevingimbel.de/2015/05/reactjs-hello-world/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2015/05/reactjs-hello-world/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2015/05/reactjs-hello-world/</id>
+                <id>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</id>
             
             
             <published>2015-05-07T00:00:00+00:00</published>
@@ -775,15 +775,15 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
         
         <entry>
             <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
-            <link href="https://kevingimbel.de/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
-                <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
+                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://kevingimbel.de/2015/03/getting-into-performance-measurement/</id>
+                <id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id>
             
             
             <published>2015-03-10T00:00:00+00:00</published>
@@ -1023,11 +1023,11 @@ on which we don't have any influence.</p>
         
         <entry>
             <title type="html"><![CDATA[Snippet: theme-color for Android 5.0]]></title>
-            <link href="https://kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
             
-                <id>https://kevingimbel.de/2014/11/snippet-theme-color-for-android-5.0/</id>
+                <id>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</id>
             
             
             <published>2014-11-21T00:00:00+00:00</published>
@@ -1082,15 +1082,15 @@ the page and in the multi-tasking overview.</p>
         
         <entry>
             <title type="html"><![CDATA[Endless Multi-Dimensional Navigation]]></title>
-            <link href="https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2014/08/endless-multi-dimensional-navigation/</id>
+                <id>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</id>
             
             
             <published>2014-08-22T00:00:00+00:00</published>
@@ -1180,15 +1180,15 @@ very similar to <code>this</code>, yet even more flexible!</p>
         
         <entry>
             <title type="html"><![CDATA[Conditional CSS]]></title>
-            <link href="https://kevingimbel.de/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
+                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2014/07/conditional-css/</id>
+                <id>https://kevingimbel.de/blog/2014/07/conditional-css/</id>
             
             
             <published>2014-07-31T00:00:00+00:00</published>
@@ -1338,13 +1338,13 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
         
         <entry>
             <title type="html"><![CDATA[Passing Arguments in JavaScript]]></title>
-            <link href="https://kevingimbel.de/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2014/05/passing-arguments-in-javascript/</id>
+                <id>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</id>
             
             
             <published>2014-05-23T00:00:00+00:00</published>
@@ -1456,12 +1456,12 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Pure JavaScript slider]]></title>
-            <link href="https://kevingimbel.de/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2014/02/pure-javascript-slider/</id>
+                <id>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</id>
             
             
             <published>2014-02-22T00:00:00+00:00</published>
@@ -1571,11 +1571,11 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Bullgit loves Jekyll]]></title>
-            <link href="https://kevingimbel.de/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
+                <link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
             
-                <id>https://kevingimbel.de/2014/01/bullgit-loves-jekyll/</id>
+                <id>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</id>
             
             
             <published>2014-01-06T00:00:00+00:00</published>
@@ -1763,14 +1763,14 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Web Development in 2014]]></title>
-            <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2014/01/web-development-in-2014/</id>
+                <id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id>
             
             
             <published>2014-01-02T00:00:00+00:00</published>
@@ -1988,13 +1988,13 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Pseudo Product Flags]]></title>
-            <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2013/11/pseudo-product-flags/</id>
+                <id>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</id>
             
             
             <published>2013-11-24T00:00:00+00:00</published>
@@ -2143,11 +2143,11 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[To infinity and beyond]]></title>
-            <link href="https://kevingimbel.de/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
             
-                <id>https://kevingimbel.de/2013/11/to-infinity-and-beyond/</id>
+                <id>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</id>
             
             
             <published>2013-11-18T00:00:00+00:00</published>
@@ -2231,12 +2231,12 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Custom Radio Buttons]]></title>
-            <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2013/10/custom-radio-buttons/</id>
+                <id>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</id>
             
             
             <published>2013-10-28T00:00:00+00:00</published>
@@ -2319,10 +2319,10 @@ Calling the function would now look like this:</p>
         
         <entry>
             <title type="html"><![CDATA[Ghost in the shell]]></title>
-            <link href="https://kevingimbel.de/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/10/ghost-in-the-shell/</id>
+                <id>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</id>
             
             
             <published>2013-10-16T00:00:00+00:00</published>
@@ -2446,11 +2446,11 @@ Regardless of all the good aspects, overall I'm disappointed by Ghost. I'll stic
         
         <entry>
             <title type="html"><![CDATA[From 0 To Sass]]></title>
-            <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2013/10/from-0-to-sass/</id>
+                <id>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</id>
             
             
             <published>2013-10-02T00:00:00+00:00</published>
@@ -2650,10 +2650,10 @@ If you want to have an example what the <code>style.scss</code> would look like,
         
         <entry>
             <title type="html"><![CDATA[A bit sticky]]></title>
-            <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/09/a-bit-sticky/</id>
+                <id>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</id>
             
             
             <published>2013-09-20T00:00:00+00:00</published>
@@ -2742,10 +2742,10 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
         
         <entry>
             <title type="html"><![CDATA[Is this :valid?]]></title>
-            <link href="https://kevingimbel.de/2013/08/is-this-valid/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/08/is-this-valid/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/08/is-this-valid/</id>
+                <id>https://kevingimbel.de/blog/2013/08/is-this-valid/</id>
             
             
             <published>2013-08-16T00:00:00+00:00</published>
@@ -2804,10 +2804,10 @@ When the user starts typing the color will be red, as soon as he writes <code>yo
         
         <entry>
             <title type="html"><![CDATA[px vs em]]></title>
-            <link href="https://kevingimbel.de/2013/08/px-vs-em/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/08/px-vs-em/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/08/px-vs-em/</id>
+                <id>https://kevingimbel.de/blog/2013/08/px-vs-em/</id>
             
             
             <published>2013-08-15T00:00:00+00:00</published>

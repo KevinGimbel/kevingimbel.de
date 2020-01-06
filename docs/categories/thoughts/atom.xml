@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/categories/thoughts/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/thoughts/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/thoughts/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-06T19:02:47+01:00</updated>
+    <updated>2020-01-07T00:24:24+01:00</updated>
     
     
     
@@ -17,13 +17,13 @@
         
         <entry>
             <title type="html"><![CDATA[Goodbye Ubuntu, Hello Mac]]></title>
-            <link href="https://kevingimbel.de/2016/12/goodbye-ubuntu-hello-mac/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="related" type="text/html" title="Gotcha: dockerignore" />
-                <link href="https://kevingimbel.de/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-                <link href="https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
+                <link href="https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="related" type="text/html" title="Gotcha: dockerignore" />
+                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
+                <link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
             
-                <id>https://kevingimbel.de/2016/12/goodbye-ubuntu-hello-mac/</id>
+                <id>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</id>
             
             
             <published>2016-12-27T15:05:59+01:00</published>
@@ -75,14 +75,14 @@
         
         <entry>
             <title type="html"><![CDATA[Web Development in 2014]]></title>
-            <link href="https://kevingimbel.de/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
-                <link href="https://kevingimbel.de/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
+                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
+                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
+                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
+                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
             
-                <id>https://kevingimbel.de/2014/01/web-development-in-2014/</id>
+                <id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id>
             
             
             <published>2014-01-02T00:00:00+00:00</published>
@@ -300,10 +300,10 @@
         
         <entry>
             <title type="html"><![CDATA[How I got employed]]></title>
-            <link href="https://kevingimbel.de/2013/12/how-i-got-employed/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/12/how-i-got-employed/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/12/how-i-got-employed/</id>
+                <id>https://kevingimbel.de/blog/2013/12/how-i-got-employed/</id>
             
             
             <published>2013-12-22T00:00:00+00:00</published>
@@ -348,10 +348,10 @@ So, he got me into a Company and wanted to work with me, I accepted and on Janua
         
         <entry>
             <title type="html"><![CDATA[Join a Dev Group]]></title>
-            <link href="https://kevingimbel.de/2013/10/join-a-dev-group/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/10/join-a-dev-group/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/10/join-a-dev-group/</id>
+                <id>https://kevingimbel.de/blog/2013/10/join-a-dev-group/</id>
             
             
             <published>2013-10-13T00:00:00+00:00</published>
@@ -400,10 +400,10 @@ After doing more experiments on <a href="http://codepen.io/kevingimbel">CodePen<
         
         <entry>
             <title type="html"><![CDATA[Endless scrolling]]></title>
-            <link href="https://kevingimbel.de/2013/09/endless-scrolling/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <link href="https://kevingimbel.de/blog/2013/09/endless-scrolling/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
             
-                <id>https://kevingimbel.de/2013/09/endless-scrolling/</id>
+                <id>https://kevingimbel.de/blog/2013/09/endless-scrolling/</id>
             
             
             <published>2013-09-01T00:00:00+00:00</published>

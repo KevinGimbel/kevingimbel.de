@@ -13,19 +13,19 @@
     
     <item>
       <title>Speed up your Jekyll workflow</title>
-      <link>https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</link>
+      <link>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</link>
       <pubDate>Wed, 16 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2015/12/speed-up-your-jekyll-workflow/</guid>
+      <guid>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</guid>
       <description>Lately I had a hard time working with my own website. Whenever I wanted to make some updates, write a post or fix a little buggy thing it only took a few minutes of &amp;ldquo;work&amp;rdquo; to get me really frustrated. Jekyll, despite my love for it, has become horribly slow. My site, which I consider rather &amp;ldquo;simple&amp;rdquo;, took 17-20 seconds to build on every change! Changing the CSS? Rebuild entire site.</description>
     </item>
     
     <item>
       <title>Bullgit loves Jekyll</title>
-      <link>https://kevingimbel.de/2014/01/bullgit-loves-jekyll/</link>
+      <link>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</link>
       <pubDate>Mon, 06 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/2014/01/bullgit-loves-jekyll/</guid>
+      <guid>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</guid>
       <description>After having a static HTML Page for about 6 months, we at bullgit just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:
  Jekyll is built-in GitHub pages Jekyll is easy-to-learn and easy to maintain No-Database handling of Data (see the list of members we use) Everyone can clone the repo and run it locally  So basically, as soon as you have a Project on GitHub or an organization like bullgit you can use the power of Jekyll to make your page easy to use and easy to change even for new members.</description>
     </item>
