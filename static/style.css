@@ -162,7 +162,8 @@ figcaption p {
     }
 }
 
-p code {
+p code,
+li code {
     background: var(--color-secondary);
     color: var(--color-main);
     padding: .125rem .25rem;
@@ -193,6 +194,11 @@ p code {
 
 .article-content {
     padding-bottom: 2rem;
+}
+
+.article-content ol,
+.article-content ul {
+    margin-left: 2rem;
 }
 
 .article-list__header {
@@ -337,6 +343,11 @@ pre {
     width: calc(100% + 4rem + 2px);
     margin-left: calc(0rem - 2rem - 1px);
     padding: 2rem;
+}
+
+.side-by-side img {
+    width: auto;
+    max-width: 100%;
 }
 
 @media all and (min-width: 640px) {
