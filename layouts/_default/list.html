@@ -2,7 +2,7 @@
 {{ with .Site.Params.debug }}
 {{ partial "debug.html" "_default/list.html" }}
 {{ end }}
-<main id="main" class="main">
+<main id="main {{ .Section }}" class="main">
     {{ .Content }}
 
     <nav id="years" role="navigation" aria-label="Blog list naviation">Skip to:
@@ -11,8 +11,7 @@
         {{ end }}
     </nav>
     <p>Subscibe via
-        <a href="{{ .RelPermalink }}index.xml" title="Subscribe to all {{ .Section }} posts via RSS">RSS</a> or <a
-            href="{{ .RelPermalink }}atom.xml" title="Subscribe to all {{ .Section }} posts via Atom Feed">Atom</a></p>
+        <a href="{{ .RelPermalink }}index.xml" title="Subscribe to all {{ .Section }} posts via RSS">RSS</a> or <a href="{{ .RelPermalink }}atom.xml" title="Subscribe to all {{ .Section }} posts via Atom Feed">Atom</a></p>
 
     <hr>
 

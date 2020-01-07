@@ -1,7 +1,6 @@
 {{ if ne .WordCount  0 }}
 {{ if ne .File.LogicalName "_index.md" }}
-<article class="article article--in-list" aria-labelledby="article-heading-{{ .File.UniqueID }}"
-    aria-describedby="article-summary-{{ .File.UniqueID }}">
+<article class="article article--in-list {{ .Section }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
     <h3><a id="article-heading-{{ .File.UniqueID }}" href="{{ .Permalink }}">{{ .Title }}</a></h3>
     {{ with .Params.intro_text }}
     <h4>{{ . | markdownify }}</h4>
