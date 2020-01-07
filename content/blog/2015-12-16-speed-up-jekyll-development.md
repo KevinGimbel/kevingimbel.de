@@ -10,7 +10,7 @@ categories:
 - cms
 title: Speed up your Jekyll workflow
 aliases:
-  - /speed-up-jekyll-workflow/
+  - /speed-up-your-jekyll-workflow/
 
 ---
 
