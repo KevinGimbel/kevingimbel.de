@@ -94,15 +94,13 @@ figure picture {
     display: block;
     height: auto;
     width: auto;
-    max-width: 100%;
     margin: 0 auto;
 }
 
 .photography figure img,
 .photography figure picture {
-    width: calc(100% + 4rem + 1px);
-    max-width: calc(100% + 4rem + 1px);
-    margin-left: calc(0rem - 1rem);
+    width: auto;
+    max-width: calc(100% + 2rem + 1px);
 }
 
 figcaption p {
@@ -120,21 +118,11 @@ figcaption p {
 figure {
     position: relative;
     z-index: 1;
+    margin-left: calc(0rem - 2rem);
 }
 
 figure+figure {
     margin-top: 2rem;
-}
-
-figure:before {
-    content: "";
-    height: 50%;
-    width: 1px;
-    background: var(--color-secondary);
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    z-index: -1;
 }
 
 figcaption {
@@ -152,7 +140,7 @@ figcaption p {
 @media all and (min-width: 800px) {
 
     figure {
-        width: 100%;
+        width: auto;
         max-width: calc(100% + 4rem + 2px);
         margin-left: calc(0rem - 2rem - 1px);
     }
