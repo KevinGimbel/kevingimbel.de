@@ -118,9 +118,6 @@ figcaption p {
 
 
 figure {
-    width: 100%;
-    max-width: calc(100% - 4rem - 2px);
-    margin-left: calc(0 - 2rem - 1px);
     position: relative;
     z-index: 1;
 }
@@ -146,11 +143,23 @@ figcaption {
 }
 
 figcaption p {
-    width: 50%;
     margin: 0 !important;
     background: var(--color-secondary);
     color: var(--color-main);
     font-size: .85em;
+}
+
+@media all and (min-width: 800px) {
+
+    figure {
+        width: 100%;
+        max-width: calc(100% + 4rem + 2px);
+        margin-left: calc(0rem - 2rem - 1px);
+    }
+
+    figcaption p {
+        width: 50%;
+    }
 }
 
 p code {
@@ -158,6 +167,11 @@ p code {
     color: var(--color-main);
     padding: .125rem .25rem;
     border-radius: 3px;
+}
+
+.highlight {
+    margin-left: calc(0rem -2rem);
+    width: calc(100% + 4rem);
 }
 
 .nav-main {
@@ -214,6 +228,7 @@ pre {
     color: var(--color-secondary);
     border-radius: 3px;
     padding: .125rem .25rem;
+    margin-bottom: .5rem;
 }
 
 .tag-list__item a {
@@ -277,13 +292,18 @@ pre {
     margin-bottom: 0;
 }
 
-.author .right {
-    padding-left: 2rem;
+@media all and (min-width: 800px) {
+    .author .right {
+        padding-left: 2rem;
+    }
+
+    .author .avatar {
+        margin-left: 2rem;
+    }
 }
 
 .author .avatar {
     max-width: 200px;
-    margin-left: 2rem;
     transition: all linear 60s;
 }
 
