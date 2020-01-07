@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/categories/coding/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/coding/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/coding/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-07T09:11:25+01:00</updated>
+    <updated>2020-01-07T13:20:28+01:00</updated>
     
     
     
@@ -526,7 +526,11 @@ Your answer: _
 <h2 id="css-variables">CSS variables</h2>
 <h3 id="browser-support">Browser Support</h3>
 <p>Let's jump directly into browser support, which is looking pretty good in my opinion!</p>
-<!-- raw HTML omitted -->
+
+
+<p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=css-variables">Can I Use css-variables?</a> Data on support for the css-variables feature across the major browsers from caniuse.com.
+</p>
 <p><code>77.90%</code> (as of November 26. 2017) is not perfect but certainly good enough for me and my private website. I'd probably not rely on CSS Custom Properties in client projects yet tho.</p>
 <h3 id="syntax">Syntax</h3>
 <p>A CSS variable is a word preceded by two dashes (<code>--</code>), which looks like the following examples.</p>
