@@ -6,17 +6,35 @@
     <description>Recent content in Tags on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>automation</title>
+      <link>https://kevingimbel.de/tags/automation/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>hugo</title>
       <link>https://kevingimbel.de/tags/hugo/</link>
-      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static_website</title>
+      <link>https://kevingimbel.de/tags/static_website/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/static_website/</guid>
       <description></description>
     </item>
     
@@ -44,15 +62,6 @@
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/cms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>static_website</title>
-      <link>https://kevingimbel.de/tags/static_website/</link>
-      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/static_website/</guid>
       <description></description>
     </item>
     
@@ -422,15 +431,6 @@
       <pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate>
       
       <guid>https://kevingimbel.de/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>https://kevingimbel.de/tags/automation/</link>
-      <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/automation/</guid>
       <description></description>
     </item>
     
