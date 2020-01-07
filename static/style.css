@@ -170,7 +170,7 @@ p code {
 }
 
 .highlight {
-    margin-left: calc(0rem -2rem);
+    margin-left: calc(0rem - 2rem);
     width: calc(100% + 4rem);
 }
 
