@@ -1,22 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <title>Categories on KevOps</title>
     <link>https://kevingimbel.de/categories/</link>
-    <description>Recent content in Categories on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <description>Recent content in Categories on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>backend</title>
+      <link>https://kevingimbel.de/categories/backend/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/backend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>coding</title>
       <link>https://kevingimbel.de/categories/coding/</link>
-      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://kevingimbel.de/categories/tutorial/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/tutorial/</guid>
       <description></description>
     </item>
     
@@ -26,15 +44,6 @@
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://kevingimbel.de/categories/tutorial/</link>
-      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/categories/tutorial/</guid>
       <description></description>
     </item>
     
@@ -134,15 +143,6 @@
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>backend</title>
-      <link>https://kevingimbel.de/categories/backend/</link>
-      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/categories/backend/</guid>
       <description></description>
     </item>
     

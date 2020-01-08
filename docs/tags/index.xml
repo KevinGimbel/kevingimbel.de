@@ -1,22 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</title>
+    <title>Tags on KevOps</title>
     <link>https://kevingimbel.de/tags/</link>
-    <description>Recent content in Tags on Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer</description>
+    <description>Recent content in Tags on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>apache</title>
+      <link>https://kevingimbel.de/tags/apache/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>automation</title>
       <link>https://kevingimbel.de/tags/automation/</link>
-      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://kevingimbel.de/tags/linux/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://kevingimbel.de/tags/security/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server</title>
+      <link>https://kevingimbel.de/tags/server/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssl</title>
+      <link>https://kevingimbel.de/tags/ssl/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://kevingimbel.de/tags/ubuntu/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/ubuntu/</guid>
       <description></description>
     </item>
     
