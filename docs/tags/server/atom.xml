@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/tags/server/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/server/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/server/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-08T13:15:13+01:00</updated>
+    <updated>2020-01-08T13:22:54+01:00</updated>
     
     
     
@@ -63,8 +63,8 @@ MDomain test.kevingimbel.de
 </code></pre></div><p>The following values are required for <code>mod_md</code> to work properly:</p>
 <ul>
 <li><code>ServerAdmin</code> with valid e-mail address</li>
-<li>ServerName in VirtualHost</li>
-<li>MDomain with valid domain name</li>
+<li><code>ServerName</code> in VirtualHost</li>
+<li><code>MDomain</code> with valid domain name</li>
 <li><code>MDCertificateAgreement accepted</code> to accept the ACME terms of service</li>
 </ul>
 <p>After making the changes, the server must be reloaded again.</p>

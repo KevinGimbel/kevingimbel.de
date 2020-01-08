@@ -78,8 +78,8 @@ MDomain test.kevingimbel.de
 
 The following values are required for `mod_md` to work properly:
 - `ServerAdmin` with valid e-mail address
-- ServerName in VirtualHost
-- MDomain with valid domain name
+- `ServerName` in VirtualHost
+- `MDomain` with valid domain name
 - `MDCertificateAgreement accepted` to accept the ACME terms of service
 
 After making the changes, the server must be reloaded again.
