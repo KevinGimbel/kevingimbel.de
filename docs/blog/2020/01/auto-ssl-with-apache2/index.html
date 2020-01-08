@@ -63,7 +63,7 @@
 
 
 <p>Written on <time datetime="2020-01-08 00:00:00 &#43;0000 UTC">08. Jan 2020</time>  </p>
-            <p>Apache 2.4.30 and later supports ab experimental module called <code>mod_md</code> which supports automatic SSL certificate setup with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
+            <p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which supports automatic SSL certificate setup with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
 <p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p>
 <h2 id="installing-a-new-apache-version">Installing a new apache version</h2>
 <p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we'll add this.</p>

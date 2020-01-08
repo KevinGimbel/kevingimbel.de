@@ -18,7 +18,7 @@ date: "2020-01-08"
 lastmod: "2020-01-08"
 ---
 
-Apache 2.4.30 and later supports ab experimental module called `mod_md` which supports automatic SSL certificate setup with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up [certbot](https://certbot.eff.org/) and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
+Apache 2.4.30 and later supports an experimental module called `mod_md` which supports automatic SSL certificate setup with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up [certbot](https://certbot.eff.org/) and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
 
 This guide assumes the operating system is *Ubuntu*! If you use a different distro some commands may be different.
 
