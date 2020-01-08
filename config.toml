@@ -1,6 +1,6 @@
 baseURL = "https://kevingimbel.de"
 languageCode = "en-us"
-title = "Portfolio and blog of Kevin Gimbel, DevOps Engineer and Full-Stack Developer"
+title = "KevOps"
 theme = ["hugo-atom-feed"]
 publishDir = "docs"
 [params]
