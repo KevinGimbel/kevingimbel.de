@@ -93,6 +93,30 @@ hr {
     margin-bottom: 1.5rem;
 }
 
+.exif {
+    padding: .5rem;
+    background: var(--color-secondary);
+}
+
+.exif li {
+    display: inline-block;
+    background: #333;
+    color:#ccc;
+    border-radius: 3px;
+    padding: .125rem .5rem;
+    font-size: .8rem;
+}
+
+.exif .label {
+    font-size: .75rem;
+}
+
+@media all and (max-width: 800px) {
+    .exif li {
+        margin-top: .5rem;
+    }
+}
+
 figure img,
 figure picture {
     margin: 0 auto;
