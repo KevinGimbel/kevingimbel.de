@@ -61,6 +61,7 @@
     
     <small>Published on <time datetime="2020-01-08 00:00:00 &#43;0000 UTC">08. Jan 2020</time></small>
     
+    
 
     <p id="article-summary-a9284a3857fe211ba07ec82f63f5c723">Apache 2.4.30 and later supports an experimental module called mod_md which supports automatic SSL certificate setup with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
 This guide assumes the operating system is Ubuntu! If you use a different distro some commands may be different.</p>
@@ -75,6 +76,7 @@ This guide assumes the operating system is Ubuntu! If you use a different distro
     <h3><a id="article-heading-c53f201ae168a02dc2ef14f69004b021" href="https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/">Using Archetypes in Hugo</a></h3>
     
     <small>Published on <time datetime="2020-01-07 00:00:00 &#43;0000 UTC">07. Jan 2020</time></small>
+    
     
 
     <p id="article-summary-c53f201ae168a02dc2ef14f69004b021">For the longest time I completely ignored archetypes in hugo. I'd always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
@@ -94,6 +96,7 @@ $ hugo new blog/2020-01-07-using-archetypes-in-hugo.md This copied over the arch
     
     <small>Published on <time datetime="2020-01-06 00:00:00 &#43;0000 UTC">06. Jan 2020</time></small>
     
+    
 
     <p id="article-summary-ad99c7179f1106344d2893e9bef5f05f">With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title Hello world would be available at kevingimbel.de/hello-world. With the new format this includes the section, year, and month, so for example kevingimbel.de/blog/2020/01/hello-world.
 To prevent all old URLs from failing with a 404 I added aliases to all old posts.</p>
@@ -110,6 +113,7 @@ To prevent all old URLs from failing with a 404 I added aliases to all old posts
     <h4>How I ignore _index.md files in my list templates</h4>
     
     <small>Published on <time datetime="2020-01-03 00:00:00 &#43;0000 UTC">03. Jan 2020</time></small>
+    
     
 
     <p id="article-summary-132d047d5e8d3e9fa13d440e349746a2">While creating my new website I also added more sections, namely a blog, photography, and art section. All of these use list templates and render &ldquo;article&rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named _index.md for that. This file can be used to create index pages for lists.
@@ -128,6 +132,7 @@ When I did that I somehow also included the index files in the post listings whi
     
     <small>Published on <time datetime="2020-01-02 00:00:00 &#43;0000 UTC">02. Jan 2020</time></small>
     
+    
 
     <p id="article-summary-6477ca1ac74b0be12e35252b8b674139">With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo Math function and Date values it can be accomplished in automated-enough fashion.
 Partial First I created a new partial named single-header.</p>
@@ -145,6 +150,7 @@ Partial First I created a new partial named single-header.</p>
     
     <small>Published on <time datetime="2020-01-01 00:00:00 &#43;0000 UTC">01. Jan 2020</time></small>
     
+    
 
     <p id="article-summary-76c956d0ffd23b597b121349e40c3d2c">calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
 The problem with calc is that if it doesn't work you may get a unexpected result. Take the following code for example:</p>
@@ -159,6 +165,7 @@ The problem with calc is that if it doesn't work you may get a unexpected result
     <h3><a id="article-heading-8a9a4b07f05e5791ff3f17c6445c19ab" href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/">Mastodon Embed Shortcode for hugo</a></h3>
     
     <small>Published on <time datetime="2018-09-12 00:00:00 &#43;0000 UTC">12. Sep 2018</time></small>
+    
     
 
     <p id="article-summary-8a9a4b07f05e5791ff3f17c6445c19ab">You may know that I made some shortcodes for Hugo, the static site generator I am using to create this website. So far I made a shortcode for caniuse.com and codepen.io which allow to embed CodePen and &ldquo;Can I Use&rdquo; embeds easily with Hugos build-in Shortcode system.
@@ -176,6 +183,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     <small>Published on <time datetime="2018-04-18 00:00:00 &#43;0000 UTC">18. Apr 2018</time></small>
     
+    
 
     <p id="article-summary-8086dd4613b9ca505fd29bfccbb1d4b6">I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that's the real TIL here!
  [&hellip;] PS3 is shown when the select command is waiting for input [&hellip;]
@@ -192,6 +200,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     <small>Published on <time datetime="2017-11-26 10:56:13 &#43;0100 CET">26. Nov 2017</time></small>
     
+    
 
     <p id="article-summary-f4e2eda112c9a4760abede6cd9242ec8">You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (aka CSS variables).</p>
     <a href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/" title="Continue reading about CSS Custom Properties and a new look">View full post</a>
@@ -205,6 +214,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     <h3><a id="article-heading-a5db96fb784414136bc7ead0b81aff4f" href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/">Using the Terminal: The Prompt</a></h3>
     
     <small>Published on <time datetime="2017-03-29 18:34:37 &#43;0100 &#43;0100">29. Mar 2017</time></small>
+    
     
 
     <p id="article-summary-a5db96fb784414136bc7ead0b81aff4f">The Terminal (or bash, shell, console) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already wrote about one custom script named ws which enhances my daily workflows.</p>
@@ -220,6 +230,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     <small>Published on <time datetime="2017-01-17 21:28:38 &#43;0100 CET">17. Jan 2017</time></small>
     
+    
 
     <p id="article-summary-c0629f466bc6239e6da0e91e8017ff0a">If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to Hugo hosted on Uberspace. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed ($ hugo) it compiles the site from Markdown and HTML templates into a public directory with lots of folders and HTML files.</p>
     <a href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/" title="Continue reading about Deploy a static site with git">View full post</a>
@@ -234,6 +245,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     <small>Published on <time datetime="2017-01-12 19:22:48 &#43;0100 CET">12. Jan 2017</time></small>
     
+    
 
     <p id="article-summary-01aaf0a3872a7725054bd68a65210716">For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</p>
     <a href="https://kevingimbel.de/blog/2017/01/bash-script-ws/" title="Continue reading about Bash script: ws">View full post</a>
@@ -247,6 +259,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     <h3><a id="article-heading-da79474eec5139db495f1c20d38367d9" href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/">Writing NodeJS cli tools</a></h3>
     
     <small>Published on <time datetime="2017-01-09 18:02:48 &#43;0100 CET">09. Jan 2017</time></small>
+    
     
 
     <p id="article-summary-da79474eec5139db495f1c20d38367d9">Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, creating apache vhosts files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.
@@ -263,6 +276,7 @@ Shebang  If you already know what a Shebang is skip to the next section</p>
     
     <small>Published on <time datetime="2016-12-21 18:02:42 &#43;0100 CET">21. Dec 2016</time></small>
     
+    
 
     <p id="article-summary-1f77c58916556e4e9a8d73b7c66ca0d9">Today I was caught off-guard by a docker &ldquo;bug&rdquo; - or so I thought at first. I tried to boot up a project with docker-compose up like I do since switching to a Mac. Unusual was that docker-compose stopped at the build step and would not finish the boot. After some confusion and after checking the projects docker-compose.yml configuration file I went to GitHub to see the newest docker for mac issues because I was using the beta release and thought a recent update might broke a thing or two.</p>
     <a href="https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/" title="Continue reading about Gotcha: dockerignore">View full post</a>
@@ -276,6 +290,7 @@ Shebang  If you already know what a Shebang is skip to the next section</p>
     <h3><a id="article-heading-81e8515e0fe9fcf3694f6fab87996384" href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/">Farewell Jekyll, Hello Hugo</a></h3>
     
     <small>Published on <time datetime="2016-11-16 19:04:42 &#43;0100 CET">16. Nov 2016</time></small>
+    
     
 
     <p id="article-summary-81e8515e0fe9fcf3694f6fab87996384">If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.
@@ -292,6 +307,7 @@ This very site you read right now is build with Hugo, a static site generator bu
     
     <small>Published on <time datetime="2015-12-16 00:00:00 &#43;0000 UTC">16. Dec 2015</time></small>
     
+    
 
     <p id="article-summary-8eb4fc37e14fbcb05ad0f9b729edb144">Lately I had a hard time working with my own website. Whenever I wanted to make some updates, write a post or fix a little buggy thing it only took a few minutes of &ldquo;work&rdquo; to get me really frustrated. Jekyll, despite my love for it, has become horribly slow. My site, which I consider rather &ldquo;simple&rdquo;, took 17-20 seconds to build on every change! Changing the CSS? Rebuild entire site.</p>
     <a href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/" title="Continue reading about Speed up your Jekyll workflow">View full post</a>
@@ -305,6 +321,7 @@ This very site you read right now is build with Hugo, a static site generator bu
     <h3><a id="article-heading-6711fbffda5a0e8b47db2aa513a88ac0" href="https://kevingimbel.de/blog/2015/05/reactjs-hello-world/">ReactJS - Hello World!</a></h3>
     
     <small>Published on <time datetime="2015-05-07 00:00:00 &#43;0000 UTC">07. May 2015</time></small>
+    
     
 
     <p id="article-summary-6711fbffda5a0e8b47db2aa513a88ac0">This article is the first in a series about ReactJS, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.
@@ -322,6 +339,7 @@ React itself says one very important and true thing about itself:
     
     <small>Published on <time datetime="2015-03-10 00:00:00 &#43;0000 UTC">10. Mar 2015</time></small>
     
+    
 
     <p id="article-summary-5e911fbb5287088e6cc4a192f53a4ec7">I've spent the past week developing some features for our own website at work. We're using WordPress and I almost always enjoy working with WordPress beside Magento projects, it's way easier to keep an overview and with a good overview of data flow and available data it's easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</p>
     <a href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/" title="Continue reading about Getting into Performance Measurement">View full post</a>
@@ -335,6 +353,7 @@ React itself says one very important and true thing about itself:
     <h3><a id="article-heading-c20430cbc4f76661f0528f2c93d9ee66" href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/">Snippet: SASS Source Maps with Gulp</a></h3>
     
     <small>Published on <time datetime="2015-01-22 00:00:00 &#43;0000 UTC">22. Jan 2015</time></small>
+    
     
 
     <p id="article-summary-c20430cbc4f76661f0528f2c93d9ee66">Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get's bigger!</p>
@@ -350,6 +369,7 @@ React itself says one very important and true thing about itself:
     
     <small>Published on <time datetime="2015-01-21 00:00:00 &#43;0000 UTC">21. Jan 2015</time></small>
     
+    
 
     <p id="article-summary-69c5c68609a8ef4e11935c3e53bfb2f8">It's been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I've already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp; pasted everything I found on the Internet into my .</p>
     <a href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/" title="Continue reading about Getting into vim - again">View full post</a>
@@ -363,6 +383,7 @@ React itself says one very important and true thing about itself:
     <h3><a id="article-heading-7acbad0cf072fb09159c9d31e8d40c33" href="https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/">Snippet: theme-color for Android 5.0</a></h3>
     
     <small>Published on <time datetime="2014-11-21 00:00:00 &#43;0000 UTC">21. Nov 2014</time></small>
+    
     
 
     <p id="article-summary-7acbad0cf072fb09159c9d31e8d40c33">Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with this multi-tasking. In fact, all recently opened tabs are available via the multi-tasking button (square to the down right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you can switch between apps and websites seamlessly you can also set your own status bar colors for chrome which are used on the page and in the multi-tasking overview.</p>
@@ -378,6 +399,7 @@ React itself says one very important and true thing about itself:
     
     <small>Published on <time datetime="2014-08-27 00:00:00 &#43;0000 UTC">27. Aug 2014</time></small>
     
+    
 
     <p id="article-summary-faa4c471f413aa272a013e8f4ac3be95">Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely System-&gt;Config-&gt;Catalog where the user could later insert some SKUs to control which products are shown on the home page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a settings page. Not only was this rather complex it was also way too &ldquo;over engineered&rdquo; for a simple thing like a text field.</p>
     <a href="https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/" title="Continue reading about Magento: Add fields to the Admin Backend">View full post</a>
@@ -391,6 +413,7 @@ React itself says one very important and true thing about itself:
     <h3><a id="article-heading-d436a319efedd8b6cb4e0e0cfda5ded3" href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/">Endless Multi-Dimensional Navigation</a></h3>
     
     <small>Published on <time datetime="2014-08-22 00:00:00 &#43;0000 UTC">22. Aug 2014</time></small>
+    
     
 
     <p id="article-summary-d436a319efedd8b6cb4e0e0cfda5ded3">The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on CodePen. My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an open class). The JavaScript for this looks like this:
@@ -407,6 +430,7 @@ var d = document, trigger = d.</p>
     
     <small>Published on <time datetime="2014-07-31 00:00:00 &#43;0000 UTC">31. Jul 2014</time></small>
     
+    
 
     <p id="article-summary-b08dce807d6ace45af0eb67fd181f2b8">While there's a lot of talking about CSS writing styles, organization styles and if it's maybe better or not to avoid pre-processors or frameworks there's one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I'd like to talk a bit about conditional CSS that I've been using in production and that I think can improve the overall logic of CSS.</p>
     <a href="https://kevingimbel.de/blog/2014/07/conditional-css/" title="Continue reading about Conditional CSS">View full post</a>
@@ -420,6 +444,7 @@ var d = document, trigger = d.</p>
     <h3><a id="article-heading-c89a0ebe9a08e86fab5873fdc79eb97d" href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/">A closer look to closure</a></h3>
     
     <small>Published on <time datetime="2014-07-20 00:00:00 &#43;0000 UTC">20. Jul 2014</time></small>
+    
     
 
     <p id="article-summary-c89a0ebe9a08e86fab5873fdc79eb97d">Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It's good to have at least basic understanding of JavaScript.
@@ -436,6 +461,7 @@ So before I start I'd like to say that I consider myself a JavaScript beginner a
     
     <small>Published on <time datetime="2014-07-13 00:00:00 &#43;0000 UTC">13. Jul 2014</time></small>
     
+    
 
     <p id="article-summary-0edf63ae19c8eb1e41d7caba46ed604d">Since I'm still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it into my daily workflow. Since I'm working in a relativley small company it's most of the time stressy to get all things done and to keep an overview - so long story short: There's not much time for new tools that don't increase my workflow directly. VIM is one of these tools that don't fully support my workflow at the moment.</p>
     <a href="https://kevingimbel.de/blog/2014/07/noobish-vim/" title="Continue reading about Noobish VIM">View full post</a>
@@ -449,6 +475,7 @@ So before I start I'd like to say that I consider myself a JavaScript beginner a
     <h3><a id="article-heading-6a00084153d7233adfa942f837cce553" href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/">Useful Web Developer Tools</a></h3>
     
     <small>Published on <time datetime="2014-06-13 00:00:00 &#43;0000 UTC">13. Jun 2014</time></small>
+    
     
 
     <p id="article-summary-6a00084153d7233adfa942f837cce553">I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It's always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
@@ -465,6 +492,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     <small>Published on <time datetime="2014-05-27 00:00:00 &#43;0000 UTC">27. May 2014</time></small>
     
+    
 
     <p id="article-summary-b0b2b4e6811157fd739032ed949966d6">The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I'm working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &ldquo;cloned&rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</p>
     <a href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/" title="Continue reading about Magento: get and set variables in config.xml">View full post</a>
@@ -478,6 +506,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     <h3><a id="article-heading-1d277b71ba6763f9b374931317f42a63" href="https://kevingimbel.de/blog/2014/05/vim-first-impression/">Vim - first impression</a></h3>
     
     <small>Published on <time datetime="2014-05-26 00:00:00 &#43;0000 UTC">26. May 2014</time></small>
+    
     
 
     <p id="article-summary-1d277b71ba6763f9b374931317f42a63">When I first looked at Vim it was a very short experience that was literally as follows
@@ -494,6 +523,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     <small>Published on <time datetime="2014-05-23 00:00:00 &#43;0000 UTC">23. May 2014</time></small>
     
+    
 
     <p id="article-summary-22b871685f5da47d284d3444584e8d65">One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing John Resig and try to play around with JavaScript whenever I've the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can't check for every possible thingy. Anyway, I'll cover this in a small write-up aka a blog post.</p>
     <a href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/" title="Continue reading about Passing Arguments in JavaScript">View full post</a>
@@ -508,6 +538,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     <small>Published on <time datetime="2014-02-22 00:00:00 &#43;0000 UTC">22. Feb 2014</time></small>
     
+    
 
     <p id="article-summary-c8efeaa2c660311151d7e015f4d2cf6e">The great thing when you're a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I'm very proud of my back to top script even though it's not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn't be that much fun. However, I made another JavaScript thing I'm proud of: A pure JavaScript slider.</p>
     <a href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/" title="Continue reading about Pure JavaScript slider">View full post</a>
@@ -521,6 +552,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     <h3><a id="article-heading-a53c1c822185e557839200c470432873" href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/">Bullgit loves Jekyll</a></h3>
     
     <small>Published on <time datetime="2014-01-06 00:00:00 &#43;0000 UTC">06. Jan 2014</time></small>
+    
     
 
     <p id="article-summary-a53c1c822185e557839200c470432873">After having a static HTML Page for about 6 months, we at bullgit just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:
@@ -537,6 +569,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     <small>Published on <time datetime="2014-01-02 00:00:00 &#43;0000 UTC">02. Jan 2014</time></small>
     
+    
 
     <p id="article-summary-3463fe40997716b0b8b7595b9463fc4e">As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there's one thing that I'd like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There's nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</p>
     <a href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/" title="Continue reading about Web Development in 2014">View full post</a>
@@ -550,6 +583,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     <h3><a id="article-heading-73184b0caa8eb980e0a8810dcf25059a" href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/">Brackets vs. Sublime Text</a></h3>
     
     <small>Published on <time datetime="2013-12-25 00:00:00 &#43;0000 UTC">25. Dec 2013</time></small>
+    
     
 
     <p id="article-summary-73184b0caa8eb980e0a8810dcf25059a">I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &ldquo;Wow, that's a simple, clean editor!&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I've been using for the last two years or so.</p>
@@ -565,6 +599,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     <small>Published on <time datetime="2013-11-24 00:00:00 &#43;0000 UTC">24. Nov 2013</time></small>
     
+    
 
     <p id="article-summary-bce148d268be9e1d376dcd74b69996a6">For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it's not only a few different length, it's a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a max-width of let's say 20em, isn't the best solution for this so I ended up creating a flexible solution.</p>
     <a href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/" title="Continue reading about Pseudo Product Flags">View full post</a>
@@ -579,6 +614,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     <small>Published on <time datetime="2013-11-18 00:00:00 &#43;0000 UTC">18. Nov 2013</time></small>
     
+    
 
     <p id="article-summary-6f49b32f322e77c756a272cbe825491b">While I was re-designing my Website I decided to finally add some JavaScript to it. I'm learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I'm doing. Yesterday night's topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that's where the title comes from.</p>
     <a href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/" title="Continue reading about To infinity and beyond">View full post</a>
@@ -592,6 +628,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     <h3><a id="article-heading-d0e0c615809618402fa06a181c94f278" href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/">Custom Radio Buttons</a></h3>
     
     <small>Published on <time datetime="2013-10-28 00:00:00 &#43;0000 UTC">28. Oct 2013</time></small>
+    
     
 
     <p id="article-summary-d0e0c615809618402fa06a181c94f278">Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What's the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
@@ -608,6 +645,7 @@ A few years ago I had to do this once and I remember doing it with an image and 
     
     <small>Published on <time datetime="2013-10-16 00:00:00 &#43;0000 UTC">16. Oct 2013</time></small>
     
+    
 
     <p id="article-summary-ac7e41a0490354b4e30332d35fb6347b">Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don't need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it'd be my birthday while unpacking the *.</p>
     <a href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/" title="Continue reading about Ghost in the shell">View full post</a>
@@ -621,6 +659,7 @@ A few years ago I had to do this once and I remember doing it with an image and 
     <h3><a id="article-heading-a1d15b12953affac8da83a0ff8280fb8" href="https://kevingimbel.de/blog/2013/10/i-js/">i-js</a></h3>
     
     <small>Published on <time datetime="2013-10-14 00:00:00 &#43;0000 UTC">14. Oct 2013</time></small>
+    
     
 
     <p id="article-summary-a1d15b12953affac8da83a0ff8280fb8">Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.
@@ -637,6 +676,7 @@ After naming my Object $ (because I new this from jQuery and I thought it would 
     
     <small>Published on <time datetime="2013-10-02 00:00:00 &#43;0000 UTC">02. Oct 2013</time></small>
     
+    
 
     <p id="article-summary-486f2ddeaf2c96b575f0e6d43e9df705">If you're a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It's fair to say that they're all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
 Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</p>
@@ -651,6 +691,7 @@ Even though Pre-Processors are easy to use and setup some people are still confu
     <h3><a id="article-heading-421250a96026be874bdddd401f3d889e" href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/">A bit sticky</a></h3>
     
     <small>Published on <time datetime="2013-09-20 00:00:00 &#43;0000 UTC">20. Sep 2013</time></small>
+    
     
 
     <p id="article-summary-421250a96026be874bdddd401f3d889e">I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it's only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
@@ -668,6 +709,7 @@ Basic Markup To get an idea of how position:sticky works I made some basic marku
     
     <small>Published on <time datetime="2013-09-01 00:00:00 &#43;0000 UTC">01. Sep 2013</time></small>
     
+    
 
     <p id="article-summary-dd4ef0857e0611f7d87fa6372ca4a194">If you see Apps (no matter if native or web) and websites like I do, you'll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn't offer a way to get back to top on their website nor do they on Facebook for Android.
 On Android you can simply hit the menu button and the sidebar-like menu will fade in, so there is no problem with not having an &ldquo;scroll to top&rdquo; action because there is no need to get back to the top.</p>
@@ -683,6 +725,7 @@ On Android you can simply hit the menu button and the sidebar-like menu will fad
     
     <small>Published on <time datetime="2013-08-16 00:00:00 &#43;0000 UTC">16. Aug 2013</time></small>
     
+    
 
     <p id="article-summary-e2b3d2312d55071ba2b8776aec4cf1b9">I recently stumbled upon the :valid and :invalid class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not validate the input, the entered email for example can still be formated wrong.</p>
     <a href="https://kevingimbel.de/blog/2013/08/is-this-valid/" title="Continue reading about Is this :valid?">View full post</a>
@@ -696,6 +739,7 @@ On Android you can simply hit the menu button and the sidebar-like menu will fad
     <h3><a id="article-heading-2d2f08b226287e8cdbc564ec3a28ce40" href="https://kevingimbel.de/blog/2013/08/px-vs-em/">px vs em</a></h3>
     
     <small>Published on <time datetime="2013-08-15 00:00:00 &#43;0000 UTC">15. Aug 2013</time></small>
+    
     
 
     <p id="article-summary-2d2f08b226287e8cdbc564ec3a28ce40">Recently Tim Pietrusky wrote and article about px vs em that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.
@@ -714,7 +758,7 @@ I was using pixel like forever and I couldn't think of any reason to switch to a
             </p>
         </div>
         <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/%7b0xc000311ce0%7d">Edit on
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/%7b0xc0007791a0%7d">Edit on
                         GitHub</a></small></p>
             <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
             </p>
