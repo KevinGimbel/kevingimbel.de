@@ -8,26 +8,31 @@
     </article>
     {{ range .Resources.ByType "image" }}
     {{ $img := . }}
-    {{ if eq $.Page.Params.keep_original "true"}}
     <figure>
-        <img src="{{ $img.RelPermalink }}" />
+        {{ if eq $.Page.Params.keep_original "true"}}
+            <img src="{{ $img.RelPermalink }}" alt="{{ if isset $img.Alt }}{{ . }}{{ else }}{{ .Name }}{{ end }}" />
+        {{ else }}
+            <picture>
+                <source srcset="{{ ($img.Resize "1200x q100").RelPermalink }}" media="(max-width: 1200px)">
+                <source srcset="{{ ($img.Resize "1000x q100").RelPermalink }}" media="(max-width: 1000px)">
+                <source srcset="{{ ($img.Resize "7600x q100").RelPermalink }}" media="(max-width: 640px)">
+                <img src="{{ ($img.Resize "1600x q100").RelPermalink }}" />
+            </picture>
+        {{ end }}
         <figcaption>
+            {{ with $img.Exif }}
+            <div class="exif">
+            <ul>
+                <li><span class="label">ISO</span> {{ .Tags.ISOSpeedRatings }}</li>
+                <li><span class="label">Focal Length</span> {{ math.Round .Tags.FocalLength }}mm</li>
+                <li><span class="label">Aperture</span> f/{{ math.Round .Tags.ApertureValue }}</li>
+            </ul>
+            </div>
+            {{ end }}
             <p>{{ .Name }}</p>
         </figcaption>
     </figure>
-    {{ else }}
-    <figure>
-        <picture>
-            <source srcset="{{ ($img.Resize "1200x q100").RelPermalink }}" media="(max-width: 1200px)">
-            <source srcset="{{ ($img.Resize "1000x q100").RelPermalink }}" media="(max-width: 1000px)">
-            <source srcset="{{ ($img.Resize "7600x q100").RelPermalink }}" media="(max-width: 640px)">
-            <img src="{{ ($img.Resize "1600x q100").RelPermalink }}" />
-        </picture>
-        <figcaption>
-            <p>{{ .Name }}</p>
-        </figcaption>
-    </figure>
-    {{ end }}
+
     {{ end }}
 
     <section class="license">

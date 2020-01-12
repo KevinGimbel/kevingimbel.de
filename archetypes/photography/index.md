@@ -9,6 +9,8 @@ categories:
 tags:
     - fujifilm
     - fujifilm_x30
+    - canon
+    - canon_eos_1000d
 
 resources:
     - src: 
