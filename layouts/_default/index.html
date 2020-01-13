@@ -20,10 +20,10 @@
             <h4>{{ . | markdownify }}</h4>
             {{ end }}
             <small>Published on <time datetime="{{ .Date }}">{{ .Date.Format "02. Jan 2006" }}</time></small>
+            
             {{ range .Resources.ByType "image" | first 1 }}
-
             <figure>
-                <img src="{{ .RelPermalink }}" />
+                <img src="{{ (.Resize "1600x q75").RelPermalink}}" title="{{ .Name }}" />
                 <figcaption>
                     <p>{{ .Name }}</p>
                 </figcaption>
@@ -49,10 +49,10 @@
             <h4>{{ . | markdownify }}</h4>
             {{ end }}
             <small>Published on <time datetime="{{ .Date }}">{{ .Date.Format "02. Jan 2006" }}</time></small>
-            {{ range .Resources.ByType "image" | first 1 }}
 
+            {{ range .Resources.ByType "image" | first 1 }}
             <figure>
-                <img src="{{ .RelPermalink }}" />
+                <img src="{{ (.Resize "1600x q75").RelPermalink}}" title="{{ .Name }}" />
                 <figcaption>
                     <p>{{ .Name }}</p>
                 </figcaption>
