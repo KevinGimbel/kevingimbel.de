@@ -11,8 +11,8 @@
         <h2 class="section-headline">Newest content</h2>
 
         <h3>Articles</h3>
-        {{ range (where .Site.Pages "Section" "blog").GroupByDate "2006" | first 1 }}
-        {{ range last 1 .Pages }}
+        {{ range (where .Site.Pages "Section" "blog") }}
+        {{ range first 1 .Pages }}
         {{ if ne .WordCount  0 }}
         <article class="article article--in-list" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
             <h3><a id="article-heading-{{ .File.UniqueID }}" href="{{ .Permalink }}">{{ .Title }}</a></h3>
@@ -40,8 +40,8 @@
         <p>View all <a href="/blog/">articles</a></p>
 
         <h3>Latest photos</h3>
-        {{ range (where .Site.Pages "Section" "photography").GroupByDate "2006" | first 1 }}
-        {{ range last 1 .Pages }}
+        {{ range (where .Site.Pages "Section" "photography") }}
+        {{ range first 1 .Pages }}
         {{ if ne .WordCount  0 }}
         <article class="article article--in-list photography" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
             <h3><a id="article-heading-{{ .File.UniqueID }}" href="{{ .Permalink }}">{{ .Title }}</a></h3>

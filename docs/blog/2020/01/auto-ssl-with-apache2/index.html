@@ -15,7 +15,7 @@
 <body>
     
     <header class="intro-text">
-        How Apache 2.4.30 and later can be used to automate SSL certificate setups
+        How Apache 2.4.30 and later can be used to automate SSL certificate setup and renewal
     </header>
 
     
@@ -62,8 +62,10 @@
 
 
 
-<p>Written on <time datetime="2020-01-08 00:00:00 &#43;0000 UTC">08. Jan 2020</time>  </p>
-            <p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which supports automatic SSL certificate setup with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
+<p>Written on <time datetime="2020-01-08 00:00:00 &#43;0000 UTC">08. Jan 2020</time> , last <a href="#update"
+        title="View update">updated</a>
+    13. Jan 2020  </p>
+            <p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
 <p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p>
 <h2 id="installing-a-new-apache-version">Installing a new apache version</h2>
 <p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we'll add this.</p>
@@ -104,6 +106,13 @@ MDomain test.kevingimbel.de
 <p>After making the changes, the server must be reloaded again.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ systemctl reload apache2
 </code></pre></div><p>With the values in place the server will contact Let's Encrypt and retrieve a certificate, wire it up in the backend, and serve the website over https. The <a href="https://httpd.apache.org/docs/trunk/mod/mod_md.html" title="Read the Apache Documentation on mod_md">mod_md documentation</a> contains more configuration options as well as information on how to use a different Certificate Authority.</p>
+<h2 id="update">Update</h2>
+<h3 id="update-13012020">Update 13.01.2020</h3>
+<p>Slight grammatical adjustments:</p>
+<ul>
+<li>Replaced double &ldquo;supports&rdquo; in first sentence with &ldquo;allows&rdquo; and &ldquo;setup&rdquo; with &ldquo;management&rdquo;</li>
+<li>Replaced &ldquo;setups&rdquo; with &ldquo;setup and renewal&rdquo; in sub headline</li>
+</ul>
 
         </article>
     </section>

@@ -1,6 +1,6 @@
 ---
 title: "Auto SSL With apache2"
-intro_text: "How Apache 2.4.30 and later can be used to automate SSL certificate setups"
+intro_text: "How Apache 2.4.30 and later can be used to automate SSL certificate setup and renewal"
 type: blog
 categories:
     - coding
@@ -15,10 +15,10 @@ tags:
     - ubuntu
     - linux
 date: "2020-01-08"
-lastmod: "2020-01-08"
+lastmod: "2020-01-13"
 ---
 
-Apache 2.4.30 and later supports an experimental module called `mod_md` which supports automatic SSL certificate setup with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up [certbot](https://certbot.eff.org/) and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
+Apache 2.4.30 and later supports an experimental module called `mod_md` which allows automatic SSL certificate management with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up [certbot](https://certbot.eff.org/) and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
 
 This guide assumes the operating system is *Ubuntu*! If you use a different distro some commands may be different.
 
@@ -89,3 +89,11 @@ $ systemctl reload apache2
 ```
 
 With the values in place the server will contact Let's Encrypt and retrieve a certificate, wire it up in the backend, and serve the website over https. The [mod_md documentation](https://httpd.apache.org/docs/trunk/mod/mod_md.html "Read the Apache Documentation on mod_md") contains more configuration options as well as information on how to use a different Certificate Authority. 
+
+## Update
+
+### Update 13.01.2020
+Slight grammatical adjustments:
+
+- Replaced double "supports" in first sentence with "allows" and "setup" with "management"
+- Replaced "setups" with "setup and renewal" in sub headline
