@@ -17,4 +17,4 @@ You may find ratings behind each book, e.g. `(4/5⭑)` means 4 out of 5 stars, s
 
 The book titles are German and English mixed because I have read some books in German and some in English (a few even in German and English). 
 
-**Note:** This section is still being but together, not all books have been added yet and since I never recorded this data anywhere I need to go through my bookshelf and Amazon orders to find all the books I've read.
+**Note:** This section is still being put together, not all books have been added yet and since I never recorded this data anywhere I need to go through my bookshelf and Amazon orders to find all the books I've read.
