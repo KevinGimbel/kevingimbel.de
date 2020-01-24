@@ -6,10 +6,10 @@
     <h4>{{ . | markdownify }}</h4>
     {{ end }}
     <small>Published on <time datetime="{{ .Date }}">{{ .Date.Format "02. Jan 2006" }}</time></small>
-    
+    {{ $link := .Permalink }}
     {{ range .Resources.ByType "image" | first 1 }}
     <figure>
-        <img src="{{ (.Resize "1600x q75").RelPermalink}}" />
+        <a href="{{ $link }}"><img src="{{ (.Resize "1600x q75").RelPermalink}}" /></a>
         <figcaption>
             <p>{{ .Name }}</p>
         </figcaption>

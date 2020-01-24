@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "taxonomy/list.html" }}
+{{ end }}
+<main id="main" class="main">
+    {{ .Content }}
+    <ul class="taxonomy-list">
+        {{ range .Data.Terms.ByCount }}
+                <li class="taxonomy__item"><a href="{{ .Page.Permalink }}"><span class="taxonomy__item-inner">{{ .Page.Title }} ({{ .Count }})</span></a></li>
+        {{ end }}
+    </ul>
+</main>
+{{ end }}
