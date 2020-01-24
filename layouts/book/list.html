@@ -29,7 +29,7 @@
                 {{ else }}
                 <b>{{.Title}}</b>
                 {{ end }}
-                <small>by {{ range .Params.authors }} {{ . }}{{ end }} {{ with .Params.rating }}({{ . }}/5⭑){{ end }}</small>
+                <small>by {{ range .Params.authors }} {{ . }}{{ end }} {{ with .Params.rating }}({{ . }}/5⭑){{ end }}{{ if eq .Params.in_progress true}} (currently reading){{ end }}</small>
             </li>
         {{ end }}
         {{ end }}

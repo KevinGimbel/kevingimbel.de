@@ -12,4 +12,5 @@ genres:
 date: "2019-12-01"
 rating: 0-5
 recommend: false
+in_progress: false
 ---
