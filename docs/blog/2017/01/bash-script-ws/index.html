@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Bash script: ws
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -78,7 +86,7 @@
     cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">fi</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let's explore it line by line.</p>
+</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let&rsquo;s explore it line by line.</p>
 <p>With <code>function ws()</code> we declare the function name. In shell scripts a function name has parentheses after it tho it does not take arguments this way (If you know why this is, <a href="https://github.com/kevingimbel/kevingimbel.com/issues">open an issue and explain it please</a> or <a href="https://twitter.com/_kevinatari">tweet me</a>!). The next lines declare a local variable, <code>workspace</code> and then <code>target_dir=$1</code> were I assign whatever is passed to the function as being the target directory the user is trying to find. Then, I execute <code>cd $workspace</code> to go to the workspace directory and start a search with <code>workspace_path=$(find -maxdepth 3 -type d -name &quot;*$target_dir*&quot; | head -n1)</code> - now that might look weird. What happens here is the following:</p>
 <ul>
 <li>We declare a variable, <code>workspace_path</code></li>
@@ -93,7 +101,7 @@
 <span style="color:#66d9ef">else</span>
   cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
-</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that's it! Some examples can be seen in the screenshot below.</p>
+</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that&rsquo;s it! Some examples can be seen in the screenshot below.</p>
 
 <figure >
   

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[php on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[php on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/categories/php/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/php/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/php/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -37,7 +37,7 @@ post</a> about creating fields
 in the backend only with XML.</p>
 <p>That was easy and fair enough I thought and so I gave it a try. First however I created a Module in
 <code>app/code/community/Synoa</code> (<em>community</em> because this can be reused and is not directly project specific). My folder
-structure is really simple since I don't need much:</p>
+structure is really simple since I don&rsquo;t need much:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-app/code/community
  -Synoa
   -FeaturedProducts
@@ -55,7 +55,7 @@ structure is really simple since I don't need much:</p>
 <span style="color:#f92672">&lt;/config&gt;</span>
 </code></pre></div><p>The really important and <strong>amazing</strong> part happens in <code>system.xml</code>. The way of adding fields as shown below shows how
 amazingly flexible Magento can be. When I tried it out and found that it worked right away I was really impressed.
-Magento's Module System, where the Module Name is equal to the folder it is in, e.g. <code>Mage_Core_Block_Html_Link</code> is in
+Magento&rsquo;s Module System, where the Module Name is equal to the folder it is in, e.g. <code>Mage_Core_Block_Html_Link</code> is in
 <code>Mage/Core/Block/Html/Link.php</code>, also applies to this XML configuration.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;config</span><span style="color:#f92672">&gt;</span>
 <span style="color:#f92672">&lt;sections</span><span style="color:#f92672">&gt;</span>
@@ -83,13 +83,13 @@ Magento's Module System, where the Module Name is equal to the folder it is in, 
   <span style="color:#f92672">&lt;/catalog&gt;</span>
 <span style="color:#f92672">&lt;/sections&gt;</span>
 <span style="color:#f92672">&lt;/config&gt;</span>
-</code></pre></div><p>Well quite a lot of stuff happens here, let's break that down.</p>
+</code></pre></div><p>Well quite a lot of stuff happens here, let&rsquo;s break that down.</p>
 <h3 id="sections">Sections</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"> <span style="color:#f92672">&lt;sections</span><span style="color:#f92672">&gt;</span>
   <span style="color:#f92672">&lt;catalog</span><span style="color:#f92672">&gt;</span>
   <span style="color:#f92672">&lt;/catalog&gt;</span>
  <span style="color:#f92672">&lt;/sections&gt;</span>
-</code></pre></div><p>This part defines in what menu (in the backend on the left) the new fields will be inserted. In this case it's the
+</code></pre></div><p>This part defines in what menu (in the backend on the left) the new fields will be inserted. In this case it&rsquo;s the
 Catalog Menu and there the first Sub-Menu point (which is also named Catalog).</p>
 <h3 id="groups">Groups</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;groups</span><span style="color:#f92672">&gt;</span>
@@ -97,11 +97,11 @@ Catalog Menu and there the first Sub-Menu point (which is also named Catalog).</
  <span style="color:#f92672">&lt;/group_name&gt;</span>
 <span style="color:#f92672">&lt;/groups&gt;</span>
 </code></pre></div><p>Groups define the &ldquo;containers&rdquo; for settings. These are the boxes on the right part of the screen. Because describing it
-is rather stupid, here's a picture of the new admin menu and it's container (the group).
+is rather stupid, here&rsquo;s a picture of the new admin menu and it&rsquo;s container (the group).
 ![&ldquo;Custom field in the backend.&quot;](<a href="https://i.kevingimbel.me/sc/Screenshot">https://i.kevingimbel.me/sc/Screenshot</a> at 13-52-42.png)</p>
 <p>Lastly inside the group the content is defined. The wrapping tag can have any valid XML name you want, in my case it is
 <code>&lt;featured_products&gt;</code> the <code>translate=&quot;label&quot;</code> attribute tells Magento to translate the label if there is a translation
-available, either in <code>translate.csv</code> or <code>myCompany_MyModule.csv</code> - that's up to you.</p>
+available, either in <code>translate.csv</code> or <code>myCompany_MyModule.csv</code> - that&rsquo;s up to you.</p>
 <p>Inside the container is more stuff that could need some explanation.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;my_namespace</span><span style="color:#f92672">&gt;</span>
   <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Featured Products<span style="color:#f92672">&lt;/label&gt;</span>
@@ -134,9 +134,9 @@ The show tags determine in what store config &ldquo;scope&rdquo; (after setting 
 <li><code>label</code> - Label on the left (field description)</li>
 <li><code>sort_order</code>- position <em>inside</em> the list</li>
 </ul>
-<p>I'm not entirely sure what the store variables do here, but I guess they configure if and where the field can be
+<p>I&rsquo;m not entirely sure what the store variables do here, but I guess they configure if and where the field can be
 <code>echo</code>ed in the frontend.</p>
-<p>And that's it. Without a single line of PHP fields can be added to the backend in Magento. Retrieving the values of
+<p>And that&rsquo;s it. Without a single line of PHP fields can be added to the backend in Magento. Retrieving the values of
 those fields is also easy, as the following example shows.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;catalog/featured_products/product_skus&#39;</span>); <span style="color:#75715e">?&gt;</span>
 </code></pre></div><p>The logic here is simply <code>section/groupname/fieldname</code>. This fits pretty good with the previously mentioned folder

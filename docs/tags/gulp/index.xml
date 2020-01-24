@@ -17,7 +17,7 @@
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid>
-      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&#39;s bigger!</description>
+      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&amp;rsquo;s bigger!</description>
     </item>
     
   </channel>

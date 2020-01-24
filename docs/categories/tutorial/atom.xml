@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[tutorial on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[tutorial on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/categories/tutorial/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/tutorial/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/tutorial/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -29,10 +29,10 @@
             <updated>2020-01-13T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
+            <content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
 <p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p>
 <h2 id="installing-a-new-apache-version">Installing a new apache version</h2>
-<p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we'll add this.</p>
+<p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we&rsquo;ll add this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo add-apt-repository ppa:ondrej/apache2
 sudo apt-get update
 </code></pre></div><p>Next, apache can be updated</p>
@@ -41,7 +41,7 @@ sudo apt-get update
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apache2 -v
 Server version: Apache/2.4.41 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
 Server built:   2019-08-21T20:43:21
-</code></pre></div><h2 id="enabling-modmd">Enabling mod_md</h2>
+</code></pre></div><h2 id="enabling-mod_md">Enabling mod_md</h2>
 <p>First <code>mod_md</code> must be enabled. This can be done with <code>a2enmod</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo a2enmod md
 </code></pre></div><p>Next, Apache must be reload with <code>systemctl</code></p>
@@ -69,7 +69,7 @@ MDomain test.kevingimbel.de
 </ul>
 <p>After making the changes, the server must be reloaded again.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ systemctl reload apache2
-</code></pre></div><p>With the values in place the server will contact Let's Encrypt and retrieve a certificate, wire it up in the backend, and serve the website over https. The <a href="https://httpd.apache.org/docs/trunk/mod/mod_md.html" title="Read the Apache Documentation on mod_md">mod_md documentation</a> contains more configuration options as well as information on how to use a different Certificate Authority.</p>
+</code></pre></div><p>With the values in place the server will contact Let&rsquo;s Encrypt and retrieve a certificate, wire it up in the backend, and serve the website over https. The <a href="https://httpd.apache.org/docs/trunk/mod/mod_md.html" title="Read the Apache Documentation on mod_md">mod_md documentation</a> contains more configuration options as well as information on how to use a different Certificate Authority.</p>
 <h2 id="update">Update</h2>
 <h3 id="update-13012020">Update 13.01.2020</h3>
 <p>Slight grammatical adjustments:</p>
@@ -220,7 +220,7 @@ MDomain test.kevingimbel.de
 {{ end }}
 </code></pre></div><p>Because we are doing a <code>gt</code> (greater than) comparison only articles that are older than 4 years (5 and more) will be flagged.</p>
 <h2 id="see-it-in-action">See it in action</h2>
-<p>A live example can be seen on my page, for example in the <a href="/blog/2013-08-12-hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
+<p>A live example can be seen on my page, for example in the <a href="/blog/2013/08/hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
 ]]></content>
             
                  
@@ -274,7 +274,7 @@ MDomain test.kevingimbel.de
             
             
             <content type="html"><![CDATA[<p><code>calc</code> is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example <code>calc(100% - 4rem - 1px)</code> is valid and works in modern browsers - in simpler words: Calc works with different units like <code>em</code>, <code>%</code>, <code>px</code>, etc.</p>
-<p>The problem with calc is that if it doesn't work you may get a unexpected result. Take the following code for example:</p>
+<p>The problem with calc is that if it doesn&rsquo;t work you may get a unexpected result. Take the following code for example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">author</span> {
     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
     <span style="color:#66d9ef">width</span>: calc(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>);
@@ -348,15 +348,15 @@ MDomain test.kevingimbel.de
             
             
             <content type="html"><![CDATA[<p>The Terminal (or <em>bash</em>, <em>shell</em>, <em>console</em>) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already <a href="/bash-script-ws/">wrote about one custom script named <code>ws</code></a> which enhances my daily workflows. This article marks the first of many to come about using and configuring your terminal. This tutorial is written for MacOS and Linux, though most of it will work on Windows 10 if you use Bash.</p>
-<p>To get started with this tutorial open up your terminal. If you don't know how to open a terminal your first mission is to find out how! (<em>Hint: Google is your friend!</em>). Once the terminal is open we can start with some basic operations.</p>
+<p>To get started with this tutorial open up your terminal. If you don&rsquo;t know how to open a terminal your first mission is to find out how! (<em>Hint: Google is your friend!</em>). Once the terminal is open we can start with some basic operations.</p>
 <p><em>Note:</em> On newer Windows versions you should use Bash if available! This tutorial will probably not work with older Windows Verisons (XP, 7, maybe even 8) and the Windows Terminal (e.g. CMD).</p>
-<p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it'll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
+<p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it&rsquo;ll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
 <h2 id="preface-vim">Preface: VIM</h2>
 <blockquote>
 <p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/
 #the-prompt">skip to the next section</a></p>
 </blockquote>
-<p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It's a bit weird to get used to at first but once you know your way around you'll become quite productive with it. It's easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
+<p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It&rsquo;s a bit weird to get used to at first but once you know your way around you&rsquo;ll become quite productive with it. It&rsquo;s easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
 
 <figure >
   
@@ -380,7 +380,7 @@ MDomain test.kevingimbel.de
 <p>To start writing text we need to enter Input Mode. This is done by typing an <code>i</code>. Afterwards, we can write. VIM has three different modes: Input, Visual and Normal. To leave a mode and return to normal, you need to press <code>ESC</code>. Visual Mode can be used to select multiple lines or copy/paste things around. Insert Mode is mainly used for writing text and Normal Mode is used for navigation, e.g to move to the Top of a file (<code>gg</code>) or bottom of a file (<code>SHIFT+G</code>). VIM works a lot with shortcuts which is why we can edit text files so fast with it. Consider the following example HTML tag.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;some-class-name another-class-name yet more classes&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><p>To remove all classes and add a new class name you would move your mouse to the line, select everything between <code>&quot;</code> and <code>&quot;</code>, and then enter the new class name. In VIM, you can enter Normal Mode, place the cursor inside the element and press <code>ci&quot;</code> (<em>change in &ldquo;</em>). The entrie text will be removed and VIM enters Insert Mode inside the <code>&quot;&quot;</code>. To change a word, you write <code>cw</code>. To write text inside the tag, <code>cit</code> (change in tag) and the cursor is placed inside the <code>&lt;div&gt;</code>. Additional to the default movement and replacing there are plugins to make this even faster or smarter, like <a href="https://github.com/tpope/vim-surround">surround.vim</a>.</p>
-<p>So, VIM is quite an editor. Get used to it, you'll thank me later! What we need to know for basic file editing and this tutorial is the following:</p>
+<p>So, VIM is quite an editor. Get used to it, you&rsquo;ll thank me later! What we need to know for basic file editing and this tutorial is the following:</p>
 <ul>
 <li><code>i</code> is pressed to enter Insert Mode</li>
 <li><code>ESC</code> is pressed to exit a mode, e.g. Insert or Visual</li>
@@ -401,7 +401,7 @@ MDomain test.kevingimbel.de
 <h2 id="the-prompt">The Prompt</h2>
 <p>One your terminal is open you should see a Dollar Sign (<code>$</code>) or similar symbol, like shown below.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~ $
-</code></pre></div><p>This is the Prompt. The Prompt shows the current directory (<code>~</code>) and most of the time has a fixed sign, e.g. <code>$</code>. Other prompts might use symbols like <code># </code>, <code>%` </code>bash-3.2$<code>or</code>kevin@ubuntu: $`. The prompt is configurable and comes with different defaults depending on the operating system. So, each line below is how a prompt may look.</p>
+</code></pre></div><p>This is the Prompt. The Prompt shows the current directory (<code>~</code>) and most of the time has a fixed sign, e.g. <code>$</code>. Other prompts might use symbols like <code># </code>, <code>%</code> <code>bash-3.2$</code> or <code>kevin@ubuntu: $</code>. The prompt is configurable and comes with different defaults depending on the operating system. So, each line below is how a prompt may look.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kevin@MacBook-Pro: ~ $
 ~/Development #
 /usr/share/docs %
@@ -415,7 +415,7 @@ root@ubuntu: / $
 </blockquote>
 <p>Now we need to reload the configuration file (<code>.bashrc</code>) by typing <code>source ~/.bashrc</code> into the terminal and hitting enter. The prompt now looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">MY CUSTOM PROMPT
-</code></pre></div><p>Congrats, your first custom prompt! That's not a useful prompt, however, because it will always show <code>MY CUSTOM PROMPT</code>. A prompt that shows the current directory would be more useful. As it happens, we can use variables inside the Prompt and there are pre-defined variables which hold informations like the current directory, the current logged-in user, the hostname, and man more! Let's start with the working directory - the directory on the file system we are currently in. The working directory is stored inside the <code>\W</code> variable and we can use it like so</p>
+</code></pre></div><p>Congrats, your first custom prompt! That&rsquo;s not a useful prompt, however, because it will always show <code>MY CUSTOM PROMPT</code>. A prompt that shows the current directory would be more useful. As it happens, we can use variables inside the Prompt and there are pre-defined variables which hold informations like the current directory, the current logged-in user, the hostname, and man more! Let&rsquo;s start with the working directory - the directory on the file system we are currently in. The working directory is stored inside the <code>\W</code> variable and we can use it like so</p>
 <pre><code>$ vim ~/.bashrc
 export PS1=&quot;\W $&quot;
 </code></pre><p>Save the fie (<code>:wq</code>) and reload the configuration with <code>source ~/.bashrc</code>. The prompt now looks like shown below.</p>
@@ -481,7 +481,7 @@ export PS1=&quot;\W $&quot;
   
 </figure>
 
-<p>Looking good! The last thing we need - or I want - is to have some color in my prompt so that it's easier to recognize the path or see the hostname - to add color we can either use escape characters like <code>\[\033[34m\]</code> or - what I prefer - <code>tput</code>. You can <a href="http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">read more on escape characters</a> if you wish. I will focus on <a href="https://linux.die.net/man/1/tput"><code>tput</code></a>. I like to define my color variables first and then use them later. To define a variable in shell scripting write <code>variableName=&quot;value&quot;</code>. If you need to execute a program to get your variable value, you have to surround it with <code>$()</code>. For example to read the content of the file <code>test.txt</code> into the variable <code>content</code>, you'd write <code>content=&quot;$(cat test.txt)&quot;</code>.</p>
+<p>Looking good! The last thing we need - or I want - is to have some color in my prompt so that it&rsquo;s easier to recognize the path or see the hostname - to add color we can either use escape characters like <code>\[\033[34m\]</code> or - what I prefer - <code>tput</code>. You can <a href="http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">read more on escape characters</a> if you wish. I will focus on <a href="https://linux.die.net/man/1/tput"><code>tput</code></a>. I like to define my color variables first and then use them later. To define a variable in shell scripting write <code>variableName=&quot;value&quot;</code>. If you need to execute a program to get your variable value, you have to surround it with <code>$()</code>. For example to read the content of the file <code>test.txt</code> into the variable <code>content</code>, you&rsquo;d write <code>content=&quot;$(cat test.txt)&quot;</code>.</p>
 <p>Define and use colors in <code>.bashrc</code> or <code>.zshrc</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># predefine variables</span>
 ps1_green<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput setaf 2<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
@@ -490,7 +490,7 @@ ps1_reset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</
 export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$ps1_green<span style="color:#e6db74">\w\n</span>$ps1_yellow<span style="color:#e6db74">\$</span>$ps1_reset<span style="color:#e6db74"> </span><span style="color:#e6db74">&#34;</span>
 </code></pre></div><p><em>Note: A great reference for this technique is <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">this handy list</a></em></p>
 <p>In my testing I needed to use <code>\e[m</code> to properly reset the new lines. Otherwise commands would sometimes become cluttered when navigating back with <code>arrow up</code>.</p>
-<p>So that's it for the first part of customizing and using the terminal. Below are some of the <code>tput</code> colors from <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">linux.101hacks.com</a> - mostly as a reference for myself. 😁</p>
+<p>So that&rsquo;s it for the first part of customizing and using the terminal. Below are some of the <code>tput</code> colors from <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">linux.101hacks.com</a> - mostly as a reference for myself. 😁</p>
 <table>
 <thead>
 <tr>
@@ -618,38 +618,38 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
             <content type="html"><![CDATA[<p>This article is the first in a series about <a href="http://facebook.github.io/react/">ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p>
 <p>React itself says one very important and true thing about itself:</p>
 <blockquote>
-<p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it's easy to try it out on a small feature in an existing project.</p>
+<p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it&rsquo;s easy to try it out on a small feature in an existing project.</p>
 </blockquote>
-<p>Instead of frameworks such as <a href="https://angularjs.org/">Angular</a> or <a href="http://emberjs.com/">Ember</a>, React only covers the visual part and state of an UI. It won't help you structure your applicationit will not do anything other than render DOM parts and control their state. At this, however, React is amazingly good!</p>
-<h3 id="jsxlike-syntax">JSX-like syntax</h3>
-<p>React uses a XML like syntax called JSX. JSX seems horrible at first, at least to me, but becomes really powerful once you're used to it. Here is an example of two <code>div</code>s, one written in React JSX syntax and one in pure JavaScript. We assume the variable <code>dynamicContent</code> will hold some content that is generated before.</p>
+<p>Instead of frameworks such as <a href="https://angularjs.org/">Angular</a> or <a href="http://emberjs.com/">Ember</a>, React only covers the visual part and state of an UI. It won&rsquo;t help you structure your applicationit will not do anything other than render DOM parts and control their state. At this, however, React is amazingly good!</p>
+<h3 id="jsx-like-syntax">JSX-like syntax</h3>
+<p>React uses a XML like syntax called JSX. JSX seems horrible at first, at least to me, but becomes really powerful once you&rsquo;re used to it. Here is an example of two <code>div</code>s, one written in React JSX syntax and one in pure JavaScript. We assume the variable <code>dynamicContent</code> will hold some content that is generated before.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// React JSX DIV
 var myJSXDiv = &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span>&gt;{dynamicContent}&lt;/<span style="color:#f92672">div</span>&gt;;
 // pure JS DIV
 var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span>&gt;&#39;+ dynamicContent +&#39;&lt;/<span style="color:#f92672">div</span>&gt;&#39;;
-</code></pre></div><p>Weird isn't it? Writing junks of HTML without quotes in a JavaScript file looks totally wrong at first, however React is being compiled to pure JavaScript before it will hit your servers. Therefore, it really only is a way of easy writing - when you create a few DOM Elements in React you'll soon start to love the JSX-like syntax.</p>
+</code></pre></div><p>Weird isn&rsquo;t it? Writing junks of HTML without quotes in a JavaScript file looks totally wrong at first, however React is being compiled to pure JavaScript before it will hit your servers. Therefore, it really only is a way of easy writing - when you create a few DOM Elements in React you&rsquo;ll soon start to love the JSX-like syntax.</p>
 <h3 id="hello-world">Hello World!</h3>
-<p>As in every framework and language, let's start by outputting a <code>Hello World!</code> string. To archive this we will do the following:</p>
+<p>As in every framework and language, let&rsquo;s start by outputting a <code>Hello World!</code> string. To archive this we will do the following:</p>
 <ul>
 <li>Create a new React Class or Component</li>
 <li>Invoke a <code>render()</code> function within that Component</li>
 <li>Render the Component to the DOM</li>
 </ul>
 <h4 id="reactcreateclass">React.createClass(</h4>
-<p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I'll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!&quot;.</p>
+<p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I&rsquo;ll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!&quot;.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
   <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
     <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span><span style="color:#f92672">!</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
   }
 })
-</code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that'll be passed just like a HTML element: <code>&lt;HelloWorld /&gt;</code>.</p>
+</code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that&rsquo;ll be passed just like a HTML element: <code>&lt;HelloWorld /&gt;</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Renders the HelloWorld Component into the Body.
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>, document.<span style="color:#a6e22e">body</span>);
-</code></pre></div><p>And here's a working <a href="http://codepen.io">Pen</a> with additional comments.</p>
+</code></pre></div><p>And here&rsquo;s a working <a href="http://codepen.io">Pen</a> with additional comments.</p>
 <!-- raw HTML omitted -->
-<p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn't fun either. So next, we'll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p>
+<p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn&rsquo;t fun either. So next, we&rsquo;ll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p>
 <h3 id="hello-friend">Hello {friend}!</h3>
-<p>React has its own template-engine-thingy. Instead of typing static strings you can pass data and use it in the return of the Render Function (or in any other function inside the component for that matter). All passed data is accessible via <code>this.props</code> and passed like <code>&lt;HelloWorld name=&quot;Kevin&quot; /&gt;</code>, which would than be accessed like <code>this.props.name</code>. Here's an example of this in action.</p>
+<p>React has its own template-engine-thingy. Instead of typing static strings you can pass data and use it in the return of the Render Function (or in any other function inside the component for that matter). All passed data is accessible via <code>this.props</code> and passed like <code>&lt;HelloWorld name=&quot;Kevin&quot; /&gt;</code>, which would than be accessed like <code>this.props.name</code>. Here&rsquo;s an example of this in action.</p>
 <!-- raw HTML omitted -->
 <p>However, to re-use the <code>HelloWorld</code> component we need to create another Component and use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code>Array.map</code></a> function to go over an Array of names.</p>
 <p>So what we do now is the following:</p>
@@ -658,7 +658,7 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
 <li>We create a new Component that renders multiple instances of <code>&lt;HelloWorld /&gt;</code></li>
 <li>We render the new Component into the document</li>
 </ul>
-<p>This sounds complex but it is quite doable so let's start right away by extending the <code>HelloWorld</code> component and re-naming it to <code>Hello</code> since it will greet all kinds of people now.</p>
+<p>This sounds complex but it is quite doable so let&rsquo;s start right away by extending the <code>HelloWorld</code> component and re-naming it to <code>Hello</code> since it will greet all kinds of people now.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// The new Hello Component
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
   <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
@@ -677,7 +677,7 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
     )
   }
 });
-</code></pre></div><p>Quite a lot going on here. Let's break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that'll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /&gt;</code>.</p>
+</code></pre></div><p>Quite a lot going on here. Let&rsquo;s break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that&rsquo;ll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /&gt;</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// this.props.folks.map() goes over every entry in the array
 </span><span style="color:#75715e"></span><span style="color:#75715e">// and returns a new Hello Component.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allGreetings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">folks</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">person</span>) {
@@ -706,7 +706,7 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">FriendList</span> <span style="color:#a6e22e">folks</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">allThePeople</span>}<span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>, document.<span style="color:#a6e22e">body</span>);
 </code></pre></div><p>We create a normal JavaScript Array with our Friends&rsquo; names as strings, then pass it to the React component as the attribute <code>folks</code>. This array will then be accessible as <code>this.props.folks</code> from within the Component. And, as before, here is a Pen showing the output as well as some more comments on the code.</p>
 <!-- raw HTML omitted -->
-<p>That's it for creating a Component and re-using it inside another Component. For the next tutorial we'll see how we can use a state to give our Components some interaction. If you've got any questions or have found an issue, hit me up at <a href="https://twitter.com/_kevinatari">@_kevinatari</a>.</p>
+<p>That&rsquo;s it for creating a Component and re-using it inside another Component. For the next tutorial we&rsquo;ll see how we can use a state to give our Components some interaction. If you&rsquo;ve got any questions or have found an issue, hit me up at <a href="https://twitter.com/_kevinatari">@_kevinatari</a>.</p>
 <!-- raw HTML omitted -->
 ]]></content>
             
@@ -756,10 +756,10 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
             <updated>2015-03-10T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>I've spent the past week developing some features for our own website at work.
-We're using WordPress and I almost always enjoy working with WordPress beside
-Magento projects, it's way easier to keep an overview and with a good overview
-of data flow and available data it's easier to measure and find performance
+            <content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
+We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside
+Magento projects, it&rsquo;s way easier to keep an overview and with a good overview
+of data flow and available data it&rsquo;s easier to measure and find performance
 bottleneck. In the following post I want to examine my workflow and the way I
 refactored our code base to increase the speed and overall performance of our
 site.</p>
@@ -769,7 +769,7 @@ site.</p>
 times, render times, asset loading times and non cached assets. WPT even shows
 which assets should be cached or served via a CDN. Initially it checks for First
 View  and Repeat View and outputs a table of numbers and fancy graphics. The
-thing I've been most interested in were First View and Content Breakdown. The
+thing I&rsquo;ve been most interested in were First View and Content Breakdown. The
 Content Breakdown showed that ~66% of our landing page consist of images so
 optimizing these images (see below) was a natural approach to boost performance.
 When testing with WebPageTest I like to select the second fastest Internet
@@ -798,7 +798,7 @@ the loading behavior of a website.</p>
 <p>With these two tools I started tracking down the various performance issues.
 First of all the blocking JavaScript and a bit of unused code.</p>
 <h3 id="unused-code">Unused Code</h3>
-<p>While checking the Network Tab in Chrome Dev Tools I've seen that out of 16 Requests
+<p>While checking the Network Tab in Chrome Dev Tools I&rsquo;ve seen that out of 16 Requests
 one JavaScript Analytics Library was blocking the
 rendering by almost 600-800ms. Because it was barely used I removed this one so
 there was already a big improvement by removing unused or barely used code - one
@@ -806,17 +806,17 @@ should always check for unused plugins, libs and CSS - this is the most basic
 &ldquo;improvement&rdquo; and optimization.</p>
 <blockquote>
 <p>Regularly refactor your code base to see where unused code exists or
-code can be optimized. By ueing a Pre-Processor it's easy to remove the code
+code can be optimized. By ueing a Pre-Processor it&rsquo;s easy to remove the code
 from production but keep it for later by using an <a href="http://sass-guidelin.es/#main-file">import system</a>.</p>
 </blockquote>
 <h3 id="minify">Minify</h3>
 <p>Minifying files is always a good thing. No doubt. Use
 <a href="https://github.com/mishoo/UglifyJS">Uglify</a> for JavaScript
-and your favorite pre-proccessor's compress function.</p>
+and your favorite pre-proccessor&rsquo;s compress function.</p>
 <h3 id="images">Images</h3>
 <p>Next I found that our landing page is pretty image heavy, especially with a big
 banner image. To reduce the size I searched for plugins to automate the process
-but couldn't find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
+but couldn&rsquo;t find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
 Command Line tool for PNG optimization. With this tool I could reduce the size
 of almost any image by 50-70% which again reduced the load time by 100-200ms.</p>
 <blockquote>
@@ -830,11 +830,11 @@ asynchronously via the provided snippet from Google Fonts would help and indeed
 it did! We saved almost 100ms simply by loading the Font files asynchronously.</p>
 <p>On the very First View this can make the content &lsquo;jump&rsquo; a bit because the
 initial view loads with a fallback font (sans-serif, for example) and then once
-the Font is loaded from Google's CDN it replaces the old font with the new font
+the Font is loaded from Google&rsquo;s CDN it replaces the old font with the new font
 on-the-fly. This may looks ugly and if you absolutely can not live with it you
-must take the 100ms-slower Pill and include the fonts in your CSS where they'll
+must take the 100ms-slower Pill and include the fonts in your CSS where they&rsquo;ll
 be loaded before the CSS is rendered - therefore no delay.</p>
-<p>Below is the function that'll load the fonts via a script tag that as the
+<p>Below is the function that&rsquo;ll load the fonts via a script tag that as the
 <code>async</code> attribute set.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f92672">=</span> {
   <span style="color:#a6e22e">google</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">families</span><span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#39;Open+Sans:400,300,600:latin&#39;</span> ] }
@@ -855,8 +855,8 @@ be loaded before the CSS is rendered - therefore no delay.</p>
 file. Splitting out the fonts from the CSS and loading them via JavaScript (if
 possible) may increase the initial load time of the website.</p>
 </blockquote>
-<h3 id="serverside-optimizations">Server-side optimizations</h3>
-<p>There's quite a lot to do when optimizing from the server side. From things like
+<h3 id="server-side-optimizations">Server-side optimizations</h3>
+<p>There&rsquo;s quite a lot to do when optimizing from the server side. From things like
 optimizing Queries, Caching Queries to using the variety of Apache or Nginx
 Modules and settings to optimize the servers workflow. While we have our site at
 a specific WordPress Hoster our access to server features is mainly limited to
@@ -878,9 +878,9 @@ their admin interface and using the <code>.htaccess</code> - which is what I did
     Header set Cache-Control &#34;public&#34;
   &lt;/<span style="color:#f92672">FilesMatch</span>&gt;
 &lt;/<span style="color:#f92672">IfModule</span>&gt;
-</code></pre></div><h4 id="compression-with-moddeflate">Compression with mod_deflate</h4>
+</code></pre></div><h4 id="compression-with-mod_deflate">Compression with mod_deflate</h4>
 <p>With this snippet above we tell the server to cache certain file types by 1
-month (if they don't change of course). This way the server can sent back the
+month (if they don&rsquo;t change of course). This way the server can sent back the
 files from its cache instead of re-generating the files all the time. Next I
 used <code>mod_deflate</code> to compress the files before they are sent to the client.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># Deflate Compression by FileType
@@ -904,8 +904,8 @@ its own cache (Varnish) which should benefit to our sites overall performance, t
 of re-generating the files on every request. Make sure to cache static content
 like images, javascript or css.</p>
 </blockquote>
-<h3 id="lazyload-javascript">Lazy-load JavaScript</h3>
-<p>We've been using our own delayed load for JavaScript assets ever since I started
+<h3 id="lazy-load-javascript">Lazy-load JavaScript</h3>
+<p>We&rsquo;ve been using our own delayed load for JavaScript assets ever since I started
 working at <a href="http://synoa.de">Synoa</a>. We use the following function to include
 our minified JavaScript after the DOM is loaded, if possible.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">loadAfterDom</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
@@ -926,17 +926,17 @@ our minified JavaScript after the DOM is loaded, if possible.</p>
   window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadAfterDom</span>;  
 }
 </code></pre></div><p>This little script loads the <code>main.min.js</code> file after the DOM is constructed so
-it doesn't block the rendering of the page.</p>
+it doesn&rsquo;t block the rendering of the page.</p>
 <blockquote>
 <p>Lazy loading JavaScript only works when JavaScript is not needed for the
-initial view (which it shouldn't). When you need JavaScript on render time to
+initial view (which it shouldn&rsquo;t). When you need JavaScript on render time to
 hide elements, for example, it may be better to hide them initially and show them after the
 page is loaded!</p>
 </blockquote>
 <h3 id="what-could-be-done-next">What could be done next?</h3>
 <p>Next we could think about inlining our Critical Path CSS using a Grunt or Gulp
-task, as Google PageSpeed suggests all the time. I've yet never done this before
-and need to try it before I can say if it's worth or not.</p>
+task, as Google PageSpeed suggests all the time. I&rsquo;ve yet never done this before
+and need to try it before I can say if it&rsquo;s worth or not.</p>
 <p>In another round we could review the entire code base and replace the legacy
 Compass compiler with modern, <a href="https://github.com/sass/node-sass">node-sass</a> and
 <a href="https://github.com/sass/libsass">Libsass</a>, a C++ implementation of Sass that is
@@ -948,10 +948,10 @@ is another desirable improvement.</p>
 <p>At this point, our website performs at 900ms-1.2s in load time for the front page
 and 700-800ms for most sub pages. Yet there is still optimization that need to
 be done, especially the question on how to integrate the optimization into
-everyone's workflow. While developers could use a grunt/gulp/cli task the people
+everyone&rsquo;s workflow. While developers could use a grunt/gulp/cli task the people
 who actually write content need an easy way to handle the optimization of
 uploaded files. The last resort of more optimization is the server respond time
-on which we don't have any influence.</p>
+on which we don&rsquo;t have any influence.</p>
 ]]></content>
             
                  
@@ -1005,10 +1005,10 @@ this multi-tasking. In fact, all recently opened tabs are available via the mult
 right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you
 can switch between apps and websites seamlessly you can also set your own status bar colors for chrome which are used on
 the page and in the multi-tasking overview.</p>
-<h3 id="oneliner">One-liner!</h3>
+<h3 id="one-liner">One-liner!</h3>
 <p>All it takes is a simple one-liner of HTML: a <code>&lt;meta&gt;</code>-tag!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;theme-color&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#5677fc&#34;</span>&gt;
-</code></pre></div><p>The content can be any valid CSS color and that's it - nothing more to do!</p>
+</code></pre></div><p>The content can be any valid CSS color and that&rsquo;s it - nothing more to do!</p>
 <h3 id="results">Results</h3>
 <!-- raw HTML omitted -->
 ]]></content>
@@ -1098,17 +1098,17 @@ nav, so <code>this.parentNode</code> will return the <code>&lt;li&gt;</code> ele
 </code></pre></div><p>One of the most important things here is the <code>data-id</code> attribute which groups the navigations, triggers and (endless)
 sub navigations together and is used to reference each of them.</p>
 <h3 id="event-bubbling">Event Bubbling</h3>
-<p>Yet before we get to the actual code it's important to understand event bubbling. If you already know what it is skip
+<p>Yet before we get to the actual code it&rsquo;s important to understand event bubbling. If you already know what it is skip
 this section and continue with &ldquo;Finaly: Code&rdquo; below.
-Event Bubbling is the concept of how the browser handles events. Your're most likly familiar with <code>e.preventDefault()</code>
-for click events applied to <code>&lt;a&gt;</code>-tags. This function stops the normal event bubbling so the browser doesn't reload
+Event Bubbling is the concept of how the browser handles events. Your&rsquo;re most likly familiar with <code>e.preventDefault()</code>
+for click events applied to <code>&lt;a&gt;</code>-tags. This function stops the normal event bubbling so the browser doesn&rsquo;t reload
 the page - which is the default action for <code>&lt;a&gt;</code>-tags.
 So in our case the behavior we make use of is event bubbling, as said before. Take a look at the graphic below and then
 read on.
 <img src="https://i.kevingimbel.me/sc/event_flow_v1.png" alt="&ldquo;Event Bubbling for this navigation&rdquo;">
-When the even get's triggered it finds no handler and the event literally goes up the DOM until it finds a handler. Node
-by node the little event walks up until finally the navigation wrapper says &ldquo;Yes little event! I got you, I'll handle
-that!&rdquo; - and that's it. When the handler attached to the navigation handles the event it will also populate it's <code>el</code>
+When the even get&rsquo;s triggered it finds no handler and the event literally goes up the DOM until it finds a handler. Node
+by node the little event walks up until finally the navigation wrapper says &ldquo;Yes little event! I got you, I&rsquo;ll handle
+that!&rdquo; - and that&rsquo;s it. When the handler attached to the navigation handles the event it will also populate it&rsquo;s <code>el</code>
 variable with whatever <code>e.target</code> currently is. <code>e.target</code> happens to always be the <strong>triggering element</strong>, so it is
 very similar to <code>this</code>, yet even more flexible!</p>
 ]]></content>
@@ -1162,9 +1162,9 @@ very similar to <code>this</code>, yet even more flexible!</p>
             
             <content type="html"><![CDATA[<p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
 functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some
-problems I want to try and give short introduction to closure and what it can be good for. It's good to have at least
+problems I want to try and give short introduction to closure and what it can be good for. It&rsquo;s good to have at least
 basic understanding of JavaScript.</p>
-<p>So before I start I'd like to say that I consider myself a JavaScript beginner and this is how I understand closure
+<p>So before I start I&rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure
 and scopes at the moment. If you happen to find mistakes please <a href="https://twitter.com/_kevinatari">tweet me</a> or <a href="https://github.com/kevingimbel/kevingimbel.github.io/issues?page=1&amp;state=open">open an
 issue</a>.</p>
 <p>Consider the following example</p>
@@ -1176,8 +1176,8 @@ issue</a>.</p>
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
 </code></pre></div><p>What value will <code>x</code> have when logged to the console? 5 or 10? The correct answer is 5, because inside the immediate
-executing function <code>var x</code> does not reference the previously defined <code>var x</code>. They're both standalone and do not effect
-each other. Let's try this again and see what happens now</p>
+executing function <code>var x</code> does not reference the previously defined <code>var x</code>. They&rsquo;re both standalone and do not effect
+each other. Let&rsquo;s try this again and see what happens now</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
 
 (<span style="color:#66d9ef">function</span>() {
@@ -1185,11 +1185,11 @@ each other. Let's try this again and see what happens now</p>
 }());
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
-</code></pre></div><p>What value will <code>x</code> have now? Still 5, because it's the same function but we only left the <code>var</code> keyword? Nope, now <code>x</code>
-inside the immediate executing function references the previously defined <code>var x</code> and will update it's value, so
+</code></pre></div><p>What value will <code>x</code> have now? Still 5, because it&rsquo;s the same function but we only left the <code>var</code> keyword? Nope, now <code>x</code>
+inside the immediate executing function references the previously defined <code>var x</code> and will update it&rsquo;s value, so
 <code>console.log(x)</code> results to 10 this time. As you can see just now, leaving out the single word <code>var</code> can change how your
 program behaves. The missing var statment, where closure hits hard and overrides the variable, can really be annoying
-because JavaScript doesn't throw errors. Overriding values inside a closure, e.g. the immediate executing function, is
+because JavaScript doesn&rsquo;t throw errors. Overriding values inside a closure, e.g. the immediate executing function, is
 perfectly fine.</p>
 <p>So what happens if we pass <code>x</code>, which is 10 now, to the immediate executing function and declare &lsquo;x = 15&rsquo; inside the
 functions body? Will <code>x</code> become 15 or stay 10?</p>
@@ -1197,12 +1197,12 @@ functions body? Will <code>x</code> become 15 or stay 10?</p>
 </span><span style="color:#75715e"></span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">x</span>){
 	<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
 }(<span style="color:#a6e22e">x</span>));
-</code></pre></div><p>As the result shows, x is still 10. But wait, wasn't it supposed to be overridden if we don't declare <code>var x = 15</code>? Well
+</code></pre></div><p>As the result shows, x is still 10. But wait, wasn&rsquo;t it supposed to be overridden if we don&rsquo;t declare <code>var x = 15</code>? Well
 that is true, but since we pass x as a parameter, x is &ldquo;re-defined&rdquo; as a local variable and, inside the functions body, it is
 indeed 15 - outside it is not.</p>
 <!-- raw HTML omitted -->
 <h3 id="what-can-closures-do-for-me">What can closures do for me?</h3>
-<p>What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn't write variables into the global namespace because they're almost asking to be overriden or changed. Let's say one writes a function like this.</p>
+<p>What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn&rsquo;t write variables into the global namespace because they&rsquo;re almost asking to be overriden or changed. Let&rsquo;s say one writes a function like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">assert</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">con</span>, <span style="color:#a6e22e">msg</span>) {
   <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">con</span>) {
     <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">msg</span>);
@@ -1210,8 +1210,8 @@ indeed 15 - outside it is not.</p>
     <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">msg</span>);
   }
 }
-</code></pre></div><p>That's a super simple assert function to see if a statment (<code>con</code>dition) is true or false. If it's false we'll log a console.error(), if not we'll log a normal console.log() statement. This is great and perfectly fine unless someone else
-tries to use a function with the same name. Then there'll be a &ldquo;conflict&rdquo; and the last declared function overrides the other. (In this example I'll use a function called myFunction)</p>
+</code></pre></div><p>That&rsquo;s a super simple assert function to see if a statment (<code>con</code>dition) is true or false. If it&rsquo;s false we&rsquo;ll log a console.error(), if not we&rsquo;ll log a normal console.log() statement. This is great and perfectly fine unless someone else
+tries to use a function with the same name. Then there&rsquo;ll be a &ldquo;conflict&rdquo; and the last declared function overrides the other. (In this example I&rsquo;ll use a function called myFunction)</p>
 <!-- raw HTML omitted -->
 <p>So still, what can closure do for me? It can save my declared functions - inside a closure. So far all closure examples were immediate executing function, but Objects also create closures, assigning all there properties to a specific &ldquo;namespace&rdquo;.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myFunction</span>() <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
@@ -1277,8 +1277,8 @@ declares myFunction in the globale scope.</p>
             <updated>2014-05-23T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing <a href="http://ejohn.org">John Resig</a> and try to play around with JavaScript whenever I've the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can't check for every possible thingy. Anyway, I'll cover this in a small write-up aka a blog post. Yay!</p>
-<p>First of all we should have some use case or scenario. I needed the a variable number of options for my <a href="https://github.com/bullgit/Bulllog">Bulllog</a> script that takes any number of CSS oroperty-value pairs and applies them to your console.logs (Chrome only, sadly). Anyway, CSS is a good example in my opinion so we'll write a small css() function that can be applies to an element.</p>
+            <content type="html"><![CDATA[<p>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing <a href="http://ejohn.org">John Resig</a> and try to play around with JavaScript whenever I&rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&rsquo;t check for every possible thingy. Anyway, I&rsquo;ll cover this in a small write-up aka a blog post. Yay!</p>
+<p>First of all we should have some use case or scenario. I needed the a variable number of options for my <a href="https://github.com/bullgit/Bulllog">Bulllog</a> script that takes any number of CSS oroperty-value pairs and applies them to your console.logs (Chrome only, sadly). Anyway, CSS is a good example in my opinion so we&rsquo;ll write a small css() function that can be applies to an element.</p>
 <p>First of all, what should this function do? It should:</p>
 <ul>
 <li>Take any number of CSS property-value pairs</li>
@@ -1286,12 +1286,12 @@ declares myFunction in the globale scope.</p>
 <li>respond (console.log()) errors if any happen</li>
 </ul>
 <h3 id="the-functions">The functions</h3>
-<p>We'll start with the basic: getting an element and manipulating its CSS.</p>
+<p>We&rsquo;ll start with the basic: getting an element and manipulating its CSS.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">	<span style="color:#75715e">// Getting the element
 </span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>( <span style="color:#e6db74">&#39;.test&#39;</span> );
 	<span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">background</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span>;
 	<span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>[<span style="color:#e6db74">&#39;background&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;black&#39;</span>;
-</code></pre></div><p>Both of the above ways (<code>el.style.background</code> and <code>el.style['background']</code>) work the exact same way. But that's not much fun, right? Why should we want to set our styles this way and where's the dynamic functional stuff at all? Lets extend the script with a <code>css</code> function.</p>
+</code></pre></div><p>Both of the above ways (<code>el.style.background</code> and <code>el.style['background']</code>) work the exact same way. But that&rsquo;s not much fun, right? Why should we want to set our styles this way and where&rsquo;s the dynamic functional stuff at all? Lets extend the script with a <code>css</code> function.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">css</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">css</span>( <span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">options</span> ) {
 	<span style="color:#75715e">/*1 */</span>
   <span style="color:#66d9ef">if</span>( <span style="color:#66d9ef">typeof</span>(<span style="color:#a6e22e">el</span>) <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> ) {
@@ -1304,12 +1304,12 @@ declares myFunction in the globale scope.</p>
 }
 </code></pre></div><p>What this script does:</p>
 <ol>
-<li>check if el is already an object, if so we don't need to select it again. That'd be the case if we pass the previously defined <code>el</code> directly to the function.  We can also use <code>css('.my-class', 'background');</code></li>
+<li>check if el is already an object, if so we don&rsquo;t need to select it again. That&rsquo;d be the case if we pass the previously defined <code>el</code> directly to the function.  We can also use <code>css('.my-class', 'background');</code></li>
 <li>Set the desired property, e.g. background, color to be red.</li>
 </ol>
-<p>Alright, that's not bad but why should we want to sett everything to red? You're right - we don't want this. Next up: for in loops!</p>
+<p>Alright, that&rsquo;s not bad but why should we want to sett everything to red? You&rsquo;re right - we don&rsquo;t want this. Next up: for in loops!</p>
 <h3 id="for-key-in-obj">For key in obj</h3>
-<p>For loops are always fun and especially <code>for in</code> loops. They're perfect for our needs because we'll pass a list (or better an Object) with property-value pairs to our function and need to process them so they can be applies as styles. Our modified function now looks like this:</p>
+<p>For loops are always fun and especially <code>for in</code> loops. They&rsquo;re perfect for our needs because we&rsquo;ll pass a list (or better an Object) with property-value pairs to our function and need to process them so they can be applies as styles. Our modified function now looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">css</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">css</span>( <span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">options</span> ) {
 	<span style="color:#66d9ef">if</span>( <span style="color:#66d9ef">typeof</span>( <span style="color:#a6e22e">el</span> ) <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> ) {
 		<span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">el</span>;
@@ -1330,9 +1330,9 @@ declares myFunction in the globale scope.</p>
 <li>We need to create an empty array to store all our property-value pairs in.</li>
 <li>We start our for in loop. We go over every key in our options object.</li>
 <li>Every propery-value pair gets pushed into our arrays, the properties into the <code>styleProperties</code> array and the values into the <code>styleValues</code> array.
-I'm sure there is a more elegant way to do this, but I couldn't really think of any - so I'm as always up for improvments!</li>
+I&rsquo;m sure there is a more elegant way to do this, but I couldn&rsquo;t really think of any - so I&rsquo;m as always up for improvments!</li>
 </ol>
-<p>Our <code>css()</code> function just got a lot more flexible! Before we could only set any property to one value (everything we want to <code>red</code>), now we can pass a lot of property-value pairs and they'll get processes by our function! Awesome, right?
+<p>Our <code>css()</code> function just got a lot more flexible! Before we could only set any property to one value (everything we want to <code>red</code>), now we can pass a lot of property-value pairs and they&rsquo;ll get processes by our function! Awesome, right?
 Calling the function would now look like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">	<span style="color:#a6e22e">css</span>(<span style="color:#e6db74">&#39;.my-div&#39;</span>, {
 	  <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;yellow&#39;</span>,
@@ -1343,10 +1343,10 @@ Calling the function would now look like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">  <span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">styleProperties</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
     <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>[<span style="color:#a6e22e">styleProperties</span>[<span style="color:#a6e22e">i</span>]] <span style="color:#f92672">=</span> <span style="color:#a6e22e">styleValues</span>[<span style="color:#a6e22e">i</span>];
   }
-</code></pre></div><p>We iterate over the array (doesn't matter which because both are exatctly the same size) and extract the matching properties and values. That's the point where we actually apply the styles.</p>
+</code></pre></div><p>We iterate over the array (doesn&rsquo;t matter which because both are exatctly the same size) and extract the matching properties and values. That&rsquo;s the point where we actually apply the styles.</p>
 <p>The result looks like this.</p>
 <!-- raw HTML omitted -->
-<p>With this technique you can make any function accept any amount of property-value pairs by simply passing in an object. This would also work when you define the object itsef as a variable (see the second div). It's important to know that properties like <code>font-size</code> must be written in quotes (e.g. <code>&quot;font-size&quot;: &quot;1em&quot;</code>), otherwise the script will fail.</p>
+<p>With this technique you can make any function accept any amount of property-value pairs by simply passing in an object. This would also work when you define the object itsef as a variable (see the second div). It&rsquo;s important to know that properties like <code>font-size</code> must be written in quotes (e.g. <code>&quot;font-size&quot;: &quot;1em&quot;</code>), otherwise the script will fail.</p>
 ]]></content>
             
                  
@@ -1394,9 +1394,9 @@ Calling the function would now look like this:</p>
             <updated>2014-02-22T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>The great thing when you're a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I'm very  proud of my <a href="http://kevingimbel.com/to-infinity-and-beyond/">back to top script</a> even though it's not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn't be that much fun. However, I made another JavaScript thing I'm proud of: A pure JavaScript slider.</p>
+            <content type="html"><![CDATA[<p>The great thing when you&rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&rsquo;m very  proud of my <a href="http://kevingimbel.com/to-infinity-and-beyond/">back to top script</a> even though it&rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&rsquo;t be that much fun. However, I made another JavaScript thing I&rsquo;m proud of: A pure JavaScript slider.</p>
 <!-- raw HTML omitted -->
-<p>The slider runs forever in a loop, animating images to the left until the last image is reached. When the last image is reached it will animate all back to the first image (I'm not happy with this animation yet) and will start over. Pretty simple. The hardest part for me was - and still is - the animation timing. I'm may over-thinking stuff but I can't figure out a formula to calculate a good timing based on how many images the slider has. If someone has an idea, fork the pen or <a href="http://twitter.com/_kevinatari">tweet me</a>.</p>
+<p>The slider runs forever in a loop, animating images to the left until the last image is reached. When the last image is reached it will animate all back to the first image (I&rsquo;m not happy with this animation yet) and will start over. Pretty simple. The hardest part for me was - and still is - the animation timing. I&rsquo;m may over-thinking stuff but I can&rsquo;t figure out a formula to calculate a good timing based on how many images the slider has. If someone has an idea, fork the pen or <a href="http://twitter.com/_kevinatari">tweet me</a>.</p>
 <p>First of all I defined some variables.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">     <span style="color:#75715e">// current image is 0
 </span><span style="color:#75715e"></span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">current</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,
@@ -1417,7 +1417,7 @@ Calling the function would now look like this:</p>
   <span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">allImages</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
     <span style="color:#a6e22e">allImages</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">imgWidth</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;%&#39;</span>;
   }
-</code></pre></div><p>Now the slider and images have the correct width (in percent) and I began to make the animation part. It's made with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.setInterval">setInterval</a> JavaScript function.</p>
+</code></pre></div><p>Now the slider and images have the correct width (in percent) and I began to make the animation part. It&rsquo;s made with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.setInterval">setInterval</a> JavaScript function.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">animateLeft</span>(<span style="color:#a6e22e">cur</span>) {
       <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,
           <span style="color:#a6e22e">time</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;
@@ -1430,7 +1430,7 @@ Calling the function would now look like this:</p>
       }
       }, <span style="color:#a6e22e">time</span>);  
    }
-</code></pre></div><p>The interval runs as long as <code>i</code> is smaller or equal to the image width. Because the interval is set to 50ms it runs &ldquo;fast&rdquo; and sets the images <code>margin-left</code> rapidly to <code>-i%</code> and because it runs as long as <code>i</code> is smaller than the image width it hides the image completely to the left. Pretty simple right? However, <code>time</code> is at the moment a variable that is set to 50 because I couldn't figure out a good way to calculate it.</p>
+</code></pre></div><p>The interval runs as long as <code>i</code> is smaller or equal to the image width. Because the interval is set to 50ms it runs &ldquo;fast&rdquo; and sets the images <code>margin-left</code> rapidly to <code>-i%</code> and because it runs as long as <code>i</code> is smaller than the image width it hides the image completely to the left. Pretty simple right? However, <code>time</code> is at the moment a variable that is set to 50 because I couldn&rsquo;t figure out a good way to calculate it.</p>
 <p>Another function I use is <code>animateRight</code> that is just the opposite of <code>animateLeft</code>. It is only used to animate all images back to the start and has the same markup as <code>animateLeft</code> expect it runs revers (<code>i--</code>). I combine it with a <code>reset</code> function that also resets the <code>current</code> variable to 0.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">animateRight</span>(<span style="color:#a6e22e">cur</span>) {
       <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">imgWidth</span>,
@@ -1452,7 +1452,7 @@ Calling the function would now look like this:</p>
       <span style="color:#75715e">// resseting the current image to the first image
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">current</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
     }   
-</code></pre></div><p>That's all the functions I needed for this slider - I could've combined the <code>animateLeft</code> and <code>animateRight</code> function and if I continue developing this slider I'll make it. Last thing to do: Call a final interval that handles the sliding of all images.</p>
+</code></pre></div><p>That&rsquo;s all the functions I needed for this slider - I could&rsquo;ve combined the <code>animateLeft</code> and <code>animateRight</code> function and if I continue developing this slider I&rsquo;ll make it. Last thing to do: Call a final interval that handles the sliding of all images.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#a6e22e">setInterval</span>(<span style="color:#66d9ef">function</span> () {
       <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">current</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">allImages</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>) {
         <span style="color:#a6e22e">animateLeft</span>(<span style="color:#a6e22e">current</span>);
@@ -1507,19 +1507,19 @@ Calling the function would now look like this:</p>
             <updated>2014-01-08T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>In case your company is using <a href="http://www.google.com/intx/de/enterprise/apps/business/campaign/business-email-by-google-de.html?utm_campaign=emea-smb-apps-bkws-de&amp;utm_medium=cpc&amp;utm_source=google&amp;utm_term=gmail%20business">GMail Business</a> there's one thing that comes to your daily work-life I really love about GMail: <strong>Labels</strong>. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &ldquo;View&rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</p>
-<p>Unfortunately they're kinda hidden and not really promoted by Google. To set up automatic labels you first you need to click the <strong>gear</strong> in the upper right, then <strong>Settings</strong> and then, in the top navigation just below the search input <strong>Filters</strong>. Now there's a &ldquo;Create new Filter&rdquo; link you should click. (I personally always search for this link because it is not highlighted in any way).</p>
-<p>However, a dialog pops up where you can enter a bunch of stuff: From, To, Subject, Has words, Has not words, Has Attachment and Don't include chats. Pretty obvious what can be done here, right? Indeed but the thing is: When you work with a CallTracker system most of the input emails are not from a specific eMail so filtering after an eMail address is not an option. I currently stick with filtering the Subject Line for everything project. I'll give a example:</p>
+            <content type="html"><![CDATA[<p>In case your company is using <a href="http://www.google.com/intx/de/enterprise/apps/business/campaign/business-email-by-google-de.html?utm_campaign=emea-smb-apps-bkws-de&amp;utm_medium=cpc&amp;utm_source=google&amp;utm_term=gmail%20business">GMail Business</a> there&rsquo;s one thing that comes to your daily work-life I really love about GMail: <strong>Labels</strong>. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &ldquo;View&rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</p>
+<p>Unfortunately they&rsquo;re kinda hidden and not really promoted by Google. To set up automatic labels you first you need to click the <strong>gear</strong> in the upper right, then <strong>Settings</strong> and then, in the top navigation just below the search input <strong>Filters</strong>. Now there&rsquo;s a &ldquo;Create new Filter&rdquo; link you should click. (I personally always search for this link because it is not highlighted in any way).</p>
+<p>However, a dialog pops up where you can enter a bunch of stuff: From, To, Subject, Has words, Has not words, Has Attachment and Don&rsquo;t include chats. Pretty obvious what can be done here, right? Indeed but the thing is: When you work with a CallTracker system most of the input emails are not from a specific eMail so filtering after an eMail address is not an option. I currently stick with filtering the Subject Line for everything project. I&rsquo;ll give a example:</p>
 <ul>
 <li>Project Name: Project X</li>
 <li>CallTracker Schemata: &ldquo;[Project X - TASK #1 ] Description of the Task&hellip;&rdquo;</li>
 <li>Expected Subject from Clients/Colleags: &ldquo;Project X&rdquo;, &ldquo;project-x.com&rdquo;, &ldquo;Project-X&rdquo;</li>
 </ul>
-<p>So the rule I'd define here for the subject would be the following:</p>
+<p>So the rule I&rsquo;d define here for the subject would be the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> <span style="color:#75715e"># Subject</span>
  <span style="color:#e6db74">&#34;Project X&#34;</span> OR project-x.com OR <span style="color:#e6db74">&#34;[Project X&#34;</span> OR <span style="color:#e6db74">&#34;Project-X&#34;</span>
-</code></pre></div><p>The <strong>OR</strong> tells GMail to look for any of these Subject lines and put a label on it. The quotes are only used if there's a space between the words.
-This rule covers the CallTracker as well as the other eMail Subjects so that everything gets sorted automatically into it's own Label view. I also try to match the Brand color with the Label color to have a visual difference for myself.</p>
+</code></pre></div><p>The <strong>OR</strong> tells GMail to look for any of these Subject lines and put a label on it. The quotes are only used if there&rsquo;s a space between the words.
+This rule covers the CallTracker as well as the other eMail Subjects so that everything gets sorted automatically into it&rsquo;s own Label view. I also try to match the Brand color with the Label color to have a visual difference for myself.</p>
 <!-- raw HTML omitted -->
 ]]></content>
             
@@ -1569,7 +1569,7 @@ This rule covers the CallTracker as well as the other eMail Subjects so that eve
             <updated>2013-11-24T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it's not only a few different length, it's a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let's say 20em, isn't the best solution for this so I ended up creating a flexible solution.</p>
+            <content type="html"><![CDATA[<p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p>
 <h3 id="the-setup">The Setup</h3>
 <p>First of all I had a Product and a <code>div</code> that holds the flag (in this example &ldquo;Tag&rdquo;).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span>&gt;
@@ -1580,7 +1580,7 @@ This rule covers the CallTracker as well as the other eMail Subjects so that eve
   &lt;/<span style="color:#f92672">hgroup</span>&gt;
   &lt;<span style="color:#f92672">p</span>&gt;(img via &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.getdigital.de/R2D2-3D-Relief-Becher.html&#34;</span>&gt;getDigital.de&lt;/<span style="color:#f92672">a</span>&gt;)&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;/<span style="color:#f92672">article</span>&gt;
-</code></pre></div><p>The <code>data-id</code> controls the color of the tag and the <code>data-tagname</code> controls the content of it. In the real-world example they're applied via a Content Management System and, as I said before, can vary in length. The HTML Job is done with this setup and now comes the most fun part: The (S)CSS.</p>
+</code></pre></div><p>The <code>data-id</code> controls the color of the tag and the <code>data-tagname</code> controls the content of it. In the real-world example they&rsquo;re applied via a Content Management System and, as I said before, can vary in length. The HTML Job is done with this setup and now comes the most fun part: The (S)CSS.</p>
 <h3 id="css">CSS</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">  .<span style="color:#a6e22e">tag</span> {
     <span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;
@@ -1591,7 +1591,7 @@ This rule covers the CallTracker as well as the other eMail Subjects so that eve
     <span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#8e44ad</span>; <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">g</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">f</span> <span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#960050;background-color:#1e0010">s</span> <span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span> <span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span>
     <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span>;
 }
-</code></pre></div><p>The basic tag should be position absolute on the left of the article and <code>-1em</code> on top of the article (this comes because the article has a padding of 1.5em and I want it to be half the way out of the article container). So far there is a tag with auto width and auto height. With the next snippet we'll get the data-tagname inside out pseudo element.</p>
+</code></pre></div><p>The basic tag should be position absolute on the left of the article and <code>-1em</code> on top of the article (this comes because the article has a padding of 1.5em and I want it to be half the way out of the article container). So far there is a tag with auto width and auto height. With the next snippet we&rsquo;ll get the data-tagname inside out pseudo element.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">before</span> {
       <span style="color:#66d9ef">content</span>:attr(data<span style="color:#f92672">-</span>tagname);
     }
@@ -1606,14 +1606,14 @@ This rule covers the CallTracker as well as the other eMail Subjects so that eve
       <span style="color:#66d9ef">border-top</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">transparent</span>;
       <span style="color:#66d9ef">border-left</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#a6e22e">darken</span>(<span style="color:#ae81ff">#8e44ad</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>); <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">f</span> <span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span> <span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">s</span> <span style="color:#960050;background-color:#1e0010">g</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span>
     }
-</code></pre></div><p>Success! The first basic tag is finished, but why the <code>data-id</code> you may ask? Because they make the magic! As I said before the color is controlled via <code>data-id</code> and here's how this works:</p>
+</code></pre></div><p>Success! The first basic tag is finished, but why the <code>data-id</code> you may ask? Because they make the magic! As I said before the color is controlled via <code>data-id</code> and here&rsquo;s how this works:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">]</span> {
   <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>;
     <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
       <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
   }
 <span style="color:#960050;background-color:#1e0010">}</span>
-</code></pre></div><p>If you repeat this for all your <code>data-id</code>s and colors you'll end up having some sweet Product Flags. The whole code for my product flags looks like this:</p>
+</code></pre></div><p>If you repeat this for all your <code>data-id</code>s and colors you&rsquo;ll end up having some sweet Product Flags. The whole code for my product flags looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">  .<span style="color:#a6e22e">tag</span> {
     <span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;
     <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
@@ -1673,7 +1673,7 @@ This rule covers the CallTracker as well as the other eMail Subjects so that eve
     <span style="color:#960050;background-color:#1e0010">}</span>
     <span style="color:#960050;background-color:#1e0010">}</span> <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">tag</span>
 </code></pre></div><p>A working example can be found <a href="http://codepen.io/kevingimbel/pen/Hpazh">here on CodePen</a>. Special thanks to <a href="http://getdigital.de">getDigital.de</a> for letting me use some of their nerdy Product Images! May the force be with you.</p>
-<p>In case you've any questions feel free to <a href="http://twitter.com/_kevinatari">tweet me</a> or comment on the <a href="http://codepen.io/kevingimbel/pen/Hpazh">Pen</a>.</p>
+<p>In case you&rsquo;ve any questions feel free to <a href="http://twitter.com/_kevinatari">tweet me</a> or comment on the <a href="http://codepen.io/kevingimbel/pen/Hpazh">Pen</a>.</p>
 ]]></content>
             
                  

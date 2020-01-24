@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[static_site on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[static_site on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/static_site/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/static_site/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/static_site/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -33,10 +33,10 @@
             
             
             <content type="html"><![CDATA[<p>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title <code>Hello world</code> would be available at <code>kevingimbel.de/hello-world</code>. With the new format this includes the section, year, and month, so for example <code>kevingimbel.de/blog/2020/01/hello-world</code>.</p>
-<p>To prevent all old URLs from failing with a 404 I added aliases to all old posts. <a href="https://gohugo.io/content-management/urls/#aliases">The documentation on aliases</a> is pretty short and they're a straight-forward, powerful tool to make content available under multiple URL paths. Just add an alias list to the front-matter of the post.</p>
+<p>To prevent all old URLs from failing with a 404 I added aliases to all old posts. <a href="https://gohugo.io/content-management/urls/#aliases">The documentation on aliases</a> is pretty short and they&rsquo;re a straight-forward, powerful tool to make content available under multiple URL paths. Just add an alias list to the front-matter of the post.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-title: <span style="color:#e6db74">&#34;My awesome post&#34;</span>
-aliases:
+<span style="color:#66d9ef">title</span>: <span style="color:#e6db74">&#34;My awesome post&#34;</span>
+<span style="color:#66d9ef">aliases</span>:
   - /my-awesome-post/
   - /<span style="color:#ae81ff">2020</span><span style="color:#ae81ff">-1</span>/
 ---

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[shortcode on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[shortcode on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/shortcode/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/shortcode/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/shortcode/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -41,7 +41,7 @@
 
 <p>The Source Code can be found <a href="https://github.com/kevingimbel/hugo-shortcodes/tree/master/mastodon">on GitHub.com</a></p>
 <h2 id="configuration">Configuration</h2>
-<p>The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. <a href="https://mastodon.social/@kevingimbel/100700713283716694"><a href="https://mastodon.social/@kevingimbel/100700713283716694">https://mastodon.social/@kevingimbel/100700713283716694</a></a>.</p>
+<p>The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. <a href="https://mastodon.social/@kevingimbel/100700713283716694">https://mastodon.social/@kevingimbel/100700713283716694</a>.</p>
 <pre><code>{{&lt; mastodon status=&quot;https://mastodon.social/@kevingimbel/100700713283716694&quot; &gt;}}
 </code></pre><p>Additional parameters:</p>
 <pre><code># All parameters
@@ -56,16 +56,16 @@
 </thead>
 <tbody>
 <tr>
-<td><code>status</code>| The link to the status</td>
-<td></td>
+<td><code>status</code></td>
+<td>The link to the status</td>
 </tr>
 <tr>
-<td><code>width</code>| The width of the iframe</td>
-<td></td>
+<td><code>width</code></td>
+<td>The width of the iframe</td>
 </tr>
 <tr>
-<td><code>height</code>| The height of the iframe</td>
-<td></td>
+<td><code>height</code></td>
+<td>The height of the iframe</td>
 </tr>
 </tbody>
 </table>

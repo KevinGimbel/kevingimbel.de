@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         px vs em
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -66,10 +74,10 @@
 
 <p>Written on <time datetime="2013-08-15 00:00:00 &#43;0000 UTC">15. Aug 2013</time>  </p>
             <p>Recently <a href="http://timpietrusky.com">Tim Pietrusky</a> wrote and article about <a href="http://timpietrusky.com/i-love-r-emmmmmm-because-px-suck">px vs em</a> that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.</p>
-<p>I was using pixel like forever and I couldn't think of any reason to switch to a new unit until Tim explained why em is better: <em>em is more responsive and it is scalable</em>.
-In fact when you switch from pixel to em you'll feel like working on a completely new Level. The fact you can scale all elements of your website by simply passing a new value to <code>:root {font-size:1em;}</code> or <code>body {font-size:1em;}</code>.</p>
-<p>My <code>_responsive.scss</code> works this way. Because I think it's good to have large texts on smartphones I applied <code>font-size:120%</code> to the <code>.main-content</code> class that holds all elements.</p>
-<p>One of the main reasons to use em instead of pixel is that this measurement unit doesn't depend on the screen size in Pixel while the pixel unit does. An button that has the markup you see below will look the same on any device at any scale - it is fully responsive in other words.</p>
+<p>I was using pixel like forever and I couldn&rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: <em>em is more responsive and it is scalable</em>.
+In fact when you switch from pixel to em you&rsquo;ll feel like working on a completely new Level. The fact you can scale all elements of your website by simply passing a new value to <code>:root {font-size:1em;}</code> or <code>body {font-size:1em;}</code>.</p>
+<p>My <code>_responsive.scss</code> works this way. Because I think it&rsquo;s good to have large texts on smartphones I applied <code>font-size:120%</code> to the <code>.main-content</code> class that holds all elements.</p>
+<p>One of the main reasons to use em instead of pixel is that this measurement unit doesn&rsquo;t depend on the screen size in Pixel while the pixel unit does. An button that has the markup you see below will look the same on any device at any scale - it is fully responsive in other words.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">button</span> {
 	<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">.7</span><span style="color:#66d9ef">em</span>;
 }

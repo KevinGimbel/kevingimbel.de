@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[tooling on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[tooling on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/tooling/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/tooling/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/tooling/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -28,28 +28,28 @@
             <updated>2013-12-25T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>I first tried <a href="http://brackets.io">Brackets</a> back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside <a href="http://www.vim.org/">VIM</a> it is <em>the</em> editor I read quite a lot about latly. My first impression was: &ldquo;<em>Wow, that's a simple, clean editor!</em>&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I've been using for the last two years or so.</p>
+            <content type="html"><![CDATA[<p>I first tried <a href="http://brackets.io">Brackets</a> back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside <a href="http://www.vim.org/">VIM</a> it is <em>the</em> editor I read quite a lot about latly. My first impression was: &ldquo;<em>Wow, that&rsquo;s a simple, clean editor!</em>&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&rsquo;ve been using for the last two years or so.</p>
 <h2 id="functionality">Functionality</h2>
 <h3 id="highlighting">Highlighting</h3>
-<p>Bracket as well as Sublime Text comes with Syntax Highlighting for almost everything one needs: HTML, SCSS, CSS, JavaScript, Ruby, Python - all of these can be highlighted by default which, in my opinion, is a standard these days. However, as far as I can tell it is easier to customize the Highlight settings in Sublime Text (2) and with the standard Monokai Theme Sublime has a better highlighting than Brackets. Another point is that there is no way (as far as I found) to set a highlight language before saving a file in Brackets - so I can't have Markdown Highlighting for this post unless I save it once which is possible in Sublime Text.</p>
+<p>Bracket as well as Sublime Text comes with Syntax Highlighting for almost everything one needs: HTML, SCSS, CSS, JavaScript, Ruby, Python - all of these can be highlighted by default which, in my opinion, is a standard these days. However, as far as I can tell it is easier to customize the Highlight settings in Sublime Text (2) and with the standard Monokai Theme Sublime has a better highlighting than Brackets. Another point is that there is no way (as far as I found) to set a highlight language before saving a file in Brackets - so I can&rsquo;t have Markdown Highlighting for this post unless I save it once which is possible in Sublime Text.</p>
 <h3 id="plugins--installation">Plugins + Installation</h3>
 <p>Both editor support additional plugins to enhance the workflow. Both support <a href="http://emmet.io">Emmet</a> which is by far my most needed Plugin as well as FTP Solutions to upload on safe. Both of these are important plugin for my workflow because when developing on a (S)FTP Dev System uploading on save without another program running is a lot faster. I love it. In Sublime Text the easiest way to add new Plugin is through the <a href="https://sublime.wbond.net/installation">Package Controller</a> - Brackets comes with a build-in Package Manager that makes it super easy to add new Plugins. Here the point goes to Brackets for already build-in Package Management.</p>
 <h3 id="ui--ux">UI / UX</h3>
-<p>Both Editors have a clean and simple to understand UI. The only real difference that's notable in my opinion is that Brackets has open files on the top-left sidebar while Sublime Text has them on top organized as tabs (as well as in the sidebar when displayed). This is a difference at first when you come from Sublime Text and in my opinion it's easier to have open files at the top. Nevertheless in both editors it's possible to go through all open files by hitting <code>CMD + Tab</code> which comes very handy. A huge downside of Brackets is that it's not possible to have new files unsaved and then close the editor. In Sublime unsaved files stays as unsaved inside the editor until it is opened the next time. I really like this because in case of a sudden system crash, an electricity failure or whatever else files can still be found after re-booting. Highfive Sublime Text.</p>
-<p>~Another thing I really miss in Brackets and I got unbelievable used to is multi-select. In Sublime Text it's possible to select multiple points inside a document when holding CMD while clicking inside the document so you can edit as many rows as you want at once - unbelievable useful!~<br>
+<p>Both Editors have a clean and simple to understand UI. The only real difference that&rsquo;s notable in my opinion is that Brackets has open files on the top-left sidebar while Sublime Text has them on top organized as tabs (as well as in the sidebar when displayed). This is a difference at first when you come from Sublime Text and in my opinion it&rsquo;s easier to have open files at the top. Nevertheless in both editors it&rsquo;s possible to go through all open files by hitting <code>CMD + Tab</code> which comes very handy. A huge downside of Brackets is that it&rsquo;s not possible to have new files unsaved and then close the editor. In Sublime unsaved files stays as unsaved inside the editor until it is opened the next time. I really like this because in case of a sudden system crash, an electricity failure or whatever else files can still be found after re-booting. Highfive Sublime Text.</p>
+<p>~Another thing I really miss in Brackets and I got unbelievable used to is multi-select. In Sublime Text it&rsquo;s possible to select multiple points inside a document when holding CMD while clicking inside the document so you can edit as many rows as you want at once - unbelievable useful!~<br>
 As <a href="https://github.com/GuidoJansen">Guido Jansen</a> pointed out in <a href="https://github.com/kevingimbel/kevingimbel.github.io/issues/4">Issue #4</a> brackets now supports multiple lines.</p>
 <h3 id="live-preview">Live Preview</h3>
-<p>Bracket comes with a Live Preview functionality that allows to display a file inside the browser that'll be updated in real time as you type. I couldn't think of a scenario where I'd need a real-time preview of my file to be honest but it's a cool feature anyway.</p>
-<h3 id="autocomplete">Auto-Complete</h3>
+<p>Bracket comes with a Live Preview functionality that allows to display a file inside the browser that&rsquo;ll be updated in real time as you type. I couldn&rsquo;t think of a scenario where I&rsquo;d need a real-time preview of my file to be honest but it&rsquo;s a cool feature anyway.</p>
+<h3 id="auto-complete">Auto-Complete</h3>
 <p>Both Sublime Text and Brackets have auto-complete for CSS. While Sublime Text &ldquo;only&rdquo; supports basic auto-complete (e.g. typing <code>'hei' + tab</code> will get you <code>height: </code>) Brackets supports to &ldquo;Quick Edit&rdquo; colors (right-click on a color or use <code>CMD+E</code> when hovering it) to bring up a color dialog as show below. This is a nice feature when trying to find a color.</p>
 <p><img src="https://i.kevingimbel.me/sc/screenshot-53-24.png" alt="Quick Edit Colors in Brackets" title="Quick Edit Colors in Brackets"></p>
 <p>Another thing both support is the auto-closing of HTML tags (e.g. <code>&lt;article&gt;</code> will get you <code>&lt;article&gt;&lt;/article&gt;</code>).
-Unfortunately Brackets does not query SCSS variables. When you define your variables in Sublime and type <code>$color--</code> Sublime Text shows all variables starting with <code>$color--</code> - that's a thing I really miss in Brackets.</p>
+Unfortunately Brackets does not query SCSS variables. When you define your variables in Sublime and type <code>$color--</code> Sublime Text shows all variables starting with <code>$color--</code> - that&rsquo;s a thing I really miss in Brackets.</p>
 <h3 id="debugging">Debugging</h3>
-<p>Brackets comes with build-in JSHint support which is really useful especially for JavaScript beginners like I'm one. You can see in-editor what errors you made - really great!
-I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-in is just a great feature. What I'm missing on the other hand is spell-checking. As non-native English speaker spell-checking is always a great thing.</p>
+<p>Brackets comes with build-in JSHint support which is really useful especially for JavaScript beginners like I&rsquo;m one. You can see in-editor what errors you made - really great!
+I&rsquo;m pretty sure there&rsquo;s a Sublime Text Plugin for this, too but having it build-in is just a great feature. What I&rsquo;m missing on the other hand is spell-checking. As non-native English speaker spell-checking is always a great thing.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>I'm impressed by Brackets, it's a simple and great editor and I'll definitely keep an eye on it. It's a good, free alternative to Sublime Text 2 (which costs 75$) and worth a try. However, depending on my current workflow I'll stick to Sublime Text for most of my work.</p>
+<p>I&rsquo;m impressed by Brackets, it&rsquo;s a simple and great editor and I&rsquo;ll definitely keep an eye on it. It&rsquo;s a good, free alternative to Sublime Text 2 (which costs 75$) and worth a try. However, depending on my current workflow I&rsquo;ll stick to Sublime Text for most of my work.</p>
 ]]></content>
             
                  
@@ -96,18 +96,18 @@ I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-
             <updated>2013-10-02T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>If you're a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It's fair to say that they're all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
+            <content type="html"><![CDATA[<p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
 <p>Even though Pre-Processors are easy to use and setup some people are still confused: <em>Do I have to run them on a server? How do I install them? Why should I use them?</em> - I want to answer all these questions in this article: Getting from 0 to Sass in X Steps!</p>
 <p><strong>Notice:</strong> This guide covers the installation on Linux and Mac only, for Windows support please take a look at <a href="http://www.impressivewebs.com/sass-on-windows/">this tutorial</a>.</p>
 <h3 id="sass-summary">Sass summary</h3>
-<p>Sass was build by <a href="http://www.hamptoncatlin.com/">Hampton Catlin</a> and <a href="http://nex-3.com/">Nathan Weizenbaum</a>. Since late 2008 <a href="http://chriseppstein.github.io/">Chris Eppstein</a> is also on board, he's also the creator of <a href="http://compass-style.org/">Compass</a> which is a CSS3 Framework for Sass (I'll cover Compass and other Frameworks for Sass later).</p>
+<p>Sass was build by <a href="http://www.hamptoncatlin.com/">Hampton Catlin</a> and <a href="http://nex-3.com/">Nathan Weizenbaum</a>. Since late 2008 <a href="http://chriseppstein.github.io/">Chris Eppstein</a> is also on board, he&rsquo;s also the creator of <a href="http://compass-style.org/">Compass</a> which is a CSS3 Framework for Sass (I&rsquo;ll cover Compass and other Frameworks for Sass later).</p>
 <p>Sass enables you to use Variables, Functions and Mixins inside your CSS. This comes very handy because a stylesheet gets amazingly maintainable with variables and mixins.</p>
-<p>Before we start I want you to notice something important about Sass: Sass runs on ruby so you have to install Ruby if it's not (Yeah Windows, I'm looking in your direction!) - on Mac and Linux Ruby should be installed. All code blocks starting with <code>$</code> need to be inputed into a Terminal (without the <em>$</em>!). On OS X and Linux you may need to put a <code>sudo</code> command before every command prompt.</p>
+<p>Before we start I want you to notice something important about Sass: Sass runs on ruby so you have to install Ruby if it&rsquo;s not (Yeah Windows, I&rsquo;m looking in your direction!) - on Mac and Linux Ruby should be installed. All code blocks starting with <code>$</code> need to be inputed into a Terminal (without the <em>$</em>!). On OS X and Linux you may need to put a <code>sudo</code> command before every command prompt.</p>
 <p>Simply check your ruby version by typing the following</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ruby --version
 ruby 1.9.3p194 <span style="color:#f92672">(</span>2012-04-20 revision 35410<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>i686-linux<span style="color:#f92672">]</span>
 </code></pre></div><h3 id="installation">Installation</h3>
-<p>You've maybe tried to install Sass previously and maybe it is still installed.</p>
+<p>You&rsquo;ve maybe tried to install Sass previously and maybe it is still installed.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># checking the installed Sass Version</span>
 $ sass --version
 <span style="color:#75715e"># If up to date the output (as of today, 10/2/13) is</span>
@@ -115,16 +115,16 @@ Sass 3.2.9 <span style="color:#f92672">(</span>Media Mark<span style="color:#f92
 </code></pre></div><p>If you get an error such as &ldquo;command not found&rdquo; Sass is not installed, so we start from 0.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gem install sass
 </code></pre></div><p>Your Terminal will now show you the download and install process for Sass, depending on your internet connection this may take a while.
-After things are finished we'll skip the step of testing Sass directly or using it on its own - trust me here, it's way better to install Compass first.</p>
+After things are finished we&rsquo;ll skip the step of testing Sass directly or using it on its own - trust me here, it&rsquo;s way better to install Compass first.</p>
 <h3 id="compass">Compass</h3>
-<p>Compass is a Framework for Sass that comes with a ton of build in Mixins and Functions that you'll love. I'm using compass for every project - no matter if small or large.</p>
+<p>Compass is a Framework for Sass that comes with a ton of build in Mixins and Functions that you&rsquo;ll love. I&rsquo;m using compass for every project - no matter if small or large.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># updating the system first so everything is running correctly</span>
 $ gem update system
 $ gem install compass
 </code></pre></div><p>After compass is installed simply head over to your Local Web Direction (in my case this is <code>var/www/</code>) and run</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ compass create myproject
-</code></pre></div><p>It doesn't matter what you call <code>myproject</code> - I've only used this command once in my life. Anyway this will create a config.rb file that you should open next.</p>
-<p>The <code>config.rb</code> is well commented, below you can see my file (just in case you don't edit the wrong file by accident)</p>
+</code></pre></div><p>It doesn&rsquo;t matter what you call <code>myproject</code> - I&rsquo;ve only used this command once in my life. Anyway this will create a config.rb file that you should open next.</p>
+<p>The <code>config.rb</code> is well commented, below you can see my file (just in case you don&rsquo;t edit the wrong file by accident)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># Require any additional compass plugins here.</span>
 
 <span style="color:#75715e"># Set this to the root of your project when deployed:</span>
@@ -149,7 +149,7 @@ javascripts_dir <span style="color:#f92672">=</span> <span style="color:#e6db74"
 <span style="color:#75715e"># preferred_syntax = :sass</span>
 <span style="color:#75715e"># and then run:</span>
 <span style="color:#75715e"># sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass</span>
-</code></pre></div><p>I changed the path (<code>css_dir`,</code>sass_dir<code>,...) so that they match my standard folder setup for projects.I do also always compress my files by changing the </code>output_style<code>to</code>:compressed`.</p>
+</code></pre></div><p>I changed the path (<code>css_dir</code>,<code>sass_dir</code>,&hellip;) so that they match my standard folder setup for projects.I do also always compress my files by changing the <code>output_style</code> to <code>:compressed</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># You can select your preferred output style here (can be overridden via the command line):</span>
 output_style <span style="color:#f92672">=</span> :compressed
 </code></pre></div><p>The <code>config.rb</code> is essential for running Compass. You have to Copy and Paste it into every root direction of your project. See and example below:</p>
@@ -171,18 +171,18 @@ output_style <span style="color:#f92672">=</span> :compressed
 <span style="color:#e6db74">&#39;- config.rb
 </span><span style="color:#e6db74">#   &#39;</span>- there it is, the config.rb!
 </code></pre></div><p>Sass and Compass are now installed and ready to use. This is, in my opinion, best made via the good old Terminal!</p>
-<p>So let's navigate to our folders and run our first command.</p>
+<p>So let&rsquo;s navigate to our folders and run our first command.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># switching to our project folder</span>
 $ cd var/www/my-new-project
 <span style="color:#75715e"># telling compass to compile our files</span>
 $ compass watch
 </code></pre></div><p>Compass is now watching for changes and everytime you save your <code>style.scss</code> it will automatically create an style.css out of it. Still wondering what all of this is about?</p>
 <h3 id="variables">Variables</h3>
-<p>Let's start with Variables because I assume you know what they are and have already seen variables in other programming languages.</p>
+<p>Let&rsquo;s start with Variables because I assume you know what they are and have already seen variables in other programming languages.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Variables</span> <span style="color:#f92672">start</span> <span style="color:#f92672">with</span> <span style="color:#f92672">a</span> <span style="color:#f92672">$</span><span style="color:#f92672">,</span> <span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span>
 <span style="color:#f92672">$</span><span style="color:#f92672">main-color</span><span style="color:#f92672">:</span> #85c226<span style="color:#f92672">;</span>
-</code></pre></div><p>Variables must be declared <strong>before</strong> they're used, that's why I recommend to declare all variables at the top of the document (or inside a other stylesheet that can be included, more later on).
-To use a variable you simply write it to the place you want it to be used. Logical, isn't it?</p>
+</code></pre></div><p>Variables must be declared <strong>before</strong> they&rsquo;re used, that&rsquo;s why I recommend to declare all variables at the top of the document (or inside a other stylesheet that can be included, more later on).
+To use a variable you simply write it to the place you want it to be used. Logical, isn&rsquo;t it?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">$</span><span style="color:#f92672">main-color</span><span style="color:#f92672">:</span> #85c226<span style="color:#f92672">;</span>
 
 .<span style="color:#a6e22e">my-class</span> {
@@ -192,9 +192,9 @@ To use a variable you simply write it to the place you want it to be used. Logic
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">my-class</span> {
     <span style="color:#66d9ef">border-top</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#85c226</span>;
 }
-</code></pre></div><p>Basically that's it. You can store Strings, Colors, and other variables inside a variables. More on variables can be found inside the <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_">Sass Docs</a>.</p>
+</code></pre></div><p>Basically that&rsquo;s it. You can store Strings, Colors, and other variables inside a variables. More on variables can be found inside the <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_">Sass Docs</a>.</p>
 <h3 id="mixins">Mixins</h3>
-<p>Mixins are getting a little bit more interesting. They're snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:</p>
+<p>Mixins are getting a little bit more interesting. They&rsquo;re snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">import</span> <span style="color:#f92672">everything</span> <span style="color:#f92672">that</span> <span style="color:#f92672">compass</span> <span style="color:#f92672">has</span>
 @<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;compass&#34;</span>;
 <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">import</span> <span style="color:#f92672">special</span> <span style="color:#f92672">library</span> <span style="color:#f92672">(</span><span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span> <span style="color:#f92672">css3</span><span style="color:#f92672">)</span>
@@ -213,7 +213,7 @@ To use a variable you simply write it to the place you want it to be used. Logic
     <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
     <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#960050;background-color:#1e0010">5</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">)</span>;
 }
-</code></pre></div><p>The mixin can be created once and then be reused everywhere inside your style.scss - it'll save you a lot of writing whenever you have to apply a border to an object. The <code>border-radius()</code> mixin is also build-in to Compass. The output in style.css will be as following:</p>
+</code></pre></div><p>The mixin can be created once and then be reused everywhere inside your style.scss - it&rsquo;ll save you a lot of writing whenever you have to apply a border to an object. The <code>border-radius()</code> mixin is also build-in to Compass. The output in style.css will be as following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">my-class</span> {
     <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">em</span>;
     <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
@@ -244,10 +244,10 @@ To use a variable you simply write it to the place you want it to be used. Logic
 </span><span style="color:#e6db74">        &#39;</span>- _mixins.scss
     <span style="color:#e6db74">&#39;- style.scss
 </span><span style="color:#e6db74">    &#39;</span>- style.css
-</code></pre></div><p>The amazing thing about Compass is: every file that starts with <code>_</code> is not compiled. So in the above folder tree there's still only <code>style.scss</code> that will be compiled - but all the others can be included. <strong>Wow but what about performance with all those files?</strong> you'll maybe ask yourself? The point is: There's still just one file, the style.<em>css</em> that will be included to the page later - so all the other files only exist locally on your computer.
-If you want to have an example what the <code>style.scss</code> would look like, here's the one I <a href="https://github.com/kevingimbel/kevingimbel.github.io/blob/v1/assets/css/style.scss">used for my blog</a>.</p>
-<p>Sass and Compass are amazing, powerful tools and you, as a Front-End Developer, should be able to work with both. This small summary of the basic Sass features is just the top of the iceberg - there's a lot more to explore about <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass</a> and <a href="http://compass-style.org/reference/compass/">Compass</a>.</p>
-<p>You should also check out <a href="http://codepen.io/thebabydino/">Ana Tudor</a> on CodePen, she's doing amazing stuff with Sass and Maths!</p>
+</code></pre></div><p>The amazing thing about Compass is: every file that starts with <code>_</code> is not compiled. So in the above folder tree there&rsquo;s still only <code>style.scss</code> that will be compiled - but all the others can be included. <strong>Wow but what about performance with all those files?</strong> you&rsquo;ll maybe ask yourself? The point is: There&rsquo;s still just one file, the style.<em>css</em> that will be included to the page later - so all the other files only exist locally on your computer.
+If you want to have an example what the <code>style.scss</code> would look like, here&rsquo;s the one I <a href="https://github.com/kevingimbel/kevingimbel.github.io/blob/v1/assets/css/style.scss">used for my blog</a>.</p>
+<p>Sass and Compass are amazing, powerful tools and you, as a Front-End Developer, should be able to work with both. This small summary of the basic Sass features is just the top of the iceberg - there&rsquo;s a lot more to explore about <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass</a> and <a href="http://compass-style.org/reference/compass/">Compass</a>.</p>
+<p>You should also check out <a href="http://codepen.io/thebabydino/">Ana Tudor</a> on CodePen, she&rsquo;s doing amazing stuff with Sass and Maths!</p>
 <p>Further reading:</p>
 <ul>
 <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass Docs</a></li>

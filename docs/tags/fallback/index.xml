@@ -18,7 +18,7 @@
       
       <guid>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</guid>
       <description>calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
-The problem with calc is that if it doesn&#39;t work you may get a unexpected result. Take the following code for example:</description>
+The problem with calc is that if it doesn&amp;rsquo;t work you may get a unexpected result. Take the following code for example:</description>
     </item>
     
   </channel>

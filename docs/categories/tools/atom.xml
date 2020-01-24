@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[tools on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[tools on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/categories/tools/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/tools/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/tools/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -29,13 +29,13 @@
             <updated>2017-01-17T21:28:38+01:00</updated>
             
             
-            <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let's Encrypt</a> to create SSL certificates and use HTTPS.</p>
+            <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a> to create SSL certificates and use HTTPS.</p>
 <h3 id="so-what-is-a-static-site">So, what is a &ldquo;static site&rdquo;?</h3>
 <blockquote>
 <p>If you already know the answer, <a href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
 ">skip to the next section</a>!</p>
 </blockquote>
-<p>As the name suggest a static site is - well - <em>static</em>. There's no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
+<p>As the name suggest a static site is - well - <em>static</em>. There&rsquo;s no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
 &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page wrap&#34;</span> <span style="color:#a6e22e">aria-labeldyby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
   &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-header&#34;</span>&gt;
@@ -47,18 +47,18 @@
 &lt;/<span style="color:#f92672">section</span>&gt;
 {{ end }}
 </code></pre></div><p>These 10 lines of code make up the default for single pages without a custom template. The words in curly brackets (e.g. <code>{{ .Content }}</code>) are variables filled by Hugo when the template is compiled. <code>{{ define &quot;main&quot; }}</code> defines the <code>main</code> block used inside the <a href="https://github.com/kevingimbel/kevingimbel.com/blob/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts/_default/baseof.html#L36-L38"><code>baseof.html</code> template</a>. All these templates make up the final site. So, despite being &ldquo;static&rdquo; when finished a static site is not so static! It can be flexible and you can use template logic like conditions (<code>if/else</code>, <code>with</code>), loops (<code>range</code>), and with Hugo even custom <a href="http://gohugo.io/extras/shortcodes/">shortcodes inside your markdown</a>.</p>
-<p>At the end of the day we get a static site. This site is compiled from our source files and consists of folders (for URLs) and files (lots of <code>index.html</code> files!) so our server (apache, nginx, a node app) can deliver the content to the client. You might know that by default apache will serve any files such as <code>index.html</code> or <code>index.htm</code> when a route is requested unless you use a dynamic system such as PHP, Ruby, or NodeJS to serve your files. When you load this article at <a href="https://kevingimbel.com/deploy-a-static-site-with-git/">https://kevingimbel.com/deploy-a-static-site-with-git/</a> you request a folder, <code>deploy-a-static-site-with-git</code>, located inside the web root directory of my server and the <code>index.html</code> file inside this folder gets served to you by Apache. This is the basics how static websites work - they're simply HTML files and folders!</p>
+<p>At the end of the day we get a static site. This site is compiled from our source files and consists of folders (for URLs) and files (lots of <code>index.html</code> files!) so our server (apache, nginx, a node app) can deliver the content to the client. You might know that by default apache will serve any files such as <code>index.html</code> or <code>index.htm</code> when a route is requested unless you use a dynamic system such as PHP, Ruby, or NodeJS to serve your files. When you load this article at <a href="https://kevingimbel.com/deploy-a-static-site-with-git/">https://kevingimbel.com/deploy-a-static-site-with-git/</a> you request a folder, <code>deploy-a-static-site-with-git</code>, located inside the web root directory of my server and the <code>index.html</code> file inside this folder gets served to you by Apache. This is the basics how static websites work - they&rsquo;re simply HTML files and folders!</p>
 <h3 id="deploying-a-static-site">Deploying a static site</h3>
 <p>So far we learned  that static sites are &ldquo;just&rdquo; folders and HTML files when generated. The only dependency they have to make them work is a Web Server. This can be apache, nginx, IIS, a simple nodeJS app, or even <code>python -m SimpleHTTPServer</code>. The most basic deployment for our website would be to upload the content of the generated folder (<code>public</code>) to our server using FTP. You might remember that this was the standard for having a website in the 90s were all websites were coded in Frames or tables. My first &ldquo;real website&rdquo; around 2008 was deployed that way. It was a mess.</p>
-<p>What I did might be over-engineering in some way. I have all my source code in git so I set up a git repository on my server and push to this repository whenever I want to publish a new blog post, fix an issue, or change some templates/CSS. What's important about the repository is that it needs to be a <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server">bare repository</a>.</p>
+<p>What I did might be over-engineering in some way. I have all my source code in git so I set up a git repository on my server and push to this repository whenever I want to publish a new blog post, fix an issue, or change some templates/CSS. What&rsquo;s important about the repository is that it needs to be a <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server">bare repository</a>.</p>
 <h4 id="setting-up-the-git-repository">Setting up the git repository</h4>
 <p>The repository can be in any directory on your server which your user (the one you login with ssh) has access to. It should not be your web server root, that is <code>/var/www/</code> or <code>/var/www/html/</code> depending on your system since the files inside the bare repo could be exposed to the public this way. I created a directory outside the web server root in my users <code>home</code> directory, namely <code>$HOME/repository/kevingimbel.com</code>. The steps to setup the bare repository are as follows.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh youruser@yourserver
 $ mkdir -p $HOME/repository/kevingimbel.com
 $ cd $HOME/repository/kevingimbel.com
 $ git clone --bare https://github.com/kevingimbel/kevingimbel.com
-</code></pre></div><p>These commands create the <code>repository</code> directory with a sub-directory <code>kevingimbel.com</code> inside. Inside this new directory I clone the git repository from GitHub with the <a href="https://git-scm.com/docs/git#git---bare"><code>--bare</code></a> flag set. This will not checkout the source code but instead setup a git repository which we can push to or pull from - just like we would do from GitHub. What we need to build the static site is <code>hugo</code> as executable on the server -and the source code of the site. &ldquo;Wait!&rdquo; I hear you say, &ldquo;Didn't you just say there <em>is no source code?!</em>&rdquo; - that's right. The bare repository holds no source code but it can <em>be pushed to</em>! When we push our code to this remote we can use a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git hook</a> to execute a set of scripts when a push is received. To do so, we use the <code>post-receive</code> hook. There are examples for each hook inside your newly created directory, e.g. <code>$HOME/repository/kevingimbel.com/hooks</code>.</p>
-<h4 id="the-postreceive-hook">The post-receive hook</h4>
+</code></pre></div><p>These commands create the <code>repository</code> directory with a sub-directory <code>kevingimbel.com</code> inside. Inside this new directory I clone the git repository from GitHub with the <a href="https://git-scm.com/docs/git#git---bare"><code>--bare</code></a> flag set. This will not checkout the source code but instead setup a git repository which we can push to or pull from - just like we would do from GitHub. What we need to build the static site is <code>hugo</code> as executable on the server -and the source code of the site. &ldquo;Wait!&rdquo; I hear you say, &ldquo;Didn&rsquo;t you just say there <em>is no source code?!</em>&rdquo; - that&rsquo;s right. The bare repository holds no source code but it can <em>be pushed to</em>! When we push our code to this remote we can use a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git hook</a> to execute a set of scripts when a push is received. To do so, we use the <code>post-receive</code> hook. There are examples for each hook inside your newly created directory, e.g. <code>$HOME/repository/kevingimbel.com/hooks</code>.</p>
+<h4 id="the-post-receive-hook">The post-receive hook</h4>
 <p>The <code>post-receive</code> hook is executed after the git repository receives a new push. There are also <code>pre-</code> hooks which are executed before certain actions take place. You can use <code>pre-commit</code> for example to run a set of tests before you are able to write a commit message. I did this in for my example <a href="https://github.com/kevingimbel/nodesh/blob/master/scripts/pre-commit">node cli script nodesh</a> to run <a href="https://mochajs.org/">mocha</a> before I am able to commit. If a test fails and mocha exits with a non 0 code the commit is aborted. To build our static site after we push to the repository we will use the <code>post-receive</code> hook.</p>
 <p>The <code>post-receive</code> hook I use can be found <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive">on GitHub</a>. The <code>post-receive</code> hook is a bash script which has access to a lot of built-in functions as well as all your users functions when a <code>source ~/.bash_profile</code> line is added to the top.</p>
 <pre><code>#!/bin/sh
@@ -98,13 +98,13 @@ done
 </code></pre><p>There happens quite a lot in my <code>post-receive</code> but the most import parts are the  <code>git checkout</code> with the <a href="https://git-scm.com/docs/git#git---work-treeltpathgt"><code>--work-tree</code></a> and <a href="https://git-scm.com/docs/git#git---git-dirltpathgt"><code>--git-dir</code></a> to tell git were the git repository is (<code>--git-dir</code>) and were the files should be checked-out to (<code>--work-tree</code>). I checkout the files to <code>$HOME/hugosrc</code>where the source code of my website is placed just like on GitHub. I then <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive#L33-L42">do some magic</a> to re-write my <code>style.css</code> file to a hashed-file. This is used to force browsers to re-load the CSS when the file has changed. After the style.css re-write is done and the css path inside the  <code>baseof.html</code> template is changed I build the site with <code>hugo</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo -b<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://kevingimbel.com&#34;</span> -d<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$project_path<span style="color:#e6db74">&#34;</span> -s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$hugo_file_path<span style="color:#e6db74">&#34;</span>
 </code></pre></div><p><code>-b</code> is the base url, <code>-d</code> is the destination and <code>-s</code> is the source. This way the static site is generated into my document root folder ($home/subdomains/html) with the new source files checked-out by git into the <code>$HOME/hugosrc</code> directory. Hugo generates the site and logs all output to the terminal - which is nice to have. In case of a build error hugo stops and does not overwrite the existing, working site. This is also nice to have.</p>
-<p>What's important is that the <code>post-receive</code> hook is executable, so you have to run <code>$ chmod +x post-receive</code> to set the <code>x</code> (or e<code>x</code>ecute) permission on the file.</p>
+<p>What&rsquo;s important is that the <code>post-receive</code> hook is executable, so you have to run <code>$ chmod +x post-receive</code> to set the <code>x</code> (or e<code>x</code>ecute) permission on the file.</p>
 <h4 id="pushing-to-the-new-repository">Pushing to the new repository</h4>
 <p>To push your code to the new repository you need to add it as a <a href="https://git-scm.com/docs/git-remote">remote</a> to your local git repository. To do so, use <code>git remote add</code> filling in the remote name and remote url parameters.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># git remote add $name $url</span>
 $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/repository/gitrepo
 </code></pre></div><p>Afterwards you are able to push your code with <code>git push production master</code>.</p>
-<p>And that's it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p>
+<p>And that&rsquo;s it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p>
 ]]></content>
             
                  
@@ -176,7 +176,7 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
     cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">fi</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let's explore it line by line.</p>
+</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let&rsquo;s explore it line by line.</p>
 <p>With <code>function ws()</code> we declare the function name. In shell scripts a function name has parentheses after it tho it does not take arguments this way (If you know why this is, <a href="https://github.com/kevingimbel/kevingimbel.com/issues">open an issue and explain it please</a> or <a href="https://twitter.com/_kevinatari">tweet me</a>!). The next lines declare a local variable, <code>workspace</code> and then <code>target_dir=$1</code> were I assign whatever is passed to the function as being the target directory the user is trying to find. Then, I execute <code>cd $workspace</code> to go to the workspace directory and start a search with <code>workspace_path=$(find -maxdepth 3 -type d -name &quot;*$target_dir*&quot; | head -n1)</code> - now that might look weird. What happens here is the following:</p>
 <ul>
 <li>We declare a variable, <code>workspace_path</code></li>
@@ -191,7 +191,7 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
 <span style="color:#66d9ef">else</span>
   cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
-</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that's it! Some examples can be seen in the screenshot below.</p>
+</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that&rsquo;s it! Some examples can be seen in the screenshot below.</p>
 
 <figure >
   
@@ -324,7 +324,7 @@ echo &quot;Hello World!&quot;
 <p>While it is not necessarily needed for scripts written in in Shell/Bash the Shebang cannot be omitted from NodeJS scripts intended to be run as command line program.</p>
 <p>Well, that has been a fun excursion into the world of shell scripting. Back to node!</p>
 <h3 id="writing-a-tiny-node-cli-script">Writing a tiny node cli script</h3>
-<p>Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let's keep it simple. We will greet the person executing the script.</p>
+<p>Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let&rsquo;s keep it simple. We will greet the person executing the script.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">#!/usr/bin/env node
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> () =&gt; {
@@ -332,7 +332,7 @@ echo &quot;Hello World!&quot;
 }
 
 <span style="color:#a6e22e">sayHello</span>()
-</code></pre></div><p>Let's save the script and run it with <code>$ node hello.js</code> from the command line.</p>
+</code></pre></div><p>Let&rsquo;s save the script and run it with <code>$ node hello.js</code> from the command line.</p>
 
 <figure >
   
@@ -353,7 +353,7 @@ echo &quot;Hello World!&quot;
   
 </figure>
 
-<p>Now that's interesting: The script greets the currently logged-in user! That's the case because we make use of the <code>process</code> variable which holds information about the current environment - the <code>env</code> object for example holds your environment variables. Add a new function to <code>hello.js</code> to see the output.</p>
+<p>Now that&rsquo;s interesting: The script greets the currently logged-in user! That&rsquo;s the case because we make use of the <code>process</code> variable which holds information about the current environment - the <code>env</code> object for example holds your environment variables. Add a new function to <code>hello.js</code> to see the output.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">printEnv</span> <span style="color:#f92672">=</span> () =&gt; {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>)
@@ -406,7 +406,7 @@ echo &quot;Hello World!&quot;
 <li>can exit using <code>process.exit(exit_code)</code></li>
 <li>can utilize lots of Node packages</li>
 </ul>
-<p>And that's it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
+<p>And that&rsquo;s it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
 ]]></content>
             
                  
@@ -459,19 +459,19 @@ echo &quot;Hello World!&quot;
 <p>This very site you read right now is build with <a href="http://gohugo.io">Hugo</a>, a static site generator build by <a href="http://spf13.com/">Steve Francia</a>, <a href="https://github.com/bep">Bjørn Erik Pedersen</a> and a lot of <a href="https://github.com/spf13/hugo/graphs/contributors">contributors</a>. Hugo is written in <a href="https://golang.org/">Go</a> a programming language created at Google I have <a href="https://github.com/kevingimbel?language=go&amp;tab=repositories">been interested in lately</a>.
 For me personally Go provides a lot of new challenges and things to learn. I worked with Front-End technologies like HTML and CSS as well as scripting languages like PHP and JavaScript for the better part of the past 6-7 years; &ldquo;professionally&rdquo; and officially since 2014. Go is entirely different to what I am used to and I like it. I enjoy playing around with it where in the past year or so I lost a big part of my passion for programming in the languages I already know. But why move away from Jekyll? And why choose Go?</p>
 <h3 id="ruby">Ruby</h3>
-<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don't have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
+<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don&rsquo;t have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
 <h3 id="go">Go</h3>
-<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it's as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
+<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it&rsquo;s as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17_Linux-64bit.tar.gz
 $ tar -xzvf hugo_0.17_Linux-64bit.tar.gz
 $ ln -s hugo_0.17_linux_amd64 hugo
 $ chmod +x hugo
 $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>/hugo ~/bin
 </code></pre></div><p>Another reason why I chose Hugo over <a href="https://www.staticgen.com/">any other static site generators</a> is because it is under active development thanks to <a href="https://github.com/bep">Bjørn Erik Pedersen</a>, has <a href="https://gohugo.io/overview/introduction/">excellent docs</a> and an active community.</p>
-<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I'm not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
-<p>As of today it's not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
-<p>Some things are still not working as I would like but I'll eventually get to them. After all, a personal website is always a work in progress.</p>
-<p><em>Farewell Jekyll, it's been a pleasure for the past three years.</em></p>
+<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I&rsquo;m not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
+<p>As of today it&rsquo;s not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
+<p>Some things are still not working as I would like but I&rsquo;ll eventually get to them. After all, a personal website is always a work in progress.</p>
+<p><em>Farewell Jekyll, it&rsquo;s been a pleasure for the past three years.</em></p>
 ]]></content>
             
                  
@@ -593,11 +593,11 @@ guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
-super handy once your project get's bigger! Anyway, here's how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
+super handy once your project get&rsquo;s bigger! Anyway, here&rsquo;s how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
 <a href="https://www.npmjs.com/package/gulp-sass">Gulp-Sass</a> and <a href="https://www.npmjs.com/package/gulp-autoprefixer">Autoprefixer</a>.</p>
-<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven't).</p>
+<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven&rsquo;t).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install --save-dev gulp-sass gulp-sourcemaps gulp-autoprefixer
-</code></pre></div><p>After everything is installed we'll create the basic Gulp setup.</p>
+</code></pre></div><p>After everything is installed we&rsquo;ll create the basic Gulp setup.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>),
       <span style="color:#a6e22e">sass</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-sass&#39;</span>),
       <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-autoprefixer&#39;</span>),
@@ -608,7 +608,7 @@ super handy once your project get's bigger! Anyway, here's how to implement them
         <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./skin/frontend/my-theme/default/css/&#39;</span>
       }
 </code></pre></div><p>Next the tasks will be created, I split them into 2, one for Sass and Source Maps and one for
-Autoprefixer. It's important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won't be
+Autoprefixer. It&rsquo;s important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won&rsquo;t be
 right. This happen because Autoprefixer adds more properties to your compiled CSS!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#66d9ef">function</span>() {
 <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">scss</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;styles.scss&#39;</span>)
@@ -624,11 +624,11 @@ right. This happen because Autoprefixer adds more properties to your compiled CS
   .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">css</span> ));  
 });
 </code></pre></div><p>First of all source maps need to be initalized, next a compressed css file from the SCSS files is created, the source
-maps are written and we're all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
+maps are written and we&rsquo;re all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
 with whatever needs to be prefixed. The output looks like below (look at the right top of each rule set). Click on each
 image to view it in full-size.</p>
 <!-- raw HTML omitted -->
-<p>In case you don't want your source maps in production you could split everything into 3 taks and run them in the order
+<p>In case you don&rsquo;t want your source maps in production you could split everything into 3 taks and run them in the order
 <code>[&quot;sass&quot;, &quot;sourcemaps&quot;, &quot;autoprefix&quot;]</code> using <code>gulp.task()</code> and then later have the following production task.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;production&#39;</span>, [<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#39;autoprefix&#39;</span>];
 
@@ -689,20 +689,20 @@ image to view it in full-size.</p>
             <updated>2015-01-21T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>It's been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
-VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I've already written about
+            <content type="html"><![CDATA[<p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
+VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&rsquo;ve already written about
 <a href="/noobish-vim/">turning Sublime Text into VIM mode</a> and my <a href="/vim-first-impressions/">very first VIM impression</a>, but
 back then I just copy &amp; pasted everything I found on the Internet into my <code>.vimrc</code>. Now with the new year I thought some
 new thing to learn could be fun and I got back into <em>really</em> working with VIM.</p>
 <h2 id="config-first">Config first</h2>
-<p>The past week I've done all my daily work at <a href="http://synoa.de">Synoa</a> in VIM. My current <code>.vimrc</code> is divided into 4
-sections which I'll explain below.</p>
+<p>The past week I&rsquo;ve done all my daily work at <a href="http://synoa.de">Synoa</a> in VIM. My current <code>.vimrc</code> is divided into 4
+sections which I&rsquo;ll explain below.</p>
 <h3 id="plugins">Plugins</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; Enable Pathogen to manage plugins</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">execute</span> <span style="color:#a6e22e">pathogen</span>#<span style="color:#a6e22e">infect</span>()<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>I've replaced Vundle with Pathogen to load Plugins because to my (still noobish) eye it looks better and more easy to
-use. Pathogen auto-loads all Plugins that are placed inside <code>~/.vim/bundle/</code> - currently the only Plugin I'm using is
-Emmet, because I'd never ever use an editor again that's missing Emmet. The way Emmet works in VIM is a little bit weird
+</span></code></pre></div><p>I&rsquo;ve replaced Vundle with Pathogen to load Plugins because to my (still noobish) eye it looks better and more easy to
+use. Pathogen auto-loads all Plugins that are placed inside <code>~/.vim/bundle/</code> - currently the only Plugin I&rsquo;m using is
+Emmet, because I&rsquo;d never ever use an editor again that&rsquo;s missing Emmet. The way Emmet works in VIM is a little bit weird
 because of the different modes and key mappings when you come from a Sublime Text 2/3 background. Basically, you need to
 hit <code>[CTRL]+[C]+[,]</code> after every Emmet snippet - beside that it works as expected.</p>
 <h3 id="writin-style-and-syntax">Writin style and syntax</h3>
@@ -731,10 +731,10 @@ hit <code>[CTRL]+[C]+[,]</code> after every Emmet snippet - beside that it works
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">scrolloff</span>=<span style="color:#ae81ff">15</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">wmh</span>=<span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>I must admit that most of the VIM syntax and writing styles is still copy pasted from all over the Internet. In the
-first block I'm setting the colorshemes and basic VIM UI (show mode, show CMD, have a mode line; use a ruler). In the
-second block there's settings for line numbers (always nice to have!) and tab width (2 spaces, always), smartindent (so
+first block I&rsquo;m setting the colorshemes and basic VIM UI (show mode, show CMD, have a mode line; use a ruler). In the
+second block there&rsquo;s settings for line numbers (always nice to have!) and tab width (2 spaces, always), smartindent (so
 new lines can be auto-indented), general text width (where to place the ruler), scroll off by X lines so I never scroll
-down to the end of the screen and the wmh (window min height) - this one is used so tabs in split view don't take up any
+down to the end of the screen and the wmh (window min height) - this one is used so tabs in split view don&rsquo;t take up any
 space.</p>
 <h3 id="key-mappings">Key mappings</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; The &lt;Enter&gt; command behind each mapping executes the</span><span style="color:#960050;background-color:#1e0010">
@@ -760,30 +760,30 @@ be executed immediately, otherwise it is written into the little command line at
 <p>New here is the mapping to switch between split view windows. When opening a new file with <code>:sp</code> I can now navigate
 using <code>[CTRL]+[C]</code> and <code>j</code> to go &ldquo;down&rdquo; or <code>k</code> to go up - this is really handy.</p>
 <p>The last line has been the break-through for me in beeing productive with VIM. When working with Magento and CSS, I
-often need to open many files in the same directory, yet I tend to start inside the root. Normally I'd have to write all
-the path to where I am, like <code>:tabedit skin/frontend/namespace/default/scss/</code> when I'm inside a Magento skin folder.
+often need to open many files in the same directory, yet I tend to start inside the root. Normally I&rsquo;d have to write all
+the path to where I am, like <code>:tabedit skin/frontend/namespace/default/scss/</code> when I&rsquo;m inside a Magento skin folder.
 With this little helper I can type <code>:tabedit %%/</code> and once I write the <code>/</code> the path will expand to the current
 directory.</p>
 <h3 id="no-backups-no-swap">No backups, no swap!</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; No backups and no swap file</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nobackup</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">noswapfile</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>The last part is still the same. Since I'm using git and branches for everything I don't need any kind of backup or swap
+</span></code></pre></div><p>The last part is still the same. Since I&rsquo;m using git and branches for everything I don&rsquo;t need any kind of backup or swap
 file since I could always revert anything.</p>
 <h2 id="working-in-vim">Working in VIM</h2>
 <p>With these configurations I started to work in VIM. I tried changing and adjusting the themes a bit and in the end found my
 self with a dark theme (bad wolf; a Doctor Who reference!) after using Tomorrow Night (light) for almost half a year. So
-far after seven days the only thing I'm really missing from time to time is Sublime Texts Multi Cursor Feature and
+far after seven days the only thing I&rsquo;m really missing from time to time is Sublime Texts Multi Cursor Feature and
 &ldquo;Search in Folder&rdquo; to find stuff inside the whole project. There are plugins for the later feature and multi cursor
-editing can be archive using weird, cryptic command combinations but I'm not familiar yet with either of these. So far I
-enjoy the destraction free enviorment I'm working in and only start Sublime Text when I can't find a particular
+editing can be archive using weird, cryptic command combinations but I&rsquo;m not familiar yet with either of these. So far I
+enjoy the destraction free enviorment I&rsquo;m working in and only start Sublime Text when I can&rsquo;t find a particular
 template.</p>
-<p>Since I've used Sublime Text in Vintage Mode for almost 6 months I'm feeling comfortable enough with the basic
+<p>Since I&rsquo;ve used Sublime Text in Vintage Mode for almost 6 months I&rsquo;m feeling comfortable enough with the basic
 operations of using <code>y</code>ank, <code>d</code>elete or <code>p</code>ut to move around lines and edit code, <code>dit</code> (delete in tags) or <code>ei&quot;</code> (edit
-iin &ldquo;) are things I don't use that often because they take too much time when they don't work right from the start.</p>
-<p>Other then some hardcore-users I'm also using my mouse wheel and the arrow keys to navigate inside VIM. I feel a lot
-more comfortable doing it this way than I'd feel using only <code>h, j, k, l</code>. After all I liked to get into VIM and I'll see
-how it can benefit to my workflow or if it'll stay in my way at the end - like all other editors I've tried - and I'll
+iin &ldquo;) are things I don&rsquo;t use that often because they take too much time when they don&rsquo;t work right from the start.</p>
+<p>Other then some hardcore-users I&rsquo;m also using my mouse wheel and the arrow keys to navigate inside VIM. I feel a lot
+more comfortable doing it this way than I&rsquo;d feel using only <code>h, j, k, l</code>. After all I liked to get into VIM and I&rsquo;ll see
+how it can benefit to my workflow or if it&rsquo;ll stay in my way at the end - like all other editors I&rsquo;ve tried - and I&rsquo;ll
 return to my beloved Sublime Text 3.</p>
 <p>Keep up with my advimtures (ha punny!) by subscribing to the <a href="/atom.xml">Atom Feed</a> or by following me on
 <a href="https://twitter.com/_kevinatari">Twitter</a>:</p>
@@ -834,13 +834,13 @@ return to my beloved Sublime Text 3.</p>
             <updated>2014-07-13T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>Since I'm still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it
-into my daily workflow. Since I'm working in a relativley small company it's most of the time stressy to get all things
-done and to keep an overview - so long story short: There's not much time for new tools that don't increase my workflow
-directly. VIM is one of these tools that don't fully support my workflow at the moment. While on one hand being good at
+            <content type="html"><![CDATA[<p>Since I&rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it
+into my daily workflow. Since I&rsquo;m working in a relativley small company it&rsquo;s most of the time stressy to get all things
+done and to keep an overview - so long story short: There&rsquo;s not much time for new tools that don&rsquo;t increase my workflow
+directly. VIM is one of these tools that don&rsquo;t fully support my workflow at the moment. While on one hand being good at
 dealing with text and stuff, it is on the other hand (not-so-easily) capable of stuff like (S)FTP sync, auto complete
-through Emmet (I still don't really get how this works in VIM) and the most important thing: It's hard to switch from
-Sublime Text. I'm so used to Sublime Text and it's shortcuts, multi-cursor, easy-to-use UI, plugins and what so not.</p>
+through Emmet (I still don&rsquo;t really get how this works in VIM) and the most important thing: It&rsquo;s hard to switch from
+Sublime Text. I&rsquo;m so used to Sublime Text and it&rsquo;s shortcuts, multi-cursor, easy-to-use UI, plugins and what so not.</p>
 <p>Anyway, there is a way to make Sublime Text behave more vim-ish. Originally I was searching for a Plugin or something or
 a config file to get some VIM keybindings into my safe-zone Sublime Text enviroment. Turns out Sublime Test has this
 built-in. In the &ldquo;ignore_packages&rdquo; settings is a package called &ldquo;Vintage&rdquo;. If this line is changed like seen below</p>
@@ -853,10 +853,10 @@ following inside the user settings:</p>
 	<span style="color:#e6db74">&#34;vintage_start_in_command_mode&#34;</span>: true
 </code></pre></div><p>With these two settings Sublime Text is ready to run in Vi(m|n)tage mode. This means in particular most (or all?) Vim
 commands are available and can be used such as ci&rdquo; (change in &ldquo;&quot;), x or r (delete character; replace character below the
-cursor in command mode), y and p (yank and put; copy/paste) and so on. I've been working this way for about one week now
-and I must say that I really like it. It doesn't hold me back, I can still enjoy my other plugins and if I'm ever
-feeling lost I can still use all of Sublime Text's features. So that's it, my current setup to get a around some VIM
-stuff while still being productive and fast daily. In my free-time and when writing articles I've almost switched
+cursor in command mode), y and p (yank and put; copy/paste) and so on. I&rsquo;ve been working this way for about one week now
+and I must say that I really like it. It doesn&rsquo;t hold me back, I can still enjoy my other plugins and if I&rsquo;m ever
+feeling lost I can still use all of Sublime Text&rsquo;s features. So that&rsquo;s it, my current setup to get a around some VIM
+stuff while still being productive and fast daily. In my free-time and when writing articles I&rsquo;ve almost switched
 completly to VIM to dig into it and see if it can replace Sublime Text one day.</p>
 ]]></content>
             
@@ -903,28 +903,28 @@ completly to VIM to dig into it and see if it can replace Sublime Text one day.<
             
             
             <content type="html"><![CDATA[<p>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload,
-Pre-Processors, shortcuts - all that stuff. It's always great to save some time, especially for repeating tasks or
+Pre-Processors, shortcuts - all that stuff. It&rsquo;s always great to save some time, especially for repeating tasks or
 challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.</p>
-<h2 id="browserbased">Browser-based</h2>
-<p>The following tools are all for Chrome because I use Chrome for most of my development. If you're using another browser
+<h2 id="browser-based">Browser-based</h2>
+<p>The following tools are all for Chrome because I use Chrome for most of my development. If you&rsquo;re using another browser
 this section will not be relevant and you can skip to the next list.</p>
 <h3 id="web-developer">Web Developer</h3>
 <p><a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Web Developer</a> is my personal
-number 1 Chrome extension. It's packed with all kinds of functions like responsive previews, disable
-actions (for JavaScript, Cookies, CSS) and what so not - in fact I'm pretty sure this extension can do anything you'll
+number 1 Chrome extension. It&rsquo;s packed with all kinds of functions like responsive previews, disable
+actions (for JavaScript, Cookies, CSS) and what so not - in fact I&rsquo;m pretty sure this extension can do anything you&rsquo;ll
 ever need on the front-end.</p>
 <h3 id="awesome-screenshot">Awesome Screenshot</h3>
 <p>Even though it is not my main screenshot tool (more later), <a href="https://chrome.google.com/webstore/detail/awesome-screenshot-captur/alelhddbbhepgpmgidjdcjakblofbmce">Awesome
 Screenshot</a> really
 is handy when it comes to quickly taking screenshots inside the browser. It can capture selections, visible parts and
 even the whole website into one picture. The main reason I have this plugin is the easy way of writing into the
-screenshots, adding notes or drawing rectangles and circles - that's really the only reason I have this extension.</p>
+screenshots, adding notes or drawing rectangles and circles - that&rsquo;s really the only reason I have this extension.</p>
 <h3 id="wappalyzer">Wappalyzer</h3>
 <p><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg">Wappalyzer</a> shows frameworks and
-software used to build the page you're currently on. This tool is really sweet and I only use it because I've been
+software used to build the page you&rsquo;re currently on. This tool is really sweet and I only use it because I&rsquo;ve been
 looking into the source code of several websites to find hints on the used software. Wappalyzer can also show CSS
 Frameworks (like Bootstrap or Foundation), JavaScript Frameworks (like jQuery and Prototype), Web Servers (Nginx or
-Apache), Operating Systems (that one's interesting I've no idea how this works) or programming languages (Ruby, PHP).
+Apache), Operating Systems (that one&rsquo;s interesting I&rsquo;ve no idea how this works) or programming languages (Ruby, PHP).
 Wappalyzer also sends anonymous informations to its <a href="https://wappalyzer.com/">Web Platform</a> where you can see statistics
 on used software. (This can be turned off in the settings).</p>
 <h3 id="colorzilla">ColorZilla</h3>
@@ -933,10 +933,10 @@ and easy-to-use tool with the purpose to get color informations from a website. 
 setting a custom shortcut.</p>
 <h3 id="soundcloud">SoundCloud</h3>
 <p>Not really a development tool but lots of <a href="https://soundcloud.com/atarijunge/likes">good music</a></p>
-<h2 id="non-browserbased">Non Browser-based</h2>
+<h2 id="non-browser-based">Non Browser-based</h2>
 <h3 id="sublime-text-3">Sublime Text 3</h3>
 <p>After trying a lot of different editors (Some IDE-like, some Sublime Text like) I always came back to Sublime Text
-after some while. It's stable, easy to use, easy to customize and has tons of plugins that can enhance your workflow.
+after some while. It&rsquo;s stable, easy to use, easy to customize and has tons of plugins that can enhance your workflow.
 Some of my absolute favorite plugins are:</p>
 <ul>
 <li><a href="http://emmet.io">Emmet</a>, Ex-Zen Coding for generating code from stuff like this <code>(div&gt;.header&gt;.body&gt;p{Test})*5</code></li>
@@ -944,33 +944,33 @@ Some of my absolute favorite plugins are:</p>
 <li><a href="https://sublime.wbond.net/installation">Package Control</a> easily install packages from within sublime.</li>
 </ul>
 <h3 id="screencloud">ScreenCloud</h3>
-<p><a href="http://screencloud.net">ScreenCloud</a> is my number 1 in-OS screenshot tool. It's capable of SFTP uploads, Dropbox
+<p><a href="http://screencloud.net">ScreenCloud</a> is my number 1 in-OS screenshot tool. It&rsquo;s capable of SFTP uploads, Dropbox
 uploads, imgur uploads or local file saves so it has everything I need with 3 options of capturing the screen, the active
-window or a selection. It's also multi-OS and runs on Mac, Windows and Linux.</p>
+window or a selection. It&rsquo;s also multi-OS and runs on Mac, Windows and Linux.</p>
 <h2 id="command-line">Command Line</h2>
 <p>Sweet, sweet command line. Since I switched from Windows 7 to Ubuntu somewhere in summer 2013 I absolutely love the
-command line. It's so much easier to navigate through files, find stuff, copy/delete/move/rename stuff - it's just way
+command line. It&rsquo;s so much easier to navigate through files, find stuff, copy/delete/move/rename stuff - it&rsquo;s just way
 faster. My Command Line is opened 24/7 and always there to get me access to whatever I want. So here follows some of my
 favorite Command Line based tools.</p>
 <h3 id="gulp">Gulp</h3>
-<p>After fiddling around with <a href="http://gruntjs.com">Grunt</a> for quite some time I just recently switched to <a href="http://gulpjs.com">Gulp</a> due to the fact that is is A LOT easier, more logical and faster (as I can tell). However, I'll have to see it in real big projects first I guess. As of now, it powers this sites JS and CSS compression and compiling.</p>
+<p>After fiddling around with <a href="http://gruntjs.com">Grunt</a> for quite some time I just recently switched to <a href="http://gulpjs.com">Gulp</a> due to the fact that is is A LOT easier, more logical and faster (as I can tell). However, I&rsquo;ll have to see it in real big projects first I guess. As of now, it powers this sites JS and CSS compression and compiling.</p>
 <h3 id="image-magick">Image Magick</h3>
 <p><a href="http://www.imagemagick.org/">Image Magick</a> is a simple command line tool to convert or even create images. I must admit
-that I'm using it mostly to resize images. Usage is as simple as <code>$ convert myimg.png -resize 100 myimg_100.png</code>, this
+that I&rsquo;m using it mostly to resize images. Usage is as simple as <code>$ convert myimg.png -resize 100 myimg_100.png</code>, this
 will resize myimg.png to 100px width and save it as myimg_100.png.</p>
 <h3 id="vim">VIM</h3>
-<p>It's been about 2-3 weeks now that I've started to use vim more often and I currently really like it for writing
+<p>It&rsquo;s been about 2-3 weeks now that I&rsquo;ve started to use vim more often and I currently really like it for writing
 articles or README files and such like.  Developing in it still feels weird but well, maybe someday.
-I'm also continuously updating <a href="https://github.com/kevingimbel/config/blob/master/.vimrc">my .vimrc</a> on GitHub. In Vim
-I'm also using the <a href="http://emmet.io">Emmet</a> Plugin but the handling of it is a bit weird. In fact I haven't really found
-out how exactly Emmet works with Vim. I'm used to have Emmet support all the time and no different modes like VISUAL,
+I&rsquo;m also continuously updating <a href="https://github.com/kevingimbel/config/blob/master/.vimrc">my .vimrc</a> on GitHub. In Vim
+I&rsquo;m also using the <a href="http://emmet.io">Emmet</a> Plugin but the handling of it is a bit weird. In fact I haven&rsquo;t really found
+out how exactly Emmet works with Vim. I&rsquo;m used to have Emmet support all the time and no different modes like VISUAL,
 INSERT and COMMAND - so in any of these Emmet works. Anyway, if you know how it works give me a shout!</p>
 <h3 id="bash">Bash</h3>
-<p>That's not a tool. Or is it? Anyway, I'd like to share my Bash Colors with you, they're also in the <a href="https://github.com/kevingimbel/config/blob/master/shell-color">config GitHub
-repo</a> and given the fact they're standard non-fancy they
+<p>That&rsquo;s not a tool. Or is it? Anyway, I&rsquo;d like to share my Bash Colors with you, they&rsquo;re also in the <a href="https://github.com/kevingimbel/config/blob/master/shell-color">config GitHub
+repo</a> and given the fact they&rsquo;re standard non-fancy they
 should work on almost all systems. Just edit your <code>.bashrc</code> or <code>.bash_profile</code> and add the PS1 line to it to have a
 colored, good looking bash prompt.</p>
-<p>So, what tools am I missing? Anything that's a absolute must-have? <a href="https://twitter.com/_kevinatari">Hit me up</a>!</p>
+<p>So, what tools am I missing? Anything that&rsquo;s a absolute must-have? <a href="https://twitter.com/_kevinatari">Hit me up</a>!</p>
 ]]></content>
             
                  
@@ -1031,22 +1031,22 @@ about Vim being the single best editor for everything - no matter what language 
 still use Sublime Text (2) daily and love it, I have it configured as I like, have all my Plugin and color schemes
 and it just feels great. I tried some other editors like <a href="/brackets-vs-sublime-text/">Brackets</a> and
 <a href="https://atom.io">Atom</a>, also <a href="http://www.jetbrains.com/webstorm/">WebStorm</a> and <a href="http://www.jetbrains.com/phpstorm/">PhpStorm</a>. The later two are great as IDEs but are not the way I like to write code because both are a lot slower than a
-simple text editor like atom, sublime of vim. I guess that's the downside of having an IDE - for me it was too much (I still recommend
+simple text editor like atom, sublime of vim. I guess that&rsquo;s the downside of having an IDE - for me it was too much (I still recommend
 trying them, maybe they enhance your workflow). Atom is really like a  clone of Sublime Text running Web Technologies at
-it's heart (Sublime Text is written in Python).</p>
+it&rsquo;s heart (Sublime Text is written in Python).</p>
 <p><img src="https://i.kevingimbel.me/sc/vim_markdown.png" alt="&ldquo;Vim while writing a article&rdquo;" title="Vim while writing an article"></p>
 <p>Anyway, back to Vim. Vim is, what surprised me first, a command line-based editor, there is a Graphic UI version called
 gVim but I wanted to see how I can customize the command line one. Just like the normal bash has a
 <code>.bashrc</code> Vim has its own <code>.vimrc</code> which defines the settings for all its (advanced) functionality and settings. When
-you open Vim with from the command line with <code>vim my-file.md</code> you'll see a black editor with some &ldquo;~&rdquo; on the left.
-You're now in &ldquo;normal&rdquo; mode and need to tab <code>i</code> to start <code>i</code>nserting stuff. From within the insert mode its really like
-any other editor. When you leave the insert mode (by pressing <code>ESC</code>) you're back in the &ldquo;Normal&rdquo; mode where you can
+you open Vim with from the command line with <code>vim my-file.md</code> you&rsquo;ll see a black editor with some &ldquo;~&rdquo; on the left.
+You&rsquo;re now in &ldquo;normal&rdquo; mode and need to tab <code>i</code> to start <code>i</code>nserting stuff. From within the insert mode its really like
+any other editor. When you leave the insert mode (by pressing <code>ESC</code>) you&rsquo;re back in the &ldquo;Normal&rdquo; mode where you can
 easily navigate through your file and delete stuff. Deleting works pretty cool I guess, just double tab <code>d</code> to delete a
 whole sentence or <code>x</code> to delete the character below the cursor. Or fancy stuff like <code>d + arrow up/down</code> to delete a
 whole paragraph.</p>
 <p>So basically everything in Vim is bound to keys and those keys can be combined (like <code>d</code>elete + up) and I am sure
-there's even more power inside Vim when it comes to text manipulation, navigation, replacements, etc. Anyway, as long as
-I haven't found out what stuff is possible I'll just share my <code>.vimrc</code> with you.</p>
+there&rsquo;s even more power inside Vim when it comes to text manipulation, navigation, replacements, etc. Anyway, as long as
+I haven&rsquo;t found out what stuff is possible I&rsquo;ll just share my <code>.vimrc</code> with you.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">	{% <span style="color:#a6e22e">raw</span> %}<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">	&#34; vim:fdm=marker</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nocompatible</span> <span style="color:#75715e">&#34; required by Vundle</span><span style="color:#960050;background-color:#1e0010">
@@ -1105,25 +1105,25 @@ I haven't found out what stuff is possible I'll just share my <code>.vimrc</code
 </span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nobackup</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">noswapfile</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>	{% <span style="color:#a6e22e">endraw</span> %}<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>So that's quite some stuff I guess. First of all, <a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is the Plugin manager
+</span></code></pre></div><p>So that&rsquo;s quite some stuff I guess. First of all, <a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is the Plugin manager
 for Vim, there are others but I chose this one because it is 99% written in VimL. This little thingy helps me keep track
 of Plugins I use. Friendly.
 <code>syntax on</code> simply turn on syntax highlighting. <code>set t_Co=256</code> sets the terminal colors to 256 colors so the
 <code>colorscheme Tomorrow</code> (<a href="https://github.com/chriskempson/tomorrow-theme">here</a>) works. Next up is Airline, a &ldquo;better
 statusbar&rdquo; for Vim. I saw this on a screenshot once and searched for it, what I first found was
 <a href="https://github.com/Lokaltog/powerline">Powerline</a> but I then saw <a href="https://github.com/bling/vim-airline">Airline</a> and
-chose it because it is written in VimL and I - as of now - try to avoid language mixin because I think it's a good idea
-to keep Vim &ldquo;clean&rdquo; as long as possible. Airline can show in what mode I am, what Git Branch I'm on, and a lot of other
-stuff I haven't configured yet. I guess that'll be another blog post. The <code>airline_left_sep</code> and <code>airline_right_sep</code> are
-the separators of the statusline (see the screenshot below, the seperators are down after &ldquo;Normal&rdquo; and before the &ldquo;1%&quot;)  which at the moment don't look as cool as I thought - have to fix this. Next up
-tabstops, shiftwidth (self explaining), backspace (I've no idea what this is but saw it in any .vimrc I found)
-smarttabs, text width so Vim doesn't write until the end of the screen (I like small gaps to the right) and colorcolumn,
+chose it because it is written in VimL and I - as of now - try to avoid language mixin because I think it&rsquo;s a good idea
+to keep Vim &ldquo;clean&rdquo; as long as possible. Airline can show in what mode I am, what Git Branch I&rsquo;m on, and a lot of other
+stuff I haven&rsquo;t configured yet. I guess that&rsquo;ll be another blog post. The <code>airline_left_sep</code> and <code>airline_right_sep</code> are
+the separators of the statusline (see the screenshot below, the seperators are down after &ldquo;Normal&rdquo; and before the &ldquo;1%&quot;)  which at the moment don&rsquo;t look as cool as I thought - have to fix this. Next up
+tabstops, shiftwidth (self explaining), backspace (I&rsquo;ve no idea what this is but saw it in any .vimrc I found)
+smarttabs, text width so Vim doesn&rsquo;t write until the end of the screen (I like small gaps to the right) and colorcolumn,
 which is a ruler-like thingy to visually show the max text width. Last stuff: No backups, no swap files, according to a blog
-post I found this isn't needed when working with version controls such as git.</p>
+post I found this isn&rsquo;t needed when working with version controls such as git.</p>
 <p>The weird looking brackets are used to &ldquo;auto-close&rdquo; this section so that when I open my file only the description is
 visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
 <p><img src="https://i.kevingimbel.me/sc/sc-26-01-13.png" alt="Vim with auto-closed sections" title="Vim with auto-closed sections"></p>
-<p>So that's it, my tiny Vim experience and setup. As with every config things you can grab a copy of my <code>.vimrc</code> in the
+<p>So that&rsquo;s it, my tiny Vim experience and setup. As with every config things you can grab a copy of my <code>.vimrc</code> in the
 <a href="https://github.com/kevingimbel/config/blob/master/.vimrc">Github Config Repo</a>.</p>
 ]]></content>
             
@@ -1169,28 +1169,28 @@ visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
             <updated>2013-12-25T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>I first tried <a href="http://brackets.io">Brackets</a> back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside <a href="http://www.vim.org/">VIM</a> it is <em>the</em> editor I read quite a lot about latly. My first impression was: &ldquo;<em>Wow, that's a simple, clean editor!</em>&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I've been using for the last two years or so.</p>
+            <content type="html"><![CDATA[<p>I first tried <a href="http://brackets.io">Brackets</a> back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside <a href="http://www.vim.org/">VIM</a> it is <em>the</em> editor I read quite a lot about latly. My first impression was: &ldquo;<em>Wow, that&rsquo;s a simple, clean editor!</em>&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&rsquo;ve been using for the last two years or so.</p>
 <h2 id="functionality">Functionality</h2>
 <h3 id="highlighting">Highlighting</h3>
-<p>Bracket as well as Sublime Text comes with Syntax Highlighting for almost everything one needs: HTML, SCSS, CSS, JavaScript, Ruby, Python - all of these can be highlighted by default which, in my opinion, is a standard these days. However, as far as I can tell it is easier to customize the Highlight settings in Sublime Text (2) and with the standard Monokai Theme Sublime has a better highlighting than Brackets. Another point is that there is no way (as far as I found) to set a highlight language before saving a file in Brackets - so I can't have Markdown Highlighting for this post unless I save it once which is possible in Sublime Text.</p>
+<p>Bracket as well as Sublime Text comes with Syntax Highlighting for almost everything one needs: HTML, SCSS, CSS, JavaScript, Ruby, Python - all of these can be highlighted by default which, in my opinion, is a standard these days. However, as far as I can tell it is easier to customize the Highlight settings in Sublime Text (2) and with the standard Monokai Theme Sublime has a better highlighting than Brackets. Another point is that there is no way (as far as I found) to set a highlight language before saving a file in Brackets - so I can&rsquo;t have Markdown Highlighting for this post unless I save it once which is possible in Sublime Text.</p>
 <h3 id="plugins--installation">Plugins + Installation</h3>
 <p>Both editor support additional plugins to enhance the workflow. Both support <a href="http://emmet.io">Emmet</a> which is by far my most needed Plugin as well as FTP Solutions to upload on safe. Both of these are important plugin for my workflow because when developing on a (S)FTP Dev System uploading on save without another program running is a lot faster. I love it. In Sublime Text the easiest way to add new Plugin is through the <a href="https://sublime.wbond.net/installation">Package Controller</a> - Brackets comes with a build-in Package Manager that makes it super easy to add new Plugins. Here the point goes to Brackets for already build-in Package Management.</p>
 <h3 id="ui--ux">UI / UX</h3>
-<p>Both Editors have a clean and simple to understand UI. The only real difference that's notable in my opinion is that Brackets has open files on the top-left sidebar while Sublime Text has them on top organized as tabs (as well as in the sidebar when displayed). This is a difference at first when you come from Sublime Text and in my opinion it's easier to have open files at the top. Nevertheless in both editors it's possible to go through all open files by hitting <code>CMD + Tab</code> which comes very handy. A huge downside of Brackets is that it's not possible to have new files unsaved and then close the editor. In Sublime unsaved files stays as unsaved inside the editor until it is opened the next time. I really like this because in case of a sudden system crash, an electricity failure or whatever else files can still be found after re-booting. Highfive Sublime Text.</p>
-<p>~Another thing I really miss in Brackets and I got unbelievable used to is multi-select. In Sublime Text it's possible to select multiple points inside a document when holding CMD while clicking inside the document so you can edit as many rows as you want at once - unbelievable useful!~<br>
+<p>Both Editors have a clean and simple to understand UI. The only real difference that&rsquo;s notable in my opinion is that Brackets has open files on the top-left sidebar while Sublime Text has them on top organized as tabs (as well as in the sidebar when displayed). This is a difference at first when you come from Sublime Text and in my opinion it&rsquo;s easier to have open files at the top. Nevertheless in both editors it&rsquo;s possible to go through all open files by hitting <code>CMD + Tab</code> which comes very handy. A huge downside of Brackets is that it&rsquo;s not possible to have new files unsaved and then close the editor. In Sublime unsaved files stays as unsaved inside the editor until it is opened the next time. I really like this because in case of a sudden system crash, an electricity failure or whatever else files can still be found after re-booting. Highfive Sublime Text.</p>
+<p>~Another thing I really miss in Brackets and I got unbelievable used to is multi-select. In Sublime Text it&rsquo;s possible to select multiple points inside a document when holding CMD while clicking inside the document so you can edit as many rows as you want at once - unbelievable useful!~<br>
 As <a href="https://github.com/GuidoJansen">Guido Jansen</a> pointed out in <a href="https://github.com/kevingimbel/kevingimbel.github.io/issues/4">Issue #4</a> brackets now supports multiple lines.</p>
 <h3 id="live-preview">Live Preview</h3>
-<p>Bracket comes with a Live Preview functionality that allows to display a file inside the browser that'll be updated in real time as you type. I couldn't think of a scenario where I'd need a real-time preview of my file to be honest but it's a cool feature anyway.</p>
-<h3 id="autocomplete">Auto-Complete</h3>
+<p>Bracket comes with a Live Preview functionality that allows to display a file inside the browser that&rsquo;ll be updated in real time as you type. I couldn&rsquo;t think of a scenario where I&rsquo;d need a real-time preview of my file to be honest but it&rsquo;s a cool feature anyway.</p>
+<h3 id="auto-complete">Auto-Complete</h3>
 <p>Both Sublime Text and Brackets have auto-complete for CSS. While Sublime Text &ldquo;only&rdquo; supports basic auto-complete (e.g. typing <code>'hei' + tab</code> will get you <code>height: </code>) Brackets supports to &ldquo;Quick Edit&rdquo; colors (right-click on a color or use <code>CMD+E</code> when hovering it) to bring up a color dialog as show below. This is a nice feature when trying to find a color.</p>
 <p><img src="https://i.kevingimbel.me/sc/screenshot-53-24.png" alt="Quick Edit Colors in Brackets" title="Quick Edit Colors in Brackets"></p>
 <p>Another thing both support is the auto-closing of HTML tags (e.g. <code>&lt;article&gt;</code> will get you <code>&lt;article&gt;&lt;/article&gt;</code>).
-Unfortunately Brackets does not query SCSS variables. When you define your variables in Sublime and type <code>$color--</code> Sublime Text shows all variables starting with <code>$color--</code> - that's a thing I really miss in Brackets.</p>
+Unfortunately Brackets does not query SCSS variables. When you define your variables in Sublime and type <code>$color--</code> Sublime Text shows all variables starting with <code>$color--</code> - that&rsquo;s a thing I really miss in Brackets.</p>
 <h3 id="debugging">Debugging</h3>
-<p>Brackets comes with build-in JSHint support which is really useful especially for JavaScript beginners like I'm one. You can see in-editor what errors you made - really great!
-I'm pretty sure there's a Sublime Text Plugin for this, too but having it build-in is just a great feature. What I'm missing on the other hand is spell-checking. As non-native English speaker spell-checking is always a great thing.</p>
+<p>Brackets comes with build-in JSHint support which is really useful especially for JavaScript beginners like I&rsquo;m one. You can see in-editor what errors you made - really great!
+I&rsquo;m pretty sure there&rsquo;s a Sublime Text Plugin for this, too but having it build-in is just a great feature. What I&rsquo;m missing on the other hand is spell-checking. As non-native English speaker spell-checking is always a great thing.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>I'm impressed by Brackets, it's a simple and great editor and I'll definitely keep an eye on it. It's a good, free alternative to Sublime Text 2 (which costs 75$) and worth a try. However, depending on my current workflow I'll stick to Sublime Text for most of my work.</p>
+<p>I&rsquo;m impressed by Brackets, it&rsquo;s a simple and great editor and I&rsquo;ll definitely keep an eye on it. It&rsquo;s a good, free alternative to Sublime Text 2 (which costs 75$) and worth a try. However, depending on my current workflow I&rsquo;ll stick to Sublime Text for most of my work.</p>
 ]]></content>
             
                  

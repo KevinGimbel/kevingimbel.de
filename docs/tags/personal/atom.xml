@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[personal on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[personal on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/personal/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/personal/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/personal/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -34,23 +34,23 @@
             
             <content type="html"><![CDATA[<p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
  CSS variables).</p>
-<p>CSS variables are a <a href="https://www.w3.org/TR/css-variables-1/" title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!&quot;</em> and you're right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that's exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p>
+<p>CSS variables are a <a href="https://www.w3.org/TR/css-variables-1/" title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!&quot;</em> and you&rsquo;re right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that&rsquo;s exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p>
 <p>Below I will explain step by step how CSS variables look, work, and how we can use them to alter the look of a website - even persistent without any backend code!</p>
 <h2 id="css-variables">CSS variables</h2>
 <h3 id="browser-support">Browser Support</h3>
-<p>Let's jump directly into browser support, which is looking pretty good in my opinion!</p>
+<p>Let&rsquo;s jump directly into browser support, which is looking pretty good in my opinion!</p>
 
 
 <p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1,past_2">
     <a href="http://caniuse.com/#feat=css-variables">Can I Use css-variables?</a> Data on support for the css-variables feature across the major browsers from caniuse.com.
 </p>
-<p><code>77.90%</code> (as of November 26. 2017) is not perfect but certainly good enough for me and my private website. I'd probably not rely on CSS Custom Properties in client projects yet tho.</p>
+<p><code>77.90%</code> (as of November 26. 2017) is not perfect but certainly good enough for me and my private website. I&rsquo;d probably not rely on CSS Custom Properties in client projects yet tho.</p>
 <h3 id="syntax">Syntax</h3>
 <p>A CSS variable is a word preceded by two dashes (<code>--</code>), which looks like the following examples.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">--color</span><span style="color:#f92672">:</span> #ddd<span style="color:#f92672">;</span>
 <span style="color:#f92672">--base-font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">12px</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">--breakpoint-large</span><span style="color:#f92672">:</span> <span style="color:#f92672">1200px</span><span style="color:#f92672">;</span>
-</code></pre></div><p>Just like any CSS property they &ldquo;cascade down&rdquo;. A variable defined at the top of the document on the <code>:root</code> or <code>html</code> selector will be defined everywhere in the document. To use a CSS variable we need to get it somehow. It's not enough to reference it, for example this does not work.</p>
+</code></pre></div><p>Just like any CSS property they &ldquo;cascade down&rdquo;. A variable defined at the top of the document on the <code>:root</code> or <code>html</code> selector will be defined everywhere in the document. To use a CSS variable we need to get it somehow. It&rsquo;s not enough to reference it, for example this does not work.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Does</span> <span style="color:#f92672">not</span> <span style="color:#f92672">work</span><span style="color:#f92672">!</span>
 .<span style="color:#a6e22e">my-selector</span> {
   <span style="color:#66d9ef">color</span>: <span style="color:#f92672">--</span><span style="color:#66d9ef">color</span>;
@@ -75,7 +75,7 @@
 </p>
 
 <p>We do not need to change the <code>h1</code> selector because <code>h1</code> will always have a font-color equal to <code>--color</code> - we only need to change the variable inside the local scope. The third <code>h1</code> element is outside the local scope and so it takes the  original <code>--color</code> value (red).</p>
-<p>This type of inheritance is a powerful tool CSS has given us (&ldquo;us&rdquo; being developers). At runtime, when the website is loaded and all CSS is parsed and the website has been painted to the screen, we can still change these properties on-the-fly with JavaScript and the browser will simply re-render the parts that need changing. Of course, you can already change CSS on the go with JavaScript. You could select for example a bunch of elements by class name and then change their color to be <code>blue</code> instead of red. With CSS Custom Properties you don't need to do this! All we need to do is change the variable at a higher level, for example on the <code>body</code> element as the following example illustrates.</p>
+<p>This type of inheritance is a powerful tool CSS has given us (&ldquo;us&rdquo; being developers). At runtime, when the website is loaded and all CSS is parsed and the website has been painted to the screen, we can still change these properties on-the-fly with JavaScript and the browser will simply re-render the parts that need changing. Of course, you can already change CSS on the go with JavaScript. You could select for example a bunch of elements by class name and then change their color to be <code>blue</code> instead of red. With CSS Custom Properties you don&rsquo;t need to do this! All we need to do is change the variable at a higher level, for example on the <code>body</code> element as the following example illustrates.</p>
 
 
 
@@ -92,16 +92,16 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;--color: green;&#34;</span>;
 </code></pre></div><p>I use this technique to change the secondary and primary colors of my website from the settings menu. <a href="https://github.com/kevingimbel/kevingimbel.com/blob/9f11b96f428f01b1ae14f8673c2e4f48e8ee3b21/themes/next/static/js/a11y.settings.js#L83-L84" title="View source code on GitHub.com">These two lines</a> set the CSS variables <code>--color-accent-primary</code> and <code>--color-accent-secondary</code> which by default are dark blue and yellow.</p>
 <h3 id="recap">Recap</h3>
-<p>So let's recap this real quick:</p>
+<p>So let&rsquo;s recap this real quick:</p>
 <ul>
 <li>CSS variables (also called CSS Custom Properties) are a native CSS feature</li>
 <li>They cascade &ldquo;down&rdquo; in the CSS, just like any other property (<code>font-size</code>, <code>color</code>, etc.)</li>
-<li>They can be locally scoped, that is changed for a certain element and it's children</li>
+<li>They can be locally scoped, that is changed for a certain element and it&rsquo;s children</li>
 <li>They can be changed with JavaScript at runtime and the browser will re-render every element which uses them</li>
 </ul>
 <p>At this point it becomes clear why they are an advantage over pre-processor variables. We have more control of changing them and they present us with a powerful new way to implement multiple layouts for our websites.</p>
 <h2 id="implementing-persistent-settings">Implementing persistent settings</h2>
-<p>As I mentioned before for my website (this very blog you read right now), the Settings are persistent. If you change the font size or colors and navigate to a new page you'll still have your custom styles - not my default styles. I do not use any backend software like PHP, Go, or Ruby; Instead this website is a static website, which means all HTML pages are rendered before and then deployed to <a href="https://www.netlify.com/">Netlify</a>. So there is no backend which can save your settings and then send them back to your browser once you navigate to a new site.</p>
+<p>As I mentioned before for my website (this very blog you read right now), the Settings are persistent. If you change the font size or colors and navigate to a new page you&rsquo;ll still have your custom styles - not my default styles. I do not use any backend software like PHP, Go, or Ruby; Instead this website is a static website, which means all HTML pages are rendered before and then deployed to <a href="https://www.netlify.com/">Netlify</a>. So there is no backend which can save your settings and then send them back to your browser once you navigate to a new site.</p>
 <p>The saving part is done on the client side, inside your browser. A browser feature called <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Local Storage</a>. Local Storage is a text-based, key-value storage which developers can use to store (small) text based values inside the browser. This allows us to have some sort of persitent storage on the client side without the need for a backend. For my use case (storing settings) this is perfect.</p>
 <p>When you open the settings menu and click &ldquo;Save&rdquo; I grab all the values with JavaScript (<a href="https://github.com/kevingimbel/kevingimbel.com/blob/9f11b96f428f01b1ae14f8673c2e4f48e8ee3b21/themes/next/static/js/a11y.settings.js#L123-L138">See the code on GitHub</a>)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">settingsForm</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;submit&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
@@ -120,7 +120,7 @@
   document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;tabindex&#39;</span>, <span style="color:#e6db74">&#34;0&#34;</span>);
   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
 });
-</code></pre></div><p>There's quite a lot going on. The important bit for now is <code>localStorage.setItem('a11y_settings', JSON.stringify(lsSettings));</code>. This line sets a new item in the local storage named <code>a11y_settings</code>, scoped to my website (kevingimbel.com). This JSON object holds all relevant information for your custom settings and looks like this:</p>
+</code></pre></div><p>There&rsquo;s quite a lot going on. The important bit for now is <code>localStorage.setItem('a11y_settings', JSON.stringify(lsSettings));</code>. This line sets a new item in the local storage named <code>a11y_settings</code>, scoped to my website (kevingimbel.com). This JSON object holds all relevant information for your custom settings and looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;--body-invert&#34;</span>: <span style="color:#ae81ff">0</span>,
   <span style="color:#f92672">&#34;--color-accent-primary&#34;</span>: <span style="color:#e6db74">&#34;#3e934b&#34;</span>,
@@ -173,7 +173,7 @@
 </code></pre></div><p>What happens here is the following:</p>
 <ul>
 <li>We check if there are custom setting (<code>if( localStorage.getItem(&quot;a11y_settings&quot;) )</code>)</li>
-<li>Then we read it in, it's a JSON string so we need to parse it</li>
+<li>Then we read it in, it&rsquo;s a JSON string so we need to parse it</li>
 <li>Next we loop through all properties of the JSON, which are key-value pairs like <code>{ &quot;--color&quot;: &quot;#ddd&quot; }</code></li>
 <li>Each key-value pair is set as inline style on the documentElement (the <code>html</code> element)</li>
 </ul>
@@ -190,7 +190,7 @@
     See the Pen <a href="https://codepen.io/kevingimbel/pen/604946ab15c48299b1f7b54b7a758cfb/">CSS Filter Invert</a> on <a href="https://codepen.io">CodePen</a>.
 </p>
 
-<p>That's exactly what happens when you click &ldquo;Dark mode&rdquo; in the settings menu above. So why do we need the class <code>dark-mode</code>? Because with <code>filter: invert(100%)</code> everything is inverted including images and videos - which we do not want. These elements should not be inverted so we need to apply a <code>filter: invert(100%)</code> to them when dark mode is active, which is done with the following CSS snipped.</p>
+<p>That&rsquo;s exactly what happens when you click &ldquo;Dark mode&rdquo; in the settings menu above. So why do we need the class <code>dark-mode</code>? Because with <code>filter: invert(100%)</code> everything is inverted including images and videos - which we do not want. These elements should not be inverted so we need to apply a <code>filter: invert(100%)</code> to them when dark mode is active, which is done with the following CSS snipped.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">iframe</span> {
@@ -207,7 +207,7 @@
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">iframe</span> {
   <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>) <span style="color:#75715e">!important</span>;
 }
-</code></pre></div><p>And that's it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I'm happy with the result.</p>
+</code></pre></div><p>And that&rsquo;s it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I&rsquo;m happy with the result.</p>
 <p>Got any feedback? Want to tell me how much the news design sucks? Love it? Hit me up on <a href="https://twitter.com/_kevinatari" title="Find me on twitter">Twitter @_kevinatari</a></p>
 ]]></content>
             
@@ -285,7 +285,7 @@
   
 </figure>
 
-<p>I am absolutely in love with Breath Of The Wild. It's such a well made, high-quality game and I can hardly but the <a href="http://amzn.to/2lLRcN1">Nintendo Switch</a> down. Running around and exploring the open areas, climbing mountains, finding <a href="http://zelda.wikia.com/wiki/Korok">Korok</a> hidden everywhere around - it's just fun! I enjoy running around with no aim for hours and finding new things.</p>
+<p>I am absolutely in love with Breath Of The Wild. It&rsquo;s such a well made, high-quality game and I can hardly but the <a href="http://amzn.to/2lLRcN1">Nintendo Switch</a> down. Running around and exploring the open areas, climbing mountains, finding <a href="http://zelda.wikia.com/wiki/Korok">Korok</a> hidden everywhere around - it&rsquo;s just fun! I enjoy running around with no aim for hours and finding new things.</p>
 
 <figure >
   
@@ -306,11 +306,11 @@
   
 </figure>
 
-<p>Beside spending hours climbing up mountains to find all my little Korok friends I also conquered three of the four <a href="http://zelda.wikia.com/wiki/Divine_Beast">Divine Beasts</a>. The last one missing is <a href="http://zelda.wikia.com/wiki/Vah_Naboris">Vah Naboris</a>, a gigantic camel. I think until <a href="http://amzn.to/2nNCGZA">Elder Scrolls Online: Morrowind</a> is released I will spent all my time running through Hyrule. I cannot recommend Breath Of The Wild enough - it's fantastic!</p>
+<p>Beside spending hours climbing up mountains to find all my little Korok friends I also conquered three of the four <a href="http://zelda.wikia.com/wiki/Divine_Beast">Divine Beasts</a>. The last one missing is <a href="http://zelda.wikia.com/wiki/Vah_Naboris">Vah Naboris</a>, a gigantic camel. I think until <a href="http://amzn.to/2nNCGZA">Elder Scrolls Online: Morrowind</a> is released I will spent all my time running through Hyrule. I cannot recommend Breath Of The Wild enough - it&rsquo;s fantastic!</p>
 <h2 id="thelinkclub">TheLink.club</h2>
-<p>Some time ago I bought the domain <a href="http://thelink.club">thelink.club</a> - it's currently empty but I am working on something more or less actively. It's a HTTP based API for saving and sharing links in a collaborative way. The basic idea is that I'll write browser extensions for Chrome, Firefox, Safari, and maybe IE from which you can sent links to an API endpoint. Links are then saved inside MongoDB and can be queried or read out over HTTP. This way the LinkClub lists can be output into a variety of systems using techniques like Ajax.</p>
-<p>It's a great way to get into Go / Microservice programming with Go and I already learned quite a lot about using the http package in Go. I enjoy working with Go; It's challenging and new to me. Coming from languages like JavaScript and PHP I enjoy the strictness and the good compiler - and compiler errors - while developing. I might write down a bit of what I learned along the way as a new Go user and what was challenging coming from JavaScript or PHP.</p>
-<h2 id="vlkerball">Völkerball</h2>
+<p>Some time ago I bought the domain <a href="http://thelink.club">thelink.club</a> - it&rsquo;s currently empty but I am working on something more or less actively. It&rsquo;s a HTTP based API for saving and sharing links in a collaborative way. The basic idea is that I&rsquo;ll write browser extensions for Chrome, Firefox, Safari, and maybe IE from which you can sent links to an API endpoint. Links are then saved inside MongoDB and can be queried or read out over HTTP. This way the LinkClub lists can be output into a variety of systems using techniques like Ajax.</p>
+<p>It&rsquo;s a great way to get into Go / Microservice programming with Go and I already learned quite a lot about using the http package in Go. I enjoy working with Go; It&rsquo;s challenging and new to me. Coming from languages like JavaScript and PHP I enjoy the strictness and the good compiler - and compiler errors - while developing. I might write down a bit of what I learned along the way as a new Go user and what was challenging coming from JavaScript or PHP.</p>
+<h2 id="völkerball">Völkerball</h2>
 
 <figure >
   
@@ -331,7 +331,7 @@
   
 </figure>
 
-<p><a href="http://www.voelkerball.eu/">Völkerball</a> is a Rammstein Cover band and I had the pleasure to see them live. They not only have a full stage setup similar to older shows by Rammstein, they also have a lead singer with a voice similar to Till Lindemann which makes the entire experience of seeing them a lot better. The concert was around 2-2.5h of an amazing live performance with costume changes and a &ldquo;choreography&rdquo; similar to what Rammstein performs on stage - minus the fire show. For &ldquo;Mein Teil&rdquo; they even had the kettle. If you're into Rammstein and get the chance to see Völkerball live do it! It's well worth it.</p>
+<p><a href="http://www.voelkerball.eu/">Völkerball</a> is a Rammstein Cover band and I had the pleasure to see them live. They not only have a full stage setup similar to older shows by Rammstein, they also have a lead singer with a voice similar to Till Lindemann which makes the entire experience of seeing them a lot better. The concert was around 2-2.5h of an amazing live performance with costume changes and a &ldquo;choreography&rdquo; similar to what Rammstein performs on stage - minus the fire show. For &ldquo;Mein Teil&rdquo; they even had the kettle. If you&rsquo;re into Rammstein and get the chance to see Völkerball live do it! It&rsquo;s well worth it.</p>
 
 <figure >
   
@@ -352,7 +352,7 @@
   
 </figure>
 
-<p>Alright, that's it. See you next month or week or whatever. 👋</p>
+<p>Alright, that&rsquo;s it. See you next month or week or whatever. 👋</p>
 ]]></content>
             
                  
@@ -399,7 +399,7 @@
             <updated>2017-03-05T19:43:16+01:00</updated>
             
             
-            <content type="html"><![CDATA[<p>It turns out that a lot of my time is actually spent working or playing games - so there's not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the <a href="http://amzn.to/2lLRcN1">Nintendo Switch</a> and <a href="http://amzn.to/2msN60T">The Legend Of Zelda: Breath of the Wild</a> were released.</p>
+            <content type="html"><![CDATA[<p>It turns out that a lot of my time is actually spent working or playing games - so there&rsquo;s not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the <a href="http://amzn.to/2lLRcN1">Nintendo Switch</a> and <a href="http://amzn.to/2msN60T">The Legend Of Zelda: Breath of the Wild</a> were released.</p>
 <h2 id="antilopen-gang">Antilopen Gang</h2>
 
 <figure >
@@ -421,7 +421,7 @@
   
 </figure>
 
-<p>I had the pleasure to see German Hip-Hop/Rap band <a href="https://en.wikipedia.org/wiki/Antilopen_Gang">Antilopen Gang</a> live for the first time and I was simply blown away. I expected a rather chill concert but got one and a half hours of full blown Hip-Hop and Punk. The Punk elements are &ldquo;new&rdquo; within their music and I love it. I can't wait for the next time I will be able to see them live. 5/7 would recommend. 👍</p>
+<p>I had the pleasure to see German Hip-Hop/Rap band <a href="https://en.wikipedia.org/wiki/Antilopen_Gang">Antilopen Gang</a> live for the first time and I was simply blown away. I expected a rather chill concert but got one and a half hours of full blown Hip-Hop and Punk. The Punk elements are &ldquo;new&rdquo; within their music and I love it. I can&rsquo;t wait for the next time I will be able to see them live. 5/7 would recommend. 👍</p>
 <h2 id="nintendo-switch">Nintendo Switch</h2>
 <p>As I mentioned I pre-ordered the <a href="http://amzn.to/2lLRcN1">Nintendo Switch</a> and I am in love with it. As expected the Switch is a solid and beautifully made device. It might be a <em>bit</em> to big for in-hand playing but I got used to it after a few hours. I got Breath of the Wild, the newest title in the <em>The Legend Of Zelda</em> series with the switch and have been playing it four roughly 10 hours.</p>
 <h2 id="the-legend-of-zelda-breath-of-the-wild">The Legend Of Zelda: Breath Of The Wild</h2>
@@ -467,8 +467,8 @@
   
 </figure>
 
-<p>The cooked food restores more health and - based on ingredients - grands additional effects like increased armor, speed, or stealth. I like this system and it's fun to experiment with different ingredients.</p>
-<p>That's it for week 8 and 9. See you next week. Or the week after. 👋</p>
+<p>The cooked food restores more health and - based on ingredients - grands additional effects like increased armor, speed, or stealth. I like this system and it&rsquo;s fun to experiment with different ingredients.</p>
+<p>That&rsquo;s it for week 8 and 9. See you next week. Or the week after. 👋</p>
 ]]></content>
             
                  
@@ -518,7 +518,7 @@
             <content type="html"><![CDATA[<p>In week six nothing happened so it was skipped. Quite nice, actually. In the second half of week six and through week seven I prepared a workshop which I gave on Friday at the <a href="https://www.meetup.com/de-DE/Frankfurt-Developers/events/237066551/">Coding Night</a>. This Coding Night was a special one: The topic was &ldquo;CodingNight feat. CodeDoor feat. Refugees&rdquo; which was a collaboration between <a href="https://www.meetup.com/de-DE/Frankfurt-Developers/">CodingNight</a> and <a href="http://codedoor.org/">CodeDoor</a>. CodeDoor is a project which teaches Refugees coding skills, how to build projects and how to get a Job in the programming field. I jumped at the chance to get a spot and share my knowledge so I prepared a Workshop on how to build your own Website with Jekyll and GitHub. Sadly due to problems with the different operating systems we could not finish the workshop and in the end &ldquo;only&rdquo; installed Git at every device. I would like to continue my workshop and finish it over time. Maybe at the next Coding Night which I should join more often!</p>
 <p>If you want you can take a look at the <a href="https://docs.google.com/presentation/d/1F6Xi-zF0YjaQ7q85Ot6jtrrMVD0njcBijXOqNDsM57Y/edit?usp=sharing">Presentation</a> or the <a href="https://lab.kevingimbel.me/workshop/2017/coding-night-x-code-door/">Workshop Material I wrote</a>.</p>
 <h3 id="sum41">sum41</h3>
-<p>I saw sum41 live for the first time ever. When I was younger I liked their music a lot but never had the chance to see them. So this Thursday my girlfriend, a friend, and I went to my favorite concert venue, <a href="https://schlachthof-wiesbaden.de/">Schlachthof Wiesbaden</a>. I did not expect too much from the concert and was surprised how good they actually are. They played a variety of old and new songs and I can recommend going to a concert near you if it isn't sold out already.</p>
+<p>I saw sum41 live for the first time ever. When I was younger I liked their music a lot but never had the chance to see them. So this Thursday my girlfriend, a friend, and I went to my favorite concert venue, <a href="https://schlachthof-wiesbaden.de/">Schlachthof Wiesbaden</a>. I did not expect too much from the concert and was surprised how good they actually are. They played a variety of old and new songs and I can recommend going to a concert near you if it isn&rsquo;t sold out already.</p>
 
 <figure >
   
@@ -540,7 +540,7 @@
 </figure>
 
 <p>Surprisingly for a punk concert there was a hell of a light show throughout the concert.</p>
-<p>And that's it. See you next week (or not). 👋</p>
+<p>And that&rsquo;s it. See you next week (or not). 👋</p>
 ]]></content>
             
                  
@@ -587,16 +587,16 @@
             <updated>2017-02-08T08:51:13+01:00</updated>
             
             
-            <content type="html"><![CDATA[<p>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I'm only 6 months late to do so because I kept saying &ldquo;I'll call next week&rdquo;, &ldquo;I'll do it when I'm back from Amsterdam&rdquo;, &ldquo;I'll do it after Christmas&rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up <a href="https://twitter.com/_kevinatari">on twitter @_kevinatari</a>.</p>
+            <content type="html"><![CDATA[<p>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&rsquo;m only 6 months late to do so because I kept saying &ldquo;I&rsquo;ll call next week&rdquo;, &ldquo;I&rsquo;ll do it when I&rsquo;m back from Amsterdam&rdquo;, &ldquo;I&rsquo;ll do it after Christmas&rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up <a href="https://twitter.com/_kevinatari">on twitter @_kevinatari</a>.</p>
 <h3 id="go-">Go 💻</h3>
-<p>You might know I am learning Go at the moment. I build a new thingy, <code>Colog</code>, which is a log helper that supports a basic configuration and produced colorful terminal logs. It's still in its early phase and there's a lot more I want to implement - I just don't know how because I am not yet fluent in Go. The project is open-sourced on GitHub at <a href="https://github.com/kevingimbel/colog">kevingimbel/colog</a>.</p>
+<p>You might know I am learning Go at the moment. I build a new thingy, <code>Colog</code>, which is a log helper that supports a basic configuration and produced colorful terminal logs. It&rsquo;s still in its early phase and there&rsquo;s a lot more I want to implement - I just don&rsquo;t know how because I am not yet fluent in Go. The project is open-sourced on GitHub at <a href="https://github.com/kevingimbel/colog">kevingimbel/colog</a>.</p>
 <h3 id="moving-">Moving 📦</h3>
-<p>I spent my Saturday helping my girlfriend move to her new flat which was exhausting. Nonetheless I enjoyed it somehow, moving is hard work and it's a good feeling to sit in a filled flat after moving all the stuff around all day. I like it. Don't ask me to help you move, tho. &lt;3</p>
-<p>On Thursday and Friday I spent all my work time with Amazon Web Services (AWS) and Elasticsearch. My Elasticsearch cluster is now running and I try to get log files into it with <a href="https://www.elastic.co/products/logstash">Logstash</a> and <a href="https://www.elastic.co/products/beats">Beats</a>. The last problem to solve is that the parsing of log files appears to be really hard. Logstash has a &ldquo;language&rdquo; for parsing files called <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html#_grok_basics"><code>grok</code></a> which basically is a variable-to-regex system. It's rather complicated. At the moment I do not understand it and I do not get it to properly parse my log files. I guess that's a thing for the next week - getting Logstash up and running.</p>
+<p>I spent my Saturday helping my girlfriend move to her new flat which was exhausting. Nonetheless I enjoyed it somehow, moving is hard work and it&rsquo;s a good feeling to sit in a filled flat after moving all the stuff around all day. I like it. Don&rsquo;t ask me to help you move, tho. &lt;3</p>
+<p>On Thursday and Friday I spent all my work time with Amazon Web Services (AWS) and Elasticsearch. My Elasticsearch cluster is now running and I try to get log files into it with <a href="https://www.elastic.co/products/logstash">Logstash</a> and <a href="https://www.elastic.co/products/beats">Beats</a>. The last problem to solve is that the parsing of log files appears to be really hard. Logstash has a &ldquo;language&rdquo; for parsing files called <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html#_grok_basics"><code>grok</code></a> which basically is a variable-to-regex system. It&rsquo;s rather complicated. At the moment I do not understand it and I do not get it to properly parse my log files. I guess that&rsquo;s a thing for the next week - getting Logstash up and running.</p>
 <h3 id="politics-and-stuff-">Politics and stuff 🏴</h3>
-<p>The current situation around the globe troubles me a lot. It's draining me out and I have to stop consuming news and (twitter) feeds from time to time. The issue with Trump going mental in America and the slow but steady rise of facist parties across Europe is too depressing to constantly follow it. I got a pay rise in January and I decided to support independent journalism and Antifa and left-wing movements with it instead if putting all aside. First on the list are Corrective and Streetcoverage. I need to do more research on who I want to support and how I can support them. I also made <a href="https://twitter.com/i/moments/825810866377469953">a Twitter Moment</a> with some of the tweets I liked this week. Hint: It's political.</p>
-<p>Related to current events I also started playing Skyrim again, this time on the XBox One with Mods. It's a great escape for me because I love the world and lore of Skyrim and for a few hours I can forget everything that troubles me.</p>
-<p>That's it for week five. See you next week! 🙋</p>
+<p>The current situation around the globe troubles me a lot. It&rsquo;s draining me out and I have to stop consuming news and (twitter) feeds from time to time. The issue with Trump going mental in America and the slow but steady rise of facist parties across Europe is too depressing to constantly follow it. I got a pay rise in January and I decided to support independent journalism and Antifa and left-wing movements with it instead if putting all aside. First on the list are Corrective and Streetcoverage. I need to do more research on who I want to support and how I can support them. I also made <a href="https://twitter.com/i/moments/825810866377469953">a Twitter Moment</a> with some of the tweets I liked this week. Hint: It&rsquo;s political.</p>
+<p>Related to current events I also started playing Skyrim again, this time on the XBox One with Mods. It&rsquo;s a great escape for me because I love the world and lore of Skyrim and for a few hours I can forget everything that troubles me.</p>
+<p>That&rsquo;s it for week five. See you next week! 🙋</p>
 ]]></content>
             
                  
@@ -643,7 +643,7 @@
             <updated>2017-01-29T12:44:43+01:00</updated>
             
             
-            <content type="html"><![CDATA[<p>It's the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there's not much to say so this will be a quick read with some reading recommendations at the end.</p>
+            <content type="html"><![CDATA[<p>It&rsquo;s the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there&rsquo;s not much to say so this will be a quick read with some reading recommendations at the end.</p>
 <h3 id="dep"><code>dep</code></h3>
 <p>The Go language has released a alpha version of <a href="https://github.com/golang/dep"><code>dep</code></a> - their dependency management tool. Up until now there was no native suport for dependency management in Go. Go provides an <code>import</code> functionality to load packages. The <code>import</code> mechanism is similar to the NodeJS <code>require</code> - with the big difference that it used to store all packages inside the <code>$GOPATH</code> - a directory on the system where all packages from all go code is stored. With the new <code>dep</code> dependency manager dependencies will be stored inside a <code>vendor</code> directory inside the package directory - similar to <code>node_modules</code>.</p>
 <p>I started playing around with the alpha release and will write a article about it once I gathered enough information.</p>
@@ -653,14 +653,14 @@
   <iframe src="https://www.youtube.com/embed/-HiQUw5Np8o" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<p>My best friend showed me <a href="http://necrodancer.com/">Crypt of the NecroDancer</a>, a rhythmic, rouge-like, dungeon crawler where you dance your way deep into a dungeon. It's beautiful. Weird, and beautiful. You have to stay in the rhythm to move around and attack enemies. The more you stay in rhythm the better your score gets. Typical for rouge-like games when you die you need to start over. I only played for an hour or so but look forward to continue it. It's more casual which is what I need - or want - to play at the moment. I bought it for PlayStation 4 but its also available on PS Vita, Mac, PC, and iOS.</p>
+<p>My best friend showed me <a href="http://necrodancer.com/">Crypt of the NecroDancer</a>, a rhythmic, rouge-like, dungeon crawler where you dance your way deep into a dungeon. It&rsquo;s beautiful. Weird, and beautiful. You have to stay in the rhythm to move around and attack enemies. The more you stay in rhythm the better your score gets. Typical for rouge-like games when you die you need to start over. I only played for an hour or so but look forward to continue it. It&rsquo;s more casual which is what I need - or want - to play at the moment. I bought it for PlayStation 4 but its also available on PS Vita, Mac, PC, and iOS.</p>
 <h3 id="antilopen-gang">Antilopen Gang</h3>
 <p>I bought tickets for <a href="http://www.schlachthof-wiesbaden.de/programmdetails/items/antilopen-gang-anarchie-alltag.html">Antilopen Gang</a>. Antilopen Gang is german Hip Hop - and Punk, at least on their latest album <a href="https://play.google.com/music/m/Bl6aukayea54w6hm757vx2npv3m?t=Anarchie_und_Alltag__Bonusalbum_Atombombe_auf_Deutschland_-_Antilopen_Gang">&ldquo;Anarchie und Alltag&rdquo;</a>. I am looking forward to the concert!</p>
 <h3 id="things-to-read">Things to read</h3>
 <p><a href="https://code.facebook.com/posts/557147474482256/this-browser-tweak-saved-60-of-requests-to-facebook">&ldquo;This browser tweak saved 60% of requests to Facebook&rdquo;</a> - how Facebook worked with browser vendors to tweak the browser cache, effectively saving 60% of requests to Servers.</p>
-<p><a href="http://www.theverge.com/2017/1/26/14398934/tim-scully-lsd-chemistry-drugs-counterculture-psychedelics">&ldquo;Here’s how underground chemist Tim Scully planned to save the world with LSD&rdquo;</a> the Story of Tim Scully who produced LSD in the 60s in underground labs. It's an interesting read into the world of psychedelics and LSD production - which appears to be really hard.</p>
-<p>I made a <a href="https://twitter.com/i/moments/825722790259126273">Twitter Moment</a> with some tweets I found interesting. Most tweets are political and represents feedback to Trumps shit show. It's horrible how much he fucked up in just one week - stay anti, USA! 🏴</p>
-<p>That's it for week four. Next week I will help my girlfriend move to her new flat and hopefully finally get to my tattoo artist so we can arrange a session to finish up my tattoo - which is long overdue.</p>
+<p><a href="http://www.theverge.com/2017/1/26/14398934/tim-scully-lsd-chemistry-drugs-counterculture-psychedelics">&ldquo;Here’s how underground chemist Tim Scully planned to save the world with LSD&rdquo;</a> the Story of Tim Scully who produced LSD in the 60s in underground labs. It&rsquo;s an interesting read into the world of psychedelics and LSD production - which appears to be really hard.</p>
+<p>I made a <a href="https://twitter.com/i/moments/825722790259126273">Twitter Moment</a> with some tweets I found interesting. Most tweets are political and represents feedback to Trumps shit show. It&rsquo;s horrible how much he fucked up in just one week - stay anti, USA! 🏴</p>
+<p>That&rsquo;s it for week four. Next week I will help my girlfriend move to her new flat and hopefully finally get to my tattoo artist so we can arrange a session to finish up my tattoo - which is long overdue.</p>
 ]]></content>
             
                  
@@ -706,7 +706,7 @@
             <updated>2017-01-22T11:44:43+01:00</updated>
             
             
-            <content type="html"><![CDATA[<p>Another week another short review! The third week of 2017 had a lot of travel because I attended an <a href="https://elastic.co">Elasticsearch</a> training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it's a great reference to look at.</p>
+            <content type="html"><![CDATA[<p>Another week another short review! The third week of 2017 had a lot of travel because I attended an <a href="https://elastic.co">Elasticsearch</a> training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it&rsquo;s a great reference to look at.</p>
 <h3 id="munich">Munich</h3>
 
 <figure >
@@ -728,17 +728,17 @@
   
 </figure>
 
-<p>Munich was cold with -7°C to -10°C and there was a lot of snow - for a few days it was nice but I'm happy to be back in the middle of Germany without snow. I stayed at <a href="https://www.airbnb.com/rooms/197005">an Airbnb</a> because all hotels around the city were booked due to a big conference in town. If you want to visit Munich check out the above room - it's great!</p>
-<p>During my trip to and from Munich I also had to work at a Starbucks and on the train. Both places are not perfect for working if you're used to a second monitor and having space around you. Starbucks was also really loud which can get annoying - good thing there's music! What helped me tremendously was the MacBook battery life. I can get an average of 8-10 hours of battery life which is simply astonishing.</p>
+<p>Munich was cold with -7°C to -10°C and there was a lot of snow - for a few days it was nice but I&rsquo;m happy to be back in the middle of Germany without snow. I stayed at <a href="https://www.airbnb.com/rooms/197005">an Airbnb</a> because all hotels around the city were booked due to a big conference in town. If you want to visit Munich check out the above room - it&rsquo;s great!</p>
+<p>During my trip to and from Munich I also had to work at a Starbucks and on the train. Both places are not perfect for working if you&rsquo;re used to a second monitor and having space around you. Starbucks was also really loud which can get annoying - good thing there&rsquo;s music! What helped me tremendously was the MacBook battery life. I can get an average of 8-10 hours of battery life which is simply astonishing.</p>
 <h3 id="open-source">Open source</h3>
 <p>I also helped <a href="https://github.com/spf13/hugo/issues/2946">track down a bug</a> with Gulp and hugo, and then decided to tweet what I have been doing for the past two month: <a href="https://twitter.com/_kevinatari/status/821773139617218562">Following an open source project</a></p>
 <p>Following an open source project is quite interesting. I read a lot of the hugo issue reports and look at the Pull Requests submitted. This helps me see how to handle pull requests and open source and in my opinion <a href="https://github.com/spf13/hugo">the hugo project</a> is a good example.</p>
 <h3 id="star-trek">Star Trek</h3>
-<p>I finished The Original Series and now started to watch The Next Generation. It's the first time I watch everything in the correct order and I'm exited!</p>
-<p>I also programmed a bit and build a text to 1337speak converter <a href="https://github.com/kevingimbel/leetscript">node module</a> and a <a href="https://github.com/kevingimbel/leetscript-cli">cli tool</a> which uses the first module. I'm not yet sure why you would need this type of one-way converter but it was an interesting task to build a node module, publish it, and then use it in a script - I'll try and wrap it up in a post.</p>
+<p>I finished The Original Series and now started to watch The Next Generation. It&rsquo;s the first time I watch everything in the correct order and I&rsquo;m exited!</p>
+<p>I also programmed a bit and build a text to 1337speak converter <a href="https://github.com/kevingimbel/leetscript">node module</a> and a <a href="https://github.com/kevingimbel/leetscript-cli">cli tool</a> which uses the first module. I&rsquo;m not yet sure why you would need this type of one-way converter but it was an interesting task to build a node module, publish it, and then use it in a script - I&rsquo;ll try and wrap it up in a post.</p>
 <p>I also wrote a blog post about <a href="/deploy-a-static-site-with-git/">deploying a site with git</a> - which is what I am doing with my website at the moment.</p>
 <h3 id="not-on-tour">Not On Tour</h3>
-<p>On Friday I saw <a href="https://notontour.bandcamp.com/">Not On Tour</a> live with my girlfriend. Not On Tour is a Punk / Hardcore Punk Band from Tel Aviv and I loved every bit of the concerts. The concert was in a small venue with around 50-100 people and they sounded a bit harder live then I expected - and a lot more powerful. I would recommend seeing them live whenever you get a chance. <a href="https://www.instagram.com/p/BPhmT5rgJvw/?taken-by=kevingimbel">Here's a little Instagram video</a>.</p>
+<p>On Friday I saw <a href="https://notontour.bandcamp.com/">Not On Tour</a> live with my girlfriend. Not On Tour is a Punk / Hardcore Punk Band from Tel Aviv and I loved every bit of the concerts. The concert was in a small venue with around 50-100 people and they sounded a bit harder live then I expected - and a lot more powerful. I would recommend seeing them live whenever you get a chance. <a href="https://www.instagram.com/p/BPhmT5rgJvw/?taken-by=kevingimbel">Here&rsquo;s a little Instagram video</a>.</p>
 <h3 id="links">Links</h3>
 <p>Here are some interesting things from this week:</p>
 <p><a href="https://www.youtube.com/watch?v=HTD-FJVY9rE">All Fallout Intros, 1997-2015</a> - seeing all the intros to one of my favorite game series is great.</p>
@@ -789,22 +789,22 @@
             <updated>2017-01-15T17:05:13+01:00</updated>
             
             
-            <content type="html"><![CDATA[<p>This week I spent a lot of time with Amazon Web Services, or AWS, and made myself familiar with the backend and the way server / instance management works on AWS. While doing so I also learned that AWS instances are by default not accessible from the internet - they have no open ports and each instance needs a &ldquo;Security Group&rdquo; which defines ways to access the instance. They also do not have Shell access by default. When you've never worked with AWS the pure amount of options is overwhelming. I felt like endlessly reading through documentations until I had everything setup correctly. It was quite a task and I'm sure the next time I need to setup an AWS instance it will go smoother. I might cover what I've learned in a blog post once I am &ldquo;done&rdquo;.</p>
-<p>I played a bit of recore and Dragon Age: Inquisition but I am not in the mood to play too much video games at the moment. After spending hundreds of hours in The Elder Scrolls: Online last year I feel it's good to have my controller rest for a while. I did spent time watching Star Trek tho. I am almost finished with The Original Series and in fact it's the first time ever I watched it episode by episode.</p>
+            <content type="html"><![CDATA[<p>This week I spent a lot of time with Amazon Web Services, or AWS, and made myself familiar with the backend and the way server / instance management works on AWS. While doing so I also learned that AWS instances are by default not accessible from the internet - they have no open ports and each instance needs a &ldquo;Security Group&rdquo; which defines ways to access the instance. They also do not have Shell access by default. When you&rsquo;ve never worked with AWS the pure amount of options is overwhelming. I felt like endlessly reading through documentations until I had everything setup correctly. It was quite a task and I&rsquo;m sure the next time I need to setup an AWS instance it will go smoother. I might cover what I&rsquo;ve learned in a blog post once I am &ldquo;done&rdquo;.</p>
+<p>I played a bit of recore and Dragon Age: Inquisition but I am not in the mood to play too much video games at the moment. After spending hundreds of hours in The Elder Scrolls: Online last year I feel it&rsquo;s good to have my controller rest for a while. I did spent time watching Star Trek tho. I am almost finished with The Original Series and in fact it&rsquo;s the first time ever I watched it episode by episode.</p>
 <p><img src="https://i.giphy.com/l2R03nrt5LDkpc6VG.gif" alt="&ldquo;Spock jamming in space&rdquo;"></p>
-<p>I'm looking forward to continuing with The Next Generation once I'm finished with The Original Series. You can probably tell I really like Star Trek. 🖖 I am also looking forward to <a href="https://en.wikipedia.org/wiki/Star_Trek:_Discovery">Star Trek: Discovery</a>.</p>
-<p>I wrote two articles, <a href="https://kevingimbel.com/bash-script-ws/">&ldquo;Bash script: ws&rdquo;</a> and <a href="https://kevingimbel.com/writing-nodejs-cli-tools/">&ldquo;Writing NodeJS cli tools&rdquo;</a> which both focus on the command line and command line tools - one time in shell script and one time in NodeJS. I plan to write more articles about both since it's a topic I am interested in.
+<p>I&rsquo;m looking forward to continuing with The Next Generation once I&rsquo;m finished with The Original Series. You can probably tell I really like Star Trek. 🖖 I am also looking forward to <a href="https://en.wikipedia.org/wiki/Star_Trek:_Discovery">Star Trek: Discovery</a>.</p>
+<p>I wrote two articles, <a href="https://kevingimbel.com/bash-script-ws/">&ldquo;Bash script: ws&rdquo;</a> and <a href="https://kevingimbel.com/writing-nodejs-cli-tools/">&ldquo;Writing NodeJS cli tools&rdquo;</a> which both focus on the command line and command line tools - one time in shell script and one time in NodeJS. I plan to write more articles about both since it&rsquo;s a topic I am interested in.
 I also <a href="https://github.com/kevingimbel/kevingimbel.com/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aclosed%20created%3A2017-01-08..2017-01-15%20">fixed an issue</a> I introduced due to bad CSS scoping. Always check your scope!</p>
-<p>Next week I will be in Munich, Germany to attend a Elastic course about Elasticsearch and relevant products. I'm exited and I'm looking forward to the 2-day course.</p>
+<p>Next week I will be in Munich, Germany to attend a Elastic course about Elasticsearch and relevant products. I&rsquo;m exited and I&rsquo;m looking forward to the 2-day course.</p>
 <p><strong>Other things:</strong></p>
 <ul>
-<li>I pre-ordered the <a href="http://amzn.to/2izPQqn">Nintendo Switch</a> and <a href="http://amzn.to/2jygmPp">The Legend of Zelda: Breath of the Wild</a> and I'm exited!</li>
+<li>I pre-ordered the <a href="http://amzn.to/2izPQqn">Nintendo Switch</a> and <a href="http://amzn.to/2jygmPp">The Legend of Zelda: Breath of the Wild</a> and I&rsquo;m exited!</li>
 <li><em>Yo no hablo español, soy aprendendio español!</em> I started learning Spanish again. 🎉</li>
-<li>I cooked vegan curry and accidentally made so much I could eat it all week. I'm now taking a Curry break.</li>
+<li>I cooked vegan curry and accidentally made so much I could eat it all week. I&rsquo;m now taking a Curry break.</li>
 <li>I learned <a href="https://help.github.com/articles/searching-issues/">GitHub has great advanced search options</a></li>
-<li>The xx released their third Studio Album called &ldquo;I see you&rdquo;. It's fantastic. (Listen: <a href="https://play.google.com/music/listen?u=0#/album//The+xx/I+See+You">Google Play Music</a> / <a href="https://open.spotify.com/album/2PXy9USZAoTSdtrxfkPBnl">Spotify</a>)</li>
+<li>The xx released their third Studio Album called &ldquo;I see you&rdquo;. It&rsquo;s fantastic. (Listen: <a href="https://play.google.com/music/listen?u=0#/album//The+xx/I+See+You">Google Play Music</a> / <a href="https://open.spotify.com/album/2PXy9USZAoTSdtrxfkPBnl">Spotify</a>)</li>
 </ul>
-<p>That's it for week two. 👋</p>
+<p>That&rsquo;s it for week two. 👋</p>
 ]]></content>
             
                  
@@ -848,10 +848,10 @@ I also <a href="https://github.com/kevingimbel/kevingimbel.com/issues?utf8=%E2%9
             <updated>2017-01-08T18:02:48+01:00</updated>
             
             
-            <content type="html"><![CDATA[<p>German <a href="http://uarrr.org/">blogger</a>, <a href="http://marcel.io/">designer</a>, and <a href="https://www.youtube.com/rrradiovisiontv/">YouTuber</a> Marcel Wichmann started a <a href="http://uarrr.org/2017/01/08/rrruckblick-kalenderwoche-152-2017/">weekly-review blog series</a> which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &ldquo;easy&rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I'll keep it up for each week but I will try. So, here's week one.</p>
-<h3 id="new-years-resolution">New Year's resolution</h3>
-<p>I am not sure where this tradition comes from, but in Germany (and most western countries as far as I know), it's a thing to set goals for the new year. It's basically like a To-Do List for the coming year with things one wants to change.</p>
-<p>My New Year's resolution are:</p>
+            <content type="html"><![CDATA[<p>German <a href="http://uarrr.org/">blogger</a>, <a href="http://marcel.io/">designer</a>, and <a href="https://www.youtube.com/rrradiovisiontv/">YouTuber</a> Marcel Wichmann started a <a href="http://uarrr.org/2017/01/08/rrruckblick-kalenderwoche-152-2017/">weekly-review blog series</a> which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &ldquo;easy&rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I&rsquo;ll keep it up for each week but I will try. So, here&rsquo;s week one.</p>
+<h3 id="new-years-resolution">New Year&rsquo;s resolution</h3>
+<p>I am not sure where this tradition comes from, but in Germany (and most western countries as far as I know), it&rsquo;s a thing to set goals for the new year. It&rsquo;s basically like a To-Do List for the coming year with things one wants to change.</p>
+<p>My New Year&rsquo;s resolution are:</p>
 <ul>
 <li>Read more books - 12 is my minimum</li>
 <li>Loose weight again</li>
@@ -861,18 +861,18 @@ I also <a href="https://github.com/kevingimbel/kevingimbel.com/issues?utf8=%E2%9
 <li>Go out more often</li>
 <li>Stop smoking cigarettes</li>
 </ul>
-<p>So far I started reading again before going to bed. I'm reading <a href="http://amzn.to/2i3bi8A">&ldquo;The Humans&rdquo;</a> by Matt Haig now, which my girlfriend recommended. So far I like it a lot and I'll write a review once I am finished - which happens to fulfills another point.</p>
+<p>So far I started reading again before going to bed. I&rsquo;m reading <a href="http://amzn.to/2i3bi8A">&ldquo;The Humans&rdquo;</a> by Matt Haig now, which my girlfriend recommended. So far I like it a lot and I&rsquo;ll write a review once I am finished - which happens to fulfills another point.</p>
 <p>Since I work from home I can cook every day. This week so far I cooked fresh vegetables every day, mostly with rice or noodles. I also cooked vegetable stock from leftovers which I can now use for next weeks cooking. 😊</p>
-<p>To start the year I wrote a review of last year. It's probably not too interesting for most people but I like to look back at year-in-review posts and I will now write them every year.</p>
-<p>As for smoking - well. I try to switch to electronic cigarettes first and then lower the nicotine. It's not going too well at the moment but I continue to try it.</p>
+<p>To start the year I wrote a review of last year. It&rsquo;s probably not too interesting for most people but I like to look back at year-in-review posts and I will now write them every year.</p>
+<p>As for smoking - well. I try to switch to electronic cigarettes first and then lower the nicotine. It&rsquo;s not going too well at the moment but I continue to try it.</p>
 <h3 id="geschlechterkampf">Geschlechterkampf</h3>
 <p>On saturday I went to the <a href="http://www.staedelmuseum.de/de/ausstellungen/geschlechterkampf">Geschlechterkampf</a> exhibition at the Städel Museum, my favorite museum in Frankfurt by the way. Overall the exhibition was good and I enjoyed the art from various artists. In particular <a href="https://en.wikipedia.org/wiki/John_Collier_(painter)">John Collier</a> impressed me and I greatly enjoyed the works exhibited. His painting <a href="https://en.wikipedia.org/wiki/File:Clytemnestra_by_John_Collier,_1882.jpg">Clytemnestra</a> looks astonishing in full size. Another artists I did not know before is <a href="https://en.wikipedia.org/wiki/Jeanne_Mammen">Jeanne Mammen</a>, an artist from Berlin, Germany. A small room was dedicated to her watercolor paintings.I liked the simplicity in her art; Every image seemed to tell a story.</p>
-<p>If you're around Frankfurt make sure to see the exhibition. If you're not, you can see some artworks and read background information in the Städel <a href="http://geschlechterkampf.staedelmuseum.de/en/">digital editorial online</a>.</p>
+<p>If you&rsquo;re around Frankfurt make sure to see the exhibition. If you&rsquo;re not, you can see some artworks and read background information in the Städel <a href="http://geschlechterkampf.staedelmuseum.de/en/">digital editorial online</a>.</p>
 <h3 id="recore">recore</h3>
 <p>I started playing <a href="http://amzn.to/2irOziJ">recore</a>, an XBox One exclusive game in which you awake on Far Eden, an desert-like planet. Accompanied by your robot companion Mack you start exploring this &ldquo;dead&rdquo; planet just to realize there are corrupted robots running around. The story seems to resolve around finding out what happened to the robots who should build the planets surface, facilities, and living spaces for the humans.</p>
 <h3 id="star-trek">Star Trek</h3>
-<p>I started re-watching Star Trek beginning with <a href="https://en.wikipedia.org/wiki/Star_Trek:_The_Original_Series">The Original Series</a>. It's inspiring to see the future these screenwriters have imagined. You might not know but a lot of todays technology such as MP3, Smartphones, and Voice Control were originally inspired by Star Trek. There is a documentary about it, and I think the one I saw some years ago is <a href="https://www.youtube.com/watch?v=ZjlF_iSo1Og">this one with William Shatner</a>.</p>
-<p>Well that's it for this week. 👍</p>
+<p>I started re-watching Star Trek beginning with <a href="https://en.wikipedia.org/wiki/Star_Trek:_The_Original_Series">The Original Series</a>. It&rsquo;s inspiring to see the future these screenwriters have imagined. You might not know but a lot of todays technology such as MP3, Smartphones, and Voice Control were originally inspired by Star Trek. There is a documentary about it, and I think the one I saw some years ago is <a href="https://www.youtube.com/watch?v=ZjlF_iSo1Og">this one with William Shatner</a>.</p>
+<p>Well that&rsquo;s it for this week. 👍</p>
 ]]></content>
             
                  
@@ -940,7 +940,7 @@ I also <a href="https://github.com/kevingimbel/kevingimbel.com/issues?utf8=%E2%9
 <p>January started with what we call a &ldquo;Braincamp&rdquo;. A Braincamp is a company trip to a remote location where we at Synoa GmbH take time outside the office and come up with ideas and projects to do for the year. For 2016 we traveled to <a href="https://en.wikipedia.org/wiki/Fuerteventura">Fuerteventura</a> which had a wonderful warm climate compared to the cold German January. We spent a week tinkering and researching different ideas and in the end an idea stuck out: <a href="https://bug.industries/">Bug Industries</a> - a card game for developers which we eventually took to <a href="https://www.kickstarter.com/projects/timpietrusky/bug-industries-a-card-dice-game-for-us-it-nerds?ref=card">Kickstarter</a>. Unfortunately we did not meet our goal and as of now the project is at rest.</p>
 <h3 id="february-and-march">February and March</h3>
 <p>February and March were both occupied by work for clients and work on Bug Industries as well as dating somebody who became very special to me over the year.</p>
-<p>Researching Kickstarter campaigns, researching social media activities, forming the campaign and general design and illustrations of the game - all these things happened in February and March. Together with <a href="http://herzblutundbock.de/">Herzblut &amp; Bock</a> we brought Bug Industries to live and started the Kickstarter Campaign on March 9th 2016. In the end the project did not cut the goal and we had to cancel it. As mentioned before it's on hold at the moment.</p>
+<p>Researching Kickstarter campaigns, researching social media activities, forming the campaign and general design and illustrations of the game - all these things happened in February and March. Together with <a href="http://herzblutundbock.de/">Herzblut &amp; Bock</a> we brought Bug Industries to live and started the Kickstarter Campaign on March 9th 2016. In the end the project did not cut the goal and we had to cancel it. As mentioned before it&rsquo;s on hold at the moment.</p>
 <h3 id="april">April</h3>
 
 <figure >
@@ -962,8 +962,8 @@ I also <a href="https://github.com/kevingimbel/kevingimbel.com/issues?utf8=%E2%9
   
 </figure>
 
-<p>In April I saw the Rammstein Cover Band &ldquo;Stammheim&rdquo; with my best friend. Stammheim did an amazing performance and I'm happy I attended the concert - I'd see them live again by any chance I get.
-Also in April I went to see <a href="http://www.museumangewandtekunst.de/de/museum/ausstellungen/stefan-sagmeister-the-happy-show.html">&ldquo;The Happy Show&rdquo;</a> by Stefan Sagmeister, a Austrian designer who has inspired me for years. I'm entirely in love with the work he and his team is doing. While I don't have any talent for producing designs, I do love art and design. I highly recommend seeing &ldquo;The Happy Show&rdquo; when you have the chance as well as buying <a href="http://amzn.to/2hH78TF">&ldquo;Made you look&rdquo;</a>, a collection of works by Stefan Sagmeister.</p>
+<p>In April I saw the Rammstein Cover Band &ldquo;Stammheim&rdquo; with my best friend. Stammheim did an amazing performance and I&rsquo;m happy I attended the concert - I&rsquo;d see them live again by any chance I get.
+Also in April I went to see <a href="http://www.museumangewandtekunst.de/de/museum/ausstellungen/stefan-sagmeister-the-happy-show.html">&ldquo;The Happy Show&rdquo;</a> by Stefan Sagmeister, a Austrian designer who has inspired me for years. I&rsquo;m entirely in love with the work he and his team is doing. While I don&rsquo;t have any talent for producing designs, I do love art and design. I highly recommend seeing &ldquo;The Happy Show&rdquo; when you have the chance as well as buying <a href="http://amzn.to/2hH78TF">&ldquo;Made you look&rdquo;</a>, a collection of works by Stefan Sagmeister.</p>
 <h3 id="may">May</h3>
 <p>Mostly filled with work and <a href="https://2017.front-trends.com/">Front-Trends</a>, an amazing conference in Warsaw and also my first time in Warsaw. I spent my time there with my fellow <a href="https://github.com/bullgit/wiki/wiki/Gitch">Gitch</a> <a href="https://twitter.com/mkuehnel">Michael</a>. We had lots of fun and walked around the city to take some pictures and grab foods. Warsaw was astonishing and I would come back every time again!</p>
 <h3 id="june-and-july">June and July</h3>
@@ -992,19 +992,19 @@ Also in April I went to see <a href="http://www.museumangewandtekunst.de/de/muse
 </figure>
 
 <p>In August my girlfriend and I traveled to Amsterdam for a few days to have a good time and enjoy some of the art galleries in Amsterdam. We went to a Banksy exhibition and spent some time inside <a href="https://www.nemosciencemuseum.nl/en/">Nemo</a>, a science museum for kids which can be quite funny.</p>
-<p>As every year <a href="https://twitter.com/timpietrusky">Tim</a> and I attended <a href="http://www.sonnemondsterne.de/">Sonne Mond Sterne</a>, an electronic music festival in Germany. To no surprise it was a blast just like the years before and I'm already looking forward to 2017!</p>
+<p>As every year <a href="https://twitter.com/timpietrusky">Tim</a> and I attended <a href="http://www.sonnemondsterne.de/">Sonne Mond Sterne</a>, an electronic music festival in Germany. To no surprise it was a blast just like the years before and I&rsquo;m already looking forward to 2017!</p>
 <h3 id="september">September</h3>
-<p>In September we had kind of a <a href="https://twitter.com/bullgit/status/775988689570856960">Bullgit Meetup</a> at <a href="https://viewsourceconf.org/berlin-2016/">viewSource</a> in Berlin. It was great seeing so many Gitches at the same time and being in Berlin is always great! I also visited <a href="https://www.eyeem.com/">EyeEm</a>, one of my favorite Berlin start-ups/companies, and had a little chat about how they grew, how they introduced EyeEm Market and how it is to work with different time zones and large communities. When I first met the EyeEm crew in 2012 they were around 10 or 20 people. It's amazing how they crew both their company and their community over the years. Thanks to EyeEm for having me!</p>
+<p>In September we had kind of a <a href="https://twitter.com/bullgit/status/775988689570856960">Bullgit Meetup</a> at <a href="https://viewsourceconf.org/berlin-2016/">viewSource</a> in Berlin. It was great seeing so many Gitches at the same time and being in Berlin is always great! I also visited <a href="https://www.eyeem.com/">EyeEm</a>, one of my favorite Berlin start-ups/companies, and had a little chat about how they grew, how they introduced EyeEm Market and how it is to work with different time zones and large communities. When I first met the EyeEm crew in 2012 they were around 10 or 20 people. It&rsquo;s amazing how they crew both their company and their community over the years. Thanks to EyeEm for having me!</p>
 <h3 id="october">October</h3>
-<p>In October I saw <a href="https://soundcloud.com/godisanastronaut">God Is An Astronaut</a> and <a href="https://www.youtube.com/watch?v=c_QS7z_sGWg&amp;app=desktop">Sounds Like The End Of The World</a>. Both bands have a lot of powered and their music is somewhat &ldquo;trippy&rdquo; - guiding you through extremes and letting you &ldquo;float&rdquo; while listening. For me personally it's already good on tape but astonishing when experienced live. All together it has been 3 or so hours of pure bliss, probably one of the best live concerts I have ever seen.</p>
+<p>In October I saw <a href="https://soundcloud.com/godisanastronaut">God Is An Astronaut</a> and <a href="https://www.youtube.com/watch?v=c_QS7z_sGWg&amp;app=desktop">Sounds Like The End Of The World</a>. Both bands have a lot of powered and their music is somewhat &ldquo;trippy&rdquo; - guiding you through extremes and letting you &ldquo;float&rdquo; while listening. For me personally it&rsquo;s already good on tape but astonishing when experienced live. All together it has been 3 or so hours of pure bliss, probably one of the best live concerts I have ever seen.</p>
 <h3 id="november">November</h3>
 <p>I got new glasses and also went to see &ldquo;20 Years of Placebo&rdquo; with my girlfriend. The concert has been an enjoyment from start to end. They probably played the best songs of the bast 20 years (which makes sense, right?) and also came back on stage 2 or 3 times after the concert ended. It was my first time seeing Placebo live and I would recommend seeing them if they are somewhere near you.</p>
 <h3 id="december">December</h3>
 <p>Cold days and lots of cozy evenings. I started re-watching Star Trek: The Original Series and I am again madly in love. Given the times when it originally aired on TV and how futuristic it is I dare to say Star Trek is <em>the most amazing Sci-Fi show ever</em>. There you have it.</p>
-<p>I also had a great 3 days of Christmas with my girlfriend and the rest of my family. Though I am not religious I like to celebrate Christmas. While I liked it for the presents when I was younger I now like it for the come-together with the family and the foods. It's simply a nice end-of-the-year thing.</p>
+<p>I also had a great 3 days of Christmas with my girlfriend and the rest of my family. Though I am not religious I like to celebrate Christmas. While I liked it for the presents when I was younger I now like it for the come-together with the family and the foods. It&rsquo;s simply a nice end-of-the-year thing.</p>
 <h3 id="all-the-rest">All the rest</h3>
 <p>Personal and work-wise 2016 was a success. I had a lot of fun and accomplished some things both private and at work. Sadly, I did not write any blog posts or work on any of my private projects. I had a hard time focusing on development beside work and I felt bad for not doing anything - after some time I ended up in a circle of wanting-to-do-things and feeling depressed for not doing them. For 2017 I want to plan and focus better on private projects, for the most on <a href="https://github.com/kevingimbel/LinedUp">LinedUp</a> which I would like to &ldquo;finish&rdquo;.</p>
-<p>What I did in my spare time is Go development. On the search for a new programming language I got a bit into Go and wish to Go Deeper (pun intended!) - I enjoy Go and its strict typed nature is entirely new to me. Let's see how this goes for 2017!</p>
+<p>What I did in my spare time is Go development. On the search for a new programming language I got a bit into Go and wish to Go Deeper (pun intended!) - I enjoy Go and its strict typed nature is entirely new to me. Let&rsquo;s see how this goes for 2017!</p>
 <p>If you made it until here, I wish you a happy 2017! 🎆🎉🍾</p>
 ]]></content>
             
@@ -1052,19 +1052,19 @@ Also in April I went to see <a href="http://www.museumangewandtekunst.de/de/muse
 <p>This very site you read right now is build with <a href="http://gohugo.io">Hugo</a>, a static site generator build by <a href="http://spf13.com/">Steve Francia</a>, <a href="https://github.com/bep">Bjørn Erik Pedersen</a> and a lot of <a href="https://github.com/spf13/hugo/graphs/contributors">contributors</a>. Hugo is written in <a href="https://golang.org/">Go</a> a programming language created at Google I have <a href="https://github.com/kevingimbel?language=go&amp;tab=repositories">been interested in lately</a>.
 For me personally Go provides a lot of new challenges and things to learn. I worked with Front-End technologies like HTML and CSS as well as scripting languages like PHP and JavaScript for the better part of the past 6-7 years; &ldquo;professionally&rdquo; and officially since 2014. Go is entirely different to what I am used to and I like it. I enjoy playing around with it where in the past year or so I lost a big part of my passion for programming in the languages I already know. But why move away from Jekyll? And why choose Go?</p>
 <h3 id="ruby">Ruby</h3>
-<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don't have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
+<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don&rsquo;t have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
 <h3 id="go">Go</h3>
-<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it's as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
+<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it&rsquo;s as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17_Linux-64bit.tar.gz
 $ tar -xzvf hugo_0.17_Linux-64bit.tar.gz
 $ ln -s hugo_0.17_linux_amd64 hugo
 $ chmod +x hugo
 $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>/hugo ~/bin
 </code></pre></div><p>Another reason why I chose Hugo over <a href="https://www.staticgen.com/">any other static site generators</a> is because it is under active development thanks to <a href="https://github.com/bep">Bjørn Erik Pedersen</a>, has <a href="https://gohugo.io/overview/introduction/">excellent docs</a> and an active community.</p>
-<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I'm not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
-<p>As of today it's not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
-<p>Some things are still not working as I would like but I'll eventually get to them. After all, a personal website is always a work in progress.</p>
-<p><em>Farewell Jekyll, it's been a pleasure for the past three years.</em></p>
+<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I&rsquo;m not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
+<p>As of today it&rsquo;s not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
+<p>Some things are still not working as I would like but I&rsquo;ll eventually get to them. After all, a personal website is always a work in progress.</p>
+<p><em>Farewell Jekyll, it&rsquo;s been a pleasure for the past three years.</em></p>
 ]]></content>
             
                  

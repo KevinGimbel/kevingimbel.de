@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[automation on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[automation on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/automation/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/automation/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/automation/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -29,10 +29,10 @@
             <updated>2020-01-13T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
+            <content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
 <p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p>
 <h2 id="installing-a-new-apache-version">Installing a new apache version</h2>
-<p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we'll add this.</p>
+<p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we&rsquo;ll add this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo add-apt-repository ppa:ondrej/apache2
 sudo apt-get update
 </code></pre></div><p>Next, apache can be updated</p>
@@ -41,7 +41,7 @@ sudo apt-get update
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apache2 -v
 Server version: Apache/2.4.41 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
 Server built:   2019-08-21T20:43:21
-</code></pre></div><h2 id="enabling-modmd">Enabling mod_md</h2>
+</code></pre></div><h2 id="enabling-mod_md">Enabling mod_md</h2>
 <p>First <code>mod_md</code> must be enabled. This can be done with <code>a2enmod</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo a2enmod md
 </code></pre></div><p>Next, Apache must be reload with <code>systemctl</code></p>
@@ -69,7 +69,7 @@ MDomain test.kevingimbel.de
 </ul>
 <p>After making the changes, the server must be reloaded again.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ systemctl reload apache2
-</code></pre></div><p>With the values in place the server will contact Let's Encrypt and retrieve a certificate, wire it up in the backend, and serve the website over https. The <a href="https://httpd.apache.org/docs/trunk/mod/mod_md.html" title="Read the Apache Documentation on mod_md">mod_md documentation</a> contains more configuration options as well as information on how to use a different Certificate Authority.</p>
+</code></pre></div><p>With the values in place the server will contact Let&rsquo;s Encrypt and retrieve a certificate, wire it up in the backend, and serve the website over https. The <a href="https://httpd.apache.org/docs/trunk/mod/mod_md.html" title="Read the Apache Documentation on mod_md">mod_md documentation</a> contains more configuration options as well as information on how to use a different Certificate Authority.</p>
 <h2 id="update">Update</h2>
 <h3 id="update-13012020">Update 13.01.2020</h3>
 <p>Slight grammatical adjustments:</p>
@@ -137,7 +137,7 @@ MDomain test.kevingimbel.de
             <updated>2020-01-07T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>For the longest time I completely ignored <a href="https://gohugo.io/content-management/archetypes/" title="Read hugo archetype documentation">archetypes in hugo</a>. I'd always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using <code>category</code> instead of <code>categories</code>) over time.</p>
+            <content type="html"><![CDATA[<p>For the longest time I completely ignored <a href="https://gohugo.io/content-management/archetypes/" title="Read hugo archetype documentation">archetypes in hugo</a>. I&rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using <code>category</code> instead of <code>categories</code>) over time.</p>
 <p>Archetypes are easy to use, for example to create this post I ran the following command</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new blog/2020-01-07-using-archetypes-in-hugo.md
 </code></pre></div><p>This copied over the archetype file from <code>archetypes/blog.md</code> and automatically filled in the post tile, date, last modified date, and the defaults for categories, tags, type, and whatever else I have in the template file. Since Hugo 0.49 archetypes can consist of an entire directory structure that will be created. This is helpful for my <a href="/photography/">photography</a> section where a post consists of an <code>index.md</code> file and some images that are automatically loaded. The structure looks like this.</p>
@@ -149,18 +149,18 @@ MDomain test.kevingimbel.de
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new photography/my-photo-post
 </code></pre></div><p>This command will create a directory named <code>my-photo-post</code> in <code>content/photography/my-photo-post</code>. Neat!</p>
 <h2 id="hugo-template-magic">Hugo template magic</h2>
-<p>As if this wasn't good enough, we can use the full set of Hugo template functions and script even more!</p>
+<p>As if this wasn&rsquo;t good enough, we can use the full set of Hugo template functions and script even more!</p>
 <p>The archetype for new blog posts I use looks like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-title: <span style="color:#e6db74">&#34;{{ replace (replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;) (now.Format &#34;</span><span style="color:#ae81ff">2006</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">02</span> <span style="color:#e6db74">&#34;) &#34;</span><span style="color:#e6db74">&#34; | title }}&#34;</span>
-intro_text: <span style="color:#e6db74">&#34;&#34;</span>
-type: blog
-categories:
+<span style="color:#66d9ef">title</span>: <span style="color:#e6db74">&#34;{{ replace (replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;) (now.Format &#34;</span><span style="color:#ae81ff">2006</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">02</span> <span style="color:#e6db74">&#34;) &#34;</span><span style="color:#e6db74">&#34; | title }}&#34;</span>
+<span style="color:#66d9ef">intro_text</span>: <span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#66d9ef">type</span>: blog
+<span style="color:#66d9ef">categories</span>:
     - coding
-tags:
-    <span style="color:#e6db74">- </span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">date: &#34;{{ now.Format &#34;2006-01-02&#34; }}&#34;</span>
-lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">tags</span>:
+    - 
+<span style="color:#66d9ef">date</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">lastmod</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
 ---
 </code></pre></div><p>In the first line the post <code>title</code> is set which is taken from the file name. I use filenames like <code>2020-01-02-a-post.md</code> on my blog which include the full date and then the post tile and the <code>.md</code> file extension for markdown. The <code>.md</code> is automatically stripped away which leaves a string like <code>2020-01-02-a-post</code>. The first replace (<code>replace .Name &quot;-&quot; &quot; &quot;</code>) turns this into <code>2020 01 02 a post</code>, the next replace (<code>replace (replace .Name &quot;-&quot; &quot; &quot;) (now.Format &quot;2006 01 02 &quot;) &quot;&quot;</code>) takes this string and strips the date, see the detailed steps below.</p>
 <p>We assume that <code>.Name</code> equals &ldquo;2020-01-02-a-post&rdquo;:</p>
@@ -172,9 +172,9 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
 </ol>
 <p>So after the whole code is executed, we have the plain title. This title is then passed to the function named <code>title</code> which is doing capitalization, leaving us with a nicely formatted title.</p>
 <p>As shown above, I also set the <code>date</code> and <code>lastmod</code> times using Hugo template functions.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">date: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
-lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
-</code></pre></div><p>Both dates will be set to the same as this (new) article hasn't been modified yet. <code>lastmod</code> does only change when I update an article later on.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">date</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">lastmod</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+</code></pre></div><p>Both dates will be set to the same as this (new) article hasn&rsquo;t been modified yet. <code>lastmod</code> does only change when I update an article later on.</p>
 ]]></content>
             
                  
@@ -240,7 +240,7 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
     cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">fi</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let's explore it line by line.</p>
+</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let&rsquo;s explore it line by line.</p>
 <p>With <code>function ws()</code> we declare the function name. In shell scripts a function name has parentheses after it tho it does not take arguments this way (If you know why this is, <a href="https://github.com/kevingimbel/kevingimbel.com/issues">open an issue and explain it please</a> or <a href="https://twitter.com/_kevinatari">tweet me</a>!). The next lines declare a local variable, <code>workspace</code> and then <code>target_dir=$1</code> were I assign whatever is passed to the function as being the target directory the user is trying to find. Then, I execute <code>cd $workspace</code> to go to the workspace directory and start a search with <code>workspace_path=$(find -maxdepth 3 -type d -name &quot;*$target_dir*&quot; | head -n1)</code> - now that might look weird. What happens here is the following:</p>
 <ul>
 <li>We declare a variable, <code>workspace_path</code></li>
@@ -255,7 +255,7 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
 <span style="color:#66d9ef">else</span>
   cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
-</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that's it! Some examples can be seen in the screenshot below.</p>
+</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that&rsquo;s it! Some examples can be seen in the screenshot below.</p>
 
 <figure >
   

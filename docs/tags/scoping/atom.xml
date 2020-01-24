@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[scoping on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[scoping on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/scoping/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/scoping/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/scoping/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -33,9 +33,9 @@
             
             <content type="html"><![CDATA[<p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
 functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some
-problems I want to try and give short introduction to closure and what it can be good for. It's good to have at least
+problems I want to try and give short introduction to closure and what it can be good for. It&rsquo;s good to have at least
 basic understanding of JavaScript.</p>
-<p>So before I start I'd like to say that I consider myself a JavaScript beginner and this is how I understand closure
+<p>So before I start I&rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure
 and scopes at the moment. If you happen to find mistakes please <a href="https://twitter.com/_kevinatari">tweet me</a> or <a href="https://github.com/kevingimbel/kevingimbel.github.io/issues?page=1&amp;state=open">open an
 issue</a>.</p>
 <p>Consider the following example</p>
@@ -47,8 +47,8 @@ issue</a>.</p>
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
 </code></pre></div><p>What value will <code>x</code> have when logged to the console? 5 or 10? The correct answer is 5, because inside the immediate
-executing function <code>var x</code> does not reference the previously defined <code>var x</code>. They're both standalone and do not effect
-each other. Let's try this again and see what happens now</p>
+executing function <code>var x</code> does not reference the previously defined <code>var x</code>. They&rsquo;re both standalone and do not effect
+each other. Let&rsquo;s try this again and see what happens now</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
 
 (<span style="color:#66d9ef">function</span>() {
@@ -56,11 +56,11 @@ each other. Let's try this again and see what happens now</p>
 }());
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
-</code></pre></div><p>What value will <code>x</code> have now? Still 5, because it's the same function but we only left the <code>var</code> keyword? Nope, now <code>x</code>
-inside the immediate executing function references the previously defined <code>var x</code> and will update it's value, so
+</code></pre></div><p>What value will <code>x</code> have now? Still 5, because it&rsquo;s the same function but we only left the <code>var</code> keyword? Nope, now <code>x</code>
+inside the immediate executing function references the previously defined <code>var x</code> and will update it&rsquo;s value, so
 <code>console.log(x)</code> results to 10 this time. As you can see just now, leaving out the single word <code>var</code> can change how your
 program behaves. The missing var statment, where closure hits hard and overrides the variable, can really be annoying
-because JavaScript doesn't throw errors. Overriding values inside a closure, e.g. the immediate executing function, is
+because JavaScript doesn&rsquo;t throw errors. Overriding values inside a closure, e.g. the immediate executing function, is
 perfectly fine.</p>
 <p>So what happens if we pass <code>x</code>, which is 10 now, to the immediate executing function and declare &lsquo;x = 15&rsquo; inside the
 functions body? Will <code>x</code> become 15 or stay 10?</p>
@@ -68,12 +68,12 @@ functions body? Will <code>x</code> become 15 or stay 10?</p>
 </span><span style="color:#75715e"></span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">x</span>){
 	<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
 }(<span style="color:#a6e22e">x</span>));
-</code></pre></div><p>As the result shows, x is still 10. But wait, wasn't it supposed to be overridden if we don't declare <code>var x = 15</code>? Well
+</code></pre></div><p>As the result shows, x is still 10. But wait, wasn&rsquo;t it supposed to be overridden if we don&rsquo;t declare <code>var x = 15</code>? Well
 that is true, but since we pass x as a parameter, x is &ldquo;re-defined&rdquo; as a local variable and, inside the functions body, it is
 indeed 15 - outside it is not.</p>
 <!-- raw HTML omitted -->
 <h3 id="what-can-closures-do-for-me">What can closures do for me?</h3>
-<p>What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn't write variables into the global namespace because they're almost asking to be overriden or changed. Let's say one writes a function like this.</p>
+<p>What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn&rsquo;t write variables into the global namespace because they&rsquo;re almost asking to be overriden or changed. Let&rsquo;s say one writes a function like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">assert</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">con</span>, <span style="color:#a6e22e">msg</span>) {
   <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">con</span>) {
     <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">msg</span>);
@@ -81,8 +81,8 @@ indeed 15 - outside it is not.</p>
     <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">msg</span>);
   }
 }
-</code></pre></div><p>That's a super simple assert function to see if a statment (<code>con</code>dition) is true or false. If it's false we'll log a console.error(), if not we'll log a normal console.log() statement. This is great and perfectly fine unless someone else
-tries to use a function with the same name. Then there'll be a &ldquo;conflict&rdquo; and the last declared function overrides the other. (In this example I'll use a function called myFunction)</p>
+</code></pre></div><p>That&rsquo;s a super simple assert function to see if a statment (<code>con</code>dition) is true or false. If it&rsquo;s false we&rsquo;ll log a console.error(), if not we&rsquo;ll log a normal console.log() statement. This is great and perfectly fine unless someone else
+tries to use a function with the same name. Then there&rsquo;ll be a &ldquo;conflict&rdquo; and the last declared function overrides the other. (In this example I&rsquo;ll use a function called myFunction)</p>
 <!-- raw HTML omitted -->
 <p>So still, what can closure do for me? It can save my declared functions - inside a closure. So far all closure examples were immediate executing function, but Objects also create closures, assigning all there properties to a specific &ldquo;namespace&rdquo;.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myFunction</span>() <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {

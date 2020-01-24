@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[static_website on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[static_website on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/static_website/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/static_website/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/static_website/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -32,7 +32,7 @@
             <updated>2020-01-07T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>For the longest time I completely ignored <a href="https://gohugo.io/content-management/archetypes/" title="Read hugo archetype documentation">archetypes in hugo</a>. I'd always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using <code>category</code> instead of <code>categories</code>) over time.</p>
+            <content type="html"><![CDATA[<p>For the longest time I completely ignored <a href="https://gohugo.io/content-management/archetypes/" title="Read hugo archetype documentation">archetypes in hugo</a>. I&rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using <code>category</code> instead of <code>categories</code>) over time.</p>
 <p>Archetypes are easy to use, for example to create this post I ran the following command</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new blog/2020-01-07-using-archetypes-in-hugo.md
 </code></pre></div><p>This copied over the archetype file from <code>archetypes/blog.md</code> and automatically filled in the post tile, date, last modified date, and the defaults for categories, tags, type, and whatever else I have in the template file. Since Hugo 0.49 archetypes can consist of an entire directory structure that will be created. This is helpful for my <a href="/photography/">photography</a> section where a post consists of an <code>index.md</code> file and some images that are automatically loaded. The structure looks like this.</p>
@@ -44,18 +44,18 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new photography/my-photo-post
 </code></pre></div><p>This command will create a directory named <code>my-photo-post</code> in <code>content/photography/my-photo-post</code>. Neat!</p>
 <h2 id="hugo-template-magic">Hugo template magic</h2>
-<p>As if this wasn't good enough, we can use the full set of Hugo template functions and script even more!</p>
+<p>As if this wasn&rsquo;t good enough, we can use the full set of Hugo template functions and script even more!</p>
 <p>The archetype for new blog posts I use looks like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-title: <span style="color:#e6db74">&#34;{{ replace (replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;) (now.Format &#34;</span><span style="color:#ae81ff">2006</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">02</span> <span style="color:#e6db74">&#34;) &#34;</span><span style="color:#e6db74">&#34; | title }}&#34;</span>
-intro_text: <span style="color:#e6db74">&#34;&#34;</span>
-type: blog
-categories:
+<span style="color:#66d9ef">title</span>: <span style="color:#e6db74">&#34;{{ replace (replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;) (now.Format &#34;</span><span style="color:#ae81ff">2006</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">02</span> <span style="color:#e6db74">&#34;) &#34;</span><span style="color:#e6db74">&#34; | title }}&#34;</span>
+<span style="color:#66d9ef">intro_text</span>: <span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#66d9ef">type</span>: blog
+<span style="color:#66d9ef">categories</span>:
     - coding
-tags:
-    <span style="color:#e6db74">- </span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">date: &#34;{{ now.Format &#34;2006-01-02&#34; }}&#34;</span>
-lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">tags</span>:
+    - 
+<span style="color:#66d9ef">date</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">lastmod</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
 ---
 </code></pre></div><p>In the first line the post <code>title</code> is set which is taken from the file name. I use filenames like <code>2020-01-02-a-post.md</code> on my blog which include the full date and then the post tile and the <code>.md</code> file extension for markdown. The <code>.md</code> is automatically stripped away which leaves a string like <code>2020-01-02-a-post</code>. The first replace (<code>replace .Name &quot;-&quot; &quot; &quot;</code>) turns this into <code>2020 01 02 a post</code>, the next replace (<code>replace (replace .Name &quot;-&quot; &quot; &quot;) (now.Format &quot;2006 01 02 &quot;) &quot;&quot;</code>) takes this string and strips the date, see the detailed steps below.</p>
 <p>We assume that <code>.Name</code> equals &ldquo;2020-01-02-a-post&rdquo;:</p>
@@ -67,9 +67,9 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
 </ol>
 <p>So after the whole code is executed, we have the plain title. This title is then passed to the function named <code>title</code> which is doing capitalization, leaving us with a nicely formatted title.</p>
 <p>As shown above, I also set the <code>date</code> and <code>lastmod</code> times using Hugo template functions.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">date: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
-lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
-</code></pre></div><p>Both dates will be set to the same as this (new) article hasn't been modified yet. <code>lastmod</code> does only change when I update an article later on.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">date</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">lastmod</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+</code></pre></div><p>Both dates will be set to the same as this (new) article hasn&rsquo;t been modified yet. <code>lastmod</code> does only change when I update an article later on.</p>
 ]]></content>
             
                  
@@ -201,7 +201,7 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
 {{ end }}
 </code></pre></div><p>Because we are doing a <code>gt</code> (greater than) comparison only articles that are older than 4 years (5 and more) will be flagged.</p>
 <h2 id="see-it-in-action">See it in action</h2>
-<p>A live example can be seen on my page, for example in the <a href="/blog/2013-08-12-hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
+<p>A live example can be seen on my page, for example in the <a href="/blog/2013/08/hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
 ]]></content>
             
                  
@@ -257,38 +257,38 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
 <li>No-Database handling of Data (see <a href="https://github.com/bullgit/bullgit.github.io/blob/master/_data/members.yml">the list of members we use</a>)</li>
 <li>Everyone can clone the repo and run it locally</li>
 </ul>
-<p>So basically, as soon as you have a Project on GitHub or an organization like <a href="http://twitter.com/bullgit">bullgit</a> you can use the power of Jekyll to make your page easy to use and easy to change even for new members. We don't even use the Blog function of Jekyll (yet), we just have a front-page rendered with some Ajax to load all the Repos.</p>
+<p>So basically, as soon as you have a Project on GitHub or an organization like <a href="http://twitter.com/bullgit">bullgit</a> you can use the power of Jekyll to make your page easy to use and easy to change even for new members. We don&rsquo;t even use the Blog function of Jekyll (yet), we just have a front-page rendered with some Ajax to load all the Repos.</p>
 <h3 id="the-basic-jekyll-code">The basic Jekyll code</h3>
-<p>As I always like to remember in Jekyll posts: Jekyll builds static HTML pages but isn't that static at all. There is a lot of dynamics because files can be included into others, layouts are defined through the <a href="http://kevingimbel.com/jekyll-guide/first-page/">Front Matter</a> and you're basically free to create whatever Front Matter and Data you want.</p>
+<p>As I always like to remember in Jekyll posts: Jekyll builds static HTML pages but isn&rsquo;t that static at all. There is a lot of dynamics because files can be included into others, layouts are defined through the <a href="http://kevingimbel.com/jekyll-guide/first-page/">Front Matter</a> and you&rsquo;re basically free to create whatever Front Matter and Data you want.</p>
 <p>The <code>index.html</code> looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">    --<span style="color:#e6db74">-
 </span><span style="color:#e6db74">   </span><span style="color:#e6db74"> </span><span style="color:#e6db74">layout: front-page</span>
-    title: 
+    <span style="color:#66d9ef">title</span>: 
     ---
-</code></pre></div><p>That's it, the whole structure is loaded from a Layout file based in <code>/_layouts/</code>, this file is called <code>front-page.html</code>. This <strong>only</strong> holds the <code>&lt;body&gt;</code> content for the front-page, the header and footer are - equal like you'd do it in PHP or other languages - included from <code>header.html</code> and <code>footer.html</code> on every page. So even though it is &ldquo;static&rdquo;, when you change <code>header.html</code> all files will get updated and the new header is available everywhere.</p>
+</code></pre></div><p>That&rsquo;s it, the whole structure is loaded from a Layout file based in <code>/_layouts/</code>, this file is called <code>front-page.html</code>. This <strong>only</strong> holds the <code>&lt;body&gt;</code> content for the front-page, the header and footer are - equal like you&rsquo;d do it in PHP or other languages - included from <code>header.html</code> and <code>footer.html</code> on every page. So even though it is &ldquo;static&rdquo;, when you change <code>header.html</code> all files will get updated and the new header is available everywhere.</p>
 <p>You can work like this, with <code>{% include file.html %}</code> and Layouts in the Front Matter for every file and kind of content you like. It is even possible to create a <a href="http://kevingimbel.com/atom.xml">atom.xml</a> that serves people wo like to subscribe to your posts.</p>
-<p>However, back to the bullgit. I discovered a awesome feature about Jekyll I didn't knew before: Data handling. When you create a folder called <code>_data</code> in your root directory you can put every kind of text-based data inside a *.yml file and load it in every page of your site.</p>
+<p>However, back to the bullgit. I discovered a awesome feature about Jekyll I didn&rsquo;t knew before: Data handling. When you create a folder called <code>_data</code> in your root directory you can put every kind of text-based data inside a *.yml file and load it in every page of your site.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># let&#39;s assume this is members.yml</span>
-- name: Tim
-  twitter: timpietrusky
+- <span style="color:#66d9ef">name</span>: Tim
+  <span style="color:#66d9ef">twitter</span>: timpietrusky
   
-  github: timpietrusky
-  codepen: timpietrusky
-  gravatar: http://www.gravatar.com/avatar/13a9550a854af911366d9f5deb785cd6?s=<span style="color:#ae81ff">200</span>
+  <span style="color:#66d9ef">github</span>: timpietrusky
+  <span style="color:#66d9ef">codepen</span>: timpietrusky
+  <span style="color:#66d9ef">gravatar</span>: http://www.gravatar.com/avatar/13a9550a854af911366d9f5deb785cd6?s=<span style="color:#ae81ff">200</span>
 
-- name: Max
-  twitter: MyXoToD
+- <span style="color:#66d9ef">name</span>: Max
+  <span style="color:#66d9ef">twitter</span>: MyXoToD
   
-  github: myxotod
-  codepen: MyXoToD
-  gravatar: http://www.gravatar.com/avatar/a284083f6f4f9446723adf3b97b90151?s=<span style="color:#ae81ff">200</span>
+  <span style="color:#66d9ef">github</span>: myxotod
+  <span style="color:#66d9ef">codepen</span>: MyXoToD
+  <span style="color:#66d9ef">gravatar</span>: http://www.gravatar.com/avatar/a284083f6f4f9446723adf3b97b90151?s=<span style="color:#ae81ff">200</span>
 
-- name: Kevin
-  twitter: _kevinatari
+- <span style="color:#66d9ef">name</span>: Kevin
+  <span style="color:#66d9ef">twitter</span>: _kevinatari
   
-  github: kevingimbel
-  codepen: kevingimbel
-  gravatar: http://www.gravatar.com/avatar/6d391d8c3a528122f3f6c991821350ac?s=<span style="color:#ae81ff">200</span>  
+  <span style="color:#66d9ef">github</span>: kevingimbel
+  <span style="color:#66d9ef">codepen</span>: kevingimbel
+  <span style="color:#66d9ef">gravatar</span>: http://www.gravatar.com/avatar/6d391d8c3a528122f3f6c991821350ac?s=<span style="color:#ae81ff">200</span>  
 </code></pre></div><p>After the file is saved you can loop through its content like:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% raw %}
 {% for member in site.data.member %}
@@ -298,9 +298,9 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
     &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://codepen.io/{{ member.codepen }}&#34;</span>&gt;{{ member.codepen }}&lt;/<span style="color:#f92672">a</span>&gt;
 {% endfor %}
 {% endraw %}
-</code></pre></div><p>That's it, the result is a <code>h3</code> for every member holding its name and 3 links holding the Twitter, Personal Website and CodePen URL, this way new members can be added easily - only one of us has to edit the <code>members.yml</code> file and the page gets updated a few seconds after.</p>
+</code></pre></div><p>That&rsquo;s it, the result is a <code>h3</code> for every member holding its name and 3 links holding the Twitter, Personal Website and CodePen URL, this way new members can be added easily - only one of us has to edit the <code>members.yml</code> file and the page gets updated a few seconds after.</p>
 <h3 id="github-api">GitHub API</h3>
-<p>As I mentioned above we're using GitHub's API to get all our repos on the front-page. This was pretty easy to be honest, even for a JavaScript and API beginner like I am.</p>
+<p>As I mentioned above we&rsquo;re using GitHub&rsquo;s API to get all our repos on the front-page. This was pretty easy to be honest, even for a JavaScript and API beginner like I am.</p>
 <p>As I always do I avoided jQuery for this because I think it is a waste of Requests to load jQuery if I only use a minimal of its functionality. So I wrote the Ajax request by hand. The comments describe what goes one.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">// Loading a new Ajax Request and saving it
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// to the variable xml
@@ -395,7 +395,7 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
     } <span style="color:#66d9ef">else</span> {
         window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">downloadJSAtOnload</span>;
     }
-</code></pre></div><p>Those are just a few of the benefits of Jekyll and, because we're a &ldquo;GitHub only&rdquo; organization we switched so it's easier to scale the site. Building a Blog would now only take a some time because we're already running Jekyll and just have to add one more layout. That's it, the basics of our brand-new <a href="http://bullg.it">bullgit</a> page.</p>
+</code></pre></div><p>Those are just a few of the benefits of Jekyll and, because we&rsquo;re a &ldquo;GitHub only&rdquo; organization we switched so it&rsquo;s easier to scale the site. Building a Blog would now only take a some time because we&rsquo;re already running Jekyll and just have to add one more layout. That&rsquo;s it, the basics of our brand-new <a href="http://bullg.it">bullgit</a> page.</p>
 ]]></content>
             
                  

@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kevingimbel.de/categories/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/photography/2020/01/fujifilm-x30/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/iphone/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/iphone_7/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/photography/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/photography/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/tags/canon/</loc>
     <lastmod>2020-01-12T00:00:00+00:00</lastmod>
   </url>
@@ -13,18 +53,8 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/tags/city/</loc>
     <lastmod>2020-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -35,21 +65,6 @@
   <url>
     <loc>https://kevingimbel.de/tags/nature/</loc>
     <lastmod>2020-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/photography/</loc>
-    <lastmod>2020-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/categories/photography/</loc>
-    <lastmod>2020-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -263,13 +278,28 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2020/die-tyranei-des-schmetterlings/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/tags/fallback/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2019/fahrenheit-451/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -285,6 +315,11 @@
   <url>
     <loc>https://kevingimbel.de/tags/landscape/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2019/we/</loc>
+    <lastmod>2019-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -313,6 +348,11 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2019/animal-farm/</loc>
+    <lastmod>2019-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</loc>
     <lastmod>2019-08-18T00:00:00+00:00</lastmod>
   </url>
@@ -320,6 +360,11 @@
   <url>
     <loc>https://kevingimbel.de/tags/street_photography/</loc>
     <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2019/a-brief-history-of-time/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -538,12 +583,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/nodejs/</loc>
+    <loc>https://kevingimbel.de/categories/nodejs/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/nodejs/</loc>
+    <loc>https://kevingimbel.de/tags/nodejs/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
@@ -698,6 +743,11 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2014/metro-2034/</loc>
+    <lastmod>2014-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/tags/android/</loc>
     <lastmod>2014-11-21T00:00:00+00:00</lastmod>
   </url>
@@ -718,12 +768,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/magento/</loc>
+    <loc>https://kevingimbel.de/categories/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/magento/</loc>
+    <loc>https://kevingimbel.de/tags/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -733,12 +783,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/php/</loc>
+    <loc>https://kevingimbel.de/categories/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/php/</loc>
+    <loc>https://kevingimbel.de/tags/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -750,6 +800,11 @@
   <url>
     <loc>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</loc>
     <lastmod>2014-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2014/javascript-the-good-parts/</loc>
+    <lastmod>2014-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -898,6 +953,16 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2013/menschliches-allzumenschliches/</loc>
+    <lastmod>2013-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2013/metro-2033/</loc>
+    <lastmod>2013-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/tags/interface/</loc>
     <lastmod>2013-11-24T00:00:00+00:00</lastmod>
   </url>
@@ -1003,6 +1068,21 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2013/1984/</loc>
+    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2013/brave-new-world/</loc>
+    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2013/der-antichrist/</loc>
+    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/photography/2012/08/roadhouse/</loc>
     <lastmod>2012-08-03T00:00:00+00:00</lastmod>
   </url>
@@ -1043,6 +1123,21 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2012/berlin-gothic-der-versteckte-wille/</loc>
+    <lastmod>2012-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-bedeutung/</loc>
+    <lastmod>2012-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2012/berlin-gothic-nachts-bei-max/</loc>
+    <lastmod>2012-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/photography/2012/05/colza-field/</loc>
     <lastmod>2012-05-01T00:00:00+00:00</lastmod>
   </url>
@@ -1050,6 +1145,31 @@
   <url>
     <loc>https://kevingimbel.de/tags/fields/</loc>
     <lastmod>2012-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2012/berlin-gothic/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-stadt/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2012/berlin-gothic-gottmaschine/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2012/berlin-gothic-xavers-ende/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2012/fairies-and-folks-of-ireland/</loc>
+    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

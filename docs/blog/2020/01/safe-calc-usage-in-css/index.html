@@ -13,12 +13,16 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
-        Using CSS <code>calc</code> function reasonable and with fallbacks
+        <span>
+            Using CSS <code>calc</code> function reasonable and with fallbacks
+        
+        
+        
+        
+        </span>
     </header>
 
-    
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -36,6 +40,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -66,7 +74,7 @@
         title="View update">updated</a>
     02. Jan 2020  </p>
             <p><code>calc</code> is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example <code>calc(100% - 4rem - 1px)</code> is valid and works in modern browsers - in simpler words: Calc works with different units like <code>em</code>, <code>%</code>, <code>px</code>, etc.</p>
-<p>The problem with calc is that if it doesn't work you may get a unexpected result. Take the following code for example:</p>
+<p>The problem with calc is that if it doesn&rsquo;t work you may get a unexpected result. Take the following code for example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">author</span> {
     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
     <span style="color:#66d9ef">width</span>: calc(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>);

@@ -17,7 +17,7 @@
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</guid>
-      <description>Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&#39;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
+      <description>Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&amp;rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
 This guide assumes the operating system is Ubuntu! If you use a different distro some commands may be different.</description>
     </item>
     
@@ -27,7 +27,7 @@ This guide assumes the operating system is Ubuntu! If you use a different distro
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</guid>
-      <description>For the longest time I completely ignored archetypes in hugo. I&#39;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
+      <description>For the longest time I completely ignored archetypes in hugo. I&amp;rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
 Archetypes are easy to use, for example to create this post I ran the following command
 $ hugo new blog/2020-01-07-using-archetypes-in-hugo.md This copied over the archetype file from archetypes/blog.</description>
     </item>
@@ -69,7 +69,7 @@ Partial First I created a new partial named single-header.</description>
       
       <guid>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</guid>
       <description>calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
-The problem with calc is that if it doesn&#39;t work you may get a unexpected result. Take the following code for example:</description>
+The problem with calc is that if it doesn&amp;rsquo;t work you may get a unexpected result. Take the following code for example:</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2018/04/til-bash-select/</guid>
-      <description>I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&#39;s the real TIL here!
+      <description>I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&amp;rsquo;s the real TIL here!
  [&amp;hellip;] PS3 is shown when the select command is waiting for input [&amp;hellip;]
  So the PS3 prompt is shown when a bash program is waiting for user input, and it turns out that the select bash command is used for creating a &amp;ldquo;choice&amp;rdquo; UI in bash.</description>
     </item>
@@ -185,7 +185,7 @@ React itself says one very important and true thing about itself:
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</guid>
-      <description>I&#39;ve spent the past week developing some features for our own website at work. We&#39;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&#39;s way easier to keep an overview and with a good overview of data flow and available data it&#39;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</description>
+      <description>I&amp;rsquo;ve spent the past week developing some features for our own website at work. We&amp;rsquo;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&amp;rsquo;s way easier to keep an overview and with a good overview of data flow and available data it&amp;rsquo;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</description>
     </item>
     
     <item>
@@ -194,7 +194,7 @@ React itself says one very important and true thing about itself:
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid>
-      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&#39;s bigger!</description>
+      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&amp;rsquo;s bigger!</description>
     </item>
     
     <item>
@@ -203,7 +203,7 @@ React itself says one very important and true thing about itself:
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</guid>
-      <description>It&#39;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&#39;ve already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp;amp; pasted everything I found on the Internet into my .</description>
+      <description>It&amp;rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&amp;rsquo;ve already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp;amp; pasted everything I found on the Internet into my .</description>
     </item>
     
     <item>
@@ -240,7 +240,7 @@ var d = document, trigger = d.</description>
       <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/07/conditional-css/</guid>
-      <description>While there&#39;s a lot of talking about CSS writing styles, organization styles and if it&#39;s maybe better or not to avoid pre-processors or frameworks there&#39;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&#39;d like to talk a bit about conditional CSS that I&#39;ve been using in production and that I think can improve the overall logic of CSS.</description>
+      <description>While there&amp;rsquo;s a lot of talking about CSS writing styles, organization styles and if it&amp;rsquo;s maybe better or not to avoid pre-processors or frameworks there&amp;rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&amp;rsquo;d like to talk a bit about conditional CSS that I&amp;rsquo;ve been using in production and that I think can improve the overall logic of CSS.</description>
     </item>
     
     <item>
@@ -249,8 +249,8 @@ var d = document, trigger = d.</description>
       <pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</guid>
-      <description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&#39;s good to have at least basic understanding of JavaScript.
-So before I start I&#39;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description>
+      <description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&amp;rsquo;s good to have at least basic understanding of JavaScript.
+So before I start I&amp;rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description>
     </item>
     
     <item>
@@ -259,7 +259,7 @@ So before I start I&#39;d like to say that I consider myself a JavaScript beginn
       <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/07/noobish-vim/</guid>
-      <description>Since I&#39;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &amp;ldquo;good&amp;rdquo; way to integrate it into my daily workflow. Since I&#39;m working in a relativley small company it&#39;s most of the time stressy to get all things done and to keep an overview - so long story short: There&#39;s not much time for new tools that don&#39;t increase my workflow directly. VIM is one of these tools that don&#39;t fully support my workflow at the moment.</description>
+      <description>Since I&amp;rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &amp;ldquo;good&amp;rdquo; way to integrate it into my daily workflow. Since I&amp;rsquo;m working in a relativley small company it&amp;rsquo;s most of the time stressy to get all things done and to keep an overview - so long story short: There&amp;rsquo;s not much time for new tools that don&amp;rsquo;t increase my workflow directly. VIM is one of these tools that don&amp;rsquo;t fully support my workflow at the moment.</description>
     </item>
     
     <item>
@@ -268,7 +268,7 @@ So before I start I&#39;d like to say that I consider myself a JavaScript beginn
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</guid>
-      <description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&#39;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
+      <description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&amp;rsquo;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
 Browser-based The following tools are all for Chrome because I use Chrome for most of my development.</description>
     </item>
     
@@ -278,7 +278,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</guid>
-      <description>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&#39;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &amp;ldquo;cloned&amp;rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</description>
+      <description>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&amp;rsquo;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &amp;ldquo;cloned&amp;rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</description>
     </item>
     
     <item>
@@ -297,7 +297,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</guid>
-      <description>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &amp;ldquo;Secrets of the JavaScript Ninja&amp;rdquo; by the amazing John Resig and try to play around with JavaScript whenever I&#39;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&#39;t check for every possible thingy. Anyway, I&#39;ll cover this in a small write-up aka a blog post.</description>
+      <description>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &amp;ldquo;Secrets of the JavaScript Ninja&amp;rdquo; by the amazing John Resig and try to play around with JavaScript whenever I&amp;rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&amp;rsquo;t check for every possible thingy. Anyway, I&amp;rsquo;ll cover this in a small write-up aka a blog post.</description>
     </item>
     
     <item>
@@ -306,7 +306,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Sat, 22 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</guid>
-      <description>The great thing when you&#39;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&#39;m very proud of my back to top script even though it&#39;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&#39;t be that much fun. However, I made another JavaScript thing I&#39;m proud of: A pure JavaScript slider.</description>
+      <description>The great thing when you&amp;rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&amp;rsquo;m very proud of my back to top script even though it&amp;rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&amp;rsquo;t be that much fun. However, I made another JavaScript thing I&amp;rsquo;m proud of: A pure JavaScript slider.</description>
     </item>
     
     <item>
@@ -325,7 +325,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</guid>
-      <description>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&#39;s one thing that I&#39;d like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&#39;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</description>
+      <description>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&amp;rsquo;s one thing that I&amp;rsquo;d like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&amp;rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</description>
     </item>
     
     <item>
@@ -334,7 +334,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</guid>
-      <description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&#39;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&#39;ve been using for the last two years or so.</description>
+      <description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&amp;rsquo;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&amp;rsquo;ve been using for the last two years or so.</description>
     </item>
     
     <item>
@@ -343,7 +343,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</guid>
-      <description>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &amp;ldquo;Problem&amp;rdquo; with this task was that it&#39;s not only a few different length, it&#39;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &amp;ldquo;fixed&amp;rdquo; solution, like applying a max-width of let&#39;s say 20em, isn&#39;t the best solution for this so I ended up creating a flexible solution.</description>
+      <description>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &amp;ldquo;Problem&amp;rdquo; with this task was that it&amp;rsquo;s not only a few different length, it&amp;rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &amp;ldquo;fixed&amp;rdquo; solution, like applying a max-width of let&amp;rsquo;s say 20em, isn&amp;rsquo;t the best solution for this so I ended up creating a flexible solution.</description>
     </item>
     
     <item>
@@ -352,7 +352,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</guid>
-      <description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&#39;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&#39;m doing. Yesterday night&#39;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&#39;s where the title comes from.</description>
+      <description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&amp;rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&amp;rsquo;m doing. Yesterday night&amp;rsquo;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&amp;rsquo;s where the title comes from.</description>
     </item>
     
     <item>
@@ -361,7 +361,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</guid>
-      <description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&#39;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
+      <description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&amp;rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
 A few years ago I had to do this once and I remember doing it with an image and background-position but as of today I really love pseudo elements and &amp;ldquo;Look-Ma-No-Image!</description>
     </item>
     
@@ -371,7 +371,7 @@ A few years ago I had to do this once and I remember doing it with an image and 
       <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</guid>
-      <description>Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&#39;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&#39;d be my birthday while unpacking the *.</description>
+      <description>Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&amp;rsquo;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&amp;rsquo;d be my birthday while unpacking the *.</description>
     </item>
     
     <item>
@@ -390,7 +390,7 @@ After naming my Object $ (because I new this from jQuery and I thought it would 
       <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</guid>
-      <description>If you&#39;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&#39;s fair to say that they&#39;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
+      <description>If you&amp;rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&amp;rsquo;s fair to say that they&amp;rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
 Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</description>
     </item>
     
@@ -400,7 +400,7 @@ Even though Pre-Processors are easy to use and setup some people are still confu
       <pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</guid>
-      <description>I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it&#39;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
+      <description>I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it&amp;rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
 position:sticky is a pretty handy feature that allows you to stick an element to the top of the page (or wherever you want) until the parent element is moved out of the screen.
 Basic Markup To get an idea of how position:sticky works I made some basic markup.</description>
     </item>
@@ -411,7 +411,7 @@ Basic Markup To get an idea of how position:sticky works I made some basic marku
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/09/endless-scrolling/</guid>
-      <description>If you see Apps (no matter if native or web) and websites like I do, you&#39;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&#39;t offer a way to get back to top on their website nor do they on Facebook for Android.
+      <description>If you see Apps (no matter if native or web) and websites like I do, you&amp;rsquo;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&amp;rsquo;t offer a way to get back to top on their website nor do they on Facebook for Android.
 On Android you can simply hit the menu button and the sidebar-like menu will fade in, so there is no problem with not having an &amp;ldquo;scroll to top&amp;rdquo; action because there is no need to get back to the top.</description>
     </item>
     
@@ -431,7 +431,7 @@ On Android you can simply hit the menu button and the sidebar-like menu will fad
       
       <guid>https://kevingimbel.de/blog/2013/08/px-vs-em/</guid>
       <description>Recently Tim Pietrusky wrote and article about px vs em that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.
-I was using pixel like forever and I couldn&#39;t think of any reason to switch to a new unit until Tim explained why em is better: em is more responsive and it is scalable. In fact when you switch from pixel to em you&#39;ll feel like working on a completely new Level.</description>
+I was using pixel like forever and I couldn&amp;rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: em is more responsive and it is scalable. In fact when you switch from pixel to em you&amp;rsquo;ll feel like working on a completely new Level.</description>
     </item>
     
   </channel>

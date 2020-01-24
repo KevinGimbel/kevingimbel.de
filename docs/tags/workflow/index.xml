@@ -35,7 +35,7 @@
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid>
-      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&#39;s bigger!</description>
+      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&amp;rsquo;s bigger!</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</guid>
-      <description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&#39;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
+      <description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&amp;rsquo;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
 Browser-based The following tools are all for Chrome because I use Chrome for most of my development.</description>
     </item>
     
@@ -54,7 +54,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</guid>
-      <description>In case your company is using GMail Business there&#39;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;ldquo;View&amp;rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</description>
+      <description>In case your company is using GMail Business there&amp;rsquo;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;ldquo;View&amp;rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</description>
     </item>
     
   </channel>

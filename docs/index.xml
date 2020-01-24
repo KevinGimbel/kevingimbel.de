@@ -6,10 +6,20 @@
     <description>Recent content in Home is where 127.0.0.1 is on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fujifilm X30</title>
+      <link>https://kevingimbel.de/photography/2020/01/fujifilm-x30/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/fujifilm-x30/</guid>
+      <description>A picture of my Fujifilm X30, taken with an iPhone in low light and not edited. I kinda liked the result.
+Right now the Fujifilm X30 is my main camera which I try to carry with me at all times. It&amp;rsquo;s a great camera for quick snapshots and day-to-day photography. I&amp;rsquo;m thinking about getting another camera with switchable lenses, but I cannot decide on one. It&amp;rsquo;ll probably be either a Fujifilm X-T2 or Canon EOS 5D Mark 2 - right now I have a strong preference for the Fujifilm.</description>
+    </item>
     
     <item>
       <title>Merl</title>
@@ -36,7 +46,7 @@
       
       <guid>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</guid>
       <description>One of the sightseeing spots in Wiesbaden is St. Elizabeths Church, a orthodox church located on top the Neroberg.
-I&#39;m looking forward to taking some better photos of it in the future.</description>
+I&amp;rsquo;m looking forward to taking some better photos of it in the future.</description>
     </item>
     
     <item>
@@ -54,7 +64,7 @@ I&#39;m looking forward to taking some better photos of it in the future.</descr
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</guid>
-      <description>Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&#39;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
+      <description>Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&amp;rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
 This guide assumes the operating system is Ubuntu! If you use a different distro some commands may be different.</description>
     </item>
     
@@ -64,7 +74,7 @@ This guide assumes the operating system is Ubuntu! If you use a different distro
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</guid>
-      <description>For the longest time I completely ignored archetypes in hugo. I&#39;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
+      <description>For the longest time I completely ignored archetypes in hugo. I&amp;rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
 Archetypes are easy to use, for example to create this post I ran the following command
 $ hugo new blog/2020-01-07-using-archetypes-in-hugo.md This copied over the archetype file from archetypes/blog.</description>
     </item>
@@ -110,13 +120,31 @@ Feel free to use these headers for any non-commercial thing you want.</descripti
     </item>
     
     <item>
+      <title>Die Tyranei des Schmetterlings</title>
+      <link>https://kevingimbel.de/book/2020/die-tyranei-des-schmetterlings/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2020/die-tyranei-des-schmetterlings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Safe calc usage in CSS</title>
       <link>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</guid>
       <description>calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
-The problem with calc is that if it doesn&#39;t work you may get a unexpected result. Take the following code for example:</description>
+The problem with calc is that if it doesn&amp;rsquo;t work you may get a unexpected result. Take the following code for example:</description>
+    </item>
+    
+    <item>
+      <title>Fahrenheit 451</title>
+      <link>https://kevingimbel.de/book/2019/fahrenheit-451/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2019/fahrenheit-451/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -129,13 +157,31 @@ The problem with calc is that if it doesn&#39;t work you may get a unexpected re
     </item>
     
     <item>
+      <title>We</title>
+      <link>https://kevingimbel.de/book/2019/we/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2019/we/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fasanerie</title>
       <link>https://kevingimbel.de/photography/2019/10/fasanerie/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/photography/2019/10/fasanerie/</guid>
-      <description>&amp;ldquo;Fasanerie&amp;rdquo; is the name of a local wildlife and forest park. It&#39;s free to enter and a very nice place to spent a family day.
+      <description>&amp;ldquo;Fasanerie&amp;rdquo; is the name of a local wildlife and forest park. It&amp;rsquo;s free to enter and a very nice place to spent a family day.
 All images were edited with Darktable, a free open source Adobe Lightroom alternative.</description>
+    </item>
+    
+    <item>
+      <title>Animal Farm</title>
+      <link>https://kevingimbel.de/book/2019/animal-farm/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2019/animal-farm/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -149,12 +195,21 @@ All images in this post were taken with my Fujifilm X30 camera.</description>
     </item>
     
     <item>
+      <title>A brief history of time</title>
+      <link>https://kevingimbel.de/book/2019/a-brief-history-of-time/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2019/a-brief-history-of-time/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fallout 76: B.E.T.A</title>
       <link>https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/</guid>
-      <description>If you know me you&#39;ll probably know that I am a huge Fallout fan. I absolutely love the games (all of them basically, maybe not Tactics) and I&#39;ve played Fallout 3 and Fallout New Vegas countless times on XBox 360 and PC. When Fallout 76 was announced via a mysterious live stream in anticipation of E3 2018 I spent an entire evening on Twitch watching - nothing. It was a bit frustrating at the time but checking Reddit and Twitter for all kinds of hints as to what this stream could mean and speculation with the amazing r/Fallout community was a lot of fun.</description>
+      <description>If you know me you&amp;rsquo;ll probably know that I am a huge Fallout fan. I absolutely love the games (all of them basically, maybe not Tactics) and I&amp;rsquo;ve played Fallout 3 and Fallout New Vegas countless times on XBox 360 and PC. When Fallout 76 was announced via a mysterious live stream in anticipation of E3 2018 I spent an entire evening on Twitch watching - nothing. It was a bit frustrating at the time but checking Reddit and Twitter for all kinds of hints as to what this stream could mean and speculation with the amazing r/Fallout community was a lot of fun.</description>
     </item>
     
     <item>
@@ -183,7 +238,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2018/04/til-bash-select/</guid>
-      <description>I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&#39;s the real TIL here!
+      <description>I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&amp;rsquo;s the real TIL here!
  [&amp;hellip;] PS3 is shown when the select command is waiting for input [&amp;hellip;]
  So the PS3 prompt is shown when a bash program is waiting for user input, and it turns out that the select bash command is used for creating a &amp;ldquo;choice&amp;rdquo; UI in bash.</description>
     </item>
@@ -222,7 +277,7 @@ Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love 
       <pubDate>Sun, 05 Mar 2017 19:43:16 +0100</pubDate>
       
       <guid>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</guid>
-      <description>It turns out that a lot of my time is actually spent working or playing games - so there&#39;s not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the Nintendo Switch and The Legend Of Zelda: Breath of the Wild were released.</description>
+      <description>It turns out that a lot of my time is actually spent working or playing games - so there&amp;rsquo;s not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the Nintendo Switch and The Legend Of Zelda: Breath of the Wild were released.</description>
     </item>
     
     <item>
@@ -240,7 +295,7 @@ Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love 
       <pubDate>Wed, 08 Feb 2017 08:51:13 +0100</pubDate>
       
       <guid>https://kevingimbel.de/blog/2017/02/2017-week-five/</guid>
-      <description>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&#39;m only 6 months late to do so because I kept saying &amp;ldquo;I&#39;ll call next week&amp;rdquo;, &amp;ldquo;I&#39;ll do it when I&#39;m back from Amsterdam&amp;rdquo;, &amp;ldquo;I&#39;ll do it after Christmas&amp;rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</description>
+      <description>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&amp;rsquo;m only 6 months late to do so because I kept saying &amp;ldquo;I&amp;rsquo;ll call next week&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it when I&amp;rsquo;m back from Amsterdam&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it after Christmas&amp;rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</description>
     </item>
     
     <item>
@@ -249,7 +304,7 @@ Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love 
       <pubDate>Sun, 29 Jan 2017 12:44:43 +0100</pubDate>
       
       <guid>https://kevingimbel.de/blog/2017/01/2017-week-four/</guid>
-      <description>It&#39;s the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there&#39;s not much to say so this will be a quick read with some reading recommendations at the end.
+      <description>It&amp;rsquo;s the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there&amp;rsquo;s not much to say so this will be a quick read with some reading recommendations at the end.
 dep The Go language has released a alpha version of dep - their dependency management tool.</description>
     </item>
     
@@ -259,7 +314,7 @@ dep The Go language has released a alpha version of dep - their dependency manag
       <pubDate>Sun, 22 Jan 2017 11:44:43 +0100</pubDate>
       
       <guid>https://kevingimbel.de/blog/2017/01/2017-week-three/</guid>
-      <description>Another week another short review! The third week of 2017 had a lot of travel because I attended an Elasticsearch training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it&#39;s a great reference to look at.</description>
+      <description>Another week another short review! The third week of 2017 had a lot of travel because I attended an Elasticsearch training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it&amp;rsquo;s a great reference to look at.</description>
     </item>
     
     <item>
@@ -305,7 +360,7 @@ Shebang  If you already know what a Shebang is skip to the next section</descrip
       <pubDate>Sun, 08 Jan 2017 18:02:48 +0100</pubDate>
       
       <guid>https://kevingimbel.de/blog/2017/01/2017-week-one/</guid>
-      <description>German blogger, designer, and YouTuber Marcel Wichmann started a weekly-review blog series which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &amp;ldquo;easy&amp;rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I&#39;ll keep it up for each week but I will try.</description>
+      <description>German blogger, designer, and YouTuber Marcel Wichmann started a weekly-review blog series which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &amp;ldquo;easy&amp;rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I&amp;rsquo;ll keep it up for each week but I will try.</description>
     </item>
     
     <item>
@@ -324,7 +379,7 @@ January   View from the hotel in Fuerteventura.   January started with what we c
       <pubDate>Tue, 27 Dec 2016 15:05:59 +0100</pubDate>
       
       <guid>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</guid>
-      <description>Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it&#39;s odd to switch to MacOS.</description>
+      <description>Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it&amp;rsquo;s odd to switch to MacOS.</description>
     </item>
     
     <item>
@@ -361,7 +416,7 @@ This very site you read right now is build with Hugo, a static site generator bu
       <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/</guid>
-      <description>It&#39;s been quite a while since I last posted a Mixtape but luckily I just happened to create one the other day for a friend, hoping to get her into Drum and Bass. So here it is, &amp;ldquo;A Beginners Guide to Drum and Bass&amp;rdquo; with a selection of tracks from liquid to harder Drum and Bass. Enjoy!
+      <description>It&amp;rsquo;s been quite a while since I last posted a Mixtape but luckily I just happened to create one the other day for a friend, hoping to get her into Drum and Bass. So here it is, &amp;ldquo;A Beginners Guide to Drum and Bass&amp;rdquo; with a selection of tracks from liquid to harder Drum and Bass. Enjoy!
 See all Mixtapes</description>
     </item>
     
@@ -382,7 +437,7 @@ React itself says one very important and true thing about itself:
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</guid>
-      <description>I&#39;ve spent the past week developing some features for our own website at work. We&#39;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&#39;s way easier to keep an overview and with a good overview of data flow and available data it&#39;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</description>
+      <description>I&amp;rsquo;ve spent the past week developing some features for our own website at work. We&amp;rsquo;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&amp;rsquo;s way easier to keep an overview and with a good overview of data flow and available data it&amp;rsquo;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</description>
     </item>
     
     <item>
@@ -391,7 +446,7 @@ React itself says one very important and true thing about itself:
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid>
-      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&#39;s bigger!</description>
+      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&amp;rsquo;s bigger!</description>
     </item>
     
     <item>
@@ -400,7 +455,16 @@ React itself says one very important and true thing about itself:
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</guid>
-      <description>It&#39;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&#39;ve already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp;amp; pasted everything I found on the Internet into my .</description>
+      <description>It&amp;rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&amp;rsquo;ve already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp;amp; pasted everything I found on the Internet into my .</description>
+    </item>
+    
+    <item>
+      <title>Metro 2034</title>
+      <link>https://kevingimbel.de/book/2014/metro-2034/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2014/metro-2034/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -432,12 +496,21 @@ var d = document, trigger = d.</description>
     </item>
     
     <item>
+      <title>Javascript: The Good Parts</title>
+      <link>https://kevingimbel.de/book/2014/javascript-the-good-parts/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2014/javascript-the-good-parts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Conditional CSS</title>
       <link>https://kevingimbel.de/blog/2014/07/conditional-css/</link>
       <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/07/conditional-css/</guid>
-      <description>While there&#39;s a lot of talking about CSS writing styles, organization styles and if it&#39;s maybe better or not to avoid pre-processors or frameworks there&#39;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&#39;d like to talk a bit about conditional CSS that I&#39;ve been using in production and that I think can improve the overall logic of CSS.</description>
+      <description>While there&amp;rsquo;s a lot of talking about CSS writing styles, organization styles and if it&amp;rsquo;s maybe better or not to avoid pre-processors or frameworks there&amp;rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&amp;rsquo;d like to talk a bit about conditional CSS that I&amp;rsquo;ve been using in production and that I think can improve the overall logic of CSS.</description>
     </item>
     
     <item>
@@ -446,8 +519,8 @@ var d = document, trigger = d.</description>
       <pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</guid>
-      <description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&#39;s good to have at least basic understanding of JavaScript.
-So before I start I&#39;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description>
+      <description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&amp;rsquo;s good to have at least basic understanding of JavaScript.
+So before I start I&amp;rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description>
     </item>
     
     <item>
@@ -456,7 +529,7 @@ So before I start I&#39;d like to say that I consider myself a JavaScript beginn
       <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/07/noobish-vim/</guid>
-      <description>Since I&#39;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &amp;ldquo;good&amp;rdquo; way to integrate it into my daily workflow. Since I&#39;m working in a relativley small company it&#39;s most of the time stressy to get all things done and to keep an overview - so long story short: There&#39;s not much time for new tools that don&#39;t increase my workflow directly. VIM is one of these tools that don&#39;t fully support my workflow at the moment.</description>
+      <description>Since I&amp;rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &amp;ldquo;good&amp;rdquo; way to integrate it into my daily workflow. Since I&amp;rsquo;m working in a relativley small company it&amp;rsquo;s most of the time stressy to get all things done and to keep an overview - so long story short: There&amp;rsquo;s not much time for new tools that don&amp;rsquo;t increase my workflow directly. VIM is one of these tools that don&amp;rsquo;t fully support my workflow at the moment.</description>
     </item>
     
     <item>
@@ -465,7 +538,7 @@ So before I start I&#39;d like to say that I consider myself a JavaScript beginn
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</guid>
-      <description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&#39;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
+      <description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&amp;rsquo;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
 Browser-based The following tools are all for Chrome because I use Chrome for most of my development.</description>
     </item>
     
@@ -475,7 +548,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</guid>
-      <description>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&#39;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &amp;ldquo;cloned&amp;rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</description>
+      <description>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&amp;rsquo;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &amp;ldquo;cloned&amp;rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</description>
     </item>
     
     <item>
@@ -494,7 +567,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</guid>
-      <description>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &amp;ldquo;Secrets of the JavaScript Ninja&amp;rdquo; by the amazing John Resig and try to play around with JavaScript whenever I&#39;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&#39;t check for every possible thingy. Anyway, I&#39;ll cover this in a small write-up aka a blog post.</description>
+      <description>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &amp;ldquo;Secrets of the JavaScript Ninja&amp;rdquo; by the amazing John Resig and try to play around with JavaScript whenever I&amp;rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&amp;rsquo;t check for every possible thingy. Anyway, I&amp;rsquo;ll cover this in a small write-up aka a blog post.</description>
     </item>
     
     <item>
@@ -512,7 +585,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Sat, 22 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</guid>
-      <description>The great thing when you&#39;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&#39;m very proud of my back to top script even though it&#39;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&#39;t be that much fun. However, I made another JavaScript thing I&#39;m proud of: A pure JavaScript slider.</description>
+      <description>The great thing when you&amp;rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&amp;rsquo;m very proud of my back to top script even though it&amp;rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&amp;rsquo;t be that much fun. However, I made another JavaScript thing I&amp;rsquo;m proud of: A pure JavaScript slider.</description>
     </item>
     
     <item>
@@ -539,7 +612,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</guid>
-      <description>In case your company is using GMail Business there&#39;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;ldquo;View&amp;rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</description>
+      <description>In case your company is using GMail Business there&amp;rsquo;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;ldquo;View&amp;rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</description>
     </item>
     
     <item>
@@ -567,7 +640,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</guid>
-      <description>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&#39;s one thing that I&#39;d like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&#39;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</description>
+      <description>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&amp;rsquo;s one thing that I&amp;rsquo;d like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&amp;rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</description>
     </item>
     
     <item>
@@ -576,7 +649,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</guid>
-      <description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&#39;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&#39;ve been using for the last two years or so.</description>
+      <description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&amp;rsquo;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&amp;rsquo;ve been using for the last two years or so.</description>
     </item>
     
     <item>
@@ -585,7 +658,25 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Sun, 22 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/12/how-i-got-employed/</guid>
-      <description>About 1 year ago I joined a tlk.io Chat created by Tim Pietrusky. It was my first time ever I joined a group of other devs and I was more then nervouse about because I - at this time - considered my self more of a Hobby-Dev who&#39;s not that skilled. I just started using CodePen a few months before and did some fun demos and experiments there like drawing images with CSS and stuff.</description>
+      <description>About 1 year ago I joined a tlk.io Chat created by Tim Pietrusky. It was my first time ever I joined a group of other devs and I was more then nervouse about because I - at this time - considered my self more of a Hobby-Dev who&amp;rsquo;s not that skilled. I just started using CodePen a few months before and did some fun demos and experiments there like drawing images with CSS and stuff.</description>
+    </item>
+    
+    <item>
+      <title>Menschliches Allzumenschliches</title>
+      <link>https://kevingimbel.de/book/2013/menschliches-allzumenschliches/</link>
+      <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2013/menschliches-allzumenschliches/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metro 2033</title>
+      <link>https://kevingimbel.de/book/2013/metro-2033/</link>
+      <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2013/metro-2033/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -594,7 +685,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</guid>
-      <description>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &amp;ldquo;Problem&amp;rdquo; with this task was that it&#39;s not only a few different length, it&#39;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &amp;ldquo;fixed&amp;rdquo; solution, like applying a max-width of let&#39;s say 20em, isn&#39;t the best solution for this so I ended up creating a flexible solution.</description>
+      <description>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &amp;ldquo;Problem&amp;rdquo; with this task was that it&amp;rsquo;s not only a few different length, it&amp;rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &amp;ldquo;fixed&amp;rdquo; solution, like applying a max-width of let&amp;rsquo;s say 20em, isn&amp;rsquo;t the best solution for this so I ended up creating a flexible solution.</description>
     </item>
     
     <item>
@@ -603,7 +694,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</guid>
-      <description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&#39;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&#39;m doing. Yesterday night&#39;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&#39;s where the title comes from.</description>
+      <description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&amp;rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&amp;rsquo;m doing. Yesterday night&amp;rsquo;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&amp;rsquo;s where the title comes from.</description>
     </item>
     
     <item>
@@ -612,7 +703,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
       <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</guid>
-      <description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&#39;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
+      <description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&amp;rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
 A few years ago I had to do this once and I remember doing it with an image and background-position but as of today I really love pseudo elements and &amp;ldquo;Look-Ma-No-Image!</description>
     </item>
     
@@ -622,7 +713,7 @@ A few years ago I had to do this once and I remember doing it with an image and 
       <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</guid>
-      <description>Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&#39;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&#39;d be my birthday while unpacking the *.</description>
+      <description>Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&amp;rsquo;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&amp;rsquo;d be my birthday while unpacking the *.</description>
     </item>
     
     <item>
@@ -641,7 +732,7 @@ After naming my Object $ (because I new this from jQuery and I thought it would 
       <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/10/join-a-dev-group/</guid>
-      <description>Earlier this year I joined a Dev Group. It was the best decision I made this year and I want to tell you why. After doing more experiments on CodePen and right after I got to know Tim Pietrusky he opened a tlk.io Chat called #CodePen. For those who&#39;re not familiar with tlk: it&#39;s an open web chat. You can create a room, everyone can join and all things are open to everyone who knows the URL.</description>
+      <description>Earlier this year I joined a Dev Group. It was the best decision I made this year and I want to tell you why. After doing more experiments on CodePen and right after I got to know Tim Pietrusky he opened a tlk.io Chat called #CodePen. For those who&amp;rsquo;re not familiar with tlk: it&amp;rsquo;s an open web chat. You can create a room, everyone can join and all things are open to everyone who knows the URL.</description>
     </item>
     
     <item>
@@ -650,7 +741,7 @@ After naming my Object $ (because I new this from jQuery and I thought it would 
       <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</guid>
-      <description>If you&#39;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&#39;s fair to say that they&#39;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
+      <description>If you&amp;rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&amp;rsquo;s fair to say that they&amp;rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
 Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</description>
     </item>
     
@@ -660,7 +751,7 @@ Even though Pre-Processors are easy to use and setup some people are still confu
       <pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</guid>
-      <description>I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it&#39;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
+      <description>I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it&amp;rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
 position:sticky is a pretty handy feature that allows you to stick an element to the top of the page (or wherever you want) until the parent element is moved out of the screen.
 Basic Markup To get an idea of how position:sticky works I made some basic markup.</description>
     </item>
@@ -671,7 +762,7 @@ Basic Markup To get an idea of how position:sticky works I made some basic marku
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2013/09/endless-scrolling/</guid>
-      <description>If you see Apps (no matter if native or web) and websites like I do, you&#39;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&#39;t offer a way to get back to top on their website nor do they on Facebook for Android.
+      <description>If you see Apps (no matter if native or web) and websites like I do, you&amp;rsquo;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&amp;rsquo;t offer a way to get back to top on their website nor do they on Facebook for Android.
 On Android you can simply hit the menu button and the sidebar-like menu will fade in, so there is no problem with not having an &amp;ldquo;scroll to top&amp;rdquo; action because there is no need to get back to the top.</description>
     </item>
     
@@ -691,7 +782,7 @@ On Android you can simply hit the menu button and the sidebar-like menu will fad
       
       <guid>https://kevingimbel.de/blog/2013/08/px-vs-em/</guid>
       <description>Recently Tim Pietrusky wrote and article about px vs em that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.
-I was using pixel like forever and I couldn&#39;t think of any reason to switch to a new unit until Tim explained why em is better: em is more responsive and it is scalable. In fact when you switch from pixel to em you&#39;ll feel like working on a completely new Level.</description>
+I was using pixel like forever and I couldn&amp;rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: em is more responsive and it is scalable. In fact when you switch from pixel to em you&amp;rsquo;ll feel like working on a completely new Level.</description>
     </item>
     
     <item>
@@ -701,8 +792,35 @@ I was using pixel like forever and I couldn&#39;t think of any reason to switch 
       
       <guid>https://kevingimbel.de/blog/2013/08/hello-world/</guid>
       <description>Recently I decided to redesign and redefine my online appearance and the way I publish content to the internet. I switched from using 2 domains as Blog and Portfolio to one new Domain for both: kevingimbel.com
-This page is build with Jekyll a blog-aware static site generator you&#39;re going to love. I wrote a Guide to get started - so if you consider doing so give it a look.
+This page is build with Jekyll a blog-aware static site generator you&amp;rsquo;re going to love. I wrote a Guide to get started - so if you consider doing so give it a look.
 Beside switching to a new domain I also switched my hoster.</description>
+    </item>
+    
+    <item>
+      <title>1984</title>
+      <link>https://kevingimbel.de/book/2013/1984/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2013/1984/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brave New World</title>
+      <link>https://kevingimbel.de/book/2013/brave-new-world/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2013/brave-new-world/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Der Antichrist</title>
+      <link>https://kevingimbel.de/book/2013/der-antichrist/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2013/der-antichrist/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -729,7 +847,34 @@ Beside switching to a new domain I also switched my hoster.</description>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/photography/2012/06/pau/</guid>
-      <description>I spent one month in France working in a IT shop in Pau as part of my school education. I don&#39;t speak a word french so this was quite fun and challenging.</description>
+      <description>I spent one month in France working in a IT shop in Pau as part of my school education. I don&amp;rsquo;t speak a word french so this was quite fun and challenging.</description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Der Versteckte Wille</title>
+      <link>https://kevingimbel.de/book/2012/berlin-gothic-der-versteckte-wille/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2012/berlin-gothic-der-versteckte-wille/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Die Versteckte Bedeutung</title>
+      <link>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-bedeutung/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-bedeutung/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Nachts Bei Max</title>
+      <link>https://kevingimbel.de/book/2012/berlin-gothic-nachts-bei-max/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2012/berlin-gothic-nachts-bei-max/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -738,7 +883,52 @@ Beside switching to a new domain I also switched my hoster.</description>
       <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/photography/2012/05/colza-field/</guid>
-      <description>Walking through the fields of a small town is always a good idea, you never know what you&#39;ll find.</description>
+      <description>Walking through the fields of a small town is always a good idea, you never know what you&amp;rsquo;ll find.</description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic</title>
+      <link>https://kevingimbel.de/book/2012/berlin-gothic/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2012/berlin-gothic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Die Versteckte Stadt</title>
+      <link>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-stadt/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-stadt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Gottmaschine</title>
+      <link>https://kevingimbel.de/book/2012/berlin-gothic-gottmaschine/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2012/berlin-gothic-gottmaschine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Xavers Ende</title>
+      <link>https://kevingimbel.de/book/2012/berlin-gothic-xavers-ende/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2012/berlin-gothic-xavers-ende/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fairies and Folks of Ireland</title>
+      <link>https://kevingimbel.de/book/2012/fairies-and-folks-of-ireland/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2012/fairies-and-folks-of-ireland/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -748,9 +938,9 @@ Beside switching to a new domain I also switched my hoster.</description>
       
       <guid>https://kevingimbel.de/about/</guid>
       <description>Hello unknown reader,
-my name is Kevin Gimbel and you&#39;ve reached my corner of the world wide web. 👴
-I&#39;m actually not that old tho, I&#39;m in my mid twenties and I somehow ended up in the world of (cloud) computing. I&#39;m interested in Rust (a safe and fast programming language), Sci-Fi, dystopia books, fantasy worlds (Divinity, Elder Scrolls, Dungeons &amp;amp; Dragons), and video and boardgames.
-I tent to start a lot of things and pursue a lot of different interests when I&#39;m in a rush, but usually not much of it stays with me; Over the past year I briefly started manufacturing solid perfumes, for example.</description>
+my name is Kevin Gimbel and you&amp;rsquo;ve reached my corner of the world wide web. 👴
+I&amp;rsquo;m actually not that old tho, I&amp;rsquo;m in my mid twenties and I somehow ended up in the world of (cloud) computing. I&amp;rsquo;m interested in Rust (a safe and fast programming language), Sci-Fi, dystopia books, fantasy worlds (Divinity, Elder Scrolls, Dungeons &amp;amp; Dragons), and video and boardgames.
+I tent to start a lot of things and pursue a lot of different interests when I&amp;rsquo;m in a rush, but usually not much of it stays with me; Over the past year I briefly started manufacturing solid perfumes, for example.</description>
     </item>
     
     <item>
@@ -766,7 +956,7 @@ Mail: hallo@kevingimbel.com
 Mastodon: bullgit.party/@kevin
 Matrix: kevingimbel:bullgit.science
 Privacy information This website does not use tracking or analytics codes. It is hosted on Netlify.
-No dynamic programming language or database is used, it&#39;s all static pages generated and then served with a HTTP server. The code is fully open source and available on github.com/kevingimbel/kevingimbel.com, so you can look around the source code.</description>
+No dynamic programming language or database is used, it&amp;rsquo;s all static pages generated and then served with a HTTP server. The code is fully open source and available on github.com/kevingimbel/kevingimbel.com, so you can look around the source code.</description>
     </item>
     
     <item>
@@ -793,7 +983,7 @@ No dynamic programming language or database is used, it&#39;s all static pages g
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/thanks/</guid>
-      <description>This site covers some tools, template helpers, etc. which I use to create this website. Building and maintaining this site would&#39;ve been harder without the work of others, so thank you for your open source contributions.
+      <description>This site covers some tools, template helpers, etc. which I use to create this website. Building and maintaining this site would&amp;rsquo;ve been harder without the work of others, so thank you for your open source contributions.
 The open source projects mentioned here are in no particular order.
 Hugo https://gohugo.io/
 Blazing fast, open-source static-site generator. Thanks to everyone contributing and bep for leading the Hugo development.

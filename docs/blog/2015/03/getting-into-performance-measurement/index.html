@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Getting into Performance Measurement
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -65,10 +73,10 @@
 
 
 <p>Written on <time datetime="2015-03-10 00:00:00 &#43;0000 UTC">10. Mar 2015</time>  </p>
-            <p>I've spent the past week developing some features for our own website at work.
-We're using WordPress and I almost always enjoy working with WordPress beside
-Magento projects, it's way easier to keep an overview and with a good overview
-of data flow and available data it's easier to measure and find performance
+            <p>I&rsquo;ve spent the past week developing some features for our own website at work.
+We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside
+Magento projects, it&rsquo;s way easier to keep an overview and with a good overview
+of data flow and available data it&rsquo;s easier to measure and find performance
 bottleneck. In the following post I want to examine my workflow and the way I
 refactored our code base to increase the speed and overall performance of our
 site.</p>
@@ -78,7 +86,7 @@ site.</p>
 times, render times, asset loading times and non cached assets. WPT even shows
 which assets should be cached or served via a CDN. Initially it checks for First
 View  and Repeat View and outputs a table of numbers and fancy graphics. The
-thing I've been most interested in were First View and Content Breakdown. The
+thing I&rsquo;ve been most interested in were First View and Content Breakdown. The
 Content Breakdown showed that ~66% of our landing page consist of images so
 optimizing these images (see below) was a natural approach to boost performance.
 When testing with WebPageTest I like to select the second fastest Internet
@@ -107,7 +115,7 @@ the loading behavior of a website.</p>
 <p>With these two tools I started tracking down the various performance issues.
 First of all the blocking JavaScript and a bit of unused code.</p>
 <h3 id="unused-code">Unused Code</h3>
-<p>While checking the Network Tab in Chrome Dev Tools I've seen that out of 16 Requests
+<p>While checking the Network Tab in Chrome Dev Tools I&rsquo;ve seen that out of 16 Requests
 one JavaScript Analytics Library was blocking the
 rendering by almost 600-800ms. Because it was barely used I removed this one so
 there was already a big improvement by removing unused or barely used code - one
@@ -115,17 +123,17 @@ should always check for unused plugins, libs and CSS - this is the most basic
 &ldquo;improvement&rdquo; and optimization.</p>
 <blockquote>
 <p>Regularly refactor your code base to see where unused code exists or
-code can be optimized. By ueing a Pre-Processor it's easy to remove the code
+code can be optimized. By ueing a Pre-Processor it&rsquo;s easy to remove the code
 from production but keep it for later by using an <a href="http://sass-guidelin.es/#main-file">import system</a>.</p>
 </blockquote>
 <h3 id="minify">Minify</h3>
 <p>Minifying files is always a good thing. No doubt. Use
 <a href="https://github.com/mishoo/UglifyJS">Uglify</a> for JavaScript
-and your favorite pre-proccessor's compress function.</p>
+and your favorite pre-proccessor&rsquo;s compress function.</p>
 <h3 id="images">Images</h3>
 <p>Next I found that our landing page is pretty image heavy, especially with a big
 banner image. To reduce the size I searched for plugins to automate the process
-but couldn't find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
+but couldn&rsquo;t find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
 Command Line tool for PNG optimization. With this tool I could reduce the size
 of almost any image by 50-70% which again reduced the load time by 100-200ms.</p>
 <blockquote>
@@ -139,11 +147,11 @@ asynchronously via the provided snippet from Google Fonts would help and indeed
 it did! We saved almost 100ms simply by loading the Font files asynchronously.</p>
 <p>On the very First View this can make the content &lsquo;jump&rsquo; a bit because the
 initial view loads with a fallback font (sans-serif, for example) and then once
-the Font is loaded from Google's CDN it replaces the old font with the new font
+the Font is loaded from Google&rsquo;s CDN it replaces the old font with the new font
 on-the-fly. This may looks ugly and if you absolutely can not live with it you
-must take the 100ms-slower Pill and include the fonts in your CSS where they'll
+must take the 100ms-slower Pill and include the fonts in your CSS where they&rsquo;ll
 be loaded before the CSS is rendered - therefore no delay.</p>
-<p>Below is the function that'll load the fonts via a script tag that as the
+<p>Below is the function that&rsquo;ll load the fonts via a script tag that as the
 <code>async</code> attribute set.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f92672">=</span> {
   <span style="color:#a6e22e">google</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">families</span><span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#39;Open+Sans:400,300,600:latin&#39;</span> ] }
@@ -164,8 +172,8 @@ be loaded before the CSS is rendered - therefore no delay.</p>
 file. Splitting out the fonts from the CSS and loading them via JavaScript (if
 possible) may increase the initial load time of the website.</p>
 </blockquote>
-<h3 id="serverside-optimizations">Server-side optimizations</h3>
-<p>There's quite a lot to do when optimizing from the server side. From things like
+<h3 id="server-side-optimizations">Server-side optimizations</h3>
+<p>There&rsquo;s quite a lot to do when optimizing from the server side. From things like
 optimizing Queries, Caching Queries to using the variety of Apache or Nginx
 Modules and settings to optimize the servers workflow. While we have our site at
 a specific WordPress Hoster our access to server features is mainly limited to
@@ -187,9 +195,9 @@ their admin interface and using the <code>.htaccess</code> - which is what I did
     Header set Cache-Control &#34;public&#34;
   &lt;/<span style="color:#f92672">FilesMatch</span>&gt;
 &lt;/<span style="color:#f92672">IfModule</span>&gt;
-</code></pre></div><h4 id="compression-with-moddeflate">Compression with mod_deflate</h4>
+</code></pre></div><h4 id="compression-with-mod_deflate">Compression with mod_deflate</h4>
 <p>With this snippet above we tell the server to cache certain file types by 1
-month (if they don't change of course). This way the server can sent back the
+month (if they don&rsquo;t change of course). This way the server can sent back the
 files from its cache instead of re-generating the files all the time. Next I
 used <code>mod_deflate</code> to compress the files before they are sent to the client.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># Deflate Compression by FileType
@@ -213,8 +221,8 @@ its own cache (Varnish) which should benefit to our sites overall performance, t
 of re-generating the files on every request. Make sure to cache static content
 like images, javascript or css.</p>
 </blockquote>
-<h3 id="lazyload-javascript">Lazy-load JavaScript</h3>
-<p>We've been using our own delayed load for JavaScript assets ever since I started
+<h3 id="lazy-load-javascript">Lazy-load JavaScript</h3>
+<p>We&rsquo;ve been using our own delayed load for JavaScript assets ever since I started
 working at <a href="http://synoa.de">Synoa</a>. We use the following function to include
 our minified JavaScript after the DOM is loaded, if possible.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">loadAfterDom</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
@@ -235,17 +243,17 @@ our minified JavaScript after the DOM is loaded, if possible.</p>
   window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadAfterDom</span>;  
 }
 </code></pre></div><p>This little script loads the <code>main.min.js</code> file after the DOM is constructed so
-it doesn't block the rendering of the page.</p>
+it doesn&rsquo;t block the rendering of the page.</p>
 <blockquote>
 <p>Lazy loading JavaScript only works when JavaScript is not needed for the
-initial view (which it shouldn't). When you need JavaScript on render time to
+initial view (which it shouldn&rsquo;t). When you need JavaScript on render time to
 hide elements, for example, it may be better to hide them initially and show them after the
 page is loaded!</p>
 </blockquote>
 <h3 id="what-could-be-done-next">What could be done next?</h3>
 <p>Next we could think about inlining our Critical Path CSS using a Grunt or Gulp
-task, as Google PageSpeed suggests all the time. I've yet never done this before
-and need to try it before I can say if it's worth or not.</p>
+task, as Google PageSpeed suggests all the time. I&rsquo;ve yet never done this before
+and need to try it before I can say if it&rsquo;s worth or not.</p>
 <p>In another round we could review the entire code base and replace the legacy
 Compass compiler with modern, <a href="https://github.com/sass/node-sass">node-sass</a> and
 <a href="https://github.com/sass/libsass">Libsass</a>, a C++ implementation of Sass that is
@@ -257,10 +265,10 @@ is another desirable improvement.</p>
 <p>At this point, our website performs at 900ms-1.2s in load time for the front page
 and 700-800ms for most sub pages. Yet there is still optimization that need to
 be done, especially the question on how to integrate the optimization into
-everyone's workflow. While developers could use a grunt/gulp/cli task the people
+everyone&rsquo;s workflow. While developers could use a grunt/gulp/cli task the people
 who actually write content need an easy way to handle the optimization of
 uploaded files. The last resort of more optimization is the server respond time
-on which we don't have any influence.</p>
+on which we don&rsquo;t have any influence.</p>
 
         </article>
     </section>

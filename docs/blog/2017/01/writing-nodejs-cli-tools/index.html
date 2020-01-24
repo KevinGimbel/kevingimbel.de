@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Writing NodeJS cli tools
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -113,7 +121,7 @@ echo &quot;Hello World!&quot;
 <p>While it is not necessarily needed for scripts written in in Shell/Bash the Shebang cannot be omitted from NodeJS scripts intended to be run as command line program.</p>
 <p>Well, that has been a fun excursion into the world of shell scripting. Back to node!</p>
 <h3 id="writing-a-tiny-node-cli-script">Writing a tiny node cli script</h3>
-<p>Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let's keep it simple. We will greet the person executing the script.</p>
+<p>Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let&rsquo;s keep it simple. We will greet the person executing the script.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">#!/usr/bin/env node
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> () =&gt; {
@@ -121,7 +129,7 @@ echo &quot;Hello World!&quot;
 }
 
 <span style="color:#a6e22e">sayHello</span>()
-</code></pre></div><p>Let's save the script and run it with <code>$ node hello.js</code> from the command line.</p>
+</code></pre></div><p>Let&rsquo;s save the script and run it with <code>$ node hello.js</code> from the command line.</p>
 
 <figure >
   
@@ -142,7 +150,7 @@ echo &quot;Hello World!&quot;
   
 </figure>
 
-<p>Now that's interesting: The script greets the currently logged-in user! That's the case because we make use of the <code>process</code> variable which holds information about the current environment - the <code>env</code> object for example holds your environment variables. Add a new function to <code>hello.js</code> to see the output.</p>
+<p>Now that&rsquo;s interesting: The script greets the currently logged-in user! That&rsquo;s the case because we make use of the <code>process</code> variable which holds information about the current environment - the <code>env</code> object for example holds your environment variables. Add a new function to <code>hello.js</code> to see the output.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">printEnv</span> <span style="color:#f92672">=</span> () =&gt; {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>)
@@ -195,7 +203,7 @@ echo &quot;Hello World!&quot;
 <li>can exit using <code>process.exit(exit_code)</code></li>
 <li>can utilize lots of Node packages</li>
 </ul>
-<p>And that's it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
+<p>And that&rsquo;s it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
 
         </article>
     </section>

@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         i-js
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -66,10 +74,10 @@
 
 <p>Written on <time datetime="2013-10-14 00:00:00 &#43;0000 UTC">14. Oct 2013</time>  </p>
             <p>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.</p>
-<p>After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to <code>I</code> and here comes the fun part: While learning JS I build i.js - a tiny JS &ldquo;Framework&rdquo; that enables you to write JS nearly the same you'd speak.
+<p>After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to <code>I</code> and here comes the fun part: While learning JS I build i.js - a tiny JS &ldquo;Framework&rdquo; that enables you to write JS nearly the same you&rsquo;d speak.
 For example you may thing: <em>&ldquo;I want to get the Object with the class name test&rdquo;</em> - to get this, simply write the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">I</span>.<span style="color:#a6e22e">WantA</span>.<span style="color:#a6e22e">classname</span>(<span style="color:#e6db74">&#34;test&#34;</span>);
-</code></pre></div><p>This will return you the element that has the class <code>test</code>. Not so cool? Well, let's bring Events to the game!</p>
+</code></pre></div><p>This will return you the element that has the class <code>test</code>. Not so cool? Well, let&rsquo;s bring Events to the game!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Spoken: &#34;I want to add an Event that when you click on the 
 </span><span style="color:#75715e"></span><span style="color:#75715e">// element with the ID js-removeClass a FUNCTION triggers&#34;
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">I</span>.<span style="color:#a6e22e">WantTo</span>.<span style="color:#a6e22e">addEvent</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#e6db74">&#34;js-removeClass&#34;</span>,<span style="color:#66d9ef">function</span>(){
@@ -80,8 +88,8 @@ For example you may thing: <em>&ldquo;I want to get the Object with the class na
 <li>When <code>js-removeClass</code> is clicked</li>
 <li>the class <code>lorem</code> will be removed from an element with the class <code>output</code></li>
 </ul>
-<p>You can find a working Demo on <a href="http://codepen.io/kevingimbel/pen/sgCae">CodePen</a> or <a href="http://kevingimbel.com/i.js/demo/">directly on my site</a>. If you want to contribute more functions I'd be very happy!</p>
-<p>Beside of this useless but fun Framework I also wrote a kinda useful function: <code>_match()</code>. <code>_match()</code> takes any value and checks if it's a ID, a class or an Tag Name. When it matches one of these it returns the correct element.</p>
+<p>You can find a working Demo on <a href="http://codepen.io/kevingimbel/pen/sgCae">CodePen</a> or <a href="http://kevingimbel.com/i.js/demo/">directly on my site</a>. If you want to contribute more functions I&rsquo;d be very happy!</p>
+<p>Beside of this useless but fun Framework I also wrote a kinda useful function: <code>_match()</code>. <code>_match()</code> takes any value and checks if it&rsquo;s a ID, a class or an Tag Name. When it matches one of these it returns the correct element.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_match</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">el</span>) {
     <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">el</span>);
     <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">el</span>);

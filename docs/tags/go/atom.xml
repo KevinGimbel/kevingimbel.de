@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[go on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[go on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/go/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/go/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/go/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -32,19 +32,19 @@
 <p>This very site you read right now is build with <a href="http://gohugo.io">Hugo</a>, a static site generator build by <a href="http://spf13.com/">Steve Francia</a>, <a href="https://github.com/bep">Bjørn Erik Pedersen</a> and a lot of <a href="https://github.com/spf13/hugo/graphs/contributors">contributors</a>. Hugo is written in <a href="https://golang.org/">Go</a> a programming language created at Google I have <a href="https://github.com/kevingimbel?language=go&amp;tab=repositories">been interested in lately</a>.
 For me personally Go provides a lot of new challenges and things to learn. I worked with Front-End technologies like HTML and CSS as well as scripting languages like PHP and JavaScript for the better part of the past 6-7 years; &ldquo;professionally&rdquo; and officially since 2014. Go is entirely different to what I am used to and I like it. I enjoy playing around with it where in the past year or so I lost a big part of my passion for programming in the languages I already know. But why move away from Jekyll? And why choose Go?</p>
 <h3 id="ruby">Ruby</h3>
-<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don't have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
+<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don&rsquo;t have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
 <h3 id="go">Go</h3>
-<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it's as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
+<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it&rsquo;s as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17_Linux-64bit.tar.gz
 $ tar -xzvf hugo_0.17_Linux-64bit.tar.gz
 $ ln -s hugo_0.17_linux_amd64 hugo
 $ chmod +x hugo
 $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>/hugo ~/bin
 </code></pre></div><p>Another reason why I chose Hugo over <a href="https://www.staticgen.com/">any other static site generators</a> is because it is under active development thanks to <a href="https://github.com/bep">Bjørn Erik Pedersen</a>, has <a href="https://gohugo.io/overview/introduction/">excellent docs</a> and an active community.</p>
-<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I'm not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
-<p>As of today it's not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
-<p>Some things are still not working as I would like but I'll eventually get to them. After all, a personal website is always a work in progress.</p>
-<p><em>Farewell Jekyll, it's been a pleasure for the past three years.</em></p>
+<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I&rsquo;m not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
+<p>As of today it&rsquo;s not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
+<p>Some things are still not working as I would like but I&rsquo;ll eventually get to them. After all, a personal website is always a work in progress.</p>
+<p><em>Farewell Jekyll, it&rsquo;s been a pleasure for the past three years.</em></p>
 ]]></content>
             
                  

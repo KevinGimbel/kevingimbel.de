@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Using Archetypes in Hugo
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -60,7 +68,7 @@
 
 
 <p>Written on <time datetime="2020-01-07 00:00:00 &#43;0000 UTC">07. Jan 2020</time>  </p>
-            <p>For the longest time I completely ignored <a href="https://gohugo.io/content-management/archetypes/" title="Read hugo archetype documentation">archetypes in hugo</a>. I'd always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using <code>category</code> instead of <code>categories</code>) over time.</p>
+            <p>For the longest time I completely ignored <a href="https://gohugo.io/content-management/archetypes/" title="Read hugo archetype documentation">archetypes in hugo</a>. I&rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using <code>category</code> instead of <code>categories</code>) over time.</p>
 <p>Archetypes are easy to use, for example to create this post I ran the following command</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new blog/2020-01-07-using-archetypes-in-hugo.md
 </code></pre></div><p>This copied over the archetype file from <code>archetypes/blog.md</code> and automatically filled in the post tile, date, last modified date, and the defaults for categories, tags, type, and whatever else I have in the template file. Since Hugo 0.49 archetypes can consist of an entire directory structure that will be created. This is helpful for my <a href="/photography/">photography</a> section where a post consists of an <code>index.md</code> file and some images that are automatically loaded. The structure looks like this.</p>
@@ -72,18 +80,18 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new photography/my-photo-post
 </code></pre></div><p>This command will create a directory named <code>my-photo-post</code> in <code>content/photography/my-photo-post</code>. Neat!</p>
 <h2 id="hugo-template-magic">Hugo template magic</h2>
-<p>As if this wasn't good enough, we can use the full set of Hugo template functions and script even more!</p>
+<p>As if this wasn&rsquo;t good enough, we can use the full set of Hugo template functions and script even more!</p>
 <p>The archetype for new blog posts I use looks like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-title: <span style="color:#e6db74">&#34;{{ replace (replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;) (now.Format &#34;</span><span style="color:#ae81ff">2006</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">02</span> <span style="color:#e6db74">&#34;) &#34;</span><span style="color:#e6db74">&#34; | title }}&#34;</span>
-intro_text: <span style="color:#e6db74">&#34;&#34;</span>
-type: blog
-categories:
+<span style="color:#66d9ef">title</span>: <span style="color:#e6db74">&#34;{{ replace (replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;) (now.Format &#34;</span><span style="color:#ae81ff">2006</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">02</span> <span style="color:#e6db74">&#34;) &#34;</span><span style="color:#e6db74">&#34; | title }}&#34;</span>
+<span style="color:#66d9ef">intro_text</span>: <span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#66d9ef">type</span>: blog
+<span style="color:#66d9ef">categories</span>:
     - coding
-tags:
-    <span style="color:#e6db74">- </span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">date: &#34;{{ now.Format &#34;2006-01-02&#34; }}&#34;</span>
-lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">tags</span>:
+    - 
+<span style="color:#66d9ef">date</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">lastmod</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
 ---
 </code></pre></div><p>In the first line the post <code>title</code> is set which is taken from the file name. I use filenames like <code>2020-01-02-a-post.md</code> on my blog which include the full date and then the post tile and the <code>.md</code> file extension for markdown. The <code>.md</code> is automatically stripped away which leaves a string like <code>2020-01-02-a-post</code>. The first replace (<code>replace .Name &quot;-&quot; &quot; &quot;</code>) turns this into <code>2020 01 02 a post</code>, the next replace (<code>replace (replace .Name &quot;-&quot; &quot; &quot;) (now.Format &quot;2006 01 02 &quot;) &quot;&quot;</code>) takes this string and strips the date, see the detailed steps below.</p>
 <p>We assume that <code>.Name</code> equals &ldquo;2020-01-02-a-post&rdquo;:</p>
@@ -95,9 +103,9 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
 </ol>
 <p>So after the whole code is executed, we have the plain title. This title is then passed to the function named <code>title</code> which is doing capitalization, leaving us with a nicely formatted title.</p>
 <p>As shown above, I also set the <code>date</code> and <code>lastmod</code> times using Hugo template functions.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">date: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
-lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
-</code></pre></div><p>Both dates will be set to the same as this (new) article hasn't been modified yet. <code>lastmod</code> does only change when I update an article later on.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">date</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">lastmod</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+</code></pre></div><p>Both dates will be set to the same as this (new) article hasn&rsquo;t been modified yet. <code>lastmod</code> does only change when I update an article later on.</p>
 
         </article>
     </section>

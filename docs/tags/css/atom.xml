@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[css on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[css on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/css/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/css/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/css/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -33,7 +33,7 @@
             
             
             <content type="html"><![CDATA[<p><code>calc</code> is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example <code>calc(100% - 4rem - 1px)</code> is valid and works in modern browsers - in simpler words: Calc works with different units like <code>em</code>, <code>%</code>, <code>px</code>, etc.</p>
-<p>The problem with calc is that if it doesn't work you may get a unexpected result. Take the following code for example:</p>
+<p>The problem with calc is that if it doesn&rsquo;t work you may get a unexpected result. Take the following code for example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">author</span> {
     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
     <span style="color:#66d9ef">width</span>: calc(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>);
@@ -109,23 +109,23 @@
             
             <content type="html"><![CDATA[<p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
  CSS variables).</p>
-<p>CSS variables are a <a href="https://www.w3.org/TR/css-variables-1/" title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!&quot;</em> and you're right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that's exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p>
+<p>CSS variables are a <a href="https://www.w3.org/TR/css-variables-1/" title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!&quot;</em> and you&rsquo;re right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that&rsquo;s exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p>
 <p>Below I will explain step by step how CSS variables look, work, and how we can use them to alter the look of a website - even persistent without any backend code!</p>
 <h2 id="css-variables">CSS variables</h2>
 <h3 id="browser-support">Browser Support</h3>
-<p>Let's jump directly into browser support, which is looking pretty good in my opinion!</p>
+<p>Let&rsquo;s jump directly into browser support, which is looking pretty good in my opinion!</p>
 
 
 <p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1,past_2">
     <a href="http://caniuse.com/#feat=css-variables">Can I Use css-variables?</a> Data on support for the css-variables feature across the major browsers from caniuse.com.
 </p>
-<p><code>77.90%</code> (as of November 26. 2017) is not perfect but certainly good enough for me and my private website. I'd probably not rely on CSS Custom Properties in client projects yet tho.</p>
+<p><code>77.90%</code> (as of November 26. 2017) is not perfect but certainly good enough for me and my private website. I&rsquo;d probably not rely on CSS Custom Properties in client projects yet tho.</p>
 <h3 id="syntax">Syntax</h3>
 <p>A CSS variable is a word preceded by two dashes (<code>--</code>), which looks like the following examples.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">--color</span><span style="color:#f92672">:</span> #ddd<span style="color:#f92672">;</span>
 <span style="color:#f92672">--base-font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">12px</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">--breakpoint-large</span><span style="color:#f92672">:</span> <span style="color:#f92672">1200px</span><span style="color:#f92672">;</span>
-</code></pre></div><p>Just like any CSS property they &ldquo;cascade down&rdquo;. A variable defined at the top of the document on the <code>:root</code> or <code>html</code> selector will be defined everywhere in the document. To use a CSS variable we need to get it somehow. It's not enough to reference it, for example this does not work.</p>
+</code></pre></div><p>Just like any CSS property they &ldquo;cascade down&rdquo;. A variable defined at the top of the document on the <code>:root</code> or <code>html</code> selector will be defined everywhere in the document. To use a CSS variable we need to get it somehow. It&rsquo;s not enough to reference it, for example this does not work.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Does</span> <span style="color:#f92672">not</span> <span style="color:#f92672">work</span><span style="color:#f92672">!</span>
 .<span style="color:#a6e22e">my-selector</span> {
   <span style="color:#66d9ef">color</span>: <span style="color:#f92672">--</span><span style="color:#66d9ef">color</span>;
@@ -150,7 +150,7 @@
 </p>
 
 <p>We do not need to change the <code>h1</code> selector because <code>h1</code> will always have a font-color equal to <code>--color</code> - we only need to change the variable inside the local scope. The third <code>h1</code> element is outside the local scope and so it takes the  original <code>--color</code> value (red).</p>
-<p>This type of inheritance is a powerful tool CSS has given us (&ldquo;us&rdquo; being developers). At runtime, when the website is loaded and all CSS is parsed and the website has been painted to the screen, we can still change these properties on-the-fly with JavaScript and the browser will simply re-render the parts that need changing. Of course, you can already change CSS on the go with JavaScript. You could select for example a bunch of elements by class name and then change their color to be <code>blue</code> instead of red. With CSS Custom Properties you don't need to do this! All we need to do is change the variable at a higher level, for example on the <code>body</code> element as the following example illustrates.</p>
+<p>This type of inheritance is a powerful tool CSS has given us (&ldquo;us&rdquo; being developers). At runtime, when the website is loaded and all CSS is parsed and the website has been painted to the screen, we can still change these properties on-the-fly with JavaScript and the browser will simply re-render the parts that need changing. Of course, you can already change CSS on the go with JavaScript. You could select for example a bunch of elements by class name and then change their color to be <code>blue</code> instead of red. With CSS Custom Properties you don&rsquo;t need to do this! All we need to do is change the variable at a higher level, for example on the <code>body</code> element as the following example illustrates.</p>
 
 
 
@@ -167,16 +167,16 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;--color: green;&#34;</span>;
 </code></pre></div><p>I use this technique to change the secondary and primary colors of my website from the settings menu. <a href="https://github.com/kevingimbel/kevingimbel.com/blob/9f11b96f428f01b1ae14f8673c2e4f48e8ee3b21/themes/next/static/js/a11y.settings.js#L83-L84" title="View source code on GitHub.com">These two lines</a> set the CSS variables <code>--color-accent-primary</code> and <code>--color-accent-secondary</code> which by default are dark blue and yellow.</p>
 <h3 id="recap">Recap</h3>
-<p>So let's recap this real quick:</p>
+<p>So let&rsquo;s recap this real quick:</p>
 <ul>
 <li>CSS variables (also called CSS Custom Properties) are a native CSS feature</li>
 <li>They cascade &ldquo;down&rdquo; in the CSS, just like any other property (<code>font-size</code>, <code>color</code>, etc.)</li>
-<li>They can be locally scoped, that is changed for a certain element and it's children</li>
+<li>They can be locally scoped, that is changed for a certain element and it&rsquo;s children</li>
 <li>They can be changed with JavaScript at runtime and the browser will re-render every element which uses them</li>
 </ul>
 <p>At this point it becomes clear why they are an advantage over pre-processor variables. We have more control of changing them and they present us with a powerful new way to implement multiple layouts for our websites.</p>
 <h2 id="implementing-persistent-settings">Implementing persistent settings</h2>
-<p>As I mentioned before for my website (this very blog you read right now), the Settings are persistent. If you change the font size or colors and navigate to a new page you'll still have your custom styles - not my default styles. I do not use any backend software like PHP, Go, or Ruby; Instead this website is a static website, which means all HTML pages are rendered before and then deployed to <a href="https://www.netlify.com/">Netlify</a>. So there is no backend which can save your settings and then send them back to your browser once you navigate to a new site.</p>
+<p>As I mentioned before for my website (this very blog you read right now), the Settings are persistent. If you change the font size or colors and navigate to a new page you&rsquo;ll still have your custom styles - not my default styles. I do not use any backend software like PHP, Go, or Ruby; Instead this website is a static website, which means all HTML pages are rendered before and then deployed to <a href="https://www.netlify.com/">Netlify</a>. So there is no backend which can save your settings and then send them back to your browser once you navigate to a new site.</p>
 <p>The saving part is done on the client side, inside your browser. A browser feature called <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Local Storage</a>. Local Storage is a text-based, key-value storage which developers can use to store (small) text based values inside the browser. This allows us to have some sort of persitent storage on the client side without the need for a backend. For my use case (storing settings) this is perfect.</p>
 <p>When you open the settings menu and click &ldquo;Save&rdquo; I grab all the values with JavaScript (<a href="https://github.com/kevingimbel/kevingimbel.com/blob/9f11b96f428f01b1ae14f8673c2e4f48e8ee3b21/themes/next/static/js/a11y.settings.js#L123-L138">See the code on GitHub</a>)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">settingsForm</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;submit&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
@@ -195,7 +195,7 @@
   document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;tabindex&#39;</span>, <span style="color:#e6db74">&#34;0&#34;</span>);
   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
 });
-</code></pre></div><p>There's quite a lot going on. The important bit for now is <code>localStorage.setItem('a11y_settings', JSON.stringify(lsSettings));</code>. This line sets a new item in the local storage named <code>a11y_settings</code>, scoped to my website (kevingimbel.com). This JSON object holds all relevant information for your custom settings and looks like this:</p>
+</code></pre></div><p>There&rsquo;s quite a lot going on. The important bit for now is <code>localStorage.setItem('a11y_settings', JSON.stringify(lsSettings));</code>. This line sets a new item in the local storage named <code>a11y_settings</code>, scoped to my website (kevingimbel.com). This JSON object holds all relevant information for your custom settings and looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;--body-invert&#34;</span>: <span style="color:#ae81ff">0</span>,
   <span style="color:#f92672">&#34;--color-accent-primary&#34;</span>: <span style="color:#e6db74">&#34;#3e934b&#34;</span>,
@@ -248,7 +248,7 @@
 </code></pre></div><p>What happens here is the following:</p>
 <ul>
 <li>We check if there are custom setting (<code>if( localStorage.getItem(&quot;a11y_settings&quot;) )</code>)</li>
-<li>Then we read it in, it's a JSON string so we need to parse it</li>
+<li>Then we read it in, it&rsquo;s a JSON string so we need to parse it</li>
 <li>Next we loop through all properties of the JSON, which are key-value pairs like <code>{ &quot;--color&quot;: &quot;#ddd&quot; }</code></li>
 <li>Each key-value pair is set as inline style on the documentElement (the <code>html</code> element)</li>
 </ul>
@@ -265,7 +265,7 @@
     See the Pen <a href="https://codepen.io/kevingimbel/pen/604946ab15c48299b1f7b54b7a758cfb/">CSS Filter Invert</a> on <a href="https://codepen.io">CodePen</a>.
 </p>
 
-<p>That's exactly what happens when you click &ldquo;Dark mode&rdquo; in the settings menu above. So why do we need the class <code>dark-mode</code>? Because with <code>filter: invert(100%)</code> everything is inverted including images and videos - which we do not want. These elements should not be inverted so we need to apply a <code>filter: invert(100%)</code> to them when dark mode is active, which is done with the following CSS snipped.</p>
+<p>That&rsquo;s exactly what happens when you click &ldquo;Dark mode&rdquo; in the settings menu above. So why do we need the class <code>dark-mode</code>? Because with <code>filter: invert(100%)</code> everything is inverted including images and videos - which we do not want. These elements should not be inverted so we need to apply a <code>filter: invert(100%)</code> to them when dark mode is active, which is done with the following CSS snipped.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">iframe</span> {
@@ -282,7 +282,7 @@
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">iframe</span> {
   <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>) <span style="color:#75715e">!important</span>;
 }
-</code></pre></div><p>And that's it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I'm happy with the result.</p>
+</code></pre></div><p>And that&rsquo;s it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I&rsquo;m happy with the result.</p>
 <p>Got any feedback? Want to tell me how much the news design sucks? Love it? Hit me up on <a href="https://twitter.com/_kevinatari" title="Find me on twitter">Twitter @_kevinatari</a></p>
 ]]></content>
             
@@ -338,10 +338,10 @@
             <updated>2015-03-10T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>I've spent the past week developing some features for our own website at work.
-We're using WordPress and I almost always enjoy working with WordPress beside
-Magento projects, it's way easier to keep an overview and with a good overview
-of data flow and available data it's easier to measure and find performance
+            <content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
+We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside
+Magento projects, it&rsquo;s way easier to keep an overview and with a good overview
+of data flow and available data it&rsquo;s easier to measure and find performance
 bottleneck. In the following post I want to examine my workflow and the way I
 refactored our code base to increase the speed and overall performance of our
 site.</p>
@@ -351,7 +351,7 @@ site.</p>
 times, render times, asset loading times and non cached assets. WPT even shows
 which assets should be cached or served via a CDN. Initially it checks for First
 View  and Repeat View and outputs a table of numbers and fancy graphics. The
-thing I've been most interested in were First View and Content Breakdown. The
+thing I&rsquo;ve been most interested in were First View and Content Breakdown. The
 Content Breakdown showed that ~66% of our landing page consist of images so
 optimizing these images (see below) was a natural approach to boost performance.
 When testing with WebPageTest I like to select the second fastest Internet
@@ -380,7 +380,7 @@ the loading behavior of a website.</p>
 <p>With these two tools I started tracking down the various performance issues.
 First of all the blocking JavaScript and a bit of unused code.</p>
 <h3 id="unused-code">Unused Code</h3>
-<p>While checking the Network Tab in Chrome Dev Tools I've seen that out of 16 Requests
+<p>While checking the Network Tab in Chrome Dev Tools I&rsquo;ve seen that out of 16 Requests
 one JavaScript Analytics Library was blocking the
 rendering by almost 600-800ms. Because it was barely used I removed this one so
 there was already a big improvement by removing unused or barely used code - one
@@ -388,17 +388,17 @@ should always check for unused plugins, libs and CSS - this is the most basic
 &ldquo;improvement&rdquo; and optimization.</p>
 <blockquote>
 <p>Regularly refactor your code base to see where unused code exists or
-code can be optimized. By ueing a Pre-Processor it's easy to remove the code
+code can be optimized. By ueing a Pre-Processor it&rsquo;s easy to remove the code
 from production but keep it for later by using an <a href="http://sass-guidelin.es/#main-file">import system</a>.</p>
 </blockquote>
 <h3 id="minify">Minify</h3>
 <p>Minifying files is always a good thing. No doubt. Use
 <a href="https://github.com/mishoo/UglifyJS">Uglify</a> for JavaScript
-and your favorite pre-proccessor's compress function.</p>
+and your favorite pre-proccessor&rsquo;s compress function.</p>
 <h3 id="images">Images</h3>
 <p>Next I found that our landing page is pretty image heavy, especially with a big
 banner image. To reduce the size I searched for plugins to automate the process
-but couldn't find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
+but couldn&rsquo;t find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
 Command Line tool for PNG optimization. With this tool I could reduce the size
 of almost any image by 50-70% which again reduced the load time by 100-200ms.</p>
 <blockquote>
@@ -412,11 +412,11 @@ asynchronously via the provided snippet from Google Fonts would help and indeed
 it did! We saved almost 100ms simply by loading the Font files asynchronously.</p>
 <p>On the very First View this can make the content &lsquo;jump&rsquo; a bit because the
 initial view loads with a fallback font (sans-serif, for example) and then once
-the Font is loaded from Google's CDN it replaces the old font with the new font
+the Font is loaded from Google&rsquo;s CDN it replaces the old font with the new font
 on-the-fly. This may looks ugly and if you absolutely can not live with it you
-must take the 100ms-slower Pill and include the fonts in your CSS where they'll
+must take the 100ms-slower Pill and include the fonts in your CSS where they&rsquo;ll
 be loaded before the CSS is rendered - therefore no delay.</p>
-<p>Below is the function that'll load the fonts via a script tag that as the
+<p>Below is the function that&rsquo;ll load the fonts via a script tag that as the
 <code>async</code> attribute set.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f92672">=</span> {
   <span style="color:#a6e22e">google</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">families</span><span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#39;Open+Sans:400,300,600:latin&#39;</span> ] }
@@ -437,8 +437,8 @@ be loaded before the CSS is rendered - therefore no delay.</p>
 file. Splitting out the fonts from the CSS and loading them via JavaScript (if
 possible) may increase the initial load time of the website.</p>
 </blockquote>
-<h3 id="serverside-optimizations">Server-side optimizations</h3>
-<p>There's quite a lot to do when optimizing from the server side. From things like
+<h3 id="server-side-optimizations">Server-side optimizations</h3>
+<p>There&rsquo;s quite a lot to do when optimizing from the server side. From things like
 optimizing Queries, Caching Queries to using the variety of Apache or Nginx
 Modules and settings to optimize the servers workflow. While we have our site at
 a specific WordPress Hoster our access to server features is mainly limited to
@@ -460,9 +460,9 @@ their admin interface and using the <code>.htaccess</code> - which is what I did
     Header set Cache-Control &#34;public&#34;
   &lt;/<span style="color:#f92672">FilesMatch</span>&gt;
 &lt;/<span style="color:#f92672">IfModule</span>&gt;
-</code></pre></div><h4 id="compression-with-moddeflate">Compression with mod_deflate</h4>
+</code></pre></div><h4 id="compression-with-mod_deflate">Compression with mod_deflate</h4>
 <p>With this snippet above we tell the server to cache certain file types by 1
-month (if they don't change of course). This way the server can sent back the
+month (if they don&rsquo;t change of course). This way the server can sent back the
 files from its cache instead of re-generating the files all the time. Next I
 used <code>mod_deflate</code> to compress the files before they are sent to the client.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># Deflate Compression by FileType
@@ -486,8 +486,8 @@ its own cache (Varnish) which should benefit to our sites overall performance, t
 of re-generating the files on every request. Make sure to cache static content
 like images, javascript or css.</p>
 </blockquote>
-<h3 id="lazyload-javascript">Lazy-load JavaScript</h3>
-<p>We've been using our own delayed load for JavaScript assets ever since I started
+<h3 id="lazy-load-javascript">Lazy-load JavaScript</h3>
+<p>We&rsquo;ve been using our own delayed load for JavaScript assets ever since I started
 working at <a href="http://synoa.de">Synoa</a>. We use the following function to include
 our minified JavaScript after the DOM is loaded, if possible.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">loadAfterDom</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
@@ -508,17 +508,17 @@ our minified JavaScript after the DOM is loaded, if possible.</p>
   window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadAfterDom</span>;  
 }
 </code></pre></div><p>This little script loads the <code>main.min.js</code> file after the DOM is constructed so
-it doesn't block the rendering of the page.</p>
+it doesn&rsquo;t block the rendering of the page.</p>
 <blockquote>
 <p>Lazy loading JavaScript only works when JavaScript is not needed for the
-initial view (which it shouldn't). When you need JavaScript on render time to
+initial view (which it shouldn&rsquo;t). When you need JavaScript on render time to
 hide elements, for example, it may be better to hide them initially and show them after the
 page is loaded!</p>
 </blockquote>
 <h3 id="what-could-be-done-next">What could be done next?</h3>
 <p>Next we could think about inlining our Critical Path CSS using a Grunt or Gulp
-task, as Google PageSpeed suggests all the time. I've yet never done this before
-and need to try it before I can say if it's worth or not.</p>
+task, as Google PageSpeed suggests all the time. I&rsquo;ve yet never done this before
+and need to try it before I can say if it&rsquo;s worth or not.</p>
 <p>In another round we could review the entire code base and replace the legacy
 Compass compiler with modern, <a href="https://github.com/sass/node-sass">node-sass</a> and
 <a href="https://github.com/sass/libsass">Libsass</a>, a C++ implementation of Sass that is
@@ -530,10 +530,10 @@ is another desirable improvement.</p>
 <p>At this point, our website performs at 900ms-1.2s in load time for the front page
 and 700-800ms for most sub pages. Yet there is still optimization that need to
 be done, especially the question on how to integrate the optimization into
-everyone's workflow. While developers could use a grunt/gulp/cli task the people
+everyone&rsquo;s workflow. While developers could use a grunt/gulp/cli task the people
 who actually write content need an easy way to handle the optimization of
 uploaded files. The last resort of more optimization is the server respond time
-on which we don't have any influence.</p>
+on which we don&rsquo;t have any influence.</p>
 ]]></content>
             
                  
@@ -586,13 +586,13 @@ on which we don't have any influence.</p>
             <updated>2014-07-31T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>While there's a lot of talking about CSS writing styles, organization styles and if it's maybe better or not to avoid
-pre-processors or frameworks there's one very powerful thing that gets pretty much no attention at all: Conditional CSS,
+            <content type="html"><![CDATA[<p>While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid
+pre-processors or frameworks there&rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS,
 i.e. pieces of CSS that serve one specific task the easiest and most known is <code>.active</code> given to, well, active elements.
-I'd like to talk a bit about conditional CSS that I've been using in production and that I think can improve the overall
+I&rsquo;d like to talk a bit about conditional CSS that I&rsquo;ve been using in production and that I think can improve the overall
 logic of CSS.</p>
 <h3 id="grids">Grids</h3>
-<p>I'd like to notice that the first example is taken from <a href="http://inuitcss.com">inuit.css</a> by <a href="http://csswizardry.com/">Harry
+<p>I&rsquo;d like to notice that the first example is taken from <a href="http://inuitcss.com">inuit.css</a> by <a href="http://csswizardry.com/">Harry
 Roberts</a>. The grid itself has been adopted into <a href="http://github.com/synoa/bullgrid">Bullgrid</a>
 which is at the moment a <code>em</code> based, stripped down and standalone version of <a href="https://github.com/csswizardry/inuit.css/blob/master/objects/_grids.scss">inuit.css
 grids</a>. So all the kudos for the next section
@@ -603,19 +603,19 @@ One of the most amazing things about inuit.css Grids is its use of viewport-name
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third small-one-whole&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third small-one-whole&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><p>The above example creates a 3 column grid that'll turn into 3 full-width (one-whole) containers once the viewport
+</code></pre></div><p>The above example creates a 3 column grid that&rsquo;ll turn into 3 full-width (one-whole) containers once the viewport
 &ldquo;small&rdquo; is reached. To achieve this behavior Harry wrote an amazingly logical <a href="https://github.com/csswizardry/inuit.css/blob/master/generic/_widths.scss#L13-L102">mixin to set up the
 grids</a> that can later be used to set
 up the grid with a given &ldquo;viewport&rdquo; prefix (<a href="https://github.com/csswizardry/inuit.css/blob/master/generic/_widths.scss#L121-L141">see this
 function</a>). While this creates
 quite a lot of CSS on one hand it is amazingly flexible when working with this grid. Most of the time 3 classes are
-enough to make any component of the page, or better it's container, adjust to the current viewport. I categorize this as
+enough to make any component of the page, or better it&rsquo;s container, adjust to the current viewport. I categorize this as
 &ldquo;Conditional CSS&rdquo; because it has a condition (the viewport prefix, e.g. small-).</p>
 <p>Not only is this grid amazingly simple once you get used to the naming, it is also great for prototyping inside the
 browser. If one part of the page looks a bit weird I can directly play around with all grid classes to find the perfect
 fiting one.</p>
 <h3 id="javascriptbehaviour-conditions">JavaScript/Behaviour conditions</h3>
-<p>JavaScript based conditions are similar to the <code>active</code> example from the intro. Mostly they'll be applied to elements
+<p>JavaScript based conditions are similar to the <code>active</code> example from the intro. Mostly they&rsquo;ll be applied to elements
 with JavaScript. In general Conditional CSS should be prefered over applying styles directly with JavaScript. Not only
 is it cleaner to devide functions and styles, it is also easier to debug, especially when immediate executing functions
 change the look of elements. Consider the next example.</p>
@@ -691,10 +691,10 @@ inline styles which always have a higher priority than everything else (as the n
 		<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">]</span>
 	}
 }
-</code></pre></div><p>So far I find Conditional CSS a good idea and really like to work with it. It's easier, at least for me, to see what a
-class does and where/how it should be used. Also it's a simple use of DRY (don't repeat yourself) and <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">Single
+</code></pre></div><p>So far I find Conditional CSS a good idea and really like to work with it. It&rsquo;s easier, at least for me, to see what a
+class does and where/how it should be used. Also it&rsquo;s a simple use of DRY (don&rsquo;t repeat yourself) and <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">Single
 Responsibility Principle</a> but as
-with everything overusing it won't make your live easier.
+with everything overusing it won&rsquo;t make your live easier.
 As always I appreciate feedback or improvments via <a href="http://twitter.com/_kevinatari">twitter</a>.</p>
 ]]></content>
             
@@ -743,20 +743,20 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
             <updated>2014-01-02T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there's one thing that I'd like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There's nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I'll give you a short look into basic responsive design/development patterns.</p>
+            <content type="html"><![CDATA[<p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&rsquo;s one thing that I&rsquo;d like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I&rsquo;ll give you a short look into basic responsive design/development patterns.</p>
 <h3 id="planning">Planning</h3>
-<p>First of all make sure what your site is about and what your content is like. <strong>Never hide content!</strong> Hiding content is the last resort and I prefer to avoid this. Make sure your site displays all the information you need the user to have in a order that makes sense: Do I want to scroll through your header, sidebar and a small advertisement area before I can find the article I'm searching for? No, I don't. Good responsive, scalable design starts with mark up and there are a few tricks to archive a good looking, usable website. Before we start to look at the code: I'll focus on blog-like websites here and will cover more complex things later in another post.</p>
+<p>First of all make sure what your site is about and what your content is like. <strong>Never hide content!</strong> Hiding content is the last resort and I prefer to avoid this. Make sure your site displays all the information you need the user to have in a order that makes sense: Do I want to scroll through your header, sidebar and a small advertisement area before I can find the article I&rsquo;m searching for? No, I don&rsquo;t. Good responsive, scalable design starts with mark up and there are a few tricks to archive a good looking, usable website. Before we start to look at the code: I&rsquo;ll focus on blog-like websites here and will cover more complex things later in another post.</p>
 <h3 id="drop-the-mdomain">Drop the m.domain</h3>
-<p>Some people may tell you that <code>m.domain.tld</code> is a great thing but it is not. Actually, it's the first and worst mistake you can make. There are a few reasons for this:</p>
+<p>Some people may tell you that <code>m.domain.tld</code> is a great thing but it is not. Actually, it&rsquo;s the first and worst mistake you can make. There are a few reasons for this:</p>
 <ul>
 <li>you split your whole page into 2 domains (m.domain.tld and domain.tld)</li>
 <li>you need doubled content</li>
-<li>users on desktop don't get re-directed to the domain.tld when clicking on a m-dot link</li>
-<li>when the windows gets resized your page doesn't fit the new viewport</li>
+<li>users on desktop don&rsquo;t get re-directed to the domain.tld when clicking on a m-dot link</li>
+<li>when the windows gets resized your page doesn&rsquo;t fit the new viewport</li>
 </ul>
-<p>There are even more reasons to drop m-dot domains but I think those should make it clear. Another downside to &ldquo;smartphone&rdquo;-only optimization is the last point on the list: The resizing. I really like to re-size a page to half it's size on desktop so that I can, for example, follow a guide and do stuff inside my editor without switching between the windows all the time. This screenshot of <a href="http://spiegel.de">spiegel.de</a> shows the downside of &ldquo;mobile-only&rdquo; responsive design.
-<img src="https://i.kevingimbel.me/sc/screenshot-16-46.png" alt="Screenshot of Spiegel Online, left the desktop version half it's size, right the mobile version" title="Screenshot of Spiegel Online, left the desktop version half it's size, right the mobile version"></p>
-<p>So, the key of a good, flexible design is the CSS and the breakpoints. I prefer to create them in em instead of pixel or - even worse - exact screen sizes to target different devices. If you keep your head out of the iOS world you'll find hundreds of different screen sizes, would you target them all with exact pixels? I guess you wouldn't want to and wouldn't do it. So what else can we do? Support just a few devices, let's say a min-width of 600px? No. We'll use em instead and build a responsive site with 3 to 4 breakpoints like so:</p>
+<p>There are even more reasons to drop m-dot domains but I think those should make it clear. Another downside to &ldquo;smartphone&rdquo;-only optimization is the last point on the list: The resizing. I really like to re-size a page to half it&rsquo;s size on desktop so that I can, for example, follow a guide and do stuff inside my editor without switching between the windows all the time. This screenshot of <a href="http://spiegel.de">spiegel.de</a> shows the downside of &ldquo;mobile-only&rdquo; responsive design.
+<img src="https://i.kevingimbel.me/sc/screenshot-16-46.png" alt="Screenshot of Spiegel Online, left the desktop version half it&rsquo;s size, right the mobile version" title="Screenshot of Spiegel Online, left the desktop version half it's size, right the mobile version"></p>
+<p>So, the key of a good, flexible design is the CSS and the breakpoints. I prefer to create them in em instead of pixel or - even worse - exact screen sizes to target different devices. If you keep your head out of the iOS world you&rsquo;ll find hundreds of different screen sizes, would you target them all with exact pixels? I guess you wouldn&rsquo;t want to and wouldn&rsquo;t do it. So what else can we do? Support just a few devices, let&rsquo;s say a min-width of 600px? No. We&rsquo;ll use em instead and build a responsive site with 3 to 4 breakpoints like so:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">media</span> <span style="color:#f92672">all</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">80em</span><span style="color:#f92672">)</span> {
     <span style="color:#75715e">/* large screens */</span>
 }
@@ -772,12 +772,12 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 @<span style="color:#66d9ef">media</span> <span style="color:#f92672">all</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">30em</span><span style="color:#f92672">)</span> {
     <span style="color:#75715e">/* small devices like smartphones */</span>
 }
-</code></pre></div><p>I once created a page that only <a href="http://dev.kevingimbel.me/breakpoint/">shows the current breakpoint</a> and based on this I found that the above breakpoints are safe to use. However, just knowing the breakpoints isn't the goal. Next it comes to markup and grids while I'll use a early beta of Bullgrid, a Grid System I'm working on with <a href="http://twitter.com/timpietrusky">Tim Pietrusky</a> at the moment. It's based on <a href="http://inuitcss.com/2012/12/building-grid-systems-with-inuit-css/">inuit CSS Grids</a> but moved into one file and re-written to use <a href="/em-vs-px">em instead of px</a>.</p>
+</code></pre></div><p>I once created a page that only <a href="http://dev.kevingimbel.me/breakpoint/">shows the current breakpoint</a> and based on this I found that the above breakpoints are safe to use. However, just knowing the breakpoints isn&rsquo;t the goal. Next it comes to markup and grids while I&rsquo;ll use a early beta of Bullgrid, a Grid System I&rsquo;m working on with <a href="http://twitter.com/timpietrusky">Tim Pietrusky</a> at the moment. It&rsquo;s based on <a href="http://inuitcss.com/2012/12/building-grid-systems-with-inuit-css/">inuit CSS Grids</a> but moved into one file and re-written to use <a href="/em-vs-px">em instead of px</a>.</p>
 <h3 id="the-markup">The Markup</h3>
 <p>The first Demo Markup for this post is a simple blog with a large header, a content area and a sidebar as well as a footer.</p>
 <!-- raw HTML omitted -->
-<p>When you open the pen in <a href="http://codepen.io/kevingimbel/full/imvDF">fullscreen view</a> and resize it you can see that the sidebar moves underneath the article itself so that it is not in the way but visible to everyone who finish the article - in my opinion a good way to hide a sidebar on small screens because it doesn't require an extra click to open or see the sidebar and it is still there.</p>
-<p>This all works with a Grid I'll talk about next and the way the markup is written.</p>
+<p>When you open the pen in <a href="http://codepen.io/kevingimbel/full/imvDF">fullscreen view</a> and resize it you can see that the sidebar moves underneath the article itself so that it is not in the way but visible to everyone who finish the article - in my opinion a good way to hide a sidebar on small screens because it doesn&rsquo;t require an extra click to open or see the sidebar and it is still there.</p>
+<p>This all works with a Grid I&rsquo;ll talk about next and the way the markup is written.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Wrapping the Grid inside the gw class </span><span style="color:#75715e">--&gt;</span>
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;wrapper gw&#34;</span>&gt;
     &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-whole  small-one-whole&#34;</span>&gt;
@@ -802,9 +802,9 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
         <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Again, one</span><span style="color:#75715e">-</span><span style="color:#75715e">whole = all available width </span><span style="color:#75715e">--&gt;</span>
     &lt;/<span style="color:#f92672">footer</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><p>You may wonder what this <code>small-one-whole</code> thing does? I'll cover that next!</p>
+</code></pre></div><p>You may wonder what this <code>small-one-whole</code> thing does? I&rsquo;ll cover that next!</p>
 <h3 id="the-grid">The Grid</h3>
-<p>As mentioned above I'm using an early beta of Bullgrid. However, the best thing about this grid is that it is re-usable, easy to understand and you can see the behavior of elements inside the markup. Here's an example.</p>
+<p>As mentioned above I&rsquo;m using an early beta of Bullgrid. However, the best thing about this grid is that it is re-usable, easy to understand and you can see the behavior of elements inside the markup. Here&rsquo;s an example.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third  medium-one-half  small-one-whole&#34;</span>&gt;
     <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Article 1 </span><span style="color:#75715e">--&gt;</span>
 &lt;/<span style="color:#f92672">article</span>&gt;
@@ -818,7 +818,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 &lt;/<span style="color:#f92672">article</span>&gt;
 </code></pre></div><p>So the above results in something similar to this.</p>
 <!-- raw HTML omitted -->
-<p>As you can see the article's width is always adjusted to the width of the screen and it is completly readable inside the code.</p>
+<p>As you can see the article&rsquo;s width is always adjusted to the width of the screen and it is completly readable inside the code.</p>
 <p>The hearth of this grid is the breakpoint mixin you can see below.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">mixin</span> <span style="color:#f92672">breakpoint</span><span style="color:#f92672">(</span><span style="color:#f92672">$</span><span style="color:#f92672">point</span><span style="color:#f92672">)</span> {
   @<span style="color:#66d9ef">if</span> <span style="color:#f92672">$</span><span style="color:#f92672">point</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;large&#34;</span> {
@@ -919,7 +919,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 @<span style="color:#66d9ef">include</span> <span style="color:#f92672">breakpoint</span><span style="color:#f92672">(</span><span style="color:#f92672">small</span><span style="color:#f92672">)</span>{
   @<span style="color:#66d9ef">include</span> <span style="color:#f92672">grid-setup</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;small-&#34;</span><span style="color:#f92672">)</span>;
 }
-</code></pre></div><p>Once the grid is setup we can use all the different combinations and prefix them with <code>large-`,</code>meduim-<code>or</code>small-`. Basically that's it what I want to say about responsive development to this point. I think it is important to stop thinking in different categories like &ldquo;mobile&rdquo;, &ldquo;desktop&rdquo;, &ldquo;TV&rdquo; or whatever - it's more important to see a bunch of screens and devices that have a specific width you need to target with your breakpoints. Also I think every website you create this year should be responsive. There's no excuse anymore to do a non-responsive website. It should be a standard. So as a developer in a design team you should talk to your designers to keep responsive design in mind when making screen-designs. The Internet has become a canvas with a lot of sizes and we, as the artist, have to re-think the way we paint on it.</p>
+</code></pre></div><p>Once the grid is setup we can use all the different combinations and prefix them with <code>large-</code>,<code>meduim-</code> or <code>small-</code>. Basically that&rsquo;s it what I want to say about responsive development to this point. I think it is important to stop thinking in different categories like &ldquo;mobile&rdquo;, &ldquo;desktop&rdquo;, &ldquo;TV&rdquo; or whatever - it&rsquo;s more important to see a bunch of screens and devices that have a specific width you need to target with your breakpoints. Also I think every website you create this year should be responsive. There&rsquo;s no excuse anymore to do a non-responsive website. It should be a standard. So as a developer in a design team you should talk to your designers to keep responsive design in mind when making screen-designs. The Internet has become a canvas with a lot of sizes and we, as the artist, have to re-think the way we paint on it.</p>
 <p>I appreciate your opinion and critic <a href="http://twitter.com/_kevinatari">@_kevinatari</a> or via <a href="/imprint">eMail</a>.</p>
 ]]></content>
             
@@ -967,7 +967,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
             <updated>2013-11-24T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it's not only a few different length, it's a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let's say 20em, isn't the best solution for this so I ended up creating a flexible solution.</p>
+            <content type="html"><![CDATA[<p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p>
 <h3 id="the-setup">The Setup</h3>
 <p>First of all I had a Product and a <code>div</code> that holds the flag (in this example &ldquo;Tag&rdquo;).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span>&gt;
@@ -978,7 +978,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
   &lt;/<span style="color:#f92672">hgroup</span>&gt;
   &lt;<span style="color:#f92672">p</span>&gt;(img via &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.getdigital.de/R2D2-3D-Relief-Becher.html&#34;</span>&gt;getDigital.de&lt;/<span style="color:#f92672">a</span>&gt;)&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;/<span style="color:#f92672">article</span>&gt;
-</code></pre></div><p>The <code>data-id</code> controls the color of the tag and the <code>data-tagname</code> controls the content of it. In the real-world example they're applied via a Content Management System and, as I said before, can vary in length. The HTML Job is done with this setup and now comes the most fun part: The (S)CSS.</p>
+</code></pre></div><p>The <code>data-id</code> controls the color of the tag and the <code>data-tagname</code> controls the content of it. In the real-world example they&rsquo;re applied via a Content Management System and, as I said before, can vary in length. The HTML Job is done with this setup and now comes the most fun part: The (S)CSS.</p>
 <h3 id="css">CSS</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">  .<span style="color:#a6e22e">tag</span> {
     <span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;
@@ -989,7 +989,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
     <span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#8e44ad</span>; <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">g</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">f</span> <span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#960050;background-color:#1e0010">s</span> <span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span> <span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span>
     <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span>;
 }
-</code></pre></div><p>The basic tag should be position absolute on the left of the article and <code>-1em</code> on top of the article (this comes because the article has a padding of 1.5em and I want it to be half the way out of the article container). So far there is a tag with auto width and auto height. With the next snippet we'll get the data-tagname inside out pseudo element.</p>
+</code></pre></div><p>The basic tag should be position absolute on the left of the article and <code>-1em</code> on top of the article (this comes because the article has a padding of 1.5em and I want it to be half the way out of the article container). So far there is a tag with auto width and auto height. With the next snippet we&rsquo;ll get the data-tagname inside out pseudo element.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">before</span> {
       <span style="color:#66d9ef">content</span>:attr(data<span style="color:#f92672">-</span>tagname);
     }
@@ -1004,14 +1004,14 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
       <span style="color:#66d9ef">border-top</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">transparent</span>;
       <span style="color:#66d9ef">border-left</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#a6e22e">darken</span>(<span style="color:#ae81ff">#8e44ad</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>); <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">f</span> <span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span> <span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">s</span> <span style="color:#960050;background-color:#1e0010">g</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span>
     }
-</code></pre></div><p>Success! The first basic tag is finished, but why the <code>data-id</code> you may ask? Because they make the magic! As I said before the color is controlled via <code>data-id</code> and here's how this works:</p>
+</code></pre></div><p>Success! The first basic tag is finished, but why the <code>data-id</code> you may ask? Because they make the magic! As I said before the color is controlled via <code>data-id</code> and here&rsquo;s how this works:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">]</span> {
   <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>;
     <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
       <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
   }
 <span style="color:#960050;background-color:#1e0010">}</span>
-</code></pre></div><p>If you repeat this for all your <code>data-id</code>s and colors you'll end up having some sweet Product Flags. The whole code for my product flags looks like this:</p>
+</code></pre></div><p>If you repeat this for all your <code>data-id</code>s and colors you&rsquo;ll end up having some sweet Product Flags. The whole code for my product flags looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">  .<span style="color:#a6e22e">tag</span> {
     <span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;
     <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
@@ -1071,7 +1071,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
     <span style="color:#960050;background-color:#1e0010">}</span>
     <span style="color:#960050;background-color:#1e0010">}</span> <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">tag</span>
 </code></pre></div><p>A working example can be found <a href="http://codepen.io/kevingimbel/pen/Hpazh">here on CodePen</a>. Special thanks to <a href="http://getdigital.de">getDigital.de</a> for letting me use some of their nerdy Product Images! May the force be with you.</p>
-<p>In case you've any questions feel free to <a href="http://twitter.com/_kevinatari">tweet me</a> or comment on the <a href="http://codepen.io/kevingimbel/pen/Hpazh">Pen</a>.</p>
+<p>In case you&rsquo;ve any questions feel free to <a href="http://twitter.com/_kevinatari">tweet me</a> or comment on the <a href="http://codepen.io/kevingimbel/pen/Hpazh">Pen</a>.</p>
 ]]></content>
             
                  
@@ -1121,14 +1121,14 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
             <updated>2013-10-28T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What's the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).</p>
+            <content type="html"><![CDATA[<p>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).</p>
 <p>A few years ago I had to do this once and I remember doing it with an image and <code>background-position</code> but as of today I really love pseudo elements and &ldquo;Look-Ma-No-Image!&quot;. However I decided to use Icon Fonts this time and play around a bit with them. My HTML Markup is very simple:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
-</code></pre></div><p>That's it: A group of <code>radio inputs</code> representing a rating system with 1-5 possible choices. The CSS part is a little bit trickier (note that I'm using Sass with SCSS Syntax!)</p>
+</code></pre></div><p>That&rsquo;s it: A group of <code>radio inputs</code> representing a rating system with 1-5 possible choices. The CSS part is a little bit trickier (note that I&rsquo;m using Sass with SCSS Syntax!)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">rating--star</span> {
   <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#ff7711</span>;
   <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">{</span>
@@ -1145,7 +1145,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
     <span style="color:#66d9ef">outline</span>:<span style="color:#ae81ff">0</span>;
   }
 <span style="color:#960050;background-color:#1e0010">}</span>
-</code></pre></div><p>A small piece of code, yet it can seem complicated. I'll break it down a bit.</p>
+</code></pre></div><p>A small piece of code, yet it can seem complicated. I&rsquo;ll break it down a bit.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">rating--star</span> {
   <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#ff7711</span>;
 
@@ -1160,7 +1160,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"> <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">checked</span> <span style="color:#f92672">~</span> :<span style="color:#a6e22e">before</span> {
     <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;\2606&#34;</span>;
   }
-</code></pre></div><p>The next line says &ldquo;when the input is <code>:checked</code> change the properties of <code>:before</code>&rdquo;. So when it is checked I want the filled Star to show up (&quot;\2606&rdquo;). Seems logical? It's not. <code>\2606</code> is the empty star. So the <code>&amp;:checked ~ :before</code> pseudo holds the icon that should be included if the button is not checked and the <code>:before</code> holds the checked (in this case filled) icon. This is because <code>:checked ~ :before</code> selects every element that is preceded of the <code>:checked</code> element. This comes handy because this also means all inputs display a filled star if we check the last star (and that's exactly what we want).</p>
+</code></pre></div><p>The next line says &ldquo;when the input is <code>:checked</code> change the properties of <code>:before</code>&rdquo;. So when it is checked I want the filled Star to show up (&quot;\2606&rdquo;). Seems logical? It&rsquo;s not. <code>\2606</code> is the empty star. So the <code>&amp;:checked ~ :before</code> pseudo holds the icon that should be included if the button is not checked and the <code>:before</code> holds the checked (in this case filled) icon. This is because <code>:checked ~ :before</code> selects every element that is preceded of the <code>:checked</code> element. This comes handy because this also means all inputs display a filled star if we check the last star (and that&rsquo;s exactly what we want).</p>
 <p>A live demo can be found on <a href="http://codepen.io/kevingimbel/pen/kwIgi">CodePen</a>.</p>
 ]]></content>
             
@@ -1208,18 +1208,18 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
             <updated>2013-10-02T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>If you're a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It's fair to say that they're all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
+            <content type="html"><![CDATA[<p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
 <p>Even though Pre-Processors are easy to use and setup some people are still confused: <em>Do I have to run them on a server? How do I install them? Why should I use them?</em> - I want to answer all these questions in this article: Getting from 0 to Sass in X Steps!</p>
 <p><strong>Notice:</strong> This guide covers the installation on Linux and Mac only, for Windows support please take a look at <a href="http://www.impressivewebs.com/sass-on-windows/">this tutorial</a>.</p>
 <h3 id="sass-summary">Sass summary</h3>
-<p>Sass was build by <a href="http://www.hamptoncatlin.com/">Hampton Catlin</a> and <a href="http://nex-3.com/">Nathan Weizenbaum</a>. Since late 2008 <a href="http://chriseppstein.github.io/">Chris Eppstein</a> is also on board, he's also the creator of <a href="http://compass-style.org/">Compass</a> which is a CSS3 Framework for Sass (I'll cover Compass and other Frameworks for Sass later).</p>
+<p>Sass was build by <a href="http://www.hamptoncatlin.com/">Hampton Catlin</a> and <a href="http://nex-3.com/">Nathan Weizenbaum</a>. Since late 2008 <a href="http://chriseppstein.github.io/">Chris Eppstein</a> is also on board, he&rsquo;s also the creator of <a href="http://compass-style.org/">Compass</a> which is a CSS3 Framework for Sass (I&rsquo;ll cover Compass and other Frameworks for Sass later).</p>
 <p>Sass enables you to use Variables, Functions and Mixins inside your CSS. This comes very handy because a stylesheet gets amazingly maintainable with variables and mixins.</p>
-<p>Before we start I want you to notice something important about Sass: Sass runs on ruby so you have to install Ruby if it's not (Yeah Windows, I'm looking in your direction!) - on Mac and Linux Ruby should be installed. All code blocks starting with <code>$</code> need to be inputed into a Terminal (without the <em>$</em>!). On OS X and Linux you may need to put a <code>sudo</code> command before every command prompt.</p>
+<p>Before we start I want you to notice something important about Sass: Sass runs on ruby so you have to install Ruby if it&rsquo;s not (Yeah Windows, I&rsquo;m looking in your direction!) - on Mac and Linux Ruby should be installed. All code blocks starting with <code>$</code> need to be inputed into a Terminal (without the <em>$</em>!). On OS X and Linux you may need to put a <code>sudo</code> command before every command prompt.</p>
 <p>Simply check your ruby version by typing the following</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ruby --version
 ruby 1.9.3p194 <span style="color:#f92672">(</span>2012-04-20 revision 35410<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>i686-linux<span style="color:#f92672">]</span>
 </code></pre></div><h3 id="installation">Installation</h3>
-<p>You've maybe tried to install Sass previously and maybe it is still installed.</p>
+<p>You&rsquo;ve maybe tried to install Sass previously and maybe it is still installed.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># checking the installed Sass Version</span>
 $ sass --version
 <span style="color:#75715e"># If up to date the output (as of today, 10/2/13) is</span>
@@ -1227,16 +1227,16 @@ Sass 3.2.9 <span style="color:#f92672">(</span>Media Mark<span style="color:#f92
 </code></pre></div><p>If you get an error such as &ldquo;command not found&rdquo; Sass is not installed, so we start from 0.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gem install sass
 </code></pre></div><p>Your Terminal will now show you the download and install process for Sass, depending on your internet connection this may take a while.
-After things are finished we'll skip the step of testing Sass directly or using it on its own - trust me here, it's way better to install Compass first.</p>
+After things are finished we&rsquo;ll skip the step of testing Sass directly or using it on its own - trust me here, it&rsquo;s way better to install Compass first.</p>
 <h3 id="compass">Compass</h3>
-<p>Compass is a Framework for Sass that comes with a ton of build in Mixins and Functions that you'll love. I'm using compass for every project - no matter if small or large.</p>
+<p>Compass is a Framework for Sass that comes with a ton of build in Mixins and Functions that you&rsquo;ll love. I&rsquo;m using compass for every project - no matter if small or large.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># updating the system first so everything is running correctly</span>
 $ gem update system
 $ gem install compass
 </code></pre></div><p>After compass is installed simply head over to your Local Web Direction (in my case this is <code>var/www/</code>) and run</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ compass create myproject
-</code></pre></div><p>It doesn't matter what you call <code>myproject</code> - I've only used this command once in my life. Anyway this will create a config.rb file that you should open next.</p>
-<p>The <code>config.rb</code> is well commented, below you can see my file (just in case you don't edit the wrong file by accident)</p>
+</code></pre></div><p>It doesn&rsquo;t matter what you call <code>myproject</code> - I&rsquo;ve only used this command once in my life. Anyway this will create a config.rb file that you should open next.</p>
+<p>The <code>config.rb</code> is well commented, below you can see my file (just in case you don&rsquo;t edit the wrong file by accident)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># Require any additional compass plugins here.</span>
 
 <span style="color:#75715e"># Set this to the root of your project when deployed:</span>
@@ -1261,7 +1261,7 @@ javascripts_dir <span style="color:#f92672">=</span> <span style="color:#e6db74"
 <span style="color:#75715e"># preferred_syntax = :sass</span>
 <span style="color:#75715e"># and then run:</span>
 <span style="color:#75715e"># sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass</span>
-</code></pre></div><p>I changed the path (<code>css_dir`,</code>sass_dir<code>,...) so that they match my standard folder setup for projects.I do also always compress my files by changing the </code>output_style<code>to</code>:compressed`.</p>
+</code></pre></div><p>I changed the path (<code>css_dir</code>,<code>sass_dir</code>,&hellip;) so that they match my standard folder setup for projects.I do also always compress my files by changing the <code>output_style</code> to <code>:compressed</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># You can select your preferred output style here (can be overridden via the command line):</span>
 output_style <span style="color:#f92672">=</span> :compressed
 </code></pre></div><p>The <code>config.rb</code> is essential for running Compass. You have to Copy and Paste it into every root direction of your project. See and example below:</p>
@@ -1283,18 +1283,18 @@ output_style <span style="color:#f92672">=</span> :compressed
 <span style="color:#e6db74">&#39;- config.rb
 </span><span style="color:#e6db74">#   &#39;</span>- there it is, the config.rb!
 </code></pre></div><p>Sass and Compass are now installed and ready to use. This is, in my opinion, best made via the good old Terminal!</p>
-<p>So let's navigate to our folders and run our first command.</p>
+<p>So let&rsquo;s navigate to our folders and run our first command.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># switching to our project folder</span>
 $ cd var/www/my-new-project
 <span style="color:#75715e"># telling compass to compile our files</span>
 $ compass watch
 </code></pre></div><p>Compass is now watching for changes and everytime you save your <code>style.scss</code> it will automatically create an style.css out of it. Still wondering what all of this is about?</p>
 <h3 id="variables">Variables</h3>
-<p>Let's start with Variables because I assume you know what they are and have already seen variables in other programming languages.</p>
+<p>Let&rsquo;s start with Variables because I assume you know what they are and have already seen variables in other programming languages.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Variables</span> <span style="color:#f92672">start</span> <span style="color:#f92672">with</span> <span style="color:#f92672">a</span> <span style="color:#f92672">$</span><span style="color:#f92672">,</span> <span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span>
 <span style="color:#f92672">$</span><span style="color:#f92672">main-color</span><span style="color:#f92672">:</span> #85c226<span style="color:#f92672">;</span>
-</code></pre></div><p>Variables must be declared <strong>before</strong> they're used, that's why I recommend to declare all variables at the top of the document (or inside a other stylesheet that can be included, more later on).
-To use a variable you simply write it to the place you want it to be used. Logical, isn't it?</p>
+</code></pre></div><p>Variables must be declared <strong>before</strong> they&rsquo;re used, that&rsquo;s why I recommend to declare all variables at the top of the document (or inside a other stylesheet that can be included, more later on).
+To use a variable you simply write it to the place you want it to be used. Logical, isn&rsquo;t it?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">$</span><span style="color:#f92672">main-color</span><span style="color:#f92672">:</span> #85c226<span style="color:#f92672">;</span>
 
 .<span style="color:#a6e22e">my-class</span> {
@@ -1304,9 +1304,9 @@ To use a variable you simply write it to the place you want it to be used. Logic
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">my-class</span> {
     <span style="color:#66d9ef">border-top</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#85c226</span>;
 }
-</code></pre></div><p>Basically that's it. You can store Strings, Colors, and other variables inside a variables. More on variables can be found inside the <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_">Sass Docs</a>.</p>
+</code></pre></div><p>Basically that&rsquo;s it. You can store Strings, Colors, and other variables inside a variables. More on variables can be found inside the <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_">Sass Docs</a>.</p>
 <h3 id="mixins">Mixins</h3>
-<p>Mixins are getting a little bit more interesting. They're snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:</p>
+<p>Mixins are getting a little bit more interesting. They&rsquo;re snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">import</span> <span style="color:#f92672">everything</span> <span style="color:#f92672">that</span> <span style="color:#f92672">compass</span> <span style="color:#f92672">has</span>
 @<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;compass&#34;</span>;
 <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">import</span> <span style="color:#f92672">special</span> <span style="color:#f92672">library</span> <span style="color:#f92672">(</span><span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span> <span style="color:#f92672">css3</span><span style="color:#f92672">)</span>
@@ -1325,7 +1325,7 @@ To use a variable you simply write it to the place you want it to be used. Logic
     <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
     <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#960050;background-color:#1e0010">5</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">)</span>;
 }
-</code></pre></div><p>The mixin can be created once and then be reused everywhere inside your style.scss - it'll save you a lot of writing whenever you have to apply a border to an object. The <code>border-radius()</code> mixin is also build-in to Compass. The output in style.css will be as following:</p>
+</code></pre></div><p>The mixin can be created once and then be reused everywhere inside your style.scss - it&rsquo;ll save you a lot of writing whenever you have to apply a border to an object. The <code>border-radius()</code> mixin is also build-in to Compass. The output in style.css will be as following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">my-class</span> {
     <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">em</span>;
     <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
@@ -1356,10 +1356,10 @@ To use a variable you simply write it to the place you want it to be used. Logic
 </span><span style="color:#e6db74">        &#39;</span>- _mixins.scss
     <span style="color:#e6db74">&#39;- style.scss
 </span><span style="color:#e6db74">    &#39;</span>- style.css
-</code></pre></div><p>The amazing thing about Compass is: every file that starts with <code>_</code> is not compiled. So in the above folder tree there's still only <code>style.scss</code> that will be compiled - but all the others can be included. <strong>Wow but what about performance with all those files?</strong> you'll maybe ask yourself? The point is: There's still just one file, the style.<em>css</em> that will be included to the page later - so all the other files only exist locally on your computer.
-If you want to have an example what the <code>style.scss</code> would look like, here's the one I <a href="https://github.com/kevingimbel/kevingimbel.github.io/blob/v1/assets/css/style.scss">used for my blog</a>.</p>
-<p>Sass and Compass are amazing, powerful tools and you, as a Front-End Developer, should be able to work with both. This small summary of the basic Sass features is just the top of the iceberg - there's a lot more to explore about <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass</a> and <a href="http://compass-style.org/reference/compass/">Compass</a>.</p>
-<p>You should also check out <a href="http://codepen.io/thebabydino/">Ana Tudor</a> on CodePen, she's doing amazing stuff with Sass and Maths!</p>
+</code></pre></div><p>The amazing thing about Compass is: every file that starts with <code>_</code> is not compiled. So in the above folder tree there&rsquo;s still only <code>style.scss</code> that will be compiled - but all the others can be included. <strong>Wow but what about performance with all those files?</strong> you&rsquo;ll maybe ask yourself? The point is: There&rsquo;s still just one file, the style.<em>css</em> that will be included to the page later - so all the other files only exist locally on your computer.
+If you want to have an example what the <code>style.scss</code> would look like, here&rsquo;s the one I <a href="https://github.com/kevingimbel/kevingimbel.github.io/blob/v1/assets/css/style.scss">used for my blog</a>.</p>
+<p>Sass and Compass are amazing, powerful tools and you, as a Front-End Developer, should be able to work with both. This small summary of the basic Sass features is just the top of the iceberg - there&rsquo;s a lot more to explore about <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass</a> and <a href="http://compass-style.org/reference/compass/">Compass</a>.</p>
+<p>You should also check out <a href="http://codepen.io/thebabydino/">Ana Tudor</a> on CodePen, she&rsquo;s doing amazing stuff with Sass and Maths!</p>
 <p>Further reading:</p>
 <ul>
 <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass Docs</a></li>
@@ -1411,7 +1411,7 @@ If you want to have an example what the <code>style.scss</code> would look like,
             <updated>2013-09-20T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>I just stumbled upon a very handy CSS Property: <code>position:sticky</code>. As far as I found out it's only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).</p>
+            <content type="html"><![CDATA[<p>I just stumbled upon a very handy CSS Property: <code>position:sticky</code>. As far as I found out it&rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).</p>
 <p><code>position:sticky</code> is a pretty handy feature that allows you to stick an element to the top of the page (or wherever you want) until the parent element is moved out of the screen.</p>
 <h3 id="basic-markup">Basic Markup</h3>
 <p>To get an idea of how <code>position:sticky</code> works I made some basic markup.</p>

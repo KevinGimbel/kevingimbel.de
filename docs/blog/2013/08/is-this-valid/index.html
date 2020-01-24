@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Is this :valid?
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -66,7 +74,7 @@
 
 <p>Written on <time datetime="2013-08-16 00:00:00 &#43;0000 UTC">16. Aug 2013</time>  </p>
             <p>I recently stumbled upon the <code>:valid</code> and <code>:invalid</code> class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not <strong>validate the input</strong>, the entered email for example can still be formated wrong.</p>
-<p>Anyway I thought this is a handy little helper that I could give a try so I started working around with it, checking what I can do and what I can't.</p>
+<p>Anyway I thought this is a handy little helper that I could give a try so I started working around with it, checking what I can do and what I can&rsquo;t.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">contact__form--email</span> {
  
   <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">{</span>
@@ -77,11 +85,11 @@
     <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">red</span>;
   }
 <span style="color:#960050;background-color:#1e0010">}</span>
-</code></pre></div><p>Above you see the basic markup for a simple use case of <code>:valid</code> and <code>:invalid</code>. You can apply everything you want so far I've tested. In my opinion <code>color</code> and <code>border</code> are the best and most basic use cases where this makes sense.</p>
+</code></pre></div><p>Above you see the basic markup for a simple use case of <code>:valid</code> and <code>:invalid</code>. You can apply everything you want so far I&rsquo;ve tested. In my opinion <code>color</code> and <code>border</code> are the best and most basic use cases where this makes sense.</p>
 <h3 id="strange-behavior-of-valid">Strange behavior of :valid</h3>
 <p>While the <code>:invalid</code> pseudo class makes perfect sense I found some strange behavior while experimenting with <code>:valid</code>.
-When the user starts typing the color will be red, as soon as he writes <code>yourname@g</code> the color will turn green - because the eMail is now valid, even though it's not finished and here comes the point I start wondering: Why doesn't it check for a dot followed by at least 2 letters? The chances that this would be a valid email and this can be marked valid is much higher then triggering the valid pseudo class right after someone puts a letter behind the @ mark.</p>
-<p>Mozilla's Firefox and Google Chrome behave the same way, both trigger the <code>:valid</code> class as soon as there is one character behind the @ mark. I wonder if this is specified by W3C - and now I ask: Is this really the best way to handle <code>:valid</code> and <code>:invalid</code> pseudo classes? Wouldn't it be better to wait until the user types at least one dot followed by a letter <strong>after</strong> the user already wrote an @ mark? This would, in all cases, make sure the email is set up correctly.</p>
+When the user starts typing the color will be red, as soon as he writes <code>yourname@g</code> the color will turn green - because the eMail is now valid, even though it&rsquo;s not finished and here comes the point I start wondering: Why doesn&rsquo;t it check for a dot followed by at least 2 letters? The chances that this would be a valid email and this can be marked valid is much higher then triggering the valid pseudo class right after someone puts a letter behind the @ mark.</p>
+<p>Mozilla&rsquo;s Firefox and Google Chrome behave the same way, both trigger the <code>:valid</code> class as soon as there is one character behind the @ mark. I wonder if this is specified by W3C - and now I ask: Is this really the best way to handle <code>:valid</code> and <code>:invalid</code> pseudo classes? Wouldn&rsquo;t it be better to wait until the user types at least one dot followed by a letter <strong>after</strong> the user already wrote an @ mark? This would, in all cases, make sure the email is set up correctly.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Firefox and Chrome trigger :valid</span> 
 <span style="color:#75715e"># at this point</span>
 <span style="color:#75715e">#       |</span>
@@ -91,8 +99,8 @@ When the user starts typing the color will be red, as soon as he writes <code>yo
 <span style="color:#75715e"># 2 letters have been entered</span>
 <span style="color:#75715e"># because chances that the email</span>
 <span style="color:#75715e"># is valid are much higher here</span>
-</code></pre></div><p>At least you have to check the email via JavaScript or PHP with RegEx to make sure it is valid but it would be a nice UX feature to have a visual feedback that checks the email so a user sees that the inputed email is correct - the :valid class doesn't provide this yet because it triggers to early so there is no &ldquo;guarantee&rdquo; the email is correct.</p>
-<p>I hope that they'll change this behavior in the future so it's save to use :valid on email inputs and it works correctly. What do you think about <code>:valid</code> and <code>:invalid</code>?</p>
+</code></pre></div><p>At least you have to check the email via JavaScript or PHP with RegEx to make sure it is valid but it would be a nice UX feature to have a visual feedback that checks the email so a user sees that the inputed email is correct - the :valid class doesn&rsquo;t provide this yet because it triggers to early so there is no &ldquo;guarantee&rdquo; the email is correct.</p>
+<p>I hope that they&rsquo;ll change this behavior in the future so it&rsquo;s save to use :valid on email inputs and it works correctly. What do you think about <code>:valid</code> and <code>:invalid</code>?</p>
 <p>You can find a working example of :valid and :invalid <a href="http://codepen.io/kevingimbel/pen/jlhJg">here at CodePen</a>.</p>
 
         </article>

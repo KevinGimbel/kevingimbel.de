@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Getting into vim - again
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -65,20 +73,20 @@
 
 
 <p>Written on <time datetime="2015-01-21 00:00:00 &#43;0000 UTC">21. Jan 2015</time>  </p>
-            <p>It's been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
-VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I've already written about
+            <p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
+VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&rsquo;ve already written about
 <a href="/noobish-vim/">turning Sublime Text into VIM mode</a> and my <a href="/vim-first-impressions/">very first VIM impression</a>, but
 back then I just copy &amp; pasted everything I found on the Internet into my <code>.vimrc</code>. Now with the new year I thought some
 new thing to learn could be fun and I got back into <em>really</em> working with VIM.</p>
 <h2 id="config-first">Config first</h2>
-<p>The past week I've done all my daily work at <a href="http://synoa.de">Synoa</a> in VIM. My current <code>.vimrc</code> is divided into 4
-sections which I'll explain below.</p>
+<p>The past week I&rsquo;ve done all my daily work at <a href="http://synoa.de">Synoa</a> in VIM. My current <code>.vimrc</code> is divided into 4
+sections which I&rsquo;ll explain below.</p>
 <h3 id="plugins">Plugins</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; Enable Pathogen to manage plugins</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">execute</span> <span style="color:#a6e22e">pathogen</span>#<span style="color:#a6e22e">infect</span>()<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>I've replaced Vundle with Pathogen to load Plugins because to my (still noobish) eye it looks better and more easy to
-use. Pathogen auto-loads all Plugins that are placed inside <code>~/.vim/bundle/</code> - currently the only Plugin I'm using is
-Emmet, because I'd never ever use an editor again that's missing Emmet. The way Emmet works in VIM is a little bit weird
+</span></code></pre></div><p>I&rsquo;ve replaced Vundle with Pathogen to load Plugins because to my (still noobish) eye it looks better and more easy to
+use. Pathogen auto-loads all Plugins that are placed inside <code>~/.vim/bundle/</code> - currently the only Plugin I&rsquo;m using is
+Emmet, because I&rsquo;d never ever use an editor again that&rsquo;s missing Emmet. The way Emmet works in VIM is a little bit weird
 because of the different modes and key mappings when you come from a Sublime Text 2/3 background. Basically, you need to
 hit <code>[CTRL]+[C]+[,]</code> after every Emmet snippet - beside that it works as expected.</p>
 <h3 id="writin-style-and-syntax">Writin style and syntax</h3>
@@ -107,10 +115,10 @@ hit <code>[CTRL]+[C]+[,]</code> after every Emmet snippet - beside that it works
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">scrolloff</span>=<span style="color:#ae81ff">15</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">wmh</span>=<span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>I must admit that most of the VIM syntax and writing styles is still copy pasted from all over the Internet. In the
-first block I'm setting the colorshemes and basic VIM UI (show mode, show CMD, have a mode line; use a ruler). In the
-second block there's settings for line numbers (always nice to have!) and tab width (2 spaces, always), smartindent (so
+first block I&rsquo;m setting the colorshemes and basic VIM UI (show mode, show CMD, have a mode line; use a ruler). In the
+second block there&rsquo;s settings for line numbers (always nice to have!) and tab width (2 spaces, always), smartindent (so
 new lines can be auto-indented), general text width (where to place the ruler), scroll off by X lines so I never scroll
-down to the end of the screen and the wmh (window min height) - this one is used so tabs in split view don't take up any
+down to the end of the screen and the wmh (window min height) - this one is used so tabs in split view don&rsquo;t take up any
 space.</p>
 <h3 id="key-mappings">Key mappings</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; The &lt;Enter&gt; command behind each mapping executes the</span><span style="color:#960050;background-color:#1e0010">
@@ -136,30 +144,30 @@ be executed immediately, otherwise it is written into the little command line at
 <p>New here is the mapping to switch between split view windows. When opening a new file with <code>:sp</code> I can now navigate
 using <code>[CTRL]+[C]</code> and <code>j</code> to go &ldquo;down&rdquo; or <code>k</code> to go up - this is really handy.</p>
 <p>The last line has been the break-through for me in beeing productive with VIM. When working with Magento and CSS, I
-often need to open many files in the same directory, yet I tend to start inside the root. Normally I'd have to write all
-the path to where I am, like <code>:tabedit skin/frontend/namespace/default/scss/</code> when I'm inside a Magento skin folder.
+often need to open many files in the same directory, yet I tend to start inside the root. Normally I&rsquo;d have to write all
+the path to where I am, like <code>:tabedit skin/frontend/namespace/default/scss/</code> when I&rsquo;m inside a Magento skin folder.
 With this little helper I can type <code>:tabedit %%/</code> and once I write the <code>/</code> the path will expand to the current
 directory.</p>
 <h3 id="no-backups-no-swap">No backups, no swap!</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; No backups and no swap file</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nobackup</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">noswapfile</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>The last part is still the same. Since I'm using git and branches for everything I don't need any kind of backup or swap
+</span></code></pre></div><p>The last part is still the same. Since I&rsquo;m using git and branches for everything I don&rsquo;t need any kind of backup or swap
 file since I could always revert anything.</p>
 <h2 id="working-in-vim">Working in VIM</h2>
 <p>With these configurations I started to work in VIM. I tried changing and adjusting the themes a bit and in the end found my
 self with a dark theme (bad wolf; a Doctor Who reference!) after using Tomorrow Night (light) for almost half a year. So
-far after seven days the only thing I'm really missing from time to time is Sublime Texts Multi Cursor Feature and
+far after seven days the only thing I&rsquo;m really missing from time to time is Sublime Texts Multi Cursor Feature and
 &ldquo;Search in Folder&rdquo; to find stuff inside the whole project. There are plugins for the later feature and multi cursor
-editing can be archive using weird, cryptic command combinations but I'm not familiar yet with either of these. So far I
-enjoy the destraction free enviorment I'm working in and only start Sublime Text when I can't find a particular
+editing can be archive using weird, cryptic command combinations but I&rsquo;m not familiar yet with either of these. So far I
+enjoy the destraction free enviorment I&rsquo;m working in and only start Sublime Text when I can&rsquo;t find a particular
 template.</p>
-<p>Since I've used Sublime Text in Vintage Mode for almost 6 months I'm feeling comfortable enough with the basic
+<p>Since I&rsquo;ve used Sublime Text in Vintage Mode for almost 6 months I&rsquo;m feeling comfortable enough with the basic
 operations of using <code>y</code>ank, <code>d</code>elete or <code>p</code>ut to move around lines and edit code, <code>dit</code> (delete in tags) or <code>ei&quot;</code> (edit
-iin &ldquo;) are things I don't use that often because they take too much time when they don't work right from the start.</p>
-<p>Other then some hardcore-users I'm also using my mouse wheel and the arrow keys to navigate inside VIM. I feel a lot
-more comfortable doing it this way than I'd feel using only <code>h, j, k, l</code>. After all I liked to get into VIM and I'll see
-how it can benefit to my workflow or if it'll stay in my way at the end - like all other editors I've tried - and I'll
+iin &ldquo;) are things I don&rsquo;t use that often because they take too much time when they don&rsquo;t work right from the start.</p>
+<p>Other then some hardcore-users I&rsquo;m also using my mouse wheel and the arrow keys to navigate inside VIM. I feel a lot
+more comfortable doing it this way than I&rsquo;d feel using only <code>h, j, k, l</code>. After all I liked to get into VIM and I&rsquo;ll see
+how it can benefit to my workflow or if it&rsquo;ll stay in my way at the end - like all other editors I&rsquo;ve tried - and I&rsquo;ll
 return to my beloved Sublime Text 3.</p>
 <p>Keep up with my advimtures (ha punny!) by subscribing to the <a href="/atom.xml">Atom Feed</a> or by following me on
 <a href="https://twitter.com/_kevinatari">Twitter</a>:</p>

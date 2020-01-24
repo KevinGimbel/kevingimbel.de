@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[fallback on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[fallback on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/fallback/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/fallback/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/fallback/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -33,7 +33,7 @@
             
             
             <content type="html"><![CDATA[<p><code>calc</code> is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example <code>calc(100% - 4rem - 1px)</code> is valid and works in modern browsers - in simpler words: Calc works with different units like <code>em</code>, <code>%</code>, <code>px</code>, etc.</p>
-<p>The problem with calc is that if it doesn't work you may get a unexpected result. Take the following code for example:</p>
+<p>The problem with calc is that if it doesn&rsquo;t work you may get a unexpected result. Take the following code for example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">author</span> {
     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
     <span style="color:#66d9ef">width</span>: calc(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>);

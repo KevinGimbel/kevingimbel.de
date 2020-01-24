@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         ReactJS - Hello World!
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -68,38 +76,38 @@
             <p>This article is the first in a series about <a href="http://facebook.github.io/react/">ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p>
 <p>React itself says one very important and true thing about itself:</p>
 <blockquote>
-<p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it's easy to try it out on a small feature in an existing project.</p>
+<p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it&rsquo;s easy to try it out on a small feature in an existing project.</p>
 </blockquote>
-<p>Instead of frameworks such as <a href="https://angularjs.org/">Angular</a> or <a href="http://emberjs.com/">Ember</a>, React only covers the visual part and state of an UI. It won't help you structure your applicationit will not do anything other than render DOM parts and control their state. At this, however, React is amazingly good!</p>
-<h3 id="jsxlike-syntax">JSX-like syntax</h3>
-<p>React uses a XML like syntax called JSX. JSX seems horrible at first, at least to me, but becomes really powerful once you're used to it. Here is an example of two <code>div</code>s, one written in React JSX syntax and one in pure JavaScript. We assume the variable <code>dynamicContent</code> will hold some content that is generated before.</p>
+<p>Instead of frameworks such as <a href="https://angularjs.org/">Angular</a> or <a href="http://emberjs.com/">Ember</a>, React only covers the visual part and state of an UI. It won&rsquo;t help you structure your applicationit will not do anything other than render DOM parts and control their state. At this, however, React is amazingly good!</p>
+<h3 id="jsx-like-syntax">JSX-like syntax</h3>
+<p>React uses a XML like syntax called JSX. JSX seems horrible at first, at least to me, but becomes really powerful once you&rsquo;re used to it. Here is an example of two <code>div</code>s, one written in React JSX syntax and one in pure JavaScript. We assume the variable <code>dynamicContent</code> will hold some content that is generated before.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// React JSX DIV
 var myJSXDiv = &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span>&gt;{dynamicContent}&lt;/<span style="color:#f92672">div</span>&gt;;
 // pure JS DIV
 var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span>&gt;&#39;+ dynamicContent +&#39;&lt;/<span style="color:#f92672">div</span>&gt;&#39;;
-</code></pre></div><p>Weird isn't it? Writing junks of HTML without quotes in a JavaScript file looks totally wrong at first, however React is being compiled to pure JavaScript before it will hit your servers. Therefore, it really only is a way of easy writing - when you create a few DOM Elements in React you'll soon start to love the JSX-like syntax.</p>
+</code></pre></div><p>Weird isn&rsquo;t it? Writing junks of HTML without quotes in a JavaScript file looks totally wrong at first, however React is being compiled to pure JavaScript before it will hit your servers. Therefore, it really only is a way of easy writing - when you create a few DOM Elements in React you&rsquo;ll soon start to love the JSX-like syntax.</p>
 <h3 id="hello-world">Hello World!</h3>
-<p>As in every framework and language, let's start by outputting a <code>Hello World!</code> string. To archive this we will do the following:</p>
+<p>As in every framework and language, let&rsquo;s start by outputting a <code>Hello World!</code> string. To archive this we will do the following:</p>
 <ul>
 <li>Create a new React Class or Component</li>
 <li>Invoke a <code>render()</code> function within that Component</li>
 <li>Render the Component to the DOM</li>
 </ul>
 <h4 id="reactcreateclass">React.createClass(</h4>
-<p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I'll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!&quot;.</p>
+<p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I&rsquo;ll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!&quot;.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
   <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
     <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span><span style="color:#f92672">!</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
   }
 })
-</code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that'll be passed just like a HTML element: <code>&lt;HelloWorld /&gt;</code>.</p>
+</code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that&rsquo;ll be passed just like a HTML element: <code>&lt;HelloWorld /&gt;</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Renders the HelloWorld Component into the Body.
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>, document.<span style="color:#a6e22e">body</span>);
-</code></pre></div><p>And here's a working <a href="http://codepen.io">Pen</a> with additional comments.</p>
+</code></pre></div><p>And here&rsquo;s a working <a href="http://codepen.io">Pen</a> with additional comments.</p>
 <!-- raw HTML omitted -->
-<p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn't fun either. So next, we'll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p>
+<p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn&rsquo;t fun either. So next, we&rsquo;ll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p>
 <h3 id="hello-friend">Hello {friend}!</h3>
-<p>React has its own template-engine-thingy. Instead of typing static strings you can pass data and use it in the return of the Render Function (or in any other function inside the component for that matter). All passed data is accessible via <code>this.props</code> and passed like <code>&lt;HelloWorld name=&quot;Kevin&quot; /&gt;</code>, which would than be accessed like <code>this.props.name</code>. Here's an example of this in action.</p>
+<p>React has its own template-engine-thingy. Instead of typing static strings you can pass data and use it in the return of the Render Function (or in any other function inside the component for that matter). All passed data is accessible via <code>this.props</code> and passed like <code>&lt;HelloWorld name=&quot;Kevin&quot; /&gt;</code>, which would than be accessed like <code>this.props.name</code>. Here&rsquo;s an example of this in action.</p>
 <!-- raw HTML omitted -->
 <p>However, to re-use the <code>HelloWorld</code> component we need to create another Component and use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code>Array.map</code></a> function to go over an Array of names.</p>
 <p>So what we do now is the following:</p>
@@ -108,7 +116,7 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
 <li>We create a new Component that renders multiple instances of <code>&lt;HelloWorld /&gt;</code></li>
 <li>We render the new Component into the document</li>
 </ul>
-<p>This sounds complex but it is quite doable so let's start right away by extending the <code>HelloWorld</code> component and re-naming it to <code>Hello</code> since it will greet all kinds of people now.</p>
+<p>This sounds complex but it is quite doable so let&rsquo;s start right away by extending the <code>HelloWorld</code> component and re-naming it to <code>Hello</code> since it will greet all kinds of people now.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// The new Hello Component
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
   <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
@@ -127,7 +135,7 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
     )
   }
 });
-</code></pre></div><p>Quite a lot going on here. Let's break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that'll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /&gt;</code>.</p>
+</code></pre></div><p>Quite a lot going on here. Let&rsquo;s break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that&rsquo;ll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /&gt;</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// this.props.folks.map() goes over every entry in the array
 </span><span style="color:#75715e"></span><span style="color:#75715e">// and returns a new Hello Component.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allGreetings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">folks</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">person</span>) {
@@ -156,7 +164,7 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">FriendList</span> <span style="color:#a6e22e">folks</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">allThePeople</span>}<span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>, document.<span style="color:#a6e22e">body</span>);
 </code></pre></div><p>We create a normal JavaScript Array with our Friends&rsquo; names as strings, then pass it to the React component as the attribute <code>folks</code>. This array will then be accessible as <code>this.props.folks</code> from within the Component. And, as before, here is a Pen showing the output as well as some more comments on the code.</p>
 <!-- raw HTML omitted -->
-<p>That's it for creating a Component and re-using it inside another Component. For the next tutorial we'll see how we can use a state to give our Components some interaction. If you've got any questions or have found an issue, hit me up at <a href="https://twitter.com/_kevinatari">@_kevinatari</a>.</p>
+<p>That&rsquo;s it for creating a Component and re-using it inside another Component. For the next tutorial we&rsquo;ll see how we can use a state to give our Components some interaction. If you&rsquo;ve got any questions or have found an issue, hit me up at <a href="https://twitter.com/_kevinatari">@_kevinatari</a>.</p>
 <!-- raw HTML omitted -->
 
         </article>

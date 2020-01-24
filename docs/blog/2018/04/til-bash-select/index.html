@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         TIL: Bash select
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -60,7 +68,7 @@
 
 
 <p>Written on <time datetime="2018-04-18 00:00:00 &#43;0000 UTC">18. Apr 2018</time>  </p>
-            <p>I was recently researching different bash prompts and stumbled upon an <a href="https://unix.stackexchange.com/a/193660/136550" title="StackExchange answer for question 'In which situations are PS2, PS3, PS4 used as the prompt?'">StackExchange answer</a> which explains the different prompt types (<code>PS1</code>, <code>PS2</code>, <code>PS3</code>, and <code>PS4</code>). The answer explains how the PS3 prompt is used for commands like <code>select</code>. I did not know about select before, so that's the real <abbr title="Today I learned">TIL</abbr>
+            <p>I was recently researching different bash prompts and stumbled upon an <a href="https://unix.stackexchange.com/a/193660/136550" title="StackExchange answer for question 'In which situations are PS2, PS3, PS4 used as the prompt?'">StackExchange answer</a> which explains the different prompt types (<code>PS1</code>, <code>PS2</code>, <code>PS3</code>, and <code>PS4</code>). The answer explains how the PS3 prompt is used for commands like <code>select</code>. I did not know about select before, so that&rsquo;s the real <abbr title="Today I learned">TIL</abbr>
  here!</p>
 <blockquote>
 <p>[&hellip;] PS3 is shown when the select command is waiting for input [&hellip;]</p>
@@ -68,7 +76,7 @@
 <p>So the <code>PS3</code> prompt is shown when a bash program is waiting for user input, and it turns out that the <code>select</code> bash command is used for creating a &ldquo;choice&rdquo; <abbr title="User Interface">UI</abbr>
  in bash. So what does that mean and how does it work?</p>
 <h2 id="asking-interactive-questions-in-bash">Asking interactive questions in Bash</h2>
-<p>Let's assume we have a shell script called <code>make-project</code> which bootstraps some project stuff, for example configuration files. We could provide the user with an option to choose a format from a list of available configuration formats like <code>XML</code> or <code>JSON</code>.</p>
+<p>Let&rsquo;s assume we have a shell script called <code>make-project</code> which bootstraps some project stuff, for example configuration files. We could provide the user with an option to choose a format from a list of available configuration formats like <code>XML</code> or <code>JSON</code>.</p>
 <p>We can handle these options via shell arguments like <code>make-project -format xml</code>, but we could also ask questions interactively using <code>select</code>.</p>
 <p>The script looks like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash

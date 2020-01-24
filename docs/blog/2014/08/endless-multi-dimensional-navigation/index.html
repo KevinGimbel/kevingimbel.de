@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Endless Multi-Dimensional Navigation
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -100,17 +108,17 @@ nav, so <code>this.parentNode</code> will return the <code>&lt;li&gt;</code> ele
 </code></pre></div><p>One of the most important things here is the <code>data-id</code> attribute which groups the navigations, triggers and (endless)
 sub navigations together and is used to reference each of them.</p>
 <h3 id="event-bubbling">Event Bubbling</h3>
-<p>Yet before we get to the actual code it's important to understand event bubbling. If you already know what it is skip
+<p>Yet before we get to the actual code it&rsquo;s important to understand event bubbling. If you already know what it is skip
 this section and continue with &ldquo;Finaly: Code&rdquo; below.
-Event Bubbling is the concept of how the browser handles events. Your're most likly familiar with <code>e.preventDefault()</code>
-for click events applied to <code>&lt;a&gt;</code>-tags. This function stops the normal event bubbling so the browser doesn't reload
+Event Bubbling is the concept of how the browser handles events. Your&rsquo;re most likly familiar with <code>e.preventDefault()</code>
+for click events applied to <code>&lt;a&gt;</code>-tags. This function stops the normal event bubbling so the browser doesn&rsquo;t reload
 the page - which is the default action for <code>&lt;a&gt;</code>-tags.
 So in our case the behavior we make use of is event bubbling, as said before. Take a look at the graphic below and then
 read on.
 <img src="https://i.kevingimbel.me/sc/event_flow_v1.png" alt="&ldquo;Event Bubbling for this navigation&rdquo;">
-When the even get's triggered it finds no handler and the event literally goes up the DOM until it finds a handler. Node
-by node the little event walks up until finally the navigation wrapper says &ldquo;Yes little event! I got you, I'll handle
-that!&rdquo; - and that's it. When the handler attached to the navigation handles the event it will also populate it's <code>el</code>
+When the even get&rsquo;s triggered it finds no handler and the event literally goes up the DOM until it finds a handler. Node
+by node the little event walks up until finally the navigation wrapper says &ldquo;Yes little event! I got you, I&rsquo;ll handle
+that!&rdquo; - and that&rsquo;s it. When the handler attached to the navigation handles the event it will also populate it&rsquo;s <code>el</code>
 variable with whatever <code>e.target</code> currently is. <code>e.target</code> happens to always be the <strong>triggering element</strong>, so it is
 very similar to <code>this</code>, yet even more flexible!</p>
 

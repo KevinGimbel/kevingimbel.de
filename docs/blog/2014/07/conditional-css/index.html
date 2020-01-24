@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Conditional CSS
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -65,13 +73,13 @@
 
 
 <p>Written on <time datetime="2014-07-31 00:00:00 &#43;0000 UTC">31. Jul 2014</time>  </p>
-            <p>While there's a lot of talking about CSS writing styles, organization styles and if it's maybe better or not to avoid
-pre-processors or frameworks there's one very powerful thing that gets pretty much no attention at all: Conditional CSS,
+            <p>While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid
+pre-processors or frameworks there&rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS,
 i.e. pieces of CSS that serve one specific task the easiest and most known is <code>.active</code> given to, well, active elements.
-I'd like to talk a bit about conditional CSS that I've been using in production and that I think can improve the overall
+I&rsquo;d like to talk a bit about conditional CSS that I&rsquo;ve been using in production and that I think can improve the overall
 logic of CSS.</p>
 <h3 id="grids">Grids</h3>
-<p>I'd like to notice that the first example is taken from <a href="http://inuitcss.com">inuit.css</a> by <a href="http://csswizardry.com/">Harry
+<p>I&rsquo;d like to notice that the first example is taken from <a href="http://inuitcss.com">inuit.css</a> by <a href="http://csswizardry.com/">Harry
 Roberts</a>. The grid itself has been adopted into <a href="http://github.com/synoa/bullgrid">Bullgrid</a>
 which is at the moment a <code>em</code> based, stripped down and standalone version of <a href="https://github.com/csswizardry/inuit.css/blob/master/objects/_grids.scss">inuit.css
 grids</a>. So all the kudos for the next section
@@ -82,19 +90,19 @@ One of the most amazing things about inuit.css Grids is its use of viewport-name
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third small-one-whole&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third small-one-whole&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><p>The above example creates a 3 column grid that'll turn into 3 full-width (one-whole) containers once the viewport
+</code></pre></div><p>The above example creates a 3 column grid that&rsquo;ll turn into 3 full-width (one-whole) containers once the viewport
 &ldquo;small&rdquo; is reached. To achieve this behavior Harry wrote an amazingly logical <a href="https://github.com/csswizardry/inuit.css/blob/master/generic/_widths.scss#L13-L102">mixin to set up the
 grids</a> that can later be used to set
 up the grid with a given &ldquo;viewport&rdquo; prefix (<a href="https://github.com/csswizardry/inuit.css/blob/master/generic/_widths.scss#L121-L141">see this
 function</a>). While this creates
 quite a lot of CSS on one hand it is amazingly flexible when working with this grid. Most of the time 3 classes are
-enough to make any component of the page, or better it's container, adjust to the current viewport. I categorize this as
+enough to make any component of the page, or better it&rsquo;s container, adjust to the current viewport. I categorize this as
 &ldquo;Conditional CSS&rdquo; because it has a condition (the viewport prefix, e.g. small-).</p>
 <p>Not only is this grid amazingly simple once you get used to the naming, it is also great for prototyping inside the
 browser. If one part of the page looks a bit weird I can directly play around with all grid classes to find the perfect
 fiting one.</p>
 <h3 id="javascriptbehaviour-conditions">JavaScript/Behaviour conditions</h3>
-<p>JavaScript based conditions are similar to the <code>active</code> example from the intro. Mostly they'll be applied to elements
+<p>JavaScript based conditions are similar to the <code>active</code> example from the intro. Mostly they&rsquo;ll be applied to elements
 with JavaScript. In general Conditional CSS should be prefered over applying styles directly with JavaScript. Not only
 is it cleaner to devide functions and styles, it is also easier to debug, especially when immediate executing functions
 change the look of elements. Consider the next example.</p>
@@ -170,10 +178,10 @@ inline styles which always have a higher priority than everything else (as the n
 		<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">]</span>
 	}
 }
-</code></pre></div><p>So far I find Conditional CSS a good idea and really like to work with it. It's easier, at least for me, to see what a
-class does and where/how it should be used. Also it's a simple use of DRY (don't repeat yourself) and <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">Single
+</code></pre></div><p>So far I find Conditional CSS a good idea and really like to work with it. It&rsquo;s easier, at least for me, to see what a
+class does and where/how it should be used. Also it&rsquo;s a simple use of DRY (don&rsquo;t repeat yourself) and <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">Single
 Responsibility Principle</a> but as
-with everything overusing it won't make your live easier.
+with everything overusing it won&rsquo;t make your live easier.
 As always I appreciate feedback or improvments via <a href="http://twitter.com/_kevinatari">twitter</a>.</p>
 
         </article>

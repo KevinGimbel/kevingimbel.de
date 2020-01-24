@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[gulp on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[gulp on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/gulp/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/gulp/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/gulp/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -34,11 +34,11 @@
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
-super handy once your project get's bigger! Anyway, here's how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
+super handy once your project get&rsquo;s bigger! Anyway, here&rsquo;s how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
 <a href="https://www.npmjs.com/package/gulp-sass">Gulp-Sass</a> and <a href="https://www.npmjs.com/package/gulp-autoprefixer">Autoprefixer</a>.</p>
-<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven't).</p>
+<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven&rsquo;t).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install --save-dev gulp-sass gulp-sourcemaps gulp-autoprefixer
-</code></pre></div><p>After everything is installed we'll create the basic Gulp setup.</p>
+</code></pre></div><p>After everything is installed we&rsquo;ll create the basic Gulp setup.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>),
       <span style="color:#a6e22e">sass</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-sass&#39;</span>),
       <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-autoprefixer&#39;</span>),
@@ -49,7 +49,7 @@ super handy once your project get's bigger! Anyway, here's how to implement them
         <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./skin/frontend/my-theme/default/css/&#39;</span>
       }
 </code></pre></div><p>Next the tasks will be created, I split them into 2, one for Sass and Source Maps and one for
-Autoprefixer. It's important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won't be
+Autoprefixer. It&rsquo;s important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won&rsquo;t be
 right. This happen because Autoprefixer adds more properties to your compiled CSS!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#66d9ef">function</span>() {
 <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">scss</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;styles.scss&#39;</span>)
@@ -65,11 +65,11 @@ right. This happen because Autoprefixer adds more properties to your compiled CS
   .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">css</span> ));  
 });
 </code></pre></div><p>First of all source maps need to be initalized, next a compressed css file from the SCSS files is created, the source
-maps are written and we're all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
+maps are written and we&rsquo;re all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
 with whatever needs to be prefixed. The output looks like below (look at the right top of each rule set). Click on each
 image to view it in full-size.</p>
 <!-- raw HTML omitted -->
-<p>In case you don't want your source maps in production you could split everything into 3 taks and run them in the order
+<p>In case you don&rsquo;t want your source maps in production you could split everything into 3 taks and run them in the order
 <code>[&quot;sass&quot;, &quot;sourcemaps&quot;, &quot;autoprefix&quot;]</code> using <code>gulp.task()</code> and then later have the following production task.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;production&#39;</span>, [<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#39;autoprefix&#39;</span>];
 

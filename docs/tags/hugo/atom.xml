@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[hugo on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[hugo on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/hugo/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/hugo/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/hugo/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -32,7 +32,7 @@
             <updated>2020-01-07T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>For the longest time I completely ignored <a href="https://gohugo.io/content-management/archetypes/" title="Read hugo archetype documentation">archetypes in hugo</a>. I'd always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using <code>category</code> instead of <code>categories</code>) over time.</p>
+            <content type="html"><![CDATA[<p>For the longest time I completely ignored <a href="https://gohugo.io/content-management/archetypes/" title="Read hugo archetype documentation">archetypes in hugo</a>. I&rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using <code>category</code> instead of <code>categories</code>) over time.</p>
 <p>Archetypes are easy to use, for example to create this post I ran the following command</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new blog/2020-01-07-using-archetypes-in-hugo.md
 </code></pre></div><p>This copied over the archetype file from <code>archetypes/blog.md</code> and automatically filled in the post tile, date, last modified date, and the defaults for categories, tags, type, and whatever else I have in the template file. Since Hugo 0.49 archetypes can consist of an entire directory structure that will be created. This is helpful for my <a href="/photography/">photography</a> section where a post consists of an <code>index.md</code> file and some images that are automatically loaded. The structure looks like this.</p>
@@ -44,18 +44,18 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new photography/my-photo-post
 </code></pre></div><p>This command will create a directory named <code>my-photo-post</code> in <code>content/photography/my-photo-post</code>. Neat!</p>
 <h2 id="hugo-template-magic">Hugo template magic</h2>
-<p>As if this wasn't good enough, we can use the full set of Hugo template functions and script even more!</p>
+<p>As if this wasn&rsquo;t good enough, we can use the full set of Hugo template functions and script even more!</p>
 <p>The archetype for new blog posts I use looks like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-title: <span style="color:#e6db74">&#34;{{ replace (replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;) (now.Format &#34;</span><span style="color:#ae81ff">2006</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">02</span> <span style="color:#e6db74">&#34;) &#34;</span><span style="color:#e6db74">&#34; | title }}&#34;</span>
-intro_text: <span style="color:#e6db74">&#34;&#34;</span>
-type: blog
-categories:
+<span style="color:#66d9ef">title</span>: <span style="color:#e6db74">&#34;{{ replace (replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;) (now.Format &#34;</span><span style="color:#ae81ff">2006</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">02</span> <span style="color:#e6db74">&#34;) &#34;</span><span style="color:#e6db74">&#34; | title }}&#34;</span>
+<span style="color:#66d9ef">intro_text</span>: <span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#66d9ef">type</span>: blog
+<span style="color:#66d9ef">categories</span>:
     - coding
-tags:
-    <span style="color:#e6db74">- </span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">date: &#34;{{ now.Format &#34;2006-01-02&#34; }}&#34;</span>
-lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">tags</span>:
+    - 
+<span style="color:#66d9ef">date</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">lastmod</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
 ---
 </code></pre></div><p>In the first line the post <code>title</code> is set which is taken from the file name. I use filenames like <code>2020-01-02-a-post.md</code> on my blog which include the full date and then the post tile and the <code>.md</code> file extension for markdown. The <code>.md</code> is automatically stripped away which leaves a string like <code>2020-01-02-a-post</code>. The first replace (<code>replace .Name &quot;-&quot; &quot; &quot;</code>) turns this into <code>2020 01 02 a post</code>, the next replace (<code>replace (replace .Name &quot;-&quot; &quot; &quot;) (now.Format &quot;2006 01 02 &quot;) &quot;&quot;</code>) takes this string and strips the date, see the detailed steps below.</p>
 <p>We assume that <code>.Name</code> equals &ldquo;2020-01-02-a-post&rdquo;:</p>
@@ -67,9 +67,9 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
 </ol>
 <p>So after the whole code is executed, we have the plain title. This title is then passed to the function named <code>title</code> which is doing capitalization, leaving us with a nicely formatted title.</p>
 <p>As shown above, I also set the <code>date</code> and <code>lastmod</code> times using Hugo template functions.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">date: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
-lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
-</code></pre></div><p>Both dates will be set to the same as this (new) article hasn't been modified yet. <code>lastmod</code> does only change when I update an article later on.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">date</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+<span style="color:#66d9ef">lastmod</span>: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style="color:#e6db74">2006-01-02</span><span style="color:#e6db74">&#34; }}&#34;</span>
+</code></pre></div><p>Both dates will be set to the same as this (new) article hasn&rsquo;t been modified yet. <code>lastmod</code> does only change when I update an article later on.</p>
 ]]></content>
             
                  
@@ -119,10 +119,10 @@ lastmod: <span style="color:#e6db74">&#34;{{ now.Format &#34;</span><span style=
             
             
             <content type="html"><![CDATA[<p>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title <code>Hello world</code> would be available at <code>kevingimbel.de/hello-world</code>. With the new format this includes the section, year, and month, so for example <code>kevingimbel.de/blog/2020/01/hello-world</code>.</p>
-<p>To prevent all old URLs from failing with a 404 I added aliases to all old posts. <a href="https://gohugo.io/content-management/urls/#aliases">The documentation on aliases</a> is pretty short and they're a straight-forward, powerful tool to make content available under multiple URL paths. Just add an alias list to the front-matter of the post.</p>
+<p>To prevent all old URLs from failing with a 404 I added aliases to all old posts. <a href="https://gohugo.io/content-management/urls/#aliases">The documentation on aliases</a> is pretty short and they&rsquo;re a straight-forward, powerful tool to make content available under multiple URL paths. Just add an alias list to the front-matter of the post.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-title: <span style="color:#e6db74">&#34;My awesome post&#34;</span>
-aliases:
+<span style="color:#66d9ef">title</span>: <span style="color:#e6db74">&#34;My awesome post&#34;</span>
+<span style="color:#66d9ef">aliases</span>:
   - /my-awesome-post/
   - /<span style="color:#ae81ff">2020</span><span style="color:#ae81ff">-1</span>/
 ---
@@ -273,7 +273,7 @@ aliases:
 {{ end }}
 </code></pre></div><p>Because we are doing a <code>gt</code> (greater than) comparison only articles that are older than 4 years (5 and more) will be flagged.</p>
 <h2 id="see-it-in-action">See it in action</h2>
-<p>A live example can be seen on my page, for example in the <a href="/blog/2013-08-12-hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
+<p>A live example can be seen on my page, for example in the <a href="/blog/2013/08/hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
 ]]></content>
             
                  
@@ -335,7 +335,7 @@ aliases:
 
 <p>The Source Code can be found <a href="https://github.com/kevingimbel/hugo-shortcodes/tree/master/mastodon">on GitHub.com</a></p>
 <h2 id="configuration">Configuration</h2>
-<p>The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. <a href="https://mastodon.social/@kevingimbel/100700713283716694"><a href="https://mastodon.social/@kevingimbel/100700713283716694">https://mastodon.social/@kevingimbel/100700713283716694</a></a>.</p>
+<p>The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. <a href="https://mastodon.social/@kevingimbel/100700713283716694">https://mastodon.social/@kevingimbel/100700713283716694</a>.</p>
 <pre><code>{{&lt; mastodon status=&quot;https://mastodon.social/@kevingimbel/100700713283716694&quot; &gt;}}
 </code></pre><p>Additional parameters:</p>
 <pre><code># All parameters
@@ -350,16 +350,16 @@ aliases:
 </thead>
 <tbody>
 <tr>
-<td><code>status</code>| The link to the status</td>
-<td></td>
+<td><code>status</code></td>
+<td>The link to the status</td>
 </tr>
 <tr>
-<td><code>width</code>| The width of the iframe</td>
-<td></td>
+<td><code>width</code></td>
+<td>The width of the iframe</td>
 </tr>
 <tr>
-<td><code>height</code>| The height of the iframe</td>
-<td></td>
+<td><code>height</code></td>
+<td>The height of the iframe</td>
 </tr>
 </tbody>
 </table>
@@ -435,13 +435,13 @@ aliases:
             <updated>2017-01-17T21:28:38+01:00</updated>
             
             
-            <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let's Encrypt</a> to create SSL certificates and use HTTPS.</p>
+            <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a> to create SSL certificates and use HTTPS.</p>
 <h3 id="so-what-is-a-static-site">So, what is a &ldquo;static site&rdquo;?</h3>
 <blockquote>
 <p>If you already know the answer, <a href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
 ">skip to the next section</a>!</p>
 </blockquote>
-<p>As the name suggest a static site is - well - <em>static</em>. There's no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
+<p>As the name suggest a static site is - well - <em>static</em>. There&rsquo;s no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
 &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page wrap&#34;</span> <span style="color:#a6e22e">aria-labeldyby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
   &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-header&#34;</span>&gt;
@@ -453,18 +453,18 @@ aliases:
 &lt;/<span style="color:#f92672">section</span>&gt;
 {{ end }}
 </code></pre></div><p>These 10 lines of code make up the default for single pages without a custom template. The words in curly brackets (e.g. <code>{{ .Content }}</code>) are variables filled by Hugo when the template is compiled. <code>{{ define &quot;main&quot; }}</code> defines the <code>main</code> block used inside the <a href="https://github.com/kevingimbel/kevingimbel.com/blob/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts/_default/baseof.html#L36-L38"><code>baseof.html</code> template</a>. All these templates make up the final site. So, despite being &ldquo;static&rdquo; when finished a static site is not so static! It can be flexible and you can use template logic like conditions (<code>if/else</code>, <code>with</code>), loops (<code>range</code>), and with Hugo even custom <a href="http://gohugo.io/extras/shortcodes/">shortcodes inside your markdown</a>.</p>
-<p>At the end of the day we get a static site. This site is compiled from our source files and consists of folders (for URLs) and files (lots of <code>index.html</code> files!) so our server (apache, nginx, a node app) can deliver the content to the client. You might know that by default apache will serve any files such as <code>index.html</code> or <code>index.htm</code> when a route is requested unless you use a dynamic system such as PHP, Ruby, or NodeJS to serve your files. When you load this article at <a href="https://kevingimbel.com/deploy-a-static-site-with-git/">https://kevingimbel.com/deploy-a-static-site-with-git/</a> you request a folder, <code>deploy-a-static-site-with-git</code>, located inside the web root directory of my server and the <code>index.html</code> file inside this folder gets served to you by Apache. This is the basics how static websites work - they're simply HTML files and folders!</p>
+<p>At the end of the day we get a static site. This site is compiled from our source files and consists of folders (for URLs) and files (lots of <code>index.html</code> files!) so our server (apache, nginx, a node app) can deliver the content to the client. You might know that by default apache will serve any files such as <code>index.html</code> or <code>index.htm</code> when a route is requested unless you use a dynamic system such as PHP, Ruby, or NodeJS to serve your files. When you load this article at <a href="https://kevingimbel.com/deploy-a-static-site-with-git/">https://kevingimbel.com/deploy-a-static-site-with-git/</a> you request a folder, <code>deploy-a-static-site-with-git</code>, located inside the web root directory of my server and the <code>index.html</code> file inside this folder gets served to you by Apache. This is the basics how static websites work - they&rsquo;re simply HTML files and folders!</p>
 <h3 id="deploying-a-static-site">Deploying a static site</h3>
 <p>So far we learned  that static sites are &ldquo;just&rdquo; folders and HTML files when generated. The only dependency they have to make them work is a Web Server. This can be apache, nginx, IIS, a simple nodeJS app, or even <code>python -m SimpleHTTPServer</code>. The most basic deployment for our website would be to upload the content of the generated folder (<code>public</code>) to our server using FTP. You might remember that this was the standard for having a website in the 90s were all websites were coded in Frames or tables. My first &ldquo;real website&rdquo; around 2008 was deployed that way. It was a mess.</p>
-<p>What I did might be over-engineering in some way. I have all my source code in git so I set up a git repository on my server and push to this repository whenever I want to publish a new blog post, fix an issue, or change some templates/CSS. What's important about the repository is that it needs to be a <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server">bare repository</a>.</p>
+<p>What I did might be over-engineering in some way. I have all my source code in git so I set up a git repository on my server and push to this repository whenever I want to publish a new blog post, fix an issue, or change some templates/CSS. What&rsquo;s important about the repository is that it needs to be a <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server">bare repository</a>.</p>
 <h4 id="setting-up-the-git-repository">Setting up the git repository</h4>
 <p>The repository can be in any directory on your server which your user (the one you login with ssh) has access to. It should not be your web server root, that is <code>/var/www/</code> or <code>/var/www/html/</code> depending on your system since the files inside the bare repo could be exposed to the public this way. I created a directory outside the web server root in my users <code>home</code> directory, namely <code>$HOME/repository/kevingimbel.com</code>. The steps to setup the bare repository are as follows.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh youruser@yourserver
 $ mkdir -p $HOME/repository/kevingimbel.com
 $ cd $HOME/repository/kevingimbel.com
 $ git clone --bare https://github.com/kevingimbel/kevingimbel.com
-</code></pre></div><p>These commands create the <code>repository</code> directory with a sub-directory <code>kevingimbel.com</code> inside. Inside this new directory I clone the git repository from GitHub with the <a href="https://git-scm.com/docs/git#git---bare"><code>--bare</code></a> flag set. This will not checkout the source code but instead setup a git repository which we can push to or pull from - just like we would do from GitHub. What we need to build the static site is <code>hugo</code> as executable on the server -and the source code of the site. &ldquo;Wait!&rdquo; I hear you say, &ldquo;Didn't you just say there <em>is no source code?!</em>&rdquo; - that's right. The bare repository holds no source code but it can <em>be pushed to</em>! When we push our code to this remote we can use a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git hook</a> to execute a set of scripts when a push is received. To do so, we use the <code>post-receive</code> hook. There are examples for each hook inside your newly created directory, e.g. <code>$HOME/repository/kevingimbel.com/hooks</code>.</p>
-<h4 id="the-postreceive-hook">The post-receive hook</h4>
+</code></pre></div><p>These commands create the <code>repository</code> directory with a sub-directory <code>kevingimbel.com</code> inside. Inside this new directory I clone the git repository from GitHub with the <a href="https://git-scm.com/docs/git#git---bare"><code>--bare</code></a> flag set. This will not checkout the source code but instead setup a git repository which we can push to or pull from - just like we would do from GitHub. What we need to build the static site is <code>hugo</code> as executable on the server -and the source code of the site. &ldquo;Wait!&rdquo; I hear you say, &ldquo;Didn&rsquo;t you just say there <em>is no source code?!</em>&rdquo; - that&rsquo;s right. The bare repository holds no source code but it can <em>be pushed to</em>! When we push our code to this remote we can use a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git hook</a> to execute a set of scripts when a push is received. To do so, we use the <code>post-receive</code> hook. There are examples for each hook inside your newly created directory, e.g. <code>$HOME/repository/kevingimbel.com/hooks</code>.</p>
+<h4 id="the-post-receive-hook">The post-receive hook</h4>
 <p>The <code>post-receive</code> hook is executed after the git repository receives a new push. There are also <code>pre-</code> hooks which are executed before certain actions take place. You can use <code>pre-commit</code> for example to run a set of tests before you are able to write a commit message. I did this in for my example <a href="https://github.com/kevingimbel/nodesh/blob/master/scripts/pre-commit">node cli script nodesh</a> to run <a href="https://mochajs.org/">mocha</a> before I am able to commit. If a test fails and mocha exits with a non 0 code the commit is aborted. To build our static site after we push to the repository we will use the <code>post-receive</code> hook.</p>
 <p>The <code>post-receive</code> hook I use can be found <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive">on GitHub</a>. The <code>post-receive</code> hook is a bash script which has access to a lot of built-in functions as well as all your users functions when a <code>source ~/.bash_profile</code> line is added to the top.</p>
 <pre><code>#!/bin/sh
@@ -504,13 +504,13 @@ done
 </code></pre><p>There happens quite a lot in my <code>post-receive</code> but the most import parts are the  <code>git checkout</code> with the <a href="https://git-scm.com/docs/git#git---work-treeltpathgt"><code>--work-tree</code></a> and <a href="https://git-scm.com/docs/git#git---git-dirltpathgt"><code>--git-dir</code></a> to tell git were the git repository is (<code>--git-dir</code>) and were the files should be checked-out to (<code>--work-tree</code>). I checkout the files to <code>$HOME/hugosrc</code>where the source code of my website is placed just like on GitHub. I then <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive#L33-L42">do some magic</a> to re-write my <code>style.css</code> file to a hashed-file. This is used to force browsers to re-load the CSS when the file has changed. After the style.css re-write is done and the css path inside the  <code>baseof.html</code> template is changed I build the site with <code>hugo</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo -b<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://kevingimbel.com&#34;</span> -d<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$project_path<span style="color:#e6db74">&#34;</span> -s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$hugo_file_path<span style="color:#e6db74">&#34;</span>
 </code></pre></div><p><code>-b</code> is the base url, <code>-d</code> is the destination and <code>-s</code> is the source. This way the static site is generated into my document root folder ($home/subdomains/html) with the new source files checked-out by git into the <code>$HOME/hugosrc</code> directory. Hugo generates the site and logs all output to the terminal - which is nice to have. In case of a build error hugo stops and does not overwrite the existing, working site. This is also nice to have.</p>
-<p>What's important is that the <code>post-receive</code> hook is executable, so you have to run <code>$ chmod +x post-receive</code> to set the <code>x</code> (or e<code>x</code>ecute) permission on the file.</p>
+<p>What&rsquo;s important is that the <code>post-receive</code> hook is executable, so you have to run <code>$ chmod +x post-receive</code> to set the <code>x</code> (or e<code>x</code>ecute) permission on the file.</p>
 <h4 id="pushing-to-the-new-repository">Pushing to the new repository</h4>
 <p>To push your code to the new repository you need to add it as a <a href="https://git-scm.com/docs/git-remote">remote</a> to your local git repository. To do so, use <code>git remote add</code> filling in the remote name and remote url parameters.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># git remote add $name $url</span>
 $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/repository/gitrepo
 </code></pre></div><p>Afterwards you are able to push your code with <code>git push production master</code>.</p>
-<p>And that's it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p>
+<p>And that&rsquo;s it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p>
 ]]></content>
             
                  
@@ -565,19 +565,19 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
 <p>This very site you read right now is build with <a href="http://gohugo.io">Hugo</a>, a static site generator build by <a href="http://spf13.com/">Steve Francia</a>, <a href="https://github.com/bep">Bjørn Erik Pedersen</a> and a lot of <a href="https://github.com/spf13/hugo/graphs/contributors">contributors</a>. Hugo is written in <a href="https://golang.org/">Go</a> a programming language created at Google I have <a href="https://github.com/kevingimbel?language=go&amp;tab=repositories">been interested in lately</a>.
 For me personally Go provides a lot of new challenges and things to learn. I worked with Front-End technologies like HTML and CSS as well as scripting languages like PHP and JavaScript for the better part of the past 6-7 years; &ldquo;professionally&rdquo; and officially since 2014. Go is entirely different to what I am used to and I like it. I enjoy playing around with it where in the past year or so I lost a big part of my passion for programming in the languages I already know. But why move away from Jekyll? And why choose Go?</p>
 <h3 id="ruby">Ruby</h3>
-<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don't have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
+<p>Jekyll is written in Ruby. I have no intention of learning anything related to Ruby. It is not lazyness or fear of a challenge but instead the simple truth that Ruby does not provide me with any benefits at the moment or in my foreseeable future. I am sure it has its place - like any language has - but I don&rsquo;t have the time nor the interest to dive into Ruby. I tried to host Jekyll on my own and it was always a hassle to set up the environment.</p>
 <h3 id="go">Go</h3>
-<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it's as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
+<p>Hugo on the other hand &ldquo;just works&rdquo;. Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it&rsquo;s as easy as running <code>go get -v github.com/spf13/hugo</code> or if Go is not available there are pre-built binaries.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17_Linux-64bit.tar.gz
 $ tar -xzvf hugo_0.17_Linux-64bit.tar.gz
 $ ln -s hugo_0.17_linux_amd64 hugo
 $ chmod +x hugo
 $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>/hugo ~/bin
 </code></pre></div><p>Another reason why I chose Hugo over <a href="https://www.staticgen.com/">any other static site generators</a> is because it is under active development thanks to <a href="https://github.com/bep">Bjørn Erik Pedersen</a>, has <a href="https://gohugo.io/overview/introduction/">excellent docs</a> and an active community.</p>
-<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I'm not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
-<p>As of today it's not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
-<p>Some things are still not working as I would like but I'll eventually get to them. After all, a personal website is always a work in progress.</p>
-<p><em>Farewell Jekyll, it's been a pleasure for the past three years.</em></p>
+<p>The final reason why I decided to not just move away from GitHub Pages for my own SSL certificate but also away from Jekyll is: I want to learn Go. I can contribute to Hugo and poke around the source code if I need or want to, a thing I could not do with Ruby and Jekyll simply because I lack the skill. I&rsquo;m not yet any good at Go but having the interest and base to hack away in your static site generator is a big benefit after all.</p>
+<p>As of today it&rsquo;s not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
+<p>Some things are still not working as I would like but I&rsquo;ll eventually get to them. After all, a personal website is always a work in progress.</p>
+<p><em>Farewell Jekyll, it&rsquo;s been a pleasure for the past three years.</em></p>
 ]]></content>
             
                  

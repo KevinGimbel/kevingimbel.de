@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[vanilla_js on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[vanilla_js on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/vanilla_js/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/vanilla_js/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/vanilla_js/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -28,7 +28,7 @@
             <updated>2013-11-18T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>While I was re-designing my Website I decided to finally add some JavaScript to it. I'm learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I'm doing. Yesterday night's topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is <em>kinda</em> simple, however, I wrote an endless function that got to infinity and beyond (that's where the title comes from. I'm so funny.)</p>
+            <content type="html"><![CDATA[<p>While I was re-designing my Website I decided to finally add some JavaScript to it. I&rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&rsquo;m doing. Yesterday night&rsquo;s topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is <em>kinda</em> simple, however, I wrote an endless function that got to infinity and beyond (that&rsquo;s where the title comes from. I&rsquo;m so funny.)</p>
 <p>Because I still like to google around while writing JavaScript I stumbled upon a function that looked okay to me.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scrollToTop</span>() {
   <span style="color:#66d9ef">if</span> (document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">scrollTop</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">scrollTop</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>){
@@ -37,8 +37,8 @@
   }
   <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">clearTimeout</span>(<span style="color:#a6e22e">timeOut</span>);
 }
-</code></pre></div><p>The problem with this one was: It didn't work. So I looked around and found <code>setInterval()</code> which seemed to me a bit like <code>setTimeout</code> and - in my opinion - would mix perfect with <code>scrollBy(x,y)</code>. I was right, hurray!</p>
-<p>So my function then looked a bit like this (I'm not exactly sure, it was kinda late already).</p>
+</code></pre></div><p>The problem with this one was: It didn&rsquo;t work. So I looked around and found <code>setInterval()</code> which seemed to me a bit like <code>setTimeout</code> and - in my opinion - would mix perfect with <code>scrollBy(x,y)</code>. I was right, hurray!</p>
+<p>So my function then looked a bit like this (I&rsquo;m not exactly sure, it was kinda late already).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scrollToTop</span>() {
     <span style="color:#66d9ef">if</span>(window.<span style="color:#a6e22e">scrollY</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>) {
         <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">scrollBack</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(<span style="color:#66d9ef">function</span>() {
@@ -48,8 +48,8 @@
       <span style="color:#a6e22e">clearInterval</span>(<span style="color:#a6e22e">scrollBack</span>);
     };
   }   
-</code></pre></div><p>I applied the function to a button, the page scrolled up and I was happy. I <a href="https://twitter.com/_kevinatari/status/402189289422721024">tweeted</a> about it just to find out that my Interval wasn't cleared and I <a href="https://twitter.com/_kevinatari/status/402190105533640704">could never scroll down again</a> after the function was triggered. Yeah! Awesome.</p>
-<p>Well, I thought more about it and read again about <code>setInterval</code> and - most important - the actual object I'm checking. <code>scrollY</code> was the right direction and I decided it must be the Interval that's wrong. I was right and came up with this sweet function!</p>
+</code></pre></div><p>I applied the function to a button, the page scrolled up and I was happy. I <a href="https://twitter.com/_kevinatari/status/402189289422721024">tweeted</a> about it just to find out that my Interval wasn&rsquo;t cleared and I <a href="https://twitter.com/_kevinatari/status/402190105533640704">could never scroll down again</a> after the function was triggered. Yeah! Awesome.</p>
+<p>Well, I thought more about it and read again about <code>setInterval</code> and - most important - the actual object I&rsquo;m checking. <code>scrollY</code> was the right direction and I decided it must be the Interval that&rsquo;s wrong. I was right and came up with this sweet function!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// notice: backTop is my back to top button!
 </span><span style="color:#75715e"></span>  <span style="color:#a6e22e">backTop</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>,<span style="color:#66d9ef">function</span>() {
     <span style="color:#75715e">// setting an interval 
@@ -68,8 +68,8 @@
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// prevent the click to reload the page
 </span><span style="color:#75715e"></span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
   }); <span style="color:#75715e">// end of the Back to Top function
-</span></code></pre></div><p>That's it! My sweet little Back To Top Function. I'm sure there are points that could be improved and I'm sure one could add easing to it (I already got something in mind) but for now I'm happy with it.</p>
-<p>(Also check out what else I discovered yesterday. It's an <a href="https://twitter.com/_kevinatari/status/402197154539651072">YouTube Eater Egg</a>!)</p>
+</span></code></pre></div><p>That&rsquo;s it! My sweet little Back To Top Function. I&rsquo;m sure there are points that could be improved and I&rsquo;m sure one could add easing to it (I already got something in mind) but for now I&rsquo;m happy with it.</p>
+<p>(Also check out what else I discovered yesterday. It&rsquo;s an <a href="https://twitter.com/_kevinatari/status/402197154539651072">YouTube Eater Egg</a>!)</p>
 ]]></content>
             
                  

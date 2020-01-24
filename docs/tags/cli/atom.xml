@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[cli on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[cli on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/cli/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/cli/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/cli/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -49,7 +49,7 @@
     cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">fi</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let's explore it line by line.</p>
+</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let&rsquo;s explore it line by line.</p>
 <p>With <code>function ws()</code> we declare the function name. In shell scripts a function name has parentheses after it tho it does not take arguments this way (If you know why this is, <a href="https://github.com/kevingimbel/kevingimbel.com/issues">open an issue and explain it please</a> or <a href="https://twitter.com/_kevinatari">tweet me</a>!). The next lines declare a local variable, <code>workspace</code> and then <code>target_dir=$1</code> were I assign whatever is passed to the function as being the target directory the user is trying to find. Then, I execute <code>cd $workspace</code> to go to the workspace directory and start a search with <code>workspace_path=$(find -maxdepth 3 -type d -name &quot;*$target_dir*&quot; | head -n1)</code> - now that might look weird. What happens here is the following:</p>
 <ul>
 <li>We declare a variable, <code>workspace_path</code></li>
@@ -64,7 +64,7 @@
 <span style="color:#66d9ef">else</span>
   cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
-</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that's it! Some examples can be seen in the screenshot below.</p>
+</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that&rsquo;s it! Some examples can be seen in the screenshot below.</p>
 
 <figure >
   
@@ -197,7 +197,7 @@ echo &quot;Hello World!&quot;
 <p>While it is not necessarily needed for scripts written in in Shell/Bash the Shebang cannot be omitted from NodeJS scripts intended to be run as command line program.</p>
 <p>Well, that has been a fun excursion into the world of shell scripting. Back to node!</p>
 <h3 id="writing-a-tiny-node-cli-script">Writing a tiny node cli script</h3>
-<p>Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let's keep it simple. We will greet the person executing the script.</p>
+<p>Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let&rsquo;s keep it simple. We will greet the person executing the script.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">#!/usr/bin/env node
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> () =&gt; {
@@ -205,7 +205,7 @@ echo &quot;Hello World!&quot;
 }
 
 <span style="color:#a6e22e">sayHello</span>()
-</code></pre></div><p>Let's save the script and run it with <code>$ node hello.js</code> from the command line.</p>
+</code></pre></div><p>Let&rsquo;s save the script and run it with <code>$ node hello.js</code> from the command line.</p>
 
 <figure >
   
@@ -226,7 +226,7 @@ echo &quot;Hello World!&quot;
   
 </figure>
 
-<p>Now that's interesting: The script greets the currently logged-in user! That's the case because we make use of the <code>process</code> variable which holds information about the current environment - the <code>env</code> object for example holds your environment variables. Add a new function to <code>hello.js</code> to see the output.</p>
+<p>Now that&rsquo;s interesting: The script greets the currently logged-in user! That&rsquo;s the case because we make use of the <code>process</code> variable which holds information about the current environment - the <code>env</code> object for example holds your environment variables. Add a new function to <code>hello.js</code> to see the output.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">printEnv</span> <span style="color:#f92672">=</span> () =&gt; {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>)
@@ -279,7 +279,7 @@ echo &quot;Hello World!&quot;
 <li>can exit using <code>process.exit(exit_code)</code></li>
 <li>can utilize lots of Node packages</li>
 </ul>
-<p>And that's it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
+<p>And that&rsquo;s it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
 ]]></content>
             
                  

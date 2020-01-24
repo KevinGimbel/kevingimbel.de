@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[productivity on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[productivity on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/tags/productivity/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/productivity/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/productivity/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -32,15 +32,15 @@
             
             
             <content type="html"><![CDATA[<p>The Terminal (or <em>bash</em>, <em>shell</em>, <em>console</em>) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already <a href="/bash-script-ws/">wrote about one custom script named <code>ws</code></a> which enhances my daily workflows. This article marks the first of many to come about using and configuring your terminal. This tutorial is written for MacOS and Linux, though most of it will work on Windows 10 if you use Bash.</p>
-<p>To get started with this tutorial open up your terminal. If you don't know how to open a terminal your first mission is to find out how! (<em>Hint: Google is your friend!</em>). Once the terminal is open we can start with some basic operations.</p>
+<p>To get started with this tutorial open up your terminal. If you don&rsquo;t know how to open a terminal your first mission is to find out how! (<em>Hint: Google is your friend!</em>). Once the terminal is open we can start with some basic operations.</p>
 <p><em>Note:</em> On newer Windows versions you should use Bash if available! This tutorial will probably not work with older Windows Verisons (XP, 7, maybe even 8) and the Windows Terminal (e.g. CMD).</p>
-<p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it'll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
+<p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it&rsquo;ll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
 <h2 id="preface-vim">Preface: VIM</h2>
 <blockquote>
 <p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/
 #the-prompt">skip to the next section</a></p>
 </blockquote>
-<p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It's a bit weird to get used to at first but once you know your way around you'll become quite productive with it. It's easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
+<p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It&rsquo;s a bit weird to get used to at first but once you know your way around you&rsquo;ll become quite productive with it. It&rsquo;s easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
 
 <figure >
   
@@ -64,7 +64,7 @@
 <p>To start writing text we need to enter Input Mode. This is done by typing an <code>i</code>. Afterwards, we can write. VIM has three different modes: Input, Visual and Normal. To leave a mode and return to normal, you need to press <code>ESC</code>. Visual Mode can be used to select multiple lines or copy/paste things around. Insert Mode is mainly used for writing text and Normal Mode is used for navigation, e.g to move to the Top of a file (<code>gg</code>) or bottom of a file (<code>SHIFT+G</code>). VIM works a lot with shortcuts which is why we can edit text files so fast with it. Consider the following example HTML tag.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;some-class-name another-class-name yet more classes&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><p>To remove all classes and add a new class name you would move your mouse to the line, select everything between <code>&quot;</code> and <code>&quot;</code>, and then enter the new class name. In VIM, you can enter Normal Mode, place the cursor inside the element and press <code>ci&quot;</code> (<em>change in &ldquo;</em>). The entrie text will be removed and VIM enters Insert Mode inside the <code>&quot;&quot;</code>. To change a word, you write <code>cw</code>. To write text inside the tag, <code>cit</code> (change in tag) and the cursor is placed inside the <code>&lt;div&gt;</code>. Additional to the default movement and replacing there are plugins to make this even faster or smarter, like <a href="https://github.com/tpope/vim-surround">surround.vim</a>.</p>
-<p>So, VIM is quite an editor. Get used to it, you'll thank me later! What we need to know for basic file editing and this tutorial is the following:</p>
+<p>So, VIM is quite an editor. Get used to it, you&rsquo;ll thank me later! What we need to know for basic file editing and this tutorial is the following:</p>
 <ul>
 <li><code>i</code> is pressed to enter Insert Mode</li>
 <li><code>ESC</code> is pressed to exit a mode, e.g. Insert or Visual</li>
@@ -85,7 +85,7 @@
 <h2 id="the-prompt">The Prompt</h2>
 <p>One your terminal is open you should see a Dollar Sign (<code>$</code>) or similar symbol, like shown below.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~ $
-</code></pre></div><p>This is the Prompt. The Prompt shows the current directory (<code>~</code>) and most of the time has a fixed sign, e.g. <code>$</code>. Other prompts might use symbols like <code># </code>, <code>%` </code>bash-3.2$<code>or</code>kevin@ubuntu: $`. The prompt is configurable and comes with different defaults depending on the operating system. So, each line below is how a prompt may look.</p>
+</code></pre></div><p>This is the Prompt. The Prompt shows the current directory (<code>~</code>) and most of the time has a fixed sign, e.g. <code>$</code>. Other prompts might use symbols like <code># </code>, <code>%</code> <code>bash-3.2$</code> or <code>kevin@ubuntu: $</code>. The prompt is configurable and comes with different defaults depending on the operating system. So, each line below is how a prompt may look.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kevin@MacBook-Pro: ~ $
 ~/Development #
 /usr/share/docs %
@@ -99,7 +99,7 @@ root@ubuntu: / $
 </blockquote>
 <p>Now we need to reload the configuration file (<code>.bashrc</code>) by typing <code>source ~/.bashrc</code> into the terminal and hitting enter. The prompt now looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">MY CUSTOM PROMPT
-</code></pre></div><p>Congrats, your first custom prompt! That's not a useful prompt, however, because it will always show <code>MY CUSTOM PROMPT</code>. A prompt that shows the current directory would be more useful. As it happens, we can use variables inside the Prompt and there are pre-defined variables which hold informations like the current directory, the current logged-in user, the hostname, and man more! Let's start with the working directory - the directory on the file system we are currently in. The working directory is stored inside the <code>\W</code> variable and we can use it like so</p>
+</code></pre></div><p>Congrats, your first custom prompt! That&rsquo;s not a useful prompt, however, because it will always show <code>MY CUSTOM PROMPT</code>. A prompt that shows the current directory would be more useful. As it happens, we can use variables inside the Prompt and there are pre-defined variables which hold informations like the current directory, the current logged-in user, the hostname, and man more! Let&rsquo;s start with the working directory - the directory on the file system we are currently in. The working directory is stored inside the <code>\W</code> variable and we can use it like so</p>
 <pre><code>$ vim ~/.bashrc
 export PS1=&quot;\W $&quot;
 </code></pre><p>Save the fie (<code>:wq</code>) and reload the configuration with <code>source ~/.bashrc</code>. The prompt now looks like shown below.</p>
@@ -165,7 +165,7 @@ export PS1=&quot;\W $&quot;
   
 </figure>
 
-<p>Looking good! The last thing we need - or I want - is to have some color in my prompt so that it's easier to recognize the path or see the hostname - to add color we can either use escape characters like <code>\[\033[34m\]</code> or - what I prefer - <code>tput</code>. You can <a href="http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">read more on escape characters</a> if you wish. I will focus on <a href="https://linux.die.net/man/1/tput"><code>tput</code></a>. I like to define my color variables first and then use them later. To define a variable in shell scripting write <code>variableName=&quot;value&quot;</code>. If you need to execute a program to get your variable value, you have to surround it with <code>$()</code>. For example to read the content of the file <code>test.txt</code> into the variable <code>content</code>, you'd write <code>content=&quot;$(cat test.txt)&quot;</code>.</p>
+<p>Looking good! The last thing we need - or I want - is to have some color in my prompt so that it&rsquo;s easier to recognize the path or see the hostname - to add color we can either use escape characters like <code>\[\033[34m\]</code> or - what I prefer - <code>tput</code>. You can <a href="http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">read more on escape characters</a> if you wish. I will focus on <a href="https://linux.die.net/man/1/tput"><code>tput</code></a>. I like to define my color variables first and then use them later. To define a variable in shell scripting write <code>variableName=&quot;value&quot;</code>. If you need to execute a program to get your variable value, you have to surround it with <code>$()</code>. For example to read the content of the file <code>test.txt</code> into the variable <code>content</code>, you&rsquo;d write <code>content=&quot;$(cat test.txt)&quot;</code>.</p>
 <p>Define and use colors in <code>.bashrc</code> or <code>.zshrc</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># predefine variables</span>
 ps1_green<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput setaf 2<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
@@ -174,7 +174,7 @@ ps1_reset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</
 export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$ps1_green<span style="color:#e6db74">\w\n</span>$ps1_yellow<span style="color:#e6db74">\$</span>$ps1_reset<span style="color:#e6db74"> </span><span style="color:#e6db74">&#34;</span>
 </code></pre></div><p><em>Note: A great reference for this technique is <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">this handy list</a></em></p>
 <p>In my testing I needed to use <code>\e[m</code> to properly reset the new lines. Otherwise commands would sometimes become cluttered when navigating back with <code>arrow up</code>.</p>
-<p>So that's it for the first part of customizing and using the terminal. Below are some of the <code>tput</code> colors from <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">linux.101hacks.com</a> - mostly as a reference for myself. 😁</p>
+<p>So that&rsquo;s it for the first part of customizing and using the terminal. Below are some of the <code>tput</code> colors from <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">linux.101hacks.com</a> - mostly as a reference for myself. 😁</p>
 <table>
 <thead>
 <tr>
@@ -321,7 +321,7 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
     cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">fi</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let's explore it line by line.</p>
+</code></pre></div><p>This function is placed <a href="https://github.com/kevingimbel/dotfiles/blob/997590a65c134326ca051e1e28a78f947673831d/.zshrc#L14-L28">inside my ~/.bash_profile</a> or <code>~/.zshrc</code> so the function is available on every terminal start. It might look odd if your not too farmiliar with shell scripts but it is really rather simple and basic - let&rsquo;s explore it line by line.</p>
 <p>With <code>function ws()</code> we declare the function name. In shell scripts a function name has parentheses after it tho it does not take arguments this way (If you know why this is, <a href="https://github.com/kevingimbel/kevingimbel.com/issues">open an issue and explain it please</a> or <a href="https://twitter.com/_kevinatari">tweet me</a>!). The next lines declare a local variable, <code>workspace</code> and then <code>target_dir=$1</code> were I assign whatever is passed to the function as being the target directory the user is trying to find. Then, I execute <code>cd $workspace</code> to go to the workspace directory and start a search with <code>workspace_path=$(find -maxdepth 3 -type d -name &quot;*$target_dir*&quot; | head -n1)</code> - now that might look weird. What happens here is the following:</p>
 <ul>
 <li>We declare a variable, <code>workspace_path</code></li>
@@ -336,7 +336,7 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
 <span style="color:#66d9ef">else</span>
   cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
-</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that's it! Some examples can be seen in the screenshot below.</p>
+</code></pre></div><p>This reads: If <code>$workspace_path</code> is empty, then <code>echo</code> the directory was not found and notify the user we changed to <code>$workspace</code> with the <code>cd $workspace</code> earlier. Else, <code>cd</code> into the found directory. And that&rsquo;s it! Some examples can be seen in the screenshot below.</p>
 
 <figure >
   
@@ -418,11 +418,11 @@ export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;<
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
-super handy once your project get's bigger! Anyway, here's how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
+super handy once your project get&rsquo;s bigger! Anyway, here&rsquo;s how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
 <a href="https://www.npmjs.com/package/gulp-sass">Gulp-Sass</a> and <a href="https://www.npmjs.com/package/gulp-autoprefixer">Autoprefixer</a>.</p>
-<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven't).</p>
+<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven&rsquo;t).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install --save-dev gulp-sass gulp-sourcemaps gulp-autoprefixer
-</code></pre></div><p>After everything is installed we'll create the basic Gulp setup.</p>
+</code></pre></div><p>After everything is installed we&rsquo;ll create the basic Gulp setup.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>),
       <span style="color:#a6e22e">sass</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-sass&#39;</span>),
       <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-autoprefixer&#39;</span>),
@@ -433,7 +433,7 @@ super handy once your project get's bigger! Anyway, here's how to implement them
         <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./skin/frontend/my-theme/default/css/&#39;</span>
       }
 </code></pre></div><p>Next the tasks will be created, I split them into 2, one for Sass and Source Maps and one for
-Autoprefixer. It's important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won't be
+Autoprefixer. It&rsquo;s important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won&rsquo;t be
 right. This happen because Autoprefixer adds more properties to your compiled CSS!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#66d9ef">function</span>() {
 <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">scss</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;styles.scss&#39;</span>)
@@ -449,11 +449,11 @@ right. This happen because Autoprefixer adds more properties to your compiled CS
   .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">css</span> ));  
 });
 </code></pre></div><p>First of all source maps need to be initalized, next a compressed css file from the SCSS files is created, the source
-maps are written and we're all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
+maps are written and we&rsquo;re all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
 with whatever needs to be prefixed. The output looks like below (look at the right top of each rule set). Click on each
 image to view it in full-size.</p>
 <!-- raw HTML omitted -->
-<p>In case you don't want your source maps in production you could split everything into 3 taks and run them in the order
+<p>In case you don&rsquo;t want your source maps in production you could split everything into 3 taks and run them in the order
 <code>[&quot;sass&quot;, &quot;sourcemaps&quot;, &quot;autoprefix&quot;]</code> using <code>gulp.task()</code> and then later have the following production task.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;production&#39;</span>, [<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#39;autoprefix&#39;</span>];
 
@@ -510,19 +510,19 @@ image to view it in full-size.</p>
             <updated>2014-01-08T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>In case your company is using <a href="http://www.google.com/intx/de/enterprise/apps/business/campaign/business-email-by-google-de.html?utm_campaign=emea-smb-apps-bkws-de&amp;utm_medium=cpc&amp;utm_source=google&amp;utm_term=gmail%20business">GMail Business</a> there's one thing that comes to your daily work-life I really love about GMail: <strong>Labels</strong>. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &ldquo;View&rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</p>
-<p>Unfortunately they're kinda hidden and not really promoted by Google. To set up automatic labels you first you need to click the <strong>gear</strong> in the upper right, then <strong>Settings</strong> and then, in the top navigation just below the search input <strong>Filters</strong>. Now there's a &ldquo;Create new Filter&rdquo; link you should click. (I personally always search for this link because it is not highlighted in any way).</p>
-<p>However, a dialog pops up where you can enter a bunch of stuff: From, To, Subject, Has words, Has not words, Has Attachment and Don't include chats. Pretty obvious what can be done here, right? Indeed but the thing is: When you work with a CallTracker system most of the input emails are not from a specific eMail so filtering after an eMail address is not an option. I currently stick with filtering the Subject Line for everything project. I'll give a example:</p>
+            <content type="html"><![CDATA[<p>In case your company is using <a href="http://www.google.com/intx/de/enterprise/apps/business/campaign/business-email-by-google-de.html?utm_campaign=emea-smb-apps-bkws-de&amp;utm_medium=cpc&amp;utm_source=google&amp;utm_term=gmail%20business">GMail Business</a> there&rsquo;s one thing that comes to your daily work-life I really love about GMail: <strong>Labels</strong>. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &ldquo;View&rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</p>
+<p>Unfortunately they&rsquo;re kinda hidden and not really promoted by Google. To set up automatic labels you first you need to click the <strong>gear</strong> in the upper right, then <strong>Settings</strong> and then, in the top navigation just below the search input <strong>Filters</strong>. Now there&rsquo;s a &ldquo;Create new Filter&rdquo; link you should click. (I personally always search for this link because it is not highlighted in any way).</p>
+<p>However, a dialog pops up where you can enter a bunch of stuff: From, To, Subject, Has words, Has not words, Has Attachment and Don&rsquo;t include chats. Pretty obvious what can be done here, right? Indeed but the thing is: When you work with a CallTracker system most of the input emails are not from a specific eMail so filtering after an eMail address is not an option. I currently stick with filtering the Subject Line for everything project. I&rsquo;ll give a example:</p>
 <ul>
 <li>Project Name: Project X</li>
 <li>CallTracker Schemata: &ldquo;[Project X - TASK #1 ] Description of the Task&hellip;&rdquo;</li>
 <li>Expected Subject from Clients/Colleags: &ldquo;Project X&rdquo;, &ldquo;project-x.com&rdquo;, &ldquo;Project-X&rdquo;</li>
 </ul>
-<p>So the rule I'd define here for the subject would be the following:</p>
+<p>So the rule I&rsquo;d define here for the subject would be the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> <span style="color:#75715e"># Subject</span>
  <span style="color:#e6db74">&#34;Project X&#34;</span> OR project-x.com OR <span style="color:#e6db74">&#34;[Project X&#34;</span> OR <span style="color:#e6db74">&#34;Project-X&#34;</span>
-</code></pre></div><p>The <strong>OR</strong> tells GMail to look for any of these Subject lines and put a label on it. The quotes are only used if there's a space between the words.
-This rule covers the CallTracker as well as the other eMail Subjects so that everything gets sorted automatically into it's own Label view. I also try to match the Brand color with the Label color to have a visual difference for myself.</p>
+</code></pre></div><p>The <strong>OR</strong> tells GMail to look for any of these Subject lines and put a label on it. The quotes are only used if there&rsquo;s a space between the words.
+This rule covers the CallTracker as well as the other eMail Subjects so that everything gets sorted automatically into it&rsquo;s own Label view. I also try to match the Brand color with the Label color to have a visual difference for myself.</p>
 <!-- raw HTML omitted -->
 ]]></content>
             

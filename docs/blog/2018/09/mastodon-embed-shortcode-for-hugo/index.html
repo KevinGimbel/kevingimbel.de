@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Mastodon Embed Shortcode for hugo
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -72,7 +80,7 @@
 
 <p>The Source Code can be found <a href="https://github.com/kevingimbel/hugo-shortcodes/tree/master/mastodon">on GitHub.com</a></p>
 <h2 id="configuration">Configuration</h2>
-<p>The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. <a href="https://mastodon.social/@kevingimbel/100700713283716694"><a href="https://mastodon.social/@kevingimbel/100700713283716694">https://mastodon.social/@kevingimbel/100700713283716694</a></a>.</p>
+<p>The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. <a href="https://mastodon.social/@kevingimbel/100700713283716694">https://mastodon.social/@kevingimbel/100700713283716694</a>.</p>
 <pre><code>{{&lt; mastodon status=&quot;https://mastodon.social/@kevingimbel/100700713283716694&quot; &gt;}}
 </code></pre><p>Additional parameters:</p>
 <pre><code># All parameters
@@ -87,16 +95,16 @@
 </thead>
 <tbody>
 <tr>
-<td><code>status</code>| The link to the status</td>
-<td></td>
+<td><code>status</code></td>
+<td>The link to the status</td>
 </tr>
 <tr>
-<td><code>width</code>| The width of the iframe</td>
-<td></td>
+<td><code>width</code></td>
+<td>The width of the iframe</td>
 </tr>
 <tr>
-<td><code>height</code>| The height of the iframe</td>
-<td></td>
+<td><code>height</code></td>
+<td>The height of the iframe</td>
 </tr>
 </tbody>
 </table>

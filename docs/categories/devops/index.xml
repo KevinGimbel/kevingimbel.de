@@ -17,7 +17,7 @@
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2018/04/til-bash-select/</guid>
-      <description>I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&#39;s the real TIL here!
+      <description>I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&amp;rsquo;s the real TIL here!
  [&amp;hellip;] PS3 is shown when the select command is waiting for input [&amp;hellip;]
  So the PS3 prompt is shown when a bash program is waiting for user input, and it turns out that the select bash command is used for creating a &amp;ldquo;choice&amp;rdquo; UI in bash.</description>
     </item>

@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Magento: get and set variables in config.xml
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -65,11 +73,11 @@
 
 
 <p>Written on <time datetime="2014-05-27 00:00:00 &#43;0000 UTC">27. May 2014</time>  </p>
-            <p>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I'm
+            <p>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&rsquo;m
 working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for),
 however this form should be &ldquo;cloned&rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is
 MVC-like I  believed there would be an easy way to pass email addresses to the Controller. Indeed I found a way to do
-so, and I'm happy if someone finds a better way!</p>
+so, and I&rsquo;m happy if someone finds a better way!</p>
 <p>I managed to set the different emails in the config.xml (located in <code>/mymodule/etc/config.xml</code>) like so</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"> # ... Default Block within the <span style="color:#f92672">&lt;config</span><span style="color:#f92672">&gt;</span> block
 	<span style="color:#f92672">&lt;default</span><span style="color:#f92672">&gt;</span>
@@ -96,7 +104,7 @@ the Controller.php) with this code</p>
 	<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/support&#39;</span>);
 	<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/yetanotheremail&#39;</span>);
 </code></pre></div><p>Those store configs are only accessable from within this Model and its View, so in <code>compare.phtml</code> this would throw an error.
-Next thing I needed was a <code>switch()</code> to determine in what view I am. Again, I'm pretty sure there is a better way of
+Next thing I needed was a <code>switch()</code> to determine in what view I am. Again, I&rsquo;m pretty sure there is a better way of
 handling this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#75715e">/* This returns the name set for the Router in the config.xml.
 </span><span style="color:#75715e">	* (Between &lt;routers&gt; and &lt;/routers&gt;
@@ -120,9 +128,9 @@ handling this.</p>
 				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/fallback&#39;</span>);
 				<span style="color:#66d9ef">break</span>;
 	}
-</code></pre></div><p>The fallback is used for the case of no match - it should not happen but it still can happen, so it's always save to
+</code></pre></div><p>The fallback is used for the case of no match - it should not happen but it still can happen, so it&rsquo;s always save to
 have a fallback. In this case it just goes to the generic info eMail of the client.</p>
-<p>I'm not sure if there's a better or easier way but I found that this solution fits my needs pretty good.</p>
+<p>I&rsquo;m not sure if there&rsquo;s a better or easier way but I found that this solution fits my needs pretty good.</p>
 
         </article>
     </section>

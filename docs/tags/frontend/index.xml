@@ -17,7 +17,7 @@
       <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/07/conditional-css/</guid>
-      <description>While there&#39;s a lot of talking about CSS writing styles, organization styles and if it&#39;s maybe better or not to avoid pre-processors or frameworks there&#39;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&#39;d like to talk a bit about conditional CSS that I&#39;ve been using in production and that I think can improve the overall logic of CSS.</description>
+      <description>While there&amp;rsquo;s a lot of talking about CSS writing styles, organization styles and if it&amp;rsquo;s maybe better or not to avoid pre-processors or frameworks there&amp;rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&amp;rsquo;d like to talk a bit about conditional CSS that I&amp;rsquo;ve been using in production and that I think can improve the overall logic of CSS.</description>
     </item>
     
   </channel>

@@ -13,11 +13,15 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
+        <span>
+        
+        
         Vim - first impression
+        
+        </span>
     </header>
-    
+
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -35,6 +39,10 @@
             </li><li class="">
                 <a href="/photography/">
                     <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
                 </a>
             </li><li class="">
                 <a href="/art/">
@@ -79,22 +87,22 @@ about Vim being the single best editor for everything - no matter what language 
 still use Sublime Text (2) daily and love it, I have it configured as I like, have all my Plugin and color schemes
 and it just feels great. I tried some other editors like <a href="/brackets-vs-sublime-text/">Brackets</a> and
 <a href="https://atom.io">Atom</a>, also <a href="http://www.jetbrains.com/webstorm/">WebStorm</a> and <a href="http://www.jetbrains.com/phpstorm/">PhpStorm</a>. The later two are great as IDEs but are not the way I like to write code because both are a lot slower than a
-simple text editor like atom, sublime of vim. I guess that's the downside of having an IDE - for me it was too much (I still recommend
+simple text editor like atom, sublime of vim. I guess that&rsquo;s the downside of having an IDE - for me it was too much (I still recommend
 trying them, maybe they enhance your workflow). Atom is really like a  clone of Sublime Text running Web Technologies at
-it's heart (Sublime Text is written in Python).</p>
+it&rsquo;s heart (Sublime Text is written in Python).</p>
 <p><img src="https://i.kevingimbel.me/sc/vim_markdown.png" alt="&ldquo;Vim while writing a article&rdquo;" title="Vim while writing an article"></p>
 <p>Anyway, back to Vim. Vim is, what surprised me first, a command line-based editor, there is a Graphic UI version called
 gVim but I wanted to see how I can customize the command line one. Just like the normal bash has a
 <code>.bashrc</code> Vim has its own <code>.vimrc</code> which defines the settings for all its (advanced) functionality and settings. When
-you open Vim with from the command line with <code>vim my-file.md</code> you'll see a black editor with some &ldquo;~&rdquo; on the left.
-You're now in &ldquo;normal&rdquo; mode and need to tab <code>i</code> to start <code>i</code>nserting stuff. From within the insert mode its really like
-any other editor. When you leave the insert mode (by pressing <code>ESC</code>) you're back in the &ldquo;Normal&rdquo; mode where you can
+you open Vim with from the command line with <code>vim my-file.md</code> you&rsquo;ll see a black editor with some &ldquo;~&rdquo; on the left.
+You&rsquo;re now in &ldquo;normal&rdquo; mode and need to tab <code>i</code> to start <code>i</code>nserting stuff. From within the insert mode its really like
+any other editor. When you leave the insert mode (by pressing <code>ESC</code>) you&rsquo;re back in the &ldquo;Normal&rdquo; mode where you can
 easily navigate through your file and delete stuff. Deleting works pretty cool I guess, just double tab <code>d</code> to delete a
 whole sentence or <code>x</code> to delete the character below the cursor. Or fancy stuff like <code>d + arrow up/down</code> to delete a
 whole paragraph.</p>
 <p>So basically everything in Vim is bound to keys and those keys can be combined (like <code>d</code>elete + up) and I am sure
-there's even more power inside Vim when it comes to text manipulation, navigation, replacements, etc. Anyway, as long as
-I haven't found out what stuff is possible I'll just share my <code>.vimrc</code> with you.</p>
+there&rsquo;s even more power inside Vim when it comes to text manipulation, navigation, replacements, etc. Anyway, as long as
+I haven&rsquo;t found out what stuff is possible I&rsquo;ll just share my <code>.vimrc</code> with you.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">	{% <span style="color:#a6e22e">raw</span> %}<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">	&#34; vim:fdm=marker</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nocompatible</span> <span style="color:#75715e">&#34; required by Vundle</span><span style="color:#960050;background-color:#1e0010">
@@ -153,25 +161,25 @@ I haven't found out what stuff is possible I'll just share my <code>.vimrc</code
 </span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nobackup</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">noswapfile</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>	{% <span style="color:#a6e22e">endraw</span> %}<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>So that's quite some stuff I guess. First of all, <a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is the Plugin manager
+</span></code></pre></div><p>So that&rsquo;s quite some stuff I guess. First of all, <a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is the Plugin manager
 for Vim, there are others but I chose this one because it is 99% written in VimL. This little thingy helps me keep track
 of Plugins I use. Friendly.
 <code>syntax on</code> simply turn on syntax highlighting. <code>set t_Co=256</code> sets the terminal colors to 256 colors so the
 <code>colorscheme Tomorrow</code> (<a href="https://github.com/chriskempson/tomorrow-theme">here</a>) works. Next up is Airline, a &ldquo;better
 statusbar&rdquo; for Vim. I saw this on a screenshot once and searched for it, what I first found was
 <a href="https://github.com/Lokaltog/powerline">Powerline</a> but I then saw <a href="https://github.com/bling/vim-airline">Airline</a> and
-chose it because it is written in VimL and I - as of now - try to avoid language mixin because I think it's a good idea
-to keep Vim &ldquo;clean&rdquo; as long as possible. Airline can show in what mode I am, what Git Branch I'm on, and a lot of other
-stuff I haven't configured yet. I guess that'll be another blog post. The <code>airline_left_sep</code> and <code>airline_right_sep</code> are
-the separators of the statusline (see the screenshot below, the seperators are down after &ldquo;Normal&rdquo; and before the &ldquo;1%&quot;)  which at the moment don't look as cool as I thought - have to fix this. Next up
-tabstops, shiftwidth (self explaining), backspace (I've no idea what this is but saw it in any .vimrc I found)
-smarttabs, text width so Vim doesn't write until the end of the screen (I like small gaps to the right) and colorcolumn,
+chose it because it is written in VimL and I - as of now - try to avoid language mixin because I think it&rsquo;s a good idea
+to keep Vim &ldquo;clean&rdquo; as long as possible. Airline can show in what mode I am, what Git Branch I&rsquo;m on, and a lot of other
+stuff I haven&rsquo;t configured yet. I guess that&rsquo;ll be another blog post. The <code>airline_left_sep</code> and <code>airline_right_sep</code> are
+the separators of the statusline (see the screenshot below, the seperators are down after &ldquo;Normal&rdquo; and before the &ldquo;1%&quot;)  which at the moment don&rsquo;t look as cool as I thought - have to fix this. Next up
+tabstops, shiftwidth (self explaining), backspace (I&rsquo;ve no idea what this is but saw it in any .vimrc I found)
+smarttabs, text width so Vim doesn&rsquo;t write until the end of the screen (I like small gaps to the right) and colorcolumn,
 which is a ruler-like thingy to visually show the max text width. Last stuff: No backups, no swap files, according to a blog
-post I found this isn't needed when working with version controls such as git.</p>
+post I found this isn&rsquo;t needed when working with version controls such as git.</p>
 <p>The weird looking brackets are used to &ldquo;auto-close&rdquo; this section so that when I open my file only the description is
 visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
 <p><img src="https://i.kevingimbel.me/sc/sc-26-01-13.png" alt="Vim with auto-closed sections" title="Vim with auto-closed sections"></p>
-<p>So that's it, my tiny Vim experience and setup. As with every config things you can grab a copy of my <code>.vimrc</code> in the
+<p>So that&rsquo;s it, my tiny Vim experience and setup. As with every config things you can grab a copy of my <code>.vimrc</code> in the
 <a href="https://github.com/kevingimbel/config/blob/master/.vimrc">Github Config Repo</a>.</p>
 
         </article>

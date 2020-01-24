@@ -17,8 +17,8 @@
       <pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</guid>
-      <description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&#39;s good to have at least basic understanding of JavaScript.
-So before I start I&#39;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description>
+      <description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&amp;rsquo;s good to have at least basic understanding of JavaScript.
+So before I start I&amp;rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description>
     </item>
     
   </channel>

@@ -14,12 +14,16 @@
     </head>
 
 <body>
-    
     <header class="intro-text">
-        Articles on various topics such as <a href="/categories/coding">coding</a>, <a href="/categories/tools">tools</a> and sometimes <a href="/categories/tutorial">tutorials</a>
+        <span>
+            Articles on various topics such as <a href="/categories/coding">coding</a>, <a href="/categories/tools">tools</a> and sometimes <a href="/categories/tutorial">tutorials</a>
+        
+        
+        
+        
+        </span>
     </header>
 
-    
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main"><li class="">
@@ -39,6 +43,10 @@
                     <span>Photography</span>
                 </a>
             </li><li class="">
+                <a href="/books/">
+                    <span>Reading</span>
+                </a>
+            </li><li class="">
                 <a href="/art/">
                     <span>Art</span>
                 </a>
@@ -52,32 +60,37 @@
 <main id="main blog" class="main">
     
 
-    <nav id="years" role="navigation" aria-label="Blog list naviation">Skip to:
-        
-        <a href="#2020" title="View articles from 2020">2020</a>
-        
-        <a href="#2018" title="View articles from 2018">2018</a>
-        
-        <a href="#2017" title="View articles from 2017">2017</a>
-        
-        <a href="#2016" title="View articles from 2016">2016</a>
-        
-        <a href="#2015" title="View articles from 2015">2015</a>
-        
-        <a href="#2014" title="View articles from 2014">2014</a>
-        
-        <a href="#2013" title="View articles from 2013">2013</a>
-        
-    </nav>
+    <nav class="page-nav" id="years" role="navigation" aria-label="Blog list naviation">
+    <span class="page-nav--label">Skip to:</span>
+    
+    <a href="#2020" title="View articles from 2020">2020</a>
+    
+    <a href="#2018" title="View articles from 2018">2018</a>
+    
+    <a href="#2017" title="View articles from 2017">2017</a>
+    
+    <a href="#2016" title="View articles from 2016">2016</a>
+    
+    <a href="#2015" title="View articles from 2015">2015</a>
+    
+    <a href="#2014" title="View articles from 2014">2014</a>
+    
+    <a href="#2013" title="View articles from 2013">2013</a>
+    
+</nav>
+
+    <hr>
+
     <p>Subscibe via
-        <a href="/blog/index.xml" title="Subscribe to all blog posts via RSS">RSS</a> or <a href="/blog/atom.xml" title="Subscribe to all blog posts via Atom Feed">Atom</a></p>
+    <a href="/blog/index.xml" title="Subscribe to all blog posts via RSS">RSS</a> or <a href="/blog/atom.xml" title="Subscribe to all blog posts via Atom Feed">Atom</a></p>
+
 
     <hr>
 
     
     <header class="article-list__header">
         <h2 id="2020" class="section-headline">2020</h2>
-        <a href="#years">Back to navigation</a>
+        <p><a href="#years">Back to navigation</a></p>
     </header>
     
     
@@ -93,7 +106,7 @@
     
     
 
-    <p id="article-summary-a9284a3857fe211ba07ec82f63f5c723">Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let's Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
+    <p id="article-summary-a9284a3857fe211ba07ec82f63f5c723">Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
 This guide assumes the operating system is Ubuntu! If you use a different distro some commands may be different.</p>
     <a href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/" title="Continue reading about Auto SSL With apache2">View full post</a>
 </article>
@@ -109,7 +122,7 @@ This guide assumes the operating system is Ubuntu! If you use a different distro
     
     
 
-    <p id="article-summary-c53f201ae168a02dc2ef14f69004b021">For the longest time I completely ignored archetypes in hugo. I'd always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
+    <p id="article-summary-c53f201ae168a02dc2ef14f69004b021">For the longest time I completely ignored archetypes in hugo. I&rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
 Archetypes are easy to use, for example to create this post I ran the following command
 $ hugo new blog/2020-01-07-using-archetypes-in-hugo.md This copied over the archetype file from archetypes/blog.</p>
     <a href="https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/" title="Continue reading about Using Archetypes in Hugo">View full post</a>
@@ -183,7 +196,7 @@ Partial First I created a new partial named single-header.</p>
     
 
     <p id="article-summary-76c956d0ffd23b597b121349e40c3d2c">calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
-The problem with calc is that if it doesn't work you may get a unexpected result. Take the following code for example:</p>
+The problem with calc is that if it doesn&rsquo;t work you may get a unexpected result. Take the following code for example:</p>
     <a href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/" title="Continue reading about Safe calc usage in CSS">View full post</a>
 </article>
 
@@ -192,7 +205,7 @@ The problem with calc is that if it doesn't work you may get a unexpected result
     
     <header class="article-list__header">
         <h2 id="2018" class="section-headline">2018</h2>
-        <a href="#years">Back to navigation</a>
+        <p><a href="#years">Back to navigation</a></p>
     </header>
     
     
@@ -204,7 +217,7 @@ The problem with calc is that if it doesn't work you may get a unexpected result
     
     
 
-    <p id="article-summary-cab0b43b3dd86177a5b0c2110748a2b0">If you know me you'll probably know that I am a huge Fallout fan. I absolutely love the games (all of them basically, maybe not Tactics) and I've played Fallout 3 and Fallout New Vegas countless times on XBox 360 and PC. When Fallout 76 was announced via a mysterious live stream in anticipation of E3 2018 I spent an entire evening on Twitch watching - nothing. It was a bit frustrating at the time but checking Reddit and Twitter for all kinds of hints as to what this stream could mean and speculation with the amazing r/Fallout community was a lot of fun.</p>
+    <p id="article-summary-cab0b43b3dd86177a5b0c2110748a2b0">If you know me you&rsquo;ll probably know that I am a huge Fallout fan. I absolutely love the games (all of them basically, maybe not Tactics) and I&rsquo;ve played Fallout 3 and Fallout New Vegas countless times on XBox 360 and PC. When Fallout 76 was announced via a mysterious live stream in anticipation of E3 2018 I spent an entire evening on Twitch watching - nothing. It was a bit frustrating at the time but checking Reddit and Twitter for all kinds of hints as to what this stream could mean and speculation with the amazing r/Fallout community was a lot of fun.</p>
     <a href="https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/" title="Continue reading about Fallout 76: B.E.T.A">View full post</a>
 </article>
 
@@ -236,7 +249,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     
 
-    <p id="article-summary-8086dd4613b9ca505fd29bfccbb1d4b6">I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that's the real TIL here!
+    <p id="article-summary-8086dd4613b9ca505fd29bfccbb1d4b6">I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&rsquo;s the real TIL here!
  [&hellip;] PS3 is shown when the select command is waiting for input [&hellip;]
  So the PS3 prompt is shown when a bash program is waiting for user input, and it turns out that the select bash command is used for creating a &ldquo;choice&rdquo; UI in bash.</p>
     <a href="https://kevingimbel.de/blog/2018/04/til-bash-select/" title="Continue reading about TIL: Bash select">View full post</a>
@@ -247,7 +260,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     <header class="article-list__header">
         <h2 id="2017" class="section-headline">2017</h2>
-        <a href="#years">Back to navigation</a>
+        <p><a href="#years">Back to navigation</a></p>
     </header>
     
     
@@ -305,7 +318,7 @@ Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love 
     
     
 
-    <p id="article-summary-561b1ef32559d00b6d2ea6a39cbd8b94">It turns out that a lot of my time is actually spent working or playing games - so there's not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the Nintendo Switch and The Legend Of Zelda: Breath of the Wild were released.</p>
+    <p id="article-summary-561b1ef32559d00b6d2ea6a39cbd8b94">It turns out that a lot of my time is actually spent working or playing games - so there&rsquo;s not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the Nintendo Switch and The Legend Of Zelda: Breath of the Wild were released.</p>
     <a href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/" title="Continue reading about 2017, week 8 and 9">View full post</a>
 </article>
 
@@ -335,7 +348,7 @@ Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love 
     
     
 
-    <p id="article-summary-aa90664db0aef2232ff73f154a72f408">Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I'm only 6 months late to do so because I kept saying &ldquo;I'll call next week&rdquo;, &ldquo;I'll do it when I'm back from Amsterdam&rdquo;, &ldquo;I'll do it after Christmas&rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</p>
+    <p id="article-summary-aa90664db0aef2232ff73f154a72f408">Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&rsquo;m only 6 months late to do so because I kept saying &ldquo;I&rsquo;ll call next week&rdquo;, &ldquo;I&rsquo;ll do it when I&rsquo;m back from Amsterdam&rdquo;, &ldquo;I&rsquo;ll do it after Christmas&rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</p>
     <a href="https://kevingimbel.de/blog/2017/02/2017-week-five/" title="Continue reading about 2017, week five">View full post</a>
 </article>
 
@@ -350,7 +363,7 @@ Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love 
     
     
 
-    <p id="article-summary-cc15828aa416981094c9f291e71fa0bf">It's the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there's not much to say so this will be a quick read with some reading recommendations at the end.
+    <p id="article-summary-cc15828aa416981094c9f291e71fa0bf">It&rsquo;s the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there&rsquo;s not much to say so this will be a quick read with some reading recommendations at the end.
 dep The Go language has released a alpha version of dep - their dependency management tool.</p>
     <a href="https://kevingimbel.de/blog/2017/01/2017-week-four/" title="Continue reading about 2017, week four">View full post</a>
 </article>
@@ -366,7 +379,7 @@ dep The Go language has released a alpha version of dep - their dependency manag
     
     
 
-    <p id="article-summary-ed5f8fabaf2fe1ea6b86f98be729b538">Another week another short review! The third week of 2017 had a lot of travel because I attended an Elasticsearch training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it's a great reference to look at.</p>
+    <p id="article-summary-ed5f8fabaf2fe1ea6b86f98be729b538">Another week another short review! The third week of 2017 had a lot of travel because I attended an Elasticsearch training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it&rsquo;s a great reference to look at.</p>
     <a href="https://kevingimbel.de/blog/2017/01/2017-week-three/" title="Continue reading about 2017, week three">View full post</a>
 </article>
 
@@ -442,7 +455,7 @@ Shebang  If you already know what a Shebang is skip to the next section</p>
     
     
 
-    <p id="article-summary-04f3680edc47242c3bd346c68545588b">German blogger, designer, and YouTuber Marcel Wichmann started a weekly-review blog series which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &ldquo;easy&rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I'll keep it up for each week but I will try.</p>
+    <p id="article-summary-04f3680edc47242c3bd346c68545588b">German blogger, designer, and YouTuber Marcel Wichmann started a weekly-review blog series which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &ldquo;easy&rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I&rsquo;ll keep it up for each week but I will try.</p>
     <a href="https://kevingimbel.de/blog/2017/01/2017-week-one/" title="Continue reading about 2017, week one">View full post</a>
 </article>
 
@@ -467,7 +480,7 @@ January   View from the hotel in Fuerteventura.   January started with what we c
     
     <header class="article-list__header">
         <h2 id="2016" class="section-headline">2016</h2>
-        <a href="#years">Back to navigation</a>
+        <p><a href="#years">Back to navigation</a></p>
     </header>
     
     
@@ -479,7 +492,7 @@ January   View from the hotel in Fuerteventura.   January started with what we c
     
     
 
-    <p id="article-summary-f78df9373ea62196cf1aed69fe73bdad">Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it's odd to switch to MacOS.</p>
+    <p id="article-summary-f78df9373ea62196cf1aed69fe73bdad">Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it&rsquo;s odd to switch to MacOS.</p>
     <a href="https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/" title="Continue reading about Goodbye Ubuntu, Hello Mac">View full post</a>
 </article>
 
@@ -519,7 +532,7 @@ This very site you read right now is build with Hugo, a static site generator bu
     
     <header class="article-list__header">
         <h2 id="2015" class="section-headline">2015</h2>
-        <a href="#years">Back to navigation</a>
+        <p><a href="#years">Back to navigation</a></p>
     </header>
     
     
@@ -546,7 +559,7 @@ This very site you read right now is build with Hugo, a static site generator bu
     
     
 
-    <p id="article-summary-623889cb2f97313bbc2a142e53a58226">It's been quite a while since I last posted a Mixtape but luckily I just happened to create one the other day for a friend, hoping to get her into Drum and Bass. So here it is, &ldquo;A Beginners Guide to Drum and Bass&rdquo; with a selection of tracks from liquid to harder Drum and Bass. Enjoy!
+    <p id="article-summary-623889cb2f97313bbc2a142e53a58226">It&rsquo;s been quite a while since I last posted a Mixtape but luckily I just happened to create one the other day for a friend, hoping to get her into Drum and Bass. So here it is, &ldquo;A Beginners Guide to Drum and Bass&rdquo; with a selection of tracks from liquid to harder Drum and Bass. Enjoy!
 See all Mixtapes</p>
     <a href="https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/" title="Continue reading about A Beginners Guide to Drum and Bass">View full post</a>
 </article>
@@ -579,7 +592,7 @@ React itself says one very important and true thing about itself:
     
     
 
-    <p id="article-summary-5e911fbb5287088e6cc4a192f53a4ec7">I've spent the past week developing some features for our own website at work. We're using WordPress and I almost always enjoy working with WordPress beside Magento projects, it's way easier to keep an overview and with a good overview of data flow and available data it's easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</p>
+    <p id="article-summary-5e911fbb5287088e6cc4a192f53a4ec7">I&rsquo;ve spent the past week developing some features for our own website at work. We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&rsquo;s way easier to keep an overview and with a good overview of data flow and available data it&rsquo;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</p>
     <a href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/" title="Continue reading about Getting into Performance Measurement">View full post</a>
 </article>
 
@@ -594,7 +607,7 @@ React itself says one very important and true thing about itself:
     
     
 
-    <p id="article-summary-c20430cbc4f76661f0528f2c93d9ee66">Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get's bigger!</p>
+    <p id="article-summary-c20430cbc4f76661f0528f2c93d9ee66">Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&rsquo;s bigger!</p>
     <a href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/" title="Continue reading about Snippet: SASS Source Maps with Gulp">View full post</a>
 </article>
 
@@ -609,7 +622,7 @@ React itself says one very important and true thing about itself:
     
     
 
-    <p id="article-summary-69c5c68609a8ef4e11935c3e53bfb2f8">It's been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I've already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp; pasted everything I found on the Internet into my .</p>
+    <p id="article-summary-69c5c68609a8ef4e11935c3e53bfb2f8">It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&rsquo;ve already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp; pasted everything I found on the Internet into my .</p>
     <a href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/" title="Continue reading about Getting into vim - again">View full post</a>
 </article>
 
@@ -618,7 +631,7 @@ React itself says one very important and true thing about itself:
     
     <header class="article-list__header">
         <h2 id="2014" class="section-headline">2014</h2>
-        <a href="#years">Back to navigation</a>
+        <p><a href="#years">Back to navigation</a></p>
     </header>
     
     
@@ -676,7 +689,7 @@ var d = document, trigger = d.</p>
     
     
 
-    <p id="article-summary-b08dce807d6ace45af0eb67fd181f2b8">While there's a lot of talking about CSS writing styles, organization styles and if it's maybe better or not to avoid pre-processors or frameworks there's one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I'd like to talk a bit about conditional CSS that I've been using in production and that I think can improve the overall logic of CSS.</p>
+    <p id="article-summary-b08dce807d6ace45af0eb67fd181f2b8">While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid pre-processors or frameworks there&rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&rsquo;d like to talk a bit about conditional CSS that I&rsquo;ve been using in production and that I think can improve the overall logic of CSS.</p>
     <a href="https://kevingimbel.de/blog/2014/07/conditional-css/" title="Continue reading about Conditional CSS">View full post</a>
 </article>
 
@@ -691,8 +704,8 @@ var d = document, trigger = d.</p>
     
     
 
-    <p id="article-summary-c89a0ebe9a08e86fab5873fdc79eb97d">Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It's good to have at least basic understanding of JavaScript.
-So before I start I'd like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</p>
+    <p id="article-summary-c89a0ebe9a08e86fab5873fdc79eb97d">Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&rsquo;s good to have at least basic understanding of JavaScript.
+So before I start I&rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</p>
     <a href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/" title="Continue reading about A closer look to closure">View full post</a>
 </article>
 
@@ -707,7 +720,7 @@ So before I start I'd like to say that I consider myself a JavaScript beginner a
     
     
 
-    <p id="article-summary-0edf63ae19c8eb1e41d7caba46ed604d">Since I'm still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it into my daily workflow. Since I'm working in a relativley small company it's most of the time stressy to get all things done and to keep an overview - so long story short: There's not much time for new tools that don't increase my workflow directly. VIM is one of these tools that don't fully support my workflow at the moment.</p>
+    <p id="article-summary-0edf63ae19c8eb1e41d7caba46ed604d">Since I&rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it into my daily workflow. Since I&rsquo;m working in a relativley small company it&rsquo;s most of the time stressy to get all things done and to keep an overview - so long story short: There&rsquo;s not much time for new tools that don&rsquo;t increase my workflow directly. VIM is one of these tools that don&rsquo;t fully support my workflow at the moment.</p>
     <a href="https://kevingimbel.de/blog/2014/07/noobish-vim/" title="Continue reading about Noobish VIM">View full post</a>
 </article>
 
@@ -722,7 +735,7 @@ So before I start I'd like to say that I consider myself a JavaScript beginner a
     
     
 
-    <p id="article-summary-6a00084153d7233adfa942f837cce553">I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It's always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
+    <p id="article-summary-6a00084153d7233adfa942f837cce553">I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&rsquo;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
 Browser-based The following tools are all for Chrome because I use Chrome for most of my development.</p>
     <a href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/" title="Continue reading about Useful Web Developer Tools">View full post</a>
 </article>
@@ -738,7 +751,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-b0b2b4e6811157fd739032ed949966d6">The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I'm working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &ldquo;cloned&rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</p>
+    <p id="article-summary-b0b2b4e6811157fd739032ed949966d6">The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&rsquo;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &ldquo;cloned&rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</p>
     <a href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/" title="Continue reading about Magento: get and set variables in config.xml">View full post</a>
 </article>
 
@@ -769,7 +782,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-22b871685f5da47d284d3444584e8d65">One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing John Resig and try to play around with JavaScript whenever I've the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can't check for every possible thingy. Anyway, I'll cover this in a small write-up aka a blog post.</p>
+    <p id="article-summary-22b871685f5da47d284d3444584e8d65">One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing John Resig and try to play around with JavaScript whenever I&rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&rsquo;t check for every possible thingy. Anyway, I&rsquo;ll cover this in a small write-up aka a blog post.</p>
     <a href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/" title="Continue reading about Passing Arguments in JavaScript">View full post</a>
 </article>
 
@@ -799,7 +812,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-c8efeaa2c660311151d7e015f4d2cf6e">The great thing when you're a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I'm very proud of my back to top script even though it's not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn't be that much fun. However, I made another JavaScript thing I'm proud of: A pure JavaScript slider.</p>
+    <p id="article-summary-c8efeaa2c660311151d7e015f4d2cf6e">The great thing when you&rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&rsquo;m very proud of my back to top script even though it&rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&rsquo;t be that much fun. However, I made another JavaScript thing I&rsquo;m proud of: A pure JavaScript slider.</p>
     <a href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/" title="Continue reading about Pure JavaScript slider">View full post</a>
 </article>
 
@@ -844,7 +857,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-d49db1a4fade9e2c7327ef4ffd4a3635">In case your company is using GMail Business there's one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &ldquo;View&rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</p>
+    <p id="article-summary-d49db1a4fade9e2c7327ef4ffd4a3635">In case your company is using GMail Business there&rsquo;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &ldquo;View&rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</p>
     <a href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/" title="Continue reading about Labels in GMail">View full post</a>
 </article>
 
@@ -890,7 +903,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-3463fe40997716b0b8b7595b9463fc4e">As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there's one thing that I'd like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There's nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</p>
+    <p id="article-summary-3463fe40997716b0b8b7595b9463fc4e">As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&rsquo;s one thing that I&rsquo;d like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</p>
     <a href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/" title="Continue reading about Web Development in 2014">View full post</a>
 </article>
 
@@ -899,7 +912,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     <header class="article-list__header">
         <h2 id="2013" class="section-headline">2013</h2>
-        <a href="#years">Back to navigation</a>
+        <p><a href="#years">Back to navigation</a></p>
     </header>
     
     
@@ -911,7 +924,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-73184b0caa8eb980e0a8810dcf25059a">I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &ldquo;Wow, that's a simple, clean editor!&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I've been using for the last two years or so.</p>
+    <p id="article-summary-73184b0caa8eb980e0a8810dcf25059a">I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &ldquo;Wow, that&rsquo;s a simple, clean editor!&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&rsquo;ve been using for the last two years or so.</p>
     <a href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/" title="Continue reading about Brackets vs. Sublime Text">View full post</a>
 </article>
 
@@ -926,7 +939,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-d79679a10c2833c06d07e58e27ba638d">About 1 year ago I joined a tlk.io Chat created by Tim Pietrusky. It was my first time ever I joined a group of other devs and I was more then nervouse about because I - at this time - considered my self more of a Hobby-Dev who's not that skilled. I just started using CodePen a few months before and did some fun demos and experiments there like drawing images with CSS and stuff.</p>
+    <p id="article-summary-d79679a10c2833c06d07e58e27ba638d">About 1 year ago I joined a tlk.io Chat created by Tim Pietrusky. It was my first time ever I joined a group of other devs and I was more then nervouse about because I - at this time - considered my self more of a Hobby-Dev who&rsquo;s not that skilled. I just started using CodePen a few months before and did some fun demos and experiments there like drawing images with CSS and stuff.</p>
     <a href="https://kevingimbel.de/blog/2013/12/how-i-got-employed/" title="Continue reading about How I got employed">View full post</a>
 </article>
 
@@ -941,7 +954,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-bce148d268be9e1d376dcd74b69996a6">For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it's not only a few different length, it's a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a max-width of let's say 20em, isn't the best solution for this so I ended up creating a flexible solution.</p>
+    <p id="article-summary-bce148d268be9e1d376dcd74b69996a6">For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a max-width of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p>
     <a href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/" title="Continue reading about Pseudo Product Flags">View full post</a>
 </article>
 
@@ -956,7 +969,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-6f49b32f322e77c756a272cbe825491b">While I was re-designing my Website I decided to finally add some JavaScript to it. I'm learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I'm doing. Yesterday night's topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that's where the title comes from.</p>
+    <p id="article-summary-6f49b32f322e77c756a272cbe825491b">While I was re-designing my Website I decided to finally add some JavaScript to it. I&rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&rsquo;m doing. Yesterday night&rsquo;s topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&rsquo;s where the title comes from.</p>
     <a href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/" title="Continue reading about To infinity and beyond">View full post</a>
 </article>
 
@@ -971,7 +984,7 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     
 
-    <p id="article-summary-d0e0c615809618402fa06a181c94f278">Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What's the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
+    <p id="article-summary-d0e0c615809618402fa06a181c94f278">Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
 A few years ago I had to do this once and I remember doing it with an image and background-position but as of today I really love pseudo elements and &ldquo;Look-Ma-No-Image!</p>
     <a href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/" title="Continue reading about Custom Radio Buttons">View full post</a>
 </article>
@@ -987,7 +1000,7 @@ A few years ago I had to do this once and I remember doing it with an image and 
     
     
 
-    <p id="article-summary-ac7e41a0490354b4e30332d35fb6347b">Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don't need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it'd be my birthday while unpacking the *.</p>
+    <p id="article-summary-ac7e41a0490354b4e30332d35fb6347b">Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&rsquo;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&rsquo;d be my birthday while unpacking the *.</p>
     <a href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/" title="Continue reading about Ghost in the shell">View full post</a>
 </article>
 
@@ -1018,7 +1031,7 @@ After naming my Object $ (because I new this from jQuery and I thought it would 
     
     
 
-    <p id="article-summary-68adbbc65b411cadb5aa4ba5bedec5e9">Earlier this year I joined a Dev Group. It was the best decision I made this year and I want to tell you why. After doing more experiments on CodePen and right after I got to know Tim Pietrusky he opened a tlk.io Chat called #CodePen. For those who're not familiar with tlk: it's an open web chat. You can create a room, everyone can join and all things are open to everyone who knows the URL.</p>
+    <p id="article-summary-68adbbc65b411cadb5aa4ba5bedec5e9">Earlier this year I joined a Dev Group. It was the best decision I made this year and I want to tell you why. After doing more experiments on CodePen and right after I got to know Tim Pietrusky he opened a tlk.io Chat called #CodePen. For those who&rsquo;re not familiar with tlk: it&rsquo;s an open web chat. You can create a room, everyone can join and all things are open to everyone who knows the URL.</p>
     <a href="https://kevingimbel.de/blog/2013/10/join-a-dev-group/" title="Continue reading about Join a Dev Group">View full post</a>
 </article>
 
@@ -1033,7 +1046,7 @@ After naming my Object $ (because I new this from jQuery and I thought it would 
     
     
 
-    <p id="article-summary-486f2ddeaf2c96b575f0e6d43e9df705">If you're a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It's fair to say that they're all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
+    <p id="article-summary-486f2ddeaf2c96b575f0e6d43e9df705">If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
 Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</p>
     <a href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/" title="Continue reading about From 0 To Sass">View full post</a>
 </article>
@@ -1049,7 +1062,7 @@ Even though Pre-Processors are easy to use and setup some people are still confu
     
     
 
-    <p id="article-summary-421250a96026be874bdddd401f3d889e">I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it's only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
+    <p id="article-summary-421250a96026be874bdddd401f3d889e">I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it&rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
 position:sticky is a pretty handy feature that allows you to stick an element to the top of the page (or wherever you want) until the parent element is moved out of the screen.
 Basic Markup To get an idea of how position:sticky works I made some basic markup.</p>
     <a href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/" title="Continue reading about A bit sticky">View full post</a>
@@ -1066,7 +1079,7 @@ Basic Markup To get an idea of how position:sticky works I made some basic marku
     
     
 
-    <p id="article-summary-dd4ef0857e0611f7d87fa6372ca4a194">If you see Apps (no matter if native or web) and websites like I do, you'll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn't offer a way to get back to top on their website nor do they on Facebook for Android.
+    <p id="article-summary-dd4ef0857e0611f7d87fa6372ca4a194">If you see Apps (no matter if native or web) and websites like I do, you&rsquo;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&rsquo;t offer a way to get back to top on their website nor do they on Facebook for Android.
 On Android you can simply hit the menu button and the sidebar-like menu will fade in, so there is no problem with not having an &ldquo;scroll to top&rdquo; action because there is no need to get back to the top.</p>
     <a href="https://kevingimbel.de/blog/2013/09/endless-scrolling/" title="Continue reading about Endless scrolling">View full post</a>
 </article>
@@ -1098,7 +1111,7 @@ On Android you can simply hit the menu button and the sidebar-like menu will fad
     
 
     <p id="article-summary-2d2f08b226287e8cdbc564ec3a28ce40">Recently Tim Pietrusky wrote and article about px vs em that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.
-I was using pixel like forever and I couldn't think of any reason to switch to a new unit until Tim explained why em is better: em is more responsive and it is scalable. In fact when you switch from pixel to em you'll feel like working on a completely new Level.</p>
+I was using pixel like forever and I couldn&rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: em is more responsive and it is scalable. In fact when you switch from pixel to em you&rsquo;ll feel like working on a completely new Level.</p>
     <a href="https://kevingimbel.de/blog/2013/08/px-vs-em/" title="Continue reading about px vs em">View full post</a>
 </article>
 
@@ -1114,7 +1127,7 @@ I was using pixel like forever and I couldn't think of any reason to switch to a
     
 
     <p id="article-summary-5cd52a41aa878f448b63f2232cce7d3b">Recently I decided to redesign and redefine my online appearance and the way I publish content to the internet. I switched from using 2 domains as Blog and Portfolio to one new Domain for both: kevingimbel.com
-This page is build with Jekyll a blog-aware static site generator you're going to love. I wrote a Guide to get started - so if you consider doing so give it a look.
+This page is build with Jekyll a blog-aware static site generator you&rsquo;re going to love. I wrote a Guide to get started - so if you consider doing so give it a look.
 Beside switching to a new domain I also switched my hoster.</p>
     <a href="https://kevingimbel.de/blog/2013/08/hello-world/" title="Continue reading about Hello World">View full post</a>
 </article>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.60.0">Hugo</generator><title type="html"><![CDATA[javascript on KevOps]]></title>
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[javascript on KevOps]]></title>
     
     
     
             <link href="https://kevingimbel.de/categories/javascript/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/javascript/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/javascript/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-13T13:45:42+01:00</updated>
+    <updated>2020-01-24T19:49:28+01:00</updated>
     
     
     
@@ -34,11 +34,11 @@
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
-super handy once your project get's bigger! Anyway, here's how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
+super handy once your project get&rsquo;s bigger! Anyway, here&rsquo;s how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
 <a href="https://www.npmjs.com/package/gulp-sass">Gulp-Sass</a> and <a href="https://www.npmjs.com/package/gulp-autoprefixer">Autoprefixer</a>.</p>
-<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven't).</p>
+<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven&rsquo;t).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install --save-dev gulp-sass gulp-sourcemaps gulp-autoprefixer
-</code></pre></div><p>After everything is installed we'll create the basic Gulp setup.</p>
+</code></pre></div><p>After everything is installed we&rsquo;ll create the basic Gulp setup.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>),
       <span style="color:#a6e22e">sass</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-sass&#39;</span>),
       <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-autoprefixer&#39;</span>),
@@ -49,7 +49,7 @@ super handy once your project get's bigger! Anyway, here's how to implement them
         <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./skin/frontend/my-theme/default/css/&#39;</span>
       }
 </code></pre></div><p>Next the tasks will be created, I split them into 2, one for Sass and Source Maps and one for
-Autoprefixer. It's important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won't be
+Autoprefixer. It&rsquo;s important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won&rsquo;t be
 right. This happen because Autoprefixer adds more properties to your compiled CSS!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#66d9ef">function</span>() {
 <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">scss</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;styles.scss&#39;</span>)
@@ -65,11 +65,11 @@ right. This happen because Autoprefixer adds more properties to your compiled CS
   .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">css</span> ));  
 });
 </code></pre></div><p>First of all source maps need to be initalized, next a compressed css file from the SCSS files is created, the source
-maps are written and we're all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
+maps are written and we&rsquo;re all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
 with whatever needs to be prefixed. The output looks like below (look at the right top of each rule set). Click on each
 image to view it in full-size.</p>
 <!-- raw HTML omitted -->
-<p>In case you don't want your source maps in production you could split everything into 3 taks and run them in the order
+<p>In case you don&rsquo;t want your source maps in production you could split everything into 3 taks and run them in the order
 <code>[&quot;sass&quot;, &quot;sourcemaps&quot;, &quot;autoprefix&quot;]</code> using <code>gulp.task()</code> and then later have the following production task.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;production&#39;</span>, [<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#39;autoprefix&#39;</span>];
 
@@ -166,17 +166,17 @@ nav, so <code>this.parentNode</code> will return the <code>&lt;li&gt;</code> ele
 </code></pre></div><p>One of the most important things here is the <code>data-id</code> attribute which groups the navigations, triggers and (endless)
 sub navigations together and is used to reference each of them.</p>
 <h3 id="event-bubbling">Event Bubbling</h3>
-<p>Yet before we get to the actual code it's important to understand event bubbling. If you already know what it is skip
+<p>Yet before we get to the actual code it&rsquo;s important to understand event bubbling. If you already know what it is skip
 this section and continue with &ldquo;Finaly: Code&rdquo; below.
-Event Bubbling is the concept of how the browser handles events. Your're most likly familiar with <code>e.preventDefault()</code>
-for click events applied to <code>&lt;a&gt;</code>-tags. This function stops the normal event bubbling so the browser doesn't reload
+Event Bubbling is the concept of how the browser handles events. Your&rsquo;re most likly familiar with <code>e.preventDefault()</code>
+for click events applied to <code>&lt;a&gt;</code>-tags. This function stops the normal event bubbling so the browser doesn&rsquo;t reload
 the page - which is the default action for <code>&lt;a&gt;</code>-tags.
 So in our case the behavior we make use of is event bubbling, as said before. Take a look at the graphic below and then
 read on.
 <img src="https://i.kevingimbel.me/sc/event_flow_v1.png" alt="&ldquo;Event Bubbling for this navigation&rdquo;">
-When the even get's triggered it finds no handler and the event literally goes up the DOM until it finds a handler. Node
-by node the little event walks up until finally the navigation wrapper says &ldquo;Yes little event! I got you, I'll handle
-that!&rdquo; - and that's it. When the handler attached to the navigation handles the event it will also populate it's <code>el</code>
+When the even get&rsquo;s triggered it finds no handler and the event literally goes up the DOM until it finds a handler. Node
+by node the little event walks up until finally the navigation wrapper says &ldquo;Yes little event! I got you, I&rsquo;ll handle
+that!&rdquo; - and that&rsquo;s it. When the handler attached to the navigation handles the event it will also populate it&rsquo;s <code>el</code>
 variable with whatever <code>e.target</code> currently is. <code>e.target</code> happens to always be the <strong>triggering element</strong>, so it is
 very similar to <code>this</code>, yet even more flexible!</p>
 ]]></content>
@@ -230,9 +230,9 @@ very similar to <code>this</code>, yet even more flexible!</p>
             
             <content type="html"><![CDATA[<p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
 functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some
-problems I want to try and give short introduction to closure and what it can be good for. It's good to have at least
+problems I want to try and give short introduction to closure and what it can be good for. It&rsquo;s good to have at least
 basic understanding of JavaScript.</p>
-<p>So before I start I'd like to say that I consider myself a JavaScript beginner and this is how I understand closure
+<p>So before I start I&rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure
 and scopes at the moment. If you happen to find mistakes please <a href="https://twitter.com/_kevinatari">tweet me</a> or <a href="https://github.com/kevingimbel/kevingimbel.github.io/issues?page=1&amp;state=open">open an
 issue</a>.</p>
 <p>Consider the following example</p>
@@ -244,8 +244,8 @@ issue</a>.</p>
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
 </code></pre></div><p>What value will <code>x</code> have when logged to the console? 5 or 10? The correct answer is 5, because inside the immediate
-executing function <code>var x</code> does not reference the previously defined <code>var x</code>. They're both standalone and do not effect
-each other. Let's try this again and see what happens now</p>
+executing function <code>var x</code> does not reference the previously defined <code>var x</code>. They&rsquo;re both standalone and do not effect
+each other. Let&rsquo;s try this again and see what happens now</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
 
 (<span style="color:#66d9ef">function</span>() {
@@ -253,11 +253,11 @@ each other. Let's try this again and see what happens now</p>
 }());
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
-</code></pre></div><p>What value will <code>x</code> have now? Still 5, because it's the same function but we only left the <code>var</code> keyword? Nope, now <code>x</code>
-inside the immediate executing function references the previously defined <code>var x</code> and will update it's value, so
+</code></pre></div><p>What value will <code>x</code> have now? Still 5, because it&rsquo;s the same function but we only left the <code>var</code> keyword? Nope, now <code>x</code>
+inside the immediate executing function references the previously defined <code>var x</code> and will update it&rsquo;s value, so
 <code>console.log(x)</code> results to 10 this time. As you can see just now, leaving out the single word <code>var</code> can change how your
 program behaves. The missing var statment, where closure hits hard and overrides the variable, can really be annoying
-because JavaScript doesn't throw errors. Overriding values inside a closure, e.g. the immediate executing function, is
+because JavaScript doesn&rsquo;t throw errors. Overriding values inside a closure, e.g. the immediate executing function, is
 perfectly fine.</p>
 <p>So what happens if we pass <code>x</code>, which is 10 now, to the immediate executing function and declare &lsquo;x = 15&rsquo; inside the
 functions body? Will <code>x</code> become 15 or stay 10?</p>
@@ -265,12 +265,12 @@ functions body? Will <code>x</code> become 15 or stay 10?</p>
 </span><span style="color:#75715e"></span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">x</span>){
 	<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
 }(<span style="color:#a6e22e">x</span>));
-</code></pre></div><p>As the result shows, x is still 10. But wait, wasn't it supposed to be overridden if we don't declare <code>var x = 15</code>? Well
+</code></pre></div><p>As the result shows, x is still 10. But wait, wasn&rsquo;t it supposed to be overridden if we don&rsquo;t declare <code>var x = 15</code>? Well
 that is true, but since we pass x as a parameter, x is &ldquo;re-defined&rdquo; as a local variable and, inside the functions body, it is
 indeed 15 - outside it is not.</p>
 <!-- raw HTML omitted -->
 <h3 id="what-can-closures-do-for-me">What can closures do for me?</h3>
-<p>What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn't write variables into the global namespace because they're almost asking to be overriden or changed. Let's say one writes a function like this.</p>
+<p>What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn&rsquo;t write variables into the global namespace because they&rsquo;re almost asking to be overriden or changed. Let&rsquo;s say one writes a function like this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">assert</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">con</span>, <span style="color:#a6e22e">msg</span>) {
   <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">con</span>) {
     <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">msg</span>);
@@ -278,8 +278,8 @@ indeed 15 - outside it is not.</p>
     <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">msg</span>);
   }
 }
-</code></pre></div><p>That's a super simple assert function to see if a statment (<code>con</code>dition) is true or false. If it's false we'll log a console.error(), if not we'll log a normal console.log() statement. This is great and perfectly fine unless someone else
-tries to use a function with the same name. Then there'll be a &ldquo;conflict&rdquo; and the last declared function overrides the other. (In this example I'll use a function called myFunction)</p>
+</code></pre></div><p>That&rsquo;s a super simple assert function to see if a statment (<code>con</code>dition) is true or false. If it&rsquo;s false we&rsquo;ll log a console.error(), if not we&rsquo;ll log a normal console.log() statement. This is great and perfectly fine unless someone else
+tries to use a function with the same name. Then there&rsquo;ll be a &ldquo;conflict&rdquo; and the last declared function overrides the other. (In this example I&rsquo;ll use a function called myFunction)</p>
 <!-- raw HTML omitted -->
 <p>So still, what can closure do for me? It can save my declared functions - inside a closure. So far all closure examples were immediate executing function, but Objects also create closures, assigning all there properties to a specific &ldquo;namespace&rdquo;.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myFunction</span>() <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
@@ -345,8 +345,8 @@ declares myFunction in the globale scope.</p>
             <updated>2014-05-23T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing <a href="http://ejohn.org">John Resig</a> and try to play around with JavaScript whenever I've the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can't check for every possible thingy. Anyway, I'll cover this in a small write-up aka a blog post. Yay!</p>
-<p>First of all we should have some use case or scenario. I needed the a variable number of options for my <a href="https://github.com/bullgit/Bulllog">Bulllog</a> script that takes any number of CSS oroperty-value pairs and applies them to your console.logs (Chrome only, sadly). Anyway, CSS is a good example in my opinion so we'll write a small css() function that can be applies to an element.</p>
+            <content type="html"><![CDATA[<p>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing <a href="http://ejohn.org">John Resig</a> and try to play around with JavaScript whenever I&rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&rsquo;t check for every possible thingy. Anyway, I&rsquo;ll cover this in a small write-up aka a blog post. Yay!</p>
+<p>First of all we should have some use case or scenario. I needed the a variable number of options for my <a href="https://github.com/bullgit/Bulllog">Bulllog</a> script that takes any number of CSS oroperty-value pairs and applies them to your console.logs (Chrome only, sadly). Anyway, CSS is a good example in my opinion so we&rsquo;ll write a small css() function that can be applies to an element.</p>
 <p>First of all, what should this function do? It should:</p>
 <ul>
 <li>Take any number of CSS property-value pairs</li>
@@ -354,12 +354,12 @@ declares myFunction in the globale scope.</p>
 <li>respond (console.log()) errors if any happen</li>
 </ul>
 <h3 id="the-functions">The functions</h3>
-<p>We'll start with the basic: getting an element and manipulating its CSS.</p>
+<p>We&rsquo;ll start with the basic: getting an element and manipulating its CSS.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">	<span style="color:#75715e">// Getting the element
 </span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>( <span style="color:#e6db74">&#39;.test&#39;</span> );
 	<span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">background</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span>;
 	<span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>[<span style="color:#e6db74">&#39;background&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;black&#39;</span>;
-</code></pre></div><p>Both of the above ways (<code>el.style.background</code> and <code>el.style['background']</code>) work the exact same way. But that's not much fun, right? Why should we want to set our styles this way and where's the dynamic functional stuff at all? Lets extend the script with a <code>css</code> function.</p>
+</code></pre></div><p>Both of the above ways (<code>el.style.background</code> and <code>el.style['background']</code>) work the exact same way. But that&rsquo;s not much fun, right? Why should we want to set our styles this way and where&rsquo;s the dynamic functional stuff at all? Lets extend the script with a <code>css</code> function.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">css</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">css</span>( <span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">options</span> ) {
 	<span style="color:#75715e">/*1 */</span>
   <span style="color:#66d9ef">if</span>( <span style="color:#66d9ef">typeof</span>(<span style="color:#a6e22e">el</span>) <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> ) {
@@ -372,12 +372,12 @@ declares myFunction in the globale scope.</p>
 }
 </code></pre></div><p>What this script does:</p>
 <ol>
-<li>check if el is already an object, if so we don't need to select it again. That'd be the case if we pass the previously defined <code>el</code> directly to the function.  We can also use <code>css('.my-class', 'background');</code></li>
+<li>check if el is already an object, if so we don&rsquo;t need to select it again. That&rsquo;d be the case if we pass the previously defined <code>el</code> directly to the function.  We can also use <code>css('.my-class', 'background');</code></li>
 <li>Set the desired property, e.g. background, color to be red.</li>
 </ol>
-<p>Alright, that's not bad but why should we want to sett everything to red? You're right - we don't want this. Next up: for in loops!</p>
+<p>Alright, that&rsquo;s not bad but why should we want to sett everything to red? You&rsquo;re right - we don&rsquo;t want this. Next up: for in loops!</p>
 <h3 id="for-key-in-obj">For key in obj</h3>
-<p>For loops are always fun and especially <code>for in</code> loops. They're perfect for our needs because we'll pass a list (or better an Object) with property-value pairs to our function and need to process them so they can be applies as styles. Our modified function now looks like this:</p>
+<p>For loops are always fun and especially <code>for in</code> loops. They&rsquo;re perfect for our needs because we&rsquo;ll pass a list (or better an Object) with property-value pairs to our function and need to process them so they can be applies as styles. Our modified function now looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">css</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">css</span>( <span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">options</span> ) {
 	<span style="color:#66d9ef">if</span>( <span style="color:#66d9ef">typeof</span>( <span style="color:#a6e22e">el</span> ) <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> ) {
 		<span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">el</span>;
@@ -398,9 +398,9 @@ declares myFunction in the globale scope.</p>
 <li>We need to create an empty array to store all our property-value pairs in.</li>
 <li>We start our for in loop. We go over every key in our options object.</li>
 <li>Every propery-value pair gets pushed into our arrays, the properties into the <code>styleProperties</code> array and the values into the <code>styleValues</code> array.
-I'm sure there is a more elegant way to do this, but I couldn't really think of any - so I'm as always up for improvments!</li>
+I&rsquo;m sure there is a more elegant way to do this, but I couldn&rsquo;t really think of any - so I&rsquo;m as always up for improvments!</li>
 </ol>
-<p>Our <code>css()</code> function just got a lot more flexible! Before we could only set any property to one value (everything we want to <code>red</code>), now we can pass a lot of property-value pairs and they'll get processes by our function! Awesome, right?
+<p>Our <code>css()</code> function just got a lot more flexible! Before we could only set any property to one value (everything we want to <code>red</code>), now we can pass a lot of property-value pairs and they&rsquo;ll get processes by our function! Awesome, right?
 Calling the function would now look like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">	<span style="color:#a6e22e">css</span>(<span style="color:#e6db74">&#39;.my-div&#39;</span>, {
 	  <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;yellow&#39;</span>,
@@ -411,10 +411,10 @@ Calling the function would now look like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">  <span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">styleProperties</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
     <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>[<span style="color:#a6e22e">styleProperties</span>[<span style="color:#a6e22e">i</span>]] <span style="color:#f92672">=</span> <span style="color:#a6e22e">styleValues</span>[<span style="color:#a6e22e">i</span>];
   }
-</code></pre></div><p>We iterate over the array (doesn't matter which because both are exatctly the same size) and extract the matching properties and values. That's the point where we actually apply the styles.</p>
+</code></pre></div><p>We iterate over the array (doesn&rsquo;t matter which because both are exatctly the same size) and extract the matching properties and values. That&rsquo;s the point where we actually apply the styles.</p>
 <p>The result looks like this.</p>
 <!-- raw HTML omitted -->
-<p>With this technique you can make any function accept any amount of property-value pairs by simply passing in an object. This would also work when you define the object itsef as a variable (see the second div). It's important to know that properties like <code>font-size</code> must be written in quotes (e.g. <code>&quot;font-size&quot;: &quot;1em&quot;</code>), otherwise the script will fail.</p>
+<p>With this technique you can make any function accept any amount of property-value pairs by simply passing in an object. This would also work when you define the object itsef as a variable (see the second div). It&rsquo;s important to know that properties like <code>font-size</code> must be written in quotes (e.g. <code>&quot;font-size&quot;: &quot;1em&quot;</code>), otherwise the script will fail.</p>
 ]]></content>
             
                  
@@ -462,9 +462,9 @@ Calling the function would now look like this:</p>
             <updated>2014-02-22T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>The great thing when you're a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I'm very  proud of my <a href="http://kevingimbel.com/to-infinity-and-beyond/">back to top script</a> even though it's not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn't be that much fun. However, I made another JavaScript thing I'm proud of: A pure JavaScript slider.</p>
+            <content type="html"><![CDATA[<p>The great thing when you&rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&rsquo;m very  proud of my <a href="http://kevingimbel.com/to-infinity-and-beyond/">back to top script</a> even though it&rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&rsquo;t be that much fun. However, I made another JavaScript thing I&rsquo;m proud of: A pure JavaScript slider.</p>
 <!-- raw HTML omitted -->
-<p>The slider runs forever in a loop, animating images to the left until the last image is reached. When the last image is reached it will animate all back to the first image (I'm not happy with this animation yet) and will start over. Pretty simple. The hardest part for me was - and still is - the animation timing. I'm may over-thinking stuff but I can't figure out a formula to calculate a good timing based on how many images the slider has. If someone has an idea, fork the pen or <a href="http://twitter.com/_kevinatari">tweet me</a>.</p>
+<p>The slider runs forever in a loop, animating images to the left until the last image is reached. When the last image is reached it will animate all back to the first image (I&rsquo;m not happy with this animation yet) and will start over. Pretty simple. The hardest part for me was - and still is - the animation timing. I&rsquo;m may over-thinking stuff but I can&rsquo;t figure out a formula to calculate a good timing based on how many images the slider has. If someone has an idea, fork the pen or <a href="http://twitter.com/_kevinatari">tweet me</a>.</p>
 <p>First of all I defined some variables.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">     <span style="color:#75715e">// current image is 0
 </span><span style="color:#75715e"></span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">current</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,
@@ -485,7 +485,7 @@ Calling the function would now look like this:</p>
   <span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">allImages</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
     <span style="color:#a6e22e">allImages</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">imgWidth</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;%&#39;</span>;
   }
-</code></pre></div><p>Now the slider and images have the correct width (in percent) and I began to make the animation part. It's made with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.setInterval">setInterval</a> JavaScript function.</p>
+</code></pre></div><p>Now the slider and images have the correct width (in percent) and I began to make the animation part. It&rsquo;s made with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.setInterval">setInterval</a> JavaScript function.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">animateLeft</span>(<span style="color:#a6e22e">cur</span>) {
       <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,
           <span style="color:#a6e22e">time</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;
@@ -498,7 +498,7 @@ Calling the function would now look like this:</p>
       }
       }, <span style="color:#a6e22e">time</span>);  
    }
-</code></pre></div><p>The interval runs as long as <code>i</code> is smaller or equal to the image width. Because the interval is set to 50ms it runs &ldquo;fast&rdquo; and sets the images <code>margin-left</code> rapidly to <code>-i%</code> and because it runs as long as <code>i</code> is smaller than the image width it hides the image completely to the left. Pretty simple right? However, <code>time</code> is at the moment a variable that is set to 50 because I couldn't figure out a good way to calculate it.</p>
+</code></pre></div><p>The interval runs as long as <code>i</code> is smaller or equal to the image width. Because the interval is set to 50ms it runs &ldquo;fast&rdquo; and sets the images <code>margin-left</code> rapidly to <code>-i%</code> and because it runs as long as <code>i</code> is smaller than the image width it hides the image completely to the left. Pretty simple right? However, <code>time</code> is at the moment a variable that is set to 50 because I couldn&rsquo;t figure out a good way to calculate it.</p>
 <p>Another function I use is <code>animateRight</code> that is just the opposite of <code>animateLeft</code>. It is only used to animate all images back to the start and has the same markup as <code>animateLeft</code> expect it runs revers (<code>i--</code>). I combine it with a <code>reset</code> function that also resets the <code>current</code> variable to 0.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">animateRight</span>(<span style="color:#a6e22e">cur</span>) {
       <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">imgWidth</span>,
@@ -520,7 +520,7 @@ Calling the function would now look like this:</p>
       <span style="color:#75715e">// resseting the current image to the first image
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">current</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
     }   
-</code></pre></div><p>That's all the functions I needed for this slider - I could've combined the <code>animateLeft</code> and <code>animateRight</code> function and if I continue developing this slider I'll make it. Last thing to do: Call a final interval that handles the sliding of all images.</p>
+</code></pre></div><p>That&rsquo;s all the functions I needed for this slider - I could&rsquo;ve combined the <code>animateLeft</code> and <code>animateRight</code> function and if I continue developing this slider I&rsquo;ll make it. Last thing to do: Call a final interval that handles the sliding of all images.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#a6e22e">setInterval</span>(<span style="color:#66d9ef">function</span> () {
       <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">current</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">allImages</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>) {
         <span style="color:#a6e22e">animateLeft</span>(<span style="color:#a6e22e">current</span>);
@@ -576,7 +576,7 @@ Calling the function would now look like this:</p>
             <updated>2013-11-18T00:00:00+00:00</updated>
             
             
-            <content type="html"><![CDATA[<p>While I was re-designing my Website I decided to finally add some JavaScript to it. I'm learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I'm doing. Yesterday night's topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is <em>kinda</em> simple, however, I wrote an endless function that got to infinity and beyond (that's where the title comes from. I'm so funny.)</p>
+            <content type="html"><![CDATA[<p>While I was re-designing my Website I decided to finally add some JavaScript to it. I&rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&rsquo;m doing. Yesterday night&rsquo;s topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is <em>kinda</em> simple, however, I wrote an endless function that got to infinity and beyond (that&rsquo;s where the title comes from. I&rsquo;m so funny.)</p>
 <p>Because I still like to google around while writing JavaScript I stumbled upon a function that looked okay to me.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scrollToTop</span>() {
   <span style="color:#66d9ef">if</span> (document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">scrollTop</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">scrollTop</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>){
@@ -585,8 +585,8 @@ Calling the function would now look like this:</p>
   }
   <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">clearTimeout</span>(<span style="color:#a6e22e">timeOut</span>);
 }
-</code></pre></div><p>The problem with this one was: It didn't work. So I looked around and found <code>setInterval()</code> which seemed to me a bit like <code>setTimeout</code> and - in my opinion - would mix perfect with <code>scrollBy(x,y)</code>. I was right, hurray!</p>
-<p>So my function then looked a bit like this (I'm not exactly sure, it was kinda late already).</p>
+</code></pre></div><p>The problem with this one was: It didn&rsquo;t work. So I looked around and found <code>setInterval()</code> which seemed to me a bit like <code>setTimeout</code> and - in my opinion - would mix perfect with <code>scrollBy(x,y)</code>. I was right, hurray!</p>
+<p>So my function then looked a bit like this (I&rsquo;m not exactly sure, it was kinda late already).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scrollToTop</span>() {
     <span style="color:#66d9ef">if</span>(window.<span style="color:#a6e22e">scrollY</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>) {
         <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">scrollBack</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(<span style="color:#66d9ef">function</span>() {
@@ -596,8 +596,8 @@ Calling the function would now look like this:</p>
       <span style="color:#a6e22e">clearInterval</span>(<span style="color:#a6e22e">scrollBack</span>);
     };
   }   
-</code></pre></div><p>I applied the function to a button, the page scrolled up and I was happy. I <a href="https://twitter.com/_kevinatari/status/402189289422721024">tweeted</a> about it just to find out that my Interval wasn't cleared and I <a href="https://twitter.com/_kevinatari/status/402190105533640704">could never scroll down again</a> after the function was triggered. Yeah! Awesome.</p>
-<p>Well, I thought more about it and read again about <code>setInterval</code> and - most important - the actual object I'm checking. <code>scrollY</code> was the right direction and I decided it must be the Interval that's wrong. I was right and came up with this sweet function!</p>
+</code></pre></div><p>I applied the function to a button, the page scrolled up and I was happy. I <a href="https://twitter.com/_kevinatari/status/402189289422721024">tweeted</a> about it just to find out that my Interval wasn&rsquo;t cleared and I <a href="https://twitter.com/_kevinatari/status/402190105533640704">could never scroll down again</a> after the function was triggered. Yeah! Awesome.</p>
+<p>Well, I thought more about it and read again about <code>setInterval</code> and - most important - the actual object I&rsquo;m checking. <code>scrollY</code> was the right direction and I decided it must be the Interval that&rsquo;s wrong. I was right and came up with this sweet function!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// notice: backTop is my back to top button!
 </span><span style="color:#75715e"></span>  <span style="color:#a6e22e">backTop</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>,<span style="color:#66d9ef">function</span>() {
     <span style="color:#75715e">// setting an interval 
@@ -616,8 +616,8 @@ Calling the function would now look like this:</p>
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// prevent the click to reload the page
 </span><span style="color:#75715e"></span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
   }); <span style="color:#75715e">// end of the Back to Top function
-</span></code></pre></div><p>That's it! My sweet little Back To Top Function. I'm sure there are points that could be improved and I'm sure one could add easing to it (I already got something in mind) but for now I'm happy with it.</p>
-<p>(Also check out what else I discovered yesterday. It's an <a href="https://twitter.com/_kevinatari/status/402197154539651072">YouTube Eater Egg</a>!)</p>
+</span></code></pre></div><p>That&rsquo;s it! My sweet little Back To Top Function. I&rsquo;m sure there are points that could be improved and I&rsquo;m sure one could add easing to it (I already got something in mind) but for now I&rsquo;m happy with it.</p>
+<p>(Also check out what else I discovered yesterday. It&rsquo;s an <a href="https://twitter.com/_kevinatari/status/402197154539651072">YouTube Eater Egg</a>!)</p>
 ]]></content>
             
                  
@@ -664,10 +664,10 @@ Calling the function would now look like this:</p>
             
             
             <content type="html"><![CDATA[<p>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.</p>
-<p>After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to <code>I</code> and here comes the fun part: While learning JS I build i.js - a tiny JS &ldquo;Framework&rdquo; that enables you to write JS nearly the same you'd speak.
+<p>After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to <code>I</code> and here comes the fun part: While learning JS I build i.js - a tiny JS &ldquo;Framework&rdquo; that enables you to write JS nearly the same you&rsquo;d speak.
 For example you may thing: <em>&ldquo;I want to get the Object with the class name test&rdquo;</em> - to get this, simply write the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">I</span>.<span style="color:#a6e22e">WantA</span>.<span style="color:#a6e22e">classname</span>(<span style="color:#e6db74">&#34;test&#34;</span>);
-</code></pre></div><p>This will return you the element that has the class <code>test</code>. Not so cool? Well, let's bring Events to the game!</p>
+</code></pre></div><p>This will return you the element that has the class <code>test</code>. Not so cool? Well, let&rsquo;s bring Events to the game!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Spoken: &#34;I want to add an Event that when you click on the 
 </span><span style="color:#75715e"></span><span style="color:#75715e">// element with the ID js-removeClass a FUNCTION triggers&#34;
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">I</span>.<span style="color:#a6e22e">WantTo</span>.<span style="color:#a6e22e">addEvent</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#e6db74">&#34;js-removeClass&#34;</span>,<span style="color:#66d9ef">function</span>(){
@@ -678,8 +678,8 @@ For example you may thing: <em>&ldquo;I want to get the Object with the class na
 <li>When <code>js-removeClass</code> is clicked</li>
 <li>the class <code>lorem</code> will be removed from an element with the class <code>output</code></li>
 </ul>
-<p>You can find a working Demo on <a href="http://codepen.io/kevingimbel/pen/sgCae">CodePen</a> or <a href="http://kevingimbel.com/i.js/demo/">directly on my site</a>. If you want to contribute more functions I'd be very happy!</p>
-<p>Beside of this useless but fun Framework I also wrote a kinda useful function: <code>_match()</code>. <code>_match()</code> takes any value and checks if it's a ID, a class or an Tag Name. When it matches one of these it returns the correct element.</p>
+<p>You can find a working Demo on <a href="http://codepen.io/kevingimbel/pen/sgCae">CodePen</a> or <a href="http://kevingimbel.com/i.js/demo/">directly on my site</a>. If you want to contribute more functions I&rsquo;d be very happy!</p>
+<p>Beside of this useless but fun Framework I also wrote a kinda useful function: <code>_match()</code>. <code>_match()</code> takes any value and checks if it&rsquo;s a ID, a class or an Tag Name. When it matches one of these it returns the correct element.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_match</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">el</span>) {
     <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">el</span>);
     <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">el</span>);
