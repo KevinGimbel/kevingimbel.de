@@ -12,6 +12,7 @@ publishDir = "docs"
     photography = "/:section/:year/:month/:title/"
     recipes = "/:section/:year/:month/:title/"
     art = "/:section/:year/:month/:title/"
+    book = "/:section/:year/:title/"
 
 [[params.now]]
 location = "Wiesbaden, Germany"
@@ -47,6 +48,12 @@ location = "Wiesbaden, Germany"
     name = "Photography"
     URL = "/photography/"
     Weight = 40
+
+    [[menu.main]]
+    identifier = "reading"
+    name = "Reading"
+    URL = "/books/"
+    Weight = 45
 
     [[menu.main]]
     identifier = "Art"
