@@ -16,16 +16,28 @@
 </head>
 
 <body>
-    {{ with .Page.Params.intro_text }}
     <header class="intro-text">
-        {{ . | markdownify }}
+        <span>{{ with .Page.Params.intro_text }}
+            {{ . | markdownify }}
+        {{ end }}
+        {{ if eq .Title "Categories" }}
+            All categories
+        {{ else if eq .Title "Tags" }}
+            All tags
+        {{ else if eq .Section "tags" }}
+            <p>Content tagged with "{{ .Title }}"</p>
+            <small><a href="/tags/">View all tags</a></small>
+        {{ else if eq .Section "categories" }}
+            <p>Content in category "{{ .Title }}"</p>
+            <small><a href="/categories/">View all categories</a></small>
+        {{ else }}
+        {{ with .Page.Params.intro_text }}
+        {{ else }}
+        {{ .Title }}
+        {{ end }}
+        {{ end }}</span>
     </header>
 
-    {{ else }}
-    <header class="intro-text">
-        {{ .Title }}
-    </header>
-    {{ end }}
 
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main">

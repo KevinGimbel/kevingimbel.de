@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "book/list.html" }}
+{{ end }}
+<main id="main {{ .Section }}" class="main">
+    {{ .Content }}
+
+    <nav class="page-nav" id="years" role="navigation" aria-label="Blog list naviation">Skip to:
+        {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
+        <a href="#{{ .Key }}" title="View books read in {{ .Key }}">{{ .Key }}</a>
+        {{ end }}
+        <a href="#unknown" title="View all remaining books with no reading time recorded">Unknown date</a>
+    </nav>
+
+
+    {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
+    <header class="article-list__header"></header>
+    {{ if eq .Key "0001" }}
+        <h2 id="unknown" class="section-headline">Unknown date</h2>
+    {{ else }}
+        <h2 id="{{ .Key }}" class="section-headline">{{ .Key }}</h2>
+    {{ end }}
+    </header>
+        {{ range .Pages }}
+        {{ if ne .File.LogicalName "_index.md" }}
+            <li>
+                {{ if gt .WordCount 0 }}
+                <a href="{{.Permalink}}" title="Read my comment about {{ .Title }}">{{.Title}}</a>
+                {{ else }}
+                <b>{{.Title}}</b>
+                {{ end }}
+                <small>by {{ range .Params.authors }} {{ . }}{{ end }} {{ with .Params.rating }}({{ . }}/5⭑){{ end }}</small>
+            </li>
+        {{ end }}
+        {{ end }}
+    {{ end }}
+</main>
+{{ end }}

@@ -52,4 +52,4 @@ Because we are doing a `gt` (greater than) comparison only articles that are old
 
 ## See it in action
 
-A live example can be seen on my page, for example in the [oldest post "Hello world"](/blog/2013-08-12-hello-world/) or in any post from [2015 and before](http://localhost:1313/blog/#2015).
+A live example can be seen on my page, for example in the [oldest post "Hello world"](/blog/2013/08/hello-world/) or in any post from [2015 and before](http://localhost:1313/blog/#2015).

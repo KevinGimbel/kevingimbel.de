@@ -5,20 +5,18 @@
 <main id="main {{ .Section }}" class="main">
     {{ .Content }}
 
-    <nav id="years" role="navigation" aria-label="Blog list naviation">Skip to:
-        {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
-        <a href="#{{ .Key }}" title="View articles from {{ .Key }}">{{ .Key }}</a>
-        {{ end }}
-    </nav>
-    <p>Subscibe via
-        <a href="{{ .RelPermalink }}index.xml" title="Subscribe to all {{ .Section }} posts via RSS">RSS</a> or <a href="{{ .RelPermalink }}atom.xml" title="Subscribe to all {{ .Section }} posts via Atom Feed">Atom</a></p>
+    {{ partial "page-nav.html" . }}
+
+    <hr>
+
+    {{ partial "subscribe-rss.html" . }}
 
     <hr>
 
     {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
     <header class="article-list__header">
         <h2 id="{{ .Key }}" class="section-headline">{{ .Key }}</h2>
-        <a href="#years">Back to navigation</a>
+        <p><a href="#years">Back to navigation</a></p>
     </header>
     {{ range .Pages }}
     {{ .Render "article-preview" }}

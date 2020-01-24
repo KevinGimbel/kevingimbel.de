@@ -53,6 +53,26 @@ h1 {
     margin-top: 2rem;
 }
 
+.section-headline, h1, h2 {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    color: var(--color-main);
+}
+
+
+.section-headline::after, h1::after, h2::after {
+    content: "";
+    width: 100%;
+    display: block;
+    height: .35em;
+    background: var(--color-secondary);
+    bottom: .3em;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
 .intro-text {
     padding: 2rem;
     background: #222;
@@ -207,6 +227,22 @@ li code {
 .nav-main li a {
     color: #fff;
     text-decoration: none;
+}
+
+.page-nav {
+    width: calc(100% + 4rem);
+    background: var(--color-secondary);
+    margin: 2rem calc(0rem - 2rem);
+    padding: 2rem;
+}
+
+.page-nav a:not(:last-of-type) {
+    margin-right: .5rem;
+}
+
+.page-nav--label {
+    display: block;
+    font-size: .75em;
 }
 
 .article-content {
@@ -411,4 +447,29 @@ pre {
         max-width: 100%;
         margin: 0;
     }
+}
+
+.taxonomy-list {
+    display: flex;
+    padding-bottom: 2rem;
+    align-content: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.taxonomy__item {
+        width: 20%;
+        height: 2rem;
+        display: inline-block;
+        padding: 2rem 0;
+}
+
+.taxonomy__item-inner {
+    padding: 1rem;
+    background: var(--color-main);
+    color: var(--color-secondary);
+}
+
+.taxonomy__item a {
+    color: var(--color-secondary);
 }

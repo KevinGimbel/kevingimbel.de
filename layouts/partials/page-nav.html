@@ -1,0 +1,6 @@
+<nav class="page-nav" id="years" role="navigation" aria-label="Blog list naviation">
+    <span class="page-nav--label">Skip to:</span>
+    {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
+    <a href="#{{ .Key }}" title="View articles from {{ .Key }}">{{ .Key }}</a>
+    {{ end }}
+</nav>
