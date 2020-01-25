@@ -14,16 +14,15 @@ tags:
     - 2FA
     - security
     - android
-date: "2020-01-04"
-lastmod: "2020-01-04"
-draft: true
+date: "2020-01-25"
+lastmod: "2020-01-25"
 ---
 
-For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 6-7 years ago I began to use password managers and password generators, and when {{< abbr "2FA" "Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token" >}} became a more common thing I was enabling that on all services I could. 2FA (Two Factor Authentication) is a method of authentication where two parts are needed: A Password and a generated token, this token can be hardware based (e.g. a tiny usb key that generates a token) or they can be time-based which is the most common usage I'd say. I used Google Authenticator for this for years and all was good - until I had to factory-reset my phone and lost my Google Authenticator app with all its 2FA settings.
+For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when {{< abbr "2FA" "Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token" >}} became a more common thing I was enabling that on all services I could. 2FA (Two Factor Authentication) is a method of authentication where two parts are needed: A Password and a generated token, this token can be hardware based (e.g. a tiny usb key that generates a token) or they can be time-based which is the most common usage I'd say. I used Google Authenticator for this for years and all was good - until I had to factory-reset my phone and lost my Google Authenticator app with all its 2FA settings.
 
 ## Why I lost all my 2FA tokens and settings
 
-I falsely assumed that Google Authenticator would somehow save the Time-based Tokens with my Google Account but that is not the case - they only exist on the device itself. Looking back that is probably the right choice, but I somehow missed it and only realized after receiving my replacement Pixel phone and setting it up again.
+I falsely assumed that [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) would somehow save the Time-based Tokens with my Google Account but that is not the case - they only exist on the device itself. Looking back that is probably the right choice, but I somehow missed it and only realized after receiving my replacement Pixel phone and setting it up again.
 
 "Alright", I thought, "this is bad but I can just redo the setup and I'm good to go." - Well, no. Since 2FA is a security feature you'll need to have a token ready when you want to deactivate it, which is needed in most cases to setup a new 2FA device. For this exact scenario you usually get a bunch of pre-created tokens, usually labeled as "Recovery codes" or "Recovery tokens".
 
@@ -49,10 +48,10 @@ For 2FA tokens I now use [andOTP](https://github.com/andOTP/andOTP), an open sou
 
 ## Sync and cloud storage
 
-As a cloud storage solution I am using Nextcloud. Nextcloud is open source, as are all their official extensions, see [github.com/nextcloud](https://github.com/nextcloud "View open source code by Nextcloud on GitHub"). Another benefit for me is that Nextcloud is developed and maintained by a Germany-based company, which is a nice added bonus and always good to see, since a lot of software comes out of the Silicon Valley filter bubble. I'm increasingly looking to find software and services that do not rely on USA-based infrastructure, money, or services. While laws such as {{< abbr "GDPR" "General Data Protection Law" >}} protect European citizens even if the companies themselves are not within the EU, I feel better when the companies I do business with are closer to me, geographically and law-*ly* . 
+As a cloud storage solution I am using Nextcloud. Nextcloud is open source, as are all their official extensions, see [github.com/nextcloud](https://github.com/nextcloud "View open source code by Nextcloud on GitHub"). Another benefit for me is that Nextcloud is developed and maintained by a Germany-based company, which is a nice added bonus and always good to see, since a lot of software comes out of the Silicon Valley filter bubble. I'm increasingly looking to find software and services that do not rely on USA-based infrastructure, money, companies, or services. While laws such as {{< abbr "GDPR" "General Data Protection Law" >}} protect European citizens even if the companies themselves are not within the EU, I feel better when the companies I do business with are closer to me, geographically and law-*ly* . Especially when it comes to storing my files.
 
 Anyhow, Nextcloud is the sync and "backup" solution in my stack. It syncs the database files between my computer and my phone so that I can always access all passwords whenever I need them. On my computer and phone the databases are protected by passwords, all communication to Nextcloud is done over a encrypted connection (HTTPS), too.
 
 I've been using this solution for a bit over two years now and I am very happy with it. Before switching to Nextcloud I used Google Drive to sync my KeyPassX database files, but I am growing increasingly distrustful of Google, so I am trying to pull as much as I can away from its services. Nextcloud works just as good if not better than the Google Drive or Dropbox sync solutions.
 
-Thank you for coming to my TED Talk, see ya. 
+Thank you for coming to my TED Talk, see ya.
