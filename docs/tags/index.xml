@@ -6,10 +6,91 @@
     <description>Recent content in Tags on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2FA</title>
+      <link>https://kevingimbel.de/tags/2fa/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/2fa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://kevingimbel.de/tags/android/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud_storage</title>
+      <link>https://kevingimbel.de/tags/cloud_storage/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/cloud_storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>management</title>
+      <link>https://kevingimbel.de/tags/management/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>password</title>
+      <link>https://kevingimbel.de/tags/password/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/password/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>productivity</title>
+      <link>https://kevingimbel.de/tags/productivity/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://kevingimbel.de/tags/security/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sync</title>
+      <link>https://kevingimbel.de/tags/sync/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workflow</title>
+      <link>https://kevingimbel.de/tags/workflow/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/workflow/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>iphone</title>
@@ -170,15 +251,6 @@
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://kevingimbel.de/tags/security/</link>
-      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/security/</guid>
       <description></description>
     </item>
     
@@ -525,24 +597,6 @@
     </item>
     
     <item>
-      <title>productivity</title>
-      <link>https://kevingimbel.de/tags/productivity/</link>
-      <pubDate>Wed, 29 Mar 2017 18:34:37 +0100</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/productivity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>workflow</title>
-      <link>https://kevingimbel.de/tags/workflow/</link>
-      <pubDate>Wed, 29 Mar 2017 18:34:37 +0100</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/workflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>deployment</title>
       <link>https://kevingimbel.de/tags/deployment/</link>
       <pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate>
@@ -719,15 +773,6 @@
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>android</title>
-      <link>https://kevingimbel.de/tags/android/</link>
-      <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/android/</guid>
       <description></description>
     </item>
     

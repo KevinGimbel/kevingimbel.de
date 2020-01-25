@@ -7,12 +7,93 @@
             <link href="https://kevingimbel.de/tags/security/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/security/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/security/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-24T19:56:58+01:00</updated>
+    <updated>2020-01-25T16:20:07+01:00</updated>
     
     
     
     
         <id>https://kevingimbel.de/tags/security/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Two Factor Auth, Password managers, and cloud sync]]></title>
+            <link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="related" type="text/html" title="Using the Terminal: The Prompt" />
+                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2" />
+            
+                <id>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</id>
+            
+            
+            <published>2020-01-25T00:00:00+00:00</published>
+            <updated>2020-01-25T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when <abbr title="Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token">2FA</abbr>
+ became a more common thing I was enabling that on all services I could. 2FA (Two Factor Authentication) is a method of authentication where two parts are needed: A Password and a generated token, this token can be hardware based (e.g. a tiny usb key that generates a token) or they can be time-based which is the most common usage I&rsquo;d say. I used Google Authenticator for this for years and all was good - until I had to factory-reset my phone and lost my Google Authenticator app with all its 2FA settings.</p>
+<h2 id="why-i-lost-all-my-2fa-tokens-and-settings">Why I lost all my 2FA tokens and settings</h2>
+<p>I falsely assumed that <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google Authenticator</a> would somehow save the Time-based Tokens with my Google Account but that is not the case - they only exist on the device itself. Looking back that is probably the right choice, but I somehow missed it and only realized after receiving my replacement Pixel phone and setting it up again.</p>
+<p>&ldquo;Alright&rdquo;, I thought, &ldquo;this is bad but I can just redo the setup and I&rsquo;m good to go.&rdquo; - Well, no. Since 2FA is a security feature you&rsquo;ll need to have a token ready when you want to deactivate it, which is needed in most cases to setup a new 2FA device. For this exact scenario you usually get a bunch of pre-created tokens, usually labeled as &ldquo;Recovery codes&rdquo; or &ldquo;Recovery tokens&rdquo;.</p>
+<h2 id="recovery-codes">Recovery codes</h2>
+<p>I had almost none saved. &ldquo;Past me&rdquo; was a idiot and didn&rsquo;t save the recovery codes properly or saved them on some old, long gone computer. I was left without recovery codes, without a working 2FA device, and with no way of resetting 2FA without codes. I checked my computer to find services I was still logged-in to and reset the 2FA settings - or recreated them - where ever it was possible without supplying a code.</p>
+<p>I lost all access to my Discord account and had to create a new one because there is no way of resetting 2FA.</p>
+<p>I could recover all really important stuff tho, like GitHub. I saved my recovery codes this time and made sure they are stored in a secure place - a good offline place would be a USB drive, a print-out in a safe; A good online place might be a special password manager database.</p>
+<h2 id="password-manager">Password manager</h2>
+<p>Around 2012/2013 i started using a Password Manager called KeyPassX. I meanwhile switched to <a href="https://keepassxc.org/">KeyPassXC</a> which is a community driven fork because the original KeyPassX does no longer receive updates. KeyPassXC has a great MacOS App and works well with multiple databases, so I can split my passwords across multiple databases, e.g. one for work and some for private usage.</p>
+<p>It supports auto-fill with browser plugins and works completely offline. There is no syncing to a third-party cloud, no auto backups in the cloud, no anything; By default it is all on your local computer in an encrypted database file protected by password or key.</p>
+<p>On my phone I have used <a href="https://play.google.com/store/apps/details?id=keepass2android.keepass2android&amp;hl=en_US">Keepass2Android</a> for some years now and it works like a charm. Keepass2Android can read, save, and merge the database in case it is changed on my computer and then synced to the phone or vice versa.</p>
+<h2 id="2fa-tokens">2FA Tokens</h2>
+<p>For 2FA tokens I now use <a href="https://github.com/andOTP/andOTP">andOTP</a>, an open source 2FA token generator app for Android which supports encrypted backups.</p>
+<h2 id="sync-and-cloud-storage">Sync and cloud storage</h2>
+<p>As a cloud storage solution I am using Nextcloud. Nextcloud is open source, as are all their official extensions, see <a href="https://github.com/nextcloud" title="View open source code by Nextcloud on GitHub">github.com/nextcloud</a>. Another benefit for me is that Nextcloud is developed and maintained by a Germany-based company, which is a nice added bonus and always good to see, since a lot of software comes out of the Silicon Valley filter bubble. I&rsquo;m increasingly looking to find software and services that do not rely on USA-based infrastructure, money, companies, or services. While laws such as <abbr title="General Data Protection Law">GDPR</abbr>
+ protect European citizens even if the companies themselves are not within the EU, I feel better when the companies I do business with are closer to me, geographically and law-<em>ly</em> . Especially when it comes to storing my files.</p>
+<p>Anyhow, Nextcloud is the sync and &ldquo;backup&rdquo; solution in my stack. It syncs the database files between my computer and my phone so that I can always access all passwords whenever I need them. On my computer and phone the databases are protected by passwords, all communication to Nextcloud is done over a encrypted connection (HTTPS), too.</p>
+<p>I&rsquo;ve been using this solution for a bit over two years now and I am very happy with it. Before switching to Nextcloud I used Google Drive to sync my KeyPassX database files, but I am growing increasingly distrustful of Google, so I am trying to pull as much as I can away from its services. Nextcloud works just as good if not better than the Google Drive or Dropbox sync solutions.</p>
+<p>Thank you for coming to my TED Talk, see ya.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/password" term="password" label="password" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/management" term="management" label="management" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/sync" term="sync" label="sync" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/cloud_storage" term="cloud_storage" label="cloud_storage" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/2fa" term="2fa" label="2FA" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/android" term="android" label="android" />
+                            
+                        
+                    
+                
+            
+        </entry>
     
         
         <entry>
