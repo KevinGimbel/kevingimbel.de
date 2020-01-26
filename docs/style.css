@@ -240,6 +240,19 @@ li code {
     margin-right: .5rem;
 }
 
+.subscribe-via {
+    width: calc(100% + 4rem);
+    background: var(--color-main);
+    color: #fff;
+    margin-left: calc(0rem - 2rem);
+    margin-top: -2rem;
+    padding: .5rem 2rem;
+}
+
+.subscribe-via a {
+    color: #fff;
+}
+
 .page-nav--label {
     display: block;
     font-size: .75em;
