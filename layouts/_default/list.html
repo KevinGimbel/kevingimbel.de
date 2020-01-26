@@ -7,11 +7,7 @@
 
     {{ partial "page-nav.html" . }}
 
-    <hr>
-
     {{ partial "subscribe-rss.html" . }}
-
-    <hr>
 
     {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
     <header class="article-list__header">
