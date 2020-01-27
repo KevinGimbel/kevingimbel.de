@@ -1057,14 +1057,14 @@ I tent to start a lot of things and pursue a lot of different interests when I&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/legal/</guid>
-      <description>Contact information This website is managed by:
+      <description>Impressum / Legal / Imprint Contact information This website is managed by:
 Kevin Gimbel
 Wiesbaden, Germany
-Mail: hallo@kevingimbel.com
+Mail: hallo+webadmin@kevingimbel.com
 Mastodon: bullgit.party/@kevin
-Matrix: kevingimbel:bullgit.science
-Privacy information This website does not use tracking or analytics codes. It is hosted on Netlify.
-No dynamic programming language or database is used, it&amp;rsquo;s all static pages generated and then served with a HTTP server. The code is fully open source and available on github.com/kevingimbel/kevingimbel.com, so you can look around the source code.</description>
+Matrix: @kevingimbel:bullgit.science
+Privacy information This website does not use tracking or analytic tools. It is hosted on GitHub Pages.
+No dynamic programming language or database is used, it&amp;rsquo;s all static HTML pages generated and then served with a HTTP server. The code is fully open source and available on github.com/kevingimbel/kevingimbel.de, so you can look around the source code if you wish.</description>
     </item>
     
     <item>
