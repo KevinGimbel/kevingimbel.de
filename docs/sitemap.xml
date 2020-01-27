@@ -398,11 +398,6 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2019/animal-farm/</loc>
-    <lastmod>2019-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</loc>
     <lastmod>2019-08-18T00:00:00+00:00</lastmod>
   </url>
@@ -415,6 +410,11 @@
   <url>
     <loc>https://kevingimbel.de/book/2019/a-brief-history-of-time/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2018/biochips/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -450,6 +450,11 @@
   <url>
     <loc>https://kevingimbel.de/tags/rpg/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2018/die-daten-die-ich-rief-wie-wir-unsere-freiheit-an-gro%C3%9Fkonzerne-verkaufen/</loc>
+    <lastmod>2018-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -503,6 +508,16 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2018/die-neuromancer-trilogie/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2017/thing-explainer-complicated-stuff-in-simple-words/</loc>
+    <lastmod>2017-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/tags/accessibility/</loc>
     <lastmod>2017-11-26T10:56:13+01:00</lastmod>
   </url>
@@ -525,6 +540,16 @@
   <url>
     <loc>https://kevingimbel.de/tags/redesign/</loc>
     <lastmod>2017-11-26T10:56:13+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2017/die-zeitmaschine/</loc>
+    <lastmod>2017-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2017/what-if-serious-scientific-answers-to-absurd-hypothetical-questions/</loc>
+    <lastmod>2017-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -565,6 +590,11 @@
   <url>
     <loc>https://kevingimbel.de/blog/2017/02/2017-week-five/</loc>
     <lastmod>2017-02-08T08:51:13+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2017/the-illustrated-a-brief-history-of-time-updated-and-expanded-edition/</loc>
+    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -618,12 +648,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/nodejs/</loc>
+    <loc>https://kevingimbel.de/categories/nodejs/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/nodejs/</loc>
+    <loc>https://kevingimbel.de/tags/nodejs/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
@@ -640,6 +670,11 @@
   <url>
     <loc>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</loc>
     <lastmod>2017-01-01T14:37:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2017/a-beginners-guide-to-losing-your-mind-survival-techniques-for-staying-sane/</loc>
+    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -673,6 +708,11 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2016/simulacron-3-welt-am-draht/</loc>
+    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</loc>
     <lastmod>2016-11-16T19:04:42+01:00</lastmod>
   </url>
@@ -700,6 +740,11 @@
   <url>
     <loc>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</loc>
     <lastmod>2015-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/book/2015/von-der-erde-zum-mond/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -778,6 +823,11 @@
   </url>
   
   <url>
+    <loc>https://kevingimbel.de/book/2015/reise-nach-dem-mittelpunkt-der-erde/</loc>
+    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/book/2014/metro-2034/</loc>
     <lastmod>2014-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -798,12 +848,17 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/magento/</loc>
-    <lastmod>2014-08-27T00:00:00+00:00</lastmod>
+    <loc>https://kevingimbel.de/book/2014/animal-farm/</loc>
+    <lastmod>2014-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/categories/magento/</loc>
+    <lastmod>2014-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -813,12 +868,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/php/</loc>
+    <loc>https://kevingimbel.de/categories/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/php/</loc>
+    <loc>https://kevingimbel.de/tags/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   

@@ -185,15 +185,6 @@ All images were edited with Darktable, a free open source Adobe Lightroom altern
     </item>
     
     <item>
-      <title>Animal Farm</title>
-      <link>https://kevingimbel.de/book/2019/animal-farm/</link>
-      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/book/2019/animal-farm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>City Walk Wiesbaden</title>
       <link>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</link>
       <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
@@ -213,12 +204,30 @@ All images in this post were taken with my Fujifilm X30 camera.</description>
     </item>
     
     <item>
+      <title>Biochips</title>
+      <link>https://kevingimbel.de/book/2018/biochips/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2018/biochips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fallout 76: B.E.T.A</title>
       <link>https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/</guid>
       <description>If you know me you&amp;rsquo;ll probably know that I am a huge Fallout fan. I absolutely love the games (all of them basically, maybe not Tactics) and I&amp;rsquo;ve played Fallout 3 and Fallout New Vegas countless times on XBox 360 and PC. When Fallout 76 was announced via a mysterious live stream in anticipation of E3 2018 I spent an entire evening on Twitch watching - nothing. It was a bit frustrating at the time but checking Reddit and Twitter for all kinds of hints as to what this stream could mean and speculation with the amazing r/Fallout community was a lot of fun.</description>
+    </item>
+    
+    <item>
+      <title>Die Daten, die ich rief: Wie wir unsere Freiheit an Großkonzerne verkaufen </title>
+      <link>https://kevingimbel.de/book/2018/die-daten-die-ich-rief-wie-wir-unsere-freiheit-an-gro%C3%9Fkonzerne-verkaufen/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2018/die-daten-die-ich-rief-wie-wir-unsere-freiheit-an-gro%C3%9Fkonzerne-verkaufen/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -253,12 +262,48 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     </item>
     
     <item>
+      <title>Die Neuromancer-Trilogie</title>
+      <link>https://kevingimbel.de/book/2018/die-neuromancer-trilogie/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2018/die-neuromancer-trilogie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thing Explainer: Complicated Stuff in Simple Words</title>
+      <link>https://kevingimbel.de/book/2017/thing-explainer-complicated-stuff-in-simple-words/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2017/thing-explainer-complicated-stuff-in-simple-words/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>CSS Custom Properties and a new look</title>
       <link>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</link>
       <pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate>
       
       <guid>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</guid>
       <description>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (aka CSS variables).</description>
+    </item>
+    
+    <item>
+      <title>Die Zeitmaschine</title>
+      <link>https://kevingimbel.de/book/2017/die-zeitmaschine/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2017/die-zeitmaschine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What If?: Serious Scientific Answers to Absurd Hypothetical Questions </title>
+      <link>https://kevingimbel.de/book/2017/what-if-serious-scientific-answers-to-absurd-hypothetical-questions/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2017/what-if-serious-scientific-answers-to-absurd-hypothetical-questions/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -305,6 +350,15 @@ Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love 
       
       <guid>https://kevingimbel.de/blog/2017/02/2017-week-five/</guid>
       <description>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&amp;rsquo;m only 6 months late to do so because I kept saying &amp;ldquo;I&amp;rsquo;ll call next week&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it when I&amp;rsquo;m back from Amsterdam&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it after Christmas&amp;rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</description>
+    </item>
+    
+    <item>
+      <title>The Illustrated A Brief History of Time: Updated and Expanded Edition </title>
+      <link>https://kevingimbel.de/book/2017/the-illustrated-a-brief-history-of-time-updated-and-expanded-edition/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2017/the-illustrated-a-brief-history-of-time-updated-and-expanded-edition/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -383,6 +437,15 @@ January   View from the hotel in Fuerteventura.   January started with what we c
     </item>
     
     <item>
+      <title>A Beginner&#39;s Guide to Losing Your Mind: Survival Techniques for Staying Sane</title>
+      <link>https://kevingimbel.de/book/2017/a-beginners-guide-to-losing-your-mind-survival-techniques-for-staying-sane/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2017/a-beginners-guide-to-losing-your-mind-survival-techniques-for-staying-sane/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Goodbye Ubuntu, Hello Mac</title>
       <link>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</link>
       <pubDate>Tue, 27 Dec 2016 15:05:59 +0100</pubDate>
@@ -398,6 +461,15 @@ January   View from the hotel in Fuerteventura.   January started with what we c
       
       <guid>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</guid>
       <description>Today I was caught off-guard by a docker &amp;ldquo;bug&amp;rdquo; - or so I thought at first. I tried to boot up a project with docker-compose up like I do since switching to a Mac. Unusual was that docker-compose stopped at the build step and would not finish the boot. After some confusion and after checking the projects docker-compose.yml configuration file I went to GitHub to see the newest docker for mac issues because I was using the beta release and thought a recent update might broke a thing or two.</description>
+    </item>
+    
+    <item>
+      <title>Simulacron-3: Welt am Draht</title>
+      <link>https://kevingimbel.de/book/2016/simulacron-3-welt-am-draht/</link>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2016/simulacron-3-welt-am-draht/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -417,6 +489,15 @@ This very site you read right now is build with Hugo, a static site generator bu
       
       <guid>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</guid>
       <description>Lately I had a hard time working with my own website. Whenever I wanted to make some updates, write a post or fix a little buggy thing it only took a few minutes of &amp;ldquo;work&amp;rdquo; to get me really frustrated. Jekyll, despite my love for it, has become horribly slow. My site, which I consider rather &amp;ldquo;simple&amp;rdquo;, took 17-20 seconds to build on every change! Changing the CSS? Rebuild entire site.</description>
+    </item>
+    
+    <item>
+      <title>Von Der Erde Zum Mond</title>
+      <link>https://kevingimbel.de/book/2015/von-der-erde-zum-mond/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2015/von-der-erde-zum-mond/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -468,6 +549,15 @@ React itself says one very important and true thing about itself:
     </item>
     
     <item>
+      <title>Reise Nach Dem Mittelpunkt Der Erde</title>
+      <link>https://kevingimbel.de/book/2015/reise-nach-dem-mittelpunkt-der-erde/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2015/reise-nach-dem-mittelpunkt-der-erde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Metro 2034</title>
       <link>https://kevingimbel.de/book/2014/metro-2034/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
@@ -483,6 +573,15 @@ React itself says one very important and true thing about itself:
       
       <guid>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</guid>
       <description>Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with this multi-tasking. In fact, all recently opened tabs are available via the multi-tasking button (square to the down right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you can switch between apps and websites seamlessly you can also set your own status bar colors for chrome which are used on the page and in the multi-tasking overview.</description>
+    </item>
+    
+    <item>
+      <title>Animal Farm</title>
+      <link>https://kevingimbel.de/book/2014/animal-farm/</link>
+      <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/book/2014/animal-farm/</guid>
+      <description></description>
     </item>
     
     <item>
