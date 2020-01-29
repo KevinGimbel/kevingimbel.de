@@ -6,10 +6,22 @@
     <description>Recent content in Home is where 127.0.0.1 is on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>No Tracking</title>
+      <link>https://kevingimbel.de/blog/2020/01/no-tracking/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/no-tracking/</guid>
+      <description>I don&amp;rsquo;t track you. That&amp;rsquo;s a promise and a statement, this website works without Tracking.
+Inspired by Laura Kalbag, who was inspired by the footer text on Karolina Szczur’s website.
+Why The reason I do not use tracking is an idealistic one. I no longer want to collect data for Google, and I do not want to support trackable users across websites.
+Data sharing on the web is absolutely crazy, as this example of USAToday shows - GDPR is saving us Europeans again tho.</description>
+    </item>
     
     <item>
       <title>Two Factor Auth, Password managers, and cloud sync</title>
@@ -130,10 +142,10 @@ Feel free to use these headers for any non-commercial thing you want.</descripti
     
     <item>
       <title>Die Tyranei des Schmetterlings</title>
-      <link>https://kevingimbel.de/book/2020/die-tyranei-des-schmetterlings/</link>
+      <link>https://kevingimbel.de/reading/2020/die-tyranei-des-schmetterlings/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2020/die-tyranei-des-schmetterlings/</guid>
+      <guid>https://kevingimbel.de/reading/2020/die-tyranei-des-schmetterlings/</guid>
       <description></description>
     </item>
     
@@ -149,10 +161,10 @@ The problem with calc is that if it doesn&amp;rsquo;t work you may get a unexpec
     
     <item>
       <title>Fahrenheit 451</title>
-      <link>https://kevingimbel.de/book/2019/fahrenheit-451/</link>
+      <link>https://kevingimbel.de/reading/2019/fahrenheit-451/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2019/fahrenheit-451/</guid>
+      <guid>https://kevingimbel.de/reading/2019/fahrenheit-451/</guid>
       <description></description>
     </item>
     
@@ -167,10 +179,10 @@ The problem with calc is that if it doesn&amp;rsquo;t work you may get a unexpec
     
     <item>
       <title>We</title>
-      <link>https://kevingimbel.de/book/2019/we/</link>
+      <link>https://kevingimbel.de/reading/2019/we/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2019/we/</guid>
+      <guid>https://kevingimbel.de/reading/2019/we/</guid>
       <description></description>
     </item>
     
@@ -196,19 +208,19 @@ All images in this post were taken with my Fujifilm X30 camera.</description>
     
     <item>
       <title>A brief history of time</title>
-      <link>https://kevingimbel.de/book/2019/a-brief-history-of-time/</link>
+      <link>https://kevingimbel.de/reading/2019/a-brief-history-of-time/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2019/a-brief-history-of-time/</guid>
+      <guid>https://kevingimbel.de/reading/2019/a-brief-history-of-time/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Biochips</title>
-      <link>https://kevingimbel.de/book/2018/biochips/</link>
+      <link>https://kevingimbel.de/reading/2018/biochips/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2018/biochips/</guid>
+      <guid>https://kevingimbel.de/reading/2018/biochips/</guid>
       <description></description>
     </item>
     
@@ -223,10 +235,10 @@ All images in this post were taken with my Fujifilm X30 camera.</description>
     
     <item>
       <title>Die Daten, die ich rief: Wie wir unsere Freiheit an Großkonzerne verkaufen </title>
-      <link>https://kevingimbel.de/book/2018/die-daten-die-ich-rief-wie-wir-unsere-freiheit-an-gro%C3%9Fkonzerne-verkaufen/</link>
+      <link>https://kevingimbel.de/reading/2018/die-daten-die-ich-rief/</link>
       <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2018/die-daten-die-ich-rief-wie-wir-unsere-freiheit-an-gro%C3%9Fkonzerne-verkaufen/</guid>
+      <guid>https://kevingimbel.de/reading/2018/die-daten-die-ich-rief/</guid>
       <description></description>
     </item>
     
@@ -263,19 +275,19 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     <item>
       <title>Die Neuromancer-Trilogie</title>
-      <link>https://kevingimbel.de/book/2018/die-neuromancer-trilogie/</link>
+      <link>https://kevingimbel.de/reading/2018/neuromancer-triologie/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2018/die-neuromancer-trilogie/</guid>
+      <guid>https://kevingimbel.de/reading/2018/neuromancer-triologie/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Thing Explainer: Complicated Stuff in Simple Words</title>
-      <link>https://kevingimbel.de/book/2017/thing-explainer-complicated-stuff-in-simple-words/</link>
+      <link>https://kevingimbel.de/reading/2017/thing-explainer/</link>
       <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2017/thing-explainer-complicated-stuff-in-simple-words/</guid>
+      <guid>https://kevingimbel.de/reading/2017/thing-explainer/</guid>
       <description></description>
     </item>
     
@@ -290,19 +302,19 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
     
     <item>
       <title>Die Zeitmaschine</title>
-      <link>https://kevingimbel.de/book/2017/die-zeitmaschine/</link>
+      <link>https://kevingimbel.de/reading/2017/die-zeitmaschine/</link>
       <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2017/die-zeitmaschine/</guid>
+      <guid>https://kevingimbel.de/reading/2017/die-zeitmaschine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What If?: Serious Scientific Answers to Absurd Hypothetical Questions </title>
-      <link>https://kevingimbel.de/book/2017/what-if-serious-scientific-answers-to-absurd-hypothetical-questions/</link>
+      <link>https://kevingimbel.de/reading/2017/what-if/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2017/what-if-serious-scientific-answers-to-absurd-hypothetical-questions/</guid>
+      <guid>https://kevingimbel.de/reading/2017/what-if/</guid>
       <description></description>
     </item>
     
@@ -354,10 +366,10 @@ Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love 
     
     <item>
       <title>The Illustrated A Brief History of Time: Updated and Expanded Edition </title>
-      <link>https://kevingimbel.de/book/2017/the-illustrated-a-brief-history-of-time-updated-and-expanded-edition/</link>
+      <link>https://kevingimbel.de/reading/2017/illustrated-history-of-time/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2017/the-illustrated-a-brief-history-of-time-updated-and-expanded-edition/</guid>
+      <guid>https://kevingimbel.de/reading/2017/illustrated-history-of-time/</guid>
       <description></description>
     </item>
     
@@ -438,10 +450,10 @@ January   View from the hotel in Fuerteventura.   January started with what we c
     
     <item>
       <title>A Beginner&#39;s Guide to Losing Your Mind: Survival Techniques for Staying Sane</title>
-      <link>https://kevingimbel.de/book/2017/a-beginners-guide-to-losing-your-mind-survival-techniques-for-staying-sane/</link>
+      <link>https://kevingimbel.de/reading/2017/a-beginners-guide-to-losing-your-mind/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2017/a-beginners-guide-to-losing-your-mind-survival-techniques-for-staying-sane/</guid>
+      <guid>https://kevingimbel.de/reading/2017/a-beginners-guide-to-losing-your-mind/</guid>
       <description></description>
     </item>
     
@@ -465,10 +477,10 @@ January   View from the hotel in Fuerteventura.   January started with what we c
     
     <item>
       <title>Simulacron-3: Welt am Draht</title>
-      <link>https://kevingimbel.de/book/2016/simulacron-3-welt-am-draht/</link>
+      <link>https://kevingimbel.de/reading/2016/welt-am-draht/</link>
       <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2016/simulacron-3-welt-am-draht/</guid>
+      <guid>https://kevingimbel.de/reading/2016/welt-am-draht/</guid>
       <description></description>
     </item>
     
@@ -493,10 +505,10 @@ This very site you read right now is build with Hugo, a static site generator bu
     
     <item>
       <title>Von Der Erde Zum Mond</title>
-      <link>https://kevingimbel.de/book/2015/von-der-erde-zum-mond/</link>
+      <link>https://kevingimbel.de/reading/2015/von-der-erde-zum-mond/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2015/von-der-erde-zum-mond/</guid>
+      <guid>https://kevingimbel.de/reading/2015/von-der-erde-zum-mond/</guid>
       <description></description>
     </item>
     
@@ -550,19 +562,19 @@ React itself says one very important and true thing about itself:
     
     <item>
       <title>Reise Nach Dem Mittelpunkt Der Erde</title>
-      <link>https://kevingimbel.de/book/2015/reise-nach-dem-mittelpunkt-der-erde/</link>
+      <link>https://kevingimbel.de/reading/2015/reise-nach-dem-mittelpunkt-der-erde/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2015/reise-nach-dem-mittelpunkt-der-erde/</guid>
+      <guid>https://kevingimbel.de/reading/2015/reise-nach-dem-mittelpunkt-der-erde/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Metro 2034</title>
-      <link>https://kevingimbel.de/book/2014/metro-2034/</link>
+      <link>https://kevingimbel.de/reading/2014/metro-2034/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2014/metro-2034/</guid>
+      <guid>https://kevingimbel.de/reading/2014/metro-2034/</guid>
       <description></description>
     </item>
     
@@ -577,10 +589,10 @@ React itself says one very important and true thing about itself:
     
     <item>
       <title>Animal Farm</title>
-      <link>https://kevingimbel.de/book/2014/animal-farm/</link>
+      <link>https://kevingimbel.de/reading/2014/animal-farm/</link>
       <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2014/animal-farm/</guid>
+      <guid>https://kevingimbel.de/reading/2014/animal-farm/</guid>
       <description></description>
     </item>
     
@@ -605,10 +617,10 @@ var d = document, trigger = d.</description>
     
     <item>
       <title>Javascript: The Good Parts</title>
-      <link>https://kevingimbel.de/book/2014/javascript-the-good-parts/</link>
+      <link>https://kevingimbel.de/reading/2014/javascript-the-good-parts/</link>
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2014/javascript-the-good-parts/</guid>
+      <guid>https://kevingimbel.de/reading/2014/javascript-the-good-parts/</guid>
       <description></description>
     </item>
     
@@ -771,19 +783,19 @@ Browser-based The following tools are all for Chrome because I use Chrome for mo
     
     <item>
       <title>Menschliches Allzumenschliches</title>
-      <link>https://kevingimbel.de/book/2013/menschliches-allzumenschliches/</link>
+      <link>https://kevingimbel.de/reading/2012/menschliches-allzumenschliches/</link>
       <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2013/menschliches-allzumenschliches/</guid>
+      <guid>https://kevingimbel.de/reading/2012/menschliches-allzumenschliches/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Metro 2033</title>
-      <link>https://kevingimbel.de/book/2013/metro-2033/</link>
+      <link>https://kevingimbel.de/reading/2013/metro-2033/</link>
       <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2013/metro-2033/</guid>
+      <guid>https://kevingimbel.de/reading/2013/metro-2033/</guid>
       <description></description>
     </item>
     
@@ -906,28 +918,28 @@ Beside switching to a new domain I also switched my hoster.</description>
     
     <item>
       <title>1984</title>
-      <link>https://kevingimbel.de/book/2013/1984/</link>
+      <link>https://kevingimbel.de/reading/2013/1984/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2013/1984/</guid>
+      <guid>https://kevingimbel.de/reading/2013/1984/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Brave New World</title>
-      <link>https://kevingimbel.de/book/2013/brave-new-world/</link>
+      <link>https://kevingimbel.de/reading/2013/brave-new-world/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2013/brave-new-world/</guid>
+      <guid>https://kevingimbel.de/reading/2013/brave-new-world/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Der Antichrist</title>
-      <link>https://kevingimbel.de/book/2013/der-antichrist/</link>
+      <link>https://kevingimbel.de/reading/2013/der-antichrist/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2013/der-antichrist/</guid>
+      <guid>https://kevingimbel.de/reading/2013/der-antichrist/</guid>
       <description></description>
     </item>
     
@@ -960,28 +972,28 @@ Beside switching to a new domain I also switched my hoster.</description>
     
     <item>
       <title>Berlin Gothic: Der Versteckte Wille</title>
-      <link>https://kevingimbel.de/book/2012/berlin-gothic-der-versteckte-wille/</link>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-der-versteckte-wille/</link>
       <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2012/berlin-gothic-der-versteckte-wille/</guid>
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-der-versteckte-wille/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Berlin Gothic: Die Versteckte Bedeutung</title>
-      <link>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-bedeutung/</link>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-bedeutung/</link>
       <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-bedeutung/</guid>
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-bedeutung/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Berlin Gothic: Nachts Bei Max</title>
-      <link>https://kevingimbel.de/book/2012/berlin-gothic-nachts-bei-max/</link>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-nachts-bei-max/</link>
       <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2012/berlin-gothic-nachts-bei-max/</guid>
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-nachts-bei-max/</guid>
       <description></description>
     </item>
     
@@ -996,46 +1008,46 @@ Beside switching to a new domain I also switched my hoster.</description>
     
     <item>
       <title>Berlin Gothic</title>
-      <link>https://kevingimbel.de/book/2012/berlin-gothic/</link>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2012/berlin-gothic/</guid>
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Berlin Gothic: Die Versteckte Stadt</title>
-      <link>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-stadt/</link>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-stadt/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-stadt/</guid>
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-stadt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Berlin Gothic: Gottmaschine</title>
-      <link>https://kevingimbel.de/book/2012/berlin-gothic-gottmaschine/</link>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-gottmaschine/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2012/berlin-gothic-gottmaschine/</guid>
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-gottmaschine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Berlin Gothic: Xavers Ende</title>
-      <link>https://kevingimbel.de/book/2012/berlin-gothic-xavers-ende/</link>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-xavers-ende/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2012/berlin-gothic-xavers-ende/</guid>
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-xavers-ende/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fairies and Folks of Ireland</title>
-      <link>https://kevingimbel.de/book/2012/fairies-and-folks-of-ireland/</link>
+      <link>https://kevingimbel.de/reading/2012/fairies-and-folks-of-ireland/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/book/2012/fairies-and-folks-of-ireland/</guid>
+      <guid>https://kevingimbel.de/reading/2012/fairies-and-folks-of-ireland/</guid>
       <description></description>
     </item>
     

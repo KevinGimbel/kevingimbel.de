@@ -6,10 +6,37 @@
     <description>Recent content in Tags on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>capitalism</title>
+      <link>https://kevingimbel.de/tags/capitalism/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/capitalism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://kevingimbel.de/tags/security/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>surveillance</title>
+      <link>https://kevingimbel.de/tags/surveillance/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/surveillance/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>2FA</title>
@@ -62,15 +89,6 @@
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/productivity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://kevingimbel.de/tags/security/</link>
-      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/security/</guid>
       <description></description>
     </item>
     

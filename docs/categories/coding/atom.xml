@@ -7,12 +7,84 @@
             <link href="https://kevingimbel.de/categories/coding/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/categories/coding/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/categories/coding/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-27T16:18:40+01:00</updated>
+    <updated>2020-01-29T17:47:06+01:00</updated>
     
     
     
     
         <id>https://kevingimbel.de/categories/coding/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[No Tracking]]></title>
+            <link href="https://kevingimbel.de/blog/2020/01/no-tracking/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="related" type="text/html" title="Two Factor Auth, Password managers, and cloud sync" />
+                <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2" />
+            
+                <id>https://kevingimbel.de/blog/2020/01/no-tracking/</id>
+            
+            
+            <published>2020-01-29T00:00:00+00:00</published>
+            <updated>2020-01-29T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p><strong>I don&rsquo;t track you.</strong> That&rsquo;s a promise and a statement, this website works without Tracking.</p>
+<p>Inspired by <a href="https://laurakalbag.com/i-dont-track-you/">Laura Kalbag</a>, who was inspired by <a href="https://thefox.is/">the footer text on Karolina Szczur’s website</a>.</p>
+<h2 id="why">Why</h2>
+<p>The reason I do not use tracking is an idealistic one. I no longer want to collect data for Google, and I do not want to support trackable users across websites.</p>
+<p>Data sharing on the web is absolutely crazy, as this example of USAToday shows - <abbr title="General Data Protection Law">GDPR</abbr>
+ is saving us Europeans again tho.</p>
+
+
+
+
+
+
+<iframe src= "https://mastodon.sdf.org/@tomasino/103536972269541464/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" height="333"></iframe>
+
+<p>I do not wish to be part of this, so this website uses no tracking codes. No ads, no <abbr title="Content Delivery Network, a central storage for assets such as JavaScript libraries">CDN</abbr>
+. For Embeds I have copied the JavaScript and inlined it so that it does not do any requests to third-party websites when possible.</p>
+<h2 id="what-can-you-do">What can YOU do?</h2>
+<h3 id="firefox--addons">Firefox + Addons</h3>
+<p>I recommend <a href="https://www.mozilla.org/en-US/firefox/">Mozilla Firefox</a> as a more privacy-focused browser, with the following extensions:</p>
+<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/">Privacy Badger</a> by EFF</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin">uBlock Origin</a></li>
+</ul>
+<p>Privacy Badger blocks tracking tools and uBlock Origin blocks a whole lot of stuff, including ads (see <a href="https://github.com/gorhill/uBlock">github.com/gorhill/uBlock</a> for more information). I&rsquo;m no longer using the web without these two. Both addons are also available for Firefox on Android.</p>
+<h3 id="remove-analytics-from-your-website">Remove Analytics from your website</h3>
+<p>If you do not need it, remove Analytics from your website. If you need it, use a privacy-focused alternative to Google Analytics such as <a href="https://matomo.org/">Matomo</a> (previously known as Piwik).</p>
+<p>By not using tracking software - and not relying on hundreds (or tens) of external libraries and tools you can make the web better for everyone.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/surveillance" term="surveillance" label="surveillance" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/capitalism" term="capitalism" label="capitalism" />
+                            
+                        
+                    
+                
+            
+        </entry>
     
         
         <entry>

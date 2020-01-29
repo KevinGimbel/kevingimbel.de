@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kevingimbel.de/blog/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/capitalism/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/coding/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/blog/2020/01/no-tracking/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/security/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/surveillance/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/tags/2fa/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
@@ -13,22 +58,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/blog/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/categories/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/tags/cloud_storage/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,17 +78,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/security/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/tags/sync/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -208,11 +228,6 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/coding/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/tags/linux/</loc>
     <lastmod>2020-01-13T00:00:00+00:00</lastmod>
   </url>
@@ -328,7 +343,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2020/die-tyranei-des-schmetterlings/</loc>
+    <loc>https://kevingimbel.de/reading/2020/die-tyranei-des-schmetterlings/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -338,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/</loc>
+    <loc>https://kevingimbel.de/reading/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -348,7 +363,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2019/fahrenheit-451/</loc>
+    <loc>https://kevingimbel.de/reading/2019/fahrenheit-451/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -368,7 +383,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2019/we/</loc>
+    <loc>https://kevingimbel.de/reading/2019/we/</loc>
     <lastmod>2019-11-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -408,12 +423,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2019/a-brief-history-of-time/</loc>
+    <loc>https://kevingimbel.de/reading/2019/a-brief-history-of-time/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2018/biochips/</loc>
+    <loc>https://kevingimbel.de/reading/2018/biochips/</loc>
     <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -453,7 +468,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2018/die-daten-die-ich-rief-wie-wir-unsere-freiheit-an-gro%C3%9Fkonzerne-verkaufen/</loc>
+    <loc>https://kevingimbel.de/reading/2018/die-daten-die-ich-rief/</loc>
     <lastmod>2018-10-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -508,12 +523,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2018/die-neuromancer-trilogie/</loc>
+    <loc>https://kevingimbel.de/reading/2018/neuromancer-triologie/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2017/thing-explainer-complicated-stuff-in-simple-words/</loc>
+    <loc>https://kevingimbel.de/reading/2017/thing-explainer/</loc>
     <lastmod>2017-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -543,12 +558,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2017/die-zeitmaschine/</loc>
+    <loc>https://kevingimbel.de/reading/2017/die-zeitmaschine/</loc>
     <lastmod>2017-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2017/what-if-serious-scientific-answers-to-absurd-hypothetical-questions/</loc>
+    <loc>https://kevingimbel.de/reading/2017/what-if/</loc>
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -593,7 +608,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2017/the-illustrated-a-brief-history-of-time-updated-and-expanded-edition/</loc>
+    <loc>https://kevingimbel.de/reading/2017/illustrated-history-of-time/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -673,7 +688,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2017/a-beginners-guide-to-losing-your-mind-survival-techniques-for-staying-sane/</loc>
+    <loc>https://kevingimbel.de/reading/2017/a-beginners-guide-to-losing-your-mind/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -708,7 +723,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2016/simulacron-3-welt-am-draht/</loc>
+    <loc>https://kevingimbel.de/reading/2016/welt-am-draht/</loc>
     <lastmod>2016-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -743,7 +758,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2015/von-der-erde-zum-mond/</loc>
+    <loc>https://kevingimbel.de/reading/2015/von-der-erde-zum-mond/</loc>
     <lastmod>2015-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -823,12 +838,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2015/reise-nach-dem-mittelpunkt-der-erde/</loc>
+    <loc>https://kevingimbel.de/reading/2015/reise-nach-dem-mittelpunkt-der-erde/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2014/metro-2034/</loc>
+    <loc>https://kevingimbel.de/reading/2014/metro-2034/</loc>
     <lastmod>2014-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -848,17 +863,17 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2014/animal-farm/</loc>
+    <loc>https://kevingimbel.de/reading/2014/animal-farm/</loc>
     <lastmod>2014-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/magento/</loc>
+    <loc>https://kevingimbel.de/tags/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/magento/</loc>
+    <loc>https://kevingimbel.de/categories/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -868,12 +883,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/php/</loc>
+    <loc>https://kevingimbel.de/categories/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/php/</loc>
+    <loc>https://kevingimbel.de/tags/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -888,7 +903,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2014/javascript-the-good-parts/</loc>
+    <loc>https://kevingimbel.de/reading/2014/javascript-the-good-parts/</loc>
     <lastmod>2014-08-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -1038,12 +1053,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2013/menschliches-allzumenschliches/</loc>
+    <loc>https://kevingimbel.de/reading/2012/menschliches-allzumenschliches/</loc>
     <lastmod>2013-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2013/metro-2033/</loc>
+    <loc>https://kevingimbel.de/reading/2013/metro-2033/</loc>
     <lastmod>2013-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -1153,17 +1168,17 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2013/1984/</loc>
+    <loc>https://kevingimbel.de/reading/2013/1984/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2013/brave-new-world/</loc>
+    <loc>https://kevingimbel.de/reading/2013/brave-new-world/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2013/der-antichrist/</loc>
+    <loc>https://kevingimbel.de/reading/2013/der-antichrist/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -1208,17 +1223,17 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2012/berlin-gothic-der-versteckte-wille/</loc>
+    <loc>https://kevingimbel.de/reading/2012/berlin-gothic-der-versteckte-wille/</loc>
     <lastmod>2012-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-bedeutung/</loc>
+    <loc>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-bedeutung/</loc>
     <lastmod>2012-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2012/berlin-gothic-nachts-bei-max/</loc>
+    <loc>https://kevingimbel.de/reading/2012/berlin-gothic-nachts-bei-max/</loc>
     <lastmod>2012-05-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -1233,27 +1248,27 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2012/berlin-gothic/</loc>
+    <loc>https://kevingimbel.de/reading/2012/berlin-gothic/</loc>
     <lastmod>2012-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2012/berlin-gothic-die-versteckte-stadt/</loc>
+    <loc>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-stadt/</loc>
     <lastmod>2012-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2012/berlin-gothic-gottmaschine/</loc>
+    <loc>https://kevingimbel.de/reading/2012/berlin-gothic-gottmaschine/</loc>
     <lastmod>2012-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2012/berlin-gothic-xavers-ende/</loc>
+    <loc>https://kevingimbel.de/reading/2012/berlin-gothic-xavers-ende/</loc>
     <lastmod>2012-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/book/2012/fairies-and-folks-of-ireland/</loc>
+    <loc>https://kevingimbel.de/reading/2012/fairies-and-folks-of-ireland/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
   </url>
   
