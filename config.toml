@@ -52,7 +52,7 @@ location = "Wiesbaden, Germany"
     [[menu.main]]
     identifier = "reading"
     name = "Reading"
-    URL = "/book/"
+    URL = "/reading/"
     Weight = 45
 
     [[menu.main]]
