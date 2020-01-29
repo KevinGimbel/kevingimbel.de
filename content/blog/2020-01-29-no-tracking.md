@@ -40,3 +40,5 @@ Privacy Badger blocks tracking tools and uBlock Origin blocks a whole lot of stu
 ### Remove Analytics from your website
 
 If you do not need it, remove Analytics from your website. If you need it, use a privacy-focused alternative to Google Analytics such as [Matomo](https://matomo.org/) (previously known as Piwik).
+
+By not using tracking software - and not relying on hundreds (or tens) of external libraries and tools you can make the web better for everyone.
