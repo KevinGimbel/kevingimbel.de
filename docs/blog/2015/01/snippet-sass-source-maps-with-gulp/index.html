@@ -1,228 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Snippet: SASS Source Maps with Gulp &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords="gulp sass workflow productivity  blog coding nodejs javascript tools  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <header class="intro-text">
-        <span>
-        
-        
-        Snippet: SASS Source Maps with Gulp
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            
-
-
-
-
-
-<section class="age-note">
-    <h2>ATTENTION!</h2>
-    <p>This article is over 4 years old, it may be outdated!</p>
-</section>
-
-
-
-<p>Written on <time datetime="2015-01-22 00:00:00 &#43;0000 UTC">22. Jan 2015</time>  </p>
-            <p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Snippet: SASS Source Maps with Gulp &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="gulp sass workflow productivity  blog coding nodejs javascript tools"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>Snippet: SASS Source Maps with Gulp</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2015-01-22 00:00:00 +0000 UTC">22. Jan 2015</time></p><p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
-super handy once your project get&rsquo;s bigger! Anyway, here&rsquo;s how to implement them with <a href="http://gulpjs.com0">Gulp</a>,
-<a href="https://www.npmjs.com/package/gulp-sass">Gulp-Sass</a> and <a href="https://www.npmjs.com/package/gulp-autoprefixer">Autoprefixer</a>.</p>
-<p>First of all, you need to install  the different gulp plugins (and gulp, if you haven&rsquo;t).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install --save-dev gulp-sass gulp-sourcemaps gulp-autoprefixer
-</code></pre></div><p>After everything is installed we&rsquo;ll create the basic Gulp setup.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>),
-      <span style="color:#a6e22e">sass</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-sass&#39;</span>),
-      <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-autoprefixer&#39;</span>),
-      <span style="color:#a6e22e">maps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-sourcemaps&#39;</span>);
+super handy once your project get&rsquo;s bigger! Anyway, here&rsquo;s how to implement them with <a href=http://gulpjs.com0>Gulp</a>,
+<a href=https://www.npmjs.com/package/gulp-sass>Gulp-Sass</a> and <a href=https://www.npmjs.com/package/gulp-autoprefixer>Autoprefixer</a>.</p><p>First of all, you need to install the different gulp plugins (and gulp, if you haven&rsquo;t).</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ npm install --save-dev gulp-sass gulp-sourcemaps gulp-autoprefixer
+</code></pre></div><p>After everything is installed we&rsquo;ll create the basic Gulp setup.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>gulp</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;gulp&#39;</span>),
+      <span style=color:#a6e22e>sass</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;gulp-sass&#39;</span>),
+      <span style=color:#a6e22e>prefix</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;gulp-autoprefixer&#39;</span>),
+      <span style=color:#a6e22e>maps</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;gulp-sourcemaps&#39;</span>);
 
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> {
-        <span style="color:#a6e22e">scss</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./skin/frontend/my-theme/default/scss/&#39;</span>,
-        <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./skin/frontend/my-theme/default/css/&#39;</span>
+  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>path</span> <span style=color:#f92672>=</span> {
+        <span style=color:#a6e22e>scss</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;./skin/frontend/my-theme/default/scss/&#39;</span>,
+        <span style=color:#a6e22e>css</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;./skin/frontend/my-theme/default/css/&#39;</span>
       }
 </code></pre></div><p>Next the tasks will be created, I split them into 2, one for Sass and Source Maps and one for
 Autoprefixer. It&rsquo;s important to create the Source Maps <em>before</em> using Autoprefixer, otherwise the line numbers won&rsquo;t be
-right. This happen because Autoprefixer adds more properties to your compiled CSS!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#66d9ef">function</span>() {
-<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">scss</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;styles.scss&#39;</span>)
-  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">maps</span>.<span style="color:#a6e22e">init</span>())
-    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">sass</span>({ <span style="color:#a6e22e">outputStyle</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;compressed&#39;</span> }))
-      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">maps</span>.<span style="color:#a6e22e">write</span>())
-      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">css</span> ))
+right. This happen because Autoprefixer adds more properties to your compiled CSS!</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>gulp</span>.<span style=color:#a6e22e>task</span>(<span style=color:#e6db74>&#39;sass&#39;</span>, <span style=color:#66d9ef>function</span>() {
+<span style=color:#a6e22e>gulp</span>.<span style=color:#a6e22e>src</span>( <span style=color:#a6e22e>path</span>.<span style=color:#a6e22e>scss</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;styles.scss&#39;</span>)
+  .<span style=color:#a6e22e>pipe</span>(<span style=color:#a6e22e>maps</span>.<span style=color:#a6e22e>init</span>())
+    .<span style=color:#a6e22e>pipe</span>(<span style=color:#a6e22e>sass</span>({ <span style=color:#a6e22e>outputStyle</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;compressed&#39;</span> }))
+      .<span style=color:#a6e22e>pipe</span>(<span style=color:#a6e22e>maps</span>.<span style=color:#a6e22e>write</span>())
+      .<span style=color:#a6e22e>pipe</span>(<span style=color:#a6e22e>gulp</span>.<span style=color:#a6e22e>dest</span>( <span style=color:#a6e22e>path</span>.<span style=color:#a6e22e>css</span> ))
 });
 
-<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;autoprefix&#39;</span>, <span style="color:#66d9ef">function</span>() {
-<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">css</span> )
-  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">prefix</span>(<span style="color:#e6db74">&#39;last 5 versions&#39;</span>, <span style="color:#e6db74">&#39;&gt; 1%&#39;</span>, <span style="color:#e6db74">&#39;ie8&#39;</span>))
-  .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>( <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">css</span> ));  
+<span style=color:#a6e22e>gulp</span>.<span style=color:#a6e22e>task</span>(<span style=color:#e6db74>&#39;autoprefix&#39;</span>, <span style=color:#66d9ef>function</span>() {
+<span style=color:#a6e22e>gulp</span>.<span style=color:#a6e22e>src</span>( <span style=color:#a6e22e>path</span>.<span style=color:#a6e22e>css</span> )
+  .<span style=color:#a6e22e>pipe</span>(<span style=color:#a6e22e>prefix</span>(<span style=color:#e6db74>&#39;last 5 versions&#39;</span>, <span style=color:#e6db74>&#39;&gt; 1%&#39;</span>, <span style=color:#e6db74>&#39;ie8&#39;</span>))
+  .<span style=color:#a6e22e>pipe</span>(<span style=color:#a6e22e>gulp</span>.<span style=color:#a6e22e>dest</span>( <span style=color:#a6e22e>path</span>.<span style=color:#a6e22e>css</span> ));  
 });
 </code></pre></div><p>First of all source maps need to be initalized, next a compressed css file from the SCSS files is created, the source
 maps are written and we&rsquo;re all good! In a second task Autoprefixer takes the compiled, mapped CSS file and prefixes it
 with whatever needs to be prefixed. The output looks like below (look at the right top of each rule set). Click on each
-image to view it in full-size.</p>
-<!-- raw HTML omitted -->
-<p>In case you don&rsquo;t want your source maps in production you could split everything into 3 taks and run them in the order
-<code>[&quot;sass&quot;, &quot;sourcemaps&quot;, &quot;autoprefix&quot;]</code> using <code>gulp.task()</code> and then later have the following production task.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;production&#39;</span>, [<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#39;autoprefix&#39;</span>];
+image to view it in full-size.</p><p>In case you don&rsquo;t want your source maps in production you could split everything into 3 taks and run them in the order
+<code>["sass", "sourcemaps", "autoprefix"]</code> using <code>gulp.task()</code> and then later have the following production task.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>gulp</span>.<span style=color:#a6e22e>task</span>(<span style=color:#e6db74>&#39;production&#39;</span>, [<span style=color:#e6db74>&#39;sass&#39;</span>, <span style=color:#e6db74>&#39;autoprefix&#39;</span>];
 
-<span style="color:#75715e">// Use the following command to keep out Source Maps.
-</span><span style="color:#75715e"></span><span style="color:#75715e">// $ gulp production
-</span></code></pre></div>
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under nodejs"
-                href="https://kevingimbel.de/categories/nodejs/">nodejs</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under javascript"
-                href="https://kevingimbel.de/categories/javascript/">javascript</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under tools"
-                href="https://kevingimbel.de/categories/tools/">tools</a>
-        </li></ul>
-</section>
-
-        
-
-<section class="tags">
-    <h3>Tags</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with gulp"
-                href="https://kevingimbel.de/tags/gulp/">gulp</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with sass"
-                href="https://kevingimbel.de/tags/sass/">sass</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with workflow"
-                href="https://kevingimbel.de/tags/workflow/">workflow</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with productivity"
-                href="https://kevingimbel.de/tags/productivity/">productivity</a>
-        </li></ul>
-</section>
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-01-22-snippet-source-maps-gulp.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+<span style=color:#75715e>// Use the following command to keep out Source Maps.
+</span><span style=color:#75715e></span><span style=color:#75715e>// $ gulp production
+</span></code></pre></div></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under nodejs" href=https://kevingimbel.de/categories/nodejs/>nodejs</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under javascript" href=https://kevingimbel.de/categories/javascript/>javascript</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tools" href=https://kevingimbel.de/categories/tools/>tools</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with gulp" href=https://kevingimbel.de/tags/gulp/>gulp</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with sass" href=https://kevingimbel.de/tags/sass/>sass</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with workflow" href=https://kevingimbel.de/tags/workflow/>workflow</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with productivity" href=https://kevingimbel.de/tags/productivity/>productivity</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-01-22-snippet-source-maps-gulp.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>

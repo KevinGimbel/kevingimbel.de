@@ -1,212 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Custom Radio Buttons &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords="css interface design  blog coding frontend  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <header class="intro-text">
-        <span>
-        
-        
-        Custom Radio Buttons
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            
-
-
-
-
-
-<section class="age-note">
-    <h2>ATTENTION!</h2>
-    <p>This article is over 4 years old, it may be outdated!</p>
-</section>
-
-
-
-<p>Written on <time datetime="2013-10-28 00:00:00 &#43;0000 UTC">28. Oct 2013</time>  </p>
-            <p>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).</p>
-<p>A few years ago I had to do this once and I remember doing it with an image and <code>background-position</code> but as of today I really love pseudo elements and &ldquo;Look-Ma-No-Image!&quot;. However I decided to use Icon Fonts this time and play around a bit with them. My HTML Markup is very simple:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
-  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
-  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
-  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
-  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
-</code></pre></div><p>That&rsquo;s it: A group of <code>radio inputs</code> representing a rating system with 1-5 possible choices. The CSS part is a little bit trickier (note that I&rsquo;m using Sass with SCSS Syntax!)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">rating--star</span> {
-  <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#ff7711</span>;
-  <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">{</span>
-    <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;\2605&#34;</span>;
-    <span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
-    <span style="color:#66d9ef">font-family</span>:entypo, <span style="color:#66d9ef">sans-serif</span>;
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Custom Radio Buttons &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="css interface design  blog coding frontend"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>Custom Radio Buttons</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2013-10-28 00:00:00 +0000 UTC">28. Oct 2013</time></p><p>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).</p><p>A few years ago I had to do this once and I remember doing it with an image and <code>background-position</code> but as of today I really love pseudo elements and &ldquo;Look-Ma-No-Image!". However I decided to use Icon Fonts this time and play around a bit with them. My HTML Markup is very simple:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;radio&#34;</span> <span style=color:#a6e22e>data-rate</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating--star&#34;</span> /&gt;
+  &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;radio&#34;</span> <span style=color:#a6e22e>data-rate</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;2&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating--star&#34;</span> /&gt;
+  &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;radio&#34;</span> <span style=color:#a6e22e>data-rate</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;3&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating--star&#34;</span> /&gt;
+  &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;radio&#34;</span> <span style=color:#a6e22e>data-rate</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;4&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating--star&#34;</span> /&gt;
+  &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;radio&#34;</span> <span style=color:#a6e22e>data-rate</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;5&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;rating--star&#34;</span> /&gt;
+</code></pre></div><p>That&rsquo;s it: A group of <code>radio inputs</code> representing a rating system with 1-5 possible choices. The CSS part is a little bit trickier (note that I&rsquo;m using Sass with SCSS Syntax!)</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#a6e22e>rating--star</span> {
+  <span style=color:#66d9ef>color</span>:<span style=color:#ae81ff>#ff7711</span>;
+  <span style=color:#960050;background-color:#1e0010>&amp;</span><span style=color:#960050;background-color:#1e0010>:</span><span style=color:#960050;background-color:#1e0010>b</span><span style=color:#960050;background-color:#1e0010>e</span><span style=color:#960050;background-color:#1e0010>f</span><span style=color:#960050;background-color:#1e0010>o</span><span style=color:#960050;background-color:#1e0010>r</span><span style=color:#960050;background-color:#1e0010>e</span> <span style=color:#960050;background-color:#1e0010>{</span>
+    <span style=color:#66d9ef>content</span>:<span style=color:#e6db74>&#34;\2605&#34;</span>;
+    <span style=color:#66d9ef>font-size</span>:<span style=color:#ae81ff>2</span><span style=color:#66d9ef>em</span>;
+    <span style=color:#66d9ef>font-family</span>:entypo, <span style=color:#66d9ef>sans-serif</span>;
   }
 
-  <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">checked</span> <span style="color:#f92672">~</span> :<span style="color:#a6e22e">before</span> {
-    <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;\2606&#34;</span>;
+  <span style=color:#f92672>&amp;</span>:<span style=color:#a6e22e>checked</span> <span style=color:#f92672>~</span> :<span style=color:#a6e22e>before</span> {
+    <span style=color:#66d9ef>content</span>:<span style=color:#e6db74>&#34;\2606&#34;</span>;
   }
 
-  <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">focus</span> {
-    <span style="color:#66d9ef">outline</span>:<span style="color:#ae81ff">0</span>;
+  <span style=color:#f92672>&amp;</span>:<span style=color:#a6e22e>focus</span> {
+    <span style=color:#66d9ef>outline</span>:<span style=color:#ae81ff>0</span>;
   }
-<span style="color:#960050;background-color:#1e0010">}</span>
-</code></pre></div><p>A small piece of code, yet it can seem complicated. I&rsquo;ll break it down a bit.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">rating--star</span> {
-  <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#ff7711</span>;
+<span style=color:#960050;background-color:#1e0010>}</span>
+</code></pre></div><p>A small piece of code, yet it can seem complicated. I&rsquo;ll break it down a bit.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#a6e22e>rating--star</span> {
+  <span style=color:#66d9ef>color</span>:<span style=color:#ae81ff>#ff7711</span>;
 
-  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">)</span>;
+  <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#960050;background-color:#1e0010>i</span><span style=color:#960050;background-color:#1e0010>n</span><span style=color:#960050;background-color:#1e0010>c</span><span style=color:#960050;background-color:#1e0010>l</span><span style=color:#960050;background-color:#1e0010>u</span><span style=color:#960050;background-color:#1e0010>d</span><span style=color:#960050;background-color:#1e0010>e</span> <span style=color:#960050;background-color:#1e0010>a</span><span style=color:#960050;background-color:#1e0010>p</span><span style=color:#960050;background-color:#1e0010>p</span><span style=color:#960050;background-color:#1e0010>e</span><span style=color:#960050;background-color:#1e0010>a</span><span style=color:#960050;background-color:#1e0010>r</span><span style=color:#960050;background-color:#1e0010>a</span><span style=color:#960050;background-color:#1e0010>n</span><span style=color:#960050;background-color:#1e0010>c</span><span style=color:#960050;background-color:#1e0010>e</span><span style=color:#960050;background-color:#1e0010>(</span><span style=color:#960050;background-color:#1e0010>n</span><span style=color:#960050;background-color:#1e0010>o</span><span style=color:#960050;background-color:#1e0010>n</span><span style=color:#960050;background-color:#1e0010>e</span><span style=color:#960050;background-color:#1e0010>)</span>;
 
-  <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">{</span>
-    <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;\2605&#34;</span>;
-    <span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
-    <span style="color:#66d9ef">font-family</span>:entypo, <span style="color:#66d9ef">sans-serif</span>;
+  <span style=color:#960050;background-color:#1e0010>&amp;</span><span style=color:#960050;background-color:#1e0010>:</span><span style=color:#960050;background-color:#1e0010>b</span><span style=color:#960050;background-color:#1e0010>e</span><span style=color:#960050;background-color:#1e0010>f</span><span style=color:#960050;background-color:#1e0010>o</span><span style=color:#960050;background-color:#1e0010>r</span><span style=color:#960050;background-color:#1e0010>e</span> <span style=color:#960050;background-color:#1e0010>{</span>
+    <span style=color:#66d9ef>content</span>:<span style=color:#e6db74>&#34;\2605&#34;</span>;
+    <span style=color:#66d9ef>font-size</span>:<span style=color:#ae81ff>2</span><span style=color:#66d9ef>em</span>;
+    <span style=color:#66d9ef>font-family</span>:entypo, <span style=color:#66d9ef>sans-serif</span>;
   }
-</code></pre></div><p>The first part represents the class itself and the <code>:before</code> pseudo element that holds the icon (in this case a Star from the entypo icon font served via <a href="http://weloveiconfonts.com">We Love Icon Fonts</a>), I set the color on the element directly because the <code>:before</code> and <code>:checked ~ :before</code> are using the same color. <code>appearance:none;</code> removes the User Agent style from the input element or, in other words, &ldquo;hides&rdquo; the element.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"> <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">checked</span> <span style="color:#f92672">~</span> :<span style="color:#a6e22e">before</span> {
-    <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;\2606&#34;</span>;
+</code></pre></div><p>The first part represents the class itself and the <code>:before</code> pseudo element that holds the icon (in this case a Star from the entypo icon font served via <a href=http://weloveiconfonts.com>We Love Icon Fonts</a>), I set the color on the element directly because the <code>:before</code> and <code>:checked ~ :before</code> are using the same color. <code>appearance:none;</code> removes the User Agent style from the input element or, in other words, &ldquo;hides&rdquo; the element.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css> <span style=color:#f92672>&amp;</span>:<span style=color:#a6e22e>checked</span> <span style=color:#f92672>~</span> :<span style=color:#a6e22e>before</span> {
+    <span style=color:#66d9ef>content</span>:<span style=color:#e6db74>&#34;\2606&#34;</span>;
   }
-</code></pre></div><p>The next line says &ldquo;when the input is <code>:checked</code> change the properties of <code>:before</code>&rdquo;. So when it is checked I want the filled Star to show up (&quot;\2606&rdquo;). Seems logical? It&rsquo;s not. <code>\2606</code> is the empty star. So the <code>&amp;:checked ~ :before</code> pseudo holds the icon that should be included if the button is not checked and the <code>:before</code> holds the checked (in this case filled) icon. This is because <code>:checked ~ :before</code> selects every element that is preceded of the <code>:checked</code> element. This comes handy because this also means all inputs display a filled star if we check the last star (and that&rsquo;s exactly what we want).</p>
-<p>A live demo can be found on <a href="http://codepen.io/kevingimbel/pen/kwIgi">CodePen</a>.</p>
-
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under frontend"
-                href="https://kevingimbel.de/categories/frontend/">frontend</a>
-        </li></ul>
-</section>
-
-        
-
-<section class="tags">
-    <h3>Tags</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with css"
-                href="https://kevingimbel.de/tags/css/">css</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with interface"
-                href="https://kevingimbel.de/tags/interface/">interface</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with design"
-                href="https://kevingimbel.de/tags/design/">design</a>
-        </li></ul>
-</section>
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-10-28-custom-radio-buttons.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+</code></pre></div><p>The next line says &ldquo;when the input is <code>:checked</code> change the properties of <code>:before</code>&rdquo;. So when it is checked I want the filled Star to show up ("\2606&rdquo;). Seems logical? It&rsquo;s not. <code>\2606</code> is the empty star. So the <code>&:checked ~ :before</code> pseudo holds the icon that should be included if the button is not checked and the <code>:before</code> holds the checked (in this case filled) icon. This is because <code>:checked ~ :before</code> selects every element that is preceded of the <code>:checked</code> element. This comes handy because this also means all inputs display a filled star if we check the last star (and that&rsquo;s exactly what we want).</p><p>A live demo can be found on <a href=http://codepen.io/kevingimbel/pen/kwIgi>CodePen</a>.</p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with css" href=https://kevingimbel.de/tags/css/>css</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with interface" href=https://kevingimbel.de/tags/interface/>interface</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with design" href=https://kevingimbel.de/tags/design/>design</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-10-28-custom-radio-buttons.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>

@@ -1,25 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>design on KevOps</title>
-    <link>https://kevingimbel.de/tags/design/</link>
-    <description>Recent content in design on KevOps</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kevingimbel.de/tags/design/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Custom Radio Buttons</title>
-      <link>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</link>
-      <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</guid>
-      <description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&amp;rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
-A few years ago I had to do this once and I remember doing it with an image and background-position but as of today I really love pseudo elements and &amp;ldquo;Look-Ma-No-Image!</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>design on KevOps</title><link>https://kevingimbel.de/tags/design/</link><description>Recent content in design on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 28 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/design/index.xml" rel="self" type="application/rss+xml"/><item><title>Custom Radio Buttons</title><link>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</link><pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</guid><description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&amp;rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
+A few years ago I had to do this once and I remember doing it with an image and background-position but as of today I really love pseudo elements and &amp;ldquo;Look-Ma-No-Image!</description></item></channel></rss>

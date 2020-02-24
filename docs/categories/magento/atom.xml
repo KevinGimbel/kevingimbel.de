@@ -1,34 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[magento on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/categories/magento/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/categories/magento/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/categories/magento/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-29T17:47:06+01:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/categories/magento/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Magento: Add fields to the Admin Backend]]></title>
-            <link href="https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="related" type="text/html" title="Magento: get and set variables in config.xml" />
-            
-                <id>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</id>
-            
-            
-            <published>2014-08-27T00:00:00+00:00</published>
-            <updated>2014-08-27T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">magento on KevOps</title><link href="https://kevingimbel.de/categories/magento/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/categories/magento/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/categories/magento/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/categories/magento/</id><entry><title type="html">Magento: Add fields to the Admin Backend</title><link href="https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="related" type="text/html" title="Magento: get and set variables in config.xml"/><id>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</id><published>2014-08-27T00:00:00+00:00</published><updated>2014-08-27T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely
 <em>System-&gt;Config-&gt;Catalog</em> where the user could later insert some SKUs to control which products are shown on the home
 page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a
 settings page. Not only was this rather complex it was also way too &ldquo;over engineered&rdquo; for a simple thing like a text
@@ -141,56 +111,7 @@ those fields is also easy, as the following example shows.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;catalog/featured_products/product_skus&#39;</span>); <span style="color:#75715e">?&gt;</span>
 </code></pre></div><p>The logic here is simply <code>section/groupname/fieldname</code>. This fits pretty good with the previously mentioned folder
 structure of Magento.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/php" term="php" label="php" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/xml" term="xml" label="xml" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/php" term="php" label="php" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Magento: get and set variables in config.xml]]></title>
-            <link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</id>
-            
-            
-            <published>2014-05-27T00:00:00+00:00</published>
-            <updated>2014-05-27T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&rsquo;m
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento"/><category scheme="https://kevingimbel.de/categories/php" term="php" label="php"/><category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend"/><category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento"/><category scheme="https://kevingimbel.de/tags/xml" term="xml" label="xml"/><category scheme="https://kevingimbel.de/tags/php" term="php" label="php"/></entry><entry><title type="html">Magento: get and set variables in config.xml</title><link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</id><published>2014-05-27T00:00:00+00:00</published><updated>2014-05-27T00:00:00+00:00</updated><content type="html"><![CDATA[<p>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&rsquo;m
 working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for),
 however this form should be &ldquo;cloned&rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is
 MVC-like I  believed there would be an easy way to pass email addresses to the Controller. Indeed I found a way to do
@@ -248,34 +169,4 @@ handling this.</p>
 </code></pre></div><p>The fallback is used for the case of no match - it should not happen but it still can happen, so it&rsquo;s always save to
 have a fallback. In this case it just goes to the generic info eMail of the client.</p>
 <p>I&rsquo;m not sure if there&rsquo;s a better or easier way but I found that this solution fits my needs pretty good.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/mvc" term="mvc" label="mvc" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento"/><category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento"/><category scheme="https://kevingimbel.de/tags/mvc" term="mvc" label="mvc"/></entry></feed>

@@ -1,38 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[frontend on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/categories/frontend/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/categories/frontend/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/categories/frontend/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-29T17:47:06+01:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/categories/frontend/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Hugo aliases and redirects]]></title>
-            <link href="https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates" />
-                <link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
-                <link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-            
-                <id>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</id>
-            
-            
-            <published>2020-01-06T00:00:00+00:00</published>
-            <updated>2020-01-06T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title <code>Hello world</code> would be available at <code>kevingimbel.de/hello-world</code>. With the new format this includes the section, year, and month, so for example <code>kevingimbel.de/blog/2020/01/hello-world</code>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">frontend on KevOps</title><link href="https://kevingimbel.de/categories/frontend/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/categories/frontend/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/categories/frontend/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/categories/frontend/</id><entry><title type="html">Hugo aliases and redirects</title><link href="https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: ignore _index.md in list templates"/><link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content"/><link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo"/><link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git"/><link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo"/><id>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</id><published>2020-01-06T00:00:00+00:00</published><updated>2020-01-06T00:00:00+00:00</updated><content type="html"><![CDATA[<p>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title <code>Hello world</code> would be available at <code>kevingimbel.de/hello-world</code>. With the new format this includes the section, year, and month, so for example <code>kevingimbel.de/blog/2020/01/hello-world</code>.</p>
 <p>To prevent all old URLs from failing with a 404 I added aliases to all old posts. <a href="https://gohugo.io/content-management/urls/#aliases">The documentation on aliases</a> is pretty short and they&rsquo;re a straight-forward, powerful tool to make content available under multiple URL paths. Just add an alias list to the front-matter of the post.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 <span style="color:#66d9ef">title</span>: <span style="color:#e6db74">&#34;My awesome post&#34;</span>
@@ -54,57 +20,7 @@
 &lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><p>The line <code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=https://example.com/posts/my-intended-url&quot;/&gt;</code> refreshes the page after 0 seconds (immediately) and redirects to the new page at <code>https://example.com/posts/my-intended-url</code>.</p>
 <p>With this little bit of extra work all old URLs should work and just redirect to the new pages.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/static_site" term="static_site" label="static_site" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/seo" term="seo" label="seo" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Hugo: ignore _index.md in list templates]]></title>
-            <link href="https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content" />
-                <link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-                <link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-            
-                <id>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</id>
-            
-            
-            <published>2020-01-03T00:00:00+00:00</published>
-            <updated>2020-01-03T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>While creating my new website I also added more sections, namely a <a href="/blog/">blog</a>, <a href="/photography/">photography</a>, and <a href="/art/">art</a> section. All of these use list templates and render &ldquo;article&rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named <code>_index.md</code> for that. This file can be used to create index pages for lists.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo"/><category scheme="https://kevingimbel.de/tags/static_site" term="static_site" label="static_site"/><category scheme="https://kevingimbel.de/tags/seo" term="seo" label="seo"/></entry><entry><title type="html">Hugo: ignore _index.md in list templates</title><link href="https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="related" type="text/html" title="Hugo: compare dates to flag old content"/><link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll"/><link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo"/><link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git"/><link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo"/><id>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</id><published>2020-01-03T00:00:00+00:00</published><updated>2020-01-03T00:00:00+00:00</updated><content type="html"><![CDATA[<p>While creating my new website I also added more sections, namely a <a href="/blog/">blog</a>, <a href="/photography/">photography</a>, and <a href="/art/">art</a> section. All of these use list templates and render &ldquo;article&rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named <code>_index.md</code> for that. This file can be used to create index pages for lists.</p>
 <p>When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my <code>article-preview.html</code> template that is used to render article previews.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if ne .File.LogicalName &#34;_index.md&#34; }}
 &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article article--in-list&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-heading-{{ .File.UniqueID }}&#34;</span>&gt;
@@ -113,59 +29,7 @@
 {{ end }}
 </code></pre></div><p><code>{{ if ne .File.LogicalName &quot;_index.md&quot; }}</code> checks if the file name is not <code>_index.md</code> - this will ignore all <code>_index.md</code> files from being rendered with the <code>article-preview.html</code> template.</p>
 <p>It does the job but feels wrong and hacky, so if you know a better solution, please let me know on <a href="https://github.com/kevingimbel/kevingimbel.de" title="Report issue on GitHub">GitHub</a> or <a href="https://bullgit.party/@kevin" title="Contact me on Mastodon">Mastodon</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Hugo: compare dates to flag old content]]></title>
-            <link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-                <link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo" />
-                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-                <link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
-            
-                <id>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</id>
-            
-            
-            <published>2020-01-02T00:00:00+00:00</published>
-            <updated>2020-01-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo <a href="https://gohugo.io/functions/math/">Math</a> function and <a href="https://gohugo.io/variables/page/#page-variables">Date</a> values it can be accomplished in automated-enough fashion.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo"/><category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms"/><category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website"/></entry><entry><title type="html">Hugo: compare dates to flag old content</title><link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll"/><link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Mastodon Embed Shortcode for hugo"/><link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git"/><link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo"/><link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell"/><id>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</id><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p>With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo <a href="https://gohugo.io/functions/math/">Math</a> function and <a href="https://gohugo.io/variables/page/#page-variables">Date</a> values it can be accomplished in automated-enough fashion.</p>
 <h3 id="partial">Partial</h3>
 <p>First I created a new partial named <code>single-header.html</code> and added it to all my <code>single.html</code> templates. The file contains the following code which I will explain step by step.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $now := int (now.Format &#34;2006&#34;) }}
@@ -188,59 +52,7 @@
 </code></pre></div><p>Because we are doing a <code>gt</code> (greater than) comparison only articles that are older than 4 years (5 and more) will be flagged.</p>
 <h2 id="see-it-in-action">See it in action</h2>
 <p>A live example can be seen on my page, for example in the <a href="/blog/2013/08/hello-world/">oldest post &ldquo;Hello world&rdquo;</a> or in any post from <a href="http://localhost:1313/blog/#2015">2015 and before</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Safe calc usage in CSS]]></title>
-            <link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
-                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-            
-                <id>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</id>
-            
-            
-            <published>2020-01-01T00:00:00+00:00</published>
-            <updated>2020-01-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p><code>calc</code> is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example <code>calc(100% - 4rem - 1px)</code> is valid and works in modern browsers - in simpler words: Calc works with different units like <code>em</code>, <code>%</code>, <code>px</code>, etc.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo"/><category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms"/><category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website"/></entry><entry><title type="html">Safe calc usage in CSS</title><link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS"/><link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014"/><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags"/><id>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</id><published>2020-01-01T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p><code>calc</code> is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example <code>calc(100% - 4rem - 1px)</code> is valid and works in modern browsers - in simpler words: Calc works with different units like <code>em</code>, <code>%</code>, <code>px</code>, etc.</p>
 <p>The problem with calc is that if it doesn&rsquo;t work you may get a unexpected result. Take the following code for example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">author</span> {
     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
@@ -263,56 +75,7 @@
 </code></pre></div><p>By using <code>0rem - 2rem</code> we can create a <code>-2rem</code> offset to the left. The <code>1px</code> is the border around the parent element which appears on both sides, so we add that to our calculation to stay within the border - otherwise it would look wrong again.</p>
 <h2 id="update">Update</h2>
 <p>Due to changes during development, the changes described here are not available on my website.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/calc" term="calc" label="calc" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/fallback" term="fallback" label="fallback" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Mastodon Embed Shortcode for hugo]]></title>
-            <link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-            
-                <id>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</id>
-            
-            
-            <published>2018-09-12T00:00:00+00:00</published>
-            <updated>2018-09-12T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>You may know that <a href="https://github.com/kevingimbel/hugo-shortcodes">I made some shortcodes for Hugo</a>, the static site generator I am using to create this website. So far I made a shortcode for <a href="https://caniuse.com">caniuse.com</a> and <a href="https://codepen.io">codepen.io</a> which allow to embed CodePen and &ldquo;Can I Use&rdquo; embeds easily with Hugos build-in Shortcode system.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/calc" term="calc" label="calc"/><category scheme="https://kevingimbel.de/tags/fallback" term="fallback" label="fallback"/></entry><entry><title type="html">Mastodon Embed Shortcode for hugo</title><link href="https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git"/><link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo"/><id>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</id><published>2018-09-12T00:00:00+00:00</published><updated>2018-09-12T00:00:00+00:00</updated><content type="html"><![CDATA[<p>You may know that <a href="https://github.com/kevingimbel/hugo-shortcodes">I made some shortcodes for Hugo</a>, the static site generator I am using to create this website. So far I made a shortcode for <a href="https://caniuse.com">caniuse.com</a> and <a href="https://codepen.io">codepen.io</a> which allow to embed CodePen and &ldquo;Can I Use&rdquo; embeds easily with Hugos build-in Shortcode system.</p>
 <p>Today I made another one which allows embeds from Mastodon, the decentralized Twitter-like social network. An example embed is shown below.</p>
 
 
@@ -377,57 +140,7 @@
 
 <iframe src= "https://octodon.social/@spacekookie/100680807257148198/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="800" height="333"></iframe>
 </p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/shortcode" term="shortcode" label="shortcode" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/mastodon" term="mastodon" label="mastodon" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[CSS Custom Properties and a new look]]></title>
-            <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
-                <link href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
-                <link href="https://kevingimbel.de/blog/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
-                <link href="https://kevingimbel.de/blog/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
-                <link href="https://kevingimbel.de/blog/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
-            
-                <id>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</id>
-            
-            
-            <published>2017-11-26T10:56:13+01:00</published>
-            <updated>2017-11-26T10:56:13+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/shortcode" term="shortcode" label="shortcode"/><category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo"/><category scheme="https://kevingimbel.de/tags/mastodon" term="mastodon" label="mastodon"/></entry><entry><title type="html">CSS Custom Properties and a new look</title><link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13"/><link href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9"/><link href="https://kevingimbel.de/blog/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven"/><link href="https://kevingimbel.de/blog/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five"/><link href="https://kevingimbel.de/blog/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four"/><id>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</id><published>2017-11-26T10:56:13+01:00</published><updated>2017-11-26T10:56:13+01:00</updated><content type="html"><![CDATA[<p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
  CSS variables).</p>
 <p>CSS variables are a <a href="https://www.w3.org/TR/css-variables-1/" title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!&quot;</em> and you&rsquo;re right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that&rsquo;s exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p>
 <p>Below I will explain step by step how CSS variables look, work, and how we can use them to alter the look of a website - even persistent without any backend code!</p>
@@ -604,56 +317,7 @@
 }
 </code></pre></div><p>And that&rsquo;s it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I&rsquo;m happy with the result.</p>
 <p>Got any feedback? Want to tell me how much the news design sucks? Love it? Hit me up on <a href="https://twitter.com/_kevinatari" title="Find me on twitter">Twitter @_kevinatari</a></p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/redesign" term="redesign" label="redesign" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/modernization" term="modernization" label="modernization" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/accessibility" term="accessibility" label="accessibility" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[ReactJS - Hello World!]]></title>
-            <link href="https://kevingimbel.de/blog/2015/05/reactjs-hello-world/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</id>
-            
-            
-            <published>2015-05-07T00:00:00+00:00</published>
-            <updated>2015-05-07T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>This article is the first in a series about <a href="http://facebook.github.io/react/">ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/redesign" term="redesign" label="redesign"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal"/><category scheme="https://kevingimbel.de/tags/modernization" term="modernization" label="modernization"/><category scheme="https://kevingimbel.de/tags/accessibility" term="accessibility" label="accessibility"/></entry><entry><title type="html">ReactJS - Hello World!</title><link href="https://kevingimbel.de/blog/2015/05/reactjs-hello-world/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</id><published>2015-05-07T00:00:00+00:00</published><updated>2015-05-07T00:00:00+00:00</updated><content type="html"><![CDATA[<p>This article is the first in a series about <a href="http://facebook.github.io/react/">ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p>
 <p>React itself says one very important and true thing about itself:</p>
 <blockquote>
 <p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it&rsquo;s easy to try it out on a small feature in an existing project.</p>
@@ -746,55 +410,7 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
 <!-- raw HTML omitted -->
 <p>That&rsquo;s it for creating a Component and re-using it inside another Component. For the next tutorial we&rsquo;ll see how we can use a state to give our Components some interaction. If you&rsquo;ve got any questions or have found an issue, hit me up at <a href="https://twitter.com/_kevinatari">@_kevinatari</a>.</p>
 <!-- raw HTML omitted -->
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/react" term="react" label="react" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
-            <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
-                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-            
-                <id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id>
-            
-            
-            <published>2015-03-10T00:00:00+00:00</published>
-            <updated>2015-03-10T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/react" term="react" label="react"/></entry><entry><title type="html">Getting into Performance Measurement</title><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id><published>2015-03-10T00:00:00+00:00</published><updated>2015-03-10T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
 We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside
 Magento projects, it&rsquo;s way easier to keep an overview and with a good overview
 of data flow and available data it&rsquo;s easier to measure and find performance
@@ -990,55 +606,7 @@ everyone&rsquo;s workflow. While developers could use a grunt/gulp/cli task the 
 who actually write content need an easy way to handle the optimization of
 uploaded files. The last resort of more optimization is the server respond time
 on which we don&rsquo;t have any influence.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Snippet: theme-color for Android 5.0]]></title>
-            <link href="https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-            
-                <id>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</id>
-            
-            
-            <published>2014-11-21T00:00:00+00:00</published>
-            <updated>2014-11-21T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry><entry><title type="html">Snippet: theme-color for Android 5.0</title><link href="https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><id>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</id><published>2014-11-21T00:00:00+00:00</published><updated>2014-11-21T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with
 this multi-tasking. In fact, all recently opened tabs are available via the multi-tasking button (square to the down
 right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you
 can switch between apps and websites seamlessly you can also set your own status bar colors for chrome which are used on
@@ -1049,59 +617,7 @@ the page and in the multi-tasking overview.</p>
 </code></pre></div><p>The content can be any valid CSS color and that&rsquo;s it - nothing more to do!</p>
 <h3 id="results">Results</h3>
 <!-- raw HTML omitted -->
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/android" term="android" label="android" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/html" term="html" label="html" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Endless Multi-Dimensional Navigation]]></title>
-            <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
-            
-                <id>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</id>
-            
-            
-            <published>2014-08-22T00:00:00+00:00</published>
-            <updated>2014-08-22T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on <a href="http://codepen.io">CodePen</a>. My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an <code>open</code> class). The JavaScript for this looks like this:</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/android" term="android" label="android"/><category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome"/><category scheme="https://kevingimbel.de/tags/html" term="html" label="html"/></entry><entry><title type="html">Endless Multi-Dimensional Navigation</title><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</id><published>2014-08-22T00:00:00+00:00</published><updated>2014-08-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on <a href="http://codepen.io">CodePen</a>. My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an <code>open</code> class). The JavaScript for this looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> document,
     <span style="color:#a6e22e">trigger</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#trigger&#39;</span>),
     <span style="color:#a6e22e">subNav</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">trigger</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.sub-nav&#39;</span>);
@@ -1149,57 +665,7 @@ by node the little event walks up until finally the navigation wrapper says &ldq
 that!&rdquo; - and that&rsquo;s it. When the handler attached to the navigation handles the event it will also populate it&rsquo;s <code>el</code>
 variable with whatever <code>e.target</code> currently is. <code>e.target</code> happens to always be the <strong>triggering element</strong>, so it is
 very similar to <code>this</code>, yet even more flexible!</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Conditional CSS]]></title>
-            <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2014/07/conditional-css/</id>
-            
-            
-            <published>2014-07-31T00:00:00+00:00</published>
-            <updated>2014-07-31T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/></entry><entry><title type="html">Conditional CSS</title><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014"/><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags"/><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2014/07/conditional-css/</id><published>2014-07-31T00:00:00+00:00</published><updated>2014-07-31T00:00:00+00:00</updated><content type="html"><![CDATA[<p>While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid
 pre-processors or frameworks there&rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS,
 i.e. pieces of CSS that serve one specific task the easiest and most known is <code>.active</code> given to, well, active elements.
 I&rsquo;d like to talk a bit about conditional CSS that I&rsquo;ve been using in production and that I think can improve the overall
@@ -1309,53 +775,7 @@ class does and where/how it should be used. Also it&rsquo;s a simple use of DRY 
 Responsibility Principle</a> but as
 with everything overusing it won&rsquo;t make your live easier.
 As always I appreciate feedback or improvments via <a href="http://twitter.com/_kevinatari">twitter</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Passing Arguments in JavaScript]]></title>
-            <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
-            
-                <id>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</id>
-            
-            
-            <published>2014-05-23T00:00:00+00:00</published>
-            <updated>2014-05-23T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing <a href="http://ejohn.org">John Resig</a> and try to play around with JavaScript whenever I&rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&rsquo;t check for every possible thingy. Anyway, I&rsquo;ll cover this in a small write-up aka a blog post. Yay!</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/frontend" term="frontend" label="frontend"/></entry><entry><title type="html">Passing Arguments in JavaScript</title><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</id><published>2014-05-23T00:00:00+00:00</published><updated>2014-05-23T00:00:00+00:00</updated><content type="html"><![CDATA[<p>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing <a href="http://ejohn.org">John Resig</a> and try to play around with JavaScript whenever I&rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&rsquo;t check for every possible thingy. Anyway, I&rsquo;ll cover this in a small write-up aka a blog post. Yay!</p>
 <p>First of all we should have some use case or scenario. I needed the a variable number of options for my <a href="https://github.com/bullgit/Bulllog">Bulllog</a> script that takes any number of CSS oroperty-value pairs and applies them to your console.logs (Chrome only, sadly). Anyway, CSS is a good example in my opinion so we&rsquo;ll write a small css() function that can be applies to an element.</p>
 <p>First of all, what should this function do? It should:</p>
 <ul>
@@ -1425,54 +845,7 @@ Calling the function would now look like this:</p>
 <p>The result looks like this.</p>
 <!-- raw HTML omitted -->
 <p>With this technique you can make any function accept any amount of property-value pairs by simply passing in an object. This would also work when you define the object itsef as a variable (see the second div). It&rsquo;s important to know that properties like <code>font-size</code> must be written in quotes (e.g. <code>&quot;font-size&quot;: &quot;1em&quot;</code>), otherwise the script will fail.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Pure JavaScript slider]]></title>
-            <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
-                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
-            
-                <id>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</id>
-            
-            
-            <published>2014-02-22T00:00:00+00:00</published>
-            <updated>2014-02-22T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>The great thing when you&rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&rsquo;m very  proud of my <a href="http://kevingimbel.com/to-infinity-and-beyond/">back to top script</a> even though it&rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&rsquo;t be that much fun. However, I made another JavaScript thing I&rsquo;m proud of: A pure JavaScript slider.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/></entry><entry><title type="html">Pure JavaScript slider</title><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</id><published>2014-02-22T00:00:00+00:00</published><updated>2014-02-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>The great thing when you&rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&rsquo;m very  proud of my <a href="http://kevingimbel.com/to-infinity-and-beyond/">back to top script</a> even though it&rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&rsquo;t be that much fun. However, I made another JavaScript thing I&rsquo;m proud of: A pure JavaScript slider.</p>
 <!-- raw HTML omitted -->
 <p>The slider runs forever in a loop, animating images to the left until the last image is reached. When the last image is reached it will animate all back to the first image (I&rsquo;m not happy with this animation yet) and will start over. Pretty simple. The hardest part for me was - and still is - the animation timing. I&rsquo;m may over-thinking stuff but I can&rsquo;t figure out a formula to calculate a good timing based on how many images the slider has. If someone has an idea, fork the pen or <a href="http://twitter.com/_kevinatari">tweet me</a>.</p>
 <p>First of all I defined some variables.</p>
@@ -1540,53 +913,7 @@ Calling the function would now look like this:</p>
         <span style="color:#a6e22e">reset</span>();
       }
     }, <span style="color:#ae81ff">3000</span>);
-</code></pre></div>]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Bullgit loves Jekyll]]></title>
-            <link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell" />
-            
-                <id>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</id>
-            
-            
-            <published>2014-01-06T00:00:00+00:00</published>
-            <updated>2014-01-06T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>After having a static HTML Page for about 6 months, we at <a href="http://bullg.it">bullgit</a> just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:</p>
+</code></pre></div>]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/></entry><entry><title type="html">Bullgit loves Jekyll</title><link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="related" type="text/html" title="Ghost in the shell"/><id>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</id><published>2014-01-06T00:00:00+00:00</published><updated>2014-01-06T00:00:00+00:00</updated><content type="html"><![CDATA[<p>After having a static HTML Page for about 6 months, we at <a href="http://bullg.it">bullgit</a> just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:</p>
 <ul>
 <li>Jekyll is built-in GitHub pages</li>
 <li>Jekyll is easy-to-learn and easy to maintain</li>
@@ -1732,56 +1059,7 @@ Calling the function would now look like this:</p>
         window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">downloadJSAtOnload</span>;
     }
 </code></pre></div><p>Those are just a few of the benefits of Jekyll and, because we&rsquo;re a &ldquo;GitHub only&rdquo; organization we switched so it&rsquo;s easier to scale the site. Building a Blog would now only take a some time because we&rsquo;re already running Jekyll and just have to add one more layout. That&rsquo;s it, the basics of our brand-new <a href="http://bullg.it">bullgit</a> page.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Web Development in 2014]]></title>
-            <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id>
-            
-            
-            <published>2014-01-02T00:00:00+00:00</published>
-            <updated>2014-01-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&rsquo;s one thing that I&rsquo;d like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I&rsquo;ll give you a short look into basic responsive design/development patterns.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms"/><category scheme="https://kevingimbel.de/tags/static_website" term="static_website" label="static_website"/><category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll"/></entry><entry><title type="html">Web Development in 2014</title><link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags"/><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id><published>2014-01-02T00:00:00+00:00</published><updated>2014-01-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&rsquo;s one thing that I&rsquo;d like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I&rsquo;ll give you a short look into basic responsive design/development patterns.</p>
 <h3 id="planning">Planning</h3>
 <p>First of all make sure what your site is about and what your content is like. <strong>Never hide content!</strong> Hiding content is the last resort and I prefer to avoid this. Make sure your site displays all the information you need the user to have in a order that makes sense: Do I want to scroll through your header, sidebar and a small advertisement area before I can find the article I&rsquo;m searching for? No, I don&rsquo;t. Good responsive, scalable design starts with mark up and there are a few tricks to archive a good looking, usable website. Before we start to look at the code: I&rsquo;ll focus on blog-like websites here and will cover more complex things later in another post.</p>
 <h3 id="drop-the-mdomain">Drop the m.domain</h3>
@@ -1959,53 +1237,7 @@ Calling the function would now look like this:</p>
 }
 </code></pre></div><p>Once the grid is setup we can use all the different combinations and prefix them with <code>large-</code>,<code>meduim-</code> or <code>small-</code>. Basically that&rsquo;s it what I want to say about responsive development to this point. I think it is important to stop thinking in different categories like &ldquo;mobile&rdquo;, &ldquo;desktop&rdquo;, &ldquo;TV&rdquo; or whatever - it&rsquo;s more important to see a bunch of screens and devices that have a specific width you need to target with your breakpoints. Also I think every website you create this year should be responsive. There&rsquo;s no excuse anymore to do a non-responsive website. It should be a standard. So as a developer in a design team you should talk to your designers to keep responsive design in mind when making screen-designs. The Internet has become a canvas with a lot of sizes and we, as the artist, have to re-think the way we paint on it.</p>
 <p>I appreciate your opinion and critic <a href="http://twitter.com/_kevinatari">@_kevinatari</a> or via <a href="/imprint">eMail</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Pseudo Product Flags]]></title>
-            <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</id>
-            
-            
-            <published>2013-11-24T00:00:00+00:00</published>
-            <updated>2013-11-24T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry><entry><title type="html">Pseudo Product Flags</title><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</id><published>2013-11-24T00:00:00+00:00</published><updated>2013-11-24T00:00:00+00:00</updated><content type="html"><![CDATA[<p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p>
 <h3 id="the-setup">The Setup</h3>
 <p>First of all I had a Product and a <code>div</code> that holds the flag (in this example &ldquo;Tag&rdquo;).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span>&gt;
@@ -2110,55 +1342,7 @@ Calling the function would now look like this:</p>
     <span style="color:#960050;background-color:#1e0010">}</span> <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">tag</span>
 </code></pre></div><p>A working example can be found <a href="http://codepen.io/kevingimbel/pen/Hpazh">here on CodePen</a>. Special thanks to <a href="http://getdigital.de">getDigital.de</a> for letting me use some of their nerdy Product Images! May the force be with you.</p>
 <p>In case you&rsquo;ve any questions feel free to <a href="http://twitter.com/_kevinatari">tweet me</a> or comment on the <a href="http://codepen.io/kevingimbel/pen/Hpazh">Pen</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[To infinity and beyond]]></title>
-            <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
-            
-                <id>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</id>
-            
-            
-            <published>2013-11-18T00:00:00+00:00</published>
-            <updated>2013-11-18T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>While I was re-designing my Website I decided to finally add some JavaScript to it. I&rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&rsquo;m doing. Yesterday night&rsquo;s topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is <em>kinda</em> simple, however, I wrote an endless function that got to infinity and beyond (that&rsquo;s where the title comes from. I&rsquo;m so funny.)</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface"/><category scheme="https://kevingimbel.de/tags/tutorial" term="tutorial" label="tutorial"/></entry><entry><title type="html">To infinity and beyond</title><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</id><published>2013-11-18T00:00:00+00:00</published><updated>2013-11-18T00:00:00+00:00</updated><content type="html"><![CDATA[<p>While I was re-designing my Website I decided to finally add some JavaScript to it. I&rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&rsquo;m doing. Yesterday night&rsquo;s topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is <em>kinda</em> simple, however, I wrote an endless function that got to infinity and beyond (that&rsquo;s where the title comes from. I&rsquo;m so funny.)</p>
 <p>Because I still like to google around while writing JavaScript I stumbled upon a function that looked okay to me.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scrollToTop</span>() {
   <span style="color:#66d9ef">if</span> (document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">scrollTop</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">scrollTop</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>){
@@ -2200,54 +1384,7 @@ Calling the function would now look like this:</p>
   }); <span style="color:#75715e">// end of the Back to Top function
 </span></code></pre></div><p>That&rsquo;s it! My sweet little Back To Top Function. I&rsquo;m sure there are points that could be improved and I&rsquo;m sure one could add easing to it (I already got something in mind) but for now I&rsquo;m happy with it.</p>
 <p>(Also check out what else I discovered yesterday. It&rsquo;s an <a href="https://twitter.com/_kevinatari/status/402197154539651072">YouTube Eater Egg</a>!)</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/vanilla_js" term="vanilla_js" label="vanilla_js" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Custom Radio Buttons]]></title>
-            <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</id>
-            
-            
-            <published>2013-10-28T00:00:00+00:00</published>
-            <updated>2013-10-28T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/vanilla_js" term="vanilla_js" label="vanilla_js"/></entry><entry><title type="html">Custom Radio Buttons</title><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</id><published>2013-10-28T00:00:00+00:00</published><updated>2013-10-28T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).</p>
 <p>A few years ago I had to do this once and I remember doing it with an image and <code>background-position</code> but as of today I really love pseudo elements and &ldquo;Look-Ma-No-Image!&quot;. However I decided to use Icon Fonts this time and play around a bit with them. My HTML Markup is very simple:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
@@ -2288,52 +1425,7 @@ Calling the function would now look like this:</p>
   }
 </code></pre></div><p>The next line says &ldquo;when the input is <code>:checked</code> change the properties of <code>:before</code>&rdquo;. So when it is checked I want the filled Star to show up (&quot;\2606&rdquo;). Seems logical? It&rsquo;s not. <code>\2606</code> is the empty star. So the <code>&amp;:checked ~ :before</code> pseudo holds the icon that should be included if the button is not checked and the <code>:before</code> holds the checked (in this case filled) icon. This is because <code>:checked ~ :before</code> selects every element that is preceded of the <code>:checked</code> element. This comes handy because this also means all inputs display a filled star if we check the last star (and that&rsquo;s exactly what we want).</p>
 <p>A live demo can be found on <a href="http://codepen.io/kevingimbel/pen/kwIgi">CodePen</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/design" term="design" label="design" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Ghost in the shell]]></title>
-            <link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</id>
-            
-            
-            <published>2013-10-16T00:00:00+00:00</published>
-            <updated>2013-10-16T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Finally <a href="http://ghost.org">Ghost</a> launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&rsquo;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&rsquo;d be my birthday while unpacking the *.zip file. Anyway, I want to write a small installation guide, tell you something about my first impressions and how theming with Ghost works.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface"/><category scheme="https://kevingimbel.de/tags/design" term="design" label="design"/></entry><entry><title type="html">Ghost in the shell</title><link href="https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</id><published>2013-10-16T00:00:00+00:00</published><updated>2013-10-16T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Finally <a href="http://ghost.org">Ghost</a> launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&rsquo;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&rsquo;d be my birthday while unpacking the *.zip file. Anyway, I want to write a small installation guide, tell you something about my first impressions and how theming with Ghost works.</p>
 <p>Ghost runs on <a href="http://nodejs.org">Node.js</a> which is basically a installable version of <a href="https://code.google.com/p/v8/">Google Chrome&rsquo;s v8 JavaScript Engine</a>, in other words Ghost doesn&rsquo;t use PHP or Ruby to run it just needs a Node Process.</p>
 <h3 id="installing-nodejs">Installing Node.js</h3>
 <p>First of all you have to install Node.js from <a href="http://nodejs.org/">http://nodejs.org/</a>. Afterwards go back to your terminal and run the following</p>
@@ -2415,53 +1507,7 @@ Basically Ghost can work with 3 layout files: post.hbs, default.hbs and index.hb
 <p>Non-Tech People will not be able to install Ghost on their servers, Ghost requires Node.js which isn&rsquo;t a default installation on servers yet (even though some have it), Ghost is at least locally fast and easy to setup. The Theme system with Handlebars is also pretty nice and they have the most beautiful back-end I saw so far.
 Regardless of all the good aspects, overall I&rsquo;m disappointed by Ghost. I&rsquo;ll stick to Jekyll and GitHub Hosting. I&rsquo;ll try to deploy Ghost and work around with it just for the sake of learning something new but as engine to build my Blog it has not convinced me so far.</p>
 <p>You may have noticed that the Title is a reference to <a href="http://de.wikipedia.org/wiki/Ghost_in_the_Shell">Ghost in the Shell</a> which is a great Manga from 1989.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[From 0 To Sass]]></title>
-            <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</id>
-            
-            
-            <published>2013-10-02T00:00:00+00:00</published>
-            <updated>2013-10-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend"/><category scheme="https://kevingimbel.de/tags/cms" term="cms" label="cms"/><category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs"/></entry><entry><title type="html">From 0 To Sass</title><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</id><published>2013-10-02T00:00:00+00:00</published><updated>2013-10-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
 <p>Even though Pre-Processors are easy to use and setup some people are still confused: <em>Do I have to run them on a server? How do I install them? Why should I use them?</em> - I want to answer all these questions in this article: Getting from 0 to Sass in X Steps!</p>
 <p><strong>Notice:</strong> This guide covers the installation on Linux and Mac only, for Windows support please take a look at <a href="http://www.impressivewebs.com/sass-on-windows/">this tutorial</a>.</p>
 <h3 id="sass-summary">Sass summary</h3>
@@ -2619,52 +1665,7 @@ If you want to have an example what the <code>style.scss</code> would look like,
 <li><a href="http://compass-style.org/reference/compass/">Compass Docs</a></li>
 <li><a href="http://thesassway.com/">The Sass Way</a></li>
 </ul>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[A bit sticky]]></title>
-            <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</id>
-            
-            
-            <published>2013-09-20T00:00:00+00:00</published>
-            <updated>2013-09-20T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I just stumbled upon a very handy CSS Property: <code>position:sticky</code>. As far as I found out it&rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass"/><category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling"/></entry><entry><title type="html">A bit sticky</title><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</id><published>2013-09-20T00:00:00+00:00</published><updated>2013-09-20T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I just stumbled upon a very handy CSS Property: <code>position:sticky</code>. As far as I found out it&rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).</p>
 <p><code>position:sticky</code> is a pretty handy feature that allows you to stick an element to the top of the page (or wherever you want) until the parent element is moved out of the screen.</p>
 <h3 id="basic-markup">Basic Markup</h3>
 <p>To get an idea of how <code>position:sticky</code> works I made some basic markup.</p>
@@ -2715,48 +1716,7 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
 <ul>
 <li><a href="http://updates.html5rocks.com/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit">HTML5 Rocks</a></li>
 </ul>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Is this :valid?]]></title>
-            <link href="https://kevingimbel.de/blog/2013/08/is-this-valid/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2013/08/is-this-valid/</id>
-            
-            
-            <published>2013-08-16T00:00:00+00:00</published>
-            <updated>2013-08-16T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I recently stumbled upon the <code>:valid</code> and <code>:invalid</code> class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not <strong>validate the input</strong>, the entered email for example can still be formated wrong.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry><entry><title type="html">Is this :valid?</title><link href="https://kevingimbel.de/blog/2013/08/is-this-valid/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/08/is-this-valid/</id><published>2013-08-16T00:00:00+00:00</published><updated>2013-08-16T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I recently stumbled upon the <code>:valid</code> and <code>:invalid</code> class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not <strong>validate the input</strong>, the entered email for example can still be formated wrong.</p>
 <p>Anyway I thought this is a handy little helper that I could give a try so I started working around with it, checking what I can do and what I can&rsquo;t.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">contact__form--email</span> {
  
@@ -2785,40 +1745,7 @@ When the user starts typing the color will be red, as soon as he writes <code>yo
 </code></pre></div><p>At least you have to check the email via JavaScript or PHP with RegEx to make sure it is valid but it would be a nice UX feature to have a visual feedback that checks the email so a user sees that the inputed email is correct - the :valid class doesn&rsquo;t provide this yet because it triggers to early so there is no &ldquo;guarantee&rdquo; the email is correct.</p>
 <p>I hope that they&rsquo;ll change this behavior in the future so it&rsquo;s save to use :valid on email inputs and it works correctly. What do you think about <code>:valid</code> and <code>:invalid</code>?</p>
 <p>You can find a working example of :valid and :invalid <a href="http://codepen.io/kevingimbel/pen/jlhJg">here at CodePen</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[px vs em]]></title>
-            <link href="https://kevingimbel.de/blog/2013/08/px-vs-em/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2013/08/px-vs-em/</id>
-            
-            
-            <published>2013-08-15T00:00:00+00:00</published>
-            <updated>2013-08-15T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Recently <a href="http://timpietrusky.com">Tim Pietrusky</a> wrote and article about <a href="http://timpietrusky.com/i-love-r-emmmmmm-because-px-suck">px vs em</a> that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/></entry><entry><title type="html">px vs em</title><link href="https://kevingimbel.de/blog/2013/08/px-vs-em/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/08/px-vs-em/</id><published>2013-08-15T00:00:00+00:00</published><updated>2013-08-15T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Recently <a href="http://timpietrusky.com">Tim Pietrusky</a> wrote and article about <a href="http://timpietrusky.com/i-love-r-emmmmmm-because-px-suck">px vs em</a> that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.</p>
 <p>I was using pixel like forever and I couldn&rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: <em>em is more responsive and it is scalable</em>.
 In fact when you switch from pixel to em you&rsquo;ll feel like working on a completely new Level. The fact you can scale all elements of your website by simply passing a new value to <code>:root {font-size:1em;}</code> or <code>body {font-size:1em;}</code>.</p>
 <p>My <code>_responsive.scss</code> works this way. Because I think it&rsquo;s good to have large texts on smartphones I applied <code>font-size:120%</code> to the <code>.main-content</code> class that holds all elements.</p>
@@ -2838,24 +1765,4 @@ So if you create a new responsive website, and you should always do so, do your 
 <li><a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">The ems have it: Proportional Media Queries FTW</a> by <a href="http://blog.cloudfour.com/author/lyza-gardner/">Lyza Gardner</a></li>
 <li><a href="http://codepen.io/LukyVj/blog/em-vs-px">em vs px</a> by <a href="http://lucasbonomi.com/">Lucas Bonomi</a></li>
 </ul>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/></entry></feed>

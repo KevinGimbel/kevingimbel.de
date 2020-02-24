@@ -1,38 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[android on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/android/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/android/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/android/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-29T17:47:06+01:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/android/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Two Factor Auth, Password managers, and cloud sync]]></title>
-            <link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="related" type="text/html" title="Using the Terminal: The Prompt" />
-                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2" />
-            
-                <id>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</id>
-            
-            
-            <published>2020-01-25T00:00:00+00:00</published>
-            <updated>2020-01-25T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when <abbr title="Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token">2FA</abbr>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">android on KevOps</title><link href="https://kevingimbel.de/tags/android/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/android/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/android/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/android/</id><entry><title type="html">Two Factor Auth, Password managers, and cloud sync</title><link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="related" type="text/html" title="Using the Terminal: The Prompt"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2"/><id>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</id><published>2020-01-25T00:00:00+00:00</published><updated>2020-01-25T00:00:00+00:00</updated><content type="html"><![CDATA[<p>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when <abbr title="Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token">2FA</abbr>
  became a more common thing I was enabling that on all services I could. 2FA (Two Factor Authentication) is a method of authentication where two parts are needed: A Password and a generated token, this token can be hardware based (e.g. a tiny usb key that generates a token) or they can be time-based which is the most common usage I&rsquo;d say. I used Google Authenticator for this for years and all was good - until I had to factory-reset my phone and lost my Google Authenticator app with all its 2FA settings.</p>
 <h2 id="why-i-lost-all-my-2fa-tokens-and-settings">Why I lost all my 2FA tokens and settings</h2>
 <p>I falsely assumed that <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google Authenticator</a> would somehow save the Time-based Tokens with my Google Account but that is not the case - they only exist on the device itself. Looking back that is probably the right choice, but I somehow missed it and only realized after receiving my replacement Pixel phone and setting it up again.</p>
@@ -53,63 +19,7 @@
 <p>Anyhow, Nextcloud is the sync and &ldquo;backup&rdquo; solution in my stack. It syncs the database files between my computer and my phone so that I can always access all passwords whenever I need them. On my computer and phone the databases are protected by passwords, all communication to Nextcloud is done over a encrypted connection (HTTPS), too.</p>
 <p>I&rsquo;ve been using this solution for a bit over two years now and I am very happy with it. Before switching to Nextcloud I used Google Drive to sync my KeyPassX database files, but I am growing increasingly distrustful of Google, so I am trying to pull as much as I can away from its services. Nextcloud works just as good if not better than the Google Drive or Dropbox sync solutions.</p>
 <p>Thank you for coming to my TED Talk, see ya.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/password" term="password" label="password" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/management" term="management" label="management" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sync" term="sync" label="sync" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cloud_storage" term="cloud_storage" label="cloud_storage" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/2fa" term="2fa" label="2FA" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/android" term="android" label="android" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Snippet: theme-color for Android 5.0]]></title>
-            <link href="https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-            
-                <id>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</id>
-            
-            
-            <published>2014-11-21T00:00:00+00:00</published>
-            <updated>2014-11-21T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with
+]]></content><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/><category scheme="https://kevingimbel.de/tags/password" term="password" label="password"/><category scheme="https://kevingimbel.de/tags/management" term="management" label="management"/><category scheme="https://kevingimbel.de/tags/sync" term="sync" label="sync"/><category scheme="https://kevingimbel.de/tags/cloud_storage" term="cloud_storage" label="cloud_storage"/><category scheme="https://kevingimbel.de/tags/2fa" term="2fa" label="2FA"/><category scheme="https://kevingimbel.de/tags/security" term="security" label="security"/><category scheme="https://kevingimbel.de/tags/android" term="android" label="android"/></entry><entry><title type="html">Snippet: theme-color for Android 5.0</title><link href="https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><id>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</id><published>2014-11-21T00:00:00+00:00</published><updated>2014-11-21T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with
 this multi-tasking. In fact, all recently opened tabs are available via the multi-tasking button (square to the down
 right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you
 can switch between apps and websites seamlessly you can also set your own status bar colors for chrome which are used on
@@ -120,38 +30,4 @@ the page and in the multi-tasking overview.</p>
 </code></pre></div><p>The content can be any valid CSS color and that&rsquo;s it - nothing more to do!</p>
 <h3 id="results">Results</h3>
 <!-- raw HTML omitted -->
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/android" term="android" label="android" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/html" term="html" label="html" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/android" term="android" label="android"/><category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome"/><category scheme="https://kevingimbel.de/tags/html" term="html" label="html"/></entry></feed>

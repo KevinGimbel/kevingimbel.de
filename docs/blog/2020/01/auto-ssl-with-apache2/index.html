@@ -1,239 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Auto SSL With apache2 &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords="apache server automation security ssl ubuntu linux  blog coding backend tutorial  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <header class="intro-text">
-        <span>
-            How Apache 2.4.30 and later can be used to automate SSL certificate setup and renewal
-        
-        
-        
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            <h1>Auto SSL With apache2</h1>
-            
-            
-
-
-
-
-
-
-
-<p>Written on <time datetime="2020-01-08 00:00:00 &#43;0000 UTC">08. Jan 2020</time> , last <a href="#update"
-        title="View update">updated</a>
-    13. Jan 2020  </p>
-            <p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
-<p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p>
-<h2 id="installing-a-new-apache-version">Installing a new apache version</h2>
-<p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we&rsquo;ll add this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo add-apt-repository ppa:ondrej/apache2
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Auto SSL With apache2 &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="apache server automation security ssl ubuntu linux  blog coding backend tutorial"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>How Apache 2.4.30 and later can be used to automate SSL certificate setup and renewal</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><h1>Auto SSL With apache2</h1><p>Written on <time datetime="2020-01-08 00:00:00 +0000 UTC">08. Jan 2020</time> , last <a href=#update title="View update">updated</a>
+13. Jan 2020</p><p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href=https://certbot.eff.org/>certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p><p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p><h2 id=installing-a-new-apache-version>Installing a new apache version</h2><p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href=https://launchpad.net/~ondrej/+archive/ubuntu/apache2>ondrej/apache2</a> seems to be what most people use and recommend, so we&rsquo;ll add this.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>sudo add-apt-repository ppa:ondrej/apache2
 sudo apt-get update
-</code></pre></div><p>Next, apache can be updated</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apt install apache2
-</code></pre></div><p>Check the apache version</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apache2 -v
-Server version: Apache/2.4.41 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+</code></pre></div><p>Next, apache can be updated</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ apt install apache2
+</code></pre></div><p>Check the apache version</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ apache2 -v
+Server version: Apache/2.4.41 <span style=color:#f92672>(</span>Ubuntu<span style=color:#f92672>)</span>
 Server built:   2019-08-21T20:43:21
-</code></pre></div><h2 id="enabling-mod_md">Enabling mod_md</h2>
-<p>First <code>mod_md</code> must be enabled. This can be done with <code>a2enmod</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo a2enmod md
-</code></pre></div><p>Next, Apache must be reload with <code>systemctl</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ systemctl reload apache2
-</code></pre></div><p>Now the virtual host can be updated as shown in the minimal example below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-apache" data-lang="apache">ServerAdmin mailto:some-valid@email.com
+</code></pre></div><h2 id=enabling-mod_md>Enabling mod_md</h2><p>First <code>mod_md</code> must be enabled. This can be done with <code>a2enmod</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ sudo a2enmod md
+</code></pre></div><p>Next, Apache must be reload with <code>systemctl</code></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ systemctl reload apache2
+</code></pre></div><p>Now the virtual host can be updated as shown in the minimal example below.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-apache data-lang=apache>ServerAdmin mailto:some-valid@email.com
 MDCertificateAgreement accepted
 MDomain test.kevingimbel.de
 
-<span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:80</span><span style="color:#f92672">&gt;</span>
+<span style=color:#f92672>&lt;VirtualHost</span> <span style=color:#e6db74>*:80</span><span style=color:#f92672>&gt;</span>
         ServerName test.kevingimbel.de
-        <span style="color:#960050;background-color:#1e0010">[</span>...<span style="color:#960050;background-color:#1e0010">]</span>
-<span style="color:#f92672">&lt;/VirtualHost</span><span style="color:#e6db74"></span><span style="color:#f92672">&gt;</span>
+        <span style=color:#960050;background-color:#1e0010>[</span>...<span style=color:#960050;background-color:#1e0010>]</span>
+<span style=color:#f92672>&lt;/VirtualHost</span><span style=color:#e6db74></span><span style=color:#f92672>&gt;</span>
 
-<span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:443</span><span style="color:#f92672">&gt;</span>
+<span style=color:#f92672>&lt;VirtualHost</span> <span style=color:#e6db74>*:443</span><span style=color:#f92672>&gt;</span>
         ServerName test.kevingimbel.de
-        <span style="color:#960050;background-color:#1e0010">[</span>...<span style="color:#960050;background-color:#1e0010">]</span>
-<span style="color:#f92672">&lt;/VirtualHost</span><span style="color:#e6db74"></span><span style="color:#f92672">&gt;</span>
-</code></pre></div><p>The following values are required for <code>mod_md</code> to work properly:</p>
-<ul>
-<li><code>ServerAdmin</code> with valid e-mail address</li>
-<li><code>ServerName</code> in VirtualHost</li>
-<li><code>MDomain</code> with valid domain name</li>
-<li><code>MDCertificateAgreement accepted</code> to accept the ACME terms of service</li>
-</ul>
-<p>After making the changes, the server must be reloaded again.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ systemctl reload apache2
-</code></pre></div><p>With the values in place the server will contact Let&rsquo;s Encrypt and retrieve a certificate, wire it up in the backend, and serve the website over https. The <a href="https://httpd.apache.org/docs/trunk/mod/mod_md.html" title="Read the Apache Documentation on mod_md">mod_md documentation</a> contains more configuration options as well as information on how to use a different Certificate Authority.</p>
-<h2 id="update">Update</h2>
-<h3 id="update-13012020">Update 13.01.2020</h3>
-<p>Slight grammatical adjustments:</p>
-<ul>
-<li>Replaced double &ldquo;supports&rdquo; in first sentence with &ldquo;allows&rdquo; and &ldquo;setup&rdquo; with &ldquo;management&rdquo;</li>
-<li>Replaced &ldquo;setups&rdquo; with &ldquo;setup and renewal&rdquo; in sub headline</li>
-</ul>
-
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under backend"
-                href="https://kevingimbel.de/categories/backend/">backend</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under tutorial"
-                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
-        </li></ul>
-</section>
-
-        
-
-<section class="tags">
-    <h3>Tags</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with apache"
-                href="https://kevingimbel.de/tags/apache/">apache</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with server"
-                href="https://kevingimbel.de/tags/server/">server</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with automation"
-                href="https://kevingimbel.de/tags/automation/">automation</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with security"
-                href="https://kevingimbel.de/tags/security/">security</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with ssl"
-                href="https://kevingimbel.de/tags/ssl/">ssl</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with ubuntu"
-                href="https://kevingimbel.de/tags/ubuntu/">ubuntu</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with linux"
-                href="https://kevingimbel.de/tags/linux/">linux</a>
-        </li></ul>
-</section>
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2020-01-08-auto-ssl-with-apache2.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+        <span style=color:#960050;background-color:#1e0010>[</span>...<span style=color:#960050;background-color:#1e0010>]</span>
+<span style=color:#f92672>&lt;/VirtualHost</span><span style=color:#e6db74></span><span style=color:#f92672>&gt;</span>
+</code></pre></div><p>The following values are required for <code>mod_md</code> to work properly:</p><ul><li><code>ServerAdmin</code> with valid e-mail address</li><li><code>ServerName</code> in VirtualHost</li><li><code>MDomain</code> with valid domain name</li><li><code>MDCertificateAgreement accepted</code> to accept the ACME terms of service</li></ul><p>After making the changes, the server must be reloaded again.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ systemctl reload apache2
+</code></pre></div><p>With the values in place the server will contact Let&rsquo;s Encrypt and retrieve a certificate, wire it up in the backend, and serve the website over https. The <a href=https://httpd.apache.org/docs/trunk/mod/mod_md.html title="Read the Apache Documentation on mod_md">mod_md documentation</a> contains more configuration options as well as information on how to use a different Certificate Authority.</p><h2 id=update>Update</h2><h3 id=update-13012020>Update 13.01.2020</h3><p>Slight grammatical adjustments:</p><ul><li>Replaced double &ldquo;supports&rdquo; in first sentence with &ldquo;allows&rdquo; and &ldquo;setup&rdquo; with &ldquo;management&rdquo;</li><li>Replaced &ldquo;setups&rdquo; with &ldquo;setup and renewal&rdquo; in sub headline</li></ul></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under backend" href=https://kevingimbel.de/categories/backend/>backend</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tutorial" href=https://kevingimbel.de/categories/tutorial/>tutorial</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with apache" href=https://kevingimbel.de/tags/apache/>apache</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with server" href=https://kevingimbel.de/tags/server/>server</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with automation" href=https://kevingimbel.de/tags/automation/>automation</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with security" href=https://kevingimbel.de/tags/security/>security</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with ssl" href=https://kevingimbel.de/tags/ssl/>ssl</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with ubuntu" href=https://kevingimbel.de/tags/ubuntu/>ubuntu</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with linux" href=https://kevingimbel.de/tags/linux/>linux</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2020-01-08-auto-ssl-with-apache2.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>

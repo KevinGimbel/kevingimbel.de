@@ -1,194 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>i-js &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords="javascript  blog coding javascript  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <header class="intro-text">
-        <span>
-        
-        
-        i-js
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            
-
-
-
-
-
-<section class="age-note">
-    <h2>ATTENTION!</h2>
-    <p>This article is over 4 years old, it may be outdated!</p>
-</section>
-
-
-
-<p>Written on <time datetime="2013-10-14 00:00:00 &#43;0000 UTC">14. Oct 2013</time>  </p>
-            <p>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.</p>
-<p>After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to <code>I</code> and here comes the fun part: While learning JS I build i.js - a tiny JS &ldquo;Framework&rdquo; that enables you to write JS nearly the same you&rsquo;d speak.
-For example you may thing: <em>&ldquo;I want to get the Object with the class name test&rdquo;</em> - to get this, simply write the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">I</span>.<span style="color:#a6e22e">WantA</span>.<span style="color:#a6e22e">classname</span>(<span style="color:#e6db74">&#34;test&#34;</span>);
-</code></pre></div><p>This will return you the element that has the class <code>test</code>. Not so cool? Well, let&rsquo;s bring Events to the game!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Spoken: &#34;I want to add an Event that when you click on the 
-</span><span style="color:#75715e"></span><span style="color:#75715e">// element with the ID js-removeClass a FUNCTION triggers&#34;
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">I</span>.<span style="color:#a6e22e">WantTo</span>.<span style="color:#a6e22e">addEvent</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#e6db74">&#34;js-removeClass&#34;</span>,<span style="color:#66d9ef">function</span>(){
-	<span style="color:#a6e22e">I</span>.<span style="color:#a6e22e">WantTo</span>.<span style="color:#a6e22e">removeClass</span>(<span style="color:#e6db74">&#34;output&#34;</span>,<span style="color:#e6db74">&#34;lorem&#34;</span>);
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>i-js &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="javascript  blog coding javascript"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>i-js</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2013-10-14 00:00:00 +0000 UTC">14. Oct 2013</time></p><p>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.</p><p>After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to <code>I</code> and here comes the fun part: While learning JS I build i.js - a tiny JS &ldquo;Framework&rdquo; that enables you to write JS nearly the same you&rsquo;d speak.
+For example you may thing: <em>&ldquo;I want to get the Object with the class name test&rdquo;</em> - to get this, simply write the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#a6e22e>I</span>.<span style=color:#a6e22e>WantA</span>.<span style=color:#a6e22e>classname</span>(<span style=color:#e6db74>&#34;test&#34;</span>);
+</code></pre></div><p>This will return you the element that has the class <code>test</code>. Not so cool? Well, let&rsquo;s bring Events to the game!</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// Spoken: &#34;I want to add an Event that when you click on the 
+</span><span style=color:#75715e></span><span style=color:#75715e>// element with the ID js-removeClass a FUNCTION triggers&#34;
+</span><span style=color:#75715e></span><span style=color:#a6e22e>I</span>.<span style=color:#a6e22e>WantTo</span>.<span style=color:#a6e22e>addEvent</span>(<span style=color:#e6db74>&#34;click&#34;</span>, <span style=color:#e6db74>&#34;js-removeClass&#34;</span>,<span style=color:#66d9ef>function</span>(){
+	<span style=color:#a6e22e>I</span>.<span style=color:#a6e22e>WantTo</span>.<span style=color:#a6e22e>removeClass</span>(<span style=color:#e6db74>&#34;output&#34;</span>,<span style=color:#e6db74>&#34;lorem&#34;</span>);
 });
-</code></pre></div><p>The above script does the following:</p>
-<ul>
-<li>When <code>js-removeClass</code> is clicked</li>
-<li>the class <code>lorem</code> will be removed from an element with the class <code>output</code></li>
-</ul>
-<p>You can find a working Demo on <a href="http://codepen.io/kevingimbel/pen/sgCae">CodePen</a> or <a href="http://kevingimbel.com/i.js/demo/">directly on my site</a>. If you want to contribute more functions I&rsquo;d be very happy!</p>
-<p>Beside of this useless but fun Framework I also wrote a kinda useful function: <code>_match()</code>. <code>_match()</code> takes any value and checks if it&rsquo;s a ID, a class or an Tag Name. When it matches one of these it returns the correct element.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_match</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">el</span>) {
-    <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">el</span>);
-    <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">el</span>);
-    <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#a6e22e">el</span>);
-    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>;
+</code></pre></div><p>The above script does the following:</p><ul><li>When <code>js-removeClass</code> is clicked</li><li>the class <code>lorem</code> will be removed from an element with the class <code>output</code></li></ul><p>You can find a working Demo on <a href=http://codepen.io/kevingimbel/pen/sgCae>CodePen</a> or <a href=http://kevingimbel.com/i.js/demo/>directly on my site</a>. If you want to contribute more functions I&rsquo;d be very happy!</p><p>Beside of this useless but fun Framework I also wrote a kinda useful function: <code>_match()</code>. <code>_match()</code> takes any value and checks if it&rsquo;s a ID, a class or an Tag Name. When it matches one of these it returns the correct element.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>_match</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>el</span>) {
+    <span style=color:#a6e22e>a</span> <span style=color:#f92672>=</span> document.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#34;.&#34;</span><span style=color:#f92672>+</span><span style=color:#a6e22e>el</span>);
+    <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> document.<span style=color:#a6e22e>getElementById</span>(<span style=color:#a6e22e>el</span>);
+    <span style=color:#a6e22e>c</span> <span style=color:#f92672>=</span> document.<span style=color:#a6e22e>getElementsByTagName</span>(<span style=color:#a6e22e>el</span>);
+    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>a</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>a</span>;
     }
-    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>;
+    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>b</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>b</span>;
     }
-    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">undefined</span>) {
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span>[<span style="color:#ae81ff">0</span>];
+    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>c</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>undefined</span>) {
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>c</span>[<span style=color:#ae81ff>0</span>];
     }
 };
-</code></pre></div>
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under javascript"
-                href="https://kevingimbel.de/categories/javascript/">javascript</a>
-        </li></ul>
-</section>
-
-        
-
-<section class="tags">
-    <h3>Tags</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with javascript"
-                href="https://kevingimbel.de/tags/javascript/">javascript</a>
-        </li></ul>
-</section>
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-10-14-i-js.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+</code></pre></div></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under javascript" href=https://kevingimbel.de/categories/javascript/>javascript</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with javascript" href=https://kevingimbel.de/tags/javascript/>javascript</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-10-14-i-js.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>

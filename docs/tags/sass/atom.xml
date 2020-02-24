@@ -1,36 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[sass on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/sass/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/sass/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/sass/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-29T17:47:06+01:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/sass/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Snippet: SASS Source Maps with Gulp]]></title>
-            <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-            
-                <id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id>
-            
-            
-            <published>2015-01-22T00:00:00+00:00</published>
-            <updated>2015-01-22T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">sass on KevOps</title><link href="https://kevingimbel.de/tags/sass/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/sass/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/sass/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/sass/</id><entry><title type="html">Snippet: SASS Source Maps with Gulp</title><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id><published>2015-01-22T00:00:00+00:00</published><updated>2015-01-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
@@ -75,59 +43,7 @@ image to view it in full-size.</p>
 
 <span style="color:#75715e">// Use the following command to keep out Source Maps.
 </span><span style="color:#75715e"></span><span style="color:#75715e">// $ gulp production
-</span></code></pre></div>]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[From 0 To Sass]]></title>
-            <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</id>
-            
-            
-            <published>2013-10-02T00:00:00+00:00</published>
-            <updated>2013-10-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
+</span></code></pre></div>]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp"/><category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/></entry><entry><title type="html">From 0 To Sass</title><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</id><published>2013-10-02T00:00:00+00:00</published><updated>2013-10-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
 <p>Even though Pre-Processors are easy to use and setup some people are still confused: <em>Do I have to run them on a server? How do I install them? Why should I use them?</em> - I want to answer all these questions in this article: Getting from 0 to Sass in X Steps!</p>
 <p><strong>Notice:</strong> This guide covers the installation on Linux and Mac only, for Windows support please take a look at <a href="http://www.impressivewebs.com/sass-on-windows/">this tutorial</a>.</p>
 <h3 id="sass-summary">Sass summary</h3>
@@ -285,36 +201,4 @@ If you want to have an example what the <code>style.scss</code> would look like,
 <li><a href="http://compass-style.org/reference/compass/">Compass Docs</a></li>
 <li><a href="http://thesassway.com/">The Sass Way</a></li>
 </ul>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass"/><category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling"/></entry></feed>

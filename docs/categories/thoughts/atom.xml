@@ -1,36 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[thoughts on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/categories/thoughts/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/categories/thoughts/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/categories/thoughts/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-01-29T17:47:06+01:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/categories/thoughts/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Goodbye Ubuntu, Hello Mac]]></title>
-            <link href="https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="related" type="text/html" title="Gotcha: dockerignore" />
-                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-                <link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
-            
-                <id>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</id>
-            
-            
-            <published>2016-12-27T15:05:59+01:00</published>
-            <updated>2016-12-27T15:05:59+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it&rsquo;s odd to switch to MacOS. While MacOS is closer to Unix-like systems it&rsquo;s still closed and not as open as Ubuntu or other Linux/GNU distributions. Changing Laptops is hard enough but changing operating systems - and changing to a system one has never worked with is a different thing. For documentation and to help others, I would like to document what I noticed when switching and how I got up and running in a week.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">thoughts on KevOps</title><link href="https://kevingimbel.de/categories/thoughts/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/categories/thoughts/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/categories/thoughts/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/categories/thoughts/</id><entry><title type="html">Goodbye Ubuntu, Hello Mac</title><link href="https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="related" type="text/html" title="Gotcha: dockerignore"/><link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo"/><link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow"/><id>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</id><published>2016-12-27T15:05:59+01:00</published><updated>2016-12-27T15:05:59+01:00</updated><content type="html"><![CDATA[<p>Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it&rsquo;s odd to switch to MacOS. While MacOS is closer to Unix-like systems it&rsquo;s still closed and not as open as Ubuntu or other Linux/GNU distributions. Changing Laptops is hard enough but changing operating systems - and changing to a system one has never worked with is a different thing. For documentation and to help others, I would like to document what I noticed when switching and how I got up and running in a week.</p>
 <h3 id="dotfiles">~/dotfiles</h3>
 <p>I have a <a href="https://github.com/kevingimbel/dotfiles">GitHub repository</a> with dotfiles. By checking out the repository and linking the files I was able to setup my terminal in a few minutes. The repository is not perfect yet and there are unused files which I should - and will - clean-up. Nevertheless without the configs I would have needed to copy the files or re-configure everything by hand.</p>
 <h3 id="docker">Docker</h3>
@@ -42,54 +10,7 @@
 <h3 id="software">Software</h3>
 <p>I am currently figuring out which software I need and which software I want. I installed <a href="https://docs.docker.com/engine/installation/mac/">Docker for Mac</a>, <a href="https://atom.io">Atom</a>, <a href="https://www.google.com/chrome/">Chrome</a> and the usual things like Google Drive and <a href="https://www.keepassx.org/">KeyPassX</a>. I switched away from the default Terminal to <a href="https://www.iterm2.com/">iTerm 2</a>, but besides I kept it vanilla and did not install unnecessary software.</p>
 <p>Did I miss a thing? <a href="https://twitter.com/_kevinatari">Tweet me @_kevinatari</a> and tell me what I absolutely need!</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/personal" term="personal" label="personal" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/hardware" term="hardware" label="hardware" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Web Development in 2014]]></title>
-            <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id>
-            
-            
-            <published>2014-01-02T00:00:00+00:00</published>
-            <updated>2014-01-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&rsquo;s one thing that I&rsquo;d like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I&rsquo;ll give you a short look into basic responsive design/development patterns.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/personal" term="personal" label="personal"/><category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts"/><category scheme="https://kevingimbel.de/tags/hardware" term="hardware" label="hardware"/><category scheme="https://kevingimbel.de/tags/development" term="development" label="development"/></entry><entry><title type="html">Web Development in 2014</title><link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags"/><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id><published>2014-01-02T00:00:00+00:00</published><updated>2014-01-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&rsquo;s one thing that I&rsquo;d like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I&rsquo;ll give you a short look into basic responsive design/development patterns.</p>
 <h3 id="planning">Planning</h3>
 <p>First of all make sure what your site is about and what your content is like. <strong>Never hide content!</strong> Hiding content is the last resort and I prefer to avoid this. Make sure your site displays all the information you need the user to have in a order that makes sense: Do I want to scroll through your header, sidebar and a small advertisement area before I can find the article I&rsquo;m searching for? No, I don&rsquo;t. Good responsive, scalable design starts with mark up and there are a few tricks to archive a good looking, usable website. Before we start to look at the code: I&rsquo;ll focus on blog-like websites here and will cover more complex things later in another post.</p>
 <h3 id="drop-the-mdomain">Drop the m.domain</h3>
@@ -267,98 +188,12 @@
 }
 </code></pre></div><p>Once the grid is setup we can use all the different combinations and prefix them with <code>large-</code>,<code>meduim-</code> or <code>small-</code>. Basically that&rsquo;s it what I want to say about responsive development to this point. I think it is important to stop thinking in different categories like &ldquo;mobile&rdquo;, &ldquo;desktop&rdquo;, &ldquo;TV&rdquo; or whatever - it&rsquo;s more important to see a bunch of screens and devices that have a specific width you need to target with your breakpoints. Also I think every website you create this year should be responsive. There&rsquo;s no excuse anymore to do a non-responsive website. It should be a standard. So as a developer in a design team you should talk to your designers to keep responsive design in mind when making screen-designs. The Internet has become a canvas with a lot of sizes and we, as the artist, have to re-think the way we paint on it.</p>
 <p>I appreciate your opinion and critic <a href="http://twitter.com/_kevinatari">@_kevinatari</a> or via <a href="/imprint">eMail</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[How I got employed]]></title>
-            <link href="https://kevingimbel.de/blog/2013/12/how-i-got-employed/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2013/12/how-i-got-employed/</id>
-            
-            
-            <published>2013-12-22T00:00:00+00:00</published>
-            <updated>2013-12-22T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>About 1 year ago I joined a <a href="http://tlk.io/codepen">tlk.io</a> Chat created by <a href="http://twitter.com/timpietrusky">Tim Pietrusky</a>. It was my first time ever I joined a group of other devs and I was more then nervouse about because I - at this time - considered my self more of a Hobby-Dev who&rsquo;s not that skilled. I just started using CodePen a few months before and did some fun demos and experiments there like drawing images with CSS and stuff. However, through <a href="http://weloveiconfonts.com">We Love Icon Fonts</a> and Twitter I got to know Tim a bit more and as time passed we - and the others - talked daily in our dev chat. It felt super awesome to be around skilled people and I really enjoyed their company.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry><entry><title type="html">How I got employed</title><link href="https://kevingimbel.de/blog/2013/12/how-i-got-employed/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/12/how-i-got-employed/</id><published>2013-12-22T00:00:00+00:00</published><updated>2013-12-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>About 1 year ago I joined a <a href="http://tlk.io/codepen">tlk.io</a> Chat created by <a href="http://twitter.com/timpietrusky">Tim Pietrusky</a>. It was my first time ever I joined a group of other devs and I was more then nervouse about because I - at this time - considered my self more of a Hobby-Dev who&rsquo;s not that skilled. I just started using CodePen a few months before and did some fun demos and experiments there like drawing images with CSS and stuff. However, through <a href="http://weloveiconfonts.com">We Love Icon Fonts</a> and Twitter I got to know Tim a bit more and as time passed we - and the others - talked daily in our dev chat. It felt super awesome to be around skilled people and I really enjoyed their company.</p>
 <p>As I found out that Tim lives near me I wanted to meet him because the only person I ever knew who did web-stuff was my best friend <a href="http://twitter.com/MyXoToD">Max</a> so we drove to Tim&rsquo;s, had some self-made burgers and worked a bit together. That was about 5 months ago and just on Friday I broke up School to work as a full-time Front-End Developer with Tim at <a href="http://synoa.de">Synoa</a>. I&rsquo;m really excited about this!</p>
 <p>Tim always said I&rsquo;d be skilled and he&rsquo;d be sure I could create amazing things and I can be - and am willing to - become an awesome web developer. In fact, Tim trusts more in me then I do. Thanks for this at this point.
 So, he got me into a Company and wanted to work with me, I accepted and on January 1th 2014 I&rsquo;ll officially start working there. <a href="http://codepen.io">CodePen</a> played a big role in getting me this Job because it&rsquo;s an easy way to show off your skills and an even more easy way to build a Portfolio full of snippets. It took me a lot of time to do different things and while my friends where outside drinking on the weekends I was home doing <a href="http://codepen.io/kevingimbel/pen/vtJzn">a CSS classic Gameboy</a>, a <a href="http://codepen.io/kevingimbel/pen/IsBka">Vault-Tec Logo</a>, the <a href="http://codepen.io/kevingimbel/pen/wAljf">Aperture Science Logo</a>, a <a href="http://codepen.io/kevingimbel/pen/jGFCs">turret from Portal</a>, <a href="http://codepen.io/kevingimbel/pen/BpcGr">R2D2</a> or a single element <a href="http://codepen.io/kevingimbel/pen/iqDIv">Link from The Legend Of Zelda</a> - those things are all useless but fun and they helped me a lot in understanding CSS and Sass. I did this to have fun and to have things I could show to others and as I know now it was worth it. I&rsquo;ve got a Job offer and I&rsquo;ll work at a company again.</p>
 <p>Getting to know <a href="http://twitter.com/timpietrusky">Tim</a>, using <a href="http://codepen.io/kevingimbel">CodePen</a> that much and <a href="/join-a-dev-group">joining a dev group</a> have been the best decisions I made this year. I am happy and I&rsquo;m looking forward to a full-time working year with a lot of awesome client projects.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/personal" term="personal" label="personal" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/job" term="job" label="job" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/work" term="work" label="work" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Join a Dev Group]]></title>
-            <link href="https://kevingimbel.de/blog/2013/10/join-a-dev-group/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2013/10/join-a-dev-group/</id>
-            
-            
-            <published>2013-10-13T00:00:00+00:00</published>
-            <updated>2013-10-13T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Earlier this year I joined a Dev Group. It was the best decision I made this year and I want to tell you why.
+]]></content><category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts"/><category scheme="https://kevingimbel.de/categories/personal" term="personal" label="personal"/><category scheme="https://kevingimbel.de/tags/job" term="job" label="job"/><category scheme="https://kevingimbel.de/tags/work" term="work" label="work"/></entry><entry><title type="html">Join a Dev Group</title><link href="https://kevingimbel.de/blog/2013/10/join-a-dev-group/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/10/join-a-dev-group/</id><published>2013-10-13T00:00:00+00:00</published><updated>2013-10-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Earlier this year I joined a Dev Group. It was the best decision I made this year and I want to tell you why.
 After doing more experiments on <a href="http://codepen.io/kevingimbel">CodePen</a> and right after I got to know <a href="http://timpietrusky.com">Tim Pietrusky</a> he opened a <a href="http://tlk.io">tlk.io</a> Chat called <a href="http://tlk.io/codepen">#CodePen</a>. For those who&rsquo;re not familiar with tlk: it&rsquo;s an open web chat. You can create a room, everyone can join and all things are open to everyone who knows the URL. Over the time a group of about seven people used this chat on a daily base and as of today I love them all. They&rsquo;re <a href="http://timpietrusky.com">Tim</a>, <a href="http://myxotod.de">Max</a>, <a href="http://lucasbonomi.com">Luky</a>, <a href="http://janreimers.net">Jan</a>, <a href="https://github.com/dervondenbergen">Felix</a>, <a href="http://seebeetee.com">Kanu</a> and myself - for sure. We recently moved our Chat to Google+, we do Hangouts very often and talk about Webdesign, Development and Nerd stuff daily.</p>
 <p>We build useless but fun stuff together at <a href="http://bullgit.github.io">bullgit</a>, we learn from each other, help each other and discuss best practices. It&rsquo;s amazing to have a Dev Group and there are some reasons for:</p>
 <ul>
@@ -371,81 +206,8 @@ After doing more experiments on <a href="http://codepen.io/kevingimbel">CodePen<
 <p>Whenever one of us has a problem others are there to help. For sure the unspoken rule number 1 is to try for yourself first before you give up and ask the others but this works pretty well. I love this group.</p>
 <p>Lately <a href="https://twitter.com/shvelo96">Nick</a> joined the bullgit team by simply asking if we accept new members. For sure we do! No matter what skill level you have, no matter if web dev is your hobby or job, no matter who you are: Contact us. If you&rsquo;re interested in all kinds of funny site projects just <a href="http://tlk.io/codepen">drop us a line on tlk</a> - if nobody is online and you log-in with twitter we&rsquo;ll contact you as soon as we see your message.</p>
 <p>Everyone should find and join a Dev Group. The benefits you have from communicating with others who do and love the same things you love are infinite. I learned a lot of things, I improved my workflow and I even got a Job offer (more on that when the time has come) - Dev Groups will make your online life a lot better.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/community" term="community" label="community" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Endless scrolling]]></title>
-            <link href="https://kevingimbel.de/blog/2013/09/endless-scrolling/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2013/09/endless-scrolling/</id>
-            
-            
-            <published>2013-09-01T00:00:00+00:00</published>
-            <updated>2013-09-01T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>If you see Apps (no matter if native or web) and websites like I do, you&rsquo;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&rsquo;t offer a way to get back to top on their website nor do they on Facebook for Android.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts"/><category scheme="https://kevingimbel.de/tags/community" term="community" label="community"/></entry><entry><title type="html">Endless scrolling</title><link href="https://kevingimbel.de/blog/2013/09/endless-scrolling/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/09/endless-scrolling/</id><published>2013-09-01T00:00:00+00:00</published><updated>2013-09-01T00:00:00+00:00</updated><content type="html"><![CDATA[<p>If you see Apps (no matter if native or web) and websites like I do, you&rsquo;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&rsquo;t offer a way to get back to top on their website nor do they on Facebook for Android.</p>
 <p>On Android you can simply hit the menu button and the sidebar-like menu will fade in, so there is no problem with not having an &ldquo;scroll to top&rdquo; action because there is no need to get back to the top. I&rsquo;ve nothing more to say on their app in this case (beside that it&rsquo;s the slowest Social Network App I can think of but that&rsquo;s another point).</p>
 <p>On <a href="http://facebook.com">facebook.com</a> you&rsquo;ll experience something that is, in my opinion, a bad UI/X idea: If you scroll down the sidebar on the left (that contains all the shortcuts to messages, groups and pages) will stay on top of the page while the Advertisement section on the right scrolls down - who thought of this? And what&rsquo;s the reason to fix the Advertisement while the menu, which is also important, isn&rsquo;t fixed?</p>
 <p>I see a reason in fixing the Advertisement: People are more likely to read them and click them the longer they stay inside the viewpoint, but not fixing the menu is just a bad idea - there&rsquo;s no reason I could think of to explain why the menu should hide when scrolling without a possibility to bring it back. When you click the Facebook Logo on the top left the site will refresh and bring you back to top. In case of UX I&rsquo;d rather like to have a smooth animation that scrolls the content back to top that having a completely refresh. What about people with slow Internet connection? They&rsquo;ll need to scroll up by themselves or have to wait until the whole site refreshed - this is, in every way, a bad example of UX. Even though Facebook has a lot of great minds onboard, some should maybe think twice about what to hide, what to fix and how to get back to the top.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/code" term="code" label="code" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/ui" term="ui" label="UI" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/ux" term="ux" label="UX" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/thoughts" term="thoughts" label="thoughts" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts"/><category scheme="https://kevingimbel.de/tags/code" term="code" label="code"/><category scheme="https://kevingimbel.de/tags/ui" term="ui" label="UI"/><category scheme="https://kevingimbel.de/tags/ux" term="ux" label="UX"/><category scheme="https://kevingimbel.de/tags/thoughts" term="thoughts" label="thoughts"/></entry></feed>

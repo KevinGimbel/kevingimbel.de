@@ -1,182 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Is this :valid? &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords=" blog coding frontend  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <header class="intro-text">
-        <span>
-        
-        
-        Is this :valid?
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            
-
-
-
-
-
-<section class="age-note">
-    <h2>ATTENTION!</h2>
-    <p>This article is over 4 years old, it may be outdated!</p>
-</section>
-
-
-
-<p>Written on <time datetime="2013-08-16 00:00:00 &#43;0000 UTC">16. Aug 2013</time>  </p>
-            <p>I recently stumbled upon the <code>:valid</code> and <code>:invalid</code> class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not <strong>validate the input</strong>, the entered email for example can still be formated wrong.</p>
-<p>Anyway I thought this is a handy little helper that I could give a try so I started working around with it, checking what I can do and what I can&rsquo;t.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">contact__form--email</span> {
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Is this :valid? &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="blog coding frontend"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>Is this :valid?</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2013-08-16 00:00:00 +0000 UTC">16. Aug 2013</time></p><p>I recently stumbled upon the <code>:valid</code> and <code>:invalid</code> class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not <strong>validate the input</strong>, the entered email for example can still be formated wrong.</p><p>Anyway I thought this is a handy little helper that I could give a try so I started working around with it, checking what I can do and what I can&rsquo;t.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#a6e22e>contact__form--email</span> {
  
-  <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">{</span>
-    <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">green</span>;
+  <span style=color:#960050;background-color:#1e0010>&amp;</span><span style=color:#960050;background-color:#1e0010>:</span><span style=color:#960050;background-color:#1e0010>v</span><span style=color:#960050;background-color:#1e0010>a</span><span style=color:#960050;background-color:#1e0010>l</span><span style=color:#960050;background-color:#1e0010>i</span><span style=color:#960050;background-color:#1e0010>d</span> <span style=color:#960050;background-color:#1e0010>{</span>
+    <span style=color:#66d9ef>color</span>:<span style=color:#66d9ef>green</span>;
   }
 
-  <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">invalid</span> {
-    <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">red</span>;
+  <span style=color:#f92672>&amp;</span>:<span style=color:#a6e22e>invalid</span> {
+    <span style=color:#66d9ef>color</span>:<span style=color:#66d9ef>red</span>;
   }
-<span style="color:#960050;background-color:#1e0010">}</span>
-</code></pre></div><p>Above you see the basic markup for a simple use case of <code>:valid</code> and <code>:invalid</code>. You can apply everything you want so far I&rsquo;ve tested. In my opinion <code>color</code> and <code>border</code> are the best and most basic use cases where this makes sense.</p>
-<h3 id="strange-behavior-of-valid">Strange behavior of :valid</h3>
-<p>While the <code>:invalid</code> pseudo class makes perfect sense I found some strange behavior while experimenting with <code>:valid</code>.
-When the user starts typing the color will be red, as soon as he writes <code>yourname@g</code> the color will turn green - because the eMail is now valid, even though it&rsquo;s not finished and here comes the point I start wondering: Why doesn&rsquo;t it check for a dot followed by at least 2 letters? The chances that this would be a valid email and this can be marked valid is much higher then triggering the valid pseudo class right after someone puts a letter behind the @ mark.</p>
-<p>Mozilla&rsquo;s Firefox and Google Chrome behave the same way, both trigger the <code>:valid</code> class as soon as there is one character behind the @ mark. I wonder if this is specified by W3C - and now I ask: Is this really the best way to handle <code>:valid</code> and <code>:invalid</code> pseudo classes? Wouldn&rsquo;t it be better to wait until the user types at least one dot followed by a letter <strong>after</strong> the user already wrote an @ mark? This would, in all cases, make sure the email is set up correctly.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Firefox and Chrome trigger :valid</span> 
-<span style="color:#75715e"># at this point</span>
-<span style="color:#75715e">#       |</span>
+<span style=color:#960050;background-color:#1e0010>}</span>
+</code></pre></div><p>Above you see the basic markup for a simple use case of <code>:valid</code> and <code>:invalid</code>. You can apply everything you want so far I&rsquo;ve tested. In my opinion <code>color</code> and <code>border</code> are the best and most basic use cases where this makes sense.</p><h3 id=strange-behavior-of-valid>Strange behavior of :valid</h3><p>While the <code>:invalid</code> pseudo class makes perfect sense I found some strange behavior while experimenting with <code>:valid</code>.
+When the user starts typing the color will be red, as soon as he writes <code>yourname@g</code> the color will turn green - because the eMail is now valid, even though it&rsquo;s not finished and here comes the point I start wondering: Why doesn&rsquo;t it check for a dot followed by at least 2 letters? The chances that this would be a valid email and this can be marked valid is much higher then triggering the valid pseudo class right after someone puts a letter behind the @ mark.</p><p>Mozilla&rsquo;s Firefox and Google Chrome behave the same way, both trigger the <code>:valid</code> class as soon as there is one character behind the @ mark. I wonder if this is specified by W3C - and now I ask: Is this really the best way to handle <code>:valid</code> and <code>:invalid</code> pseudo classes? Wouldn&rsquo;t it be better to wait until the user types at least one dot followed by a letter <strong>after</strong> the user already wrote an @ mark? This would, in all cases, make sure the email is set up correctly.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># Firefox and Chrome trigger :valid</span> 
+<span style=color:#75715e># at this point</span>
+<span style=color:#75715e>#       |</span>
     you@host.com
-<span style="color:#75715e">#             |</span> 
-<span style="color:#75715e"># I suggest triggering after</span> 
-<span style="color:#75715e"># 2 letters have been entered</span>
-<span style="color:#75715e"># because chances that the email</span>
-<span style="color:#75715e"># is valid are much higher here</span>
-</code></pre></div><p>At least you have to check the email via JavaScript or PHP with RegEx to make sure it is valid but it would be a nice UX feature to have a visual feedback that checks the email so a user sees that the inputed email is correct - the :valid class doesn&rsquo;t provide this yet because it triggers to early so there is no &ldquo;guarantee&rdquo; the email is correct.</p>
-<p>I hope that they&rsquo;ll change this behavior in the future so it&rsquo;s save to use :valid on email inputs and it works correctly. What do you think about <code>:valid</code> and <code>:invalid</code>?</p>
-<p>You can find a working example of :valid and :invalid <a href="http://codepen.io/kevingimbel/pen/jlhJg">here at CodePen</a>.</p>
-
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under frontend"
-                href="https://kevingimbel.de/categories/frontend/">frontend</a>
-        </li></ul>
-</section>
-
-        
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-08-16-is-this-valid.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+<span style=color:#75715e>#             |</span> 
+<span style=color:#75715e># I suggest triggering after</span> 
+<span style=color:#75715e># 2 letters have been entered</span>
+<span style=color:#75715e># because chances that the email</span>
+<span style=color:#75715e># is valid are much higher here</span>
+</code></pre></div><p>At least you have to check the email via JavaScript or PHP with RegEx to make sure it is valid but it would be a nice UX feature to have a visual feedback that checks the email so a user sees that the inputed email is correct - the :valid class doesn&rsquo;t provide this yet because it triggers to early so there is no &ldquo;guarantee&rdquo; the email is correct.</p><p>I hope that they&rsquo;ll change this behavior in the future so it&rsquo;s save to use :valid on email inputs and it works correctly. What do you think about <code>:valid</code> and <code>:invalid</code>?</p><p>You can find a working example of :valid and :invalid <a href=http://codepen.io/kevingimbel/pen/jlhJg>here at CodePen</a>.</p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-08-16-is-this-valid.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>

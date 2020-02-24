@@ -1,260 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ReactJS - Hello World! &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords="react  blog coding tutorial frontend  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <header class="intro-text">
-        <span>
-        
-        
-        ReactJS - Hello World!
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            
-
-
-
-
-
-<section class="age-note">
-    <h2>ATTENTION!</h2>
-    <p>This article is over 4 years old, it may be outdated!</p>
-</section>
-
-
-
-<p>Written on <time datetime="2015-05-07 00:00:00 &#43;0000 UTC">07. May 2015</time>  </p>
-            <p>This article is the first in a series about <a href="http://facebook.github.io/react/">ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p>
-<p>React itself says one very important and true thing about itself:</p>
-<blockquote>
-<p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it&rsquo;s easy to try it out on a small feature in an existing project.</p>
-</blockquote>
-<p>Instead of frameworks such as <a href="https://angularjs.org/">Angular</a> or <a href="http://emberjs.com/">Ember</a>, React only covers the visual part and state of an UI. It won&rsquo;t help you structure your applicationit will not do anything other than render DOM parts and control their state. At this, however, React is amazingly good!</p>
-<h3 id="jsx-like-syntax">JSX-like syntax</h3>
-<p>React uses a XML like syntax called JSX. JSX seems horrible at first, at least to me, but becomes really powerful once you&rsquo;re used to it. Here is an example of two <code>div</code>s, one written in React JSX syntax and one in pure JavaScript. We assume the variable <code>dynamicContent</code> will hold some content that is generated before.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// React JSX DIV
-var myJSXDiv = &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span>&gt;{dynamicContent}&lt;/<span style="color:#f92672">div</span>&gt;;
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>ReactJS - Hello World! &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="react  blog coding tutorial frontend"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>ReactJS - Hello World!</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2015-05-07 00:00:00 +0000 UTC">07. May 2015</time></p><p>This article is the first in a series about <a href=http://facebook.github.io/react/>ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p><p>React itself says one very important and true thing about itself:</p><blockquote><p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it&rsquo;s easy to try it out on a small feature in an existing project.</p></blockquote><p>Instead of frameworks such as <a href=https://angularjs.org/>Angular</a> or <a href=http://emberjs.com/>Ember</a>, React only covers the visual part and state of an UI. It won&rsquo;t help you structure your applicationit will not do anything other than render DOM parts and control their state. At this, however, React is amazingly good!</p><h3 id=jsx-like-syntax>JSX-like syntax</h3><p>React uses a XML like syntax called JSX. JSX seems horrible at first, at least to me, but becomes really powerful once you&rsquo;re used to it. Here is an example of two <code>div</code>s, one written in React JSX syntax and one in pure JavaScript. We assume the variable <code>dynamicContent</code> will hold some content that is generated before.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>// React JSX DIV
+var myJSXDiv = &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;lorem&#34;</span>&gt;{dynamicContent}&lt;/<span style=color:#f92672>div</span>&gt;;
 // pure JS DIV
-var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span>&gt;&#39;+ dynamicContent +&#39;&lt;/<span style="color:#f92672">div</span>&gt;&#39;;
-</code></pre></div><p>Weird isn&rsquo;t it? Writing junks of HTML without quotes in a JavaScript file looks totally wrong at first, however React is being compiled to pure JavaScript before it will hit your servers. Therefore, it really only is a way of easy writing - when you create a few DOM Elements in React you&rsquo;ll soon start to love the JSX-like syntax.</p>
-<h3 id="hello-world">Hello World!</h3>
-<p>As in every framework and language, let&rsquo;s start by outputting a <code>Hello World!</code> string. To archive this we will do the following:</p>
-<ul>
-<li>Create a new React Class or Component</li>
-<li>Invoke a <code>render()</code> function within that Component</li>
-<li>Render the Component to the DOM</li>
-</ul>
-<h4 id="reactcreateclass">React.createClass(</h4>
-<p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I&rsquo;ll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!&quot;.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
-  <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span><span style="color:#f92672">!</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+var myJSDiv = &#39;&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;lorem&#34;</span>&gt;&#39;+ dynamicContent +&#39;&lt;/<span style=color:#f92672>div</span>&gt;&#39;;
+</code></pre></div><p>Weird isn&rsquo;t it? Writing junks of HTML without quotes in a JavaScript file looks totally wrong at first, however React is being compiled to pure JavaScript before it will hit your servers. Therefore, it really only is a way of easy writing - when you create a few DOM Elements in React you&rsquo;ll soon start to love the JSX-like syntax.</p><h3 id=hello-world>Hello World!</h3><p>As in every framework and language, let&rsquo;s start by outputting a <code>Hello World!</code> string. To archive this we will do the following:</p><ul><li>Create a new React Class or Component</li><li>Invoke a <code>render()</code> function within that Component</li><li>Render the Component to the DOM</li></ul><h4 id=reactcreateclass>React.createClass(</h4><p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I&rsquo;ll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!".</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>HelloWorld</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createClass</span>({
+  <span style=color:#a6e22e>render</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>() {
+    <span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>h1</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>Hello</span> <span style=color:#a6e22e>World</span><span style=color:#f92672>!</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/</span><span style=color:#960050;background-color:#1e0010>h</span><span style=color:#960050;background-color:#1e0010>1</span><span style=color:#960050;background-color:#1e0010>&gt;</span>
   }
 })
-</code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that&rsquo;ll be passed just like a HTML element: <code>&lt;HelloWorld /&gt;</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Renders the HelloWorld Component into the Body.
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>, document.<span style="color:#a6e22e">body</span>);
-</code></pre></div><p>And here&rsquo;s a working <a href="http://codepen.io">Pen</a> with additional comments.</p>
-<!-- raw HTML omitted -->
-<p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn&rsquo;t fun either. So next, we&rsquo;ll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p>
-<h3 id="hello-friend">Hello {friend}!</h3>
-<p>React has its own template-engine-thingy. Instead of typing static strings you can pass data and use it in the return of the Render Function (or in any other function inside the component for that matter). All passed data is accessible via <code>this.props</code> and passed like <code>&lt;HelloWorld name=&quot;Kevin&quot; /&gt;</code>, which would than be accessed like <code>this.props.name</code>. Here&rsquo;s an example of this in action.</p>
-<!-- raw HTML omitted -->
-<p>However, to re-use the <code>HelloWorld</code> component we need to create another Component and use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code>Array.map</code></a> function to go over an Array of names.</p>
-<p>So what we do now is the following:</p>
-<ul>
-<li>We extend the <code>&lt;HelloWorld /&gt;</code> component to accept a property</li>
-<li>We create a new Component that renders multiple instances of <code>&lt;HelloWorld /&gt;</code></li>
-<li>We render the new Component into the document</li>
-</ul>
-<p>This sounds complex but it is quite doable so let&rsquo;s start right away by extending the <code>HelloWorld</code> component and re-naming it to <code>Hello</code> since it will greet all kinds of people now.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// The new Hello Component
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
-  <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> {<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">!</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+</code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that&rsquo;ll be passed just like a HTML element: <code>&lt;HelloWorld /></code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// Renders the HelloWorld Component into the Body.
+</span><span style=color:#75715e></span><span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>render</span>(<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>HelloWorld</span> <span style=color:#f92672>/</span><span style=color:#f92672>&gt;</span>, document.<span style=color:#a6e22e>body</span>);
+</code></pre></div><p>And here&rsquo;s a working <a href=http://codepen.io>Pen</a> with additional comments.</p><p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn&rsquo;t fun either. So next, we&rsquo;ll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p><h3 id=hello-friend>Hello {friend}!</h3><p>React has its own template-engine-thingy. Instead of typing static strings you can pass data and use it in the return of the Render Function (or in any other function inside the component for that matter). All passed data is accessible via <code>this.props</code> and passed like <code>&lt;HelloWorld name="Kevin" /></code>, which would than be accessed like <code>this.props.name</code>. Here&rsquo;s an example of this in action.</p><p>However, to re-use the <code>HelloWorld</code> component we need to create another Component and use the <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map><code>Array.map</code></a> function to go over an Array of names.</p><p>So what we do now is the following:</p><ul><li>We extend the <code>&lt;HelloWorld /></code> component to accept a property</li><li>We create a new Component that renders multiple instances of <code>&lt;HelloWorld /></code></li><li>We render the new Component into the document</li></ul><p>This sounds complex but it is quite doable so let&rsquo;s start right away by extending the <code>HelloWorld</code> component and re-naming it to <code>Hello</code> since it will greet all kinds of people now.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// The new Hello Component
+</span><span style=color:#75715e></span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Hello</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createClass</span>({
+  <span style=color:#a6e22e>render</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>() {
+    <span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>h1</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>Hello</span> {<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>name</span>}<span style=color:#f92672>!</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/</span><span style=color:#960050;background-color:#1e0010>h</span><span style=color:#960050;background-color:#1e0010>1</span><span style=color:#960050;background-color:#1e0010>&gt;</span>
   }
 });
-</code></pre></div><p>With this simple change we can invoke the Component like <code>&lt;Hello name=&quot;Kevin&quot; /&gt;</code> and it will return <code>&lt;h1&gt;Hello Kevin!&lt;/h1&gt;</code>. However, to create a List of our friends we need a new Component. This Component will be called <code>FriendList</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">FriendList</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
-  <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allGreetings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">folks</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">person</span>) {
-      <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">person</span>} <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>;
+</code></pre></div><p>With this simple change we can invoke the Component like <code>&lt;Hello name="Kevin" /></code> and it will return <code>&lt;h1>Hello Kevin!&lt;/h1></code>. However, to create a List of our friends we need a new Component. This Component will be called <code>FriendList</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>FriendList</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createClass</span>({
+  <span style=color:#a6e22e>render</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>() {
+    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>allGreetings</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>folks</span>.<span style=color:#a6e22e>map</span>(<span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>person</span>) {
+      <span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>Hello</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>person</span>} <span style=color:#f92672>/</span><span style=color:#f92672>&gt;</span>;
     });
 
-    <span style="color:#66d9ef">return</span>(
-      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">allGreetings</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    <span style=color:#66d9ef>return</span>(
+      <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>{<span style=color:#a6e22e>allGreetings</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/</span><span style=color:#960050;background-color:#1e0010>d</span><span style=color:#960050;background-color:#1e0010>i</span><span style=color:#960050;background-color:#1e0010>v</span><span style=color:#960050;background-color:#1e0010>&gt;</span>
     )
   }
 });
-</code></pre></div><p>Quite a lot going on here. Let&rsquo;s break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that&rsquo;ll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /&gt;</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// this.props.folks.map() goes over every entry in the array
-</span><span style="color:#75715e"></span><span style="color:#75715e">// and returns a new Hello Component.
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allGreetings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">folks</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">person</span>) {
-  <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">person</span>} <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>;
+</code></pre></div><p>Quite a lot going on here. Let&rsquo;s break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that&rsquo;ll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /></code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// this.props.folks.map() goes over every entry in the array
+</span><span style=color:#75715e></span><span style=color:#75715e>// and returns a new Hello Component.
+</span><span style=color:#75715e></span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>allGreetings</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>folks</span>.<span style=color:#a6e22e>map</span>(<span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>person</span>) {
+  <span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>Hello</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>person</span>} <span style=color:#f92672>/</span><span style=color:#f92672>&gt;</span>;
 });
-</code></pre></div><p>What happens here is:</p>
-<ul>
-<li>we go through all the names in <code>this.props.folks</code></li>
-<li>For each name, we return a new <code>&lt;Hello /&gt;</code> Component passing in the name of the person</li>
-<li>All the HTML from all the Components now is assigned to the <code>allGreetings</code> variable</li>
-</ul>
-<p>So we have our HTML but we need to return it, right? Right! So the next line returns the generated HTML from the <code>FriendList</code> Component.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// the two parentese are optional but I like them for
-</span><span style="color:#75715e"></span><span style="color:#75715e">// &#34;grouping&#34; the return. The div however is required.
-</span><span style="color:#75715e"></span><span style="color:#75715e">// Every return must be wrapped in an DOM Element.
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span>(
-      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">allGreetings</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+</code></pre></div><p>What happens here is:</p><ul><li>we go through all the names in <code>this.props.folks</code></li><li>For each name, we return a new <code>&lt;Hello /></code> Component passing in the name of the person</li><li>All the HTML from all the Components now is assigned to the <code>allGreetings</code> variable</li></ul><p>So we have our HTML but we need to return it, right? Right! So the next line returns the generated HTML from the <code>FriendList</code> Component.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// the two parentese are optional but I like them for
+</span><span style=color:#75715e></span><span style=color:#75715e>// &#34;grouping&#34; the return. The div however is required.
+</span><span style=color:#75715e></span><span style=color:#75715e>// Every return must be wrapped in an DOM Element.
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span>(
+      <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>{<span style=color:#a6e22e>allGreetings</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/</span><span style=color:#960050;background-color:#1e0010>d</span><span style=color:#960050;background-color:#1e0010>i</span><span style=color:#960050;background-color:#1e0010>v</span><span style=color:#960050;background-color:#1e0010>&gt;</span>
     )
-</code></pre></div><p>So here we return a <code>div</code> holding our generated HTML. The <code>div</code> is required because every React Component must return a HTML Container - and the <code>allGreetings</code> variable holds multiple containers so we need a new one. The parentese are optional but I prefer them for grouping the output. Next, we need to invoke our new Component.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Here we create an Array of all the people we want to greet. In this
-</span><span style="color:#75715e"></span><span style="color:#75715e">// case it&#39;s members from Team bullgit! http://bullg.it
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allThePeople</span> <span style="color:#f92672">=</span> [
-  <span style="color:#e6db74">&#34;Kevin&#34;</span>, <span style="color:#e6db74">&#34;Luky&#34;</span>, <span style="color:#e6db74">&#34;Jess&#34;</span>, <span style="color:#e6db74">&#34;Felix&#34;</span>, <span style="color:#e6db74">&#34;Max&#34;</span>, <span style="color:#e6db74">&#34;Nika&#34;</span>, <span style="color:#e6db74">&#34;Gregor&#34;</span>, <span style="color:#e6db74">&#34;Tim&#34;</span>, <span style="color:#e6db74">&#34;Jan&#34;</span>
+</code></pre></div><p>So here we return a <code>div</code> holding our generated HTML. The <code>div</code> is required because every React Component must return a HTML Container - and the <code>allGreetings</code> variable holds multiple containers so we need a new one. The parentese are optional but I prefer them for grouping the output. Next, we need to invoke our new Component.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// Here we create an Array of all the people we want to greet. In this
+</span><span style=color:#75715e></span><span style=color:#75715e>// case it&#39;s members from Team bullgit! http://bullg.it
+</span><span style=color:#75715e></span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>allThePeople</span> <span style=color:#f92672>=</span> [
+  <span style=color:#e6db74>&#34;Kevin&#34;</span>, <span style=color:#e6db74>&#34;Luky&#34;</span>, <span style=color:#e6db74>&#34;Jess&#34;</span>, <span style=color:#e6db74>&#34;Felix&#34;</span>, <span style=color:#e6db74>&#34;Max&#34;</span>, <span style=color:#e6db74>&#34;Nika&#34;</span>, <span style=color:#e6db74>&#34;Gregor&#34;</span>, <span style=color:#e6db74>&#34;Tim&#34;</span>, <span style=color:#e6db74>&#34;Jan&#34;</span>
 ]
-<span style="color:#75715e">// and then we pass it to the FriendList Component.
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">FriendList</span> <span style="color:#a6e22e">folks</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">allThePeople</span>}<span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>, document.<span style="color:#a6e22e">body</span>);
-</code></pre></div><p>We create a normal JavaScript Array with our Friends&rsquo; names as strings, then pass it to the React component as the attribute <code>folks</code>. This array will then be accessible as <code>this.props.folks</code> from within the Component. And, as before, here is a Pen showing the output as well as some more comments on the code.</p>
-<!-- raw HTML omitted -->
-<p>That&rsquo;s it for creating a Component and re-using it inside another Component. For the next tutorial we&rsquo;ll see how we can use a state to give our Components some interaction. If you&rsquo;ve got any questions or have found an issue, hit me up at <a href="https://twitter.com/_kevinatari">@_kevinatari</a>.</p>
-<!-- raw HTML omitted -->
-
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under tutorial"
-                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under frontend"
-                href="https://kevingimbel.de/categories/frontend/">frontend</a>
-        </li></ul>
-</section>
-
-        
-
-<section class="tags">
-    <h3>Tags</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with react"
-                href="https://kevingimbel.de/tags/react/">react</a>
-        </li></ul>
-</section>
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-05-07-react-js-tutorial-hello-world.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+<span style=color:#75715e>// and then we pass it to the FriendList Component.
+</span><span style=color:#75715e></span><span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>render</span>(<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>FriendList</span> <span style=color:#a6e22e>folks</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>allThePeople</span>}<span style=color:#f92672>/</span><span style=color:#f92672>&gt;</span>, document.<span style=color:#a6e22e>body</span>);
+</code></pre></div><p>We create a normal JavaScript Array with our Friends&rsquo; names as strings, then pass it to the React component as the attribute <code>folks</code>. This array will then be accessible as <code>this.props.folks</code> from within the Component. And, as before, here is a Pen showing the output as well as some more comments on the code.</p><p>That&rsquo;s it for creating a Component and re-using it inside another Component. For the next tutorial we&rsquo;ll see how we can use a state to give our Components some interaction. If you&rsquo;ve got any questions or have found an issue, hit me up at <a href=https://twitter.com/_kevinatari>@_kevinatari</a>.</p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tutorial" href=https://kevingimbel.de/categories/tutorial/>tutorial</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with react" href=https://kevingimbel.de/tags/react/>react</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-05-07-react-js-tutorial-hello-world.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>
