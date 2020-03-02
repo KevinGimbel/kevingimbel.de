@@ -1,6 +1,6 @@
 ---
 title: "Home is where 127.0.0.1 is"
-intro_text: "[Kevin Gimbel](/about/) is a Full-Stack Developer currently working as DevOps Engineer at Synoa GmbH. *This* is his website and writing in third person is **awkward**."
+intro_text: "[Kevin Gimbel](/about/) is a DevOps Engineer working at Synoa GmbH. *This* is his website and writing in third person is **awkward**."
 ---
 
 {{< sidebyside >}}

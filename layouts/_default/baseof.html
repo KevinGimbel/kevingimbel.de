@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ .Title }}{{ with .Title }} &mdash; {{ end }}{{ .Site.Title }}</title>
     <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
     <meta keywords="{{ with .Params.Tags }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Section }} {{ with .Params.Categories }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Site.Params.Keywords }}">
     <link rel="stylesheet" href="/style.css">
     {{ with .OutputFormats.Get "rss" -}}
