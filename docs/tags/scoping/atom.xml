@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">scoping on KevOps</title><link href="https://kevingimbel.de/tags/scoping/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/scoping/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/scoping/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/scoping/</id><entry><title type="html">A closer look to closure</title><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</id><published>2014-07-20T00:00:00+00:00</published><updated>2014-07-20T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[scoping on KevOps]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/tags/scoping/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/scoping/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/scoping/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-03-02T11:38:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/tags/scoping/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[A closer look to closure]]></title>
+            <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+            
+                <id>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</id>
+            
+            
+            <published>2014-07-20T00:00:00+00:00</published>
+            <updated>2014-07-20T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
 functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some
 problems I want to try and give short introduction to closure and what it can be good for. It&rsquo;s good to have at least
 basic understanding of JavaScript.</p>
@@ -65,4 +98,38 @@ tries to use a function with the same name. Then there&rsquo;ll be a &ldquo;conf
 Therefore, the myFunction() is still accessable within the scope and has the expected results, no matter who
 declares myFunction in the globale scope.</p>
 <!-- raw HTML omitted -->
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/closure" term="closure" label="closure"/><category scheme="https://kevingimbel.de/tags/scoping" term="scoping" label="scoping"/></entry></feed>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/closure" term="closure" label="closure" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/scoping" term="scoping" label="scoping" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

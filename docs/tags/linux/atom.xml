@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">linux on KevOps</title><link href="https://kevingimbel.de/tags/linux/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/linux/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/linux/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/linux/</id><entry><title type="html">Auto SSL With apache2</title><link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Using Archetypes in Hugo"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><id>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</id><published>2020-01-08T00:00:00+00:00</published><updated>2020-01-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[linux on KevOps]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/tags/linux/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/linux/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/linux/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-03-02T11:38:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/tags/linux/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Auto SSL With apache2]]></title>
+            <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Using Archetypes in Hugo" />
+                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+            
+                <id>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</id>
+            
+            
+            <published>2020-01-08T00:00:00+00:00</published>
+            <updated>2020-01-13T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
 <p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p>
 <h2 id="installing-a-new-apache-version">Installing a new apache version</h2>
 <p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we&rsquo;ll add this.</p>
@@ -46,4 +77,46 @@ MDomain test.kevingimbel.de
 <li>Replaced double &ldquo;supports&rdquo; in first sentence with &ldquo;allows&rdquo; and &ldquo;setup&rdquo; with &ldquo;management&rdquo;</li>
 <li>Replaced &ldquo;setups&rdquo; with &ldquo;setup and renewal&rdquo; in sub headline</li>
 </ul>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/apache" term="apache" label="apache"/><category scheme="https://kevingimbel.de/tags/server" term="server" label="server"/><category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation"/><category scheme="https://kevingimbel.de/tags/security" term="security" label="security"/><category scheme="https://kevingimbel.de/tags/ssl" term="ssl" label="ssl"/><category scheme="https://kevingimbel.de/tags/ubuntu" term="ubuntu" label="ubuntu"/><category scheme="https://kevingimbel.de/tags/linux" term="linux" label="linux"/></entry></feed>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/apache" term="apache" label="apache" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/server" term="server" label="server" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/ssl" term="ssl" label="ssl" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/ubuntu" term="ubuntu" label="ubuntu" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/linux" term="linux" label="linux" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

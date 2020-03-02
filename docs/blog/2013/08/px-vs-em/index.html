@@ -1,10 +1,173 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>px vs em &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="blog coding frontend"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>px vs em</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2013-08-15 00:00:00 +0000 UTC">15. Aug 2013</time></p><p>Recently <a href=http://timpietrusky.com>Tim Pietrusky</a> wrote and article about <a href=http://timpietrusky.com/i-love-r-emmmmmm-because-px-suck>px vs em</a> that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.</p><p>I was using pixel like forever and I couldn&rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: <em>em is more responsive and it is scalable</em>.
-In fact when you switch from pixel to em you&rsquo;ll feel like working on a completely new Level. The fact you can scale all elements of your website by simply passing a new value to <code>:root {font-size:1em;}</code> or <code>body {font-size:1em;}</code>.</p><p>My <code>_responsive.scss</code> works this way. Because I think it&rsquo;s good to have large texts on smartphones I applied <code>font-size:120%</code> to the <code>.main-content</code> class that holds all elements.</p><p>One of the main reasons to use em instead of pixel is that this measurement unit doesn&rsquo;t depend on the screen size in Pixel while the pixel unit does. An button that has the markup you see below will look the same on any device at any scale - it is fully responsive in other words.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#a6e22e>button</span> {
-	<span style=color:#66d9ef>padding</span>:<span style=color:#ae81ff>.5</span><span style=color:#66d9ef>em</span> <span style=color:#ae81ff>.7</span><span style=color:#66d9ef>em</span>;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>px vs em &mdash; KevOps</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords=" blog coding frontend  ">
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    <header class="intro-text">
+        <span>
+        
+        
+        px vs em
+        
+        </span>
+    </header>
+
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/reading/">
+                    <span>Reading</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2013-08-15 00:00:00 &#43;0000 UTC">15. Aug 2013</time>  </p>
+            <p>Recently <a href="http://timpietrusky.com">Tim Pietrusky</a> wrote and article about <a href="http://timpietrusky.com/i-love-r-emmmmmm-because-px-suck">px vs em</a> that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.</p>
+<p>I was using pixel like forever and I couldn&rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: <em>em is more responsive and it is scalable</em>.
+In fact when you switch from pixel to em you&rsquo;ll feel like working on a completely new Level. The fact you can scale all elements of your website by simply passing a new value to <code>:root {font-size:1em;}</code> or <code>body {font-size:1em;}</code>.</p>
+<p>My <code>_responsive.scss</code> works this way. Because I think it&rsquo;s good to have large texts on smartphones I applied <code>font-size:120%</code> to the <code>.main-content</code> class that holds all elements.</p>
+<p>One of the main reasons to use em instead of pixel is that this measurement unit doesn&rsquo;t depend on the screen size in Pixel while the pixel unit does. An button that has the markup you see below will look the same on any device at any scale - it is fully responsive in other words.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">button</span> {
+	<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">.7</span><span style="color:#66d9ef">em</span>;
 }
-</code></pre></div><p>Another important point is that em Media Queries apply even if the user zooms the page. Go ahead an try to zoom this blog, at some point the responsive layout (breakpoint 55em) will apply - if you use pixel in your breakpoint (for example <code>@media all and (max-width:800px)</code>) it will not apply the responsive layout when someone zooms in.</p><h3 id=final-words>Final Words</h3><p>em is a lot better than pixel even if it takes some time to change your mind and work flow. It is <em>more flexible</em>, <em>more scalable</em> and - which is the most important, <em>completely responsive</em>.
-So if you create a new responsive website, and you should always do so, do your self a favor and use em instead of px.</p><h3 id=further-reading>Further Reading</h3><p>More articles on this topic:</p><ul><li><a href=https://medium.com/front-end-development/8f433689736f>Sizing (Web) components</a> by <a href=http://simurai.com/>Simurai</a></li><li><a href=http://snook.ca/archives/html_and_css/font-size-with-rem>Font-size with rem</a> by <a href=http://snook.ca>Jonathan Snook</a></li><li><a href=http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/>The ems have it: Proportional Media Queries FTW</a> by <a href=http://blog.cloudfour.com/author/lyza-gardner/>Lyza Gardner</a></li><li><a href=http://codepen.io/LukyVj/blog/em-vs-px>em vs px</a> by <a href=http://lucasbonomi.com/>Lucas Bonomi</a></li></ul></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-08-15-px-vs-em.md>Edit on
-GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>
+</code></pre></div><p>Another important point is that em Media Queries apply even if the user zooms the page. Go ahead an try to zoom this blog, at some point the responsive layout (breakpoint 55em) will apply - if you use pixel in your breakpoint (for example <code>@media all and (max-width:800px)</code>) it will not apply the responsive layout when someone zooms in.</p>
+<h3 id="final-words">Final Words</h3>
+<p>em is a lot better than pixel even if it takes some time to change your mind and work flow. It is <em>more flexible</em>, <em>more scalable</em> and - which is the most important, <em>completely responsive</em>.
+So if you create a new responsive website, and you should always do so, do your self a favor and use em instead of px.</p>
+<h3 id="further-reading">Further Reading</h3>
+<p>More articles on this topic:</p>
+<ul>
+<li><a href="https://medium.com/front-end-development/8f433689736f">Sizing (Web) components</a> by <a href="http://simurai.com/">Simurai</a></li>
+<li><a href="http://snook.ca/archives/html_and_css/font-size-with-rem">Font-size with rem </a> by <a href="http://snook.ca">Jonathan Snook</a></li>
+<li><a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">The ems have it: Proportional Media Queries FTW</a> by <a href="http://blog.cloudfour.com/author/lyza-gardner/">Lyza Gardner</a></li>
+<li><a href="http://codepen.io/LukyVj/blog/em-vs-px">em vs px</a> by <a href="http://lucasbonomi.com/">Lucas Bonomi</a></li>
+</ul>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under frontend"
+                href="https://kevingimbel.de/categories/frontend/">frontend</a>
+        </li></ul>
+</section>
+
+        
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-08-15-px-vs-em.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

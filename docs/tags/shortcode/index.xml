@@ -1,3 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>shortcode on KevOps</title><link>https://kevingimbel.de/tags/shortcode/</link><description>Recent content in shortcode on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/shortcode/index.xml" rel="self" type="application/rss+xml"/><item><title>Mastodon Embed Shortcode for hugo</title><link>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</link><pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</guid><description>You may know that I made some shortcodes for Hugo, the static site generator I am using to create this website. So far I made a shortcode for caniuse.com and codepen.io which allow to embed CodePen and &amp;ldquo;Can I Use&amp;rdquo; embeds easily with Hugos build-in Shortcode system.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shortcode on KevOps</title>
+    <link>https://kevingimbel.de/tags/shortcode/</link>
+    <description>Recent content in shortcode on KevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kevingimbel.de/tags/shortcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mastodon Embed Shortcode for hugo</title>
+      <link>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</guid>
+      <description>You may know that I made some shortcodes for Hugo, the static site generator I am using to create this website. So far I made a shortcode for caniuse.com and codepen.io which allow to embed CodePen and &amp;ldquo;Can I Use&amp;rdquo; embeds easily with Hugos build-in Shortcode system.
 Today I made another one which allows embeds from Mastodon, the decentralized Twitter-like social network. An example embed is shown below.
-The Source Code can be found on GitHub.</description></item></channel></rss>
+ The Source Code can be found on GitHub.</description>
+    </item>
+    
+  </channel>
+</rss>

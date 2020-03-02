@@ -1,74 +1,355 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>CSS Custom Properties and a new look &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="redesign css personal modernization accessibility  blog coding frontend"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>CSS Custom Properties and a new look</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><p>Written on <time datetime="2017-11-26 10:56:13 +0100 CET">26. Nov 2017</time></p><p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
-CSS variables).</p><p>CSS variables are a <a href=https://www.w3.org/TR/css-variables-1/ title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!"</em> and you&rsquo;re right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that&rsquo;s exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p><p>Below I will explain step by step how CSS variables look, work, and how we can use them to alter the look of a website - even persistent without any backend code!</p><h2 id=css-variables>CSS variables</h2><h3 id=browser-support>Browser Support</h3><p>Let&rsquo;s jump directly into browser support, which is looking pretty good in my opinion!</p><p class=ciu_embed data-feature=css-variables data-periods=future_1,current,past_1,past_2><a href="http://caniuse.com/#feat=css-variables">Can I Use css-variables?</a> Data on support for the css-variables feature across the major browsers from caniuse.com.</p><p><code>77.90%</code> (as of November 26. 2017) is not perfect but certainly good enough for me and my private website. I&rsquo;d probably not rely on CSS Custom Properties in client projects yet tho.</p><h3 id=syntax>Syntax</h3><p>A CSS variable is a word preceded by two dashes (<code>--</code>), which looks like the following examples.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>--color</span><span style=color:#f92672>:</span> #ddd<span style=color:#f92672>;</span>
-<span style=color:#f92672>--base-font-size</span><span style=color:#f92672>:</span> <span style=color:#f92672>12px</span><span style=color:#f92672>;</span>
-<span style=color:#f92672>--breakpoint-large</span><span style=color:#f92672>:</span> <span style=color:#f92672>1200px</span><span style=color:#f92672>;</span>
-</code></pre></div><p>Just like any CSS property they &ldquo;cascade down&rdquo;. A variable defined at the top of the document on the <code>:root</code> or <code>html</code> selector will be defined everywhere in the document. To use a CSS variable we need to get it somehow. It&rsquo;s not enough to reference it, for example this does not work.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>Does</span> <span style=color:#f92672>not</span> <span style=color:#f92672>work</span><span style=color:#f92672>!</span>
-.<span style=color:#a6e22e>my-selector</span> {
-  <span style=color:#66d9ef>color</span>: <span style=color:#f92672>--</span><span style=color:#66d9ef>color</span>;
-}
-</code></pre></div><p>With CSS variables we need to retrieve the value by calling a <code>var</code> function. This function also takes a fallback parameter in case the variable is not set.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>This</span> <span style=color:#f92672>does</span> <span style=color:#f92672>work</span>
-.<span style=color:#a6e22e>my-selector</span> {
-  <span style=color:#66d9ef>color</span>: <span style=color:#a6e22e>var</span>(<span style=color:#f92672>-</span><span style=color:#f92672>-</span><span style=color:#66d9ef>color</span>, <span style=color:#ae81ff>#333</span>)
-}
-</code></pre></div><p><code>.my-selector</code> will have a color value equal to whatever is stored inside the <code>--color</code> variable or <code>#333</code> if it is not set.</p><p>A variable can later be changed to be &ldquo;locally scoped&rdquo;. For this example we define a custom property named <code>--color</code> and set its value to <code>red</code>. We say all h1 elements should use the <code>--color</code> variable for their font-color. Then we create a CSS class named <code>local-scope</code> and inside we change the <code>--color</code> to <code>blue</code>. A <code>h1</code> element inside the <code>local-scope</code> will use the re-defined color value.</p><p data-height=256 data-theme-id=dark data-slug-hash=78d261a36ecded2b75d5260cb7056fce data-default-tab=html,result data-user data-embed-version=2 data-pen-title="CSS Variables - Cascading & local scope" data-preview data-editable class=codepen>See the Pen <a href=https://codepen.io/kevingimbel/pen/78d261a36ecded2b75d5260cb7056fce/>CSS Variables - Cascading & local scope</a> on <a href=https://codepen.io>CodePen</a>.</p><p>We do not need to change the <code>h1</code> selector because <code>h1</code> will always have a font-color equal to <code>--color</code> - we only need to change the variable inside the local scope. The third <code>h1</code> element is outside the local scope and so it takes the original <code>--color</code> value (red).</p><p>This type of inheritance is a powerful tool CSS has given us (&ldquo;us&rdquo; being developers). At runtime, when the website is loaded and all CSS is parsed and the website has been painted to the screen, we can still change these properties on-the-fly with JavaScript and the browser will simply re-render the parts that need changing. Of course, you can already change CSS on the go with JavaScript. You could select for example a bunch of elements by class name and then change their color to be <code>blue</code> instead of red. With CSS Custom Properties you don&rsquo;t need to do this! All we need to do is change the variable at a higher level, for example on the <code>body</code> element as the following example illustrates.</p><p data-height=256 data-theme-id=dark data-slug-hash=5245628703a6a223215cf5a30cf8294d data-default-tab=html,result data-user data-embed-version=2 data-pen-title="CSS Variables - Changing with JS" data-preview data-editable class=codepen>See the Pen <a href=https://codepen.io/kevingimbel/pen/5245628703a6a223215cf5a30cf8294d/>CSS Variables - Changing with JS</a> on <a href=https://codepen.io>CodePen</a>.</p><p>Click on the <code>Change color</code> button above and all the non-scoped <code>h1</code> elements will turn green. All we need for this to work is set an inline style on the <code>body</code> element.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>document.<span style=color:#a6e22e>body</span>.<span style=color:#a6e22e>style</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;--color: green;&#34;</span>;
-</code></pre></div><p>I use this technique to change the secondary and primary colors of my website from the settings menu. <a href=https://github.com/kevingimbel/kevingimbel.com/blob/9f11b96f428f01b1ae14f8673c2e4f48e8ee3b21/themes/next/static/js/a11y.settings.js#L83-L84 title="View source code on GitHub.com">These two lines</a> set the CSS variables <code>--color-accent-primary</code> and <code>--color-accent-secondary</code> which by default are dark blue and yellow.</p><h3 id=recap>Recap</h3><p>So let&rsquo;s recap this real quick:</p><ul><li>CSS variables (also called CSS Custom Properties) are a native CSS feature</li><li>They cascade &ldquo;down&rdquo; in the CSS, just like any other property (<code>font-size</code>, <code>color</code>, etc.)</li><li>They can be locally scoped, that is changed for a certain element and it&rsquo;s children</li><li>They can be changed with JavaScript at runtime and the browser will re-render every element which uses them</li></ul><p>At this point it becomes clear why they are an advantage over pre-processor variables. We have more control of changing them and they present us with a powerful new way to implement multiple layouts for our websites.</p><h2 id=implementing-persistent-settings>Implementing persistent settings</h2><p>As I mentioned before for my website (this very blog you read right now), the Settings are persistent. If you change the font size or colors and navigate to a new page you&rsquo;ll still have your custom styles - not my default styles. I do not use any backend software like PHP, Go, or Ruby; Instead this website is a static website, which means all HTML pages are rendered before and then deployed to <a href=https://www.netlify.com/>Netlify</a>. So there is no backend which can save your settings and then send them back to your browser once you navigate to a new site.</p><p>The saving part is done on the client side, inside your browser. A browser feature called <a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage>Local Storage</a>. Local Storage is a text-based, key-value storage which developers can use to store (small) text based values inside the browser. This allows us to have some sort of persitent storage on the client side without the need for a backend. For my use case (storing settings) this is perfect.</p><p>When you open the settings menu and click &ldquo;Save&rdquo; I grab all the values with JavaScript (<a href=https://github.com/kevingimbel/kevingimbel.com/blob/9f11b96f428f01b1ae14f8673c2e4f48e8ee3b21/themes/next/static/js/a11y.settings.js#L123-L138>See the code on GitHub</a>)</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#a6e22e>settingsForm</span>.<span style=color:#a6e22e>addEventListener</span>(<span style=color:#e6db74>&#39;submit&#39;</span>, <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>e</span>) {
-  <span style=color:#a6e22e>e</span>.<span style=color:#a6e22e>preventDefault</span>();
-  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>fd</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>FormData</span>(<span style=color:#a6e22e>settingsForm</span>).<span style=color:#a6e22e>entries</span>();
+<!DOCTYPE html>
+<html lang="en">
 
-  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>cssRule</span> <span style=color:#66d9ef>of</span> <span style=color:#a6e22e>fd</span>) {
-    <span style=color:#a6e22e>lsSettings</span>[<span style=color:#a6e22e>cssRule</span>[<span style=color:#ae81ff>0</span>]] <span style=color:#f92672>=</span> <span style=color:#a6e22e>cssRule</span>[<span style=color:#ae81ff>1</span>];
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Custom Properties and a new look &mdash; KevOps</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="redesign css personal modernization accessibility  blog coding frontend  ">
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    <header class="intro-text">
+        <span>
+        
+        
+        CSS Custom Properties and a new look
+        
+        </span>
+    </header>
+
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/reading/">
+                    <span>Reading</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+
+
+<p>Written on <time datetime="2017-11-26 10:56:13 &#43;0100 CET">26. Nov 2017</time>  </p>
+            <p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
+ CSS variables).</p>
+<p>CSS variables are a <a href="https://www.w3.org/TR/css-variables-1/" title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!&quot;</em> and you&rsquo;re right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that&rsquo;s exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p>
+<p>Below I will explain step by step how CSS variables look, work, and how we can use them to alter the look of a website - even persistent without any backend code!</p>
+<h2 id="css-variables">CSS variables</h2>
+<h3 id="browser-support">Browser Support</h3>
+<p>Let&rsquo;s jump directly into browser support, which is looking pretty good in my opinion!</p>
+
+
+<p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=css-variables">Can I Use css-variables?</a> Data on support for the css-variables feature across the major browsers from caniuse.com.
+</p>
+<p><code>77.90%</code> (as of November 26. 2017) is not perfect but certainly good enough for me and my private website. I&rsquo;d probably not rely on CSS Custom Properties in client projects yet tho.</p>
+<h3 id="syntax">Syntax</h3>
+<p>A CSS variable is a word preceded by two dashes (<code>--</code>), which looks like the following examples.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">--color</span><span style="color:#f92672">:</span> #ddd<span style="color:#f92672">;</span>
+<span style="color:#f92672">--base-font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">12px</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">--breakpoint-large</span><span style="color:#f92672">:</span> <span style="color:#f92672">1200px</span><span style="color:#f92672">;</span>
+</code></pre></div><p>Just like any CSS property they &ldquo;cascade down&rdquo;. A variable defined at the top of the document on the <code>:root</code> or <code>html</code> selector will be defined everywhere in the document. To use a CSS variable we need to get it somehow. It&rsquo;s not enough to reference it, for example this does not work.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Does</span> <span style="color:#f92672">not</span> <span style="color:#f92672">work</span><span style="color:#f92672">!</span>
+.<span style="color:#a6e22e">my-selector</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#f92672">--</span><span style="color:#66d9ef">color</span>;
+}
+</code></pre></div><p>With CSS variables we need to retrieve the value by calling a <code>var</code> function. This function also takes a fallback parameter in case the variable is not set.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">This</span> <span style="color:#f92672">does</span> <span style="color:#f92672">work</span>
+.<span style="color:#a6e22e">my-selector</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>, <span style="color:#ae81ff">#333</span>)
+}
+</code></pre></div><p><code>.my-selector</code> will have a color value equal to whatever is stored inside the <code>--color</code> variable or <code>#333</code> if it is not set.</p>
+<p>A variable can later be changed to be &ldquo;locally scoped&rdquo;. For this example we define a custom property named <code>--color</code> and set its value to <code>red</code>. We say all h1 elements should use the <code>--color</code> variable for their font-color. Then we create a CSS class named <code>local-scope</code> and inside we change the <code>--color</code> to <code>blue</code>. A <code>h1</code> element inside the <code>local-scope</code> will use the re-defined color value.</p>
+
+
+
+
+
+
+
+
+<p data-height="256" data-theme-id="dark" data-slug-hash="78d261a36ecded2b75d5260cb7056fce" data-default-tab="html,result" data-user="" data-embed-version="2" data-pen-title="CSS Variables - Cascading &amp; local scope" data-preview="" data-editable="" class="codepen">
+    See the Pen <a href="https://codepen.io/kevingimbel/pen/78d261a36ecded2b75d5260cb7056fce/">CSS Variables - Cascading &amp; local scope</a> on <a href="https://codepen.io">CodePen</a>.
+</p>
+
+<p>We do not need to change the <code>h1</code> selector because <code>h1</code> will always have a font-color equal to <code>--color</code> - we only need to change the variable inside the local scope. The third <code>h1</code> element is outside the local scope and so it takes the  original <code>--color</code> value (red).</p>
+<p>This type of inheritance is a powerful tool CSS has given us (&ldquo;us&rdquo; being developers). At runtime, when the website is loaded and all CSS is parsed and the website has been painted to the screen, we can still change these properties on-the-fly with JavaScript and the browser will simply re-render the parts that need changing. Of course, you can already change CSS on the go with JavaScript. You could select for example a bunch of elements by class name and then change their color to be <code>blue</code> instead of red. With CSS Custom Properties you don&rsquo;t need to do this! All we need to do is change the variable at a higher level, for example on the <code>body</code> element as the following example illustrates.</p>
+
+
+
+
+
+
+
+
+<p data-height="256" data-theme-id="dark" data-slug-hash="5245628703a6a223215cf5a30cf8294d" data-default-tab="html,result" data-user="" data-embed-version="2" data-pen-title="CSS Variables - Changing with JS" data-preview="" data-editable="" class="codepen">
+    See the Pen <a href="https://codepen.io/kevingimbel/pen/5245628703a6a223215cf5a30cf8294d/">CSS Variables - Changing with JS</a> on <a href="https://codepen.io">CodePen</a>.
+</p>
+
+<p>Click on the <code>Change color</code> button above and all the non-scoped <code>h1</code> elements will turn green. All we need for this to work is set an inline style on the <code>body</code> element.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;--color: green;&#34;</span>;
+</code></pre></div><p>I use this technique to change the secondary and primary colors of my website from the settings menu. <a href="https://github.com/kevingimbel/kevingimbel.com/blob/9f11b96f428f01b1ae14f8673c2e4f48e8ee3b21/themes/next/static/js/a11y.settings.js#L83-L84" title="View source code on GitHub.com">These two lines</a> set the CSS variables <code>--color-accent-primary</code> and <code>--color-accent-secondary</code> which by default are dark blue and yellow.</p>
+<h3 id="recap">Recap</h3>
+<p>So let&rsquo;s recap this real quick:</p>
+<ul>
+<li>CSS variables (also called CSS Custom Properties) are a native CSS feature</li>
+<li>They cascade &ldquo;down&rdquo; in the CSS, just like any other property (<code>font-size</code>, <code>color</code>, etc.)</li>
+<li>They can be locally scoped, that is changed for a certain element and it&rsquo;s children</li>
+<li>They can be changed with JavaScript at runtime and the browser will re-render every element which uses them</li>
+</ul>
+<p>At this point it becomes clear why they are an advantage over pre-processor variables. We have more control of changing them and they present us with a powerful new way to implement multiple layouts for our websites.</p>
+<h2 id="implementing-persistent-settings">Implementing persistent settings</h2>
+<p>As I mentioned before for my website (this very blog you read right now), the Settings are persistent. If you change the font size or colors and navigate to a new page you&rsquo;ll still have your custom styles - not my default styles. I do not use any backend software like PHP, Go, or Ruby; Instead this website is a static website, which means all HTML pages are rendered before and then deployed to <a href="https://www.netlify.com/">Netlify</a>. So there is no backend which can save your settings and then send them back to your browser once you navigate to a new site.</p>
+<p>The saving part is done on the client side, inside your browser. A browser feature called <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Local Storage</a>. Local Storage is a text-based, key-value storage which developers can use to store (small) text based values inside the browser. This allows us to have some sort of persitent storage on the client side without the need for a backend. For my use case (storing settings) this is perfect.</p>
+<p>When you open the settings menu and click &ldquo;Save&rdquo; I grab all the values with JavaScript (<a href="https://github.com/kevingimbel/kevingimbel.com/blob/9f11b96f428f01b1ae14f8673c2e4f48e8ee3b21/themes/next/static/js/a11y.settings.js#L123-L138">See the code on GitHub</a>)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">settingsForm</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;submit&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+  <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fd</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FormData</span>(<span style="color:#a6e22e">settingsForm</span>).<span style="color:#a6e22e">entries</span>();
+
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cssRule</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">fd</span>) {
+    <span style="color:#a6e22e">lsSettings</span>[<span style="color:#a6e22e">cssRule</span>[<span style="color:#ae81ff">0</span>]] <span style="color:#f92672">=</span> <span style="color:#a6e22e">cssRule</span>[<span style="color:#ae81ff">1</span>];
   }
 
-  <span style=color:#a6e22e>setStylesAndCreateForgroundColors</span>(<span style=color:#a6e22e>lsSettings</span>);
-  <span style=color:#a6e22e>populateSettingsFromArray</span>(<span style=color:#a6e22e>lsSettings</span>);
+  <span style="color:#a6e22e">setStylesAndCreateForgroundColors</span>(<span style="color:#a6e22e">lsSettings</span>);
+  <span style="color:#a6e22e">populateSettingsFromArray</span>(<span style="color:#a6e22e">lsSettings</span>);
 
-  <span style=color:#a6e22e>localStorage</span>.<span style=color:#a6e22e>setItem</span>(<span style=color:#e6db74>&#39;a11y_settings&#39;</span>, <span style=color:#a6e22e>JSON</span>.<span style=color:#a6e22e>stringify</span>(<span style=color:#a6e22e>lsSettings</span>));
-  document.<span style=color:#a6e22e>body</span>.<span style=color:#a6e22e>classList</span>.<span style=color:#a6e22e>remove</span>(<span style=color:#e6db74>&#39;page-settings--open&#39;</span>);
-  document.<span style=color:#a6e22e>body</span>.<span style=color:#a6e22e>setAttribute</span>(<span style=color:#e6db74>&#39;tabindex&#39;</span>, <span style=color:#e6db74>&#34;0&#34;</span>);
-  <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+  <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;a11y_settings&#39;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">lsSettings</span>));
+  document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#e6db74">&#39;page-settings--open&#39;</span>);
+  document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;tabindex&#39;</span>, <span style="color:#e6db74">&#34;0&#34;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
 });
-</code></pre></div><p>There&rsquo;s quite a lot going on. The important bit for now is <code>localStorage.setItem('a11y_settings', JSON.stringify(lsSettings));</code>. This line sets a new item in the local storage named <code>a11y_settings</code>, scoped to my website (kevingimbel.com). This JSON object holds all relevant information for your custom settings and looks like this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
-  <span style=color:#f92672>&#34;--body-invert&#34;</span>: <span style=color:#ae81ff>0</span>,
-  <span style=color:#f92672>&#34;--color-accent-primary&#34;</span>: <span style=color:#e6db74>&#34;#3e934b&#34;</span>,
-  <span style=color:#f92672>&#34;--color-accent-secondary&#34;</span>: <span style=color:#e6db74>&#34;#70cfff&#34;</span>
+</code></pre></div><p>There&rsquo;s quite a lot going on. The important bit for now is <code>localStorage.setItem('a11y_settings', JSON.stringify(lsSettings));</code>. This line sets a new item in the local storage named <code>a11y_settings</code>, scoped to my website (kevingimbel.com). This JSON object holds all relevant information for your custom settings and looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;--body-invert&#34;</span>: <span style="color:#ae81ff">0</span>,
+  <span style="color:#f92672">&#34;--color-accent-primary&#34;</span>: <span style="color:#e6db74">&#34;#3e934b&#34;</span>,
+  <span style="color:#f92672">&#34;--color-accent-secondary&#34;</span>: <span style="color:#e6db74">&#34;#70cfff&#34;</span>
 }
-</code></pre></div><p>The key of the JSON object is always the CSS variable name, the value is the CSS variable value. With these settings we get the following result.</p><figure><img src=/images/posts/2017/css-custom-properties/kevingimbel_com-with-custom-settings.png alt="The look of kevingimbel.com with the above settings"><figcaption><p>The look of kevingimbel.com with the above settings</p></figcaption></figure><p>Because we use inline styles to change the CSS variables the HTML element will have the following styles.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>html</span> <span style=color:#a6e22e>style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;--body-invert:0; --color-accent-primary:#3e934b; --color-accent-secondary:#70cfff;&#34;</span>&gt;
-</code></pre></div><p>Once the JSON is saved to local storage, I load in on page load and apply it immediately - which happens to be really fast so it seems the styles are not even applyed again! The piece of JavaScript to load the custom styles is placed above all other content, at the beginning of the <code>&lt;body></code>. To not impact performance too much I minified it and it looks like this.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#f92672>&lt;</span><span style=color:#a6e22e>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span><span style=color:#f92672>&gt;</span>(<span style=color:#66d9ef>function</span>(){<span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>localStorage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#34;a11y_settings&#34;</span>)){<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>a</span><span style=color:#f92672>=</span><span style=color:#a6e22e>JSON</span>.<span style=color:#a6e22e>parse</span>(<span style=color:#a6e22e>localStorage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#34;a11y_settings&#34;</span>));<span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>o</span> <span style=color:#66d9ef>in</span> <span style=color:#a6e22e>a</span>){document.<span style=color:#a6e22e>documentElement</span>.<span style=color:#a6e22e>style</span>.<span style=color:#a6e22e>setProperty</span>(<span style=color:#a6e22e>o</span>,<span style=color:#a6e22e>a</span>[<span style=color:#a6e22e>o</span>]);<span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>o</span><span style=color:#f92672>==</span><span style=color:#e6db74>&#34;--body-invert&#34;</span><span style=color:#f92672>&amp;&amp;</span><span style=color:#a6e22e>a</span>[<span style=color:#a6e22e>o</span>]<span style=color:#f92672>==</span><span style=color:#e6db74>&#34;100&#34;</span>){document.<span style=color:#a6e22e>body</span>.<span style=color:#a6e22e>classList</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#34;dark-mode&#34;</span>)}}<span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>a11y</span>){<span style=color:#a6e22e>a11y</span>.<span style=color:#a6e22e>o</span><span style=color:#f92672>=</span><span style=color:#a6e22e>a</span>}}})();<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/</span><span style=color:#960050;background-color:#1e0010>s</span><span style=color:#960050;background-color:#1e0010>c</span><span style=color:#960050;background-color:#1e0010>r</span><span style=color:#960050;background-color:#1e0010>i</span><span style=color:#960050;background-color:#1e0010>p</span><span style=color:#960050;background-color:#1e0010>t</span><span style=color:#960050;background-color:#1e0010>&gt;</span>
-</code></pre></div><p>Unminified the code reads as follows</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>(<span style=color:#66d9ef>function</span>(){
-  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>localStorage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#34;a11y_settings&#34;</span>)) {
+</code></pre></div><p>The key of the JSON object is always the CSS variable name, the value is the CSS variable value. With these settings we get the following result.</p>
 
-    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>styles</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>JSON</span>.<span style=color:#a6e22e>parse</span>(<span style=color:#a6e22e>localStorage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#34;a11y_settings&#34;</span>));
+<figure >
+  
 
-    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>rule</span> <span style=color:#66d9ef>in</span> <span style=color:#a6e22e>styles</span>) {
-      document.<span style=color:#a6e22e>documentElement</span>.<span style=color:#a6e22e>style</span>.<span style=color:#a6e22e>setProperty</span>(<span style=color:#a6e22e>rule</span>,<span style=color:#a6e22e>styles</span>[<span style=color:#a6e22e>rule</span>]);
-      <span style=color:#75715e>// Check if we &#34;dark mode&#34; is enabled (more below!)
-</span><span style=color:#75715e></span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>rule</span><span style=color:#f92672>==</span><span style=color:#e6db74>&#34;--body-invert&#34;</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>styles</span>[<span style=color:#a6e22e>rule</span>]<span style=color:#f92672>==</span><span style=color:#e6db74>&#34;100&#34;</span>){
-        document.<span style=color:#a6e22e>body</span>.<span style=color:#a6e22e>classList</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#34;dark-mode&#34;</span>)
+    <img src="/images/posts/2017/css-custom-properties/kevingimbel_com-with-custom-settings.png"
+      alt="The look of kevingimbel.com with the above settings"
+       />
+    
+  
+  <figcaption>
+    <p>
+      The look of kevingimbel.com with the above settings
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Because we use inline styles to change the CSS variables the HTML element will have the following styles.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--body-invert:0; --color-accent-primary:#3e934b; --color-accent-secondary:#70cfff;&#34;</span>&gt;
+</code></pre></div><p>Once the JSON is saved to local storage, I load in on page load and apply it immediately - which happens to be really fast so it seems the styles are not even applyed again! The piece of JavaScript to load the custom styles is placed above all other content, at the beginning of the <code>&lt;body&gt;</code>. To not impact performance too much I minified it and it looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;</span>(<span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>)){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>));<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">a</span>){document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#a6e22e">o</span>,<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]);<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">o</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;--body-invert&#34;</span><span style="color:#f92672">&amp;&amp;</span><span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;100&#34;</span>){document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;dark-mode&#34;</span>)}}<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a11y</span>){<span style="color:#a6e22e">a11y</span>.<span style="color:#a6e22e">o</span><span style="color:#f92672">=</span><span style="color:#a6e22e">a</span>}}})();<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+</code></pre></div><p>Unminified the code reads as follows</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#66d9ef">function</span>(){
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>)) {
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>));
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">rule</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">styles</span>) {
+      document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#a6e22e">rule</span>,<span style="color:#a6e22e">styles</span>[<span style="color:#a6e22e">rule</span>]);
+      <span style="color:#75715e">// Check if we &#34;dark mode&#34; is enabled (more below!)
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">rule</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;--body-invert&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">styles</span>[<span style="color:#a6e22e">rule</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;100&#34;</span>){
+        document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;dark-mode&#34;</span>)
       }
     }
-    <span style=color:#75715e>// if a11y is defined, save the rules in the object
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>a11y</span>){
-      <span style=color:#a6e22e>a11y</span>.<span style=color:#a6e22e>styles</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>styles</span>
+    <span style="color:#75715e">// if a11y is defined, save the rules in the object
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a11y</span>){
+      <span style="color:#a6e22e">a11y</span>.<span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">styles</span>
     }
   }
 })();
-</code></pre></div><p>What happens here is the following:</p><ul><li>We check if there are custom setting (<code>if( localStorage.getItem("a11y_settings") )</code>)</li><li>Then we read it in, it&rsquo;s a JSON string so we need to parse it</li><li>Next we loop through all properties of the JSON, which are key-value pairs like <code>{ "--color": "#ddd" }</code></li><li>Each key-value pair is set as inline style on the documentElement (the <code>html</code> element)</li></ul><p>For the <code>--body-invert</code> value we take an extra step and set a CSS class on the body. This is used for the dark mode which requires the extra class to work properly. The dark-mode is a CSS filter. What I do is invert the body with a CSS Filter so the default light theme becomes a dark theme. The CodePen below shows this in action. By adding the <code>dark-mode</code> class to the second block we invert all colors, which results in the block being dark.</p><p data-height=256 data-theme-id=dark data-slug-hash=604946ab15c48299b1f7b54b7a758cfb data-default-tab=html,result data-user data-embed-version=2 data-pen-title="CSS Filter Invert" data-preview data-editable class=codepen>See the Pen <a href=https://codepen.io/kevingimbel/pen/604946ab15c48299b1f7b54b7a758cfb/>CSS Filter Invert</a> on <a href=https://codepen.io>CodePen</a>.</p><p>That&rsquo;s exactly what happens when you click &ldquo;Dark mode&rdquo; in the settings menu above. So why do we need the class <code>dark-mode</code>? Because with <code>filter: invert(100%)</code> everything is inverted including images and videos - which we do not want. These elements should not be inverted so we need to apply a <code>filter: invert(100%)</code> to them when dark mode is active, which is done with the following CSS snipped.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>body</span>.<span style=color:#a6e22e>dark-mode</span> <span style=color:#f92672>img</span><span style=color:#f92672>,</span>
-<span style=color:#f92672>body</span>.<span style=color:#a6e22e>dark-mode</span> <span style=color:#f92672>video</span><span style=color:#f92672>,</span>
-<span style=color:#f92672>body</span>.<span style=color:#a6e22e>dark-mode</span> <span style=color:#f92672>iframe</span> {
-  <span style=color:#66d9ef>filter</span>: invert(<span style=color:#ae81ff>100</span><span style=color:#66d9ef>%</span>) <span style=color:#75715e>!important</span>;
+</code></pre></div><p>What happens here is the following:</p>
+<ul>
+<li>We check if there are custom setting (<code>if( localStorage.getItem(&quot;a11y_settings&quot;) )</code>)</li>
+<li>Then we read it in, it&rsquo;s a JSON string so we need to parse it</li>
+<li>Next we loop through all properties of the JSON, which are key-value pairs like <code>{ &quot;--color&quot;: &quot;#ddd&quot; }</code></li>
+<li>Each key-value pair is set as inline style on the documentElement (the <code>html</code> element)</li>
+</ul>
+<p>For the <code>--body-invert</code> value we take an extra step and set a CSS class on the body. This is used for the dark mode which requires the extra class to work properly. The dark-mode is a CSS filter. What I do is invert the body with a CSS Filter so the default light theme becomes a dark theme. The CodePen below shows this in action. By adding the <code>dark-mode</code> class to the second block we invert all colors, which results in the block being dark.</p>
+
+
+
+
+
+
+
+
+<p data-height="256" data-theme-id="dark" data-slug-hash="604946ab15c48299b1f7b54b7a758cfb" data-default-tab="html,result" data-user="" data-embed-version="2" data-pen-title="CSS Filter Invert" data-preview="" data-editable="" class="codepen">
+    See the Pen <a href="https://codepen.io/kevingimbel/pen/604946ab15c48299b1f7b54b7a758cfb/">CSS Filter Invert</a> on <a href="https://codepen.io">CodePen</a>.
+</p>
+
+<p>That&rsquo;s exactly what happens when you click &ldquo;Dark mode&rdquo; in the settings menu above. So why do we need the class <code>dark-mode</code>? Because with <code>filter: invert(100%)</code> everything is inverted including images and videos - which we do not want. These elements should not be inverted so we need to apply a <code>filter: invert(100%)</code> to them when dark mode is active, which is done with the following CSS snipped.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">iframe</span> {
+  <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>) <span style="color:#75715e">!important</span>;
 }
-</code></pre></div><p>This basically means we apply the filter two times, which results in resetting it. The images get inverted from the first rule, then inverted again to normal color.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>Invert</span> <span style=color:#f92672>everything</span>
-<span style=color:#f92672>body</span>.<span style=color:#a6e22e>dark-mode</span> {
-  <span style=color:#66d9ef>filter</span>: invert(<span style=color:#ae81ff>100</span><span style=color:#66d9ef>%</span>);
+</code></pre></div><p>This basically means we apply the filter two times, which results in resetting it. The images get inverted from the first rule, then inverted again to normal color.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">everything</span>
+<span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> {
+  <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>);
 }
-<span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>Invert</span> <span style=color:#f92672>img</span><span style=color:#f92672>,</span> <span style=color:#f92672>video</span><span style=color:#f92672>,</span> <span style=color:#f92672>and</span> <span style=color:#f92672>iframe</span> <span style=color:#f92672>again</span><span style=color:#f92672>,</span> <span style=color:#f92672>resulting</span> <span style=color:#f92672>in</span> <span style=color:#f92672>resetting</span> <span style=color:#f92672>the</span> <span style=color:#f92672>original</span> <span style=color:#f92672>invert</span><span style=color:#f92672>.</span>
-<span style=color:#f92672>body</span>.<span style=color:#a6e22e>dark-mode</span> <span style=color:#f92672>img</span><span style=color:#f92672>,</span>
-<span style=color:#f92672>body</span>.<span style=color:#a6e22e>dark-mode</span> <span style=color:#f92672>video</span><span style=color:#f92672>,</span>
-<span style=color:#f92672>body</span>.<span style=color:#a6e22e>dark-mode</span> <span style=color:#f92672>iframe</span> {
-  <span style=color:#66d9ef>filter</span>: invert(<span style=color:#ae81ff>100</span><span style=color:#66d9ef>%</span>) <span style=color:#75715e>!important</span>;
+<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span> <span style="color:#f92672">and</span> <span style="color:#f92672">iframe</span> <span style="color:#f92672">again</span><span style="color:#f92672">,</span> <span style="color:#f92672">resulting</span> <span style="color:#f92672">in</span> <span style="color:#f92672">resetting</span> <span style="color:#f92672">the</span> <span style="color:#f92672">original</span> <span style="color:#f92672">invert</span><span style="color:#f92672">.</span>
+<span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">iframe</span> {
+  <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>) <span style="color:#75715e">!important</span>;
 }
-</code></pre></div><p>And that&rsquo;s it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I&rsquo;m happy with the result.</p><p>Got any feedback? Want to tell me how much the news design sucks? Love it? Hit me up on <a href=https://twitter.com/_kevinatari title="Find me on twitter">Twitter @_kevinatari</a></p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with redesign" href=https://kevingimbel.de/tags/redesign/>redesign</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with css" href=https://kevingimbel.de/tags/css/>css</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with personal" href=https://kevingimbel.de/tags/personal/>personal</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with modernization" href=https://kevingimbel.de/tags/modernization/>modernization</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with accessibility" href=https://kevingimbel.de/tags/accessibility/>accessibility</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2017-11-26-a-new-look.md>Edit on
-GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer><script type=text/javascript>!function(){document.addEventListener("DOMContentLoaded",function(){for(var e=document.getElementsByClassName("ciu_embed"),t=0;t<e.length;t++){var a=e[t],i=a.getAttribute("data-feature"),n=a.getAttribute("data-periods"),s=a.getAttribute("data-accessible-colours")||"false",r=a.getAttribute("data-image-base")||"none";if(i){var o="https://caniuse.bitsofco.de/embed/index.html",d='<iframe src="'+o+"?feat="+i+"&periods="+n+"&accessible-colours="+s+"&image-base="+r+'" frameborder="0" width="100%" height="400px"></iframe>';a.innerHTML=d}else a.innerHTML="A feature was not included. Go to <a href='https://caniuse.bitsofco.de/#how-to-use'>https://caniuse.bitsofco.de/#how-to-use</a> to generate an embed."}var c=window.addEventListener?"addEventListener":"attachEvent";(0,window[c])("attachEvent"==c?"onmessage":"message",function(t){var a=t.data;if("string"==typeof a&&a.indexOf("ciu_embed")>-1)for(var i=a.split(":")[1],n=a.split(":")[2],s=0;s<e.length;s++){var r=e[s];if(r.getAttribute("data-feature")===i){var o=parseInt(n)+30;r.childNodes[0].height=o+"px";break}}},!1)})}();</script><script type=text/javascript>!function(e){var t={};function r(n){if(t[n])return t[n].exports;var a=t[n]={i:n,l:!1,exports:{}};return e[n].call(a.exports,a,a.exports,r),a.l=!0,a.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)r.d(n,a,function(t){return e[t]}.bind(null,a));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="https://static.codepen.io/assets/packs/",r(r.s=432)}({432:function(e,t,r){"use strict";r.r(t);var n={_HTML_TYPES:["html","xml","haml","markdown","slim","pug","application/x-slim"],_CSS_TYPES:["css","less","scss","sass","stylus","postcss","text/css","text/x-sass","text/x-scss","text/x-less","text/x-styl"],_JS_TYPES:["js","javascript","coffeescript","livescript","typescript","babel","text/javascript","text/x-coffeescript","text/x-livescript","text/typescript"],cmModeToType:function(e){var t=this._getSafeInputMode(e);return this._getType(t)},_getSafeInputMode:function(e){return("string"==typeof e?e:e.name).toLowerCase()},syntaxToType:function(e){return this._getType(e)},_getType:function(e){return-1!==this._HTML_TYPES.indexOf(e)?"html":-1!==this._CSS_TYPES.indexOf(e)?"css":-1!==this._JS_TYPES.indexOf(e)?"js":"unknown"}},a=function e(t){"loading"===document.readyState?setTimeout((function(){e(t)}),9):t()},i=function(){"function"==typeof __CodePenIFrameAddedToPage&&__CodePenIFrameAddedToPage()},o=["title","description","tags","html_classes","head","stylesheets","scripts"],s=function(e){for(var t={},r=e.attributes,n=0,a=r.length;n<a;n++){var i=r[n].name;0===i.indexOf("data-")&&(t[i.replace("data-","")]=r[n].value)}return t=c(t),l(t)?(t.user=u(t,e),t):null},u=function(e,t){if("string"==typeof e.user)return e.user;for(var r=0,n=t.children.length;r<n;r++){var a=(t.children[r].href||"").match(/codepen\.(io|dev)\/(\w+)\/pen\//i);if(a)return a[2]}return"anon"},l=function(e){return"prefill"in e||e["slug-hash"]},c=function(e){return e.href&&(e["slug-hash"]=e.href),e.type&&(e["default-tab"]=e.type),e.safe&&("true"===e.safe?e.animations="run":e.animations="stop-after-5"),e},p=function(e){return e.host?d(e.host):"https://codepen.io"},d=function(e){return e.match(/^\/\//)||!e.match(/https?:/)?document.location.protocol+"//"+e:e},f=function(e){var t="";for(var r in e)"prefill"!==r&&(""!==t&&(t+="&"),t+=r+"="+encodeURIComponent(e[r]));return t},m=function(e){return e.height?e.height:300},h=function(e,t){var r,n=document.createDocumentFragment();n.appendChild(y(e)),"prefill"in e&&(r=v(e,t),n.appendChild(r)),g(t,n),r&&r.submit()},_=function(e,t){var r=document.createElement(e);for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&r.setAttribute(n,t[n]);return r},v=function(e,t){var r=p(e),a=_("form",{class:"cp_embed_form",style:"display: none;",method:"post",action:r+"/embed/prefill/",target:e.name});for(var i in e.data=function(e){if(e.hasAttribute("data-prefill")){var t={},r=e.getAttribute("data-prefill");for(var a in r=JSON.parse(decodeURI(r)||"{}"))o.indexOf(a)>-1&&(t[a]=r[a]);for(var i=e.querySelectorAll("[data-lang]"),s=0;s<i.length;s++){var u=i[s],l=u.getAttribute("data-lang");u.getAttribute("data-options-autoprefixer")&&(t.css_prefix="autoprefixer");var c=n.syntaxToType(l);t[c]=u.innerText,l!==c&&(t[c+"_pre_processor"]=l)}return JSON.stringify(t)}}(t),e)"prefill"!==i&&a.appendChild(_("input",{type:"hidden",name:i,value:e[i]}));return a},y=function(e){var t,r=function(e){var t=p(e);if("prefill"in e)return t+"/embed/prefill/";var r=f(e);return[t,e.user?e.user:"anon",e.preview&&"true"===e.preview?"embed/preview":"embed",e["slug-hash"]+"?"+r].join("/").replace(/\/\//g,"//")}(e);t=e["pen-title"]?e["pen-title"]:"CodePen Embed";var n={name:e.name||"CodePen Embed",src:r,scrolling:"no",frameborder:"0",height:m(e),allowTransparency:"true",allowfullscreen:"true",allowpaymentrequest:"true",title:t,class:"cp_embed_iframe "+(e.class?e.class:""),style:"width: 100%; overflow:hidden; display:block;"};return e["slug-hash"]&&(n.id="cp_embed_"+e["slug-hash"].replace("/","_")),_("iframe",n)},g=function(e,t){if(e.parentNode){var r=document.createElement("div");return r.className="cp_embed_wrapper",r.appendChild(t),e.parentNode.replaceChild(r,e),r}return e.appendChild(t),e};var b=1;function x(e){e="string"==typeof e?e:".codepen";for(var t=document.querySelectorAll(e),r=0,n=t.length;r<n;r++){var a=t[r],o=s(a);o&&(o.name="cp_embed_"+b++,h(o,a))}i()}x.readme="2019-01-18 - added version number back in.",window.__cp_eijs_version="3.1.0",window.__cp_domReady=a,window.__CPEmbed=x,a(x)}});</script></body></html>
+</code></pre></div><p>And that&rsquo;s it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I&rsquo;m happy with the result.</p>
+<p>Got any feedback? Want to tell me how much the news design sucks? Love it? Hit me up on <a href="https://twitter.com/_kevinatari" title="Find me on twitter">Twitter @_kevinatari</a></p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under frontend"
+                href="https://kevingimbel.de/categories/frontend/">frontend</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with redesign"
+                href="https://kevingimbel.de/tags/redesign/">redesign</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with css"
+                href="https://kevingimbel.de/tags/css/">css</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with personal"
+                href="https://kevingimbel.de/tags/personal/">personal</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with modernization"
+                href="https://kevingimbel.de/tags/modernization/">modernization</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with accessibility"
+                href="https://kevingimbel.de/tags/accessibility/">accessibility</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2017-11-26-a-new-look.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+    <script type="text/javascript">!function(){document.addEventListener("DOMContentLoaded",function(){for(var e=document.getElementsByClassName("ciu_embed"),t=0;t<e.length;t++){var a=e[t],i=a.getAttribute("data-feature"),n=a.getAttribute("data-periods"),s=a.getAttribute("data-accessible-colours")||"false",r=a.getAttribute("data-image-base")||"none";if(i){var o="https://caniuse.bitsofco.de/embed/index.html",d='<iframe src="'+o+"?feat="+i+"&periods="+n+"&accessible-colours="+s+"&image-base="+r+'" frameborder="0" width="100%" height="400px"></iframe>';a.innerHTML=d}else a.innerHTML="A feature was not included. Go to <a href='https://caniuse.bitsofco.de/#how-to-use'>https://caniuse.bitsofco.de/#how-to-use</a> to generate an embed."}var c=window.addEventListener?"addEventListener":"attachEvent";(0,window[c])("attachEvent"==c?"onmessage":"message",function(t){var a=t.data;if("string"==typeof a&&a.indexOf("ciu_embed")>-1)for(var i=a.split(":")[1],n=a.split(":")[2],s=0;s<e.length;s++){var r=e[s];if(r.getAttribute("data-feature")===i){var o=parseInt(n)+30;r.childNodes[0].height=o+"px";break}}},!1)})}();</script>
+    
+
+    
+    <script type="text/javascript">!function(e){var t={};function r(n){if(t[n])return t[n].exports;var a=t[n]={i:n,l:!1,exports:{}};return e[n].call(a.exports,a,a.exports,r),a.l=!0,a.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)r.d(n,a,function(t){return e[t]}.bind(null,a));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="https://static.codepen.io/assets/packs/",r(r.s=432)}({432:function(e,t,r){"use strict";r.r(t);var n={_HTML_TYPES:["html","xml","haml","markdown","slim","pug","application/x-slim"],_CSS_TYPES:["css","less","scss","sass","stylus","postcss","text/css","text/x-sass","text/x-scss","text/x-less","text/x-styl"],_JS_TYPES:["js","javascript","coffeescript","livescript","typescript","babel","text/javascript","text/x-coffeescript","text/x-livescript","text/typescript"],cmModeToType:function(e){var t=this._getSafeInputMode(e);return this._getType(t)},_getSafeInputMode:function(e){return("string"==typeof e?e:e.name).toLowerCase()},syntaxToType:function(e){return this._getType(e)},_getType:function(e){return-1!==this._HTML_TYPES.indexOf(e)?"html":-1!==this._CSS_TYPES.indexOf(e)?"css":-1!==this._JS_TYPES.indexOf(e)?"js":"unknown"}},a=function e(t){"loading"===document.readyState?setTimeout((function(){e(t)}),9):t()},i=function(){"function"==typeof __CodePenIFrameAddedToPage&&__CodePenIFrameAddedToPage()},o=["title","description","tags","html_classes","head","stylesheets","scripts"],s=function(e){for(var t={},r=e.attributes,n=0,a=r.length;n<a;n++){var i=r[n].name;0===i.indexOf("data-")&&(t[i.replace("data-","")]=r[n].value)}return t=c(t),l(t)?(t.user=u(t,e),t):null},u=function(e,t){if("string"==typeof e.user)return e.user;for(var r=0,n=t.children.length;r<n;r++){var a=(t.children[r].href||"").match(/codepen\.(io|dev)\/(\w+)\/pen\//i);if(a)return a[2]}return"anon"},l=function(e){return"prefill"in e||e["slug-hash"]},c=function(e){return e.href&&(e["slug-hash"]=e.href),e.type&&(e["default-tab"]=e.type),e.safe&&("true"===e.safe?e.animations="run":e.animations="stop-after-5"),e},p=function(e){return e.host?d(e.host):"https://codepen.io"},d=function(e){return e.match(/^\/\//)||!e.match(/https?:/)?document.location.protocol+"//"+e:e},f=function(e){var t="";for(var r in e)"prefill"!==r&&(""!==t&&(t+="&"),t+=r+"="+encodeURIComponent(e[r]));return t},m=function(e){return e.height?e.height:300},h=function(e,t){var r,n=document.createDocumentFragment();n.appendChild(y(e)),"prefill"in e&&(r=v(e,t),n.appendChild(r)),g(t,n),r&&r.submit()},_=function(e,t){var r=document.createElement(e);for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&r.setAttribute(n,t[n]);return r},v=function(e,t){var r=p(e),a=_("form",{class:"cp_embed_form",style:"display: none;",method:"post",action:r+"/embed/prefill/",target:e.name});for(var i in e.data=function(e){if(e.hasAttribute("data-prefill")){var t={},r=e.getAttribute("data-prefill");for(var a in r=JSON.parse(decodeURI(r)||"{}"))o.indexOf(a)>-1&&(t[a]=r[a]);for(var i=e.querySelectorAll("[data-lang]"),s=0;s<i.length;s++){var u=i[s],l=u.getAttribute("data-lang");u.getAttribute("data-options-autoprefixer")&&(t.css_prefix="autoprefixer");var c=n.syntaxToType(l);t[c]=u.innerText,l!==c&&(t[c+"_pre_processor"]=l)}return JSON.stringify(t)}}(t),e)"prefill"!==i&&a.appendChild(_("input",{type:"hidden",name:i,value:e[i]}));return a},y=function(e){var t,r=function(e){var t=p(e);if("prefill"in e)return t+"/embed/prefill/";var r=f(e);return[t,e.user?e.user:"anon",e.preview&&"true"===e.preview?"embed/preview":"embed",e["slug-hash"]+"?"+r].join("/").replace(/\/\//g,"//")}(e);t=e["pen-title"]?e["pen-title"]:"CodePen Embed";var n={name:e.name||"CodePen Embed",src:r,scrolling:"no",frameborder:"0",height:m(e),allowTransparency:"true",allowfullscreen:"true",allowpaymentrequest:"true",title:t,class:"cp_embed_iframe "+(e.class?e.class:""),style:"width: 100%; overflow:hidden; display:block;"};return e["slug-hash"]&&(n.id="cp_embed_"+e["slug-hash"].replace("/","_")),_("iframe",n)},g=function(e,t){if(e.parentNode){var r=document.createElement("div");return r.className="cp_embed_wrapper",r.appendChild(t),e.parentNode.replaceChild(r,e),r}return e.appendChild(t),e};var b=1;function x(e){e="string"==typeof e?e:".codepen";for(var t=document.querySelectorAll(e),r=0,n=t.length;r<n;r++){var a=t[r],o=s(a);o&&(o.name="cp_embed_"+b++,h(o,a))}i()}x.readme="2019-01-18 - added version number back in.",window.__cp_eijs_version="3.1.0",window.__cp_domReady=a,window.__CPEmbed=x,a(x)}});</script>
+    
+
+    
+</body>
+
+</html>

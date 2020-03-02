@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">vim on KevOps</title><link href="https://kevingimbel.de/tags/vim/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/vim/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/vim/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/vim/</id><entry><title type="html">Getting into vim - again</title><link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM"/><link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text"/><id>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</id><published>2015-01-21T00:00:00+00:00</published><updated>2015-01-21T00:00:00+00:00</updated><content type="html"><![CDATA[<p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[vim on KevOps]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/tags/vim/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/vim/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/vim/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-03-02T11:38:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/tags/vim/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Getting into vim - again]]></title>
+            <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
+                <link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+            
+                <id>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</id>
+            
+            
+            <published>2015-01-21T00:00:00+00:00</published>
+            <updated>2015-01-21T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
 VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&rsquo;ve already written about
 <a href="/noobish-vim/">turning Sublime Text into VIM mode</a> and my <a href="/vim-first-impressions/">very first VIM impression</a>, but
 back then I just copy &amp; pasted everything I found on the Internet into my <code>.vimrc</code>. Now with the new year I thought some
@@ -96,7 +129,54 @@ how it can benefit to my workflow or if it&rsquo;ll stay in my way at the end - 
 return to my beloved Sublime Text 3.</p>
 <p>Keep up with my advimtures (ha punny!) by subscribing to the <a href="/atom.xml">Atom Feed</a> or by following me on
 <a href="https://twitter.com/_kevinatari">Twitter</a>:</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim"/><category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/></entry><entry><title type="html">Noobish VIM</title><link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression"/><link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text"/><id>https://kevingimbel.de/blog/2014/07/noobish-vim/</id><published>2014-07-13T00:00:00+00:00</published><updated>2014-07-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Since I&rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Noobish VIM]]></title>
+            <link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+            
+                <id>https://kevingimbel.de/blog/2014/07/noobish-vim/</id>
+            
+            
+            <published>2014-07-13T00:00:00+00:00</published>
+            <updated>2014-07-13T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Since I&rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it
 into my daily workflow. Since I&rsquo;m working in a relativley small company it&rsquo;s most of the time stressy to get all things
 done and to keep an overview - so long story short: There&rsquo;s not much time for new tools that don&rsquo;t increase my workflow
 directly. VIM is one of these tools that don&rsquo;t fully support my workflow at the moment. While on one hand being good at
@@ -120,7 +200,51 @@ and I must say that I really like it. It doesn&rsquo;t hold me back, I can still
 feeling lost I can still use all of Sublime Text&rsquo;s features. So that&rsquo;s it, my current setup to get a around some VIM
 stuff while still being productive and fast daily. In my free-time and when writing articles I&rsquo;ve almost switched
 completly to VIM to dig into it and see if it can replace Sublime Text one day.</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim"/><category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor"/></entry><entry><title type="html">Vim - first impression</title><link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text"/><id>https://kevingimbel.de/blog/2014/05/vim-first-impression/</id><published>2014-05-26T00:00:00+00:00</published><updated>2014-05-26T00:00:00+00:00</updated><content type="html"><![CDATA[<p>When I first looked at Vim it was a very short experience that was literally as follows</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Vim - first impression]]></title>
+            <link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+            
+                <id>https://kevingimbel.de/blog/2014/05/vim-first-impression/</id>
+            
+            
+            <published>2014-05-26T00:00:00+00:00</published>
+            <updated>2014-05-26T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>When I first looked at Vim it was a very short experience that was literally as follows</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	<span style="color:#75715e"># from the command line</span>
 	vim test.md
 	*vim opens*
@@ -228,4 +352,34 @@ visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
 <p><img src="https://i.kevingimbel.me/sc/sc-26-01-13.png" alt="Vim with auto-closed sections" title="Vim with auto-closed sections"></p>
 <p>So that&rsquo;s it, my tiny Vim experience and setup. As with every config things you can grab a copy of my <code>.vimrc</code> in the
 <a href="https://github.com/kevingimbel/config/blob/master/.vimrc">Github Config Repo</a>.</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor"/><category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim"/></entry></feed>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

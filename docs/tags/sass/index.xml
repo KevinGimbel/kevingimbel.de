@@ -1,2 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sass on KevOps</title><link>https://kevingimbel.de/tags/sass/</link><description>Recent content in sass on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 22 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/sass/index.xml" rel="self" type="application/rss+xml"/><item><title>Snippet: SASS Source Maps with Gulp</title><link>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</link><pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid><description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&amp;rsquo;s bigger!</description></item><item><title>From 0 To Sass</title><link>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</link><pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</guid><description>If you&amp;rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&amp;rsquo;s fair to say that they&amp;rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
-Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sass on KevOps</title>
+    <link>https://kevingimbel.de/tags/sass/</link>
+    <description>Recent content in sass on KevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kevingimbel.de/tags/sass/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Snippet: SASS Source Maps with Gulp</title>
+      <link>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid>
+      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&amp;rsquo;s bigger!</description>
+    </item>
+    
+    <item>
+      <title>From 0 To Sass</title>
+      <link>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</guid>
+      <description>If you&amp;rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&amp;rsquo;s fair to say that they&amp;rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
+Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</description>
+    </item>
+    
+  </channel>
+</rss>

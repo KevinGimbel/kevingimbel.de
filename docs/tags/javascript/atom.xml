@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">javascript on KevOps</title><link href="https://kevingimbel.de/tags/javascript/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/javascript/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/javascript/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/javascript/</id><entry><title type="html">Writing NodeJS cli tools</title><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id><published>2017-01-09T18:02:48+01:00</published><updated>2017-01-09T18:02:48+01:00</updated><content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[javascript on KevOps]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/tags/javascript/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/javascript/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/javascript/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-03-02T11:38:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/tags/javascript/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Writing NodeJS cli tools]]></title>
+            <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+            
+                <id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id>
+            
+            
+            <published>2017-01-09T18:02:48+01:00</published>
+            <updated>2017-01-09T18:02:48+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
 <h3 id="shebang">Shebang</h3>
 <blockquote>
 <p>If you already know what a Shebang is skip to <a href="/writing-nodejs-cli-tools/#writing-a-tiny-node-cli-script">the next section</a></p>
@@ -134,7 +168,59 @@ echo &quot;Hello World!&quot;
 <li>can utilize lots of Node packages</li>
 </ul>
 <p>And that&rsquo;s it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/></entry><entry><title type="html">Getting into Performance Measurement</title><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id><published>2015-03-10T00:00:00+00:00</published><updated>2015-03-10T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
+            <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
+                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+            
+                <id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id>
+            
+            
+            <published>2015-03-10T00:00:00+00:00</published>
+            <updated>2015-03-10T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
 We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside
 Magento projects, it&rsquo;s way easier to keep an overview and with a good overview
 of data flow and available data it&rsquo;s easier to measure and find performance
@@ -330,7 +416,59 @@ everyone&rsquo;s workflow. While developers could use a grunt/gulp/cli task the 
 who actually write content need an easy way to handle the optimization of
 uploaded files. The last resort of more optimization is the server respond time
 on which we don&rsquo;t have any influence.</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry><entry><title type="html">Endless Multi-Dimensional Navigation</title><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</id><published>2014-08-22T00:00:00+00:00</published><updated>2014-08-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on <a href="http://codepen.io">CodePen</a>. My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an <code>open</code> class). The JavaScript for this looks like this:</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Endless Multi-Dimensional Navigation]]></title>
+            <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+            
+                <id>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</id>
+            
+            
+            <published>2014-08-22T00:00:00+00:00</published>
+            <updated>2014-08-22T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on <a href="http://codepen.io">CodePen</a>. My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an <code>open</code> class). The JavaScript for this looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> document,
     <span style="color:#a6e22e">trigger</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#trigger&#39;</span>),
     <span style="color:#a6e22e">subNav</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">trigger</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.sub-nav&#39;</span>);
@@ -378,7 +516,56 @@ by node the little event walks up until finally the navigation wrapper says &ldq
 that!&rdquo; - and that&rsquo;s it. When the handler attached to the navigation handles the event it will also populate it&rsquo;s <code>el</code>
 variable with whatever <code>e.target</code> currently is. <code>e.target</code> happens to always be the <strong>triggering element</strong>, so it is
 very similar to <code>this</code>, yet even more flexible!</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/></entry><entry><title type="html">A closer look to closure</title><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</id><published>2014-07-20T00:00:00+00:00</published><updated>2014-07-20T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[A closer look to closure]]></title>
+            <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+            
+                <id>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</id>
+            
+            
+            <published>2014-07-20T00:00:00+00:00</published>
+            <updated>2014-07-20T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
 functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some
 problems I want to try and give short introduction to closure and what it can be good for. It&rsquo;s good to have at least
 basic understanding of JavaScript.</p>
@@ -445,7 +632,57 @@ tries to use a function with the same name. Then there&rsquo;ll be a &ldquo;conf
 Therefore, the myFunction() is still accessable within the scope and has the expected results, no matter who
 declares myFunction in the globale scope.</p>
 <!-- raw HTML omitted -->
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/closure" term="closure" label="closure"/><category scheme="https://kevingimbel.de/tags/scoping" term="scoping" label="scoping"/></entry><entry><title type="html">Passing Arguments in JavaScript</title><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</id><published>2014-05-23T00:00:00+00:00</published><updated>2014-05-23T00:00:00+00:00</updated><content type="html"><![CDATA[<p>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing <a href="http://ejohn.org">John Resig</a> and try to play around with JavaScript whenever I&rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&rsquo;t check for every possible thingy. Anyway, I&rsquo;ll cover this in a small write-up aka a blog post. Yay!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/closure" term="closure" label="closure" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/scoping" term="scoping" label="scoping" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Passing Arguments in JavaScript]]></title>
+            <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+            
+                <id>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</id>
+            
+            
+            <published>2014-05-23T00:00:00+00:00</published>
+            <updated>2014-05-23T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &ldquo;Secrets of the JavaScript Ninja&rdquo; by the amazing <a href="http://ejohn.org">John Resig</a> and try to play around with JavaScript whenever I&rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&rsquo;t check for every possible thingy. Anyway, I&rsquo;ll cover this in a small write-up aka a blog post. Yay!</p>
 <p>First of all we should have some use case or scenario. I needed the a variable number of options for my <a href="https://github.com/bullgit/Bulllog">Bulllog</a> script that takes any number of CSS oroperty-value pairs and applies them to your console.logs (Chrome only, sadly). Anyway, CSS is a good example in my opinion so we&rsquo;ll write a small css() function that can be applies to an element.</p>
 <p>First of all, what should this function do? It should:</p>
 <ul>
@@ -515,7 +752,54 @@ Calling the function would now look like this:</p>
 <p>The result looks like this.</p>
 <!-- raw HTML omitted -->
 <p>With this technique you can make any function accept any amount of property-value pairs by simply passing in an object. This would also work when you define the object itsef as a variable (see the second div). It&rsquo;s important to know that properties like <code>font-size</code> must be written in quotes (e.g. <code>&quot;font-size&quot;: &quot;1em&quot;</code>), otherwise the script will fail.</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/></entry><entry><title type="html">Pure JavaScript slider</title><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</id><published>2014-02-22T00:00:00+00:00</published><updated>2014-02-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>The great thing when you&rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&rsquo;m very  proud of my <a href="http://kevingimbel.com/to-infinity-and-beyond/">back to top script</a> even though it&rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&rsquo;t be that much fun. However, I made another JavaScript thing I&rsquo;m proud of: A pure JavaScript slider.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Pure JavaScript slider]]></title>
+            <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="related" type="text/html" title="To infinity and beyond" />
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+            
+                <id>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</id>
+            
+            
+            <published>2014-02-22T00:00:00+00:00</published>
+            <updated>2014-02-22T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>The great thing when you&rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&rsquo;m very  proud of my <a href="http://kevingimbel.com/to-infinity-and-beyond/">back to top script</a> even though it&rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&rsquo;t be that much fun. However, I made another JavaScript thing I&rsquo;m proud of: A pure JavaScript slider.</p>
 <!-- raw HTML omitted -->
 <p>The slider runs forever in a loop, animating images to the left until the last image is reached. When the last image is reached it will animate all back to the first image (I&rsquo;m not happy with this animation yet) and will start over. Pretty simple. The hardest part for me was - and still is - the animation timing. I&rsquo;m may over-thinking stuff but I can&rsquo;t figure out a formula to calculate a good timing based on how many images the slider has. If someone has an idea, fork the pen or <a href="http://twitter.com/_kevinatari">tweet me</a>.</p>
 <p>First of all I defined some variables.</p>
@@ -583,7 +867,53 @@ Calling the function would now look like this:</p>
         <span style="color:#a6e22e">reset</span>();
       }
     }, <span style="color:#ae81ff">3000</span>);
-</code></pre></div>]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/></entry><entry><title type="html">To infinity and beyond</title><link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js"/><id>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</id><published>2013-11-18T00:00:00+00:00</published><updated>2013-11-18T00:00:00+00:00</updated><content type="html"><![CDATA[<p>While I was re-designing my Website I decided to finally add some JavaScript to it. I&rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&rsquo;m doing. Yesterday night&rsquo;s topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is <em>kinda</em> simple, however, I wrote an endless function that got to infinity and beyond (that&rsquo;s where the title comes from. I&rsquo;m so funny.)</p>
+</code></pre></div>]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[To infinity and beyond]]></title>
+            <link href="https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="related" type="text/html" title="i-js" />
+            
+                <id>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</id>
+            
+            
+            <published>2013-11-18T00:00:00+00:00</published>
+            <updated>2013-11-18T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>While I was re-designing my Website I decided to finally add some JavaScript to it. I&rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&rsquo;m doing. Yesterday night&rsquo;s topic was a &ldquo;Back to Top&rdquo; Button written in Vanilla JS. Actually the code behind it is <em>kinda</em> simple, however, I wrote an endless function that got to infinity and beyond (that&rsquo;s where the title comes from. I&rsquo;m so funny.)</p>
 <p>Because I still like to google around while writing JavaScript I stumbled upon a function that looked okay to me.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scrollToTop</span>() {
   <span style="color:#66d9ef">if</span> (document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">scrollTop</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">scrollTop</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>){
@@ -625,7 +955,52 @@ Calling the function would now look like this:</p>
   }); <span style="color:#75715e">// end of the Back to Top function
 </span></code></pre></div><p>That&rsquo;s it! My sweet little Back To Top Function. I&rsquo;m sure there are points that could be improved and I&rsquo;m sure one could add easing to it (I already got something in mind) but for now I&rsquo;m happy with it.</p>
 <p>(Also check out what else I discovered yesterday. It&rsquo;s an <a href="https://twitter.com/_kevinatari/status/402197154539651072">YouTube Eater Egg</a>!)</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/vanilla_js" term="vanilla_js" label="vanilla_js"/></entry><entry><title type="html">i-js</title><link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/10/i-js/</id><published>2013-10-14T00:00:00+00:00</published><updated>2013-10-14T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/vanilla_js" term="vanilla_js" label="vanilla_js" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[i-js]]></title>
+            <link href="https://kevingimbel.de/blog/2013/10/i-js/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/blog/2013/10/i-js/</id>
+            
+            
+            <published>2013-10-14T00:00:00+00:00</published>
+            <updated>2013-10-14T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.</p>
 <p>After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to <code>I</code> and here comes the fun part: While learning JS I build i.js - a tiny JS &ldquo;Framework&rdquo; that enables you to write JS nearly the same you&rsquo;d speak.
 For example you may thing: <em>&ldquo;I want to get the Object with the class name test&rdquo;</em> - to get this, simply write the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">I</span>.<span style="color:#a6e22e">WantA</span>.<span style="color:#a6e22e">classname</span>(<span style="color:#e6db74">&#34;test&#34;</span>);
@@ -656,4 +1031,32 @@ For example you may thing: <em>&ldquo;I want to get the Object with the class na
         <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span>[<span style="color:#ae81ff">0</span>];
     }
 };
-</code></pre></div>]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/></entry></feed>
+</code></pre></div>]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

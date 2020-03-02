@@ -1,2 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cli on KevOps</title><link>https://kevingimbel.de/tags/cli/</link><description>Recent content in cli on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 12 Jan 2017 19:22:48 +0100</lastBuildDate><atom:link href="https://kevingimbel.de/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Bash script: ws</title><link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link><pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid><description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description></item><item><title>Writing NodeJS cli tools</title><link>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</link><pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</guid><description>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, creating apache vhosts files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.
-Shebang If you already know what a Shebang is skip to the next section</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cli on KevOps</title>
+    <link>https://kevingimbel.de/tags/cli/</link>
+    <description>Recent content in cli on KevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Jan 2017 19:22:48 +0100</lastBuildDate>
+    
+	<atom:link href="https://kevingimbel.de/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash script: ws</title>
+      <link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link>
+      <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid>
+      <description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description>
+    </item>
+    
+    <item>
+      <title>Writing NodeJS cli tools</title>
+      <link>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</link>
+      <pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</guid>
+      <description>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, creating apache vhosts files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.
+Shebang  If you already know what a Shebang is skip to the next section</description>
+    </item>
+    
+  </channel>
+</rss>

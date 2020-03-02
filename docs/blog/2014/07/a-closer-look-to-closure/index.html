@@ -1,57 +1,242 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>A closer look to closure &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="javascript closure scoping  blog coding javascript tutorial"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>A closer look to closure</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2014-07-20 00:00:00 +0000 UTC">20. Jul 2014</time></p><p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A closer look to closure &mdash; KevOps</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="javascript closure scoping  blog coding javascript tutorial  ">
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    <header class="intro-text">
+        <span>
+        
+        
+        A closer look to closure
+        
+        </span>
+    </header>
+
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/reading/">
+                    <span>Reading</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2014-07-20 00:00:00 &#43;0000 UTC">20. Jul 2014</time>  </p>
+            <p>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or
 functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some
 problems I want to try and give short introduction to closure and what it can be good for. It&rsquo;s good to have at least
-basic understanding of JavaScript.</p><p>So before I start I&rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure
-and scopes at the moment. If you happen to find mistakes please <a href=https://twitter.com/_kevinatari>tweet me</a> or <a href="https://github.com/kevingimbel/kevingimbel.github.io/issues?page=1&state=open">open an
-issue</a>.</p><p>Consider the following example</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>;
+basic understanding of JavaScript.</p>
+<p>So before I start I&rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure
+and scopes at the moment. If you happen to find mistakes please <a href="https://twitter.com/_kevinatari">tweet me</a> or <a href="https://github.com/kevingimbel/kevingimbel.github.io/issues?page=1&amp;state=open">open an
+issue</a>.</p>
+<p>Consider the following example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
 
-(<span style=color:#66d9ef>function</span>(){
-  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>;
+(<span style="color:#66d9ef">function</span>(){
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 }());
 
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>x</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
 </code></pre></div><p>What value will <code>x</code> have when logged to the console? 5 or 10? The correct answer is 5, because inside the immediate
 executing function <code>var x</code> does not reference the previously defined <code>var x</code>. They&rsquo;re both standalone and do not effect
-each other. Let&rsquo;s try this again and see what happens now</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>;
+each other. Let&rsquo;s try this again and see what happens now</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
 
-(<span style=color:#66d9ef>function</span>() {
-  <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>;
+(<span style="color:#66d9ef">function</span>() {
+  <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 }());
 
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>x</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
 </code></pre></div><p>What value will <code>x</code> have now? Still 5, because it&rsquo;s the same function but we only left the <code>var</code> keyword? Nope, now <code>x</code>
 inside the immediate executing function references the previously defined <code>var x</code> and will update it&rsquo;s value, so
 <code>console.log(x)</code> results to 10 this time. As you can see just now, leaving out the single word <code>var</code> can change how your
 program behaves. The missing var statment, where closure hits hard and overrides the variable, can really be annoying
 because JavaScript doesn&rsquo;t throw errors. Overriding values inside a closure, e.g. the immediate executing function, is
-perfectly fine.</p><p>So what happens if we pass <code>x</code>, which is 10 now, to the immediate executing function and declare &lsquo;x = 15&rsquo; inside the
-functions body? Will <code>x</code> become 15 or stay 10?</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// x is 10 at this point
-</span><span style=color:#75715e></span>(<span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>x</span>){
-	<span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>15</span>;
-}(<span style=color:#a6e22e>x</span>));
+perfectly fine.</p>
+<p>So what happens if we pass <code>x</code>, which is 10 now, to the immediate executing function and declare &lsquo;x = 15&rsquo; inside the
+functions body? Will <code>x</code> become 15 or stay 10?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// x is 10 at this point
+</span><span style="color:#75715e"></span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">x</span>){
+	<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
+}(<span style="color:#a6e22e">x</span>));
 </code></pre></div><p>As the result shows, x is still 10. But wait, wasn&rsquo;t it supposed to be overridden if we don&rsquo;t declare <code>var x = 15</code>? Well
 that is true, but since we pass x as a parameter, x is &ldquo;re-defined&rdquo; as a local variable and, inside the functions body, it is
-indeed 15 - outside it is not.</p><h3 id=what-can-closures-do-for-me>What can closures do for me?</h3><p>What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn&rsquo;t write variables into the global namespace because they&rsquo;re almost asking to be overriden or changed. Let&rsquo;s say one writes a function like this.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>assert</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>con</span>, <span style=color:#a6e22e>msg</span>) {
-  <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>con</span>) {
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>error</span>(<span style=color:#a6e22e>msg</span>);
-  } <span style=color:#66d9ef>else</span> {
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>msg</span>);
+indeed 15 - outside it is not.</p>
+<!-- raw HTML omitted -->
+<h3 id="what-can-closures-do-for-me">What can closures do for me?</h3>
+<p>What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn&rsquo;t write variables into the global namespace because they&rsquo;re almost asking to be overriden or changed. Let&rsquo;s say one writes a function like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">assert</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">con</span>, <span style="color:#a6e22e">msg</span>) {
+  <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">con</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">msg</span>);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">msg</span>);
   }
 }
 </code></pre></div><p>That&rsquo;s a super simple assert function to see if a statment (<code>con</code>dition) is true or false. If it&rsquo;s false we&rsquo;ll log a console.error(), if not we&rsquo;ll log a normal console.log() statement. This is great and perfectly fine unless someone else
-tries to use a function with the same name. Then there&rsquo;ll be a &ldquo;conflict&rdquo; and the last declared function overrides the other. (In this example I&rsquo;ll use a function called myFunction)</p><p>So still, what can closure do for me? It can save my declared functions - inside a closure. So far all closure examples were immediate executing function, but Objects also create closures, assigning all there properties to a specific &ldquo;namespace&rdquo;.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>myFunction</span>() <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
-  <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+tries to use a function with the same name. Then there&rsquo;ll be a &ldquo;conflict&rdquo; and the last declared function overrides the other. (In this example I&rsquo;ll use a function called myFunction)</p>
+<!-- raw HTML omitted -->
+<p>So still, what can closure do for me? It can save my declared functions - inside a closure. So far all closure examples were immediate executing function, but Objects also create closures, assigning all there properties to a specific &ldquo;namespace&rdquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myFunction</span>() <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
 }
 
-<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>myNamespace</span> <span style=color:#f92672>=</span> {
-  <span style=color:#a6e22e>myFunction</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>() {
-    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myNamespace</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">myFunction</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
   }
 }
 </code></pre></div><p>This way we introduce one variable to the global scope: myNamespace and keep all the functions inside this scope.
 Therefore, the myFunction() is still accessable within the scope and has the expected results, no matter who
-declares myFunction in the globale scope.</p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under javascript" href=https://kevingimbel.de/categories/javascript/>javascript</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tutorial" href=https://kevingimbel.de/categories/tutorial/>tutorial</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with javascript" href=https://kevingimbel.de/tags/javascript/>javascript</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with closure" href=https://kevingimbel.de/tags/closure/>closure</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with scoping" href=https://kevingimbel.de/tags/scoping/>scoping</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2014-07-20-a-closer-look-to-closure.md>Edit on
-GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>
+declares myFunction in the globale scope.</p>
+<!-- raw HTML omitted -->
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under javascript"
+                href="https://kevingimbel.de/categories/javascript/">javascript</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with javascript"
+                href="https://kevingimbel.de/tags/javascript/">javascript</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with closure"
+                href="https://kevingimbel.de/tags/closure/">closure</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with scoping"
+                href="https://kevingimbel.de/tags/scoping/">scoping</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2014-07-20-a-closer-look-to-closure.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

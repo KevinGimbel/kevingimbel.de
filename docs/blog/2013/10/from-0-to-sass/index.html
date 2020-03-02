@@ -1,121 +1,329 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>From 0 To Sass &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="css sass tooling  blog coding frontend"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>From 0 To Sass</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2013-10-02 00:00:00 +0000 UTC">02. Oct 2013</time></p><p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href=http://sass-lang.com>Sass</a>, <a href=http://lesscss.org/>LESS</a> or <a href=http://learnboost.github.io/stylus/>Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p><p>Even though Pre-Processors are easy to use and setup some people are still confused: <em>Do I have to run them on a server? How do I install them? Why should I use them?</em> - I want to answer all these questions in this article: Getting from 0 to Sass in X Steps!</p><p><strong>Notice:</strong> This guide covers the installation on Linux and Mac only, for Windows support please take a look at <a href=http://www.impressivewebs.com/sass-on-windows/>this tutorial</a>.</p><h3 id=sass-summary>Sass summary</h3><p>Sass was build by <a href=http://www.hamptoncatlin.com/>Hampton Catlin</a> and <a href=http://nex-3.com/>Nathan Weizenbaum</a>. Since late 2008 <a href=http://chriseppstein.github.io/>Chris Eppstein</a> is also on board, he&rsquo;s also the creator of <a href=http://compass-style.org/>Compass</a> which is a CSS3 Framework for Sass (I&rsquo;ll cover Compass and other Frameworks for Sass later).</p><p>Sass enables you to use Variables, Functions and Mixins inside your CSS. This comes very handy because a stylesheet gets amazingly maintainable with variables and mixins.</p><p>Before we start I want you to notice something important about Sass: Sass runs on ruby so you have to install Ruby if it&rsquo;s not (Yeah Windows, I&rsquo;m looking in your direction!) - on Mac and Linux Ruby should be installed. All code blocks starting with <code>$</code> need to be inputed into a Terminal (without the <em>$</em>!). On OS X and Linux you may need to put a <code>sudo</code> command before every command prompt.</p><p>Simply check your ruby version by typing the following</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ ruby --version
-ruby 1.9.3p194 <span style=color:#f92672>(</span>2012-04-20 revision 35410<span style=color:#f92672>)</span> <span style=color:#f92672>[</span>i686-linux<span style=color:#f92672>]</span>
-</code></pre></div><h3 id=installation>Installation</h3><p>You&rsquo;ve maybe tried to install Sass previously and maybe it is still installed.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># checking the installed Sass Version</span>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>From 0 To Sass &mdash; KevOps</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="css sass tooling  blog coding frontend  ">
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    <header class="intro-text">
+        <span>
+        
+        
+        From 0 To Sass
+        
+        </span>
+    </header>
+
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/reading/">
+                    <span>Reading</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2013-10-02 00:00:00 &#43;0000 UTC">02. Oct 2013</time>  </p>
+            <p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
+<p>Even though Pre-Processors are easy to use and setup some people are still confused: <em>Do I have to run them on a server? How do I install them? Why should I use them?</em> - I want to answer all these questions in this article: Getting from 0 to Sass in X Steps!</p>
+<p><strong>Notice:</strong> This guide covers the installation on Linux and Mac only, for Windows support please take a look at <a href="http://www.impressivewebs.com/sass-on-windows/">this tutorial</a>.</p>
+<h3 id="sass-summary">Sass summary</h3>
+<p>Sass was build by <a href="http://www.hamptoncatlin.com/">Hampton Catlin</a> and <a href="http://nex-3.com/">Nathan Weizenbaum</a>. Since late 2008 <a href="http://chriseppstein.github.io/">Chris Eppstein</a> is also on board, he&rsquo;s also the creator of <a href="http://compass-style.org/">Compass</a> which is a CSS3 Framework for Sass (I&rsquo;ll cover Compass and other Frameworks for Sass later).</p>
+<p>Sass enables you to use Variables, Functions and Mixins inside your CSS. This comes very handy because a stylesheet gets amazingly maintainable with variables and mixins.</p>
+<p>Before we start I want you to notice something important about Sass: Sass runs on ruby so you have to install Ruby if it&rsquo;s not (Yeah Windows, I&rsquo;m looking in your direction!) - on Mac and Linux Ruby should be installed. All code blocks starting with <code>$</code> need to be inputed into a Terminal (without the <em>$</em>!). On OS X and Linux you may need to put a <code>sudo</code> command before every command prompt.</p>
+<p>Simply check your ruby version by typing the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ruby --version
+ruby 1.9.3p194 <span style="color:#f92672">(</span>2012-04-20 revision 35410<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>i686-linux<span style="color:#f92672">]</span>
+</code></pre></div><h3 id="installation">Installation</h3>
+<p>You&rsquo;ve maybe tried to install Sass previously and maybe it is still installed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># checking the installed Sass Version</span>
 $ sass --version
-<span style=color:#75715e># If up to date the output (as of today, 10/2/13) is</span>
-Sass 3.2.9 <span style=color:#f92672>(</span>Media Mark<span style=color:#f92672>)</span>
-</code></pre></div><p>If you get an error such as &ldquo;command not found&rdquo; Sass is not installed, so we start from 0.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ gem install sass
+<span style="color:#75715e"># If up to date the output (as of today, 10/2/13) is</span>
+Sass 3.2.9 <span style="color:#f92672">(</span>Media Mark<span style="color:#f92672">)</span>
+</code></pre></div><p>If you get an error such as &ldquo;command not found&rdquo; Sass is not installed, so we start from 0.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gem install sass
 </code></pre></div><p>Your Terminal will now show you the download and install process for Sass, depending on your internet connection this may take a while.
-After things are finished we&rsquo;ll skip the step of testing Sass directly or using it on its own - trust me here, it&rsquo;s way better to install Compass first.</p><h3 id=compass>Compass</h3><p>Compass is a Framework for Sass that comes with a ton of build in Mixins and Functions that you&rsquo;ll love. I&rsquo;m using compass for every project - no matter if small or large.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># updating the system first so everything is running correctly</span>
+After things are finished we&rsquo;ll skip the step of testing Sass directly or using it on its own - trust me here, it&rsquo;s way better to install Compass first.</p>
+<h3 id="compass">Compass</h3>
+<p>Compass is a Framework for Sass that comes with a ton of build in Mixins and Functions that you&rsquo;ll love. I&rsquo;m using compass for every project - no matter if small or large.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># updating the system first so everything is running correctly</span>
 $ gem update system
 $ gem install compass
-</code></pre></div><p>After compass is installed simply head over to your Local Web Direction (in my case this is <code>var/www/</code>) and run</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ compass create myproject
-</code></pre></div><p>It doesn&rsquo;t matter what you call <code>myproject</code> - I&rsquo;ve only used this command once in my life. Anyway this will create a config.rb file that you should open next.</p><p>The <code>config.rb</code> is well commented, below you can see my file (just in case you don&rsquo;t edit the wrong file by accident)</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#75715e># Require any additional compass plugins here.</span>
+</code></pre></div><p>After compass is installed simply head over to your Local Web Direction (in my case this is <code>var/www/</code>) and run</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ compass create myproject
+</code></pre></div><p>It doesn&rsquo;t matter what you call <code>myproject</code> - I&rsquo;ve only used this command once in my life. Anyway this will create a config.rb file that you should open next.</p>
+<p>The <code>config.rb</code> is well commented, below you can see my file (just in case you don&rsquo;t edit the wrong file by accident)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># Require any additional compass plugins here.</span>
 
-<span style=color:#75715e># Set this to the root of your project when deployed:</span>
-http_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>/</span><span style=color:#e6db74>&#34;</span>
-css_dir <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>assets/css</span><span style=color:#e6db74>&#34;</span>
-sass_dir <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>assets/css</span><span style=color:#e6db74>&#34;</span>
-images_dir <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>assets/img</span><span style=color:#e6db74>&#34;</span>
-javascripts_dir <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>assets/js</span><span style=color:#e6db74>&#34;</span>
+<span style="color:#75715e"># Set this to the root of your project when deployed:</span>
+http_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">/</span><span style="color:#e6db74">&#34;</span>
+css_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">assets/css</span><span style="color:#e6db74">&#34;</span>
+sass_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">assets/css</span><span style="color:#e6db74">&#34;</span>
+images_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">assets/img</span><span style="color:#e6db74">&#34;</span>
+javascripts_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">assets/js</span><span style="color:#e6db74">&#34;</span>
 
-<span style=color:#75715e># You can select your preferred output style here (can be overridden via the command line):</span>
-<span style=color:#75715e># output_style = :expanded or :nested or :compact or :compressed</span>
+<span style="color:#75715e"># You can select your preferred output style here (can be overridden via the command line):</span>
+<span style="color:#75715e"># output_style = :expanded or :nested or :compact or :compressed</span>
 
-<span style=color:#75715e># To enable relative paths to assets via compass helper functions. Uncomment:</span>
-<span style=color:#75715e># relative_assets = true</span>
+<span style="color:#75715e"># To enable relative paths to assets via compass helper functions. Uncomment:</span>
+<span style="color:#75715e"># relative_assets = true</span>
 
-<span style=color:#75715e># To disable debugging comments that display the original location of your selectors. Uncomment:</span>
-<span style=color:#75715e># line_comments = false</span>
+<span style="color:#75715e"># To disable debugging comments that display the original location of your selectors. Uncomment:</span>
+<span style="color:#75715e"># line_comments = false</span>
 
 
-<span style=color:#75715e># If you prefer the indented syntax, you might want to regenerate this</span>
-<span style=color:#75715e># project again passing --syntax sass, or you can uncomment this:</span>
-<span style=color:#75715e># preferred_syntax = :sass</span>
-<span style=color:#75715e># and then run:</span>
-<span style=color:#75715e># sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass</span>
-</code></pre></div><p>I changed the path (<code>css_dir</code>,<code>sass_dir</code>,&mldr;) so that they match my standard folder setup for projects.I do also always compress my files by changing the <code>output_style</code> to <code>:compressed</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># You can select your preferred output style here (can be overridden via the command line):</span>
-output_style <span style=color:#f92672>=</span> :compressed
-</code></pre></div><p>The <code>config.rb</code> is essential for running Compass. You have to Copy and Paste it into every root direction of your project. See and example below:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># lets say this is the folder var/www/my-new-project</span>
-<span style=color:#75715e># this is the root of your project where your config.rb</span>
-<span style=color:#75715e># needs to be placed - NOT inside assets/css as many think!</span>
-<span style=color:#e6db74>&#39;- assets
-</span><span style=color:#e6db74>    &#39;</span>- css
-        <span style=color:#e6db74>&#39;- style.scss
-</span><span style=color:#e6db74>        &#39;</span>- style.css
-    <span style=color:#e6db74>&#39;- js
-</span><span style=color:#e6db74>        &#39;</span>- jquery.min.js
-        <span style=color:#e6db74>&#39;- main.js
-</span><span style=color:#e6db74>    &#39;</span>- img
-<span style=color:#e6db74>&#39;- about
-</span><span style=color:#e6db74>    &#39;</span>- index.html
-<span style=color:#e6db74>&#39;- imprint.html
-</span><span style=color:#e6db74>&#39;</span>- index.html
-<span style=color:#e6db74>&#39;- config.rb
-</span><span style=color:#e6db74>#   &#39;</span>- there it is, the config.rb!
-</code></pre></div><p>Sass and Compass are now installed and ready to use. This is, in my opinion, best made via the good old Terminal!</p><p>So let&rsquo;s navigate to our folders and run our first command.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># switching to our project folder</span>
+<span style="color:#75715e"># If you prefer the indented syntax, you might want to regenerate this</span>
+<span style="color:#75715e"># project again passing --syntax sass, or you can uncomment this:</span>
+<span style="color:#75715e"># preferred_syntax = :sass</span>
+<span style="color:#75715e"># and then run:</span>
+<span style="color:#75715e"># sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass</span>
+</code></pre></div><p>I changed the path (<code>css_dir</code>,<code>sass_dir</code>,&hellip;) so that they match my standard folder setup for projects.I do also always compress my files by changing the <code>output_style</code> to <code>:compressed</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># You can select your preferred output style here (can be overridden via the command line):</span>
+output_style <span style="color:#f92672">=</span> :compressed
+</code></pre></div><p>The <code>config.rb</code> is essential for running Compass. You have to Copy and Paste it into every root direction of your project. See and example below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># lets say this is the folder var/www/my-new-project</span>
+<span style="color:#75715e"># this is the root of your project where your config.rb</span>
+<span style="color:#75715e"># needs to be placed - NOT inside assets/css as many think!</span>
+<span style="color:#e6db74">&#39;- assets
+</span><span style="color:#e6db74">    &#39;</span>- css
+        <span style="color:#e6db74">&#39;- style.scss
+</span><span style="color:#e6db74">        &#39;</span>- style.css
+    <span style="color:#e6db74">&#39;- js
+</span><span style="color:#e6db74">        &#39;</span>- jquery.min.js
+        <span style="color:#e6db74">&#39;- main.js
+</span><span style="color:#e6db74">    &#39;</span>- img
+<span style="color:#e6db74">&#39;- about
+</span><span style="color:#e6db74">    &#39;</span>- index.html
+<span style="color:#e6db74">&#39;- imprint.html
+</span><span style="color:#e6db74">&#39;</span>- index.html
+<span style="color:#e6db74">&#39;- config.rb
+</span><span style="color:#e6db74">#   &#39;</span>- there it is, the config.rb!
+</code></pre></div><p>Sass and Compass are now installed and ready to use. This is, in my opinion, best made via the good old Terminal!</p>
+<p>So let&rsquo;s navigate to our folders and run our first command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># switching to our project folder</span>
 $ cd var/www/my-new-project
-<span style=color:#75715e># telling compass to compile our files</span>
+<span style="color:#75715e"># telling compass to compile our files</span>
 $ compass watch
-</code></pre></div><p>Compass is now watching for changes and everytime you save your <code>style.scss</code> it will automatically create an style.css out of it. Still wondering what all of this is about?</p><h3 id=variables>Variables</h3><p>Let&rsquo;s start with Variables because I assume you know what they are and have already seen variables in other programming languages.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>Variables</span> <span style=color:#f92672>start</span> <span style=color:#f92672>with</span> <span style=color:#f92672>a</span> <span style=color:#f92672>$</span><span style=color:#f92672>,</span> <span style=color:#f92672>e</span>.<span style=color:#a6e22e>g</span><span style=color:#f92672>.</span>
-<span style=color:#f92672>$</span><span style=color:#f92672>main-color</span><span style=color:#f92672>:</span> #85c226<span style=color:#f92672>;</span>
+</code></pre></div><p>Compass is now watching for changes and everytime you save your <code>style.scss</code> it will automatically create an style.css out of it. Still wondering what all of this is about?</p>
+<h3 id="variables">Variables</h3>
+<p>Let&rsquo;s start with Variables because I assume you know what they are and have already seen variables in other programming languages.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Variables</span> <span style="color:#f92672">start</span> <span style="color:#f92672">with</span> <span style="color:#f92672">a</span> <span style="color:#f92672">$</span><span style="color:#f92672">,</span> <span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span>
+<span style="color:#f92672">$</span><span style="color:#f92672">main-color</span><span style="color:#f92672">:</span> #85c226<span style="color:#f92672">;</span>
 </code></pre></div><p>Variables must be declared <strong>before</strong> they&rsquo;re used, that&rsquo;s why I recommend to declare all variables at the top of the document (or inside a other stylesheet that can be included, more later on).
-To use a variable you simply write it to the place you want it to be used. Logical, isn&rsquo;t it?</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>$</span><span style=color:#f92672>main-color</span><span style=color:#f92672>:</span> #85c226<span style=color:#f92672>;</span>
+To use a variable you simply write it to the place you want it to be used. Logical, isn&rsquo;t it?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">$</span><span style="color:#f92672">main-color</span><span style="color:#f92672">:</span> #85c226<span style="color:#f92672">;</span>
 
-.<span style=color:#a6e22e>my-class</span> {
-    <span style=color:#66d9ef>border-top</span>: <span style=color:#ae81ff>1</span><span style=color:#66d9ef>px</span> <span style=color:#66d9ef>solid</span> <span style=color:#960050;background-color:#1e0010>$</span>main-color;
+.<span style="color:#a6e22e">my-class</span> {
+    <span style="color:#66d9ef">border-top</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#960050;background-color:#1e0010">$</span>main-color;
 }
-</code></pre></div><p>The above snipped will be compiled to</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#a6e22e>my-class</span> {
-    <span style=color:#66d9ef>border-top</span>:<span style=color:#ae81ff>1</span><span style=color:#66d9ef>px</span> <span style=color:#66d9ef>solid</span> <span style=color:#ae81ff>#85c226</span>;
+</code></pre></div><p>The above snipped will be compiled to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">my-class</span> {
+    <span style="color:#66d9ef">border-top</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#85c226</span>;
 }
-</code></pre></div><p>Basically that&rsquo;s it. You can store Strings, Colors, and other variables inside a variables. More on variables can be found inside the <a href=http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_>Sass Docs</a>.</p><h3 id=mixins>Mixins</h3><p>Mixins are getting a little bit more interesting. They&rsquo;re snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>import</span> <span style=color:#f92672>everything</span> <span style=color:#f92672>that</span> <span style=color:#f92672>compass</span> <span style=color:#f92672>has</span>
-@<span style=color:#66d9ef>import</span> <span style=color:#e6db74>&#34;compass&#34;</span>;
-<span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>import</span> <span style=color:#f92672>special</span> <span style=color:#f92672>library</span> <span style=color:#f92672>(</span><span style=color:#f92672>e</span>.<span style=color:#a6e22e>g</span><span style=color:#f92672>.</span> <span style=color:#f92672>css3</span><span style=color:#f92672>)</span>
-@<span style=color:#66d9ef>import</span> <span style=color:#e6db74>&#34;compass/css3&#34;</span>;
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>creating</span> <span style=color:#f92672>a</span> <span style=color:#f92672>mixin</span>
-@<span style=color:#66d9ef>mixin</span> <span style=color:#f92672>border-radius</span><span style=color:#f92672>(</span><span style=color:#f92672>$</span><span style=color:#f92672>r</span><span style=color:#f92672>)</span> {
-    <span style=color:#f92672>-webkit-border-radius</span><span style=color:#f92672>:</span><span style=color:#f92672>$</span><span style=color:#f92672>r</span><span style=color:#f92672>;</span>
-    <span style=color:#f92672>-moz-border-radius</span><span style=color:#f92672>:</span><span style=color:#f92672>$</span><span style=color:#f92672>r</span><span style=color:#f92672>;</span>
-    <span style=color:#f92672>-ms-border-radius</span><span style=color:#f92672>:</span><span style=color:#f92672>$</span><span style=color:#f92672>r</span><span style=color:#f92672>;</span>
-    <span style=color:#f92672>-o-border-radius</span><span style=color:#f92672>:</span><span style=color:#f92672>$</span><span style=color:#f92672>r</span><span style=color:#f92672>;</span>
+</code></pre></div><p>Basically that&rsquo;s it. You can store Strings, Colors, and other variables inside a variables. More on variables can be found inside the <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_">Sass Docs</a>.</p>
+<h3 id="mixins">Mixins</h3>
+<p>Mixins are getting a little bit more interesting. They&rsquo;re snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">import</span> <span style="color:#f92672">everything</span> <span style="color:#f92672">that</span> <span style="color:#f92672">compass</span> <span style="color:#f92672">has</span>
+@<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;compass&#34;</span>;
+<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">import</span> <span style="color:#f92672">special</span> <span style="color:#f92672">library</span> <span style="color:#f92672">(</span><span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span> <span style="color:#f92672">css3</span><span style="color:#f92672">)</span>
+@<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;compass/css3&#34;</span>;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">creating</span> <span style="color:#f92672">a</span> <span style="color:#f92672">mixin</span>
+@<span style="color:#66d9ef">mixin</span> <span style="color:#f92672">border-radius</span><span style="color:#f92672">(</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">)</span> {
+    <span style="color:#f92672">-webkit-border-radius</span><span style="color:#f92672">:</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">-moz-border-radius</span><span style="color:#f92672">:</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">-ms-border-radius</span><span style="color:#f92672">:</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">-o-border-radius</span><span style="color:#f92672">:</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
 }
 
-<span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>using</span> <span style=color:#f92672>it</span> <span style=color:#f92672>inside</span> <span style=color:#f92672>a</span> <span style=color:#f92672>class</span>
-.<span style=color:#a6e22e>my-class</span> {
-    <span style=color:#66d9ef>width</span>:<span style=color:#ae81ff>20</span><span style=color:#66d9ef>em</span>;
-    <span style=color:#66d9ef>height</span>:<span style=color:#66d9ef>auto</span>;
-    <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#960050;background-color:#1e0010>i</span><span style=color:#960050;background-color:#1e0010>n</span><span style=color:#960050;background-color:#1e0010>c</span><span style=color:#960050;background-color:#1e0010>l</span><span style=color:#960050;background-color:#1e0010>u</span><span style=color:#960050;background-color:#1e0010>d</span><span style=color:#960050;background-color:#1e0010>e</span> <span style=color:#960050;background-color:#1e0010>b</span><span style=color:#960050;background-color:#1e0010>o</span><span style=color:#960050;background-color:#1e0010>r</span><span style=color:#960050;background-color:#1e0010>d</span><span style=color:#960050;background-color:#1e0010>e</span><span style=color:#960050;background-color:#1e0010>r</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#960050;background-color:#1e0010>r</span><span style=color:#960050;background-color:#1e0010>a</span><span style=color:#960050;background-color:#1e0010>d</span><span style=color:#960050;background-color:#1e0010>i</span><span style=color:#960050;background-color:#1e0010>u</span><span style=color:#960050;background-color:#1e0010>s</span><span style=color:#960050;background-color:#1e0010>(</span><span style=color:#960050;background-color:#1e0010>5</span><span style=color:#960050;background-color:#1e0010>p</span><span style=color:#960050;background-color:#1e0010>x</span><span style=color:#960050;background-color:#1e0010>)</span>;
+<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">using</span> <span style="color:#f92672">it</span> <span style="color:#f92672">inside</span> <span style="color:#f92672">a</span> <span style="color:#f92672">class</span>
+.<span style="color:#a6e22e">my-class</span> {
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
+    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#960050;background-color:#1e0010">5</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">)</span>;
 }
-</code></pre></div><p>The mixin can be created once and then be reused everywhere inside your style.scss - it&rsquo;ll save you a lot of writing whenever you have to apply a border to an object. The <code>border-radius()</code> mixin is also build-in to Compass. The output in style.css will be as following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#a6e22e>my-class</span> {
-    <span style=color:#66d9ef>width</span>:<span style=color:#ae81ff>20</span><span style=color:#66d9ef>em</span>;
-    <span style=color:#66d9ef>height</span>:<span style=color:#66d9ef>auto</span>;
-    <span style=color:#66d9ef>-webkit-</span><span style=color:#66d9ef>border-radius</span>:<span style=color:#ae81ff>5</span><span style=color:#66d9ef>px</span>;
-    <span style=color:#66d9ef>-moz-</span><span style=color:#66d9ef>border-radius</span>:<span style=color:#ae81ff>5</span><span style=color:#66d9ef>px</span>;
-    <span style=color:#66d9ef>-ms-</span><span style=color:#66d9ef>border-radius</span>:<span style=color:#ae81ff>5</span><span style=color:#66d9ef>px</span>;
-    <span style=color:#66d9ef>-o-</span><span style=color:#66d9ef>border-radius</span>:<span style=color:#ae81ff>5</span><span style=color:#66d9ef>px</span>;
+</code></pre></div><p>The mixin can be created once and then be reused everywhere inside your style.scss - it&rsquo;ll save you a lot of writing whenever you have to apply a border to an object. The <code>border-radius()</code> mixin is also build-in to Compass. The output in style.css will be as following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">my-class</span> {
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
+    <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">-ms-</span><span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">-o-</span><span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
 }
-</code></pre></div><p>There are more super useful build in function in Sass. Some of my favorite are <code>darken()</code> and <code>lighten()</code> for colors.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>$</span><span style=color:#f92672>my-color</span><span style=color:#f92672>:</span> <span style=color:#f92672>red</span><span style=color:#f92672>;</span>
-<span style=color:#f92672>$</span><span style=color:#f92672>my-color--dark</span><span style=color:#f92672>:</span> <span style=color:#f92672>darken</span><span style=color:#f92672>(</span><span style=color:#f92672>$</span><span style=color:#f92672>my-color</span><span style=color:#f92672>,</span><span style=color:#f92672>10</span><span style=color:#f92672>%</span><span style=color:#f92672>)</span><span style=color:#f92672>;</span>
-<span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>this</span> <span style=color:#f92672>will</span> <span style=color:#f92672>produce</span> <span style=color:#f92672>a</span> <span style=color:#f92672>hexadecimal</span> <span style=color:#f92672>code</span> <span style=color:#f92672>(</span><span style=color:#f92672>e</span>.<span style=color:#a6e22e>g</span><span style=color:#f92672>.</span> #132644<span style=color:#f92672>)</span> <span style=color:#f92672>of</span> <span style=color:#f92672>a</span> 
-<span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>color</span> <span style=color:#f92672>that</span> <span style=color:#f92672>is</span> <span style=color:#f92672>10</span><span style=color:#f92672>%</span> <span style=color:#f92672>lighter</span> <span style=color:#f92672>than</span> <span style=color:#f92672>red</span><span style=color:#f92672>.</span>
-<span style=color:#f92672>/</span><span style=color:#f92672>/</span> <span style=color:#f92672>syntax</span><span style=color:#f92672>:</span> 
-<span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#f92672>lighten</span><span style=color:#f92672>(</span><span style=color:#f92672>color</span><span style=color:#f92672>,</span><span style=color:#f92672>percent</span><span style=color:#f92672>)</span>
-<span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#f92672>darken</span><span style=color:#f92672>(</span><span style=color:#f92672>color</span><span style=color:#f92672>,</span><span style=color:#f92672>percent</span><span style=color:#f92672>)</span>
-</code></pre></div><h3 id=structure-files-and-folders>Structure, Files and Folders</h3><p>Before this Guideline to Sass ends I want to talk about structures, files and folders. Compass is able to watch a whole directory of files so you can go totally crazy by striping down your CSS file into a lot of small files. Your css folder could look like this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#e6db74>&#39;-css
-</span><span style=color:#e6db74>    &#39;</span>_includes
-        <span style=color:#e6db74>&#39;- _article.scss
-</span><span style=color:#e6db74>        &#39;</span>- _header.scss
-        <span style=color:#e6db74>&#39;- _menu.scss
-</span><span style=color:#e6db74>        &#39;</span>- _imprint.scss
-        <span style=color:#e6db74>&#39;- _front-page.scss
-</span><span style=color:#e6db74>        &#39;</span>- _sidebar.scss
-        <span style=color:#e6db74>&#39;- _plugins.scss
-</span><span style=color:#e6db74>        &#39;</span>- _mixins.scss
-    <span style=color:#e6db74>&#39;- style.scss
-</span><span style=color:#e6db74>    &#39;</span>- style.css
+</code></pre></div><p>There are more super useful build in function in Sass. Some of my favorite are <code>darken()</code> and <code>lighten()</code> for colors.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">$</span><span style="color:#f92672">my-color</span><span style="color:#f92672">:</span> <span style="color:#f92672">red</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">$</span><span style="color:#f92672">my-color--dark</span><span style="color:#f92672">:</span> <span style="color:#f92672">darken</span><span style="color:#f92672">(</span><span style="color:#f92672">$</span><span style="color:#f92672">my-color</span><span style="color:#f92672">,</span><span style="color:#f92672">10</span><span style="color:#f92672">%</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">this</span> <span style="color:#f92672">will</span> <span style="color:#f92672">produce</span> <span style="color:#f92672">a</span> <span style="color:#f92672">hexadecimal</span> <span style="color:#f92672">code</span> <span style="color:#f92672">(</span><span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span> #132644<span style="color:#f92672">)</span> <span style="color:#f92672">of</span> <span style="color:#f92672">a</span> 
+<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">color</span> <span style="color:#f92672">that</span> <span style="color:#f92672">is</span> <span style="color:#f92672">10</span><span style="color:#f92672">%</span> <span style="color:#f92672">lighter</span> <span style="color:#f92672">than</span> <span style="color:#f92672">red</span><span style="color:#f92672">.</span>
+<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">syntax</span><span style="color:#f92672">:</span> 
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">lighten</span><span style="color:#f92672">(</span><span style="color:#f92672">color</span><span style="color:#f92672">,</span><span style="color:#f92672">percent</span><span style="color:#f92672">)</span>
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">darken</span><span style="color:#f92672">(</span><span style="color:#f92672">color</span><span style="color:#f92672">,</span><span style="color:#f92672">percent</span><span style="color:#f92672">)</span>
+</code></pre></div><h3 id="structure-files-and-folders">Structure, Files and Folders</h3>
+<p>Before this Guideline to Sass ends I want to talk about structures, files and folders. Compass is able to watch a whole directory of files so you can go totally crazy by striping down your CSS file into a lot of small files. Your css folder could look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#39;-css
+</span><span style="color:#e6db74">    &#39;</span>_includes
+        <span style="color:#e6db74">&#39;- _article.scss
+</span><span style="color:#e6db74">        &#39;</span>- _header.scss
+        <span style="color:#e6db74">&#39;- _menu.scss
+</span><span style="color:#e6db74">        &#39;</span>- _imprint.scss
+        <span style="color:#e6db74">&#39;- _front-page.scss
+</span><span style="color:#e6db74">        &#39;</span>- _sidebar.scss
+        <span style="color:#e6db74">&#39;- _plugins.scss
+</span><span style="color:#e6db74">        &#39;</span>- _mixins.scss
+    <span style="color:#e6db74">&#39;- style.scss
+</span><span style="color:#e6db74">    &#39;</span>- style.css
 </code></pre></div><p>The amazing thing about Compass is: every file that starts with <code>_</code> is not compiled. So in the above folder tree there&rsquo;s still only <code>style.scss</code> that will be compiled - but all the others can be included. <strong>Wow but what about performance with all those files?</strong> you&rsquo;ll maybe ask yourself? The point is: There&rsquo;s still just one file, the style.<em>css</em> that will be included to the page later - so all the other files only exist locally on your computer.
-If you want to have an example what the <code>style.scss</code> would look like, here&rsquo;s the one I <a href=https://github.com/kevingimbel/kevingimbel.github.io/blob/v1/assets/css/style.scss>used for my blog</a>.</p><p>Sass and Compass are amazing, powerful tools and you, as a Front-End Developer, should be able to work with both. This small summary of the basic Sass features is just the top of the iceberg - there&rsquo;s a lot more to explore about <a href=http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html>Sass</a> and <a href=http://compass-style.org/reference/compass/>Compass</a>.</p><p>You should also check out <a href=http://codepen.io/thebabydino/>Ana Tudor</a> on CodePen, she&rsquo;s doing amazing stuff with Sass and Maths!</p><p>Further reading:</p><ul><li><a href=http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html>Sass Docs</a></li><li><a href=http://compass-style.org/reference/compass/>Compass Docs</a></li><li><a href=http://thesassway.com/>The Sass Way</a></li></ul></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with css" href=https://kevingimbel.de/tags/css/>css</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with sass" href=https://kevingimbel.de/tags/sass/>sass</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with tooling" href=https://kevingimbel.de/tags/tooling/>tooling</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-10-02-from-0-to-sass.md>Edit on
-GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>
+If you want to have an example what the <code>style.scss</code> would look like, here&rsquo;s the one I <a href="https://github.com/kevingimbel/kevingimbel.github.io/blob/v1/assets/css/style.scss">used for my blog</a>.</p>
+<p>Sass and Compass are amazing, powerful tools and you, as a Front-End Developer, should be able to work with both. This small summary of the basic Sass features is just the top of the iceberg - there&rsquo;s a lot more to explore about <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass</a> and <a href="http://compass-style.org/reference/compass/">Compass</a>.</p>
+<p>You should also check out <a href="http://codepen.io/thebabydino/">Ana Tudor</a> on CodePen, she&rsquo;s doing amazing stuff with Sass and Maths!</p>
+<p>Further reading:</p>
+<ul>
+<li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass Docs</a></li>
+<li><a href="http://compass-style.org/reference/compass/">Compass Docs</a></li>
+<li><a href="http://thesassway.com/">The Sass Way</a></li>
+</ul>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under frontend"
+                href="https://kevingimbel.de/categories/frontend/">frontend</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with css"
+                href="https://kevingimbel.de/tags/css/">css</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with sass"
+                href="https://kevingimbel.de/tags/sass/">sass</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with tooling"
+                href="https://kevingimbel.de/tags/tooling/">tooling</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-10-02-from-0-to-sass.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

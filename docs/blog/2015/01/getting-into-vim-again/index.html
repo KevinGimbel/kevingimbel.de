@@ -1,85 +1,269 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Getting into vim - again &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, Full-Stack Developer and DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="vim editor tools  blog coding tools"><link rel=stylesheet href=/style.css></head><body><header class=intro-text><span>Getting into vim - again</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><p>Written on <time datetime="2015-01-21 00:00:00 +0000 UTC">21. Jan 2015</time></p><p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Getting into vim - again &mdash; KevOps</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="vim editor tools  blog coding tools  ">
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    <header class="intro-text">
+        <span>
+        
+        
+        Getting into vim - again
+        
+        </span>
+    </header>
+
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/reading/">
+                    <span>Reading</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+
+<p>Written on <time datetime="2015-01-21 00:00:00 &#43;0000 UTC">21. Jan 2015</time>  </p>
+            <p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
 VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&rsquo;ve already written about
-<a href=/noobish-vim/>turning Sublime Text into VIM mode</a> and my <a href=/vim-first-impressions/>very first VIM impression</a>, but
-back then I just copy & pasted everything I found on the Internet into my <code>.vimrc</code>. Now with the new year I thought some
-new thing to learn could be fun and I got back into <em>really</em> working with VIM.</p><h2 id=config-first>Config first</h2><p>The past week I&rsquo;ve done all my daily work at <a href=http://synoa.de>Synoa</a> in VIM. My current <code>.vimrc</code> is divided into 4
-sections which I&rsquo;ll explain below.</p><h3 id=plugins>Plugins</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#75715e>&#34; Enable Pathogen to manage plugins</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>execute</span> <span style=color:#a6e22e>pathogen</span>#<span style=color:#a6e22e>infect</span>()<span style=color:#960050;background-color:#1e0010>
+<a href="/noobish-vim/">turning Sublime Text into VIM mode</a> and my <a href="/vim-first-impressions/">very first VIM impression</a>, but
+back then I just copy &amp; pasted everything I found on the Internet into my <code>.vimrc</code>. Now with the new year I thought some
+new thing to learn could be fun and I got back into <em>really</em> working with VIM.</p>
+<h2 id="config-first">Config first</h2>
+<p>The past week I&rsquo;ve done all my daily work at <a href="http://synoa.de">Synoa</a> in VIM. My current <code>.vimrc</code> is divided into 4
+sections which I&rsquo;ll explain below.</p>
+<h3 id="plugins">Plugins</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; Enable Pathogen to manage plugins</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">execute</span> <span style="color:#a6e22e">pathogen</span>#<span style="color:#a6e22e">infect</span>()<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>I&rsquo;ve replaced Vundle with Pathogen to load Plugins because to my (still noobish) eye it looks better and more easy to
 use. Pathogen auto-loads all Plugins that are placed inside <code>~/.vim/bundle/</code> - currently the only Plugin I&rsquo;m using is
 Emmet, because I&rsquo;d never ever use an editor again that&rsquo;s missing Emmet. The way Emmet works in VIM is a little bit weird
 because of the different modes and key mappings when you come from a Sublime Text 2/3 background. Basically, you need to
-hit <code>[CTRL]+[C]+[,]</code> after every Emmet snippet - beside that it works as expected.</p><h3 id=writin-style-and-syntax>Writin style and syntax</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#75715e>&#34; enable syntax highlighting</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>syntax</span> <span style=color:#a6e22e>on</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>
-</span><span style=color:#75715e>&#34;setting the terminal color to 256 and theme</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>&#34; to Bad Wolf, which is places in ~/.vim/colors</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>t_Co</span>=<span style=color:#ae81ff>256</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>colorscheme</span> <span style=color:#a6e22e>badwolf</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>showmode</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>showcmd</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>modeline</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>ruler</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>
-</span><span style=color:#75715e>&#34; line number</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>number</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>tabstop</span>=<span style=color:#ae81ff>2</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>shiftwidth</span>=<span style=color:#ae81ff>2</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>expandtab</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>backspace</span>=<span style=color:#a6e22e>indent</span>,<span style=color:#a6e22e>eol</span>,<span style=color:#a6e22e>start</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>smartindent</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>formatoptions</span>+=<span style=color:#a6e22e>t</span> <span style=color:#75715e>&#34; wikia said I need this</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>tw</span>=<span style=color:#ae81ff>120</span> <span style=color:#75715e>&#34; text width</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>colorcolumn</span>=<span style=color:#ae81ff>120</span> <span style=color:#75715e>&#34; adds a ruler to the right side of Vim</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>scrolloff</span>=<span style=color:#ae81ff>15</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>wmh</span>=<span style=color:#ae81ff>0</span><span style=color:#960050;background-color:#1e0010>
+hit <code>[CTRL]+[C]+[,]</code> after every Emmet snippet - beside that it works as expected.</p>
+<h3 id="writin-style-and-syntax">Writin style and syntax</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; enable syntax highlighting</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">syntax</span> <span style="color:#a6e22e">on</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34;setting the terminal color to 256 and theme</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; to Bad Wolf, which is places in ~/.vim/colors</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">t_Co</span>=<span style="color:#ae81ff">256</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">colorscheme</span> <span style="color:#a6e22e">badwolf</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">showmode</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">showcmd</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">modeline</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">ruler</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; line number</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">number</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">tabstop</span>=<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">shiftwidth</span>=<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">expandtab</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">backspace</span>=<span style="color:#a6e22e">indent</span>,<span style="color:#a6e22e">eol</span>,<span style="color:#a6e22e">start</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">smartindent</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">formatoptions</span>+=<span style="color:#a6e22e">t</span> <span style="color:#75715e">&#34; wikia said I need this</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">tw</span>=<span style="color:#ae81ff">120</span> <span style="color:#75715e">&#34; text width</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">colorcolumn</span>=<span style="color:#ae81ff">120</span> <span style="color:#75715e">&#34; adds a ruler to the right side of Vim</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">scrolloff</span>=<span style="color:#ae81ff">15</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">wmh</span>=<span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>I must admit that most of the VIM syntax and writing styles is still copy pasted from all over the Internet. In the
 first block I&rsquo;m setting the colorshemes and basic VIM UI (show mode, show CMD, have a mode line; use a ruler). In the
 second block there&rsquo;s settings for line numbers (always nice to have!) and tab width (2 spaces, always), smartindent (so
 new lines can be auto-indented), general text width (where to place the ruler), scroll off by X lines so I never scroll
 down to the end of the screen and the wmh (window min height) - this one is used so tabs in split view don&rsquo;t take up any
-space.</p><h3 id=key-mappings>Key mappings</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#75715e>&#34; The &lt;Enter&gt; command behind each mapping executes the</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>&#34; command directly. Otherwise the command would be written</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>&#34; to the VIM &#39;console&#39; thing</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>&#34; start spell checking when hitting F5</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>map</span> &lt;<span style=color:#a6e22e>F5</span>&gt; :<span style=color:#a6e22e>set</span> <span style=color:#a6e22e>spell</span> <span style=color:#a6e22e>spelllang</span>=<span style=color:#a6e22e>en_us</span> &lt;<span style=color:#a6e22e>Enter</span>&gt;<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>&#34; switch to previous tab</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>nmap</span> &lt;<span style=color:#a6e22e>F2</span>&gt; :<span style=color:#a6e22e>tabp</span> &lt;<span style=color:#a6e22e>Enter</span>&gt;<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>&#34; switch to next tab</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>nmap</span> &lt;<span style=color:#a6e22e>F3</span>&gt; :<span style=color:#a6e22e>tabn</span> &lt;<span style=color:#a6e22e>Enter</span>&gt;<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>
-</span><span style=color:#75715e>&#34; hold CTRL + k (up) or j (down)</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>map</span> &lt;<span style=color:#a6e22e>C</span>-<span style=color:#a6e22e>J</span>&gt; &lt;<span style=color:#a6e22e>C</span>-<span style=color:#a6e22e>W</span>&gt;<span style=color:#a6e22e>j</span>&lt;<span style=color:#a6e22e>C</span>-<span style=color:#a6e22e>W</span>&gt;<span style=color:#a6e22e>_</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>map</span> &lt;<span style=color:#a6e22e>C</span>-<span style=color:#a6e22e>K</span>&gt; &lt;<span style=color:#a6e22e>C</span>-<span style=color:#a6e22e>W</span>&gt;<span style=color:#a6e22e>k</span>&lt;<span style=color:#a6e22e>C</span>-<span style=color:#a6e22e>W</span>&gt;<span style=color:#a6e22e>_</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>&#34; remove information in which line the non-active file currently is</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e>
-</span><span style=color:#75715e>&#34; auto-expand path (opening files like :tabedit %%/)</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>cabbr</span> &lt;<span style=color:#a6e22e>expr</span>&gt; %% <span style=color:#a6e22e>expand</span>(<span style=color:#e6db74>&#39;%:p:h&#39;</span>)<span style=color:#960050;background-color:#1e0010>
+space.</p>
+<h3 id="key-mappings">Key mappings</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; The &lt;Enter&gt; command behind each mapping executes the</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; command directly. Otherwise the command would be written</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; to the VIM &#39;console&#39; thing</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; start spell checking when hitting F5</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">F5</span>&gt; :<span style="color:#a6e22e">set</span> <span style="color:#a6e22e">spell</span> <span style="color:#a6e22e">spelllang</span>=<span style="color:#a6e22e">en_us</span> &lt;<span style="color:#a6e22e">Enter</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; switch to previous tab</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">nmap</span> &lt;<span style="color:#a6e22e">F2</span>&gt; :<span style="color:#a6e22e">tabp</span> &lt;<span style="color:#a6e22e">Enter</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; switch to next tab</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">nmap</span> &lt;<span style="color:#a6e22e">F3</span>&gt; :<span style="color:#a6e22e">tabn</span> &lt;<span style="color:#a6e22e">Enter</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; hold CTRL + k (up) or j (down)</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">J</span>&gt; &lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">W</span>&gt;<span style="color:#a6e22e">j</span>&lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">W</span>&gt;<span style="color:#a6e22e">_</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">K</span>&gt; &lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">W</span>&gt;<span style="color:#a6e22e">k</span>&lt;<span style="color:#a6e22e">C</span>-<span style="color:#a6e22e">W</span>&gt;<span style="color:#a6e22e">_</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; remove information in which line the non-active file currently is</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; auto-expand path (opening files like :tabedit %%/)</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">cabbr</span> &lt;<span style="color:#a6e22e">expr</span>&gt; %% <span style="color:#a6e22e">expand</span>(<span style="color:#e6db74">&#39;%:p:h&#39;</span>)<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>Mostly my key mappings have stayed the same, F5 is used for spell checking (which comes very handy!), F2 and F3 are used
-to navigate between open tabs. The important part here is the <code>&lt;Enter></code> behind each command. This way the command will
-be executed immediately, otherwise it is written into the little command line at the bottom of VIM.</p><p>New here is the mapping to switch between split view windows. When opening a new file with <code>:sp</code> I can now navigate
-using <code>[CTRL]+[C]</code> and <code>j</code> to go &ldquo;down&rdquo; or <code>k</code> to go up - this is really handy.</p><p>The last line has been the break-through for me in beeing productive with VIM. When working with Magento and CSS, I
+to navigate between open tabs. The important part here is the <code>&lt;Enter&gt;</code> behind each command. This way the command will
+be executed immediately, otherwise it is written into the little command line at the bottom of VIM.</p>
+<p>New here is the mapping to switch between split view windows. When opening a new file with <code>:sp</code> I can now navigate
+using <code>[CTRL]+[C]</code> and <code>j</code> to go &ldquo;down&rdquo; or <code>k</code> to go up - this is really handy.</p>
+<p>The last line has been the break-through for me in beeing productive with VIM. When working with Magento and CSS, I
 often need to open many files in the same directory, yet I tend to start inside the root. Normally I&rsquo;d have to write all
 the path to where I am, like <code>:tabedit skin/frontend/namespace/default/scss/</code> when I&rsquo;m inside a Magento skin folder.
 With this little helper I can type <code>:tabedit %%/</code> and once I write the <code>/</code> the path will expand to the current
-directory.</p><h3 id=no-backups-no-swap>No backups, no swap!</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#75715e>&#34; No backups and no swap file</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>nobackup</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#a6e22e>set</span> <span style=color:#a6e22e>noswapfile</span><span style=color:#960050;background-color:#1e0010>
+directory.</p>
+<h3 id="no-backups-no-swap">No backups, no swap!</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34; No backups and no swap file</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nobackup</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">noswapfile</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>The last part is still the same. Since I&rsquo;m using git and branches for everything I don&rsquo;t need any kind of backup or swap
-file since I could always revert anything.</p><h2 id=working-in-vim>Working in VIM</h2><p>With these configurations I started to work in VIM. I tried changing and adjusting the themes a bit and in the end found my
+file since I could always revert anything.</p>
+<h2 id="working-in-vim">Working in VIM</h2>
+<p>With these configurations I started to work in VIM. I tried changing and adjusting the themes a bit and in the end found my
 self with a dark theme (bad wolf; a Doctor Who reference!) after using Tomorrow Night (light) for almost half a year. So
 far after seven days the only thing I&rsquo;m really missing from time to time is Sublime Texts Multi Cursor Feature and
 &ldquo;Search in Folder&rdquo; to find stuff inside the whole project. There are plugins for the later feature and multi cursor
 editing can be archive using weird, cryptic command combinations but I&rsquo;m not familiar yet with either of these. So far I
 enjoy the destraction free enviorment I&rsquo;m working in and only start Sublime Text when I can&rsquo;t find a particular
-template.</p><p>Since I&rsquo;ve used Sublime Text in Vintage Mode for almost 6 months I&rsquo;m feeling comfortable enough with the basic
-operations of using <code>y</code>ank, <code>d</code>elete or <code>p</code>ut to move around lines and edit code, <code>dit</code> (delete in tags) or <code>ei"</code> (edit
-iin &ldquo;) are things I don&rsquo;t use that often because they take too much time when they don&rsquo;t work right from the start.</p><p>Other then some hardcore-users I&rsquo;m also using my mouse wheel and the arrow keys to navigate inside VIM. I feel a lot
+template.</p>
+<p>Since I&rsquo;ve used Sublime Text in Vintage Mode for almost 6 months I&rsquo;m feeling comfortable enough with the basic
+operations of using <code>y</code>ank, <code>d</code>elete or <code>p</code>ut to move around lines and edit code, <code>dit</code> (delete in tags) or <code>ei&quot;</code> (edit
+iin &ldquo;) are things I don&rsquo;t use that often because they take too much time when they don&rsquo;t work right from the start.</p>
+<p>Other then some hardcore-users I&rsquo;m also using my mouse wheel and the arrow keys to navigate inside VIM. I feel a lot
 more comfortable doing it this way than I&rsquo;d feel using only <code>h, j, k, l</code>. After all I liked to get into VIM and I&rsquo;ll see
 how it can benefit to my workflow or if it&rsquo;ll stay in my way at the end - like all other editors I&rsquo;ve tried - and I&rsquo;ll
-return to my beloved Sublime Text 3.</p><p>Keep up with my advimtures (ha punny!) by subscribing to the <a href=/atom.xml>Atom Feed</a> or by following me on
-<a href=https://twitter.com/_kevinatari>Twitter</a>:</p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tools" href=https://kevingimbel.de/categories/tools/>tools</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with vim" href=https://kevingimbel.de/tags/vim/>vim</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with editor" href=https://kevingimbel.de/tags/editor/>editor</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with tools" href=https://kevingimbel.de/tags/tools/>tools</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/img/self-2019-small.jpg alt class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-01-21-getting-into-vim-again.md>Edit on
-GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>
+return to my beloved Sublime Text 3.</p>
+<p>Keep up with my advimtures (ha punny!) by subscribing to the <a href="/atom.xml">Atom Feed</a> or by following me on
+<a href="https://twitter.com/_kevinatari">Twitter</a>:</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tools"
+                href="https://kevingimbel.de/categories/tools/">tools</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with vim"
+                href="https://kevingimbel.de/tags/vim/">vim</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with editor"
+                href="https://kevingimbel.de/tags/editor/">editor</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with tools"
+                href="https://kevingimbel.de/tags/tools/">tools</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This wesbite contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-01-21-getting-into-vim-again.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

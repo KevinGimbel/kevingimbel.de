@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>software on KevOps</title><link>https://kevingimbel.de/tags/software/</link><description>Recent content in software on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 25 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/software/index.xml" rel="self" type="application/rss+xml"/><item><title>Brackets vs. Sublime Text</title><link>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</link><pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</guid><description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&amp;rsquo;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&amp;rsquo;ve been using for the last two years or so.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on KevOps</title>
+    <link>https://kevingimbel.de/tags/software/</link>
+    <description>Recent content in software on KevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kevingimbel.de/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Brackets vs. Sublime Text</title>
+      <link>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</link>
+      <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</guid>
+      <description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&amp;rsquo;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&amp;rsquo;ve been using for the last two years or so.</description>
+    </item>
+    
+  </channel>
+</rss>

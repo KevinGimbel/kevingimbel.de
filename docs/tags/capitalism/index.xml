@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>capitalism on KevOps</title><link>https://kevingimbel.de/tags/capitalism/</link><description>Recent content in capitalism on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/capitalism/index.xml" rel="self" type="application/rss+xml"/><item><title>No Tracking</title><link>https://kevingimbel.de/blog/2020/01/no-tracking/</link><pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/no-tracking/</guid><description>I don&amp;rsquo;t track you. That&amp;rsquo;s a promise and a statement, this website works without Tracking.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>capitalism on KevOps</title>
+    <link>https://kevingimbel.de/tags/capitalism/</link>
+    <description>Recent content in capitalism on KevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kevingimbel.de/tags/capitalism/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>No Tracking</title>
+      <link>https://kevingimbel.de/blog/2020/01/no-tracking/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/no-tracking/</guid>
+      <description>I don&amp;rsquo;t track you. That&amp;rsquo;s a promise and a statement, this website works without Tracking.
 Inspired by Laura Kalbag, who was inspired by the footer text on Karolina Szczur’s website.
 Why The reason I do not use tracking is an idealistic one. I no longer want to collect data for Google, and I do not want to support trackable users across websites.
-Data sharing on the web is absolutely crazy, as this example of USAToday shows - GDPR is saving us Europeans again tho.</description></item></channel></rss>
+Data sharing on the web is absolutely crazy, as this example of USAToday shows - GDPR is saving us Europeans again tho.</description>
+    </item>
+    
+  </channel>
+</rss>

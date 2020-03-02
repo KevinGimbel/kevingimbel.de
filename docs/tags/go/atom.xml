@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">go on KevOps</title><link href="https://kevingimbel.de/tags/go/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/go/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/go/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/go/</id><entry><title type="html">Farewell Jekyll, Hello Hugo</title><link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow"/><id>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</id><published>2016-11-16T19:04:42+01:00</published><updated>2016-11-16T19:04:42+01:00</updated><content type="html"><![CDATA[<p>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.</p>
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[go on KevOps]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/tags/go/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/go/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/go/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-03-02T11:38:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/tags/go/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Farewell Jekyll, Hello Hugo]]></title>
+            <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
+            
+                <id>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</id>
+            
+            
+            <published>2016-11-16T19:04:42+01:00</published>
+            <updated>2016-11-16T19:04:42+01:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.</p>
 <p>This very site you read right now is build with <a href="http://gohugo.io">Hugo</a>, a static site generator build by <a href="http://spf13.com/">Steve Francia</a>, <a href="https://github.com/bep">Bjørn Erik Pedersen</a> and a lot of <a href="https://github.com/spf13/hugo/graphs/contributors">contributors</a>. Hugo is written in <a href="https://golang.org/">Go</a> a programming language created at Google I have <a href="https://github.com/kevingimbel?language=go&amp;tab=repositories">been interested in lately</a>.
 For me personally Go provides a lot of new challenges and things to learn. I worked with Front-End technologies like HTML and CSS as well as scripting languages like PHP and JavaScript for the better part of the past 6-7 years; &ldquo;professionally&rdquo; and officially since 2014. Go is entirely different to what I am used to and I like it. I enjoy playing around with it where in the past year or so I lost a big part of my passion for programming in the languages I already know. But why move away from Jekyll? And why choose Go?</p>
 <h3 id="ruby">Ruby</h3>
@@ -15,4 +45,38 @@ $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</s
 <p>As of today it&rsquo;s not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
 <p>Some things are still not working as I would like but I&rsquo;ll eventually get to them. After all, a personal website is always a work in progress.</p>
 <p><em>Farewell Jekyll, it&rsquo;s been a pleasure for the past three years.</em></p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo"/><category scheme="https://kevingimbel.de/tags/go" term="go" label="go"/><category scheme="https://kevingimbel.de/tags/development" term="development" label="development"/><category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal"/></entry></feed>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/go" term="go" label="go" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

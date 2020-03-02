@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">tools on KevOps</title><link href="https://kevingimbel.de/tags/tools/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/tools/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/tools/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/tools/</id><entry><title type="html">Getting into Performance Measurement</title><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id><published>2015-03-10T00:00:00+00:00</published><updated>2015-03-10T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[tools on KevOps]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/tags/tools/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/tools/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/tools/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-03-02T11:38:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/tags/tools/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
+            <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
+                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
+                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
+                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+            
+                <id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id>
+            
+            
+            <published>2015-03-10T00:00:00+00:00</published>
+            <updated>2015-03-10T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
 We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside
 Magento projects, it&rsquo;s way easier to keep an overview and with a good overview
 of data flow and available data it&rsquo;s easier to measure and find performance
@@ -194,7 +228,58 @@ everyone&rsquo;s workflow. While developers could use a grunt/gulp/cli task the 
 who actually write content need an easy way to handle the optimization of
 uploaded files. The last resort of more optimization is the server respond time
 on which we don&rsquo;t have any influence.</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry><entry><title type="html">Getting into vim - again</title><link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM"/><link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text"/><id>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</id><published>2015-01-21T00:00:00+00:00</published><updated>2015-01-21T00:00:00+00:00</updated><content type="html"><![CDATA[<p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Getting into vim - again]]></title>
+            <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
+                <link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
+                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
+                <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
+            
+                <id>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</id>
+            
+            
+            <published>2015-01-21T00:00:00+00:00</published>
+            <updated>2015-01-21T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
 VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&rsquo;ve already written about
 <a href="/noobish-vim/">turning Sublime Text into VIM mode</a> and my <a href="/vim-first-impressions/">very first VIM impression</a>, but
 back then I just copy &amp; pasted everything I found on the Internet into my <code>.vimrc</code>. Now with the new year I thought some
@@ -292,7 +377,53 @@ how it can benefit to my workflow or if it&rsquo;ll stay in my way at the end - 
 return to my beloved Sublime Text 3.</p>
 <p>Keep up with my advimtures (ha punny!) by subscribing to the <a href="/atom.xml">Atom Feed</a> or by following me on
 <a href="https://twitter.com/_kevinatari">Twitter</a>:</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim"/><category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/></entry><entry><title type="html">Useful Web Developer Tools</title><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><id>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</id><published>2014-06-13T00:00:00+00:00</published><updated>2014-06-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload,
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Useful Web Developer Tools]]></title>
+            <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+            
+                <id>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</id>
+            
+            
+            <published>2014-06-13T00:00:00+00:00</published>
+            <updated>2014-06-13T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload,
 Pre-Processors, shortcuts - all that stuff. It&rsquo;s always great to save some time, especially for repeating tasks or
 challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.</p>
 <h2 id="browser-based">Browser-based</h2>
@@ -361,4 +492,36 @@ repo</a> and given the fact they&rsquo;re standard non-fancy they
 should work on almost all systems. Just edit your <code>.bashrc</code> or <code>.bash_profile</code> and add the PS1 line to it to have a
 colored, good looking bash prompt.</p>
 <p>So, what tools am I missing? Anything that&rsquo;s a absolute must-have? <a href="https://twitter.com/_kevinatari">Hit me up</a>!</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/></entry></feed>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

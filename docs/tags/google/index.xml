@@ -1,2 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>google on KevOps</title><link>https://kevingimbel.de/tags/google/</link><description>Recent content in google on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/google/index.xml" rel="self" type="application/rss+xml"/><item><title>Saint Elizabeth's Church Wiesbaden</title><link>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</guid><description>One of the sightseeing spots in Wiesbaden is St. Elizabeths Church, a orthodox church located on top the Neroberg.
-I&amp;rsquo;m looking forward to taking some better photos of it in the future.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google on KevOps</title>
+    <link>https://kevingimbel.de/tags/google/</link>
+    <description>Recent content in google on KevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kevingimbel.de/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Saint Elizabeth&#39;s Church Wiesbaden</title>
+      <link>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</guid>
+      <description>One of the sightseeing spots in Wiesbaden is St. Elizabeths Church, a orthodox church located on top the Neroberg.
+I&amp;rsquo;m looking forward to taking some better photos of it in the future.</description>
+    </item>
+    
+  </channel>
+</rss>

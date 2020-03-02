@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html">security on KevOps</title><link href="https://kevingimbel.de/tags/security/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/security/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/security/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-02-24T11:12:03+01:00</updated><id>https://kevingimbel.de/tags/security/</id><entry><title type="html">No Tracking</title><link href="https://kevingimbel.de/blog/2020/01/no-tracking/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="related" type="text/html" title="Two Factor Auth, Password managers, and cloud sync"/><link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2"/><id>https://kevingimbel.de/blog/2020/01/no-tracking/</id><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><content type="html"><![CDATA[<p><strong>I don&rsquo;t track you.</strong> That&rsquo;s a promise and a statement, this website works without Tracking.</p>
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[security on KevOps]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/tags/security/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/tags/security/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/tags/security/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+    <updated>2020-03-02T11:38:09+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/tags/security/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[No Tracking]]></title>
+            <link href="https://kevingimbel.de/blog/2020/01/no-tracking/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="related" type="text/html" title="Two Factor Auth, Password managers, and cloud sync" />
+                <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2" />
+            
+                <id>https://kevingimbel.de/blog/2020/01/no-tracking/</id>
+            
+            
+            <published>2020-01-29T00:00:00+00:00</published>
+            <updated>2020-01-29T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p><strong>I don&rsquo;t track you.</strong> That&rsquo;s a promise and a statement, this website works without Tracking.</p>
 <p>Inspired by <a href="https://laurakalbag.com/i-dont-track-you/">Laura Kalbag</a>, who was inspired by <a href="https://thefox.is/">the footer text on Karolina Szczur’s website</a>.</p>
 <h2 id="why">Why</h2>
 <p>The reason I do not use tracking is an idealistic one. I no longer want to collect data for Google, and I do not want to support trackable users across websites.</p>
@@ -25,7 +56,55 @@
 <h3 id="remove-analytics-from-your-website">Remove Analytics from your website</h3>
 <p>If you do not need it, remove Analytics from your website. If you need it, use a privacy-focused alternative to Google Analytics such as <a href="https://matomo.org/">Matomo</a> (previously known as Piwik).</p>
 <p>By not using tracking software - and not relying on hundreds (or tens) of external libraries and tools you can make the web better for everyone.</p>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/tags/security" term="security" label="security"/><category scheme="https://kevingimbel.de/tags/surveillance" term="surveillance" label="surveillance"/><category scheme="https://kevingimbel.de/tags/capitalism" term="capitalism" label="capitalism"/></entry><entry><title type="html">Two Factor Auth, Password managers, and cloud sync</title><link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="related" type="text/html" title="Using the Terminal: The Prompt"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2"/><id>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</id><published>2020-01-25T00:00:00+00:00</published><updated>2020-01-25T00:00:00+00:00</updated><content type="html"><![CDATA[<p>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when <abbr title="Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token">2FA</abbr>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/surveillance" term="surveillance" label="surveillance" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/capitalism" term="capitalism" label="capitalism" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Two Factor Auth, Password managers, and cloud sync]]></title>
+            <link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="related" type="text/html" title="Using the Terminal: The Prompt" />
+                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+                <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
+                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
+                <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2" />
+            
+                <id>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</id>
+            
+            
+            <published>2020-01-25T00:00:00+00:00</published>
+            <updated>2020-01-25T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when <abbr title="Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token">2FA</abbr>
  became a more common thing I was enabling that on all services I could. 2FA (Two Factor Authentication) is a method of authentication where two parts are needed: A Password and a generated token, this token can be hardware based (e.g. a tiny usb key that generates a token) or they can be time-based which is the most common usage I&rsquo;d say. I used Google Authenticator for this for years and all was good - until I had to factory-reset my phone and lost my Google Authenticator app with all its 2FA settings.</p>
 <h2 id="why-i-lost-all-my-2fa-tokens-and-settings">Why I lost all my 2FA tokens and settings</h2>
 <p>I falsely assumed that <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google Authenticator</a> would somehow save the Time-based Tokens with my Google Account but that is not the case - they only exist on the device itself. Looking back that is probably the right choice, but I somehow missed it and only realized after receiving my replacement Pixel phone and setting it up again.</p>
@@ -46,7 +125,64 @@
 <p>Anyhow, Nextcloud is the sync and &ldquo;backup&rdquo; solution in my stack. It syncs the database files between my computer and my phone so that I can always access all passwords whenever I need them. On my computer and phone the databases are protected by passwords, all communication to Nextcloud is done over a encrypted connection (HTTPS), too.</p>
 <p>I&rsquo;ve been using this solution for a bit over two years now and I am very happy with it. Before switching to Nextcloud I used Google Drive to sync my KeyPassX database files, but I am growing increasingly distrustful of Google, so I am trying to pull as much as I can away from its services. Nextcloud works just as good if not better than the Google Drive or Dropbox sync solutions.</p>
 <p>Thank you for coming to my TED Talk, see ya.</p>
-]]></content><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/><category scheme="https://kevingimbel.de/tags/password" term="password" label="password"/><category scheme="https://kevingimbel.de/tags/management" term="management" label="management"/><category scheme="https://kevingimbel.de/tags/sync" term="sync" label="sync"/><category scheme="https://kevingimbel.de/tags/cloud_storage" term="cloud_storage" label="cloud_storage"/><category scheme="https://kevingimbel.de/tags/2fa" term="2fa" label="2FA"/><category scheme="https://kevingimbel.de/tags/security" term="security" label="security"/><category scheme="https://kevingimbel.de/tags/android" term="android" label="android"/></entry><entry><title type="html">Auto SSL With apache2</title><link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Using Archetypes in Hugo"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><id>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</id><published>2020-01-08T00:00:00+00:00</published><updated>2020-01-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/password" term="password" label="password" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/management" term="management" label="management" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/sync" term="sync" label="sync" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/cloud_storage" term="cloud_storage" label="cloud_storage" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/2fa" term="2fa" label="2FA" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/android" term="android" label="android" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Auto SSL With apache2]]></title>
+            <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Using Archetypes in Hugo" />
+                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+            
+                <id>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</id>
+            
+            
+            <published>2020-01-08T00:00:00+00:00</published>
+            <updated>2020-01-13T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
 <p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p>
 <h2 id="installing-a-new-apache-version">Installing a new apache version</h2>
 <p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we&rsquo;ll add this.</p>
@@ -94,4 +230,46 @@ MDomain test.kevingimbel.de
 <li>Replaced double &ldquo;supports&rdquo; in first sentence with &ldquo;allows&rdquo; and &ldquo;setup&rdquo; with &ldquo;management&rdquo;</li>
 <li>Replaced &ldquo;setups&rdquo; with &ldquo;setup and renewal&rdquo; in sub headline</li>
 </ul>
-]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/apache" term="apache" label="apache"/><category scheme="https://kevingimbel.de/tags/server" term="server" label="server"/><category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation"/><category scheme="https://kevingimbel.de/tags/security" term="security" label="security"/><category scheme="https://kevingimbel.de/tags/ssl" term="ssl" label="ssl"/><category scheme="https://kevingimbel.de/tags/ubuntu" term="ubuntu" label="ubuntu"/><category scheme="https://kevingimbel.de/tags/linux" term="linux" label="linux"/></entry></feed>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/apache" term="apache" label="apache" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/server" term="server" label="server" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/ssl" term="ssl" label="ssl" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/ubuntu" term="ubuntu" label="ubuntu" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/linux" term="linux" label="linux" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
