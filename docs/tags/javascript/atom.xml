@@ -7,12 +7,137 @@
             <link href="https://kevingimbel.de/tags/javascript/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/javascript/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/javascript/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-03-04T15:41:10+01:00</updated>
+    <updated>2020-03-24T08:05:45+01:00</updated>
     
     
     
     
         <id>https://kevingimbel.de/tags/javascript/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Random Theme]]></title>
+            <link href="https://kevingimbel.de/blog/2020/03/random-theme/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
+                <link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="related" type="text/html" title="Safe calc usage in CSS" />
+                <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
+                <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
+                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
+            
+                <id>https://kevingimbel.de/blog/2020/03/random-theme/</id>
+            
+            
+            <published>2020-03-24T00:00:00+00:00</published>
+            <updated>2020-03-24T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>I&rsquo;ve decided to add some randomness to this website! You may noticed that the two main colors change on every page reload - there&rsquo;s a fixed number of &ldquo;themes&rdquo; available and they change at random.</p>
+<p>To accomplish this I used the following JavaScript.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(<span style="color:#66d9ef">function</span>(window, document, <span style="color:#66d9ef">undefined</span>) {
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">theme</span>);
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+    <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">theme</span>).<span style="color:#a6e22e">colors</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">--color-main:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorMain</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;--color-secondary:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorSecondary</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">// [dark-color, light-color]
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Color combinations taken from https://botsin.space/@accessibleColors
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">themes</span> <span style="color:#f92672">=</span> [
+        [<span style="color:#e6db74">&#34;#123D3C&#34;</span>, <span style="color:#e6db74">&#34;#90F072&#34;</span>],
+        [<span style="color:#e6db74">&#34;#403D58&#34;</span>, <span style="color:#e6db74">&#34;#dea584&#34;</span>],
+        [<span style="color:#e6db74">&#34;#400E3B&#34;</span>, <span style="color:#e6db74">&#34;#DCC78A&#34;</span>],
+        [<span style="color:#e6db74">&#34;#17098D&#34;</span>, <span style="color:#e6db74">&#34;#EADD1C&#34;</span>],
+        [<span style="color:#e6db74">&#34;#233B07&#34;</span>, <span style="color:#e6db74">&#34;#FFDD6D&#34;</span>]
+    ]
+    <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">themes</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">themes</span>.<span style="color:#a6e22e">length</span>)];
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">--color-main:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorMain</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;--color-secondary:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorSecondary</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+}
+document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">schema_btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#btn_schema&#34;</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+        <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Use random color theme&#34;</span>;
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Keep current color theme&#34;</span>;
+    }
+    <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;block&#34;</span>;
+    <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+            window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">removeItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+            window.<span style="color:#a6e22e">reload</span>();
+        } <span style="color:#66d9ef">else</span> {
+            window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({<span style="color:#a6e22e">colors</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>]}));
+        }
+    });
+});
+}(window, document));
+</code></pre></div><p>Quite a lot isn&rsquo;t it? Let&rsquo;s break that down.</p>
+<h3 id="random-array-elements">Random array elements</h3>
+<p>The theme logic is all in this JavaScript snippet. By using nested array and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructing assignment</a> we can get a theme consisting of a primary and secondary color. These color combinations are hand-picked from the <a href="https://botsin.space/@accessibleColors">@accessibleColors</a> bot.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">themes</span> <span style="color:#f92672">=</span> [
+    [<span style="color:#e6db74">&#34;#123D3C&#34;</span>, <span style="color:#e6db74">&#34;#90F072&#34;</span>],
+    [<span style="color:#e6db74">&#34;#403D58&#34;</span>, <span style="color:#e6db74">&#34;#dea584&#34;</span>],
+    [<span style="color:#e6db74">&#34;#400E3B&#34;</span>, <span style="color:#e6db74">&#34;#DCC78A&#34;</span>],
+    [<span style="color:#e6db74">&#34;#17098D&#34;</span>, <span style="color:#e6db74">&#34;#EADD1C&#34;</span>],
+    [<span style="color:#e6db74">&#34;#233B07&#34;</span>, <span style="color:#e6db74">&#34;#FFDD6D&#34;</span>]
+]
+<span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">themes</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">themes</span>.<span style="color:#a6e22e">length</span>)];
+</code></pre></div><p>Having the values I then store them in a <code>localStorage</code> entry if the user clicks on &ldquo;Keep this color theme&rdquo;. To do this, we first need to get the button element and the local storage item like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">schema_btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#btn_schema&#34;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+</code></pre></div><p>Then we can decide what text should be inside the button&hellip;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+    <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Use random color theme&#34;</span>;
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Keep current color theme&#34;</span>;
+}
+</code></pre></div><p>&hellip; and set the button to <code>display: block</code> - by default it is hidden with <code>display: none</code> so that people without JavaScript enabled don&rsquo;t see a useless button (they also don&rsquo;t see random themes!).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;block&#34;</span>;
+</code></pre></div><p>And finally, we assign a <code>click</code> event listener and check if the <code>theme</code> is set, which means the button click resets the current theme and reloads the site, or if the theme is not set and the current schema should be safed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+        window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">removeItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+        window.<span style="color:#a6e22e">reload</span>();
+    } <span style="color:#66d9ef">else</span> {
+        window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({<span style="color:#a6e22e">colors</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>]}));
+    }
+});
+</code></pre></div><p>If you don&rsquo;t like the current colors just refresh until you find the one you like. 😁</p>
+<p>If this is a horrible addition to my website and you want a permanent off button - please <a href="https://bullgit.party/@kevin" title="Contact me on Mastodon">let me know</a>!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/web" term="web" label="web" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
+                            
+                        
+                    
+                
+            
+        </entry>
     
         
         <entry>

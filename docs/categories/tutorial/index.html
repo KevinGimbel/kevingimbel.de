@@ -14,7 +14,48 @@
     </head>
 
 <body>
+    <script type="text/javascript">
+    (function(window, document, undefined) {
+        let theme = window.localStorage.getItem("kgde_theme");
+        console.log(theme);
+        if (theme) {
+            var [colorMain, colorSecondary] = JSON.parse(theme).colors;
+            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+        } else {
+            
+            
+            let themes = [
+                ["#123D3C", "#90F072"],
+                ["#403D58", "#dea584"],
+                ["#400E3B", "#DCC78A"],
+                ["#17098D", "#EADD1C"],
+                ["#233B07", "#FFDD6D"]
+            ]
+            var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
+            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            let schema_btn = document.querySelector("#btn_schema");
+            let theme = window.localStorage.getItem("kgde_theme");
+            if (theme) {
+                schema_btn.textContent = "Use random color theme";
+            } else {
+                schema_btn.textContent = "Keep current color theme";
+            }
+            schema_btn.style.display = "block";
+            schema_btn.addEventListener('click', function(e) {
+                if (theme) {
+                    window.localStorage.removeItem("kgde_theme");
+                    window.reload();
+                } else {
+                    window.localStorage.setItem("kgde_theme", JSON.stringify({colors: [colorMain, colorSecondary]}));
+                }
+            });
+        });
+    }(window, document));
+    </script>
     <header class="intro-text">
+        <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
         <span>
         
             <p>Content in category "tutorial"</p>
@@ -57,6 +98,23 @@
 
 <main id="main" class="main">
     
+
+    
+    
+
+<article class="article article--in-list blog" aria-labelledby="article-heading-588d3b05594d2cf01058610256878087" aria-describedby="article-summary-588d3b05594d2cf01058610256878087">
+    <h3><a id="article-heading-588d3b05594d2cf01058610256878087" href="https://kevingimbel.de/blog/2020/03/random-theme/">Random Theme</a></h3>
+    
+    <small>Published on <time datetime="2020-03-24 00:00:00 &#43;0000 UTC">24. Mar 2020</time></small>
+    
+    
+
+    <p id="article-summary-588d3b05594d2cf01058610256878087">I&rsquo;ve decided to add some randomness to this website! You may noticed that the two main colors change on every page reload - there&rsquo;s a fixed number of &ldquo;themes&rdquo; available and they change at random.
+To accomplish this I used the following JavaScript.
+(function(window, document, undefined) { let theme = window.localStorage.getItem(&#34;kgde_theme&#34;); console.log(theme); if (theme) { var [colorMain, colorSecondary] = JSON.parse(theme).colors; document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`; } else { // [dark-color, light-color]  // Color combinations taken from https://botsin.</p>
+    <a href="https://kevingimbel.de/blog/2020/03/random-theme/" title="Continue reading about Random Theme">View full post</a>
+</article>
+
 
     
     
@@ -294,7 +352,7 @@ So before I start I&rsquo;d like to say that I consider myself a JavaScript begi
             </p>
         </div>
         <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/%7b0xc000729a70%7d">Edit on
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/%7b0xc0007b7890%7d">Edit on
                         GitHub</a></small></p>
             <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
             </p>

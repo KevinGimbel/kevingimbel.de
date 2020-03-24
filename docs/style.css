@@ -350,8 +350,8 @@ pre {
 }
 
 .support {
-    background: #C14566;
-    color: #fff;
+    background: var(--color-secondary);
+    color: var(--color-main);
     flex-direction: column;
 }
 

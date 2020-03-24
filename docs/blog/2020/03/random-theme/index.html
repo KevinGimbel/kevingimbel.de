@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Theme &mdash; KevOps</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="web css javascript  blog coding frontend tutorial  ">
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    <script type="text/javascript">
+    (function(window, document, undefined) {
+        let theme = window.localStorage.getItem("kgde_theme");
+        console.log(theme);
+        if (theme) {
+            var [colorMain, colorSecondary] = JSON.parse(theme).colors;
+            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+        } else {
+            
+            
+            let themes = [
+                ["#123D3C", "#90F072"],
+                ["#403D58", "#dea584"],
+                ["#400E3B", "#DCC78A"],
+                ["#17098D", "#EADD1C"],
+                ["#233B07", "#FFDD6D"]
+            ]
+            var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
+            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            let schema_btn = document.querySelector("#btn_schema");
+            let theme = window.localStorage.getItem("kgde_theme");
+            if (theme) {
+                schema_btn.textContent = "Use random color theme";
+            } else {
+                schema_btn.textContent = "Keep current color theme";
+            }
+            schema_btn.style.display = "block";
+            schema_btn.addEventListener('click', function(e) {
+                if (theme) {
+                    window.localStorage.removeItem("kgde_theme");
+                    window.reload();
+                } else {
+                    window.localStorage.setItem("kgde_theme", JSON.stringify({colors: [colorMain, colorSecondary]}));
+                }
+            });
+        });
+    }(window, document));
+    </script>
+    <header class="intro-text">
+        <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
+        <span>
+        
+        
+        Random Theme
+        
+        </span>
+    </header>
+
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/reading/">
+                    <span>Reading</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+
+
+<p>Written on <time datetime="2020-03-24 00:00:00 &#43;0000 UTC">24. Mar 2020</time>  </p>
+            <p>I&rsquo;ve decided to add some randomness to this website! You may noticed that the two main colors change on every page reload - there&rsquo;s a fixed number of &ldquo;themes&rdquo; available and they change at random.</p>
+<p>To accomplish this I used the following JavaScript.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(<span style="color:#66d9ef">function</span>(window, document, <span style="color:#66d9ef">undefined</span>) {
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">theme</span>);
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+    <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">theme</span>).<span style="color:#a6e22e">colors</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">--color-main:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorMain</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;--color-secondary:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorSecondary</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">// [dark-color, light-color]
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Color combinations taken from https://botsin.space/@accessibleColors
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">themes</span> <span style="color:#f92672">=</span> [
+        [<span style="color:#e6db74">&#34;#123D3C&#34;</span>, <span style="color:#e6db74">&#34;#90F072&#34;</span>],
+        [<span style="color:#e6db74">&#34;#403D58&#34;</span>, <span style="color:#e6db74">&#34;#dea584&#34;</span>],
+        [<span style="color:#e6db74">&#34;#400E3B&#34;</span>, <span style="color:#e6db74">&#34;#DCC78A&#34;</span>],
+        [<span style="color:#e6db74">&#34;#17098D&#34;</span>, <span style="color:#e6db74">&#34;#EADD1C&#34;</span>],
+        [<span style="color:#e6db74">&#34;#233B07&#34;</span>, <span style="color:#e6db74">&#34;#FFDD6D&#34;</span>]
+    ]
+    <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">themes</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">themes</span>.<span style="color:#a6e22e">length</span>)];
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">--color-main:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorMain</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;--color-secondary:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorSecondary</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+}
+document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">schema_btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#btn_schema&#34;</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+        <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Use random color theme&#34;</span>;
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Keep current color theme&#34;</span>;
+    }
+    <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;block&#34;</span>;
+    <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+            window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">removeItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+            window.<span style="color:#a6e22e">reload</span>();
+        } <span style="color:#66d9ef">else</span> {
+            window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({<span style="color:#a6e22e">colors</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>]}));
+        }
+    });
+});
+}(window, document));
+</code></pre></div><p>Quite a lot isn&rsquo;t it? Let&rsquo;s break that down.</p>
+<h3 id="random-array-elements">Random array elements</h3>
+<p>The theme logic is all in this JavaScript snippet. By using nested array and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructing assignment</a> we can get a theme consisting of a primary and secondary color. These color combinations are hand-picked from the <a href="https://botsin.space/@accessibleColors">@accessibleColors</a> bot.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">themes</span> <span style="color:#f92672">=</span> [
+    [<span style="color:#e6db74">&#34;#123D3C&#34;</span>, <span style="color:#e6db74">&#34;#90F072&#34;</span>],
+    [<span style="color:#e6db74">&#34;#403D58&#34;</span>, <span style="color:#e6db74">&#34;#dea584&#34;</span>],
+    [<span style="color:#e6db74">&#34;#400E3B&#34;</span>, <span style="color:#e6db74">&#34;#DCC78A&#34;</span>],
+    [<span style="color:#e6db74">&#34;#17098D&#34;</span>, <span style="color:#e6db74">&#34;#EADD1C&#34;</span>],
+    [<span style="color:#e6db74">&#34;#233B07&#34;</span>, <span style="color:#e6db74">&#34;#FFDD6D&#34;</span>]
+]
+<span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">themes</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">themes</span>.<span style="color:#a6e22e">length</span>)];
+</code></pre></div><p>Having the values I then store them in a <code>localStorage</code> entry if the user clicks on &ldquo;Keep this color theme&rdquo;. To do this, we first need to get the button element and the local storage item like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">schema_btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#btn_schema&#34;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+</code></pre></div><p>Then we can decide what text should be inside the button&hellip;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+    <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Use random color theme&#34;</span>;
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Keep current color theme&#34;</span>;
+}
+</code></pre></div><p>&hellip; and set the button to <code>display: block</code> - by default it is hidden with <code>display: none</code> so that people without JavaScript enabled don&rsquo;t see a useless button (they also don&rsquo;t see random themes!).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;block&#34;</span>;
+</code></pre></div><p>And finally, we assign a <code>click</code> event listener and check if the <code>theme</code> is set, which means the button click resets the current theme and reloads the site, or if the theme is not set and the current schema should be safed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">schema_btn</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
+        window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">removeItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
+        window.<span style="color:#a6e22e">reload</span>();
+    } <span style="color:#66d9ef">else</span> {
+        window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({<span style="color:#a6e22e">colors</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>]}));
+    }
+});
+</code></pre></div><p>If you don&rsquo;t like the current colors just refresh until you find the one you like. 😁</p>
+<p>If this is a horrible addition to my website and you want a permanent off button - please <a href="https://bullgit.party/@kevin" title="Contact me on Mastodon">let me know</a>!</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under frontend"
+                href="https://kevingimbel.de/categories/frontend/">frontend</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with web"
+                href="https://kevingimbel.de/tags/web/">web</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with css"
+                href="https://kevingimbel.de/tags/css/">css</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with javascript"
+                href="https://kevingimbel.de/tags/javascript/">javascript</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2020-03-24-random-theme.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

@@ -14,7 +14,48 @@
     </head>
 
 <body>
+    <script type="text/javascript">
+    (function(window, document, undefined) {
+        let theme = window.localStorage.getItem("kgde_theme");
+        console.log(theme);
+        if (theme) {
+            var [colorMain, colorSecondary] = JSON.parse(theme).colors;
+            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+        } else {
+            
+            
+            let themes = [
+                ["#123D3C", "#90F072"],
+                ["#403D58", "#dea584"],
+                ["#400E3B", "#DCC78A"],
+                ["#17098D", "#EADD1C"],
+                ["#233B07", "#FFDD6D"]
+            ]
+            var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
+            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            let schema_btn = document.querySelector("#btn_schema");
+            let theme = window.localStorage.getItem("kgde_theme");
+            if (theme) {
+                schema_btn.textContent = "Use random color theme";
+            } else {
+                schema_btn.textContent = "Keep current color theme";
+            }
+            schema_btn.style.display = "block";
+            schema_btn.addEventListener('click', function(e) {
+                if (theme) {
+                    window.localStorage.removeItem("kgde_theme");
+                    window.reload();
+                } else {
+                    window.localStorage.setItem("kgde_theme", JSON.stringify({colors: [colorMain, colorSecondary]}));
+                }
+            });
+        });
+    }(window, document));
+    </script>
     <header class="intro-text">
+        <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
         <span>
         
             <p>Content tagged with "management"</p>
@@ -85,7 +126,7 @@
             </p>
         </div>
         <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/%7b0xc000729a70%7d">Edit on
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/%7b0xc0007b7890%7d">Edit on
                         GitHub</a></small></p>
             <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
             </p>

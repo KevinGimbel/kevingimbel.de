@@ -3,8 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kevingimbel.de/blog/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/coding/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/css/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/frontend/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/</loc>
-    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/javascript/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/blog/2020/03/random-theme/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/tutorial/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/web/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,22 +68,7 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/blog/</loc>
-    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/tags/capitalism/</loc>
-    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/categories/</loc>
-    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/categories/coding/</loc>
     <lastmod>2020-01-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -49,11 +84,6 @@
   
   <url>
     <loc>https://kevingimbel.de/tags/surveillance/</loc>
-    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/</loc>
     <lastmod>2020-01-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -253,11 +283,6 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/tutorial/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/tags/ubuntu/</loc>
     <lastmod>2020-01-13T00:00:00+00:00</lastmod>
   </url>
@@ -275,11 +300,6 @@
   <url>
     <loc>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</loc>
     <lastmod>2020-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/categories/frontend/</loc>
-    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -344,11 +364,6 @@
   
   <url>
     <loc>https://kevingimbel.de/tags/calc/</loc>
-    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/css/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -663,17 +678,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/javascript/</loc>
+    <loc>https://kevingimbel.de/tags/nodejs/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/categories/nodejs/</loc>
-    <lastmod>2017-01-09T18:02:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/nodejs/</loc>
     <lastmod>2017-01-09T18:02:48+01:00</lastmod>
   </url>
   
@@ -873,12 +883,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/magento/</loc>
+    <loc>https://kevingimbel.de/tags/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/magento/</loc>
+    <loc>https://kevingimbel.de/categories/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -888,12 +898,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/php/</loc>
+    <loc>https://kevingimbel.de/categories/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/php/</loc>
+    <loc>https://kevingimbel.de/tags/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
