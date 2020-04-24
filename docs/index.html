@@ -127,18 +127,19 @@ Here&rsquo;s a picture of me, you can <a href="/about/">read more about me</a> i
         
         
         
-        <article class="article article--in-list" aria-labelledby="article-heading-588d3b05594d2cf01058610256878087" aria-describedby="article-summary-588d3b05594d2cf01058610256878087">
-            <h3><a id="article-heading-588d3b05594d2cf01058610256878087" href="https://kevingimbel.de/blog/2020/03/random-theme/">Random Theme</a></h3>
+        <article class="article article--in-list" aria-labelledby="article-heading-0e5831f0c49d704f6500770ecf044fa8" aria-describedby="article-summary-0e5831f0c49d704f6500770ecf044fa8">
+            <h3><a id="article-heading-0e5831f0c49d704f6500770ecf044fa8" href="https://kevingimbel.de/blog/2020/04/terrasave/">Terrasave</a></h3>
             
-            <small>Published on <time datetime="2020-03-24 00:00:00 &#43;0000 UTC">24. Mar 2020</time></small>
+            <small>Published on <time datetime="2020-04-24 00:00:00 &#43;0000 UTC">24. Apr 2020</time></small>
             
             
 
-            <p id="article-summary-588d3b05594d2cf01058610256878087">I&rsquo;ve decided to add some randomness to this website! You may noticed that the two main colors change on every page reload - there&rsquo;s a fixed number of &ldquo;themes&rdquo; available and they change at random.
-To accomplish this I used the following JavaScript.
-(function(window, document, undefined) { let theme = window.localStorage.getItem(&#34;kgde_theme&#34;); console.log(theme); if (theme) { var [colorMain, colorSecondary] = JSON.parse(theme).colors; document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`; } else { // [dark-color, light-color]  // Color combinations taken from https://botsin.</p>
-            <a href="https://kevingimbel.de/blog/2020/03/random-theme/" title="Continue reading about Random Theme">View full post</a>
+            <p id="article-summary-0e5831f0c49d704f6500770ecf044fa8">I just released a tiny tool function I&rsquo;ve been using for some time called terrasave. It&rsquo;s a Bash / Fish function that prevents you from running terraform without the -target option.
+Why does this exist? In terraform it is incredibly easy to destroy things with terraform apply. If you run apply terraform shows a huge output and sometimes you may overlook a thing being &ldquo;replaced&rdquo; instead of updated. Once upon a time I destroyed a MongoDB Atlas Cluster this way and lost all its data, because the &ldquo;must be replaced&rdquo; was hidden in a lot of terraform output and I simply didn&rsquo;t see it.</p>
+            <a href="https://kevingimbel.de/blog/2020/04/terrasave/" title="Continue reading about Terrasave">View full post</a>
         </article>
+        
+        
         
         
         

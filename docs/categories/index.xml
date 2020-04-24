@@ -6,7 +6,7 @@
     <description>Recent content in Categories on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>coding</title>
       <link>https://kevingimbel.de/categories/coding/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://kevingimbel.de/categories/tools/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/tools/</guid>
       <description></description>
     </item>
     
@@ -35,15 +44,6 @@
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tools</title>
-      <link>https://kevingimbel.de/categories/tools/</link>
-      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/categories/tools/</guid>
       <description></description>
     </item>
     

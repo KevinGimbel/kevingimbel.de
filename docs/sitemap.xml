@@ -3,18 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kevingimbel.de/tags/bash/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevingimbel.de/blog/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/categories/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/cli/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/categories/coding/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/devops/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/fish/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/terraform/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/blog/2020/04/terrasave/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/tools/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,22 +73,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/tags/javascript/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/blog/2020/03/random-theme/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -119,11 +154,6 @@
   
   <url>
     <loc>https://kevingimbel.de/tags/sync/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/categories/tools/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -518,11 +548,6 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/bash/</loc>
-    <lastmod>2018-04-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/categories/devops/</loc>
     <lastmod>2018-04-18T00:00:00+00:00</lastmod>
   </url>
@@ -664,11 +689,6 @@
   
   <url>
     <loc>https://kevingimbel.de/blog/2017/01/bash-script-ws/</loc>
-    <lastmod>2017-01-12T19:22:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/cli/</loc>
     <lastmod>2017-01-12T19:22:48+01:00</lastmod>
   </url>
   
@@ -883,12 +903,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/magento/</loc>
+    <loc>https://kevingimbel.de/categories/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/magento/</loc>
+    <loc>https://kevingimbel.de/tags/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -898,12 +918,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/php/</loc>
+    <loc>https://kevingimbel.de/tags/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/php/</loc>
+    <loc>https://kevingimbel.de/categories/php/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
