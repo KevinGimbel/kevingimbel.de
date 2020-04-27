@@ -3,17 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kevingimbel.de/tags/bash/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <loc>https://kevingimbel.de/tags/animals/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/blog/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/categories/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/documentaries/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/netflix/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/blog/2020/04/night-on-earth/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/review/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/series/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/wildlife/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/bash/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -34,16 +79,6 @@
   
   <url>
     <loc>https://kevingimbel.de/tags/fish/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -903,12 +938,12 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/categories/magento/</loc>
+    <loc>https://kevingimbel.de/tags/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/magento/</loc>
+    <loc>https://kevingimbel.de/categories/magento/</loc>
     <lastmod>2014-08-27T00:00:00+00:00</lastmod>
   </url>
   

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Night on Earth &mdash; KevOps</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="netflix animals series wildlife  blog documentaries review  ">
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body>
+    <script type="text/javascript">
+    (function(window, document, undefined) {
+        let theme = window.localStorage.getItem("kgde_theme");
+        console.log(theme);
+        if (theme) {
+            var [colorMain, colorSecondary] = JSON.parse(theme).colors;
+            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+        } else {
+            
+            
+            let themes = [
+                ["#123D3C", "#90F072"],
+                ["#403D58", "#dea584"],
+                ["#400E3B", "#DCC78A"],
+                ["#17098D", "#EADD1C"],
+                ["#233B07", "#FFDD6D"]
+            ]
+            var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
+            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            let schema_btn = document.querySelector("#btn_schema");
+            let theme = window.localStorage.getItem("kgde_theme");
+            if (theme) {
+                schema_btn.textContent = "Use random color theme";
+            } else {
+                schema_btn.textContent = "Keep current color theme";
+            }
+            schema_btn.style.display = "block";
+            schema_btn.addEventListener('click', function(e) {
+                if (theme) {
+                    window.localStorage.removeItem("kgde_theme");
+                    window.reload();
+                } else {
+                    window.localStorage.setItem("kgde_theme", JSON.stringify({colors: [colorMain, colorSecondary]}));
+                }
+            });
+        });
+    }(window, document));
+    </script>
+    <header class="intro-text">
+        <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
+        <span>
+        
+        
+        Night on Earth
+        
+        </span>
+    </header>
+
+
+    <nav role="navigation" id="navigation" aria-label="Main Navigation">
+        <ul class="nav-main"><li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li><li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li><li class="">
+                <a href="/blog/">
+                    <span>Blog</span>
+                </a>
+            </li><li class="">
+                <a href="/photography/">
+                    <span>Photography</span>
+                </a>
+            </li><li class="">
+                <a href="/reading/">
+                    <span>Reading</span>
+                </a>
+            </li><li class="">
+                <a href="/art/">
+                    <span>Art</span>
+                </a>
+            </li><li class="">
+                <a href="/now/">
+                    <span>Now</span>
+                </a>
+            </li></ul>
+    </nav>
+
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            
+            
+
+
+
+
+
+
+
+<p>Written on <time datetime="2020-04-27 00:00:00 &#43;0000 UTC">27. Apr 2020</time>  </p>
+            <p>Last weekend I finished &ldquo;<a href="https://www.netflix.com/de-en/title/80218938" title="View Night On Earth on Netflix.com">Night on Earth</a>&rdquo; a Netflix documentation about animal life during the night, filmed with super light sensitive cameras making the darkest night look like early evening; It&rsquo;s an interesting look into the night and quite entertaining and educating.</p>
+<p>You can find the documentation <a href="https://www.netflix.com/de-en/title/80218938" title="View Night On Earth on Netflix.com">here on Netflix</a></p>
+<p>★★★★☆</p>
+
+        </article>
+    </section>
+
+    <section class="tags-categories">
+        
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under documentaries"
+                href="https://kevingimbel.de/categories/documentaries/">documentaries</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under review"
+                href="https://kevingimbel.de/categories/review/">review</a>
+        </li></ul>
+</section>
+
+        
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with netflix"
+                href="https://kevingimbel.de/tags/netflix/">netflix</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with animals"
+                href="https://kevingimbel.de/tags/animals/">animals</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with series"
+                href="https://kevingimbel.de/tags/series/">series</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with wildlife"
+                href="https://kevingimbel.de/tags/wildlife/">wildlife</a>
+        </li></ul>
+</section>
+
+    </section>
+
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
+    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
+            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+        free or if this page has helped you or your company, consider supporting me directly.</p>
+    <p>You can support me through:</p>
+    <ul>
+        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
+        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    </ul>
+</section>
+
+    <section class="author">
+    <div class="left">
+        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+    </div>
+    <div class="right">
+        <h4>Kevin Gimbel</h4>
+        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+            dystopian books.<br>
+            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
+        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
+    </div>
+</section>
+</main>
+<footer class="footer">
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
+            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2020-04-27-night-on-earth.md">Edit on
+                        GitHub</a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>
+    </footer>
+
+
+    
+
+    
+
+    
+</body>
+
+</html>

@@ -6,10 +6,46 @@
     <description>Recent content in Tags on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>animals</title>
+      <link>https://kevingimbel.de/tags/animals/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/animals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netflix</title>
+      <link>https://kevingimbel.de/tags/netflix/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/netflix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>series</title>
+      <link>https://kevingimbel.de/tags/series/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wildlife</title>
+      <link>https://kevingimbel.de/tags/wildlife/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/wildlife/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>bash</title>

@@ -6,10 +6,21 @@
     <description>Recent content in Home is where 127.0.0.1 is on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Night on Earth</title>
+      <link>https://kevingimbel.de/blog/2020/04/night-on-earth/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/04/night-on-earth/</guid>
+      <description>Last weekend I finished &amp;ldquo;Night on Earth&amp;rdquo; a Netflix documentation about animal life during the night, filmed with super light sensitive cameras making the darkest night look like early evening; It&amp;rsquo;s an interesting look into the night and quite entertaining and educating.
+You can find the documentation here on Netflix
+★★★★☆</description>
+    </item>
     
     <item>
       <title>Terrasave</title>
