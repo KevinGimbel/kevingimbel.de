@@ -6,10 +6,19 @@
     <description>Recent content in Categories on KevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kevingimbel.de/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>photography</title>
+      <link>https://kevingimbel.de/categories/photography/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/photography/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>documentaries</title>
@@ -62,15 +71,6 @@
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>photography</title>
-      <link>https://kevingimbel.de/categories/photography/</link>
-      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/categories/photography/</guid>
       <description></description>
     </item>
     
