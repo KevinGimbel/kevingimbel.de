@@ -7,7 +7,7 @@
             <link href="https://kevingimbel.de/tags/mmo/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/tags/mmo/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/tags/mmo/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T09:04:12+02:00</updated>
+    <updated>2020-04-29T13:39:19+02:00</updated>
     
     
     
@@ -82,7 +82,7 @@
 
 <h2 id="gameplay-and-vats">Gameplay and V.A.T.S</h2>
 <p>Overall the gameplay is pretty similar to Fallout 4. Weapons behave similar but there&rsquo;s one big difference. In single-player Fallout games the player can use V.A.T.S the Vault-Tec Assisted Targeting System which slows down (or pre Fallout 5 stops) the time and allows to target specific body parts. The player can plan the next shots or hits based on the number of Action Points they have. Since Fallout 76 is entirely online (and PVP everywhere; More below) time cannot be stopped. Instead V.A.T.S functions as an auto aiming  system. Once V.A.T.S has been activated you can &ldquo;just shoot&rdquo; and will hit or miss, depending on the percentage change displayed. This works surprisingly well but in heated situations with a lot of enemies (&ldquo;a lot&rdquo; being everything above 5 for me 😅) I missed the slowing or stopping of time to tactically analyze a situation - combat has become a tick more hectic.</p>
-<section class="side-by-side">
+<section class="side-by-side ">
   
 <div class="left wide">
     <img src="/images/posts/2018/fallout-76-beta/throwing_knife_op.gif" alt="&ldquo;Using a throwing knife against a Super Mutant&rdquo;"> </div>
@@ -107,7 +107,7 @@
 <li>Luck</li>
 </ul>
 <p>Once an attribute is chosen the PC gets a pack of cards. These cards represent the perks from previous games; They can for example give a 10% damage boost to a certain weapon type or enhance the resistance against environmental damage. If the PC wants to be melee focused they&rsquo;d pick &ldquo;Strength&rdquo; and hope for cards that give damage to melee attacks. During my playtime I received cards like &ldquo;+10% damage to one-handed melee&rdquo;. It is possible to receive a card two times, e.g. two times &ldquo;+10% damage to one-handed melee&rdquo;. In this case the two cards can be combined to one stronger card that gives more damage bonuses.</p>
-<section class="side-by-side">
+<section class="side-by-side ">
   
 <div class="left wide">
     <img src="/images/posts/2018/fallout-76-beta/card_ranks.png" alt="&ldquo;Three ranks available for a card&rdquo;"> </div>
@@ -119,7 +119,7 @@
 
 </section>
 
-<section class="side-by-side">
+<section class="side-by-side ">
   
 <div class="left wide">
     <img src="/images/posts/2018/fallout-76-beta/card_rank-up.png" alt="&ldquo;Two cards which can be ranked-up&rdquo;"> </div>
@@ -128,7 +128,7 @@
 
 </section>
 
-<section class="side-by-side">
+<section class="side-by-side ">
   
 <div class="left wide">
     <img src="/images/posts/2018/fallout-76-beta/card_inventory.png" alt="&ldquo;A selection of cards for different SPECIAL attributes&rdquo;"> </div>

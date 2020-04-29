@@ -432,6 +432,14 @@ pre {
         align-items: center;
         margin: 2rem 0;
     }
+    
+    .side-by-side.align-top {
+        align-items: flex-start;
+    }
+    
+    .side-by-side.align-bottom {
+        align-items: flex-end;
+    }
 
     .side-by-side__first {
         margin-bottom: 3rem;
