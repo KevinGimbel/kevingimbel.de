@@ -1,36 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[gulp on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/gulp/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/gulp/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/gulp/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/gulp/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Snippet: SASS Source Maps with Gulp]]></title>
-            <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-            
-                <id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id>
-            
-            
-            <published>2015-01-22T00:00:00+00:00</published>
-            <updated>2015-01-22T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">gulp on KevOps</title><link href="https://kevingimbel.de/tags/gulp/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/gulp/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/gulp/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/gulp/</id><entry><title type="html">Snippet: SASS Source Maps with Gulp</title><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id><published>2015-01-22T00:00:00+00:00</published><updated>2015-01-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
@@ -74,43 +42,5 @@ image to view it in full-size.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;production&#39;</span>, [<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#39;autoprefix&#39;</span>];
 
 <span style="color:#75715e">// Use the following command to keep out Source Maps.
-</span><span style="color:#75715e"></span><span style="color:#75715e">// $ gulp production
-</span></code></pre></div>]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+</span><span style="color:#75715e">// $ gulp production
+</span></code></pre></div>]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp"/><category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/></entry></feed>

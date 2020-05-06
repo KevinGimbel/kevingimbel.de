@@ -1,118 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[mvc on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/mvc/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/mvc/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/mvc/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/mvc/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Magento: get and set variables in config.xml]]></title>
-            <link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</id>
-            
-            
-            <published>2014-05-27T00:00:00+00:00</published>
-            <updated>2014-05-27T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&rsquo;m
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">mvc on KevOps</title><link href="https://kevingimbel.de/tags/mvc/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/mvc/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/mvc/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/mvc/</id><entry><title type="html">Magento: get and set variables in config.xml</title><link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</id><published>2014-05-27T00:00:00+00:00</published><updated>2014-05-27T00:00:00+00:00</updated><content type="html"><![CDATA[<p>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&rsquo;m
 working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for),
 however this form should be &ldquo;cloned&rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is
 MVC-like I  believed there would be an easy way to pass email addresses to the Controller. Indeed I found a way to do
 so, and I&rsquo;m happy if someone finds a better way!</p>
 <p>I managed to set the different emails in the config.xml (located in <code>/mymodule/etc/config.xml</code>) like so</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"> # ... Default Block within the <span style="color:#f92672">&lt;config</span><span style="color:#f92672">&gt;</span> block
-	<span style="color:#f92672">&lt;default</span><span style="color:#f92672">&gt;</span>
-		<span style="color:#f92672">&lt;email</span><span style="color:#f92672">&gt;</span>
-			<span style="color:#f92672">&lt;contact</span><span style="color:#f92672">&gt;</span>contact@standard.com<span style="color:#f92672">&lt;/contact&gt;</span>
-			<span style="color:#f92672">&lt;support</span><span style="color:#f92672">&gt;</span>support@standard.com<span style="color:#f92672">&lt;/support&gt;</span>
-			<span style="color:#f92672">&lt;yetanotheremail</span><span style="color:#f92672">&gt;</span>mailme@contact.com<span style="color:#f92672">&lt;/yetanotheremail&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"> # ... Default Block within the <span style="color:#f92672">&lt;config&gt;</span> block
+	<span style="color:#f92672">&lt;default&gt;</span>
+		<span style="color:#f92672">&lt;email&gt;</span>
+			<span style="color:#f92672">&lt;contact&gt;</span>contact@standard.com<span style="color:#f92672">&lt;/contact&gt;</span>
+			<span style="color:#f92672">&lt;support&gt;</span>support@standard.com<span style="color:#f92672">&lt;/support&gt;</span>
+			<span style="color:#f92672">&lt;yetanotheremail&gt;</span>mailme@contact.com<span style="color:#f92672">&lt;/yetanotheremail&gt;</span>
 	<span style="color:#f92672">&lt;/email&gt;</span>
 	<span style="color:#f92672">&lt;/default&gt;</span>
 # ....
 # Example of a Router config,
 # these are important for the switch below
-<span style="color:#f92672">&lt;routers</span><span style="color:#f92672">&gt;</span>
-	<span style="color:#f92672">&lt;company_contactform_contact</span><span style="color:#f92672">&gt;</span>
-		<span style="color:#f92672">&lt;args</span><span style="color:#f92672">&gt;</span>
-			<span style="color:#f92672">&lt;module</span><span style="color:#f92672">&gt;</span>Company_ContactForm<span style="color:#f92672">&lt;/module&gt;</span>
-			<span style="color:#f92672">&lt;frontName</span><span style="color:#f92672">&gt;</span>contact<span style="color:#f92672">&lt;/frontName&gt;</span>
+<span style="color:#f92672">&lt;routers&gt;</span>
+	<span style="color:#f92672">&lt;company_contactform_contact&gt;</span>
+		<span style="color:#f92672">&lt;args&gt;</span>
+			<span style="color:#f92672">&lt;module&gt;</span>Company_ContactForm<span style="color:#f92672">&lt;/module&gt;</span>
+			<span style="color:#f92672">&lt;frontName&gt;</span>contact<span style="color:#f92672">&lt;/frontName&gt;</span>
 		<span style="color:#f92672">&lt;/args&gt;</span>
 	<span style="color:#f92672">&lt;/company_contactform_contact&gt;</span>
 <span style="color:#f92672">&lt;/routers&gt;</span>
 </code></pre></div><p>This way the variables can be easily changed inside the <code>config.xml</code>, later they are retrieved (in the fronend or inside
 the Controller.php) with this code</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">	<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/contact&#39;</span>);
-	<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/support&#39;</span>);
-	<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/yetanotheremail&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">	<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/contact&#39;</span>);
+	<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/support&#39;</span>);
+	<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/yetanotheremail&#39;</span>);
 </code></pre></div><p>Those store configs are only accessable from within this Model and its View, so in <code>compare.phtml</code> this would throw an error.
 Next thing I needed was a <code>switch()</code> to determine in what view I am. Again, I&rsquo;m pretty sure there is a better way of
 handling this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#75715e">/* This returns the name set for the Router in the config.xml.
 </span><span style="color:#75715e">	* (Between &lt;routers&gt; and &lt;/routers&gt;
 </span><span style="color:#75715e"> */</span>
-	<span style="color:#a6e22e">$currentRoute</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">app</span>()<span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">getFrontController</span>()<span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">getRequest</span>()<span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">getRouterName</span>();
+	<span style="color:#a6e22e">$currentRoute</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">app</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFrontController</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRequest</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRouterName</span>();
 
 		<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">$currentRoute</span>) {
 			<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;company_contactform_productsupport&#34;</span><span style="color:#f92672">:</span>
-				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/productsupport&#39;</span>);
+				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/productsupport&#39;</span>);
 				<span style="color:#66d9ef">break</span>;
 
 			<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;comapny_contactform_contact&#34;</span><span style="color:#f92672">:</span>
-				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/contact&#39;</span>);
+				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/contact&#39;</span>);
 				<span style="color:#66d9ef">break</span>;
 
 			<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;company_contactform_support&#34;</span><span style="color:#f92672">:</span>
-				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/support&#39;</span>);
+				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/support&#39;</span>);
 				<span style="color:#66d9ef">break</span>;
 
 			<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
-				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/fallback&#39;</span>);
+				<span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;email/fallback&#39;</span>);
 				<span style="color:#66d9ef">break</span>;
 	}
 </code></pre></div><p>The fallback is used for the case of no match - it should not happen but it still can happen, so it&rsquo;s always save to
 have a fallback. In this case it just goes to the generic info eMail of the client.</p>
 <p>I&rsquo;m not sure if there&rsquo;s a better or easier way but I found that this solution fits my needs pretty good.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/mvc" term="mvc" label="mvc" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento"/><category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento"/><category scheme="https://kevingimbel.de/tags/mvc" term="mvc" label="mvc"/></entry></feed>

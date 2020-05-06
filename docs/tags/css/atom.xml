@@ -1,45 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[css on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/css/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/css/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/css/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/css/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Random Theme]]></title>
-            <link href="https://kevingimbel.de/blog/2020/03/random-theme/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="related" type="text/html" title="Safe calc usage in CSS" />
-                <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
-                <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
-                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-            
-                <id>https://kevingimbel.de/blog/2020/03/random-theme/</id>
-            
-            
-            <published>2020-03-24T00:00:00+00:00</published>
-            <updated>2020-03-24T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I&rsquo;ve decided to add some randomness to this website! You may noticed that the two main colors change on every page reload - there&rsquo;s a fixed number of &ldquo;themes&rdquo; available and they change at random.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">css on KevOps</title><link href="https://kevingimbel.de/tags/css/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/css/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/css/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/css/</id><entry><title type="html">Random Theme</title><link href="https://kevingimbel.de/blog/2020/03/random-theme/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="related" type="text/html" title="Safe calc usage in CSS"/><link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look"/><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><id>https://kevingimbel.de/blog/2020/03/random-theme/</id><published>2020-03-24T00:00:00+00:00</published><updated>2020-03-24T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I&rsquo;ve decided to add some randomness to this website! You may noticed that the two main colors change on every page reload - there&rsquo;s a fixed number of &ldquo;themes&rdquo; available and they change at random.</p>
 <p>To accomplish this I used the following JavaScript.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(<span style="color:#66d9ef">function</span>(window, document, <span style="color:#66d9ef">undefined</span>) {
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;kgde_theme&#34;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">theme</span>);
 <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">theme</span>) {
     <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">theme</span>).<span style="color:#a6e22e">colors</span>;
-    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">--color-main:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorMain</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;--color-secondary:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorSecondary</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`--color-main:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorMain</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;--color-secondary:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorSecondary</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
 } <span style="color:#66d9ef">else</span> {
     <span style="color:#75715e">// [dark-color, light-color]
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// Color combinations taken from https://botsin.space/@accessibleColors
@@ -51,7 +17,7 @@
         [<span style="color:#e6db74">&#34;#233B07&#34;</span>, <span style="color:#e6db74">&#34;#FFDD6D&#34;</span>]
     ]
     <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">colorMain</span>, <span style="color:#a6e22e">colorSecondary</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">themes</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">themes</span>.<span style="color:#a6e22e">length</span>)];
-    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">--color-main:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorMain</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;--color-secondary:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorSecondary</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`--color-main:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorMain</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;--color-secondary:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">colorSecondary</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
 }
 document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#66d9ef">function</span>() {
     <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">schema_btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#btn_schema&#34;</span>);
@@ -105,59 +71,7 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
 });
 </code></pre></div><p>If you don&rsquo;t like the current colors just refresh until you find the one you like. 😁</p>
 <p>If this is a horrible addition to my website and you want a permanent off button - please <a href="https://bullgit.party/@kevin" title="Contact me on Mastodon">let me know</a>!</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/web" term="web" label="web" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Safe calc usage in CSS]]></title>
-            <link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look" />
-                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-            
-                <id>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</id>
-            
-            
-            <published>2020-01-01T00:00:00+00:00</published>
-            <updated>2020-01-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p><code>calc</code> is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example <code>calc(100% - 4rem - 1px)</code> is valid and works in modern browsers - in simpler words: Calc works with different units like <code>em</code>, <code>%</code>, <code>px</code>, etc.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/web" term="web" label="web"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/></entry><entry><title type="html">Safe calc usage in CSS</title><link href="https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="related" type="text/html" title="CSS Custom Properties and a new look"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS"/><link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014"/><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags"/><id>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</id><published>2020-01-01T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p><code>calc</code> is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example <code>calc(100% - 4rem - 1px)</code> is valid and works in modern browsers - in simpler words: Calc works with different units like <code>em</code>, <code>%</code>, <code>px</code>, etc.</p>
 <p>The problem with calc is that if it doesn&rsquo;t work you may get a unexpected result. Take the following code for example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">author</span> {
     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">rem</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
@@ -180,59 +94,7 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
 </code></pre></div><p>By using <code>0rem - 2rem</code> we can create a <code>-2rem</code> offset to the left. The <code>1px</code> is the border around the parent element which appears on both sides, so we add that to our calculation to stay within the border - otherwise it would look wrong again.</p>
 <h2 id="update">Update</h2>
 <p>Due to changes during development, the changes described here are not available on my website.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/calc" term="calc" label="calc" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/fallback" term="fallback" label="fallback" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[CSS Custom Properties and a new look]]></title>
-            <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
-                <link href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
-                <link href="https://kevingimbel.de/blog/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
-                <link href="https://kevingimbel.de/blog/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
-                <link href="https://kevingimbel.de/blog/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
-            
-                <id>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</id>
-            
-            
-            <published>2017-11-26T10:56:13+01:00</published>
-            <updated>2017-11-26T10:56:13+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/calc" term="calc" label="calc"/><category scheme="https://kevingimbel.de/tags/fallback" term="fallback" label="fallback"/></entry><entry><title type="html">CSS Custom Properties and a new look</title><link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13"/><link href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9"/><link href="https://kevingimbel.de/blog/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven"/><link href="https://kevingimbel.de/blog/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five"/><link href="https://kevingimbel.de/blog/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four"/><id>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</id><published>2017-11-26T10:56:13+01:00</published><updated>2017-11-26T10:56:13+01:00</updated><content type="html"><![CDATA[<p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
  CSS variables).</p>
 <p>CSS variables are a <a href="https://www.w3.org/TR/css-variables-1/" title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!&quot;</em> and you&rsquo;re right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that&rsquo;s exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p>
 <p>Below I will explain step by step how CSS variables look, work, and how we can use them to alter the look of a website - even persistent without any backend code!</p>
@@ -251,14 +113,14 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
 <span style="color:#f92672">--base-font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">12px</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">--breakpoint-large</span><span style="color:#f92672">:</span> <span style="color:#f92672">1200px</span><span style="color:#f92672">;</span>
 </code></pre></div><p>Just like any CSS property they &ldquo;cascade down&rdquo;. A variable defined at the top of the document on the <code>:root</code> or <code>html</code> selector will be defined everywhere in the document. To use a CSS variable we need to get it somehow. It&rsquo;s not enough to reference it, for example this does not work.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Does</span> <span style="color:#f92672">not</span> <span style="color:#f92672">work</span><span style="color:#f92672">!</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">Does</span> <span style="color:#f92672">not</span> <span style="color:#f92672">work</span><span style="color:#f92672">!</span>
 .<span style="color:#a6e22e">my-selector</span> {
   <span style="color:#66d9ef">color</span>: <span style="color:#f92672">--</span><span style="color:#66d9ef">color</span>;
 }
 </code></pre></div><p>With CSS variables we need to retrieve the value by calling a <code>var</code> function. This function also takes a fallback parameter in case the variable is not set.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">This</span> <span style="color:#f92672">does</span> <span style="color:#f92672">work</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">This</span> <span style="color:#f92672">does</span> <span style="color:#f92672">work</span>
 .<span style="color:#a6e22e">my-selector</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>, <span style="color:#ae81ff">#333</span>)
+  <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span><span style="color:#66d9ef">color</span>, <span style="color:#ae81ff">#333</span>)
 }
 </code></pre></div><p><code>.my-selector</code> will have a color value equal to whatever is stored inside the <code>--color</code> variable or <code>#333</code> if it is not set.</p>
 <p>A variable can later be changed to be &ldquo;locally scoped&rdquo;. For this example we define a custom property named <code>--color</code> and set its value to <code>red</code>. We say all h1 elements should use the <code>--color</code> variable for their font-color. Then we create a CSS class named <code>local-scope</code> and inside we change the <code>--color</code> to <code>blue</code>. A <code>h1</code> element inside the <code>local-scope</code> will use the re-defined color value.</p>
@@ -350,7 +212,7 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
 <p>Because we use inline styles to change the CSS variables the HTML element will have the following styles.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--body-invert:0; --color-accent-primary:#3e934b; --color-accent-secondary:#70cfff;&#34;</span>&gt;
 </code></pre></div><p>Once the JSON is saved to local storage, I load in on page load and apply it immediately - which happens to be really fast so it seems the styles are not even applyed again! The piece of JavaScript to load the custom styles is placed above all other content, at the beginning of the <code>&lt;body&gt;</code>. To not impact performance too much I minified it and it looks like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;</span>(<span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>)){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>));<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">a</span>){document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#a6e22e">o</span>,<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]);<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">o</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;--body-invert&#34;</span><span style="color:#f92672">&amp;&amp;</span><span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;100&#34;</span>){document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;dark-mode&#34;</span>)}}<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a11y</span>){<span style="color:#a6e22e">a11y</span>.<span style="color:#a6e22e">o</span><span style="color:#f92672">=</span><span style="color:#a6e22e">a</span>}}})();<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;</span>(<span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>)){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>));<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">a</span>){document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#a6e22e">o</span>,<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]);<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">o</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;--body-invert&#34;</span><span style="color:#f92672">&amp;&amp;</span><span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;100&#34;</span>){document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;dark-mode&#34;</span>)}}<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a11y</span>){<span style="color:#a6e22e">a11y</span>.<span style="color:#a6e22e">o</span><span style="color:#f92672">=</span><span style="color:#a6e22e">a</span>}}})();<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
 </code></pre></div><p>Unminified the code reads as follows</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#66d9ef">function</span>(){
   <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>)) {
@@ -397,11 +259,11 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
   <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>) <span style="color:#75715e">!important</span>;
 }
 </code></pre></div><p>This basically means we apply the filter two times, which results in resetting it. The images get inverted from the first rule, then inverted again to normal color.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">everything</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">everything</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> {
   <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>);
 }
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span> <span style="color:#f92672">and</span> <span style="color:#f92672">iframe</span> <span style="color:#f92672">again</span><span style="color:#f92672">,</span> <span style="color:#f92672">resulting</span> <span style="color:#f92672">in</span> <span style="color:#f92672">resetting</span> <span style="color:#f92672">the</span> <span style="color:#f92672">original</span> <span style="color:#f92672">invert</span><span style="color:#f92672">.</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span> <span style="color:#f92672">and</span> <span style="color:#f92672">iframe</span> <span style="color:#f92672">again</span><span style="color:#f92672">,</span> <span style="color:#f92672">resulting</span> <span style="color:#f92672">in</span> <span style="color:#f92672">resetting</span> <span style="color:#f92672">the</span> <span style="color:#f92672">original</span> <span style="color:#f92672">invert</span><span style="color:#f92672">.</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">iframe</span> {
@@ -409,61 +271,7 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
 }
 </code></pre></div><p>And that&rsquo;s it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I&rsquo;m happy with the result.</p>
 <p>Got any feedback? Want to tell me how much the news design sucks? Love it? Hit me up on <a href="https://twitter.com/_kevinatari" title="Find me on twitter">Twitter @_kevinatari</a></p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/redesign" term="redesign" label="redesign" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/modernization" term="modernization" label="modernization" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/accessibility" term="accessibility" label="accessibility" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Getting into Performance Measurement]]></title>
-            <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again" />
-                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS" />
-                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-            
-                <id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id>
-            
-            
-            <published>2015-03-10T00:00:00+00:00</published>
-            <updated>2015-03-10T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/redesign" term="redesign" label="redesign"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal"/><category scheme="https://kevingimbel.de/tags/modernization" term="modernization" label="modernization"/><category scheme="https://kevingimbel.de/tags/accessibility" term="accessibility" label="accessibility"/></entry><entry><title type="html">Getting into Performance Measurement</title><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into vim - again"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="related" type="text/html" title="Conditional CSS"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><id>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</id><published>2015-03-10T00:00:00+00:00</published><updated>2015-03-10T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I&rsquo;ve spent the past week developing some features for our own website at work.
 We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside
 Magento projects, it&rsquo;s way easier to keep an overview and with a good overview
 of data flow and available data it&rsquo;s easier to measure and find performance
@@ -581,7 +389,7 @@ their admin interface and using the <code>.htaccess</code> - which is what I did
  ExpiresByType image/png &#34;access plus 1 month&#34;
  ExpiresByType image/x-icon &#34;access plus 1 month&#34;
 
-  &lt;<span style="color:#f92672">FilesMatch</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">gif</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">jpe</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">png</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">ico</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">)</span><span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;
+  &lt;<span style="color:#f92672">FilesMatch</span> <span style="color:#960050;background-color:#1e0010">&#34;\.(</span><span style="color:#a6e22e">gif</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">jpe</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">png</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">ico</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">)$&#34;</span>&gt;
     Header set Cache-Control &#34;public&#34;
   &lt;/<span style="color:#f92672">FilesMatch</span>&gt;
 &lt;/<span style="color:#f92672">IfModule</span>&gt;
@@ -659,59 +467,7 @@ everyone&rsquo;s workflow. While developers could use a grunt/gulp/cli task the 
 who actually write content need an easy way to handle the optimization of
 uploaded files. The last resort of more optimization is the server respond time
 on which we don&rsquo;t have any influence.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Conditional CSS]]></title>
-            <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2014/07/conditional-css/</id>
-            
-            
-            <published>2014-07-31T00:00:00+00:00</published>
-            <updated>2014-07-31T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry><entry><title type="html">Conditional CSS</title><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014"/><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags"/><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2014/07/conditional-css/</id><published>2014-07-31T00:00:00+00:00</published><updated>2014-07-31T00:00:00+00:00</updated><content type="html"><![CDATA[<p>While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid
 pre-processors or frameworks there&rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS,
 i.e. pieces of CSS that serve one specific task the easiest and most known is <code>.active</code> given to, well, active elements.
 I&rsquo;d like to talk a bit about conditional CSS that I&rsquo;ve been using in production and that I think can improve the overall
@@ -768,22 +524,22 @@ is hidden because of a class name. This way it is easier to find out why an elem
 inline styles which always have a higher priority than everything else (as the next pen shows).</p>
 <!-- raw HTML omitted -->
 <p>Some of the Conditional CSS classes I use are</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">hidden</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">hidden</span>
 .<span style="color:#a6e22e">is-hidden</span> {
 	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
 }
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">displayed</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">displayed</span>
 .<span style="color:#a6e22e">is-displayed</span> {
 	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span><span style="color:#f92672">:</span>
 }
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">active</span> <span style="color:#f92672">(</span><span style="color:#f92672">most</span> <span style="color:#f92672">of</span> <span style="color:#f92672">the</span> <span style="color:#f92672">time</span> <span style="color:#f92672">nav</span> <span style="color:#f92672">items</span><span style="color:#f92672">)</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">active</span> <span style="color:#f92672">(</span><span style="color:#f92672">most</span> <span style="color:#f92672">of</span> <span style="color:#f92672">the</span> <span style="color:#f92672">time</span> <span style="color:#f92672">nav</span> <span style="color:#f92672">items</span><span style="color:#f92672">)</span>
 .<span style="color:#a6e22e">active</span> {
-	<span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span>
+	<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">styles</span>
 }
 
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">used</span> <span style="color:#f92672">with</span> <span style="color:#f92672">buttons</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">used</span> <span style="color:#f92672">with</span> <span style="color:#f92672">buttons</span>
 .<span style="color:#a6e22e">has-icon</span> {
-	<span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span>
+	<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">styles</span>
 }
 
 <span style="color:#75715e">/*
@@ -813,7 +569,7 @@ inline styles which always have a higher priority than everything else (as the n
 }
 @<span style="color:#66d9ef">media</span> <span style="color:#f92672">print</span> {
 	.<span style="color:#a6e22e">print-only</span> {
-		<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">]</span>
+		<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">[1]</span>
 	}
 }
 </code></pre></div><p>So far I find Conditional CSS a good idea and really like to work with it. It&rsquo;s easier, at least for me, to see what a
@@ -821,54 +577,7 @@ class does and where/how it should be used. Also it&rsquo;s a simple use of DRY 
 Responsibility Principle</a> but as
 with everything overusing it won&rsquo;t make your live easier.
 As always I appreciate feedback or improvments via <a href="http://twitter.com/_kevinatari">twitter</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Web Development in 2014]]></title>
-            <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id>
-            
-            
-            <published>2014-01-02T00:00:00+00:00</published>
-            <updated>2014-01-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&rsquo;s one thing that I&rsquo;d like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I&rsquo;ll give you a short look into basic responsive design/development patterns.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/frontend" term="frontend" label="frontend"/></entry><entry><title type="html">Web Development in 2014</title><link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags"/><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</id><published>2014-01-02T00:00:00+00:00</published><updated>2014-01-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&rsquo;s one thing that I&rsquo;d like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I&rsquo;ll give you a short look into basic responsive design/development patterns.</p>
 <h3 id="planning">Planning</h3>
 <p>First of all make sure what your site is about and what your content is like. <strong>Never hide content!</strong> Hiding content is the last resort and I prefer to avoid this. Make sure your site displays all the information you need the user to have in a order that makes sense: Do I want to scroll through your header, sidebar and a small advertisement area before I can find the article I&rsquo;m searching for? No, I don&rsquo;t. Good responsive, scalable design starts with mark up and there are a few tricks to archive a good looking, usable website. Before we start to look at the code: I&rsquo;ll focus on blog-like websites here and will cover more complex things later in another post.</p>
 <h3 id="drop-the-mdomain">Drop the m.domain</h3>
@@ -903,62 +612,62 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 <!-- raw HTML omitted -->
 <p>When you open the pen in <a href="http://codepen.io/kevingimbel/full/imvDF">fullscreen view</a> and resize it you can see that the sidebar moves underneath the article itself so that it is not in the way but visible to everyone who finish the article - in my opinion a good way to hide a sidebar on small screens because it doesn&rsquo;t require an extra click to open or see the sidebar and it is still there.</p>
 <p>This all works with a Grid I&rsquo;ll talk about next and the way the markup is written.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Wrapping the Grid inside the gw class </span><span style="color:#75715e">--&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- Wrapping the Grid inside the gw class --&gt;</span>
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;wrapper gw&#34;</span>&gt;
     &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-whole  small-one-whole&#34;</span>&gt;
-        <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> the header always stays at 100% of the available width </span><span style="color:#75715e">--&gt;</span>
+        <span style="color:#75715e">&lt;!-- the header always stays at 100% of the available width --&gt;</span>
     &lt;/<span style="color:#f92672">header</span>&gt;
 
     &lt;<span style="color:#f92672">main</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g two-thirds  small-one-whole&#34;</span>&gt;
-        <span style="color:#75715e">&lt;!--</span><span style="color:#75715e">
+        <span style="color:#75715e">&lt;!--
 </span><span style="color:#75715e">        The content takes 2/3 of the space
-</span><span style="color:#75715e">        </span><span style="color:#75715e">--&gt;</span>
+</span><span style="color:#75715e">        --&gt;</span>
     &lt;/<span style="color:#f92672">main</span>&gt;
 
     &lt;<span style="color:#f92672">aside</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third  small-one-whole&#34;</span>&gt;
-        <span style="color:#75715e">&lt;!--</span><span style="color:#75715e">
+        <span style="color:#75715e">&lt;!--
 </span><span style="color:#75715e">        The Sidebar takes the remaining 1/3 of the space and because it&#39;s
 </span><span style="color:#75715e">        below the content in the DOM order it moves below it when the page
 </span><span style="color:#75715e">        get&#39;s resized. That&#39;s basically the &#34;Markup magic&#34;
-</span><span style="color:#75715e">        </span><span style="color:#75715e">--&gt;</span>
+</span><span style="color:#75715e">        --&gt;</span>
     &lt;/<span style="color:#f92672">aside</span>&gt;
 
     &lt;<span style="color:#f92672">footer</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-whole&#34;</span>&gt;
-        <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Again, one</span><span style="color:#75715e">-</span><span style="color:#75715e">whole = all available width </span><span style="color:#75715e">--&gt;</span>
+        <span style="color:#75715e">&lt;!-- Again, one-whole = all available width --&gt;</span>
     &lt;/<span style="color:#f92672">footer</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><p>You may wonder what this <code>small-one-whole</code> thing does? I&rsquo;ll cover that next!</p>
 <h3 id="the-grid">The Grid</h3>
 <p>As mentioned above I&rsquo;m using an early beta of Bullgrid. However, the best thing about this grid is that it is re-usable, easy to understand and you can see the behavior of elements inside the markup. Here&rsquo;s an example.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third  medium-one-half  small-one-whole&#34;</span>&gt;
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Article 1 </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#75715e">&lt;!-- Article 1 --&gt;</span>
 &lt;/<span style="color:#f92672">article</span>&gt;
 
 &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third  medium-one-half  small-one-whole&#34;</span>&gt;
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Article 2 </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#75715e">&lt;!-- Article 2 --&gt;</span>
 &lt;/<span style="color:#f92672">article</span>&gt;
 
 &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g one-third  medium-one-half  small-one-whole&#34;</span>&gt;
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Article 3 </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#75715e">&lt;!-- Article 3 --&gt;</span>
 &lt;/<span style="color:#f92672">article</span>&gt;
 </code></pre></div><p>So the above results in something similar to this.</p>
 <!-- raw HTML omitted -->
 <p>As you can see the article&rsquo;s width is always adjusted to the width of the screen and it is completly readable inside the code.</p>
 <p>The hearth of this grid is the breakpoint mixin you can see below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">mixin</span> <span style="color:#f92672">breakpoint</span><span style="color:#f92672">(</span><span style="color:#f92672">$</span><span style="color:#f92672">point</span><span style="color:#f92672">)</span> {
-  @<span style="color:#66d9ef">if</span> <span style="color:#f92672">$</span><span style="color:#f92672">point</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;large&#34;</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">mixin</span> <span style="color:#f92672">breakpoint</span><span style="color:#f92672">($</span><span style="color:#f92672">point</span><span style="color:#f92672">)</span> {
+  @<span style="color:#66d9ef">if</span> <span style="color:#f92672">$</span><span style="color:#f92672">point</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;large&#34;</span> {
     @<span style="color:#66d9ef">media</span> <span style="color:#f92672">all</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">80em</span><span style="color:#f92672">)</span> {
       @<span style="color:#66d9ef">content</span>;
     }
   }
 
-  @<span style="color:#66d9ef">if</span> <span style="color:#f92672">$</span><span style="color:#f92672">point</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;medium&#34;</span> {
+  @<span style="color:#66d9ef">if</span> <span style="color:#f92672">$</span><span style="color:#f92672">point</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;medium&#34;</span> {
     @<span style="color:#66d9ef">media</span> <span style="color:#f92672">all</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">80em</span><span style="color:#f92672">)</span> {
       @<span style="color:#66d9ef">content</span>;
     }
   }
 
-  @<span style="color:#66d9ef">if</span> <span style="color:#f92672">$</span><span style="color:#f92672">point</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;small&#34;</span> {
+  @<span style="color:#66d9ef">if</span> <span style="color:#f92672">$</span><span style="color:#f92672">point</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;small&#34;</span> {
     @<span style="color:#66d9ef">media</span> <span style="color:#f92672">all</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">30em</span><span style="color:#f92672">)</span> {
       @<span style="color:#66d9ef">content</span>;
     }
@@ -968,17 +677,17 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">my-class</span> {
         <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
 
-        <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#960050;background-color:#1e0010">{</span>
+        <span style="color:#960050;background-color:#1e0010">@include</span> <span style="color:#960050;background-color:#1e0010">breakpoint(small)</span> <span style="color:#960050;background-color:#1e0010">{</span>
             <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
         }
     <span style="color:#960050;background-color:#1e0010">}</span>
 </code></pre></div><p>So when the breakpoint small is triggered <code>my-class</code> will have a width of 100% instead of 50%. Quite a lot to write in case of the grid right? <a href="http://csswizardry.com/">Harry Roberts</a> has a handy <code>grid-setup()</code> SCSS function that we re-used for bullgrid. It looks as followed.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">mixin</span> <span style="color:#f92672">grid-setup</span><span style="color:#f92672">(</span><span style="color:#f92672">$</span><span style="color:#f92672">namespace</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">mixin</span> <span style="color:#f92672">grid-setup</span><span style="color:#f92672">($</span><span style="color:#f92672">namespace</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span> {
 
   <span style="color:#75715e">/*
 </span><span style="color:#75715e">   * Hidden
 </span><span style="color:#75715e">   */</span>
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">hidden</span> {
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">hidden</span> {
     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
   }
 
@@ -986,7 +695,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
   <span style="color:#75715e">/**
 </span><span style="color:#75715e">   * Whole
 </span><span style="color:#75715e">   */</span>
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">one-whole</span> {
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">one-whole</span> {
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
   }
 
@@ -994,7 +703,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
   <span style="color:#75715e">/**
 </span><span style="color:#75715e">   * Halves
 </span><span style="color:#75715e">   */</span>
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">one-half</span> {
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">one-half</span> {
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
   }
 
@@ -1002,10 +711,10 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
   <span style="color:#75715e">/**
 </span><span style="color:#75715e">   * Thirds
 </span><span style="color:#75715e">   */</span>
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">one-third</span> {
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">one-third</span> {
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">33.333</span><span style="color:#66d9ef">%</span>;
   }
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">two-thirds</span> {
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">two-thirds</span> {
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">66.666</span><span style="color:#66d9ef">%</span>;
   }
 
@@ -1013,13 +722,13 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
   <span style="color:#75715e">/**
 </span><span style="color:#75715e">   * Quarters
 </span><span style="color:#75715e">   */</span>
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">one-quarter</span> {
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">one-quarter</span> {
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">%</span>;
   }
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">two-quarters</span> {
-    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">one-half</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">two-quarters</span> {
+    <span style="color:#960050;background-color:#1e0010">@extend</span> <span style="color:#960050;background-color:#1e0010">.#{$namespace</span>}<span style="color:#f92672">one-half</span><span style="color:#f92672">;</span>
   }
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">three-quarters</span> {
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">three-quarters</span> {
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">75</span><span style="color:#66d9ef">%</span>;
   }
 
@@ -1028,7 +737,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 </span><span style="color:#75715e">
 </span><span style="color:#75715e">*/</span>
 
-  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span>}<span style="color:#f92672">eleven-twelfths</span> {
+  <span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">#</span>{<span style="color:#960050;background-color:#1e0010">$namespace</span>}<span style="color:#f92672">eleven-twelfths</span> {
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">91.666</span><span style="color:#66d9ef">%</span>;
   }
 <span style="color:#960050;background-color:#1e0010">}</span>
@@ -1046,53 +755,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 }
 </code></pre></div><p>Once the grid is setup we can use all the different combinations and prefix them with <code>large-</code>,<code>meduim-</code> or <code>small-</code>. Basically that&rsquo;s it what I want to say about responsive development to this point. I think it is important to stop thinking in different categories like &ldquo;mobile&rdquo;, &ldquo;desktop&rdquo;, &ldquo;TV&rdquo; or whatever - it&rsquo;s more important to see a bunch of screens and devices that have a specific width you need to target with your breakpoints. Also I think every website you create this year should be responsive. There&rsquo;s no excuse anymore to do a non-responsive website. It should be a standard. So as a developer in a design team you should talk to your designers to keep responsive design in mind when making screen-designs. The Internet has become a canvas with a lot of sizes and we, as the artist, have to re-think the way we paint on it.</p>
 <p>I appreciate your opinion and critic <a href="http://twitter.com/_kevinatari">@_kevinatari</a> or via <a href="/imprint">eMail</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Pseudo Product Flags]]></title>
-            <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</id>
-            
-            
-            <published>2013-11-24T00:00:00+00:00</published>
-            <updated>2013-11-24T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/thoughts" term="thoughts" label="thoughts"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry><entry><title type="html">Pseudo Product Flags</title><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</id><published>2013-11-24T00:00:00+00:00</published><updated>2013-11-24T00:00:00+00:00</updated><content type="html"><![CDATA[<p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p>
 <h3 id="the-setup">The Setup</h3>
 <p>First of all I had a Product and a <code>div</code> that holds the flag (in this example &ldquo;Tag&rdquo;).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span>&gt;
@@ -1111,7 +774,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
     <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
     <span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">em</span>;
     <span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#8e44ad</span>; <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">g</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">f</span> <span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#960050;background-color:#1e0010">s</span> <span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span> <span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span>
+    <span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#8e44ad</span>; <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">standard</span> <span style="color:#960050;background-color:#1e0010">background</span> <span style="color:#960050;background-color:#1e0010">if</span> <span style="color:#960050;background-color:#1e0010">there&#39;s</span> <span style="color:#960050;background-color:#1e0010">no</span> <span style="color:#960050;background-color:#1e0010">data-id</span>
     <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span>;
 }
 </code></pre></div><p>The basic tag should be position absolute on the left of the article and <code>-1em</code> on top of the article (this comes because the article has a padding of 1.5em and I want it to be half the way out of the article container). So far there is a tag with auto width and auto height. With the next snippet we&rsquo;ll get the data-tagname inside out pseudo element.</p>
@@ -1127,12 +790,12 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
       <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">0</span>;
       <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">0</span>;
       <span style="color:#66d9ef">border-top</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">transparent</span>;
-      <span style="color:#66d9ef">border-left</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#a6e22e">darken</span>(<span style="color:#ae81ff">#8e44ad</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>); <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">f</span> <span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span> <span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">s</span> <span style="color:#960050;background-color:#1e0010">g</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span>
+      <span style="color:#66d9ef">border-left</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#a6e22e">darken</span>(<span style="color:#ae81ff">#8e44ad</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>); <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">fallback</span> <span style="color:#960050;background-color:#1e0010">if</span> <span style="color:#960050;background-color:#1e0010">no</span> <span style="color:#960050;background-color:#1e0010">data-id</span> <span style="color:#960050;background-color:#1e0010">is</span> <span style="color:#960050;background-color:#1e0010">given</span>
     }
 </code></pre></div><p>Success! The first basic tag is finished, but why the <code>data-id</code> you may ask? Because they make the magic! As I said before the color is controlled via <code>data-id</code> and here&rsquo;s how this works:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">]</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&amp;[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">]</span> {
   <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>;
-    <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
+    <span style="color:#960050;background-color:#1e0010">&amp;:after</span> <span style="color:#960050;background-color:#1e0010">{</span>
       <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
   }
 <span style="color:#960050;background-color:#1e0010">}</span>
@@ -1146,10 +809,10 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
     <span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#8e44ad</span>; <span style="color:#75715e">/* fallback if no data-id is given */</span>
     <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span>;
 
-    <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">{</span>
+    <span style="color:#960050;background-color:#1e0010">&amp;:before</span> <span style="color:#960050;background-color:#1e0010">{</span>
       <span style="color:#66d9ef">content</span>:attr(data<span style="color:#f92672">-</span>tagname);
     }
-    <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">there</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">s</span> <span style="color:#f92672">always</span> <span style="color:#f92672">a</span> <span style="color:#f92672">triangle</span> <span style="color:#f92672">behind</span> <span style="color:#f92672">it</span>
+    <span style="color:#f92672">//</span> <span style="color:#f92672">there</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">s</span> <span style="color:#f92672">always</span> <span style="color:#f92672">a</span> <span style="color:#f92672">triangle</span> <span style="color:#f92672">behind</span> <span style="color:#f92672">it</span>
     <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">after</span> {
       <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;&#34;</span>;
       <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
@@ -1162,91 +825,42 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
     }
 
 
-    <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">the</span> <span style="color:#f92672">data-id</span> <span style="color:#f92672">controls</span> <span style="color:#f92672">the</span> <span style="color:#f92672">colors</span>
-    <span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">]</span> {
+    <span style="color:#f92672">//</span> <span style="color:#f92672">the</span> <span style="color:#f92672">data-id</span> <span style="color:#f92672">controls</span> <span style="color:#f92672">the</span> <span style="color:#f92672">colors</span>
+    <span style="color:#f92672">&amp;[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">]</span> {
       <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>;
-      <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
+      <span style="color:#960050;background-color:#1e0010">&amp;:after</span> <span style="color:#960050;background-color:#1e0010">{</span>
         <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
       }
     <span style="color:#960050;background-color:#1e0010">}</span>
 
-    <span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">]</span> {
+    <span style="color:#f92672">&amp;[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">]</span> {
       <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-2</span>;
 
-      <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
+      <span style="color:#960050;background-color:#1e0010">&amp;:after</span> <span style="color:#960050;background-color:#1e0010">{</span>
         <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-2</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
       }
     <span style="color:#960050;background-color:#1e0010">}</span>
 
 
-    <span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">]</span> {
+    <span style="color:#f92672">&amp;[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">]</span> {
       <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-3</span>;
 
-      <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
+      <span style="color:#960050;background-color:#1e0010">&amp;:after</span> <span style="color:#960050;background-color:#1e0010">{</span>
         <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-3</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
       }
     <span style="color:#960050;background-color:#1e0010">}</span>
 
-    <span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">]</span> {
+    <span style="color:#f92672">&amp;[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">]</span> {
       <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-4</span>;
 
-      <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
+      <span style="color:#960050;background-color:#1e0010">&amp;:after</span> <span style="color:#960050;background-color:#1e0010">{</span>
         <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-4</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
       }
     <span style="color:#960050;background-color:#1e0010">}</span>
-    <span style="color:#960050;background-color:#1e0010">}</span> <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">tag</span>
+    <span style="color:#960050;background-color:#1e0010">}</span> <span style="color:#f92672">//</span> <span style="color:#f92672">tag</span>
 </code></pre></div><p>A working example can be found <a href="http://codepen.io/kevingimbel/pen/Hpazh">here on CodePen</a>. Special thanks to <a href="http://getdigital.de">getDigital.de</a> for letting me use some of their nerdy Product Images! May the force be with you.</p>
 <p>In case you&rsquo;ve any questions feel free to <a href="http://twitter.com/_kevinatari">tweet me</a> or comment on the <a href="http://codepen.io/kevingimbel/pen/Hpazh">Pen</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Custom Radio Buttons]]></title>
-            <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</id>
-            
-            
-            <published>2013-10-28T00:00:00+00:00</published>
-            <updated>2013-10-28T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface"/><category scheme="https://kevingimbel.de/tags/tutorial" term="tutorial" label="tutorial"/></entry><entry><title type="html">Custom Radio Buttons</title><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</id><published>2013-10-28T00:00:00+00:00</published><updated>2013-10-28T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).</p>
 <p>A few years ago I had to do this once and I remember doing it with an image and <code>background-position</code> but as of today I really love pseudo elements and &ldquo;Look-Ma-No-Image!&quot;. However I decided to use Icon Fonts this time and play around a bit with them. My HTML Markup is very simple:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">data-rate</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rating--star&#34;</span> /&gt;
@@ -1256,7 +870,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 </code></pre></div><p>That&rsquo;s it: A group of <code>radio inputs</code> representing a rating system with 1-5 possible choices. The CSS part is a little bit trickier (note that I&rsquo;m using Sass with SCSS Syntax!)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">rating--star</span> {
   <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#ff7711</span>;
-  <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">{</span>
+  <span style="color:#960050;background-color:#1e0010">&amp;:before</span> <span style="color:#960050;background-color:#1e0010">{</span>
     <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;\2605&#34;</span>;
     <span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
     <span style="color:#66d9ef">font-family</span>:entypo, <span style="color:#66d9ef">sans-serif</span>;
@@ -1274,9 +888,9 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">rating--star</span> {
   <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#ff7711</span>;
 
-  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">)</span>;
+  <span style="color:#960050;background-color:#1e0010">@include</span> <span style="color:#960050;background-color:#1e0010">appearance(none)</span>;
 
-  <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">{</span>
+  <span style="color:#960050;background-color:#1e0010">&amp;:before</span> <span style="color:#960050;background-color:#1e0010">{</span>
     <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;\2605&#34;</span>;
     <span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
     <span style="color:#66d9ef">font-family</span>:entypo, <span style="color:#66d9ef">sans-serif</span>;
@@ -1287,53 +901,7 @@ As always I appreciate feedback or improvments via <a href="http://twitter.com/_
   }
 </code></pre></div><p>The next line says &ldquo;when the input is <code>:checked</code> change the properties of <code>:before</code>&rdquo;. So when it is checked I want the filled Star to show up (&quot;\2606&rdquo;). Seems logical? It&rsquo;s not. <code>\2606</code> is the empty star. So the <code>&amp;:checked ~ :before</code> pseudo holds the icon that should be included if the button is not checked and the <code>:before</code> holds the checked (in this case filled) icon. This is because <code>:checked ~ :before</code> selects every element that is preceded of the <code>:checked</code> element. This comes handy because this also means all inputs display a filled star if we check the last star (and that&rsquo;s exactly what we want).</p>
 <p>A live demo can be found on <a href="http://codepen.io/kevingimbel/pen/kwIgi">CodePen</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/design" term="design" label="design" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[From 0 To Sass]]></title>
-            <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</id>
-            
-            
-            <published>2013-10-02T00:00:00+00:00</published>
-            <updated>2013-10-02T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/interface" term="interface" label="interface"/><category scheme="https://kevingimbel.de/tags/design" term="design" label="design"/></entry><entry><title type="html">From 0 To Sass</title><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</id><published>2013-10-02T00:00:00+00:00</published><updated>2013-10-02T00:00:00+00:00</updated><content type="html"><![CDATA[<p>If you&rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It&rsquo;s fair to say that they&rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
 <p>Even though Pre-Processors are easy to use and setup some people are still confused: <em>Do I have to run them on a server? How do I install them? Why should I use them?</em> - I want to answer all these questions in this article: Getting from 0 to Sass in X Steps!</p>
 <p><strong>Notice:</strong> This guide covers the installation on Linux and Mac only, for Windows support please take a look at <a href="http://www.impressivewebs.com/sass-on-windows/">this tutorial</a>.</p>
 <h3 id="sass-summary">Sass summary</h3>
@@ -1365,11 +933,11 @@ $ gem install compass
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># Require any additional compass plugins here.</span>
 
 <span style="color:#75715e"># Set this to the root of your project when deployed:</span>
-http_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">/</span><span style="color:#e6db74">&#34;</span>
-css_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">assets/css</span><span style="color:#e6db74">&#34;</span>
-sass_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">assets/css</span><span style="color:#e6db74">&#34;</span>
-images_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">assets/img</span><span style="color:#e6db74">&#34;</span>
-javascripts_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">assets/js</span><span style="color:#e6db74">&#34;</span>
+http_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/&#34;</span>
+css_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;assets/css&#34;</span>
+sass_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;assets/css&#34;</span>
+images_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;assets/img&#34;</span>
+javascripts_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;assets/js&#34;</span>
 
 <span style="color:#75715e"># You can select your preferred output style here (can be overridden via the command line):</span>
 <span style="color:#75715e"># output_style = :expanded or :nested or :compact or :compressed</span>
@@ -1416,7 +984,7 @@ $ compass watch
 </code></pre></div><p>Compass is now watching for changes and everytime you save your <code>style.scss</code> it will automatically create an style.css out of it. Still wondering what all of this is about?</p>
 <h3 id="variables">Variables</h3>
 <p>Let&rsquo;s start with Variables because I assume you know what they are and have already seen variables in other programming languages.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Variables</span> <span style="color:#f92672">start</span> <span style="color:#f92672">with</span> <span style="color:#f92672">a</span> <span style="color:#f92672">$</span><span style="color:#f92672">,</span> <span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">Variables</span> <span style="color:#f92672">start</span> <span style="color:#f92672">with</span> <span style="color:#f92672">a</span> <span style="color:#f92672">$,</span> <span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span>
 <span style="color:#f92672">$</span><span style="color:#f92672">main-color</span><span style="color:#f92672">:</span> #85c226<span style="color:#f92672">;</span>
 </code></pre></div><p>Variables must be declared <strong>before</strong> they&rsquo;re used, that&rsquo;s why I recommend to declare all variables at the top of the document (or inside a other stylesheet that can be included, more later on).
 To use a variable you simply write it to the place you want it to be used. Logical, isn&rsquo;t it?</p>
@@ -1432,23 +1000,23 @@ To use a variable you simply write it to the place you want it to be used. Logic
 </code></pre></div><p>Basically that&rsquo;s it. You can store Strings, Colors, and other variables inside a variables. More on variables can be found inside the <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_">Sass Docs</a>.</p>
 <h3 id="mixins">Mixins</h3>
 <p>Mixins are getting a little bit more interesting. They&rsquo;re snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">import</span> <span style="color:#f92672">everything</span> <span style="color:#f92672">that</span> <span style="color:#f92672">compass</span> <span style="color:#f92672">has</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">import</span> <span style="color:#f92672">everything</span> <span style="color:#f92672">that</span> <span style="color:#f92672">compass</span> <span style="color:#f92672">has</span>
 @<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;compass&#34;</span>;
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">import</span> <span style="color:#f92672">special</span> <span style="color:#f92672">library</span> <span style="color:#f92672">(</span><span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span> <span style="color:#f92672">css3</span><span style="color:#f92672">)</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">import</span> <span style="color:#f92672">special</span> <span style="color:#f92672">library</span> <span style="color:#f92672">(</span><span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span> <span style="color:#f92672">css3</span><span style="color:#f92672">)</span>
 @<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;compass/css3&#34;</span>;
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">creating</span> <span style="color:#f92672">a</span> <span style="color:#f92672">mixin</span>
-@<span style="color:#66d9ef">mixin</span> <span style="color:#f92672">border-radius</span><span style="color:#f92672">(</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">)</span> {
-    <span style="color:#f92672">-webkit-border-radius</span><span style="color:#f92672">:</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">-moz-border-radius</span><span style="color:#f92672">:</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">-ms-border-radius</span><span style="color:#f92672">:</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">-o-border-radius</span><span style="color:#f92672">:</span><span style="color:#f92672">$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">creating</span> <span style="color:#f92672">a</span> <span style="color:#f92672">mixin</span>
+@<span style="color:#66d9ef">mixin</span> <span style="color:#f92672">border-radius</span><span style="color:#f92672">($</span><span style="color:#f92672">r</span><span style="color:#f92672">)</span> {
+    <span style="color:#f92672">-webkit-border-radius</span><span style="color:#f92672">:$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">-moz-border-radius</span><span style="color:#f92672">:$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">-ms-border-radius</span><span style="color:#f92672">:$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">-o-border-radius</span><span style="color:#f92672">:$</span><span style="color:#f92672">r</span><span style="color:#f92672">;</span>
 }
 
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">using</span> <span style="color:#f92672">it</span> <span style="color:#f92672">inside</span> <span style="color:#f92672">a</span> <span style="color:#f92672">class</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">using</span> <span style="color:#f92672">it</span> <span style="color:#f92672">inside</span> <span style="color:#f92672">a</span> <span style="color:#f92672">class</span>
 .<span style="color:#a6e22e">my-class</span> {
     <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">em</span>;
     <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
-    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#960050;background-color:#1e0010">5</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">)</span>;
+    <span style="color:#960050;background-color:#1e0010">@include</span> <span style="color:#960050;background-color:#1e0010">border-radius(5px)</span>;
 }
 </code></pre></div><p>The mixin can be created once and then be reused everywhere inside your style.scss - it&rsquo;ll save you a lot of writing whenever you have to apply a border to an object. The <code>border-radius()</code> mixin is also build-in to Compass. The output in style.css will be as following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">my-class</span> {
@@ -1461,10 +1029,10 @@ To use a variable you simply write it to the place you want it to be used. Logic
 }
 </code></pre></div><p>There are more super useful build in function in Sass. Some of my favorite are <code>darken()</code> and <code>lighten()</code> for colors.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">$</span><span style="color:#f92672">my-color</span><span style="color:#f92672">:</span> <span style="color:#f92672">red</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">$</span><span style="color:#f92672">my-color--dark</span><span style="color:#f92672">:</span> <span style="color:#f92672">darken</span><span style="color:#f92672">(</span><span style="color:#f92672">$</span><span style="color:#f92672">my-color</span><span style="color:#f92672">,</span><span style="color:#f92672">10</span><span style="color:#f92672">%</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">this</span> <span style="color:#f92672">will</span> <span style="color:#f92672">produce</span> <span style="color:#f92672">a</span> <span style="color:#f92672">hexadecimal</span> <span style="color:#f92672">code</span> <span style="color:#f92672">(</span><span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span> #132644<span style="color:#f92672">)</span> <span style="color:#f92672">of</span> <span style="color:#f92672">a</span> 
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">color</span> <span style="color:#f92672">that</span> <span style="color:#f92672">is</span> <span style="color:#f92672">10</span><span style="color:#f92672">%</span> <span style="color:#f92672">lighter</span> <span style="color:#f92672">than</span> <span style="color:#f92672">red</span><span style="color:#f92672">.</span>
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">syntax</span><span style="color:#f92672">:</span> 
+<span style="color:#f92672">$</span><span style="color:#f92672">my-color--dark</span><span style="color:#f92672">:</span> <span style="color:#f92672">darken</span><span style="color:#f92672">($</span><span style="color:#f92672">my-color</span><span style="color:#f92672">,</span><span style="color:#f92672">10</span><span style="color:#f92672">%);</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">this</span> <span style="color:#f92672">will</span> <span style="color:#f92672">produce</span> <span style="color:#f92672">a</span> <span style="color:#f92672">hexadecimal</span> <span style="color:#f92672">code</span> <span style="color:#f92672">(</span><span style="color:#f92672">e</span>.<span style="color:#a6e22e">g</span><span style="color:#f92672">.</span> #132644<span style="color:#f92672">)</span> <span style="color:#f92672">of</span> <span style="color:#f92672">a</span> 
+<span style="color:#f92672">//</span> <span style="color:#f92672">color</span> <span style="color:#f92672">that</span> <span style="color:#f92672">is</span> <span style="color:#f92672">10</span><span style="color:#f92672">%</span> <span style="color:#f92672">lighter</span> <span style="color:#f92672">than</span> <span style="color:#f92672">red</span><span style="color:#f92672">.</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">syntax</span><span style="color:#f92672">:</span> 
 <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">lighten</span><span style="color:#f92672">(</span><span style="color:#f92672">color</span><span style="color:#f92672">,</span><span style="color:#f92672">percent</span><span style="color:#f92672">)</span>
 <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">darken</span><span style="color:#f92672">(</span><span style="color:#f92672">color</span><span style="color:#f92672">,</span><span style="color:#f92672">percent</span><span style="color:#f92672">)</span>
 </code></pre></div><h3 id="structure-files-and-folders">Structure, Files and Folders</h3>
@@ -1491,52 +1059,7 @@ If you want to have an example what the <code>style.scss</code> would look like,
 <li><a href="http://compass-style.org/reference/compass/">Compass Docs</a></li>
 <li><a href="http://thesassway.com/">The Sass Way</a></li>
 </ul>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[A bit sticky]]></title>
-            <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</id>
-            
-            
-            <published>2013-09-20T00:00:00+00:00</published>
-            <updated>2013-09-20T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I just stumbled upon a very handy CSS Property: <code>position:sticky</code>. As far as I found out it&rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass"/><category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling"/></entry><entry><title type="html">A bit sticky</title><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</id><published>2013-09-20T00:00:00+00:00</published><updated>2013-09-20T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I just stumbled upon a very handy CSS Property: <code>position:sticky</code>. As far as I found out it&rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).</p>
 <p><code>position:sticky</code> is a pretty handy feature that allows you to stick an element to the top of the page (or wherever you want) until the parent element is moved out of the screen.</p>
 <h3 id="basic-markup">Basic Markup</h3>
 <p>To get an idea of how <code>position:sticky</code> works I made some basic markup.</p>
@@ -1549,7 +1072,7 @@ If you want to have an example what the <code>style.scss</code> would look like,
 &lt;/<span style="color:#f92672">article</span>&gt;
 </code></pre></div><h4 id="css">CSS</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">single__article</span> {
-    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">c</span> <span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span>
+    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">classic</span> <span style="color:#960050;background-color:#1e0010">article</span> <span style="color:#960050;background-color:#1e0010">styles</span>
 }
 
 .<span style="color:#a6e22e">single__article--header</span> {
@@ -1587,32 +1110,4 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
 <ul>
 <li><a href="http://updates.html5rocks.com/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit">HTML5 Rocks</a></li>
 </ul>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/></entry></feed>

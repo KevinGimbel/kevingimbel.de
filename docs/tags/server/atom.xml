@@ -1,35 +1,213 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[server on KevOps]]></title>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">server on KevOps</title><link href="https://kevingimbel.de/tags/server/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/server/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/server/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/server/</id><entry><title type="html">Docker Apache Proxy Setup</title><link href="https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2"/><link href="https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/?utm_source=atom_feed" rel="related" type="text/html" title="Gotcha: dockerignore"/><id>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</id><published>2020-05-05T00:00:00+00:00</published><updated>2020-05-05T00:00:00+00:00</updated><content type="html"><![CDATA[<p>In this post I&rsquo;d like to detail how I am managing docker containers behind an apache2 proxy on a Ubuntu 18.04. server. I&rsquo;m using one Apache server to route traffic from multiple sub-domains to docker containers all running with docker-compose. This setup is <em>not</em> automated and the containers do not need to interact with each other; It&rsquo;s just how I run software for my private usage.</p>
+<h2 id="overview">Overview</h2>
+<p>Let&rsquo;s start with an overview image, because this can be quite confusing.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2020/docker-apache-proxy/apache-docker-server-diagram.svg"
+      alt="A diagram showing how traffic comes through Apache and is routed to different docker containers exposing services on different TCP ports"
+       />
     
-    
-    
-            <link href="https://kevingimbel.de/tags/server/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/server/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/server/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/server/</id>
-    
+  
+  <figcaption>
+    <p>
+      A diagram showing how traffic comes through Apache and is routed to different docker containers exposing services on different TCP ports
+      
         
-        <entry>
-            <title type="html"><![CDATA[Auto SSL With apache2]]></title>
-            <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Using Archetypes in Hugo" />
-                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-            
-                <id>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</id>
-            
-            
-            <published>2020-01-08T00:00:00+00:00</published>
-            <updated>2020-01-13T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>The diagram shows how traffic comes from the public internet and hits Apache. This happens for example when you type <a href="https://kevingimbel.de">https://kevingimbel.de</a> into your browser and hit enter. Apache then decides which service running should respond to the request, in most scenarios this will be some PHP code (like WordPress). When we want to use NodeJS or run software from docker we usually do not bind to port 80 (HTTP) or 443 (HTTPS) directly. Instead we need to proxy the request.</p>
+<p>In order to make our services accessible without knowing the ports of each container we&rsquo;ll setup a virtual host in Apache.</p>
+<p>The goal is:</p>
+<ul>
+<li>Access each service through a nice domain (like <code>app1.kevingimbel.de</code> instead of <code>kevingimbel.de:8081</code>)</li>
+<li>Have SSL for every service</li>
+<li>Get new certificates automatically</li>
+</ul>
+<h2 id="starting-services-with-docker-compose">Starting services with docker-compose</h2>
+<p>We&rsquo;ll start with the docker service. As an example I&rsquo;m using one of my projects, <a href="https://github.com/kevingimbel/fakedata_server"><code>fakedata_server</code></a>.</p>
+<p>The docker compose file looks like this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#34;3&#34;</span>
+
+<span style="color:#66d9ef">services</span>:
+    <span style="color:#66d9ef">fakedata_server</span>:
+        <span style="color:#66d9ef">image</span>: kevingimbel/fakedata_server:latest
+        <span style="color:#66d9ef">ports</span>:
+            - <span style="color:#ae81ff">8085</span>:<span style="color:#ae81ff">8000</span>
+        <span style="color:#66d9ef">restart</span>: unless-stopped
+</code></pre></div><p>We can place this in some directory, I&rsquo;m usually using <code>$HOME/app-name</code>, so for example <code>/home/myuser/fakedata-server/docker-compose.yml</code>. Then we can run <code>docker-compose up -d</code>. The service will now run and restart forever until it is stopped.</p>
+<p>If we use <code>curl</code> we can reach the service.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -vL localhost:8085
+curl -vL localhost:8085
+* Rebuilt URL to: localhost:8085/
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost <span style="color:#f92672">(</span>127.0.0.1<span style="color:#f92672">)</span> port <span style="color:#ae81ff">8085</span> <span style="color:#f92672">(</span><span style="color:#75715e">#0)</span>
+&gt; GET / HTTP/1.1
+&gt; Host: localhost:8085
+&gt; User-Agent: curl/7.58.0
+&gt; Accept: */*
+&gt;
+&lt; HTTP/1.1 <span style="color:#ae81ff">200</span> OK
+&lt; Content-Type: text/plain; charset<span style="color:#f92672">=</span>utf-8
+&lt; Server: Rocket
+&lt; Content-Length: <span style="color:#ae81ff">515</span>
+&lt; Date: Tue, <span style="color:#ae81ff">05</span> May <span style="color:#ae81ff">2020</span> 09:35:45 GMT
+&lt;
+
+Welcome to the fakedata_generator example implementation as a web server
+
+Available routes:
+
+    /gen/email
+    /gen/username
+    /gen/domain
+    /gen/http_method
+    /gen/ipv4
+    /gen/enum_r/&lt;input&gt;
+    /gen/corpora/&lt;input&gt;
+
+
+Inputs:
+
+/gen/enum_r/&lt;input&gt;
+Specify input as comma-seperated strings, e.g.
+/gen/enum_r/hello,world,this,is,a,tes
+/gen/enum/horse,cat,dog
+/gen/enum/active,inactive,unknown
+
+
+/gen/corpora/&lt;input&gt;
+Specify a corpora dataset, e.g.
+/gen/corpora/horse
+/gen/corpora/cat
+/gen/corpora/fabric
+
+* Connection <span style="color:#75715e">#0 to host localhost left intact</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl localhost:8085/gen/email
+benefritz@make.org
+</code></pre></div><p>The service is working. Yay! Off to the next topic!</p>
+<h2 id="proxying-with-apache2">Proxying with apache2</h2>
+<p>Now that we have a service running we want to make it accessible with a nice clean URL. We&rsquo;ll use <code>fs.bullgit.science</code> for this purpose, because that&rsquo;s where the service is actually running: <a href="https://fs.bullgit.science/">https://fs.bullgit.science</a>.</p>
+<p>First we need to create some apache files:</p>
+<ul>
+<li>Virtual Host in <code>/etc/apache2/sites-available/fakedata-server.conf</code></li>
+<li>Generic Domain config in <code>/etc/apache2/sites-available/domains.conf</code></li>
+</ul>
+<h3 id="virtual-host">Virtual Host</h3>
+<p>The virtual host only contains proxy commands and redirects. We want to redirect all HTTP traffic to HTTPS and all HTTPS traffic should be proxied to the port out service is running on (<code>8085</code> in the example above).</p>
+<p>The first part of the config is the redirect. Important here is the <strong>ServerName</strong>! This tells apache for which sub-domain this virtual host should be routed to!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#960050;background-color:#1e0010">*:80</span><span style="color:#f92672">&gt;</span>
+	ServerName fs.bullgit.science
+	Redirect permanent / https://fs.bullgit.science/
+<span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</code></pre></div><p>The next part is the SSL/HTTPS handler. After the redirect this handler will do the proxying.</p>
+<section class="side-by-side align-top">
+  
+
+<div class="left ">
+    <ul>
+<li>
+<p><code>ServerName</code> tells apache which virtual host to use (if we have multiple)</p>
+</li>
+<li>
+<p><code>SSLEngine On</code> turns on SSL encryption</p>
+</li>
+</ul>
+<p>This is all that is needed in the virtual host for the auto-ssl feature! The rest of the config will be handled in the <code>domains.conf</code> as described below.</p>
+<ul>
+<li>
+<p><code>ProxyPreserveHost On</code> passes on the <code>Host</code> header from the request (see <a href="https://httpd.apache.org/docs/current/mod/mod_proxy.html#proxypreservehost">documentation</a>)</p>
+</li>
+<li>
+<p><code>ProxyPass / http://127.0.0.1:8085/</code> - this tells apache to sent the traffic to port 8085 on localhost (<code>127.0.0.1</code> is always the IP of the local server)</p>
+</li>
+<li>
+<p><code>ProxyPassReverse / http://127.0.0.1:8085/</code></p>
+</li>
+</ul>
+<p>The last two lines just give some extra logs, it&rsquo;s always good to have them in case something doesn&rsquo;t work or if a tool like <a href="https://fail2ban.org">fail2ban</a> should be used.</p>
+<ul>
+<li><code>ErrorLog ${APACHE_LOG_DIR}/fs.bullgit.science-error.log</code></li>
+<li><code>CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined</code></li>
+</ul>
+ </div>
+
+<div class="right small">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#960050;background-color:#1e0010">*:443</span><span style="color:#f92672">&gt;</span>
+	ServerName fs.bullgit.science
+
+	SSLEngine On
+
+	ProxyPreserveHost On
+
+	ProxyPass / http://127.0.0.1:8085/
+	ProxyPassReverse / http://127.0.0.1:8085/
+
+	ErrorLog ${APACHE_LOG_DIR}/fs.bullgit.science-error.log
+	CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined
+<span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</code></pre></div> </div>
+
+
+</section>
+
+<p>You can view the full apache2 configuration below.</p>
+<details>
+    <summary>Click to view file /etc/apache2/sites-available/fakedata-server.conf</summary>
+    
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#960050;background-color:#1e0010">*:80</span><span style="color:#f92672">&gt;</span>
+	ServerName fs.bullgit.science
+	Redirect permanent / https://fs.bullgit.science/
+<span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+
+<span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#960050;background-color:#1e0010">*:443</span><span style="color:#f92672">&gt;</span>
+	ServerName fs.bullgit.science
+
+	SSLEngine On
+
+	ProxyPreserveHost On
+
+	ProxyPass / http://127.0.0.1:8085/
+	ProxyPassReverse / http://127.0.0.1:8085/
+
+	ErrorLog ${APACHE_LOG_DIR}/fs.bullgit.science-error.log
+	CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined
+<span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</code></pre></div> 
+</details>
+<p>The <code>domains.conf</code> is our SSL config. We will add all sub-domains we want to have covered by our SSL certificate to this configuration. The details on how to enable mod_md for automatic SSL certs with apache2 are written below, the config file looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">ServerAdmin mailto:yourname@yourserver.com
+MDCertificateAgreement accepted
+MDomain bullgit.science fs.bullgit.science service-b.bullgit.science
+
+<span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#960050;background-color:#1e0010">_default_:*</span><span style="color:#f92672">&gt;</span>
+	DocumentRoot &#34;/var/www/html/&#34;
+<span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</code></pre></div><p>The above config will generate a SSL certificate valid for the domains:</p>
+<ul>
+<li><code>bullgit.science</code></li>
+<li><code>fs.bullgit.science</code></li>
+<li><code>service-b.bullgit.science</code></li>
+</ul>
+<p>I&rsquo;ve written about <a href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/" title="Read more about managing SSL certificates with Apache2">Auto-SSL with Apache2</a> in the past and I&rsquo;m using this feature for my docker containers, too. This way I can have free SSL certificates without the need to manage anything manually.</p>
+<p>The Server must run Apache 2.4.30 or newer in order to use the Auto-SSL feature. Instructions on how to upgrade can be found <a href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/" title="Read more about managing SSL certificates with Apache2">in my article on Apache2 and Auto-SSL</a>.</p>
+<p>Once everything is setup we need to enable the configs.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo a2ensite fakedata-server.conf domains.conf
+</code></pre></div><p>and then restart the apache2 server.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart apache2
+</code></pre></div><section class="note ">
+    <span class="note__heading">NOTE</span>
+    
+    <p>It appears that apache needs to be <em>restarted</em> not just <em>reloaded</em> when a new subdomain is added to the certificate!</p> 
+</section>
+<p>Now you should be able to access the docker container on a subdomain. For example, <a href="https://fs.bullgit.science/">fs.bullgit.science</a>.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend"/><category scheme="https://kevingimbel.de/tags/server" term="server" label="server"/><category scheme="https://kevingimbel.de/tags/apache2" term="apache2" label="apache2"/><category scheme="https://kevingimbel.de/tags/docker" term="docker" label="docker"/><category scheme="https://kevingimbel.de/tags/proxy" term="proxy" label="proxy"/><category scheme="https://kevingimbel.de/tags/httpd" term="httpd" label="httpd"/></entry><entry><title type="html">Auto SSL With apache2</title><link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Using Archetypes in Hugo"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><id>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</id><published>2020-01-08T00:00:00+00:00</published><updated>2020-01-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Apache 2.4.30 and later supports an experimental module called <code>mod_md</code> which allows automatic SSL certificate management with Let&rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up <a href="https://certbot.eff.org/">certbot</a> and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.</p>
 <p>This guide assumes the operating system is <em>Ubuntu</em>! If you use a different distro some commands may be different.</p>
 <h2 id="installing-a-new-apache-version">Installing a new apache version</h2>
 <p>Since <code>mod_md</code> is only available with Apache 2.4.30+ we need a fairly new apache version. Sadly, the newest on Ubuntu 18.04. is 2.4.29, so we need to add a new ppa to install from first. <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">ondrej/apache2</a> seems to be what most people use and recommend, so we&rsquo;ll add this.</p>
@@ -54,12 +232,12 @@ MDomain test.kevingimbel.de
 <span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:80</span><span style="color:#f92672">&gt;</span>
         ServerName test.kevingimbel.de
         <span style="color:#960050;background-color:#1e0010">[</span>...<span style="color:#960050;background-color:#1e0010">]</span>
-<span style="color:#f92672">&lt;/VirtualHost</span><span style="color:#e6db74"></span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/VirtualHost&gt;</span>
 
 <span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:443</span><span style="color:#f92672">&gt;</span>
         ServerName test.kevingimbel.de
         <span style="color:#960050;background-color:#1e0010">[</span>...<span style="color:#960050;background-color:#1e0010">]</span>
-<span style="color:#f92672">&lt;/VirtualHost</span><span style="color:#e6db74"></span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/VirtualHost&gt;</span>
 </code></pre></div><p>The following values are required for <code>mod_md</code> to work properly:</p>
 <ul>
 <li><code>ServerAdmin</code> with valid e-mail address</li>
@@ -77,46 +255,4 @@ MDomain test.kevingimbel.de
 <li>Replaced double &ldquo;supports&rdquo; in first sentence with &ldquo;allows&rdquo; and &ldquo;setup&rdquo; with &ldquo;management&rdquo;</li>
 <li>Replaced &ldquo;setups&rdquo; with &ldquo;setup and renewal&rdquo; in sub headline</li>
 </ul>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/apache" term="apache" label="apache" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/server" term="server" label="server" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/ssl" term="ssl" label="ssl" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/ubuntu" term="ubuntu" label="ubuntu" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/linux" term="linux" label="linux" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/tags/apache" term="apache" label="apache"/><category scheme="https://kevingimbel.de/tags/server" term="server" label="server"/><category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation"/><category scheme="https://kevingimbel.de/tags/security" term="security" label="security"/><category scheme="https://kevingimbel.de/tags/ssl" term="ssl" label="ssl"/><category scheme="https://kevingimbel.de/tags/ubuntu" term="ubuntu" label="ubuntu"/><category scheme="https://kevingimbel.de/tags/linux" term="linux" label="linux"/></entry></feed>

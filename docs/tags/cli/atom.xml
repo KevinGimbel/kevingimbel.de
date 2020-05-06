@@ -1,37 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[cli on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/cli/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/cli/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/cli/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/cli/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Terrasave]]></title>
-            <link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://kevingimbel.de/blog/2018/04/til-bash-select/?utm_source=atom_feed" rel="related" type="text/html" title="TIL: Bash select" />
-                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
-            
-                <id>https://kevingimbel.de/blog/2020/04/terrasave/</id>
-            
-            
-            <published>2020-04-24T00:00:00+00:00</published>
-            <updated>2020-04-24T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I just released a tiny tool function I&rsquo;ve been using for some time called <a href="https://github.com/kevingimbel/terrasave" title="View terrasave source code on GitHub">terrasave</a>. It&rsquo;s a Bash / Fish function that prevents you from running <code>terraform</code> without the <code>-target</code> option.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">cli on KevOps</title><link href="https://kevingimbel.de/tags/cli/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/cli/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/cli/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/cli/</id><entry><title type="html">Terrasave</title><link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><link href="https://kevingimbel.de/blog/2018/04/til-bash-select/?utm_source=atom_feed" rel="related" type="text/html" title="TIL: Bash select"/><link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git"/><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools"/><id>https://kevingimbel.de/blog/2020/04/terrasave/</id><published>2020-04-24T00:00:00+00:00</published><updated>2020-04-24T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I just released a tiny tool function I&rsquo;ve been using for some time called <a href="https://github.com/kevingimbel/terrasave" title="View terrasave source code on GitHub">terrasave</a>. It&rsquo;s a Bash / Fish function that prevents you from running <code>terraform</code> without the <code>-target</code> option.</p>
 <h2 id="why-does-this-exist">Why does this exist?</h2>
 <p>In terraform it is incredibly easy to destroy things with <code>terraform apply</code>. If you run apply terraform shows a huge output and sometimes you may overlook a thing being &ldquo;replaced&rdquo; instead of updated. Once upon a time I destroyed a MongoDB Atlas Cluster this way and lost all its data, because the &ldquo;must be replaced&rdquo; was hidden in a lot of terraform output and I simply didn&rsquo;t see it. I only realized when terraform logged &ldquo;Still destroying cluster&hellip;&rdquo; to the console.</p>
 <p>Some terraform resources, like Amazon ECS Services, are not idempotent, so they change on every apply. This cluttered my terminal with stuff I could ignore on every change as well as unnecessary updates to the infra (ECS Services being replaced despite no changes were made).</p>
@@ -43,73 +10,20 @@ Please run <span style="color:#e6db74">&#34;terraform apply&#34;</span> with -ta
 </code></pre></div><p>If you <strong>must</strong> run terraform without a target you can do so by specifying an environment variable:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ TERRAFORM_SAVE_DISABLE_I_KNOW_WHAT_I_DO<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> terraform apply
 </code></pre></div><p>You can get the source code and installation instructions on <a href="https://github.com/kevingimbel/terrasave">github.com/kevingimbel/terrasave</a>. Hopefully this little tool will save your infra. :)</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/devops" term="devops" label="devops" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/terraform" term="terraform" label="terraform" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/fish" term="fish" label="fish" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Bash script: ws]]></title>
-            <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-            
-                <id>https://kevingimbel.de/blog/2017/01/bash-script-ws/</id>
-            
-            
-            <published>2017-01-12T19:22:48+01:00</published>
-            <updated>2017-01-12T19:22:48+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>For the past year or so I had a little function in my <code>.bash_profile</code> file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called <code>ws</code> and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the <code>~/Development</code> directory. If I want to get to a project I would normally navigate like <code>cd ~/Development/private/github/kevingimbel/kevingimbel.com</code> - even with tab completion I am too lazy to type this every time I want to work on my website, so I wrote a script for it!</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/devops" term="devops" label="devops"/><category scheme="https://kevingimbel.de/tags/terraform" term="terraform" label="terraform"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/><category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash"/><category scheme="https://kevingimbel.de/tags/fish" term="fish" label="fish"/></entry><entry><title type="html">Bash script: ws</title><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><id>https://kevingimbel.de/blog/2017/01/bash-script-ws/</id><published>2017-01-12T19:22:48+01:00</published><updated>2017-01-12T19:22:48+01:00</updated><content type="html"><![CDATA[<p>For the past year or so I had a little function in my <code>.bash_profile</code> file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called <code>ws</code> and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the <code>~/Development</code> directory. If I want to get to a project I would normally navigate like <code>cd ~/Development/private/github/kevingimbel/kevingimbel.com</code> - even with tab completion I am too lazy to type this every time I want to work on my website, so I wrote a script for it!</p>
 <h3 id="the-script-ws">The script: <code>ws</code></h3>
 <p>The script is actually a shell function and it looks like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">function</span> ws<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-  local workspace<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/Development</span><span style="color:#e6db74">&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">function</span> ws<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  local workspace<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/Development&#34;</span>
 	<span style="color:#75715e"># $1 is the target directory</span>
   local target_dir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
   <span style="color:#75715e"># We start searching from the workspace dir</span>
   cd $workspace
   <span style="color:#75715e"># -maxdepth is the max directories to go &#34;down&#34;</span>
   <span style="color:#75715e"># head -n1 gives back the first result</span>
-  workspace_path<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find . -maxdepth <span style="color:#ae81ff">3</span> -type d -name <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*</span>$target_dir<span style="color:#e6db74">*</span><span style="color:#e6db74">&#34;</span> | head -n1<span style="color:#66d9ef">)</span>
+  workspace_path<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find . -maxdepth <span style="color:#ae81ff">3</span> -type d -name <span style="color:#e6db74">&#34;*</span>$target_dir<span style="color:#e6db74">*&#34;</span> | head -n1<span style="color:#66d9ef">)</span>
   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+    echo <span style="color:#e6db74">&#34;Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">else</span>
     cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">fi</span>
@@ -125,7 +39,7 @@ Please run <span style="color:#e6db74">&#34;terraform apply&#34;</span> with -ta
 </ul>
 <p><code>$workspace_path</code> now holds whatever directory was found - or nothing. This is why we check if it is empty (<code>-z &quot;$workspace_path&quot;</code>) in the <code>if</code> block.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-  echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+  echo <span style="color:#e6db74">&#34;Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">else</span>
   cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
@@ -151,65 +65,7 @@ Please run <span style="color:#e6db74">&#34;terraform apply&#34;</span> with -ta
 </figure>
 
 <p>I am sure the <code>ws</code> function can be improved more but it has served my needs well so far. One optimisation might be to use the second argument, <code>$2</code>, as parameter for <code>-maxdepth</code>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Writing NodeJS cli tools]]></title>
-            <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-            
-                <id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id>
-            
-            
-            <published>2017-01-09T18:02:48+01:00</published>
-            <updated>2017-01-09T18:02:48+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/><category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash"/><category scheme="https://kevingimbel.de/tags/scripting" term="scripting" label="scripting"/><category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/></entry><entry><title type="html">Writing NodeJS cli tools</title><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id><published>2017-01-09T18:02:48+01:00</published><updated>2017-01-09T18:02:48+01:00</updated><content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
 <h3 id="shebang">Shebang</h3>
 <blockquote>
 <p>If you already know what a Shebang is skip to <a href="/writing-nodejs-cli-tools/#writing-a-tiny-node-cli-script">the next section</a></p>
@@ -266,7 +122,7 @@ echo &quot;Hello World!&quot;
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">#!/usr/bin/env node
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> () =&gt; {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USER</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USER</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
 }
 
 <span style="color:#a6e22e">sayHello</span>()
@@ -345,38 +201,4 @@ echo &quot;Hello World!&quot;
 <li>can utilize lots of Node packages</li>
 </ul>
 <p>And that&rsquo;s it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/></entry></feed>

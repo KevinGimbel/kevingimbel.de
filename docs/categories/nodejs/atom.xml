@@ -1,38 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[nodejs on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/categories/nodejs/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/categories/nodejs/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/categories/nodejs/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/categories/nodejs/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Writing NodeJS cli tools]]></title>
-            <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-            
-                <id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id>
-            
-            
-            <published>2017-01-09T18:02:48+01:00</published>
-            <updated>2017-01-09T18:02:48+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">nodejs on KevOps</title><link href="https://kevingimbel.de/categories/nodejs/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/categories/nodejs/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/categories/nodejs/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/categories/nodejs/</id><entry><title type="html">Writing NodeJS cli tools</title><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id><published>2017-01-09T18:02:48+01:00</published><updated>2017-01-09T18:02:48+01:00</updated><content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
 <h3 id="shebang">Shebang</h3>
 <blockquote>
 <p>If you already know what a Shebang is skip to <a href="/writing-nodejs-cli-tools/#writing-a-tiny-node-cli-script">the next section</a></p>
@@ -89,7 +55,7 @@ echo &quot;Hello World!&quot;
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">#!/usr/bin/env node
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> () =&gt; {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USER</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USER</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
 }
 
 <span style="color:#a6e22e">sayHello</span>()
@@ -168,57 +134,7 @@ echo &quot;Hello World!&quot;
 <li>can utilize lots of Node packages</li>
 </ul>
 <p>And that&rsquo;s it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Snippet: SASS Source Maps with Gulp]]></title>
-            <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-            
-                <id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id>
-            
-            
-            <published>2015-01-22T00:00:00+00:00</published>
-            <updated>2015-01-22T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/></entry><entry><title type="html">Snippet: SASS Source Maps with Gulp</title><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id><published>2015-01-22T00:00:00+00:00</published><updated>2015-01-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
@@ -262,43 +178,5 @@ image to view it in full-size.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;production&#39;</span>, [<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#39;autoprefix&#39;</span>];
 
 <span style="color:#75715e">// Use the following command to keep out Source Maps.
-</span><span style="color:#75715e"></span><span style="color:#75715e">// $ gulp production
-</span></code></pre></div>]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+</span><span style="color:#75715e">// $ gulp production
+</span></code></pre></div>]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp"/><category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/></entry></feed>

@@ -1,25 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Art on KevOps</title>
-    <link>https://kevingimbel.de/art/</link>
-    <description>Recent content in Art on KevOps</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kevingimbel.de/art/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Mastodon Headers</title>
-      <link>https://kevingimbel.de/art/2020/01/mastodon-headers/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/art/2020/01/mastodon-headers/</guid>
-      <description>Below are some Mastodon headers I made for my Mastodon profile. All color schemes are taken from the @accessibleColors bot which posts random matching accessible colors on Mastodon.
-Feel free to use these headers for any non-commercial thing you want.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Art on KevOps</title><link>https://kevingimbel.de/art/</link><description>Recent content in Art on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/art/index.xml" rel="self" type="application/rss+xml"/><item><title>Mastodon Headers</title><link>https://kevingimbel.de/art/2020/01/mastodon-headers/</link><pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/art/2020/01/mastodon-headers/</guid><description>Below are some Mastodon headers I made for my Mastodon profile. All color schemes are taken from the @accessibleColors bot which posts random matching accessible colors on Mastodon.
+Feel free to use these headers for any non-commercial thing you want.</description></item></channel></rss>

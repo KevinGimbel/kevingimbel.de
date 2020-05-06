@@ -1,33 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[diy on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/diy/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/diy/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/diy/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/diy/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[DIY Iced Tea]]></title>
-            <link href="https://kevingimbel.de/blog/2020/04/diy-iced-tea/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2020/04/diy-iced-tea/</id>
-            
-            
-            <published>2020-04-29T00:00:00+00:00</published>
-            <updated>2020-04-29T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>A few days ago I made my own Iced Tea and I thought I&rsquo;d share this quick &lsquo;n easy recipe on the blog.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">diy on KevOps</title><link href="https://kevingimbel.de/tags/diy/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/diy/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/diy/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/diy/</id><entry><title type="html">DIY Iced Tea</title><link href="https://kevingimbel.de/blog/2020/04/diy-iced-tea/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2020/04/diy-iced-tea/</id><published>2020-04-29T00:00:00+00:00</published><updated>2020-04-29T00:00:00+00:00</updated><content type="html"><![CDATA[<p>A few days ago I made my own Iced Tea and I thought I&rsquo;d share this quick &lsquo;n easy recipe on the blog.</p>
 <section class="side-by-side align-top">
   
 <div class="left "> 
@@ -59,36 +30,4 @@
 </section>
 
 <p>I left mine in the fridge to let it cool off until the next day. As a bottle I used an old Club Mate Bottle, I usually keep a few of them around for DIY drinks. Hope you enjoy! 🍵🥶</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/recipe" term="recipe" label="recipe" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/drink" term="drink" label="drink" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/summer" term="summer" label="summer" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/selfmade" term="selfmade" label="selfmade" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/diy" term="diy" label="diy" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/recipe" term="recipe" label="recipe"/><category scheme="https://kevingimbel.de/tags/drink" term="drink" label="drink"/><category scheme="https://kevingimbel.de/tags/summer" term="summer" label="summer"/><category scheme="https://kevingimbel.de/tags/selfmade" term="selfmade" label="selfmade"/><category scheme="https://kevingimbel.de/tags/diy" term="diy" label="diy"/></entry></feed>

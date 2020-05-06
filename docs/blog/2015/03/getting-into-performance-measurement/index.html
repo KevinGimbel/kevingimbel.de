@@ -1,227 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Getting into Performance Measurement &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords="javascript tools css  blog coding tutorial frontend  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <script type="text/javascript">
-    (function(window, document, undefined) {
-        let theme = window.localStorage.getItem("kgde_theme");
-        console.log(theme);
-        if (theme) {
-            var [colorMain, colorSecondary] = JSON.parse(theme).colors;
-            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-        } else {
-            
-            
-            let themes = [
-                ["#123D3C", "#90F072"],
-                ["#403D58", "#dea584"],
-                ["#400E3B", "#DCC78A"],
-                ["#17098D", "#EADD1C"],
-                ["#233B07", "#FFDD6D"]
-            ]
-            var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
-            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            let schema_btn = document.querySelector("#btn_schema");
-            let theme = window.localStorage.getItem("kgde_theme");
-            if (theme) {
-                schema_btn.textContent = "Use random color theme";
-            } else {
-                schema_btn.textContent = "Keep current color theme";
-            }
-            schema_btn.style.display = "block";
-            schema_btn.addEventListener('click', function(e) {
-                if (theme) {
-                    window.localStorage.removeItem("kgde_theme");
-                    window.reload();
-                } else {
-                    window.localStorage.setItem("kgde_theme", JSON.stringify({colors: [colorMain, colorSecondary]}));
-                }
-            });
-        });
-    }(window, document));
-    </script>
-    <header class="intro-text">
-        <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
-        <span>
-        
-        
-        Getting into Performance Measurement
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            
-
-
-
-
-
-<section class="age-note">
-    <h2>ATTENTION!</h2>
-    <p>This article is over 4 years old, it may be outdated!</p>
-</section>
-
-
-
-<p>Written on <time datetime="2015-03-10 00:00:00 &#43;0000 UTC">10. Mar 2015</time>  </p>
-            <p>I&rsquo;ve spent the past week developing some features for our own website at work.
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Getting into Performance Measurement &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="javascript tools css  blog coding tutorial frontend"><link rel=icon href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIj7wn5u4PC90ZXh0Pjwvc3ZnPg=="><style type=text/css>*{margin:0;padding:0;box-sizing:inherit}:root{--color-main: #403D58;--color-secondary: #dea584}html,body{box-sizing:border-box;font:18px/1.65 monospace}a{color:var(--color-main);font-weight:700}.footer a,.author a,.intro-text a{color:var(--color-secondary);font-weight:700}.fg-accent{color:var(--color-secondary)}.x-small{font-size:.85rem}.xx-small{font-size:.65rem}h1{font-size:2rem}.article-content h2,.article-content h3{margin-top:2rem}.section-headline{font-size:2.75em;margin-top:2rem}.section-headline,h1,h2{display:inline-block;position:relative;z-index:2;color:var(--color-main)}.section-headline::after,h1::after,h2::after{content:"";width:100%;display:block;height:.35em;background:var(--color-secondary);bottom:.3em;position:absolute;left:0;z-index:-1}.intro-text{padding:2rem;background:#222;color:#fff;font-size:140%}.main,.footer{max-width:85rem;width:100%;margin:0 auto;padding:2rem}hr{border:none;background:var(--color-main);height:2px}.footer{background:#222;color:#fff}.main{background:#f1f1f1;border:1px solid #ddd;border-bottom:0;min-height:100vh;padding:2rem 2rem 0}.main p{margin-top:1rem;margin-bottom:1.5rem}.exif{padding:.5rem;background:var(--color-secondary)}.exif li{display:inline-block;background:#333;color:#ccc;border-radius:3px;padding:.125rem .5rem;font-size:.8rem}.exif .label{font-size:.75rem}@media all and (max-width:800px){.exif li{margin-top:.5rem}}figure img,figure picture{margin:0 auto;display:block;height:auto;width:auto;margin:0 auto}.photography figure img,.photography figure picture{width:auto;max-width:calc(100% + 2rem + 1px)}figcaption p{display:block;line-height:1.65;background:var(--color-secondary);color:#fff;margin-top:0;padding:.5rem;text-align:right;font-size:var(--font-small,.85rem)}figure{position:relative;z-index:1;margin-left:calc(0rem - 2rem)}figure+figure{margin-top:2rem}figcaption{display:flex;justify-content:flex-end}figcaption p{margin:0!important;background:var(--color-secondary);color:var(--color-main);font-size:.85em}@media all and (min-width:800px){figure{width:auto;max-width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px)}figcaption p{width:50%}}p code,li code{background:var(--color-secondary);color:var(--color-main);padding:.125rem .25rem;border-radius:3px}.highlight{margin-left:calc(0rem - 2rem);width:calc(100% + 4rem)}.nav-main{list-style:none;width:100%;background:#222}.nav-main li{display:inline-block;padding:.25rem 1rem;background:var(--color-main)}.nav-main li a{color:#fff;text-decoration:none}.page-nav{width:calc(100% + 4rem);background:var(--color-secondary);margin:2rem calc(0rem - 2rem);padding:2rem}.page-nav a:not(:last-of-type){margin-right:.5rem}.subscribe-via{width:calc(100% + 4rem);background:var(--color-main);color:#fff;margin-left:calc(0rem - 2rem);margin-top:-2rem;padding:.5rem 2rem}.subscribe-via a{color:#fff}.page-nav--label{display:block;font-size:.75em}.article-content{padding-bottom:2rem}.article-content ol,.article-content ul{margin-left:2rem}.article-list__header{margin-bottom:2rem}.article.article--in-list{padding-bottom:1rem}.article.article--in-list:not(:last-of-type){margin-bottom:2rem}.article.article--in-list:not(:last-of-type):after{content:"";width:80%;text-align:center;height:1px;border-bottom:.15rem dashed var(--color-main);display:block;margin:2rem auto 0}pre{padding:1rem;overflow:auto}.tag-list__item{display:inline-block;background:var(--color-main);color:var(--color-secondary);border-radius:3px;padding:.125rem .25rem;margin-bottom:.5rem}.tag-list__item a{color:var(--color-secondary)}@media all and (min-width:800px){.footer,.author,.support{display:flex;justify-content:space-between}.author .left,.support .left,.footer .left{margin-bottom:0}}.author .left,.support .left,.footer .left{margin-bottom:2rem}.author,.support{background:var(--color-main);color:#fff;padding:4rem 2rem;width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px)}.support+.author{margin-top:0}.support{background:var(--color-secondary);color:var(--color-main);flex-direction:column}.support a{color:var(--color-main)}.author p,.support p{margin-bottom:0}@media all and (min-width:800px){.author .right{padding-left:2rem}.author .avatar{margin-left:2rem}}.author .avatar{max-width:200px;transition:all linear 60s}.author .avatar:hover{animation:avatar-hue linear 15s infinite}@keyframes avatar-hue{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}.age-note{background:#d46767;border:.35rem solid #b22222;padding:1rem 2rem;width:calc(100% + 4rem + 2px);margin-left:-2rem;margin-top:-2rem;color:#222}.tags-categories,.license{background:#d3d3d3;width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px);padding:2rem}.side-by-side img{width:auto;max-width:100%}@media all and (min-width:640px){.tags-categories{display:flex}.tags-categories .tags{margin-left:2rem}.side-by-side{display:flex;flex-direction:row;align-items:center;margin:2rem 0}.side-by-side.align-top{align-items:flex-start}.side-by-side.align-bottom{align-items:flex-end}.side-by-side__first{margin-bottom:3rem}.side-by-side__off-left{margin-left:-20vw}.side-by-side .small{max-width:40%;padding:2rem}.side-by-side .bg{background:var(--color-main);color:var(--color-secondary)}.side-by-side .wide{max-width:60%}.side-by-side img,.side-by-side figure{max-width:100%;margin:0}}.note{background:var(--color-main);color:#fff;padding:1rem 1rem 1rem 2rem;border-left:.5rem solid var(--color-secondary);margin:2rem 1rem;width:calc(100% - 1rem)}.note__heading{font-weight:700;display:block}.taxonomy-list{display:flex;padding-bottom:2rem;align-content:flex-end;justify-content:space-between;flex-wrap:wrap}.taxonomy__item{width:20%;height:2rem;display:inline-block;padding:2rem 0}.taxonomy__item-inner{padding:1rem;background:var(--color-main);color:var(--color-secondary)}.taxonomy__item a{color:var(--color-secondary)}</style></head><body><script type=text/javascript>(function(window,document,undefined){let theme=window.localStorage.getItem("kgde_theme");if(theme){var[colorMain,colorSecondary]=JSON.parse(theme).colors;document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}else{let themes=[["#123D3C","#90F072"],["#403D58","#dea584"],["#400E3B","#DCC78A"],["#17098D","#EADD1C"],["#233B07","#FFDD6D"]]
+var[colorMain,colorSecondary]=themes[Math.floor(Math.random()*themes.length)];document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}
+document.addEventListener('DOMContentLoaded',function(){let schema_btn=document.querySelector("#btn_schema");let theme=window.localStorage.getItem("kgde_theme");if(theme){schema_btn.textContent="Use random color theme";}else{schema_btn.textContent="Keep current color theme";}
+schema_btn.style.display="block";schema_btn.addEventListener('click',function(e){if(theme){window.localStorage.removeItem("kgde_theme");window.reload();}else{window.localStorage.setItem("kgde_theme",JSON.stringify({colors:[colorMain,colorSecondary]}));}});});}(window,document));</script><header class=intro-text><button id=btn_schema style=position:absolute;top:10px;right:10px;display:none></button>
+<span>Getting into Performance Measurement</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section>images/self-2019.jpg<p>Written on <time datetime="2015-03-10 00:00:00 +0000 UTC">10. Mar 2015</time></p><p>I&rsquo;ve spent the past week developing some features for our own website at work.
 We&rsquo;re using WordPress and I almost always enjoy working with WordPress beside
 Magento projects, it&rsquo;s way easier to keep an overview and with a good overview
 of data flow and available data it&rsquo;s easier to measure and find performance
 bottleneck. In the following post I want to examine my workflow and the way I
 refactored our code base to increase the speed and overall performance of our
-site.</p>
-<h3 id="mesuring-load-times">Mesuring load times</h3>
-<h4 id="webpagetestorg">WebPageTest.org</h4>
-<p>With <a href="http://webpagetest.org">WebPageTest.org</a> it is quite easy to measure load
+site.</p><h3 id=mesuring-load-times>Mesuring load times</h3><h4 id=webpagetestorg>WebPageTest.org</h4><p>With <a href=http://webpagetest.org>WebPageTest.org</a> it is quite easy to measure load
 times, render times, asset loading times and non cached assets. WPT even shows
 which assets should be cached or served via a CDN. Initially it checks for First
-View  and Repeat View and outputs a table of numbers and fancy graphics. The
+View and Repeat View and outputs a table of numbers and fancy graphics. The
 thing I&rsquo;ve been most interested in were First View and Content Breakdown. The
 Content Breakdown showed that ~66% of our landing page consist of images so
 optimizing these images (see below) was a natural approach to boost performance.
 When testing with WebPageTest I like to select the second fastest Internet
 connection and a location somewhere relevant (for this site America, for our own
-somewhere in Germany).</p>
-<p>Then I watch the videos and see how the loading wents on. At first it was a
+somewhere in Germany).</p><p>Then I watch the videos and see how the loading wents on. At first it was a
 blank page and after 2.5s the page &ldquo;suddenly&rdquo; rendered all content at once. This
-was not the desired behavior and so I started testing more.</p>
-<h4 id="chrome-developer-tools">(Chrome) Developer Tools</h4>
-<p>Using the Developer Tools I cleared the cache and measured a &ldquo;fresh&rdquo; load of our
+was not the desired behavior and so I started testing more.</p><h4 id=chrome-developer-tools>(Chrome) Developer Tools</h4><p>Using the Developer Tools I cleared the cache and measured a &ldquo;fresh&rdquo; load of our
 site to see how content is loaded and where rendering starts. It turned out that
 rendering was blocked by several JavaScript files (third party) and Google
 Fonts, which where loaded from within our CSS files as well as the high amount
-of non-optimized images. All these things can be seen in the Network Tab.</p>
-<p>In Chrome there are 2 vertical lines - blue and red. The blue line marks the
+of non-optimized images. All these things can be seen in the Network Tab.</p><p>In Chrome there are 2 vertical lines - blue and red. The blue line marks the
 time at which the <code>DOMContentLoaded</code> event is fired, that is when the DOM is
 ready to be manipulated by JavaScript. The red line marks the moment where the
 <code>load</code> event fires. This event indicates that all content (CSS, JavaScript,
-Images, etc.) has been loaded.</p>
-<blockquote>
-<p>Measuring performance and finding obvious bottlenecks has become fairly easy
-nowadays. With Tools like <a href="http://webpagetest.org">WebPageTest.org</a>, Developer
+Images, etc.) has been loaded.</p><blockquote><p>Measuring performance and finding obvious bottlenecks has become fairly easy
+nowadays. With Tools like <a href=http://webpagetest.org>WebPageTest.org</a>, Developer
 Tools or automated testing suits there are a ton of ways to analyze a
-the loading behavior of a website.</p>
-</blockquote>
-<p>With these two tools I started tracking down the various performance issues.
-First of all the blocking JavaScript and a bit of unused code.</p>
-<h3 id="unused-code">Unused Code</h3>
-<p>While checking the Network Tab in Chrome Dev Tools I&rsquo;ve seen that out of 16 Requests
+the loading behavior of a website.</p></blockquote><p>With these two tools I started tracking down the various performance issues.
+First of all the blocking JavaScript and a bit of unused code.</p><h3 id=unused-code>Unused Code</h3><p>While checking the Network Tab in Chrome Dev Tools I&rsquo;ve seen that out of 16 Requests
 one JavaScript Analytics Library was blocking the
 rendering by almost 600-800ms. Because it was barely used I removed this one so
 there was already a big improvement by removing unused or barely used code - one
 should always check for unused plugins, libs and CSS - this is the most basic
-&ldquo;improvement&rdquo; and optimization.</p>
-<blockquote>
-<p>Regularly refactor your code base to see where unused code exists or
+&ldquo;improvement&rdquo; and optimization.</p><blockquote><p>Regularly refactor your code base to see where unused code exists or
 code can be optimized. By ueing a Pre-Processor it&rsquo;s easy to remove the code
-from production but keep it for later by using an <a href="http://sass-guidelin.es/#main-file">import system</a>.</p>
-</blockquote>
-<h3 id="minify">Minify</h3>
-<p>Minifying files is always a good thing. No doubt. Use
-<a href="https://github.com/mishoo/UglifyJS">Uglify</a> for JavaScript
-and your favorite pre-proccessor&rsquo;s compress function.</p>
-<h3 id="images">Images</h3>
-<p>Next I found that our landing page is pretty image heavy, especially with a big
+from production but keep it for later by using an <a href=http://sass-guidelin.es/#main-file>import system</a>.</p></blockquote><h3 id=minify>Minify</h3><p>Minifying files is always a good thing. No doubt. Use
+<a href=https://github.com/mishoo/UglifyJS>Uglify</a> for JavaScript
+and your favorite pre-proccessor&rsquo;s compress function.</p><h3 id=images>Images</h3><p>Next I found that our landing page is pretty image heavy, especially with a big
 banner image. To reduce the size I searched for plugins to automate the process
-but couldn&rsquo;t find a good one so I tried out <a href="http://pngquant.org/">PNGQuant</a> a
+but couldn&rsquo;t find a good one so I tried out <a href=http://pngquant.org/>PNGQuant</a> a
 Command Line tool for PNG optimization. With this tool I could reduce the size
-of almost any image by 50-70% which again reduced the load time by 100-200ms.</p>
-<blockquote>
-<p>Always optimize images, either with a tool before uploading them or with a
-Plugin. Not optimizing images is a waste of time (literally) and bad for users.</p>
-</blockquote>
-<h3 id="fonts">Fonts</h3>
-<p>As I mentioned earlier, rendering was also blocked by Google Fonts being
+of almost any image by 50-70% which again reduced the load time by 100-200ms.</p><blockquote><p>Always optimize images, either with a tool before uploading them or with a
+Plugin. Not optimizing images is a waste of time (literally) and bad for users.</p></blockquote><h3 id=fonts>Fonts</h3><p>As I mentioned earlier, rendering was also blocked by Google Fonts being
 directly included into our Stylesheets. Out of curiosity I checked if loading it
 asynchronously via the provided snippet from Google Fonts would help and indeed
-it did! We saved almost 100ms simply by loading the Font files asynchronously.</p>
-<p>On the very First View this can make the content &lsquo;jump&rsquo; a bit because the
+it did! We saved almost 100ms simply by loading the Font files asynchronously.</p><p>On the very First View this can make the content &lsquo;jump&rsquo; a bit because the
 initial view loads with a fallback font (sans-serif, for example) and then once
 the Font is loaded from Google&rsquo;s CDN it replaces the old font with the new font
 on-the-fly. This may looks ugly and if you absolutely can not live with it you
 must take the 100ms-slower Pill and include the fonts in your CSS where they&rsquo;ll
-be loaded before the CSS is rendered - therefore no delay.</p>
-<p>Below is the function that&rsquo;ll load the fonts via a script tag that as the
-<code>async</code> attribute set.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">google</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">families</span><span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#39;Open+Sans:400,300,600:latin&#39;</span> ] }
+be loaded before the CSS is rendered - therefore no delay.</p><p>Below is the function that&rsquo;ll load the fonts via a script tag that as the
+<code>async</code> attribute set.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>WebFontConfig</span> <span style=color:#f92672>=</span> {
+  <span style=color:#a6e22e>google</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>families</span><span style=color:#f92672>:</span> [ <span style=color:#e6db74>&#39;Open+Sans:400,300,600:latin&#39;</span> ] }
 };
-(<span style="color:#66d9ef">function</span>() {
- <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wf</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
- <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;https:&#39;</span> <span style="color:#f92672">==</span> document.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">protocol</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;https&#39;</span>
-   <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;http&#39;</span>) <span style="color:#f92672">+</span>
- <span style="color:#e6db74">&#39;://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;</span>;
- <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text/javascript&#39;</span>;
- <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">async</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;true&#39;</span>;
- <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span>
- document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#39;script&#39;</span>)[<span style="color:#ae81ff">0</span>];
- <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">wf</span>, <span style="color:#a6e22e">s</span>);
+(<span style=color:#66d9ef>function</span>() {
+ <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>wf</span> <span style=color:#f92672>=</span> document.<span style=color:#a6e22e>createElement</span>(<span style=color:#e6db74>&#39;script&#39;</span>);
+ <span style=color:#a6e22e>wf</span>.<span style=color:#a6e22e>src</span> <span style=color:#f92672>=</span> (<span style=color:#e6db74>&#39;https:&#39;</span> <span style=color:#f92672>==</span> document.<span style=color:#a6e22e>location</span>.<span style=color:#a6e22e>protocol</span> <span style=color:#f92672>?</span> <span style=color:#e6db74>&#39;https&#39;</span>
+   <span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;http&#39;</span>) <span style=color:#f92672>+</span>
+ <span style=color:#e6db74>&#39;://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;</span>;
+ <span style=color:#a6e22e>wf</span>.<span style=color:#a6e22e>type</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;text/javascript&#39;</span>;
+ <span style=color:#a6e22e>wf</span>.<span style=color:#a6e22e>async</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;true&#39;</span>;
+ <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>s</span> <span style=color:#f92672>=</span>
+ document.<span style=color:#a6e22e>getElementsByTagName</span>(<span style=color:#e6db74>&#39;script&#39;</span>)[<span style=color:#ae81ff>0</span>];
+ <span style=color:#a6e22e>s</span>.<span style=color:#a6e22e>parentNode</span>.<span style=color:#a6e22e>insertBefore</span>(<span style=color:#a6e22e>wf</span>, <span style=color:#a6e22e>s</span>);
  })(); 
-</code></pre></div><blockquote>
-<p>Font rendering from within CSS can block the overall load time of the CSS
+</code></pre></div><blockquote><p>Font rendering from within CSS can block the overall load time of the CSS
 file. Splitting out the fonts from the CSS and loading them via JavaScript (if
-possible) may increase the initial load time of the website.</p>
-</blockquote>
-<h3 id="server-side-optimizations">Server-side optimizations</h3>
-<p>There&rsquo;s quite a lot to do when optimizing from the server side. From things like
+possible) may increase the initial load time of the website.</p></blockquote><h3 id=server-side-optimizations>Server-side optimizations</h3><p>There&rsquo;s quite a lot to do when optimizing from the server side. From things like
 optimizing Queries, Caching Queries to using the variety of Apache or Nginx
 Modules and settings to optimize the servers workflow. While we have our site at
 a specific WordPress Hoster our access to server features is mainly limited to
-their admin interface and using the <code>.htaccess</code> - which is what I did.</p>
-<h4 id="expire-dates">Expire Dates</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># caching for 1 month
-&lt;<span style="color:#f92672">IfModule</span> <span style="color:#a6e22e">mod_expires</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">c</span>&gt;
+their admin interface and using the <code>.htaccess</code> - which is what I did.</p><h4 id=expire-dates>Expire Dates</h4><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html># caching for 1 month
+&lt;<span style=color:#f92672>IfModule</span> <span style=color:#a6e22e>mod_expires</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#a6e22e>c</span>&gt;
  ExpiresActive On
  ExpiresByType text/css &#34;access plus 1 month&#34;
  ExpiresByType text/javascript &#34;access plus 1 month&#34;
@@ -232,17 +86,15 @@ their admin interface and using the <code>.htaccess</code> - which is what I did
  ExpiresByType image/png &#34;access plus 1 month&#34;
  ExpiresByType image/x-icon &#34;access plus 1 month&#34;
 
-  &lt;<span style="color:#f92672">FilesMatch</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">gif</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">jpe</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">png</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">ico</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">)</span><span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;
+  &lt;<span style=color:#f92672>FilesMatch</span> <span style=color:#960050;background-color:#1e0010>&#34;\.(</span><span style=color:#a6e22e>gif</span><span style=color:#960050;background-color:#1e0010>|</span><span style=color:#a6e22e>jpe</span><span style=color:#960050;background-color:#1e0010>?</span><span style=color:#a6e22e>g</span><span style=color:#960050;background-color:#1e0010>|</span><span style=color:#a6e22e>png</span><span style=color:#960050;background-color:#1e0010>|</span><span style=color:#a6e22e>ico</span><span style=color:#960050;background-color:#1e0010>|</span><span style=color:#a6e22e>css</span><span style=color:#960050;background-color:#1e0010>|</span><span style=color:#a6e22e>js</span><span style=color:#960050;background-color:#1e0010>)$&#34;</span>&gt;
     Header set Cache-Control &#34;public&#34;
-  &lt;/<span style="color:#f92672">FilesMatch</span>&gt;
-&lt;/<span style="color:#f92672">IfModule</span>&gt;
-</code></pre></div><h4 id="compression-with-mod_deflate">Compression with mod_deflate</h4>
-<p>With this snippet above we tell the server to cache certain file types by 1
+  &lt;/<span style=color:#f92672>FilesMatch</span>&gt;
+&lt;/<span style=color:#f92672>IfModule</span>&gt;
+</code></pre></div><h4 id=compression-with-mod_deflate>Compression with mod_deflate</h4><p>With this snippet above we tell the server to cache certain file types by 1
 month (if they don&rsquo;t change of course). This way the server can sent back the
 files from its cache instead of re-generating the files all the time. Next I
-used <code>mod_deflate</code> to compress the files before they are sent to the client.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># Deflate Compression by FileType
-&lt;<span style="color:#f92672">IfModule</span> <span style="color:#a6e22e">mod_deflate</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">c</span>&gt;
+used <code>mod_deflate</code> to compress the files before they are sent to the client.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html># Deflate Compression by FileType
+&lt;<span style=color:#f92672>IfModule</span> <span style=color:#a6e22e>mod_deflate</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#a6e22e>c</span>&gt;
  AddOutputFilterByType DEFLATE text/plain
  AddOutputFilterByType DEFLATE text/html
  AddOutputFilterByType DEFLATE text/xml
@@ -254,160 +106,49 @@ used <code>mod_deflate</code> to compress the files before they are sent to the 
  AddOutputFilterByType DEFLATE application/atom_xml
  AddOutputFilterByType DEFLATE application/javascript
  AddOutputFilterByType DEFLATE application/x-javascript
-&lt;/<span style="color:#f92672">IfModule</span>&gt;
+&lt;/<span style=color:#f92672>IfModule</span>&gt;
 </code></pre></div><p>Now all our files are cached and gzip (compressed). Additionally our Hoster has
-its own cache (Varnish) which should benefit to our sites overall performance, too.</p>
-<blockquote>
-<p>Use your servers configuration to serve compressed and/or cached files instead
+its own cache (Varnish) which should benefit to our sites overall performance, too.</p><blockquote><p>Use your servers configuration to serve compressed and/or cached files instead
 of re-generating the files on every request. Make sure to cache static content
-like images, javascript or css.</p>
-</blockquote>
-<h3 id="lazy-load-javascript">Lazy-load JavaScript</h3>
-<p>We&rsquo;ve been using our own delayed load for JavaScript assets ever since I started
-working at <a href="http://synoa.de">Synoa</a>. We use the following function to include
-our minified JavaScript after the DOM is loaded, if possible.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">loadAfterDom</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">script</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">body</span>;
+like images, javascript or css.</p></blockquote><h3 id=lazy-load-javascript>Lazy-load JavaScript</h3><p>We&rsquo;ve been using our own delayed load for JavaScript assets ever since I started
+working at <a href=http://synoa.de>Synoa</a>. We use the following function to include
+our minified JavaScript after the DOM is loaded, if possible.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>loadAfterDom</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>script</span> <span style=color:#f92672>=</span> document.<span style=color:#a6e22e>createElement</span>(<span style=color:#e6db74>&#39;script&#39;</span>);
+  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>body</span> <span style=color:#f92672>=</span> document.<span style=color:#a6e22e>body</span>;
   
-  <span style="color:#a6e22e">script</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text/javascript&#39;</span>;
-  <span style="color:#a6e22e">script</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;path/to/main.min.js&#39;</span>;
+  <span style=color:#a6e22e>script</span>.<span style=color:#a6e22e>type</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;text/javascript&#39;</span>;
+  <span style=color:#a6e22e>script</span>.<span style=color:#a6e22e>src</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;path/to/main.min.js&#39;</span>;
   
-  document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">script</span>);
+  document.<span style=color:#a6e22e>body</span>.<span style=color:#a6e22e>appendChild</span>(<span style=color:#a6e22e>script</span>);
 }
-<span style="color:#75715e">// load the script when the DOM is constructed
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(window.<span style="color:#a6e22e">addEventListener</span>) {
-  window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#a6e22e">loadAfterDom</span>, <span style="color:#66d9ef">false</span>);
-} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(window.<span style="color:#a6e22e">attachEvent</span>) {
-  window.<span style="color:#a6e22e">attachEvent</span>(<span style="color:#e6db74">&#39;load&#39;</span>, <span style="color:#a6e22e">loadAfterDom</span>);  
-} <span style="color:#66d9ef">else</span> {
-  window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadAfterDom</span>;  
+<span style=color:#75715e>// load the script when the DOM is constructed
+</span><span style=color:#75715e></span><span style=color:#66d9ef>if</span>(window.<span style=color:#a6e22e>addEventListener</span>) {
+  window.<span style=color:#a6e22e>addEventListener</span>(<span style=color:#e6db74>&#39;DOMContentLoaded&#39;</span>, <span style=color:#a6e22e>loadAfterDom</span>, <span style=color:#66d9ef>false</span>);
+} <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(window.<span style=color:#a6e22e>attachEvent</span>) {
+  window.<span style=color:#a6e22e>attachEvent</span>(<span style=color:#e6db74>&#39;load&#39;</span>, <span style=color:#a6e22e>loadAfterDom</span>);  
+} <span style=color:#66d9ef>else</span> {
+  window.<span style=color:#a6e22e>onload</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>loadAfterDom</span>;  
 }
 </code></pre></div><p>This little script loads the <code>main.min.js</code> file after the DOM is constructed so
-it doesn&rsquo;t block the rendering of the page.</p>
-<blockquote>
-<p>Lazy loading JavaScript only works when JavaScript is not needed for the
+it doesn&rsquo;t block the rendering of the page.</p><blockquote><p>Lazy loading JavaScript only works when JavaScript is not needed for the
 initial view (which it shouldn&rsquo;t). When you need JavaScript on render time to
 hide elements, for example, it may be better to hide them initially and show them after the
-page is loaded!</p>
-</blockquote>
-<h3 id="what-could-be-done-next">What could be done next?</h3>
-<p>Next we could think about inlining our Critical Path CSS using a Grunt or Gulp
+page is loaded!</p></blockquote><h3 id=what-could-be-done-next>What could be done next?</h3><p>Next we could think about inlining our Critical Path CSS using a Grunt or Gulp
 task, as Google PageSpeed suggests all the time. I&rsquo;ve yet never done this before
-and need to try it before I can say if it&rsquo;s worth or not.</p>
-<p>In another round we could review the entire code base and replace the legacy
-Compass compiler with modern, <a href="https://github.com/sass/node-sass">node-sass</a> and
-<a href="https://github.com/sass/libsass">Libsass</a>, a C++ implementation of Sass that is
+and need to try it before I can say if it&rsquo;s worth or not.</p><p>In another round we could review the entire code base and replace the legacy
+Compass compiler with modern, <a href=https://github.com/sass/node-sass>node-sass</a> and
+<a href=https://github.com/sass/libsass>Libsass</a>, a C++ implementation of Sass that is
 a lot faster than Ruby, to increase compile performance. Most of the vendor
 prefixing is done using own mixins or compass functions (which are legacy), so
-handing the prefixing job to <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>
-is another desirable improvement.</p>
-<h3 id="result">Result</h3>
-<p>At this point, our website performs at 900ms-1.2s in load time for the front page
+handing the prefixing job to <a href=https://github.com/postcss/autoprefixer>Autoprefixer</a>
+is another desirable improvement.</p><h3 id=result>Result</h3><p>At this point, our website performs at 900ms-1.2s in load time for the front page
 and 700-800ms for most sub pages. Yet there is still optimization that need to
 be done, especially the question on how to integrate the optimization into
 everyone&rsquo;s workflow. While developers could use a grunt/gulp/cli task the people
 who actually write content need an easy way to handle the optimization of
 uploaded files. The last resort of more optimization is the server respond time
-on which we don&rsquo;t have any influence.</p>
-
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under tutorial"
-                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under frontend"
-                href="https://kevingimbel.de/categories/frontend/">frontend</a>
-        </li></ul>
-</section>
-
-        
-
-<section class="tags">
-    <h3>Tags</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with javascript"
-                href="https://kevingimbel.de/tags/javascript/">javascript</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with tools"
-                href="https://kevingimbel.de/tags/tools/">tools</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with css"
-                href="https://kevingimbel.de/tags/css/">css</a>
-        </li></ul>
-</section>
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-03-10-getting-into-performance-measurement.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+on which we don&rsquo;t have any influence.</p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tutorial" href=https://kevingimbel.de/categories/tutorial/>tutorial</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with javascript" href=https://kevingimbel.de/tags/javascript/>javascript</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with tools" href=https://kevingimbel.de/tags/tools/>tools</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with css" href=https://kevingimbel.de/tags/css/>css</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/images/self-2019_huaef00fa0bf6dacb2852b9636887d782c_127517_200x200_resize_q75_box.jpg alt="A colorful image of me in a club in Budapest. The image has been heavily blured and modified to give it a glitch aesthetic." class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-03-10-getting-into-performance-measurement.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>

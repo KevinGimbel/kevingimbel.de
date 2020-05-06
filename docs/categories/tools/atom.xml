@@ -1,37 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[tools on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/categories/tools/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/categories/tools/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/categories/tools/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/categories/tools/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Terrasave]]></title>
-            <link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://kevingimbel.de/blog/2018/04/til-bash-select/?utm_source=atom_feed" rel="related" type="text/html" title="TIL: Bash select" />
-                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
-                <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
-            
-                <id>https://kevingimbel.de/blog/2020/04/terrasave/</id>
-            
-            
-            <published>2020-04-24T00:00:00+00:00</published>
-            <updated>2020-04-24T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I just released a tiny tool function I&rsquo;ve been using for some time called <a href="https://github.com/kevingimbel/terrasave" title="View terrasave source code on GitHub">terrasave</a>. It&rsquo;s a Bash / Fish function that prevents you from running <code>terraform</code> without the <code>-target</code> option.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">tools on KevOps</title><link href="https://kevingimbel.de/categories/tools/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/categories/tools/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/categories/tools/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/categories/tools/</id><entry><title type="html">Terrasave</title><link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><link href="https://kevingimbel.de/blog/2018/04/til-bash-select/?utm_source=atom_feed" rel="related" type="text/html" title="TIL: Bash select"/><link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git"/><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools"/><id>https://kevingimbel.de/blog/2020/04/terrasave/</id><published>2020-04-24T00:00:00+00:00</published><updated>2020-04-24T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I just released a tiny tool function I&rsquo;ve been using for some time called <a href="https://github.com/kevingimbel/terrasave" title="View terrasave source code on GitHub">terrasave</a>. It&rsquo;s a Bash / Fish function that prevents you from running <code>terraform</code> without the <code>-target</code> option.</p>
 <h2 id="why-does-this-exist">Why does this exist?</h2>
 <p>In terraform it is incredibly easy to destroy things with <code>terraform apply</code>. If you run apply terraform shows a huge output and sometimes you may overlook a thing being &ldquo;replaced&rdquo; instead of updated. Once upon a time I destroyed a MongoDB Atlas Cluster this way and lost all its data, because the &ldquo;must be replaced&rdquo; was hidden in a lot of terraform output and I simply didn&rsquo;t see it. I only realized when terraform logged &ldquo;Still destroying cluster&hellip;&rdquo; to the console.</p>
 <p>Some terraform resources, like Amazon ECS Services, are not idempotent, so they change on every apply. This cluttered my terminal with stuff I could ignore on every change as well as unnecessary updates to the infra (ECS Services being replaced despite no changes were made).</p>
@@ -43,61 +10,7 @@ Please run <span style="color:#e6db74">&#34;terraform apply&#34;</span> with -ta
 </code></pre></div><p>If you <strong>must</strong> run terraform without a target you can do so by specifying an environment variable:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ TERRAFORM_SAVE_DISABLE_I_KNOW_WHAT_I_DO<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> terraform apply
 </code></pre></div><p>You can get the source code and installation instructions on <a href="https://github.com/kevingimbel/terrasave">github.com/kevingimbel/terrasave</a>. Hopefully this little tool will save your infra. :)</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/devops" term="devops" label="devops" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/terraform" term="terraform" label="terraform" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/fish" term="fish" label="fish" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Two Factor Auth, Password managers, and cloud sync]]></title>
-            <link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="related" type="text/html" title="Using the Terminal: The Prompt" />
-                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2" />
-            
-                <id>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</id>
-            
-            
-            <published>2020-01-25T00:00:00+00:00</published>
-            <updated>2020-01-25T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when <abbr title="Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token">2FA</abbr>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/devops" term="devops" label="devops"/><category scheme="https://kevingimbel.de/tags/terraform" term="terraform" label="terraform"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/><category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash"/><category scheme="https://kevingimbel.de/tags/fish" term="fish" label="fish"/></entry><entry><title type="html">Two Factor Auth, Password managers, and cloud sync</title><link href="https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/?utm_source=atom_feed" rel="related" type="text/html" title="Using the Terminal: The Prompt"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/?utm_source=atom_feed" rel="related" type="text/html" title="Auto SSL With apache2"/><id>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</id><published>2020-01-25T00:00:00+00:00</published><updated>2020-01-25T00:00:00+00:00</updated><content type="html"><![CDATA[<p>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when <abbr title="Two Factor Authentication, a method of authentication where two parts are needed: A Password and a generated token">2FA</abbr>
  became a more common thing I was enabling that on all services I could. 2FA (Two Factor Authentication) is a method of authentication where two parts are needed: A Password and a generated token, this token can be hardware based (e.g. a tiny usb key that generates a token) or they can be time-based which is the most common usage I&rsquo;d say. I used Google Authenticator for this for years and all was good - until I had to factory-reset my phone and lost my Google Authenticator app with all its 2FA settings.</p>
 <h2 id="why-i-lost-all-my-2fa-tokens-and-settings">Why I lost all my 2FA tokens and settings</h2>
 <p>I falsely assumed that <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google Authenticator</a> would somehow save the Time-based Tokens with my Google Account but that is not the case - they only exist on the device itself. Looking back that is probably the right choice, but I somehow missed it and only realized after receiving my replacement Pixel phone and setting it up again.</p>
@@ -118,64 +31,7 @@ Please run <span style="color:#e6db74">&#34;terraform apply&#34;</span> with -ta
 <p>Anyhow, Nextcloud is the sync and &ldquo;backup&rdquo; solution in my stack. It syncs the database files between my computer and my phone so that I can always access all passwords whenever I need them. On my computer and phone the databases are protected by passwords, all communication to Nextcloud is done over a encrypted connection (HTTPS), too.</p>
 <p>I&rsquo;ve been using this solution for a bit over two years now and I am very happy with it. Before switching to Nextcloud I used Google Drive to sync my KeyPassX database files, but I am growing increasingly distrustful of Google, so I am trying to pull as much as I can away from its services. Nextcloud works just as good if not better than the Google Drive or Dropbox sync solutions.</p>
 <p>Thank you for coming to my TED Talk, see ya.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/password" term="password" label="password" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/management" term="management" label="management" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sync" term="sync" label="sync" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cloud_storage" term="cloud_storage" label="cloud_storage" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/2fa" term="2fa" label="2FA" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/security" term="security" label="security" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/android" term="android" label="android" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Deploy a static site with git]]></title>
-            <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
-                <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo" />
-            
-                <id>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</id>
-            
-            
-            <published>2017-01-17T21:28:38+01:00</published>
-            <updated>2017-01-17T21:28:38+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a> to create SSL certificates and use HTTPS.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/><category scheme="https://kevingimbel.de/tags/password" term="password" label="password"/><category scheme="https://kevingimbel.de/tags/management" term="management" label="management"/><category scheme="https://kevingimbel.de/tags/sync" term="sync" label="sync"/><category scheme="https://kevingimbel.de/tags/cloud_storage" term="cloud_storage" label="cloud_storage"/><category scheme="https://kevingimbel.de/tags/2fa" term="2fa" label="2FA"/><category scheme="https://kevingimbel.de/tags/security" term="security" label="security"/><category scheme="https://kevingimbel.de/tags/android" term="android" label="android"/></entry><entry><title type="html">Deploy a static site with git</title><link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="related" type="text/html" title="Farewell Jekyll, Hello Hugo"/><id>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</id><published>2017-01-17T21:28:38+01:00</published><updated>2017-01-17T21:28:38+01:00</updated><content type="html"><![CDATA[<p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a> to create SSL certificates and use HTTPS.</p>
 <h3 id="so-what-is-a-static-site">So, what is a &ldquo;static site&rdquo;?</h3>
 <blockquote>
 <p>If you already know the answer, <a href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
@@ -251,73 +107,20 @@ done
 $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/repository/gitrepo
 </code></pre></div><p>Afterwards you are able to push your code with <code>git push production master</code>.</p>
 <p>And that&rsquo;s it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/git" term="git" label="git" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/deployment" term="deployment" label="deployment" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Bash script: ws]]></title>
-            <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp" />
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-            
-                <id>https://kevingimbel.de/blog/2017/01/bash-script-ws/</id>
-            
-            
-            <published>2017-01-12T19:22:48+01:00</published>
-            <updated>2017-01-12T19:22:48+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>For the past year or so I had a little function in my <code>.bash_profile</code> file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called <code>ws</code> and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the <code>~/Development</code> directory. If I want to get to a project I would normally navigate like <code>cd ~/Development/private/github/kevingimbel/kevingimbel.com</code> - even with tab completion I am too lazy to type this every time I want to work on my website, so I wrote a script for it!</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops"/><category scheme="https://kevingimbel.de/tags/git" term="git" label="git"/><category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo"/><category scheme="https://kevingimbel.de/tags/deployment" term="deployment" label="deployment"/><category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash"/></entry><entry><title type="html">Bash script: ws</title><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="related" type="text/html" title="Snippet: SASS Source Maps with Gulp"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><id>https://kevingimbel.de/blog/2017/01/bash-script-ws/</id><published>2017-01-12T19:22:48+01:00</published><updated>2017-01-12T19:22:48+01:00</updated><content type="html"><![CDATA[<p>For the past year or so I had a little function in my <code>.bash_profile</code> file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called <code>ws</code> and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the <code>~/Development</code> directory. If I want to get to a project I would normally navigate like <code>cd ~/Development/private/github/kevingimbel/kevingimbel.com</code> - even with tab completion I am too lazy to type this every time I want to work on my website, so I wrote a script for it!</p>
 <h3 id="the-script-ws">The script: <code>ws</code></h3>
 <p>The script is actually a shell function and it looks like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">function</span> ws<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-  local workspace<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/Development</span><span style="color:#e6db74">&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">function</span> ws<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  local workspace<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/Development&#34;</span>
 	<span style="color:#75715e"># $1 is the target directory</span>
   local target_dir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
   <span style="color:#75715e"># We start searching from the workspace dir</span>
   cd $workspace
   <span style="color:#75715e"># -maxdepth is the max directories to go &#34;down&#34;</span>
   <span style="color:#75715e"># head -n1 gives back the first result</span>
-  workspace_path<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find . -maxdepth <span style="color:#ae81ff">3</span> -type d -name <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*</span>$target_dir<span style="color:#e6db74">*</span><span style="color:#e6db74">&#34;</span> | head -n1<span style="color:#66d9ef">)</span>
+  workspace_path<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find . -maxdepth <span style="color:#ae81ff">3</span> -type d -name <span style="color:#e6db74">&#34;*</span>$target_dir<span style="color:#e6db74">*&#34;</span> | head -n1<span style="color:#66d9ef">)</span>
   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+    echo <span style="color:#e6db74">&#34;Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">else</span>
     cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
   <span style="color:#66d9ef">fi</span>
@@ -333,7 +136,7 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
 </ul>
 <p><code>$workspace_path</code> now holds whatever directory was found - or nothing. This is why we check if it is empty (<code>-z &quot;$workspace_path&quot;</code>) in the <code>if</code> block.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span>  -z <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-  echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
+  echo <span style="color:#e6db74">&#34;Directory &#39;</span>$target_dir<span style="color:#e6db74">&#39; not found. Changing to </span>$workspace<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">else</span>
   cd <span style="color:#e6db74">&#34;</span>$workspace_path<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
@@ -359,65 +162,7 @@ $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/reposito
 </figure>
 
 <p>I am sure the <code>ws</code> function can be improved more but it has served my needs well so far. One optimisation might be to use the second argument, <code>$2</code>, as parameter for <code>-maxdepth</code>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Writing NodeJS cli tools]]></title>
-            <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement" />
-                <link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation" />
-                <link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure" />
-                <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript" />
-                <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider" />
-            
-                <id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id>
-            
-            
-            <published>2017-01-09T18:02:48+01:00</published>
-            <updated>2017-01-09T18:02:48+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/categories/devops" term="devops" label="devops"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/><category scheme="https://kevingimbel.de/tags/bash" term="bash" label="bash"/><category scheme="https://kevingimbel.de/tags/scripting" term="scripting" label="scripting"/><category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/></entry><entry><title type="html">Writing NodeJS cli tools</title><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/?utm_source=atom_feed" rel="related" type="text/html" title="Passing Arguments in JavaScript"/><link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/?utm_source=atom_feed" rel="related" type="text/html" title="Pure JavaScript slider"/><id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id><published>2017-01-09T18:02:48+01:00</published><updated>2017-01-09T18:02:48+01:00</updated><content type="html"><![CDATA[<p>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, <a href="https://github.com/kevingimbel/vhost">creating apache vhosts</a> files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.</p>
 <h3 id="shebang">Shebang</h3>
 <blockquote>
 <p>If you already know what a Shebang is skip to <a href="/writing-nodejs-cli-tools/#writing-a-tiny-node-cli-script">the next section</a></p>
@@ -474,7 +219,7 @@ echo &quot;Hello World!&quot;
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">#!/usr/bin/env node
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> () =&gt; {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USER</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USER</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
 }
 
 <span style="color:#a6e22e">sayHello</span>()
@@ -553,55 +298,7 @@ echo &quot;Hello World!&quot;
 <li>can utilize lots of Node packages</li>
 </ul>
 <p>And that&rsquo;s it for today. All the example scripts are <a href="https://github.com/kevingimbel/blog-node-cli-tools-data">available on GitHub</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Farewell Jekyll, Hello Hugo]]></title>
-            <link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow" />
-            
-                <id>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</id>
-            
-            
-            <published>2016-11-16T19:04:42+01:00</published>
-            <updated>2016-11-16T19:04:42+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/tags/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/></entry><entry><title type="html">Farewell Jekyll, Hello Hugo</title><link href="https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="related" type="text/html" title="Speed up your Jekyll workflow"/><id>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</id><published>2016-11-16T19:04:42+01:00</published><updated>2016-11-16T19:04:42+01:00</updated><content type="html"><![CDATA[<p>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.</p>
 <p>This very site you read right now is build with <a href="http://gohugo.io">Hugo</a>, a static site generator build by <a href="http://spf13.com/">Steve Francia</a>, <a href="https://github.com/bep">Bjørn Erik Pedersen</a> and a lot of <a href="https://github.com/spf13/hugo/graphs/contributors">contributors</a>. Hugo is written in <a href="https://golang.org/">Go</a> a programming language created at Google I have <a href="https://github.com/kevingimbel?language=go&amp;tab=repositories">been interested in lately</a>.
 For me personally Go provides a lot of new challenges and things to learn. I worked with Front-End technologies like HTML and CSS as well as scripting languages like PHP and JavaScript for the better part of the past 6-7 years; &ldquo;professionally&rdquo; and officially since 2014. Go is entirely different to what I am used to and I like it. I enjoy playing around with it where in the past year or so I lost a big part of my passion for programming in the languages I already know. But why move away from Jekyll? And why choose Go?</p>
 <h3 id="ruby">Ruby</h3>
@@ -618,55 +315,7 @@ $ ln -s <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</s
 <p>As of today it&rsquo;s not all good yet. The new design is as always a work in progress and more of an experiment. The content of my site has changed drastically because I decided to not move all pages or all content but instead only move my articles. The <a href="/projects/">Projects</a> section is completley new and lists a selection of Projects I decided to showcase. As before, all source code of my website is <a href="https://github.com/kevingimbel/kevingimbel.com">available on GitHub.com</a> so feel free to look around.</p>
 <p>Some things are still not working as I would like but I&rsquo;ll eventually get to them. After all, a personal website is always a work in progress.</p>
 <p><em>Farewell Jekyll, it&rsquo;s been a pleasure for the past three years.</em></p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/go" term="go" label="go" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Speed up your Jekyll workflow]]></title>
-            <link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll" />
-            
-                <id>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</id>
-            
-            
-            <published>2015-12-16T00:00:00+00:00</published>
-            <updated>2015-12-16T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Lately I had a hard time working with my own website. Whenever I wanted to make some updates, write a post or fix a little buggy thing it only took a few minutes of &ldquo;work&rdquo; to get me really frustrated. Jekyll, despite my love for it, has become horribly slow. My site, which I consider rather &ldquo;simple&rdquo;, took 17-20 seconds to build on every change! Changing the CSS? Rebuild entire site. Changed one character in a JavaScript file? Rebuild entire site. Update one article? Rebuild entire site - this is frustrating and unnecessary! Luckily, I just found a perfect solution.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/hugo" term="hugo" label="hugo"/><category scheme="https://kevingimbel.de/tags/go" term="go" label="go"/><category scheme="https://kevingimbel.de/tags/development" term="development" label="development"/><category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal"/></entry><entry><title type="html">Speed up your Jekyll workflow</title><link href="https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/?utm_source=atom_feed" rel="related" type="text/html" title="Bullgit loves Jekyll"/><id>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</id><published>2015-12-16T00:00:00+00:00</published><updated>2015-12-16T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Lately I had a hard time working with my own website. Whenever I wanted to make some updates, write a post or fix a little buggy thing it only took a few minutes of &ldquo;work&rdquo; to get me really frustrated. Jekyll, despite my love for it, has become horribly slow. My site, which I consider rather &ldquo;simple&rdquo;, took 17-20 seconds to build on every change! Changing the CSS? Rebuild entire site. Changed one character in a JavaScript file? Rebuild entire site. Update one article? Rebuild entire site - this is frustrating and unnecessary! Luckily, I just found a perfect solution.</p>
 <p>I was researching how to speed up a Jekyll site and if there was any news or whatsoever from the Community when I found <a href="https://github.com/jekyll/jekyll/issues/706">an old issue</a> on GitHub with a <a href="https://github.com/jekyll/jekyll/issues/706#issuecomment-25411224">comment by Parkr</a> that pointed me in the right direction: The <code>guard-jekyll-plus</code> Gem. As a person who has no idea of Ruby other that it has a rather beautiful looking syntax and <code>Gems</code> are somewhat related to it, I went on and set up the &ldquo;environment&rdquo; and programs needed. These were, basically, <code>bundle</code>, a <code>Gemfile</code> and a <code>Guardfile</code>.</p>
 <pre><code># on Ubuntu
 $ (sudo) apt-get install bundler
@@ -676,66 +325,16 @@ gem <span style="color:#e6db74">&#39;guard-jekyll-plus&#39;</span>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># The Guardfile</span>
 <span style="color:#75715e"># Taken directly from https://github.com/imathis/guard-jekyll-plus</span>
 
-ignore <span style="color:#e6db74">/</span><span style="color:#e6db74">^_site</span><span style="color:#e6db74">/</span> <span style="color:#75715e"># NOTE: this can interfere with Guard::LiveReload</span>
+ignore <span style="color:#e6db74">/^_site/</span> <span style="color:#75715e"># NOTE: this can interfere with Guard::LiveReload</span>
 
-guard <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jekyll-plus</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:serve</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span> <span style="color:#66d9ef">do</span>
-  watch <span style="color:#e6db74">/</span><span style="color:#e6db74">.*</span><span style="color:#e6db74">/</span>
+guard <span style="color:#e6db74">&#34;jekyll-plus&#34;</span>, <span style="color:#e6db74">:serve</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span> <span style="color:#66d9ef">do</span>
+  watch <span style="color:#e6db74">/.*/</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>The <code>Gemfile</code> - which seems to be a list of dependencies, similar to the <code>dependencies</code> list in a <code>package.json</code> file for Node - is probably the most basic representation of such a file. I first put in only the <code>gem 'guard-jekyll-plus'</code> line but then it started to throw errors and said I need to define a source - which I then did. Case closed, moving on.</p>
 <p>The Guardfile is directly taken from <a href="https://github.com/imathis/guard-jekyll-plus">The guard-jekyll-plus GitHub repository</a>. As far as I understand it runs the watching and serving (normaly done by <code>jekyll --watch</code>) through the <a href="https://github.com/guard/guard"><code>Guard</code></a> task runner (<code>task runner</code> might be super simplified here) - so <code>Guard</code> and <code>guard-jekyll-plus</code> now decide when to rebuild things and what needs to be rebuild.</p>
 <p>Once the configuration is set up you can run <code>$ bundle install</code> to install the dependencies and then <code>$ guard</code> to start the guard process. Guard will then run, serve up the Jekyll site on <code>localhost:4000</code> (or whatever is specified in jekyll <code>_config.yml</code>) and watch the files. From my previous 17-20 seconds of build time I am now <strong>down to 1.2 seconds</strong>. ONE POINT TWO SECONDS - this is amazing! Roughly 15x faster than just with Jekyll alone.</p>
 <p>I have no idea why there is no mention of this method on the official Jekyll Website. Everyone who uses Jekyll and is frustrated with slow build times should consider looking at <code>Guard</code> and <code>jekyll-guard-plus</code>. I can highly recommend it.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/cms" term="cms" label="cms" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/ruby" term="ruby" label="ruby" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/development" term="development" label="development" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Snippet: SASS Source Maps with Gulp]]></title>
-            <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-            
-                <id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id>
-            
-            
-            <published>2015-01-22T00:00:00+00:00</published>
-            <updated>2015-01-22T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/categories/cms" term="cms" label="cms"/><category scheme="https://kevingimbel.de/tags/jekyll" term="jekyll" label="jekyll"/><category scheme="https://kevingimbel.de/tags/ruby" term="ruby" label="ruby"/><category scheme="https://kevingimbel.de/tags/development" term="development" label="development"/></entry><entry><title type="html">Snippet: SASS Source Maps with Gulp</title><link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id><published>2015-01-22T00:00:00+00:00</published><updated>2015-01-22T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
 later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is
@@ -779,63 +378,8 @@ image to view it in full-size.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;production&#39;</span>, [<span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#39;autoprefix&#39;</span>];
 
 <span style="color:#75715e">// Use the following command to keep out Source Maps.
-</span><span style="color:#75715e"></span><span style="color:#75715e">// $ gulp production
-</span></code></pre></div>]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Getting into vim - again]]></title>
-            <link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM" />
-                <link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
-                <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools" />
-                <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
-            
-                <id>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</id>
-            
-            
-            <published>2015-01-21T00:00:00+00:00</published>
-            <updated>2015-01-21T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
+</span><span style="color:#75715e">// $ gulp production
+</span></code></pre></div>]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/nodejs" term="nodejs" label="nodejs"/><category scheme="https://kevingimbel.de/categories/javascript" term="javascript" label="javascript"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/gulp" term="gulp" label="gulp"/><category scheme="https://kevingimbel.de/tags/sass" term="sass" label="sass"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/><category scheme="https://kevingimbel.de/tags/productivity" term="productivity" label="productivity"/></entry><entry><title type="html">Getting into vim - again</title><link href="https://kevingimbel.de/blog/2015/01/getting-into-vim-again/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="related" type="text/html" title="Noobish VIM"/><link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression"/><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Useful Web Developer Tools"/><link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text"/><id>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</id><published>2015-01-21T00:00:00+00:00</published><updated>2015-01-21T00:00:00+00:00</updated><content type="html"><![CDATA[<p>It&rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad.
 VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&rsquo;ve already written about
 <a href="/noobish-vim/">turning Sublime Text into VIM mode</a> and my <a href="/vim-first-impressions/">very first VIM impression</a>, but
 back then I just copy &amp; pasted everything I found on the Internet into my <code>.vimrc</code>. Now with the new year I thought some
@@ -933,54 +477,7 @@ how it can benefit to my workflow or if it&rsquo;ll stay in my way at the end - 
 return to my beloved Sublime Text 3.</p>
 <p>Keep up with my advimtures (ha punny!) by subscribing to the <a href="/atom.xml">Atom Feed</a> or by following me on
 <a href="https://twitter.com/_kevinatari">Twitter</a>:</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Noobish VIM]]></title>
-            <link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression" />
-                <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
-            
-                <id>https://kevingimbel.de/blog/2014/07/noobish-vim/</id>
-            
-            
-            <published>2014-07-13T00:00:00+00:00</published>
-            <updated>2014-07-13T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Since I&rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim"/><category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/></entry><entry><title type="html">Noobish VIM</title><link href="https://kevingimbel.de/blog/2014/07/noobish-vim/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="related" type="text/html" title="Vim - first impression"/><link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text"/><id>https://kevingimbel.de/blog/2014/07/noobish-vim/</id><published>2014-07-13T00:00:00+00:00</published><updated>2014-07-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Since I&rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &ldquo;good&rdquo; way to integrate it
 into my daily workflow. Since I&rsquo;m working in a relativley small company it&rsquo;s most of the time stressy to get all things
 done and to keep an overview - so long story short: There&rsquo;s not much time for new tools that don&rsquo;t increase my workflow
 directly. VIM is one of these tools that don&rsquo;t fully support my workflow at the moment. While on one hand being good at
@@ -991,7 +488,7 @@ Sublime Text. I&rsquo;m so used to Sublime Text and it&rsquo;s shortcuts, multi-
 a config file to get some VIM keybindings into my safe-zone Sublime Text enviroment. Turns out Sublime Test has this
 built-in. In the &ldquo;ignore_packages&rdquo; settings is a package called &ldquo;Vintage&rdquo;. If this line is changed like seen below</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	// ignore nothing 
-	<span style="color:#e6db74">&#34;ignored_packages&#34;</span>: <span style="color:#f92672">[</span><span style="color:#f92672">]</span>
+	<span style="color:#e6db74">&#34;ignored_packages&#34;</span>: <span style="color:#f92672">[]</span>
 </code></pre></div><p>Sublime Text will switch into &ldquo;Vintage&rdquo; mode which basically is VIM-like. It will have the default VIM modes (Command,
 Insert, Visual) and all the keybindings. By default it will still start in Insert Mode, to switch this just set the
 following inside the user settings:</p>
@@ -1004,51 +501,7 @@ and I must say that I really like it. It doesn&rsquo;t hold me back, I can still
 feeling lost I can still use all of Sublime Text&rsquo;s features. So that&rsquo;s it, my current setup to get a around some VIM
 stuff while still being productive and fast daily. In my free-time and when writing articles I&rsquo;ve almost switched
 completly to VIM to dig into it and see if it can replace Sublime Text one day.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Useful Web Developer Tools]]></title>
-            <link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail" />
-            
-                <id>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</id>
-            
-            
-            <published>2014-06-13T00:00:00+00:00</published>
-            <updated>2014-06-13T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload,
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim"/><category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor"/></entry><entry><title type="html">Useful Web Developer Tools</title><link href="https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/?utm_source=atom_feed" rel="related" type="text/html" title="Labels in GMail"/><id>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</id><published>2014-06-13T00:00:00+00:00</published><updated>2014-06-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload,
 Pre-Processors, shortcuts - all that stuff. It&rsquo;s always great to save some time, especially for repeating tasks or
 challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.</p>
 <h2 id="browser-based">Browser-based</h2>
@@ -1117,53 +570,7 @@ repo</a> and given the fact they&rsquo;re standard non-fancy they
 should work on almost all systems. Just edit your <code>.bashrc</code> or <code>.bash_profile</code> and add the PS1 line to it to have a
 colored, good looking bash prompt.</p>
 <p>So, what tools am I missing? Anything that&rsquo;s a absolute must-have? <a href="https://twitter.com/_kevinatari">Hit me up</a>!</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Vim - first impression]]></title>
-            <link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text" />
-            
-                <id>https://kevingimbel.de/blog/2014/05/vim-first-impression/</id>
-            
-            
-            <published>2014-05-26T00:00:00+00:00</published>
-            <updated>2014-05-26T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>When I first looked at Vim it was a very short experience that was literally as follows</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/chrome" term="chrome" label="chrome"/><category scheme="https://kevingimbel.de/tags/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/workflow" term="workflow" label="workflow"/></entry><entry><title type="html">Vim - first impression</title><link href="https://kevingimbel.de/blog/2014/05/vim-first-impression/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="related" type="text/html" title="Brackets vs. Sublime Text"/><id>https://kevingimbel.de/blog/2014/05/vim-first-impression/</id><published>2014-05-26T00:00:00+00:00</published><updated>2014-05-26T00:00:00+00:00</updated><content type="html"><![CDATA[<p>When I first looked at Vim it was a very short experience that was literally as follows</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	<span style="color:#75715e"># from the command line</span>
 	vim test.md
 	*vim opens*
@@ -1271,51 +678,7 @@ visible - this makes a long <code>.vimrc</code> a lot more readable.</p>
 <p><img src="https://i.kevingimbel.me/sc/sc-26-01-13.png" alt="Vim with auto-closed sections" title="Vim with auto-closed sections"></p>
 <p>So that&rsquo;s it, my tiny Vim experience and setup. As with every config things you can grab a copy of my <code>.vimrc</code> in the
 <a href="https://github.com/kevingimbel/config/blob/master/.vimrc">Github Config Repo</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Brackets vs. Sublime Text]]></title>
-            <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-            
-                <id>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</id>
-            
-            
-            <published>2013-12-25T00:00:00+00:00</published>
-            <updated>2013-12-25T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>I first tried <a href="http://brackets.io">Brackets</a> back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside <a href="http://www.vim.org/">VIM</a> it is <em>the</em> editor I read quite a lot about latly. My first impression was: &ldquo;<em>Wow, that&rsquo;s a simple, clean editor!</em>&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&rsquo;ve been using for the last two years or so.</p>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor"/><category scheme="https://kevingimbel.de/tags/vim" term="vim" label="vim"/></entry><entry><title type="html">Brackets vs. Sublime Text</title><link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><id>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</id><published>2013-12-25T00:00:00+00:00</published><updated>2013-12-25T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I first tried <a href="http://brackets.io">Brackets</a> back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside <a href="http://www.vim.org/">VIM</a> it is <em>the</em> editor I read quite a lot about latly. My first impression was: &ldquo;<em>Wow, that&rsquo;s a simple, clean editor!</em>&rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&rsquo;ve been using for the last two years or so.</p>
 <h2 id="functionality">Functionality</h2>
 <h3 id="highlighting">Highlighting</h3>
 <p>Bracket as well as Sublime Text comes with Syntax Highlighting for almost everything one needs: HTML, SCSS, CSS, JavaScript, Ruby, Python - all of these can be highlighted by default which, in my opinion, is a standard these days. However, as far as I can tell it is easier to customize the Highlight settings in Sublime Text (2) and with the standard Monokai Theme Sublime has a better highlighting than Brackets. Another point is that there is no way (as far as I found) to set a highlight language before saving a file in Brackets - so I can&rsquo;t have Markdown Highlighting for this post unless I save it once which is possible in Sublime Text.</p>
@@ -1337,36 +700,4 @@ Unfortunately Brackets does not query SCSS variables. When you define your varia
 I&rsquo;m pretty sure there&rsquo;s a Sublime Text Plugin for this, too but having it build-in is just a great feature. What I&rsquo;m missing on the other hand is spell-checking. As non-native English speaker spell-checking is always a great thing.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>I&rsquo;m impressed by Brackets, it&rsquo;s a simple and great editor and I&rsquo;ll definitely keep an eye on it. It&rsquo;s a good, free alternative to Sublime Text 2 (which costs 75$) and worth a try. However, depending on my current workflow I&rsquo;ll stick to Sublime Text for most of my work.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/software" term="software" label="software" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tools" term="tools" label="tools"/><category scheme="https://kevingimbel.de/tags/tooling" term="tooling" label="tooling"/><category scheme="https://kevingimbel.de/tags/software" term="software" label="software"/><category scheme="https://kevingimbel.de/tags/editor" term="editor" label="editor"/></entry></feed>

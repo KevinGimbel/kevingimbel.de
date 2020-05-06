@@ -1,45 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>automation on KevOps</title>
-    <link>https://kevingimbel.de/tags/automation/</link>
-    <description>Recent content in automation on KevOps</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kevingimbel.de/tags/automation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Auto SSL With apache2</title>
-      <link>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</link>
-      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</guid>
-      <description>Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&amp;rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
-This guide assumes the operating system is Ubuntu! If you use a different distro some commands may be different.</description>
-    </item>
-    
-    <item>
-      <title>Using Archetypes in Hugo</title>
-      <link>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</link>
-      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</guid>
-      <description>For the longest time I completely ignored archetypes in hugo. I&amp;rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>automation on KevOps</title><link>https://kevingimbel.de/tags/automation/</link><description>Recent content in automation on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>Auto SSL With apache2</title><link>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</link><pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</guid><description>Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&amp;rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
+This guide assumes the operating system is Ubuntu! If you use a different distro some commands may be different.</description></item><item><title>Using Archetypes in Hugo</title><link>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</link><pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</guid><description>For the longest time I completely ignored archetypes in hugo. I&amp;rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
 Archetypes are easy to use, for example to create this post I ran the following command
-$ hugo new blog/2020-01-07-using-archetypes-in-hugo.md This copied over the archetype file from archetypes/blog.</description>
-    </item>
-    
-    <item>
-      <title>Bash script: ws</title>
-      <link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link>
-      <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
-      
-      <guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid>
-      <description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description>
-    </item>
-    
-  </channel>
-</rss>
+$ hugo new blog/2020-01-07-using-archetypes-in-hugo.md This copied over the archetype file from archetypes/blog.</description></item><item><title>Bash script: ws</title><link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link><pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid><description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description></item></channel></rss>

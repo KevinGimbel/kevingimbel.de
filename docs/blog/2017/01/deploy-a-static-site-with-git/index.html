@@ -1,147 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Deploy a static site with git &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords="git hugo deployment bash  blog coding tools devops  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <script type="text/javascript">
-    (function(window, document, undefined) {
-        let theme = window.localStorage.getItem("kgde_theme");
-        console.log(theme);
-        if (theme) {
-            var [colorMain, colorSecondary] = JSON.parse(theme).colors;
-            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-        } else {
-            
-            
-            let themes = [
-                ["#123D3C", "#90F072"],
-                ["#403D58", "#dea584"],
-                ["#400E3B", "#DCC78A"],
-                ["#17098D", "#EADD1C"],
-                ["#233B07", "#FFDD6D"]
-            ]
-            var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
-            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            let schema_btn = document.querySelector("#btn_schema");
-            let theme = window.localStorage.getItem("kgde_theme");
-            if (theme) {
-                schema_btn.textContent = "Use random color theme";
-            } else {
-                schema_btn.textContent = "Keep current color theme";
-            }
-            schema_btn.style.display = "block";
-            schema_btn.addEventListener('click', function(e) {
-                if (theme) {
-                    window.localStorage.removeItem("kgde_theme");
-                    window.reload();
-                } else {
-                    window.localStorage.setItem("kgde_theme", JSON.stringify({colors: [colorMain, colorSecondary]}));
-                }
-            });
-        });
-    }(window, document));
-    </script>
-    <header class="intro-text">
-        <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
-        <span>
-        
-        
-        Deploy a static site with git
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            
-
-
-
-
-
-
-
-<p>Written on <time datetime="2017-01-17 21:28:38 &#43;0100 CET">17. Jan 2017</time>  </p>
-            <p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href="/farewell-jekyll-hello-hugo/">Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a> to create SSL certificates and use HTTPS.</p>
-<h3 id="so-what-is-a-static-site">So, what is a &ldquo;static site&rdquo;?</h3>
-<blockquote>
-<p>If you already know the answer, <a href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site
-">skip to the next section</a>!</p>
-</blockquote>
-<p>As the name suggest a static site is - well - <em>static</em>. There&rsquo;s no fancy Backend to login and no Database required to fetch content. All the content comes from <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post">a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href="https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts">templates</a> which in turn a template engine to get content into place. The template for my <a href="/about/">/about/</a> page looks like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
-&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page wrap&#34;</span> <span style="color:#a6e22e">aria-labeldyby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
-  &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-header&#34;</span>&gt;
-    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
-  &lt;/<span style="color:#f92672">header</span>&gt;
-  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-body&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Deploy a static site with git &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="git hugo deployment bash  blog coding tools devops"><link rel=icon href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIj7wn5u4PC90ZXh0Pjwvc3ZnPg=="><style type=text/css>*{margin:0;padding:0;box-sizing:inherit}:root{--color-main: #403D58;--color-secondary: #dea584}html,body{box-sizing:border-box;font:18px/1.65 monospace}a{color:var(--color-main);font-weight:700}.footer a,.author a,.intro-text a{color:var(--color-secondary);font-weight:700}.fg-accent{color:var(--color-secondary)}.x-small{font-size:.85rem}.xx-small{font-size:.65rem}h1{font-size:2rem}.article-content h2,.article-content h3{margin-top:2rem}.section-headline{font-size:2.75em;margin-top:2rem}.section-headline,h1,h2{display:inline-block;position:relative;z-index:2;color:var(--color-main)}.section-headline::after,h1::after,h2::after{content:"";width:100%;display:block;height:.35em;background:var(--color-secondary);bottom:.3em;position:absolute;left:0;z-index:-1}.intro-text{padding:2rem;background:#222;color:#fff;font-size:140%}.main,.footer{max-width:85rem;width:100%;margin:0 auto;padding:2rem}hr{border:none;background:var(--color-main);height:2px}.footer{background:#222;color:#fff}.main{background:#f1f1f1;border:1px solid #ddd;border-bottom:0;min-height:100vh;padding:2rem 2rem 0}.main p{margin-top:1rem;margin-bottom:1.5rem}.exif{padding:.5rem;background:var(--color-secondary)}.exif li{display:inline-block;background:#333;color:#ccc;border-radius:3px;padding:.125rem .5rem;font-size:.8rem}.exif .label{font-size:.75rem}@media all and (max-width:800px){.exif li{margin-top:.5rem}}figure img,figure picture{margin:0 auto;display:block;height:auto;width:auto;margin:0 auto}.photography figure img,.photography figure picture{width:auto;max-width:calc(100% + 2rem + 1px)}figcaption p{display:block;line-height:1.65;background:var(--color-secondary);color:#fff;margin-top:0;padding:.5rem;text-align:right;font-size:var(--font-small,.85rem)}figure{position:relative;z-index:1;margin-left:calc(0rem - 2rem)}figure+figure{margin-top:2rem}figcaption{display:flex;justify-content:flex-end}figcaption p{margin:0!important;background:var(--color-secondary);color:var(--color-main);font-size:.85em}@media all and (min-width:800px){figure{width:auto;max-width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px)}figcaption p{width:50%}}p code,li code{background:var(--color-secondary);color:var(--color-main);padding:.125rem .25rem;border-radius:3px}.highlight{margin-left:calc(0rem - 2rem);width:calc(100% + 4rem)}.nav-main{list-style:none;width:100%;background:#222}.nav-main li{display:inline-block;padding:.25rem 1rem;background:var(--color-main)}.nav-main li a{color:#fff;text-decoration:none}.page-nav{width:calc(100% + 4rem);background:var(--color-secondary);margin:2rem calc(0rem - 2rem);padding:2rem}.page-nav a:not(:last-of-type){margin-right:.5rem}.subscribe-via{width:calc(100% + 4rem);background:var(--color-main);color:#fff;margin-left:calc(0rem - 2rem);margin-top:-2rem;padding:.5rem 2rem}.subscribe-via a{color:#fff}.page-nav--label{display:block;font-size:.75em}.article-content{padding-bottom:2rem}.article-content ol,.article-content ul{margin-left:2rem}.article-list__header{margin-bottom:2rem}.article.article--in-list{padding-bottom:1rem}.article.article--in-list:not(:last-of-type){margin-bottom:2rem}.article.article--in-list:not(:last-of-type):after{content:"";width:80%;text-align:center;height:1px;border-bottom:.15rem dashed var(--color-main);display:block;margin:2rem auto 0}pre{padding:1rem;overflow:auto}.tag-list__item{display:inline-block;background:var(--color-main);color:var(--color-secondary);border-radius:3px;padding:.125rem .25rem;margin-bottom:.5rem}.tag-list__item a{color:var(--color-secondary)}@media all and (min-width:800px){.footer,.author,.support{display:flex;justify-content:space-between}.author .left,.support .left,.footer .left{margin-bottom:0}}.author .left,.support .left,.footer .left{margin-bottom:2rem}.author,.support{background:var(--color-main);color:#fff;padding:4rem 2rem;width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px)}.support+.author{margin-top:0}.support{background:var(--color-secondary);color:var(--color-main);flex-direction:column}.support a{color:var(--color-main)}.author p,.support p{margin-bottom:0}@media all and (min-width:800px){.author .right{padding-left:2rem}.author .avatar{margin-left:2rem}}.author .avatar{max-width:200px;transition:all linear 60s}.author .avatar:hover{animation:avatar-hue linear 15s infinite}@keyframes avatar-hue{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}.age-note{background:#d46767;border:.35rem solid #b22222;padding:1rem 2rem;width:calc(100% + 4rem + 2px);margin-left:-2rem;margin-top:-2rem;color:#222}.tags-categories,.license{background:#d3d3d3;width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px);padding:2rem}.side-by-side img{width:auto;max-width:100%}@media all and (min-width:640px){.tags-categories{display:flex}.tags-categories .tags{margin-left:2rem}.side-by-side{display:flex;flex-direction:row;align-items:center;margin:2rem 0}.side-by-side.align-top{align-items:flex-start}.side-by-side.align-bottom{align-items:flex-end}.side-by-side__first{margin-bottom:3rem}.side-by-side__off-left{margin-left:-20vw}.side-by-side .small{max-width:40%;padding:2rem}.side-by-side .bg{background:var(--color-main);color:var(--color-secondary)}.side-by-side .wide{max-width:60%}.side-by-side img,.side-by-side figure{max-width:100%;margin:0}}.note{background:var(--color-main);color:#fff;padding:1rem 1rem 1rem 2rem;border-left:.5rem solid var(--color-secondary);margin:2rem 1rem;width:calc(100% - 1rem)}.note__heading{font-weight:700;display:block}.taxonomy-list{display:flex;padding-bottom:2rem;align-content:flex-end;justify-content:space-between;flex-wrap:wrap}.taxonomy__item{width:20%;height:2rem;display:inline-block;padding:2rem 0}.taxonomy__item-inner{padding:1rem;background:var(--color-main);color:var(--color-secondary)}.taxonomy__item a{color:var(--color-secondary)}</style></head><body><script type=text/javascript>(function(window,document,undefined){let theme=window.localStorage.getItem("kgde_theme");if(theme){var[colorMain,colorSecondary]=JSON.parse(theme).colors;document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}else{let themes=[["#123D3C","#90F072"],["#403D58","#dea584"],["#400E3B","#DCC78A"],["#17098D","#EADD1C"],["#233B07","#FFDD6D"]]
+var[colorMain,colorSecondary]=themes[Math.floor(Math.random()*themes.length)];document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}
+document.addEventListener('DOMContentLoaded',function(){let schema_btn=document.querySelector("#btn_schema");let theme=window.localStorage.getItem("kgde_theme");if(theme){schema_btn.textContent="Use random color theme";}else{schema_btn.textContent="Keep current color theme";}
+schema_btn.style.display="block";schema_btn.addEventListener('click',function(e){if(theme){window.localStorage.removeItem("kgde_theme");window.reload();}else{window.localStorage.setItem("kgde_theme",JSON.stringify({colors:[colorMain,colorSecondary]}));}});});}(window,document));</script><header class=intro-text><button id=btn_schema style=position:absolute;top:10px;right:10px;display:none></button>
+<span>Deploy a static site with git</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content>images/self-2019.jpg<p>Written on <time datetime="2017-01-17 21:28:38 +0100 CET">17. Jan 2017</time></p><p>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to <a href=/farewell-jekyll-hello-hugo/>Hugo hosted on Uberspace</a>. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed (<code>$ hugo</code>) it compiles the site from Markdown and HTML templates into a <code>public</code> directory with lots of folders and HTML files. I could have fiddled with GitHub pages and created a <code>docs</code> directory with the live site inside but then I could have stayed with Jekyll in the first place. What made me move to Hugo beside the speed advantages was that I wanted to self-host my website again and use <a href=https://letsencrypt.org/>Let&rsquo;s Encrypt</a> to create SSL certificates and use HTTPS.</p><h3 id=so-what-is-a-static-site>So, what is a &ldquo;static site&rdquo;?</h3><blockquote><p>If you already know the answer, <a href=https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/#deploying-a-static-site>skip to the next section</a>!</p></blockquote><p>As the name suggest a static site is - well - <em>static</em>. There&rsquo;s no fancy Backend to login and no Database required to fetch content. All the content comes from <a href=https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/content/post>a bunch of markdown files</a>. These files are then compiled into a lot of HTML files based on <a href=https://github.com/kevingimbel/kevingimbel.com/tree/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts>templates</a> which in turn a template engine to get content into place. The template for my <a href=/about/>/about/</a> page looks like this.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{ define &#34;main&#34; }}
+&lt;<span style=color:#f92672>section</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;page wrap&#34;</span> <span style=color:#a6e22e>aria-labeldyby</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;title&#34;</span> <span style=color:#a6e22e>aria-describedby</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;desc&#34;</span>&gt;
+  &lt;<span style=color:#f92672>header</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;page-header&#34;</span>&gt;
+    &lt;<span style=color:#f92672>h2</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;title&#34;</span>&gt;{{ .Title }}&lt;/<span style=color:#f92672>h2</span>&gt;
+  &lt;/<span style=color:#f92672>header</span>&gt;
+  &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;page-body&#34;</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;desc&#34;</span>&gt;
     {{ .Content }}
-  &lt;/<span style="color:#f92672">div</span>&gt;
-&lt;/<span style="color:#f92672">section</span>&gt;
+  &lt;/<span style=color:#f92672>div</span>&gt;
+&lt;/<span style=color:#f92672>section</span>&gt;
 {{ end }}
-</code></pre></div><p>These 10 lines of code make up the default for single pages without a custom template. The words in curly brackets (e.g. <code>{{ .Content }}</code>) are variables filled by Hugo when the template is compiled. <code>{{ define &quot;main&quot; }}</code> defines the <code>main</code> block used inside the <a href="https://github.com/kevingimbel/kevingimbel.com/blob/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts/_default/baseof.html#L36-L38"><code>baseof.html</code> template</a>. All these templates make up the final site. So, despite being &ldquo;static&rdquo; when finished a static site is not so static! It can be flexible and you can use template logic like conditions (<code>if/else</code>, <code>with</code>), loops (<code>range</code>), and with Hugo even custom <a href="http://gohugo.io/extras/shortcodes/">shortcodes inside your markdown</a>.</p>
-<p>At the end of the day we get a static site. This site is compiled from our source files and consists of folders (for URLs) and files (lots of <code>index.html</code> files!) so our server (apache, nginx, a node app) can deliver the content to the client. You might know that by default apache will serve any files such as <code>index.html</code> or <code>index.htm</code> when a route is requested unless you use a dynamic system such as PHP, Ruby, or NodeJS to serve your files. When you load this article at <a href="https://kevingimbel.com/deploy-a-static-site-with-git/">https://kevingimbel.com/deploy-a-static-site-with-git/</a> you request a folder, <code>deploy-a-static-site-with-git</code>, located inside the web root directory of my server and the <code>index.html</code> file inside this folder gets served to you by Apache. This is the basics how static websites work - they&rsquo;re simply HTML files and folders!</p>
-<h3 id="deploying-a-static-site">Deploying a static site</h3>
-<p>So far we learned  that static sites are &ldquo;just&rdquo; folders and HTML files when generated. The only dependency they have to make them work is a Web Server. This can be apache, nginx, IIS, a simple nodeJS app, or even <code>python -m SimpleHTTPServer</code>. The most basic deployment for our website would be to upload the content of the generated folder (<code>public</code>) to our server using FTP. You might remember that this was the standard for having a website in the 90s were all websites were coded in Frames or tables. My first &ldquo;real website&rdquo; around 2008 was deployed that way. It was a mess.</p>
-<p>What I did might be over-engineering in some way. I have all my source code in git so I set up a git repository on my server and push to this repository whenever I want to publish a new blog post, fix an issue, or change some templates/CSS. What&rsquo;s important about the repository is that it needs to be a <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server">bare repository</a>.</p>
-<h4 id="setting-up-the-git-repository">Setting up the git repository</h4>
-<p>The repository can be in any directory on your server which your user (the one you login with ssh) has access to. It should not be your web server root, that is <code>/var/www/</code> or <code>/var/www/html/</code> depending on your system since the files inside the bare repo could be exposed to the public this way. I created a directory outside the web server root in my users <code>home</code> directory, namely <code>$HOME/repository/kevingimbel.com</code>. The steps to setup the bare repository are as follows.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh youruser@yourserver
+</code></pre></div><p>These 10 lines of code make up the default for single pages without a custom template. The words in curly brackets (e.g. <code>{{ .Content }}</code>) are variables filled by Hugo when the template is compiled. <code>{{ define "main" }}</code> defines the <code>main</code> block used inside the <a href=https://github.com/kevingimbel/kevingimbel.com/blob/8cc66cd61774e28628848bcfde58d93b8ba3cae1/themes/kevingimbel/layouts/_default/baseof.html#L36-L38><code>baseof.html</code> template</a>. All these templates make up the final site. So, despite being &ldquo;static&rdquo; when finished a static site is not so static! It can be flexible and you can use template logic like conditions (<code>if/else</code>, <code>with</code>), loops (<code>range</code>), and with Hugo even custom <a href=http://gohugo.io/extras/shortcodes/>shortcodes inside your markdown</a>.</p><p>At the end of the day we get a static site. This site is compiled from our source files and consists of folders (for URLs) and files (lots of <code>index.html</code> files!) so our server (apache, nginx, a node app) can deliver the content to the client. You might know that by default apache will serve any files such as <code>index.html</code> or <code>index.htm</code> when a route is requested unless you use a dynamic system such as PHP, Ruby, or NodeJS to serve your files. When you load this article at <a href=https://kevingimbel.com/deploy-a-static-site-with-git/>https://kevingimbel.com/deploy-a-static-site-with-git/</a> you request a folder, <code>deploy-a-static-site-with-git</code>, located inside the web root directory of my server and the <code>index.html</code> file inside this folder gets served to you by Apache. This is the basics how static websites work - they&rsquo;re simply HTML files and folders!</p><h3 id=deploying-a-static-site>Deploying a static site</h3><p>So far we learned that static sites are &ldquo;just&rdquo; folders and HTML files when generated. The only dependency they have to make them work is a Web Server. This can be apache, nginx, IIS, a simple nodeJS app, or even <code>python -m SimpleHTTPServer</code>. The most basic deployment for our website would be to upload the content of the generated folder (<code>public</code>) to our server using FTP. You might remember that this was the standard for having a website in the 90s were all websites were coded in Frames or tables. My first &ldquo;real website&rdquo; around 2008 was deployed that way. It was a mess.</p><p>What I did might be over-engineering in some way. I have all my source code in git so I set up a git repository on my server and push to this repository whenever I want to publish a new blog post, fix an issue, or change some templates/CSS. What&rsquo;s important about the repository is that it needs to be a <a href=https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server>bare repository</a>.</p><h4 id=setting-up-the-git-repository>Setting up the git repository</h4><p>The repository can be in any directory on your server which your user (the one you login with ssh) has access to. It should not be your web server root, that is <code>/var/www/</code> or <code>/var/www/html/</code> depending on your system since the files inside the bare repo could be exposed to the public this way. I created a directory outside the web server root in my users <code>home</code> directory, namely <code>$HOME/repository/kevingimbel.com</code>. The steps to setup the bare repository are as follows.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ ssh youruser@yourserver
 $ mkdir -p $HOME/repository/kevingimbel.com
 $ cd $HOME/repository/kevingimbel.com
 $ git clone --bare https://github.com/kevingimbel/kevingimbel.com
-</code></pre></div><p>These commands create the <code>repository</code> directory with a sub-directory <code>kevingimbel.com</code> inside. Inside this new directory I clone the git repository from GitHub with the <a href="https://git-scm.com/docs/git#git---bare"><code>--bare</code></a> flag set. This will not checkout the source code but instead setup a git repository which we can push to or pull from - just like we would do from GitHub. What we need to build the static site is <code>hugo</code> as executable on the server -and the source code of the site. &ldquo;Wait!&rdquo; I hear you say, &ldquo;Didn&rsquo;t you just say there <em>is no source code?!</em>&rdquo; - that&rsquo;s right. The bare repository holds no source code but it can <em>be pushed to</em>! When we push our code to this remote we can use a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git hook</a> to execute a set of scripts when a push is received. To do so, we use the <code>post-receive</code> hook. There are examples for each hook inside your newly created directory, e.g. <code>$HOME/repository/kevingimbel.com/hooks</code>.</p>
-<h4 id="the-post-receive-hook">The post-receive hook</h4>
-<p>The <code>post-receive</code> hook is executed after the git repository receives a new push. There are also <code>pre-</code> hooks which are executed before certain actions take place. You can use <code>pre-commit</code> for example to run a set of tests before you are able to write a commit message. I did this in for my example <a href="https://github.com/kevingimbel/nodesh/blob/master/scripts/pre-commit">node cli script nodesh</a> to run <a href="https://mochajs.org/">mocha</a> before I am able to commit. If a test fails and mocha exits with a non 0 code the commit is aborted. To build our static site after we push to the repository we will use the <code>post-receive</code> hook.</p>
-<p>The <code>post-receive</code> hook I use can be found <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive">on GitHub</a>. The <code>post-receive</code> hook is a bash script which has access to a lot of built-in functions as well as all your users functions when a <code>source ~/.bash_profile</code> line is added to the top.</p>
-<pre><code>#!/bin/sh
+</code></pre></div><p>These commands create the <code>repository</code> directory with a sub-directory <code>kevingimbel.com</code> inside. Inside this new directory I clone the git repository from GitHub with the <a href=https://git-scm.com/docs/git#git---bare><code>--bare</code></a> flag set. This will not checkout the source code but instead setup a git repository which we can push to or pull from - just like we would do from GitHub. What we need to build the static site is <code>hugo</code> as executable on the server -and the source code of the site. &ldquo;Wait!&rdquo; I hear you say, &ldquo;Didn&rsquo;t you just say there <em>is no source code?!</em>&rdquo; - that&rsquo;s right. The bare repository holds no source code but it can <em>be pushed to</em>! When we push our code to this remote we can use a <a href=https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks>git hook</a> to execute a set of scripts when a push is received. To do so, we use the <code>post-receive</code> hook. There are examples for each hook inside your newly created directory, e.g. <code>$HOME/repository/kevingimbel.com/hooks</code>.</p><h4 id=the-post-receive-hook>The post-receive hook</h4><p>The <code>post-receive</code> hook is executed after the git repository receives a new push. There are also <code>pre-</code> hooks which are executed before certain actions take place. You can use <code>pre-commit</code> for example to run a set of tests before you are able to write a commit message. I did this in for my example <a href=https://github.com/kevingimbel/nodesh/blob/master/scripts/pre-commit>node cli script nodesh</a> to run <a href=https://mochajs.org/>mocha</a> before I am able to commit. If a test fails and mocha exits with a non 0 code the commit is aborted. To build our static site after we push to the repository we will use the <code>post-receive</code> hook.</p><p>The <code>post-receive</code> hook I use can be found <a href=https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive>on GitHub</a>. The <code>post-receive</code> hook is a bash script which has access to a lot of built-in functions as well as all your users functions when a <code>source ~/.bash_profile</code> line is added to the top.</p><pre><code>#!/bin/sh
 
 source ~/.bash_profile
 
@@ -175,118 +50,11 @@ do
       hugo -b=&quot;https://kevingimbel.com&quot; -d=&quot;$project_path&quot; -s=&quot;$hugo_file_path&quot;
     fi
 done
-</code></pre><p>There happens quite a lot in my <code>post-receive</code> but the most import parts are the  <code>git checkout</code> with the <a href="https://git-scm.com/docs/git#git---work-treeltpathgt"><code>--work-tree</code></a> and <a href="https://git-scm.com/docs/git#git---git-dirltpathgt"><code>--git-dir</code></a> to tell git were the git repository is (<code>--git-dir</code>) and were the files should be checked-out to (<code>--work-tree</code>). I checkout the files to <code>$HOME/hugosrc</code>where the source code of my website is placed just like on GitHub. I then <a href="https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive#L33-L42">do some magic</a> to re-write my <code>style.css</code> file to a hashed-file. This is used to force browsers to re-load the CSS when the file has changed. After the style.css re-write is done and the css path inside the  <code>baseof.html</code> template is changed I build the site with <code>hugo</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo -b<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://kevingimbel.com&#34;</span> -d<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$project_path<span style="color:#e6db74">&#34;</span> -s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$hugo_file_path<span style="color:#e6db74">&#34;</span>
-</code></pre></div><p><code>-b</code> is the base url, <code>-d</code> is the destination and <code>-s</code> is the source. This way the static site is generated into my document root folder ($home/subdomains/html) with the new source files checked-out by git into the <code>$HOME/hugosrc</code> directory. Hugo generates the site and logs all output to the terminal - which is nice to have. In case of a build error hugo stops and does not overwrite the existing, working site. This is also nice to have.</p>
-<p>What&rsquo;s important is that the <code>post-receive</code> hook is executable, so you have to run <code>$ chmod +x post-receive</code> to set the <code>x</code> (or e<code>x</code>ecute) permission on the file.</p>
-<h4 id="pushing-to-the-new-repository">Pushing to the new repository</h4>
-<p>To push your code to the new repository you need to add it as a <a href="https://git-scm.com/docs/git-remote">remote</a> to your local git repository. To do so, use <code>git remote add</code> filling in the remote name and remote url parameters.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># git remote add $name $url</span>
+</code></pre><p>There happens quite a lot in my <code>post-receive</code> but the most import parts are the <code>git checkout</code> with the <a href=https://git-scm.com/docs/git#git---work-treeltpathgt><code>--work-tree</code></a> and <a href=https://git-scm.com/docs/git#git---git-dirltpathgt><code>--git-dir</code></a> to tell git were the git repository is (<code>--git-dir</code>) and were the files should be checked-out to (<code>--work-tree</code>). I checkout the files to <code>$HOME/hugosrc</code>where the source code of my website is placed just like on GitHub. I then <a href=https://github.com/kevingimbel/kevingimbel.com/blob/master/scripts/post-receive#L33-L42>do some magic</a> to re-write my <code>style.css</code> file to a hashed-file. This is used to force browsers to re-load the CSS when the file has changed. After the style.css re-write is done and the css path inside the <code>baseof.html</code> template is changed I build the site with <code>hugo</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>hugo -b<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://kevingimbel.com&#34;</span> -d<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span>$project_path<span style=color:#e6db74>&#34;</span> -s<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span>$hugo_file_path<span style=color:#e6db74>&#34;</span>
+</code></pre></div><p><code>-b</code> is the base url, <code>-d</code> is the destination and <code>-s</code> is the source. This way the static site is generated into my document root folder ($home/subdomains/html) with the new source files checked-out by git into the <code>$HOME/hugosrc</code> directory. Hugo generates the site and logs all output to the terminal - which is nice to have. In case of a build error hugo stops and does not overwrite the existing, working site. This is also nice to have.</p><p>What&rsquo;s important is that the <code>post-receive</code> hook is executable, so you have to run <code>$ chmod +x post-receive</code> to set the <code>x</code> (or e<code>x</code>ecute) permission on the file.</p><h4 id=pushing-to-the-new-repository>Pushing to the new repository</h4><p>To push your code to the new repository you need to add it as a <a href=https://git-scm.com/docs/git-remote>remote</a> to your local git repository. To do so, use <code>git remote add</code> filling in the remote name and remote url parameters.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># git remote add $name $url</span>
 $ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/repository/gitrepo
-</code></pre></div><p>Afterwards you are able to push your code with <code>git push production master</code>.</p>
-<p>And that&rsquo;s it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p>
-
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under tools"
-                href="https://kevingimbel.de/categories/tools/">tools</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under devops"
-                href="https://kevingimbel.de/categories/devops/">devops</a>
-        </li></ul>
-</section>
-
-        
-
-<section class="tags">
-    <h3>Tags</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with git"
-                href="https://kevingimbel.de/tags/git/">git</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with hugo"
-                href="https://kevingimbel.de/tags/hugo/">hugo</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with deployment"
-                href="https://kevingimbel.de/tags/deployment/">deployment</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with bash"
-                href="https://kevingimbel.de/tags/bash/">bash</a>
-        </li></ul>
-</section>
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2017-01-17-deploy-a-static-site-with-git.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+</code></pre></div><p>Afterwards you are able to push your code with <code>git push production master</code>.</p><p>And that&rsquo;s it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.</p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tools" href=https://kevingimbel.de/categories/tools/>tools</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under devops" href=https://kevingimbel.de/categories/devops/>devops</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with git" href=https://kevingimbel.de/tags/git/>git</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with hugo" href=https://kevingimbel.de/tags/hugo/>hugo</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with deployment" href=https://kevingimbel.de/tags/deployment/>deployment</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with bash" href=https://kevingimbel.de/tags/bash/>bash</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/images/self-2019_huaef00fa0bf6dacb2852b9636887d782c_127517_200x200_resize_q75_box.jpg alt="A colorful image of me in a club in Budapest. The image has been heavily blured and modified to give it a glitch aesthetic." class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2017-01-17-deploy-a-static-site-with-git.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>

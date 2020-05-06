@@ -1,38 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[frontend on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/frontend/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/frontend/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/frontend/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/frontend/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Conditional CSS]]></title>
-            <link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014" />
-                <link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags" />
-                <link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons" />
-                <link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass" />
-                <link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky" />
-            
-                <id>https://kevingimbel.de/blog/2014/07/conditional-css/</id>
-            
-            
-            <published>2014-07-31T00:00:00+00:00</published>
-            <updated>2014-07-31T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">frontend on KevOps</title><link href="https://kevingimbel.de/tags/frontend/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/frontend/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/frontend/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/frontend/</id><entry><title type="html">Conditional CSS</title><link href="https://kevingimbel.de/blog/2014/07/conditional-css/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/01/web-development-in-2014/?utm_source=atom_feed" rel="related" type="text/html" title="Web Development in 2014"/><link href="https://kevingimbel.de/blog/2013/11/pseudo-product-flags/?utm_source=atom_feed" rel="related" type="text/html" title="Pseudo Product Flags"/><link href="https://kevingimbel.de/blog/2013/10/custom-radio-buttons/?utm_source=atom_feed" rel="related" type="text/html" title="Custom Radio Buttons"/><link href="https://kevingimbel.de/blog/2013/10/from-0-to-sass/?utm_source=atom_feed" rel="related" type="text/html" title="From 0 To Sass"/><link href="https://kevingimbel.de/blog/2013/09/a-bit-sticky/?utm_source=atom_feed" rel="related" type="text/html" title="A bit sticky"/><id>https://kevingimbel.de/blog/2014/07/conditional-css/</id><published>2014-07-31T00:00:00+00:00</published><updated>2014-07-31T00:00:00+00:00</updated><content type="html"><![CDATA[<p>While there&rsquo;s a lot of talking about CSS writing styles, organization styles and if it&rsquo;s maybe better or not to avoid
 pre-processors or frameworks there&rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS,
 i.e. pieces of CSS that serve one specific task the easiest and most known is <code>.active</code> given to, well, active elements.
 I&rsquo;d like to talk a bit about conditional CSS that I&rsquo;ve been using in production and that I think can improve the overall
@@ -89,22 +55,22 @@ is hidden because of a class name. This way it is easier to find out why an elem
 inline styles which always have a higher priority than everything else (as the next pen shows).</p>
 <!-- raw HTML omitted -->
 <p>Some of the Conditional CSS classes I use are</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">hidden</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">hidden</span>
 .<span style="color:#a6e22e">is-hidden</span> {
 	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
 }
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">displayed</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">displayed</span>
 .<span style="color:#a6e22e">is-displayed</span> {
 	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span><span style="color:#f92672">:</span>
 }
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">active</span> <span style="color:#f92672">(</span><span style="color:#f92672">most</span> <span style="color:#f92672">of</span> <span style="color:#f92672">the</span> <span style="color:#f92672">time</span> <span style="color:#f92672">nav</span> <span style="color:#f92672">items</span><span style="color:#f92672">)</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">element</span> <span style="color:#f92672">is</span> <span style="color:#f92672">active</span> <span style="color:#f92672">(</span><span style="color:#f92672">most</span> <span style="color:#f92672">of</span> <span style="color:#f92672">the</span> <span style="color:#f92672">time</span> <span style="color:#f92672">nav</span> <span style="color:#f92672">items</span><span style="color:#f92672">)</span>
 .<span style="color:#a6e22e">active</span> {
-	<span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span>
+	<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">styles</span>
 }
 
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">used</span> <span style="color:#f92672">with</span> <span style="color:#f92672">buttons</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">used</span> <span style="color:#f92672">with</span> <span style="color:#f92672">buttons</span>
 .<span style="color:#a6e22e">has-icon</span> {
-	<span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span>
+	<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">styles</span>
 }
 
 <span style="color:#75715e">/*
@@ -134,7 +100,7 @@ inline styles which always have a higher priority than everything else (as the n
 }
 @<span style="color:#66d9ef">media</span> <span style="color:#f92672">print</span> {
 	.<span style="color:#a6e22e">print-only</span> {
-		<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">]</span>
+		<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">[1]</span>
 	}
 }
 </code></pre></div><p>So far I find Conditional CSS a good idea and really like to work with it. It&rsquo;s easier, at least for me, to see what a
@@ -142,34 +108,4 @@ class does and where/how it should be used. Also it&rsquo;s a simple use of DRY 
 Responsibility Principle</a> but as
 with everything overusing it won&rsquo;t make your live easier.
 As always I appreciate feedback or improvments via <a href="http://twitter.com/_kevinatari">twitter</a>.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/frontend" term="frontend" label="frontend"/></entry></feed>

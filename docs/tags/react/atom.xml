@@ -1,33 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[react on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/react/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/react/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/react/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/react/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[ReactJS - Hello World!]]></title>
-            <link href="https://kevingimbel.de/blog/2015/05/reactjs-hello-world/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-            
-                <id>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</id>
-            
-            
-            <published>2015-05-07T00:00:00+00:00</published>
-            <updated>2015-05-07T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>This article is the first in a series about <a href="http://facebook.github.io/react/">ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">react on KevOps</title><link href="https://kevingimbel.de/tags/react/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/react/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/react/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/react/</id><entry><title type="html">ReactJS - Hello World!</title><link href="https://kevingimbel.de/blog/2015/05/reactjs-hello-world/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</id><published>2015-05-07T00:00:00+00:00</published><updated>2015-05-07T00:00:00+00:00</updated><content type="html"><![CDATA[<p>This article is the first in a series about <a href="http://facebook.github.io/react/">ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p>
 <p>React itself says one very important and true thing about itself:</p>
 <blockquote>
 <p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it&rsquo;s easy to try it out on a small feature in an existing project.</p>
@@ -47,16 +18,16 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
 <li>Invoke a <code>render()</code> function within that Component</li>
 <li>Render the Component to the DOM</li>
 </ul>
-<h4 id="reactcreateclass">React.createClass(</h4>
+<h4 id="reactcreateclass">React.createClass({})</h4>
 <p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I&rsquo;ll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!&quot;.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
   <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span><span style="color:#f92672">!</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span><span style="color:#f92672">!&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
   }
 })
 </code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that&rsquo;ll be passed just like a HTML element: <code>&lt;HelloWorld /&gt;</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Renders the HelloWorld Component into the Body.
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>, document.<span style="color:#a6e22e">body</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">/&gt;</span>, document.<span style="color:#a6e22e">body</span>);
 </code></pre></div><p>And here&rsquo;s a working <a href="http://codepen.io">Pen</a> with additional comments.</p>
 <!-- raw HTML omitted -->
 <p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn&rsquo;t fun either. So next, we&rsquo;ll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p>
@@ -74,26 +45,26 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// The new Hello Component
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
   <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> {<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">!</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">1</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> {<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">!&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
   }
 });
 </code></pre></div><p>With this simple change we can invoke the Component like <code>&lt;Hello name=&quot;Kevin&quot; /&gt;</code> and it will return <code>&lt;h1&gt;Hello Kevin!&lt;/h1&gt;</code>. However, to create a List of our friends we need a new Component. This Component will be called <code>FriendList</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">FriendList</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
   <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allGreetings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">folks</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">person</span>) {
-      <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">person</span>} <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">person</span>} <span style="color:#f92672">/&gt;</span>;
     });
 
     <span style="color:#66d9ef">return</span>(
-      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">allGreetings</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">allGreetings</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
     )
   }
 });
 </code></pre></div><p>Quite a lot going on here. Let&rsquo;s break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that&rsquo;ll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /&gt;</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// this.props.folks.map() goes over every entry in the array
-</span><span style="color:#75715e"></span><span style="color:#75715e">// and returns a new Hello Component.
+</span><span style="color:#75715e">// and returns a new Hello Component.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allGreetings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">folks</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">person</span>) {
-  <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">person</span>} <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>;
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">person</span>} <span style="color:#f92672">/&gt;</span>;
 });
 </code></pre></div><p>What happens here is:</p>
 <ul>
@@ -103,51 +74,21 @@ var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color
 </ul>
 <p>So we have our HTML but we need to return it, right? Right! So the next line returns the generated HTML from the <code>FriendList</code> Component.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// the two parentese are optional but I like them for
-</span><span style="color:#75715e"></span><span style="color:#75715e">// &#34;grouping&#34; the return. The div however is required.
-</span><span style="color:#75715e"></span><span style="color:#75715e">// Every return must be wrapped in an DOM Element.
+</span><span style="color:#75715e">// &#34;grouping&#34; the return. The div however is required.
+</span><span style="color:#75715e">// Every return must be wrapped in an DOM Element.
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span>(
-      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">allGreetings</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">allGreetings</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
     )
 </code></pre></div><p>So here we return a <code>div</code> holding our generated HTML. The <code>div</code> is required because every React Component must return a HTML Container - and the <code>allGreetings</code> variable holds multiple containers so we need a new one. The parentese are optional but I prefer them for grouping the output. Next, we need to invoke our new Component.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Here we create an Array of all the people we want to greet. In this
-</span><span style="color:#75715e"></span><span style="color:#75715e">// case it&#39;s members from Team bullgit! http://bullg.it
+</span><span style="color:#75715e">// case it&#39;s members from Team bullgit! http://bullg.it
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allThePeople</span> <span style="color:#f92672">=</span> [
   <span style="color:#e6db74">&#34;Kevin&#34;</span>, <span style="color:#e6db74">&#34;Luky&#34;</span>, <span style="color:#e6db74">&#34;Jess&#34;</span>, <span style="color:#e6db74">&#34;Felix&#34;</span>, <span style="color:#e6db74">&#34;Max&#34;</span>, <span style="color:#e6db74">&#34;Nika&#34;</span>, <span style="color:#e6db74">&#34;Gregor&#34;</span>, <span style="color:#e6db74">&#34;Tim&#34;</span>, <span style="color:#e6db74">&#34;Jan&#34;</span>
 ]
 <span style="color:#75715e">// and then we pass it to the FriendList Component.
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">FriendList</span> <span style="color:#a6e22e">folks</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">allThePeople</span>}<span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>, document.<span style="color:#a6e22e">body</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">FriendList</span> <span style="color:#a6e22e">folks</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">allThePeople</span>}<span style="color:#f92672">/&gt;</span>, document.<span style="color:#a6e22e">body</span>);
 </code></pre></div><p>We create a normal JavaScript Array with our Friends&rsquo; names as strings, then pass it to the React component as the attribute <code>folks</code>. This array will then be accessible as <code>this.props.folks</code> from within the Component. And, as before, here is a Pen showing the output as well as some more comments on the code.</p>
 <!-- raw HTML omitted -->
 <p>That&rsquo;s it for creating a Component and re-using it inside another Component. For the next tutorial we&rsquo;ll see how we can use a state to give our Components some interaction. If you&rsquo;ve got any questions or have found an issue, hit me up at <a href="https://twitter.com/_kevinatari">@_kevinatari</a>.</p>
 <!-- raw HTML omitted -->
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/react" term="react" label="react" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/react" term="react" label="react"/></entry></feed>

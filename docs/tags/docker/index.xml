@@ -1,24 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>docker on KevOps</title>
-    <link>https://kevingimbel.de/tags/docker/</link>
-    <description>Recent content in docker on KevOps</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 21 Dec 2016 18:02:42 +0100</lastBuildDate>
-    
-	<atom:link href="https://kevingimbel.de/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Gotcha: dockerignore</title>
-      <link>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</link>
-      <pubDate>Wed, 21 Dec 2016 18:02:42 +0100</pubDate>
-      
-      <guid>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</guid>
-      <description>Today I was caught off-guard by a docker &amp;ldquo;bug&amp;rdquo; - or so I thought at first. I tried to boot up a project with docker-compose up like I do since switching to a Mac. Unusual was that docker-compose stopped at the build step and would not finish the boot. After some confusion and after checking the projects docker-compose.yml configuration file I went to GitHub to see the newest docker for mac issues because I was using the beta release and thought a recent update might broke a thing or two.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on KevOps</title><link>https://kevingimbel.de/tags/docker/</link><description>Recent content in docker on KevOps</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker Apache Proxy Setup</title><link>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</guid><description>In this post I&amp;rsquo;d like to detail how I am managing docker containers behind an apache2 proxy on a Ubuntu 18.04. server. I&amp;rsquo;m using one Apache server to route traffic from multiple sub-domains to docker containers all running with docker-compose. This setup is not automated and the containers do not need to interact with each other; It&amp;rsquo;s just how I run software for my private usage.
+Overview Let&amp;rsquo;s start with an overview image, because this can be quite confusing.</description></item><item><title>Gotcha: dockerignore</title><link>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</link><pubDate>Wed, 21 Dec 2016 18:02:42 +0100</pubDate><guid>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</guid><description>Today I was caught off-guard by a docker &amp;ldquo;bug&amp;rdquo; - or so I thought at first. I tried to boot up a project with docker-compose up like I do since switching to a Mac. Unusual was that docker-compose stopped at the build step and would not finish the boot. After some confusion and after checking the projects docker-compose.yml configuration file I went to GitHub to see the newest docker for mac issues because I was using the beta release and thought a recent update might broke a thing or two.</description></item></channel></rss>

@@ -1,34 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[php on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/php/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/php/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/php/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/php/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Magento: Add fields to the Admin Backend]]></title>
-            <link href="https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="related" type="text/html" title="Magento: get and set variables in config.xml" />
-            
-                <id>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</id>
-            
-            
-            <published>2014-08-27T00:00:00+00:00</published>
-            <updated>2014-08-27T00:00:00+00:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">php on KevOps</title><link href="https://kevingimbel.de/tags/php/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/php/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/php/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/php/</id><entry><title type="html">Magento: Add fields to the Admin Backend</title><link href="https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/?utm_source=atom_feed" rel="related" type="text/html" title="Magento: get and set variables in config.xml"/><id>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</id><published>2014-08-27T00:00:00+00:00</published><updated>2014-08-27T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely
 <em>System-&gt;Config-&gt;Catalog</em> where the user could later insert some SKUs to control which products are shown on the home
 page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a
 settings page. Not only was this rather complex it was also way too &ldquo;over engineered&rdquo; for a simple thing like a text
@@ -46,10 +16,10 @@ structure is really simple since I don&rsquo;t need much:</p>
     -system.xml
 </code></pre></div><p>In <code>config.xml</code> is the default Module configuration. In my case the following XML.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
- <span style="color:#f92672">&lt;config</span><span style="color:#f92672">&gt;</span>
-   <span style="color:#f92672">&lt;modules</span><span style="color:#f92672">&gt;</span>
-     <span style="color:#f92672">&lt;Synoa_FeaturedProducts</span><span style="color:#f92672">&gt;</span>
-       <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>0.0.1<span style="color:#f92672">&lt;/version&gt;</span>
+ <span style="color:#f92672">&lt;config&gt;</span>
+   <span style="color:#f92672">&lt;modules&gt;</span>
+     <span style="color:#f92672">&lt;Synoa_FeaturedProducts&gt;</span>
+       <span style="color:#f92672">&lt;version&gt;</span>0.0.1<span style="color:#f92672">&lt;/version&gt;</span>
      <span style="color:#f92672">&lt;/Synoa_FeaturedProducts&gt;</span>
    <span style="color:#f92672">&lt;/modules&gt;</span>
 <span style="color:#f92672">&lt;/config&gt;</span>
@@ -57,25 +27,25 @@ structure is really simple since I don&rsquo;t need much:</p>
 amazingly flexible Magento can be. When I tried it out and found that it worked right away I was really impressed.
 Magento&rsquo;s Module System, where the Module Name is equal to the folder it is in, e.g. <code>Mage_Core_Block_Html_Link</code> is in
 <code>Mage/Core/Block/Html/Link.php</code>, also applies to this XML configuration.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;config</span><span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&lt;sections</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;catalog</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;groups</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;config&gt;</span>
+<span style="color:#f92672">&lt;sections&gt;</span>
+  <span style="color:#f92672">&lt;catalog&gt;</span>
+    <span style="color:#f92672">&lt;groups&gt;</span>
       <span style="color:#f92672">&lt;featured_products</span> <span style="color:#a6e22e">translate=</span><span style="color:#e6db74">&#34;label&#34;</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Featured Products<span style="color:#f92672">&lt;/label&gt;</span>
-        <span style="color:#f92672">&lt;frontend_type</span><span style="color:#f92672">&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
-        <span style="color:#f92672">&lt;sort_order</span><span style="color:#f92672">&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
-        <span style="color:#f92672">&lt;show_in_default</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
-        <span style="color:#f92672">&lt;show_in_website</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
-        <span style="color:#f92672">&lt;show_in_store</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
-        <span style="color:#f92672">&lt;fields</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;label&gt;</span>Featured Products<span style="color:#f92672">&lt;/label&gt;</span>
+        <span style="color:#f92672">&lt;frontend_type&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
+        <span style="color:#f92672">&lt;sort_order&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
+        <span style="color:#f92672">&lt;show_in_default&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
+        <span style="color:#f92672">&lt;show_in_website&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
+        <span style="color:#f92672">&lt;show_in_store&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
+        <span style="color:#f92672">&lt;fields&gt;</span>
           <span style="color:#f92672">&lt;product_skus</span> <span style="color:#a6e22e">translate=</span><span style="color:#e6db74">&#34;label&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Insert product skus here<span style="color:#f92672">&lt;/label&gt;</span>
-            <span style="color:#f92672">&lt;frontend_type</span><span style="color:#f92672">&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
-            <span style="color:#f92672">&lt;sort_order</span><span style="color:#f92672">&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
-            <span style="color:#f92672">&lt;show_in_default</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
-            <span style="color:#f92672">&lt;show_in_website</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
-            <span style="color:#f92672">&lt;show_in_store</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
+            <span style="color:#f92672">&lt;label&gt;</span>Insert product skus here<span style="color:#f92672">&lt;/label&gt;</span>
+            <span style="color:#f92672">&lt;frontend_type&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
+            <span style="color:#f92672">&lt;sort_order&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
+            <span style="color:#f92672">&lt;show_in_default&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
+            <span style="color:#f92672">&lt;show_in_website&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
+            <span style="color:#f92672">&lt;show_in_store&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
           <span style="color:#f92672">&lt;/product_skus&gt;</span>
         <span style="color:#f92672">&lt;/fields&gt;</span>
       <span style="color:#f92672">&lt;/featured_products&gt;</span>
@@ -85,15 +55,15 @@ Magento&rsquo;s Module System, where the Module Name is equal to the folder it i
 <span style="color:#f92672">&lt;/config&gt;</span>
 </code></pre></div><p>Well quite a lot of stuff happens here, let&rsquo;s break that down.</p>
 <h3 id="sections">Sections</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"> <span style="color:#f92672">&lt;sections</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;catalog</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"> <span style="color:#f92672">&lt;sections&gt;</span>
+  <span style="color:#f92672">&lt;catalog&gt;</span>
   <span style="color:#f92672">&lt;/catalog&gt;</span>
  <span style="color:#f92672">&lt;/sections&gt;</span>
 </code></pre></div><p>This part defines in what menu (in the backend on the left) the new fields will be inserted. In this case it&rsquo;s the
 Catalog Menu and there the first Sub-Menu point (which is also named Catalog).</p>
 <h3 id="groups">Groups</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;groups</span><span style="color:#f92672">&gt;</span>
- <span style="color:#f92672">&lt;group_name</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;groups&gt;</span>
+ <span style="color:#f92672">&lt;group_name&gt;</span>
  <span style="color:#f92672">&lt;/group_name&gt;</span>
 <span style="color:#f92672">&lt;/groups&gt;</span>
 </code></pre></div><p>Groups define the &ldquo;containers&rdquo; for settings. These are the boxes on the right part of the screen. Because describing it
@@ -103,14 +73,14 @@ is rather stupid, here&rsquo;s a picture of the new admin menu and it&rsquo;s co
 <code>&lt;featured_products&gt;</code> the <code>translate=&quot;label&quot;</code> attribute tells Magento to translate the label if there is a translation
 available, either in <code>translate.csv</code> or <code>myCompany_MyModule.csv</code> - that&rsquo;s up to you.</p>
 <p>Inside the container is more stuff that could need some explanation.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;my_namespace</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Featured Products<span style="color:#f92672">&lt;/label&gt;</span>
-  <span style="color:#f92672">&lt;frontend_type</span><span style="color:#f92672">&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
-  <span style="color:#f92672">&lt;sort_order</span><span style="color:#f92672">&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
-  <span style="color:#f92672">&lt;show_in_default</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
-  <span style="color:#f92672">&lt;show_in_website</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
-  <span style="color:#f92672">&lt;show_in_store</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
-<span style="color:#f92672">&lt;my_namespace</span><span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;my_namespace&gt;</span>
+  <span style="color:#f92672">&lt;label&gt;</span>Featured Products<span style="color:#f92672">&lt;/label&gt;</span>
+  <span style="color:#f92672">&lt;frontend_type&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
+  <span style="color:#f92672">&lt;sort_order&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
+  <span style="color:#f92672">&lt;show_in_default&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
+  <span style="color:#f92672">&lt;show_in_website&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
+  <span style="color:#f92672">&lt;show_in_store&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
+<span style="color:#f92672">&lt;my_namespace/&gt;</span>
 </code></pre></div><ul>
 <li><code>label</code> - The label to show at the top (headline)</li>
 <li><code>frontend_type</code>- type of the field in the frontend</li>
@@ -120,14 +90,14 @@ available, either in <code>translate.csv</code> or <code>myCompany_MyModule.csv<
 <li><code>show_in_store</code> - available in default store view
 The show tags determine in what store config &ldquo;scope&rdquo; (after setting it in the top right) the option is available.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fields</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fields&gt;</span>
   <span style="color:#f92672">&lt;product_skus</span> <span style="color:#a6e22e">translate=</span><span style="color:#e6db74">&#34;label&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;label</span><span style="color:#f92672">&gt;</span>Insert product skus here (csv, e.g 123, 144, 255)<span style="color:#f92672">&lt;/label&gt;</span>
-    <span style="color:#f92672">&lt;frontend_type</span><span style="color:#f92672">&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
-    <span style="color:#f92672">&lt;sort_order</span><span style="color:#f92672">&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
-    <span style="color:#f92672">&lt;show_in_default</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
-    <span style="color:#f92672">&lt;show_in_website</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
-    <span style="color:#f92672">&lt;show_in_store</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
+    <span style="color:#f92672">&lt;label&gt;</span>Insert product skus here (csv, e.g 123, 144, 255)<span style="color:#f92672">&lt;/label&gt;</span>
+    <span style="color:#f92672">&lt;frontend_type&gt;</span>text<span style="color:#f92672">&lt;/frontend_type&gt;</span>
+    <span style="color:#f92672">&lt;sort_order&gt;</span>50<span style="color:#f92672">&lt;/sort_order&gt;</span>
+    <span style="color:#f92672">&lt;show_in_default&gt;</span>1<span style="color:#f92672">&lt;/show_in_default&gt;</span>
+    <span style="color:#f92672">&lt;show_in_website&gt;</span>1<span style="color:#f92672">&lt;/show_in_website&gt;</span>
+    <span style="color:#f92672">&lt;show_in_store&gt;</span>1<span style="color:#f92672">&lt;/show_in_store&gt;</span>
   <span style="color:#f92672">&lt;/product_skus&gt;</span>
 <span style="color:#f92672">&lt;/fields&gt;</span>
 </code></pre></div><ul>
@@ -141,40 +111,4 @@ those fields is also easy, as the following example shows.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">Mage</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getStoreConfig</span>(<span style="color:#e6db74">&#39;catalog/featured_products/product_skus&#39;</span>); <span style="color:#75715e">?&gt;</span>
 </code></pre></div><p>The logic here is simply <code>section/groupname/fieldname</code>. This fits pretty good with the previously mentioned folder
 structure of Magento.</p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/php" term="php" label="php" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/xml" term="xml" label="xml" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/php" term="php" label="php" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/magento" term="magento" label="magento"/><category scheme="https://kevingimbel.de/categories/php" term="php" label="php"/><category scheme="https://kevingimbel.de/categories/backend" term="backend" label="backend"/><category scheme="https://kevingimbel.de/tags/magento" term="magento" label="magento"/><category scheme="https://kevingimbel.de/tags/xml" term="xml" label="xml"/><category scheme="https://kevingimbel.de/tags/php" term="php" label="php"/></entry></feed>

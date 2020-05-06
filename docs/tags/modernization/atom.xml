@@ -1,38 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
-    <generator uri="https://gohugo.io/" version="0.63.1">Hugo</generator><title type="html"><![CDATA[modernization on KevOps]]></title>
-    
-    
-    
-            <link href="https://kevingimbel.de/tags/modernization/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://kevingimbel.de/tags/modernization/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
-            <link href="https://kevingimbel.de/tags/modernization/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-04-29T13:39:19+02:00</updated>
-    
-    
-    
-    
-        <id>https://kevingimbel.de/tags/modernization/</id>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[CSS Custom Properties and a new look]]></title>
-            <link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html" />
-            
-                <link href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13" />
-                <link href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9" />
-                <link href="https://kevingimbel.de/blog/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven" />
-                <link href="https://kevingimbel.de/blog/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five" />
-                <link href="https://kevingimbel.de/blog/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four" />
-            
-                <id>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</id>
-            
-            
-            <published>2017-11-26T10:56:13+01:00</published>
-            <updated>2017-11-26T10:56:13+01:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://gohugo.io/" version="0.69.2">Hugo</generator><title type="html">modernization on KevOps</title><link href="https://kevingimbel.de/tags/modernization/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/tags/modernization/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/tags/modernization/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-05-06T09:16:52+02:00</updated><id>https://kevingimbel.de/tags/modernization/</id><entry><title type="html">CSS Custom Properties and a new look</title><link href="https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 10, 11, 12, 13"/><link href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week 8 and 9"/><link href="https://kevingimbel.de/blog/2017/02/2017-week-seven/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week seven"/><link href="https://kevingimbel.de/blog/2017/02/2017-week-five/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week five"/><link href="https://kevingimbel.de/blog/2017/01/2017-week-four/?utm_source=atom_feed" rel="related" type="text/html" title="2017, week four"/><id>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</id><published>2017-11-26T10:56:13+01:00</published><updated>2017-11-26T10:56:13+01:00</updated><content type="html"><![CDATA[<p>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (<abbr title="Also known as">aka</abbr>
  CSS variables).</p>
 <p>CSS variables are a <a href="https://www.w3.org/TR/css-variables-1/" title="Read the CSS variable specs">native CSS feature</a> which enables us as developers to re-use colors, font-sizes, and other properties throught our stylesheets. You may think <em>&ldquo;But wait! Sass, Less, and Stylus had variables for years!&quot;</em> and you&rsquo;re right - the pre processors, which generate a CSS file, have had variables for years. What they did not have, however, is the abbility to modify and change these variables on the fly after the CSS had been generated. With CSS Custom Properties and some JavaScript we can modify the variables at runtime and the browser will re-render all pieces of the page which are using the variable - and that&rsquo;s exactly what I am doing with the settings on this website to change the accent colors and font sizing.</p>
 <p>Below I will explain step by step how CSS variables look, work, and how we can use them to alter the look of a website - even persistent without any backend code!</p>
@@ -51,14 +17,14 @@
 <span style="color:#f92672">--base-font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">12px</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">--breakpoint-large</span><span style="color:#f92672">:</span> <span style="color:#f92672">1200px</span><span style="color:#f92672">;</span>
 </code></pre></div><p>Just like any CSS property they &ldquo;cascade down&rdquo;. A variable defined at the top of the document on the <code>:root</code> or <code>html</code> selector will be defined everywhere in the document. To use a CSS variable we need to get it somehow. It&rsquo;s not enough to reference it, for example this does not work.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Does</span> <span style="color:#f92672">not</span> <span style="color:#f92672">work</span><span style="color:#f92672">!</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">Does</span> <span style="color:#f92672">not</span> <span style="color:#f92672">work</span><span style="color:#f92672">!</span>
 .<span style="color:#a6e22e">my-selector</span> {
   <span style="color:#66d9ef">color</span>: <span style="color:#f92672">--</span><span style="color:#66d9ef">color</span>;
 }
 </code></pre></div><p>With CSS variables we need to retrieve the value by calling a <code>var</code> function. This function also takes a fallback parameter in case the variable is not set.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">This</span> <span style="color:#f92672">does</span> <span style="color:#f92672">work</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">This</span> <span style="color:#f92672">does</span> <span style="color:#f92672">work</span>
 .<span style="color:#a6e22e">my-selector</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>, <span style="color:#ae81ff">#333</span>)
+  <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span><span style="color:#66d9ef">color</span>, <span style="color:#ae81ff">#333</span>)
 }
 </code></pre></div><p><code>.my-selector</code> will have a color value equal to whatever is stored inside the <code>--color</code> variable or <code>#333</code> if it is not set.</p>
 <p>A variable can later be changed to be &ldquo;locally scoped&rdquo;. For this example we define a custom property named <code>--color</code> and set its value to <code>red</code>. We say all h1 elements should use the <code>--color</code> variable for their font-color. Then we create a CSS class named <code>local-scope</code> and inside we change the <code>--color</code> to <code>blue</code>. A <code>h1</code> element inside the <code>local-scope</code> will use the re-defined color value.</p>
@@ -150,7 +116,7 @@
 <p>Because we use inline styles to change the CSS variables the HTML element will have the following styles.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--body-invert:0; --color-accent-primary:#3e934b; --color-accent-secondary:#70cfff;&#34;</span>&gt;
 </code></pre></div><p>Once the JSON is saved to local storage, I load in on page load and apply it immediately - which happens to be really fast so it seems the styles are not even applyed again! The piece of JavaScript to load the custom styles is placed above all other content, at the beginning of the <code>&lt;body&gt;</code>. To not impact performance too much I minified it and it looks like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;</span>(<span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>)){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>));<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">a</span>){document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#a6e22e">o</span>,<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]);<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">o</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;--body-invert&#34;</span><span style="color:#f92672">&amp;&amp;</span><span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;100&#34;</span>){document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;dark-mode&#34;</span>)}}<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a11y</span>){<span style="color:#a6e22e">a11y</span>.<span style="color:#a6e22e">o</span><span style="color:#f92672">=</span><span style="color:#a6e22e">a</span>}}})();<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;</span>(<span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>)){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>));<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">a</span>){document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#a6e22e">o</span>,<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]);<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">o</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;--body-invert&#34;</span><span style="color:#f92672">&amp;&amp;</span><span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">o</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;100&#34;</span>){document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;dark-mode&#34;</span>)}}<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a11y</span>){<span style="color:#a6e22e">a11y</span>.<span style="color:#a6e22e">o</span><span style="color:#f92672">=</span><span style="color:#a6e22e">a</span>}}})();<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
 </code></pre></div><p>Unminified the code reads as follows</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#66d9ef">function</span>(){
   <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;a11y_settings&#34;</span>)) {
@@ -197,11 +163,11 @@
   <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>) <span style="color:#75715e">!important</span>;
 }
 </code></pre></div><p>This basically means we apply the filter two times, which results in resetting it. The images get inverted from the first rule, then inverted again to normal color.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">everything</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">//</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">everything</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> {
   <span style="color:#66d9ef">filter</span>: invert(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>);
 }
-<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span> <span style="color:#f92672">and</span> <span style="color:#f92672">iframe</span> <span style="color:#f92672">again</span><span style="color:#f92672">,</span> <span style="color:#f92672">resulting</span> <span style="color:#f92672">in</span> <span style="color:#f92672">resetting</span> <span style="color:#f92672">the</span> <span style="color:#f92672">original</span> <span style="color:#f92672">invert</span><span style="color:#f92672">.</span>
+<span style="color:#f92672">//</span> <span style="color:#f92672">Invert</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span> <span style="color:#f92672">and</span> <span style="color:#f92672">iframe</span> <span style="color:#f92672">again</span><span style="color:#f92672">,</span> <span style="color:#f92672">resulting</span> <span style="color:#f92672">in</span> <span style="color:#f92672">resetting</span> <span style="color:#f92672">the</span> <span style="color:#f92672">original</span> <span style="color:#f92672">invert</span><span style="color:#f92672">.</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">video</span><span style="color:#f92672">,</span>
 <span style="color:#f92672">body</span>.<span style="color:#a6e22e">dark-mode</span> <span style="color:#f92672">iframe</span> {
@@ -209,40 +175,4 @@
 }
 </code></pre></div><p>And that&rsquo;s it for CSS variables and the redesign. You get to choose how my blog looks, what font-size to use and if a dark or light theme is best for you. I might add more options to the settings in the future, but for now I&rsquo;m happy with the result.</p>
 <p>Got any feedback? Want to tell me how much the news design sucks? Love it? Hit me up on <a href="https://twitter.com/_kevinatari" title="Find me on twitter">Twitter @_kevinatari</a></p>
-]]></content>
-            
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
-                             
-                                <category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend" />
-                            
-                        
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://kevingimbel.de/tags/redesign" term="redesign" label="redesign" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/modernization" term="modernization" label="modernization" />
-                             
-                                <category scheme="https://kevingimbel.de/tags/accessibility" term="accessibility" label="accessibility" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-</feed>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/categories/frontend" term="frontend" label="frontend"/><category scheme="https://kevingimbel.de/tags/redesign" term="redesign" label="redesign"/><category scheme="https://kevingimbel.de/tags/css" term="css" label="css"/><category scheme="https://kevingimbel.de/tags/personal" term="personal" label="personal"/><category scheme="https://kevingimbel.de/tags/modernization" term="modernization" label="modernization"/><category scheme="https://kevingimbel.de/tags/accessibility" term="accessibility" label="accessibility"/></entry></feed>

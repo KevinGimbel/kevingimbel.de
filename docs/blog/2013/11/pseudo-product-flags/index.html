@@ -1,322 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pseudo Product Flags &mdash; KevOps</title>
-    <meta name="author" content="Kevin Gimbel">
-    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
-    <meta keywords="css interface tutorial  blog coding frontend tutorial  ">
-    <link rel="stylesheet" href="/style.css">
-    </head>
-
-<body>
-    <script type="text/javascript">
-    (function(window, document, undefined) {
-        let theme = window.localStorage.getItem("kgde_theme");
-        console.log(theme);
-        if (theme) {
-            var [colorMain, colorSecondary] = JSON.parse(theme).colors;
-            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-        } else {
-            
-            
-            let themes = [
-                ["#123D3C", "#90F072"],
-                ["#403D58", "#dea584"],
-                ["#400E3B", "#DCC78A"],
-                ["#17098D", "#EADD1C"],
-                ["#233B07", "#FFDD6D"]
-            ]
-            var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
-            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            let schema_btn = document.querySelector("#btn_schema");
-            let theme = window.localStorage.getItem("kgde_theme");
-            if (theme) {
-                schema_btn.textContent = "Use random color theme";
-            } else {
-                schema_btn.textContent = "Keep current color theme";
-            }
-            schema_btn.style.display = "block";
-            schema_btn.addEventListener('click', function(e) {
-                if (theme) {
-                    window.localStorage.removeItem("kgde_theme");
-                    window.reload();
-                } else {
-                    window.localStorage.setItem("kgde_theme", JSON.stringify({colors: [colorMain, colorSecondary]}));
-                }
-            });
-        });
-    }(window, document));
-    </script>
-    <header class="intro-text">
-        <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
-        <span>
-        
-        
-        Pseudo Product Flags
-        
-        </span>
-    </header>
-
-
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main"><li class="">
-                <a href="/">
-                    <span>Home</span>
-                </a>
-            </li><li class="">
-                <a href="/about/">
-                    <span>About</span>
-                </a>
-            </li><li class="">
-                <a href="/blog/">
-                    <span>Blog</span>
-                </a>
-            </li><li class="">
-                <a href="/photography/">
-                    <span>Photography</span>
-                </a>
-            </li><li class="">
-                <a href="/reading/">
-                    <span>Reading</span>
-                </a>
-            </li><li class="">
-                <a href="/art/">
-                    <span>Art</span>
-                </a>
-            </li><li class="">
-                <a href="/now/">
-                    <span>Now</span>
-                </a>
-            </li></ul>
-    </nav>
-
-<main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            
-            
-
-
-
-
-
-<section class="age-note">
-    <h2>ATTENTION!</h2>
-    <p>This article is over 4 years old, it may be outdated!</p>
-</section>
-
-
-
-<p>Written on <time datetime="2013-11-24 00:00:00 &#43;0000 UTC">24. Nov 2013</time>  </p>
-            <p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p>
-<h3 id="the-setup">The Setup</h3>
-<p>First of all I had a Product and a <code>div</code> that holds the flag (in this example &ldquo;Tag&rdquo;).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span>&gt;
-  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span> <span style="color:#a6e22e">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">data-tagname</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;STAR WARS&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
-  &lt;<span style="color:#f92672">hgroup</span>&gt;
-    &lt;<span style="color:#f92672">h2</span>&gt;Awesome Star Wars Cup&lt;/<span style="color:#f92672">h2</span>&gt;
-      &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.getdigital.de/web/getdigital/gfx/products/__generated__resized/1100x1100/R2D2_Relief_Mug_Titel.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> /&gt;
-  &lt;/<span style="color:#f92672">hgroup</span>&gt;
-  &lt;<span style="color:#f92672">p</span>&gt;(img via &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.getdigital.de/R2D2-3D-Relief-Becher.html&#34;</span>&gt;getDigital.de&lt;/<span style="color:#f92672">a</span>&gt;)&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;/<span style="color:#f92672">article</span>&gt;
-</code></pre></div><p>The <code>data-id</code> controls the color of the tag and the <code>data-tagname</code> controls the content of it. In the real-world example they&rsquo;re applied via a Content Management System and, as I said before, can vary in length. The HTML Job is done with this setup and now comes the most fun part: The (S)CSS.</p>
-<h3 id="css">CSS</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">  .<span style="color:#a6e22e">tag</span> {
-    <span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;
-    <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
-    <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
-    <span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">em</span>;
-    <span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#8e44ad</span>; <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">g</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">f</span> <span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#960050;background-color:#1e0010">s</span> <span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span> <span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span>
-    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span>;
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Pseudo Product Flags &mdash; KevOps</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="css interface tutorial  blog coding frontend tutorial"><link rel=icon href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIj7wn5u4PC90ZXh0Pjwvc3ZnPg=="><style type=text/css>*{margin:0;padding:0;box-sizing:inherit}:root{--color-main: #403D58;--color-secondary: #dea584}html,body{box-sizing:border-box;font:18px/1.65 monospace}a{color:var(--color-main);font-weight:700}.footer a,.author a,.intro-text a{color:var(--color-secondary);font-weight:700}.fg-accent{color:var(--color-secondary)}.x-small{font-size:.85rem}.xx-small{font-size:.65rem}h1{font-size:2rem}.article-content h2,.article-content h3{margin-top:2rem}.section-headline{font-size:2.75em;margin-top:2rem}.section-headline,h1,h2{display:inline-block;position:relative;z-index:2;color:var(--color-main)}.section-headline::after,h1::after,h2::after{content:"";width:100%;display:block;height:.35em;background:var(--color-secondary);bottom:.3em;position:absolute;left:0;z-index:-1}.intro-text{padding:2rem;background:#222;color:#fff;font-size:140%}.main,.footer{max-width:85rem;width:100%;margin:0 auto;padding:2rem}hr{border:none;background:var(--color-main);height:2px}.footer{background:#222;color:#fff}.main{background:#f1f1f1;border:1px solid #ddd;border-bottom:0;min-height:100vh;padding:2rem 2rem 0}.main p{margin-top:1rem;margin-bottom:1.5rem}.exif{padding:.5rem;background:var(--color-secondary)}.exif li{display:inline-block;background:#333;color:#ccc;border-radius:3px;padding:.125rem .5rem;font-size:.8rem}.exif .label{font-size:.75rem}@media all and (max-width:800px){.exif li{margin-top:.5rem}}figure img,figure picture{margin:0 auto;display:block;height:auto;width:auto;margin:0 auto}.photography figure img,.photography figure picture{width:auto;max-width:calc(100% + 2rem + 1px)}figcaption p{display:block;line-height:1.65;background:var(--color-secondary);color:#fff;margin-top:0;padding:.5rem;text-align:right;font-size:var(--font-small,.85rem)}figure{position:relative;z-index:1;margin-left:calc(0rem - 2rem)}figure+figure{margin-top:2rem}figcaption{display:flex;justify-content:flex-end}figcaption p{margin:0!important;background:var(--color-secondary);color:var(--color-main);font-size:.85em}@media all and (min-width:800px){figure{width:auto;max-width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px)}figcaption p{width:50%}}p code,li code{background:var(--color-secondary);color:var(--color-main);padding:.125rem .25rem;border-radius:3px}.highlight{margin-left:calc(0rem - 2rem);width:calc(100% + 4rem)}.nav-main{list-style:none;width:100%;background:#222}.nav-main li{display:inline-block;padding:.25rem 1rem;background:var(--color-main)}.nav-main li a{color:#fff;text-decoration:none}.page-nav{width:calc(100% + 4rem);background:var(--color-secondary);margin:2rem calc(0rem - 2rem);padding:2rem}.page-nav a:not(:last-of-type){margin-right:.5rem}.subscribe-via{width:calc(100% + 4rem);background:var(--color-main);color:#fff;margin-left:calc(0rem - 2rem);margin-top:-2rem;padding:.5rem 2rem}.subscribe-via a{color:#fff}.page-nav--label{display:block;font-size:.75em}.article-content{padding-bottom:2rem}.article-content ol,.article-content ul{margin-left:2rem}.article-list__header{margin-bottom:2rem}.article.article--in-list{padding-bottom:1rem}.article.article--in-list:not(:last-of-type){margin-bottom:2rem}.article.article--in-list:not(:last-of-type):after{content:"";width:80%;text-align:center;height:1px;border-bottom:.15rem dashed var(--color-main);display:block;margin:2rem auto 0}pre{padding:1rem;overflow:auto}.tag-list__item{display:inline-block;background:var(--color-main);color:var(--color-secondary);border-radius:3px;padding:.125rem .25rem;margin-bottom:.5rem}.tag-list__item a{color:var(--color-secondary)}@media all and (min-width:800px){.footer,.author,.support{display:flex;justify-content:space-between}.author .left,.support .left,.footer .left{margin-bottom:0}}.author .left,.support .left,.footer .left{margin-bottom:2rem}.author,.support{background:var(--color-main);color:#fff;padding:4rem 2rem;width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px)}.support+.author{margin-top:0}.support{background:var(--color-secondary);color:var(--color-main);flex-direction:column}.support a{color:var(--color-main)}.author p,.support p{margin-bottom:0}@media all and (min-width:800px){.author .right{padding-left:2rem}.author .avatar{margin-left:2rem}}.author .avatar{max-width:200px;transition:all linear 60s}.author .avatar:hover{animation:avatar-hue linear 15s infinite}@keyframes avatar-hue{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}.age-note{background:#d46767;border:.35rem solid #b22222;padding:1rem 2rem;width:calc(100% + 4rem + 2px);margin-left:-2rem;margin-top:-2rem;color:#222}.tags-categories,.license{background:#d3d3d3;width:calc(100% + 4rem + 2px);margin-left:calc(0rem - 2rem - 1px);padding:2rem}.side-by-side img{width:auto;max-width:100%}@media all and (min-width:640px){.tags-categories{display:flex}.tags-categories .tags{margin-left:2rem}.side-by-side{display:flex;flex-direction:row;align-items:center;margin:2rem 0}.side-by-side.align-top{align-items:flex-start}.side-by-side.align-bottom{align-items:flex-end}.side-by-side__first{margin-bottom:3rem}.side-by-side__off-left{margin-left:-20vw}.side-by-side .small{max-width:40%;padding:2rem}.side-by-side .bg{background:var(--color-main);color:var(--color-secondary)}.side-by-side .wide{max-width:60%}.side-by-side img,.side-by-side figure{max-width:100%;margin:0}}.note{background:var(--color-main);color:#fff;padding:1rem 1rem 1rem 2rem;border-left:.5rem solid var(--color-secondary);margin:2rem 1rem;width:calc(100% - 1rem)}.note__heading{font-weight:700;display:block}.taxonomy-list{display:flex;padding-bottom:2rem;align-content:flex-end;justify-content:space-between;flex-wrap:wrap}.taxonomy__item{width:20%;height:2rem;display:inline-block;padding:2rem 0}.taxonomy__item-inner{padding:1rem;background:var(--color-main);color:var(--color-secondary)}.taxonomy__item a{color:var(--color-secondary)}</style></head><body><script type=text/javascript>(function(window,document,undefined){let theme=window.localStorage.getItem("kgde_theme");if(theme){var[colorMain,colorSecondary]=JSON.parse(theme).colors;document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}else{let themes=[["#123D3C","#90F072"],["#403D58","#dea584"],["#400E3B","#DCC78A"],["#17098D","#EADD1C"],["#233B07","#FFDD6D"]]
+var[colorMain,colorSecondary]=themes[Math.floor(Math.random()*themes.length)];document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}
+document.addEventListener('DOMContentLoaded',function(){let schema_btn=document.querySelector("#btn_schema");let theme=window.localStorage.getItem("kgde_theme");if(theme){schema_btn.textContent="Use random color theme";}else{schema_btn.textContent="Keep current color theme";}
+schema_btn.style.display="block";schema_btn.addEventListener('click',function(e){if(theme){window.localStorage.removeItem("kgde_theme");window.reload();}else{window.localStorage.setItem("kgde_theme",JSON.stringify({colors:[colorMain,colorSecondary]}));}});});}(window,document));</script><header class=intro-text><button id=btn_schema style=position:absolute;top:10px;right:10px;display:none></button>
+<span>Pseudo Product Flags</span></header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li><a href=/><span>Home</span></a></li><li><a href=/about/><span>About</span></a></li><li><a href=/blog/><span>Blog</span></a></li><li><a href=/photography/><span>Photography</span></a></li><li><a href=/reading/><span>Reading</span></a></li><li><a href=/art/><span>Art</span></a></li><li><a href=/now/><span>Now</span></a></li></ul></nav><main id=main class=main><section class=article-single><article class=article-content><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section>images/self-2019.jpg<p>Written on <time datetime="2013-11-24 00:00:00 +0000 UTC">24. Nov 2013</time></p><p>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the <code>data</code> Attribute and the colors are also controlled via a data Attribute. The &ldquo;Problem&rdquo; with this task was that it&rsquo;s not only a few different length, it&rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &ldquo;fixed&rdquo; solution, like applying a <code>max-width</code> of let&rsquo;s say 20em, isn&rsquo;t the best solution for this so I ended up creating a flexible solution.</p><h3 id=the-setup>The Setup</h3><p>First of all I had a Product and a <code>div</code> that holds the flag (in this example &ldquo;Tag&rdquo;).</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>article</span>&gt;
+  &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;tag&#34;</span> <span style=color:#a6e22e>data-id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1&#34;</span> <span style=color:#a6e22e>data-tagname</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;STAR WARS&#34;</span>&gt;&lt;/<span style=color:#f92672>div</span>&gt;
+  &lt;<span style=color:#f92672>hgroup</span>&gt;
+    &lt;<span style=color:#f92672>h2</span>&gt;Awesome Star Wars Cup&lt;/<span style=color:#f92672>h2</span>&gt;
+      &lt;<span style=color:#f92672>img</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;http://www.getdigital.de/web/getdigital/gfx/products/__generated__resized/1100x1100/R2D2_Relief_Mug_Titel.jpg&#34;</span> <span style=color:#a6e22e>alt</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;&#34;</span> /&gt;
+  &lt;/<span style=color:#f92672>hgroup</span>&gt;
+  &lt;<span style=color:#f92672>p</span>&gt;(img via &lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;http://www.getdigital.de/R2D2-3D-Relief-Becher.html&#34;</span>&gt;getDigital.de&lt;/<span style=color:#f92672>a</span>&gt;)&lt;/<span style=color:#f92672>p</span>&gt;
+&lt;/<span style=color:#f92672>article</span>&gt;
+</code></pre></div><p>The <code>data-id</code> controls the color of the tag and the <code>data-tagname</code> controls the content of it. In the real-world example they&rsquo;re applied via a Content Management System and, as I said before, can vary in length. The HTML Job is done with this setup and now comes the most fun part: The (S)CSS.</p><h3 id=css>CSS</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>  .<span style=color:#a6e22e>tag</span> {
+    <span style=color:#66d9ef>width</span>:<span style=color:#66d9ef>auto</span>;
+    <span style=color:#66d9ef>height</span>:<span style=color:#66d9ef>auto</span>;
+    <span style=color:#66d9ef>position</span>:<span style=color:#66d9ef>absolute</span>;
+    <span style=color:#66d9ef>top</span>:<span style=color:#ae81ff>-1</span><span style=color:#66d9ef>em</span>;
+    <span style=color:#66d9ef>left</span>:<span style=color:#ae81ff>0</span>;
+    <span style=color:#66d9ef>background</span>:<span style=color:#ae81ff>#8e44ad</span>; <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>standard</span> <span style=color:#960050;background-color:#1e0010>background</span> <span style=color:#960050;background-color:#1e0010>if</span> <span style=color:#960050;background-color:#1e0010>there&#39;s</span> <span style=color:#960050;background-color:#1e0010>no</span> <span style=color:#960050;background-color:#1e0010>data-id</span>
+    <span style=color:#66d9ef>padding</span>:<span style=color:#ae81ff>.5</span><span style=color:#66d9ef>em</span>;
 }
-</code></pre></div><p>The basic tag should be position absolute on the left of the article and <code>-1em</code> on top of the article (this comes because the article has a padding of 1.5em and I want it to be half the way out of the article container). So far there is a tag with auto width and auto height. With the next snippet we&rsquo;ll get the data-tagname inside out pseudo element.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">before</span> {
-      <span style="color:#66d9ef">content</span>:attr(data<span style="color:#f92672">-</span>tagname);
+</code></pre></div><p>The basic tag should be position absolute on the left of the article and <code>-1em</code> on top of the article (this comes because the article has a padding of 1.5em and I want it to be half the way out of the article container). So far there is a tag with auto width and auto height. With the next snippet we&rsquo;ll get the data-tagname inside out pseudo element.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>    <span style=color:#f92672>&amp;</span>:<span style=color:#a6e22e>before</span> {
+      <span style=color:#66d9ef>content</span>:attr(data<span style=color:#f92672>-</span>tagname);
     }
-</code></pre></div><p>and a small triangle behind it</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">after</span> {
-      <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;&#34;</span>;
-      <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
-      <span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
-      <span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">0</span>;
-      <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">0</span>;
-      <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">0</span>;
-      <span style="color:#66d9ef">border-top</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">transparent</span>;
-      <span style="color:#66d9ef">border-left</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#a6e22e">darken</span>(<span style="color:#ae81ff">#8e44ad</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>); <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">f</span> <span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">o</span> <span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span> <span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">s</span> <span style="color:#960050;background-color:#1e0010">g</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span>
+</code></pre></div><p>and a small triangle behind it</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>    <span style=color:#f92672>&amp;</span>:<span style=color:#a6e22e>after</span> {
+      <span style=color:#66d9ef>content</span>:<span style=color:#e6db74>&#34;&#34;</span>;
+      <span style=color:#66d9ef>position</span>:<span style=color:#66d9ef>absolute</span>;
+      <span style=color:#66d9ef>left</span>:<span style=color:#ae81ff>100</span><span style=color:#66d9ef>%</span>;
+      <span style=color:#66d9ef>top</span>:<span style=color:#ae81ff>0</span>;
+      <span style=color:#66d9ef>width</span>:<span style=color:#ae81ff>0</span>;
+      <span style=color:#66d9ef>height</span>:<span style=color:#ae81ff>0</span>;
+      <span style=color:#66d9ef>border-top</span>:<span style=color:#ae81ff>1</span><span style=color:#66d9ef>em</span> <span style=color:#66d9ef>solid</span> <span style=color:#66d9ef>transparent</span>;
+      <span style=color:#66d9ef>border-left</span>:<span style=color:#ae81ff>1</span><span style=color:#66d9ef>em</span> <span style=color:#66d9ef>solid</span> <span style=color:#a6e22e>darken</span>(<span style=color:#ae81ff>#8e44ad</span>,<span style=color:#ae81ff>20</span><span style=color:#66d9ef>%</span>); <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>fallback</span> <span style=color:#960050;background-color:#1e0010>if</span> <span style=color:#960050;background-color:#1e0010>no</span> <span style=color:#960050;background-color:#1e0010>data-id</span> <span style=color:#960050;background-color:#1e0010>is</span> <span style=color:#960050;background-color:#1e0010>given</span>
     }
-</code></pre></div><p>Success! The first basic tag is finished, but why the <code>data-id</code> you may ask? Because they make the magic! As I said before the color is controlled via <code>data-id</code> and here&rsquo;s how this works:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">]</span> {
-  <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>;
-    <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
-      <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
+</code></pre></div><p>Success! The first basic tag is finished, but why the <code>data-id</code> you may ask? Because they make the magic! As I said before the color is controlled via <code>data-id</code> and here&rsquo;s how this works:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>&amp;[</span><span style=color:#f92672>data-id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1&#34;</span><span style=color:#f92672>]</span> {
+  <span style=color:#66d9ef>background</span>:<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-1</span>;
+    <span style=color:#960050;background-color:#1e0010>&amp;:after</span> <span style=color:#960050;background-color:#1e0010>{</span>
+      <span style=color:#66d9ef>border-left-color</span>:<span style=color:#a6e22e>darken</span>(<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-1</span>,<span style=color:#ae81ff>20</span><span style=color:#66d9ef>%</span>);
   }
-<span style="color:#960050;background-color:#1e0010">}</span>
-</code></pre></div><p>If you repeat this for all your <code>data-id</code>s and colors you&rsquo;ll end up having some sweet Product Flags. The whole code for my product flags looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">  .<span style="color:#a6e22e">tag</span> {
-    <span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;
-    <span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
-    <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
-    <span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">em</span>;
-    <span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#8e44ad</span>; <span style="color:#75715e">/* fallback if no data-id is given */</span>
-    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span>;
+<span style=color:#960050;background-color:#1e0010>}</span>
+</code></pre></div><p>If you repeat this for all your <code>data-id</code>s and colors you&rsquo;ll end up having some sweet Product Flags. The whole code for my product flags looks like this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>  .<span style=color:#a6e22e>tag</span> {
+    <span style=color:#66d9ef>width</span>:<span style=color:#66d9ef>auto</span>;
+    <span style=color:#66d9ef>height</span>:<span style=color:#66d9ef>auto</span>;
+    <span style=color:#66d9ef>position</span>:<span style=color:#66d9ef>absolute</span>;
+    <span style=color:#66d9ef>top</span>:<span style=color:#ae81ff>-1</span><span style=color:#66d9ef>em</span>;
+    <span style=color:#66d9ef>left</span>:<span style=color:#ae81ff>0</span>;
+    <span style=color:#66d9ef>background</span>:<span style=color:#ae81ff>#8e44ad</span>; <span style=color:#75715e>/* fallback if no data-id is given */</span>
+    <span style=color:#66d9ef>padding</span>:<span style=color:#ae81ff>.5</span><span style=color:#66d9ef>em</span>;
 
-    <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span> <span style="color:#960050;background-color:#1e0010">{</span>
-      <span style="color:#66d9ef">content</span>:attr(data<span style="color:#f92672">-</span>tagname);
+    <span style=color:#960050;background-color:#1e0010>&amp;:before</span> <span style=color:#960050;background-color:#1e0010>{</span>
+      <span style=color:#66d9ef>content</span>:attr(data<span style=color:#f92672>-</span>tagname);
     }
-    <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">there</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">s</span> <span style="color:#f92672">always</span> <span style="color:#f92672">a</span> <span style="color:#f92672">triangle</span> <span style="color:#f92672">behind</span> <span style="color:#f92672">it</span>
-    <span style="color:#f92672">&amp;</span>:<span style="color:#a6e22e">after</span> {
-      <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;&#34;</span>;
-      <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
-      <span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
-      <span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">0</span>;
-      <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">0</span>;
-      <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">0</span>;
-      <span style="color:#66d9ef">border-top</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">transparent</span>;
-      <span style="color:#66d9ef">border-left</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">solid</span> <span style="color:#a6e22e">darken</span>(<span style="color:#ae81ff">#8e44ad</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);  <span style="color:#75715e">/* fallback if no data-id is given */</span>
+    <span style=color:#f92672>//</span> <span style=color:#f92672>there</span><span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#f92672>s</span> <span style=color:#f92672>always</span> <span style=color:#f92672>a</span> <span style=color:#f92672>triangle</span> <span style=color:#f92672>behind</span> <span style=color:#f92672>it</span>
+    <span style=color:#f92672>&amp;</span>:<span style=color:#a6e22e>after</span> {
+      <span style=color:#66d9ef>content</span>:<span style=color:#e6db74>&#34;&#34;</span>;
+      <span style=color:#66d9ef>position</span>:<span style=color:#66d9ef>absolute</span>;
+      <span style=color:#66d9ef>left</span>:<span style=color:#ae81ff>100</span><span style=color:#66d9ef>%</span>;
+      <span style=color:#66d9ef>top</span>:<span style=color:#ae81ff>0</span>;
+      <span style=color:#66d9ef>width</span>:<span style=color:#ae81ff>0</span>;
+      <span style=color:#66d9ef>height</span>:<span style=color:#ae81ff>0</span>;
+      <span style=color:#66d9ef>border-top</span>:<span style=color:#ae81ff>1</span><span style=color:#66d9ef>em</span> <span style=color:#66d9ef>solid</span> <span style=color:#66d9ef>transparent</span>;
+      <span style=color:#66d9ef>border-left</span>:<span style=color:#ae81ff>1</span><span style=color:#66d9ef>em</span> <span style=color:#66d9ef>solid</span> <span style=color:#a6e22e>darken</span>(<span style=color:#ae81ff>#8e44ad</span>,<span style=color:#ae81ff>20</span><span style=color:#66d9ef>%</span>);  <span style=color:#75715e>/* fallback if no data-id is given */</span>
     }
 
 
-    <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">the</span> <span style="color:#f92672">data-id</span> <span style="color:#f92672">controls</span> <span style="color:#f92672">the</span> <span style="color:#f92672">colors</span>
-    <span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">]</span> {
-      <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>;
-      <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
-        <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-1</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
+    <span style=color:#f92672>//</span> <span style=color:#f92672>the</span> <span style=color:#f92672>data-id</span> <span style=color:#f92672>controls</span> <span style=color:#f92672>the</span> <span style=color:#f92672>colors</span>
+    <span style=color:#f92672>&amp;[</span><span style=color:#f92672>data-id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1&#34;</span><span style=color:#f92672>]</span> {
+      <span style=color:#66d9ef>background</span>:<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-1</span>;
+      <span style=color:#960050;background-color:#1e0010>&amp;:after</span> <span style=color:#960050;background-color:#1e0010>{</span>
+        <span style=color:#66d9ef>border-left-color</span>:<span style=color:#a6e22e>darken</span>(<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-1</span>,<span style=color:#ae81ff>20</span><span style=color:#66d9ef>%</span>);
       }
-    <span style="color:#960050;background-color:#1e0010">}</span>
+    <span style=color:#960050;background-color:#1e0010>}</span>
 
-    <span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">]</span> {
-      <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-2</span>;
+    <span style=color:#f92672>&amp;[</span><span style=color:#f92672>data-id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;2&#34;</span><span style=color:#f92672>]</span> {
+      <span style=color:#66d9ef>background</span>:<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-2</span>;
 
-      <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
-        <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-2</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
+      <span style=color:#960050;background-color:#1e0010>&amp;:after</span> <span style=color:#960050;background-color:#1e0010>{</span>
+        <span style=color:#66d9ef>border-left-color</span>:<span style=color:#a6e22e>darken</span>(<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-2</span>,<span style=color:#ae81ff>20</span><span style=color:#66d9ef>%</span>);
       }
-    <span style="color:#960050;background-color:#1e0010">}</span>
+    <span style=color:#960050;background-color:#1e0010>}</span>
 
 
-    <span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">]</span> {
-      <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-3</span>;
+    <span style=color:#f92672>&amp;[</span><span style=color:#f92672>data-id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;3&#34;</span><span style=color:#f92672>]</span> {
+      <span style=color:#66d9ef>background</span>:<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-3</span>;
 
-      <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
-        <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-3</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
+      <span style=color:#960050;background-color:#1e0010>&amp;:after</span> <span style=color:#960050;background-color:#1e0010>{</span>
+        <span style=color:#66d9ef>border-left-color</span>:<span style=color:#a6e22e>darken</span>(<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-3</span>,<span style=color:#ae81ff>20</span><span style=color:#66d9ef>%</span>);
       }
-    <span style="color:#960050;background-color:#1e0010">}</span>
+    <span style=color:#960050;background-color:#1e0010>}</span>
 
-    <span style="color:#f92672">&amp;</span><span style="color:#f92672">[</span><span style="color:#f92672">data-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">]</span> {
-      <span style="color:#66d9ef">background</span>:<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-4</span>;
+    <span style=color:#f92672>&amp;[</span><span style=color:#f92672>data-id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;4&#34;</span><span style=color:#f92672>]</span> {
+      <span style=color:#66d9ef>background</span>:<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-4</span>;
 
-      <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">{</span>
-        <span style="color:#66d9ef">border-left-color</span>:<span style="color:#a6e22e">darken</span>(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">color</span><span style="color:#ae81ff">-4</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>);
+      <span style=color:#960050;background-color:#1e0010>&amp;:after</span> <span style=color:#960050;background-color:#1e0010>{</span>
+        <span style=color:#66d9ef>border-left-color</span>:<span style=color:#a6e22e>darken</span>(<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#66d9ef>color</span><span style=color:#ae81ff>-4</span>,<span style=color:#ae81ff>20</span><span style=color:#66d9ef>%</span>);
       }
-    <span style="color:#960050;background-color:#1e0010">}</span>
-    <span style="color:#960050;background-color:#1e0010">}</span> <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">tag</span>
-</code></pre></div><p>A working example can be found <a href="http://codepen.io/kevingimbel/pen/Hpazh">here on CodePen</a>. Special thanks to <a href="http://getdigital.de">getDigital.de</a> for letting me use some of their nerdy Product Images! May the force be with you.</p>
-<p>In case you&rsquo;ve any questions feel free to <a href="http://twitter.com/_kevinatari">tweet me</a> or comment on the <a href="http://codepen.io/kevingimbel/pen/Hpazh">Pen</a>.</p>
-
-        </article>
-    </section>
-
-    <section class="tags-categories">
-        
-
-<section class="categories">
-    <h3>Categories</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under coding"
-                href="https://kevingimbel.de/categories/coding/">coding</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under frontend"
-                href="https://kevingimbel.de/categories/frontend/">frontend</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts categorized under tutorial"
-                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
-        </li></ul>
-</section>
-
-        
-
-<section class="tags">
-    <h3>Tags</h3>
-    <ul class="tag-list">
-        
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with css"
-                href="https://kevingimbel.de/tags/css/">css</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with interface"
-                href="https://kevingimbel.de/tags/interface/">interface</a>
-        </li>
-        <li class="tag-list__item">
-            <a class="tag-list__link" title="View all posts tagged with tutorial"
-                href="https://kevingimbel.de/tags/tutorial/">tutorial</a>
-        </li></ul>
-</section>
-
-    </section>
-
-    <section class="support">
-    <h4>Like this?</h4>
-    <p>This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
-        shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p>
-    <p>If you would like to support me in providing <a href="/blog">content</a> - and <a
-            href="https://github.com/kevingimbel" title="View open source code by Kevin Gimbel on GitHub">code</a> - for
-        free or if this page has helped you or your company, consider supporting me directly.</p>
-    <p>You can support me through:</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
-    </ul>
-</section>
-
-    <section class="author">
-    <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
-    </div>
-    <div class="right">
-        <h4>Kevin Gimbel</h4>
-        <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
-                title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
-    </div>
-</section>
-</main>
-<footer class="footer">
-        <div class="left">
-            <p>&copy; 2009 - 2020 Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
-            </p>
-        </div>
-        <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-11-24-pseudo-product-flags.md">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
-            </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
-            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
-    </footer>
-
-
-    
-
-    
-
-    
-</body>
-
-</html>
+    <span style=color:#960050;background-color:#1e0010>}</span>
+    <span style=color:#960050;background-color:#1e0010>}</span> <span style=color:#f92672>//</span> <span style=color:#f92672>tag</span>
+</code></pre></div><p>A working example can be found <a href=http://codepen.io/kevingimbel/pen/Hpazh>here on CodePen</a>. Special thanks to <a href=http://getdigital.de>getDigital.de</a> for letting me use some of their nerdy Product Images! May the force be with you.</p><p>In case you&rsquo;ve any questions feel free to <a href=http://twitter.com/_kevinatari>tweet me</a> or comment on the <a href=http://codepen.io/kevingimbel/pen/Hpazh>Pen</a>.</p></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tutorial" href=https://kevingimbel.de/categories/tutorial/>tutorial</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with css" href=https://kevingimbel.de/tags/css/>css</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with interface" href=https://kevingimbel.de/tags/interface/>interface</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with tutorial" href=https://kevingimbel.de/tags/tutorial/>tutorial</a></li></ul></section></section><section class=support><h4>Like this?</h4><p>This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no
+shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind.</p><p>If you would like to support me in providing <a href=/blog>content</a> - and <a href=https://github.com/kevingimbel title="View open source code by Kevin Gimbel on GitHub">code</a> - for
+free or if this page has helped you or your company, consider supporting me directly.</p><p>You can support me through:</p><ul><li><a href=https://paypal.me/kevingimbel>PayPal</a></li><li><a href=https://liberapay.com/kevin/>Liberapay</a></li></ul></section><section class=author><div class=left><img src=/images/self-2019_huaef00fa0bf6dacb2852b9636887d782c_127517_200x200_resize_q75_box.jpg alt="A colorful image of me in a club in Budapest. The image has been heavily blured and modified to give it a glitch aesthetic." class=avatar></div><div class=right><h4>Kevin Gimbel</h4><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
+dystopian books.<br>You can find out more <a href=/about/ title="Read more about me">about me</a> if you wish.</p><p>Follow me on <a href=https://bullgit.party/@kevin rel=nofollow title="Follow Kevin Gimbel on Mastodon, the decentralised social network">Mastodon</a>.</p></div></section></main><footer class=footer><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. See <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View license on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on Mastodon <a href=https://bullgit.party/@kevin rel=me>kevin@bullgit.party</a></small></p><p><small>You can contact me on Matrix at <a href=https://matrix.to/#/@kevingimbel:bullgit.science title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small></p></div><div class=right><p><small class=xx-small>Found an issue? <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2013-11-24-pseudo-product-flags.md>Edit on
+GitHub</a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Impressum / Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></body></html>
