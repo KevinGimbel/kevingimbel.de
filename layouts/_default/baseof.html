@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,53 +8,18 @@
     <meta name="author" content="Kevin Gimbel">
     <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
     <meta keywords="{{ with .Params.Tags }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Section }} {{ with .Params.Categories }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Site.Params.Keywords }}">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛸</text></svg>">
+    
+    <style type="text/css">{{- ((resources.Get "css/style.css" | minify).Content | safeCSS ) }}</style>
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 </head>
-
+    {{ .Page.Scratch.Set "avatar_src" .Site.Params.avatar_src }}
+    {{ .Page.Scratch.Set "avatar_alt" .Site.Params.avatar_alt }}
 <body>
-    <script type="text/javascript">
-    (function(window, document, undefined) {
-        let theme = window.localStorage.getItem("kgde_theme");
-        console.log(theme);
-        if (theme) {
-            var [colorMain, colorSecondary] = JSON.parse(theme).colors;
-            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-        } else {
-            // [dark-color, light-color]
-            // Color combinations taken from https://botsin.space/@accessibleColors
-            let themes = [
-                ["#123D3C", "#90F072"],
-                ["#403D58", "#dea584"],
-                ["#400E3B", "#DCC78A"],
-                ["#17098D", "#EADD1C"],
-                ["#233B07", "#FFDD6D"]
-            ]
-            var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
-            document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            let schema_btn = document.querySelector("#btn_schema");
-            let theme = window.localStorage.getItem("kgde_theme");
-            if (theme) {
-                schema_btn.textContent = "Use random color theme";
-            } else {
-                schema_btn.textContent = "Keep current color theme";
-            }
-            schema_btn.style.display = "block";
-            schema_btn.addEventListener('click', function(e) {
-                if (theme) {
-                    window.localStorage.removeItem("kgde_theme");
-                    window.reload();
-                } else {
-                    window.localStorage.setItem("kgde_theme", JSON.stringify({colors: [colorMain, colorSecondary]}));
-                }
-            });
-        });
-    }(window, document));
-    </script>
+    <script type="text/javascript">{{- ((resources.Get "js/theme.js" | minify).Content | safeJS ) }}</script>
+
     <header class="intro-text">
         <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
         <span>{{ with .Page.Params.intro_text }}

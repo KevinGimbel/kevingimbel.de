@@ -1,0 +1,5 @@
+<details>
+    <summary>{{ .Get "summary" }}</summary>
+    {{ if eq (.Get "is_html") "true" }} {{ .Inner | safeHTML }} {{ else }}
+    {{ .Inner | markdownify }} {{ end }}
+</details>

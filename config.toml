@@ -3,9 +3,13 @@ languageCode = "en-us"
 title = "KevOps"
 theme = ["hugo-atom-feed"]
 publishDir = "docs"
+
 [params]
-# Toggle "template hints" 
-# debug = true
+    # Doesn't work yet
+    avatar_src = "images/self-2019.jpg"
+    avatar_alt = "A colorful image of me in a club in Budapest. The image has been heavily blured and modified to give it a glitch aesthetic."
+    # Toggle "template hints" 
+    # debug = true
 
 [permalinks]
     blog = "/:section/:year/:month/:title/"
@@ -69,9 +73,9 @@ location = "Wiesbaden, Germany"
 
 
 [outputs]
-  # <domain>/atom.xml
-  home = ["HTML", "RSS", "ATOM"]     # default = ["HTML", "RSS"]
-  # <domain>/posts/atom.xml
-  section = ["HTML", "RSS", "ATOM"]  # default = ["HTML", "RSS"]
-  # <domain>/tags/mytag/atom.xml, <domain>/categories/mycat/atom.xml
-  taxonomy = ["HTML", "RSS", "ATOM"] # default = ["HTML", "RSS"]
+    # <domain>/atom.xml
+    home = ["HTML", "RSS", "ATOM"]     # default = ["HTML", "RSS"]
+    # <domain>/posts/atom.xml
+    section = ["HTML", "RSS", "ATOM"]  # default = ["HTML", "RSS"]
+    # <domain>/tags/mytag/atom.xml, <domain>/categories/mycat/atom.xml
+    taxonomy = ["HTML", "RSS", "ATOM"] # default = ["HTML", "RSS"]

@@ -1,6 +1,6 @@
 <section class="author">
     <div class="left">
-        <img src="/img/self-2019-small.jpg" alt="" class="avatar">
+        <img src="{{ ((resources.Get "images/self-2019.jpg").Resize "200x200" ).RelPermalink }}" alt="{{ .Site.Params.avatar_alt }}" class="avatar">
     </div>
     <div class="right">
         <h4>Kevin Gimbel</h4>
