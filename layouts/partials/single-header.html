@@ -10,8 +10,6 @@
 </section>
 {{ end }}
 
-{{ .Site.Params.avatar_src }}
-
 <p>Written on <time datetime="{{ .Date }}">{{ $date }}</time> {{ if ne $date $last_updated }}, last <a href="#update"
         title="View update">updated</a>
     {{ .Lastmod.Format "02. Jan 2006" }} {{ end }} </p>

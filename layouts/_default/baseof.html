@@ -15,8 +15,6 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 </head>
-    {{ .Page.Scratch.Set "avatar_src" .Site.Params.avatar_src }}
-    {{ .Page.Scratch.Set "avatar_alt" .Site.Params.avatar_alt }}
 <body>
     <script type="text/javascript">{{- ((resources.Get "js/theme.js" | minify).Content | safeJS ) }}</script>
 
