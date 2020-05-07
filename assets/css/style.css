@@ -146,6 +146,8 @@ figure picture {
     margin: 0 auto;
 }
 
+.art figure img,
+.art figure picture,
 .photography figure img,
 .photography figure picture {
     width: auto;

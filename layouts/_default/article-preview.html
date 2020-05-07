@@ -9,7 +9,7 @@
     {{ $link := .Permalink }}
     {{ range .Resources.ByType "image" | first 1 }}
     <figure>
-        <a href="{{ $link }}"><img src="{{ (.Resize "1600x q75").RelPermalink}}" /></a>
+        <a href="{{ $link }}"><img src="{{ (.Resize "1530x q75").RelPermalink}}" /></a>
         <figcaption>
             <p>{{ .Name }}</p>
         </figcaption>
