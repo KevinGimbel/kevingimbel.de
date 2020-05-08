@@ -6,7 +6,7 @@ publishDir = "docs"
 
 [params]
     # Doesn't work yet
-    avatar_src = "images/self-2019.jpg"
+    avatar_src = "images/general/mask-moshed.jpg"
     avatar_alt = "A colorful image of me in a club in Budapest. The image has been heavily blured and modified to give it a glitch aesthetic."
     # Toggle "template hints" 
     # debug = true

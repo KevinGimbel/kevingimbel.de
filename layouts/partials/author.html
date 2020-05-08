@@ -1,13 +1,14 @@
 <section class="author">
     <div class="left">
-        <img src="{{ ((resources.Get "images/self-2019.jpg").Resize "200x200" ).RelPermalink }}" alt="{{ .Site.Params.avatar_alt }}" class="avatar">
+        <img src="{{ ((resources.Get (.Site.Params.avatar_src)).Resize "200x200" ).RelPermalink }}" alt="{{ .Site.Params.avatar_alt }}" class="avatar">
     </div>
     <div class="right">
         <h4>Kevin Gimbel</h4>
         <p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He's also interested in Sci-Fi, Cyberpunk, and
-            dystopian books.<br>
-            You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.</p>
-        <p>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
+            dystopian books.</p>
+            <p><i>Wearing a mask is a good idea!</i></p>
+            <p>You can find out more <a href="/about/" title="Read more about me">about me</a> if you wish.
+        <br>Follow me on <a href="https://bullgit.party/@kevin" rel="nofollow"
                 title="Follow Kevin Gimbel on Mastodon, the decentralised social network"> Mastodon</a>. </p>
     </div>
 </section>
