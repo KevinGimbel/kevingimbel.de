@@ -21,14 +21,13 @@ publishDir = "docs"
 [[params.now]]
 location = "Wiesbaden, Germany"
     [[params.now.doing]]
-    thing = "reading [Die Tyrannei des Schmetterlings](https://de.wikipedia.org/wiki/Die_Tyrannei_des_Schmetterlings) by [Frank Schätzing](https://de.wikipedia.org/wiki/Frank_Sch%C3%A4tzing)"
+    thing = "staying inside as much as possible."
     [[params.now.doing]]
-    thing = "learning [Rust](https://rust-lang.org)"
+    thing = "playing a lot of [No Man's Sky](https://www.nomanssky.com/) on PS4"
     [[params.now.doing]]
-    thing = "learning Spanish"
+    thing = "starting and abondining lots of projects."
 
 [menu]
-
     [[menu.main]]
     identifier = "home"
     name = "Home"
