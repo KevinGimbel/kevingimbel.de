@@ -1,0 +1,3 @@
+[submodule "themes/hugo-kg-shortcodes"]
+	path = themes/hugo-kg-shortcodes
+	url = https://github.com/kevingimbel/hugo-kg-shortcodes.git

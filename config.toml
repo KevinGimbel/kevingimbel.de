@@ -1,7 +1,7 @@
 baseURL = "https://kevingimbel.de"
 languageCode = "en-us"
 title = "KevOps"
-theme = ["hugo-atom-feed"]
+theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
 publishDir = "docs"
 
 [params]
