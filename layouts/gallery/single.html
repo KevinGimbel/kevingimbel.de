@@ -1,0 +1,59 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "blog/gallery.html" }}
+{{ end }}
+<main id="main" class="main">
+    <section class="article-single">
+        <article class="article-content">
+            {{ with .Params.intro_text }}
+            <h1>{{ $.Page.Title }}</h1>
+            {{ end }}
+            {{ partial "single-header.html" . }}
+            {{ .Content }}
+        </article>
+    </section>
+<style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column figure {
+  margin-top: 8px;
+  vertical-align: middle;
+  max-width: 50%;
+}
+</style>
+
+<section class="gallery">
+    {{ range sort (.Resources.ByType "image") }}
+    {{ $img := . }}
+    <figure class="gallery__figure gallery__figure--w-{{ div 100 (int $.Page.Params.gallery_columns | default 1 ) }}">
+        {{ if eq $.Page.Params.keep_original "true"}}
+            <img src="{{ $img.RelPermalink }}" alt="{{ if isset $img.Alt }}{{ . }}{{ else }}{{ .Name }}{{ end }}" />
+        {{ else }}
+            <picture>
+                <source srcset="{{ ($img.Resize "1000x q100").RelPermalink }}" media="(max-width: 1000px)">
+                <source srcset="{{ ($img.Resize "760x q100").RelPermalink }}" media="(max-width: 640px)">
+                <img src="{{ ($img.Resize "1200x q100").RelPermalink }}" />
+            </picture>
+        {{ end }}
+        {{ with .Name }}
+        <figcaption>
+            <p>{{ . }}</p>
+        </figcaption>
+        {{ end }}
+    </figure>
+
+    {{ end }}
+</section>
+
+    <section class="tags-categories">
+        {{ partial "categories.html" . }}
+        {{ partial "tags.html" . }}
+    </section>
+    
+    {{ partial "support.html" . }}
+    {{ partial "author.html" . }}
+</main>
+{{ end }}

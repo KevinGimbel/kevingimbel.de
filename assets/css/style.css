@@ -199,6 +199,40 @@ figcaption p {
     figcaption p {
         width: 50%;
     }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    figure.gallery__figure {
+        margin: 0;
+        padding: .25rem;
+    }
+
+    .gallery__figure img, .gallery__figure picture {
+        display: block;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    figure.gallery__figure--w-100 {
+        width: 100%;
+    }
+
+    figure.gallery__figure--w-50 {
+        width: 50%;
+    }
+
+    figure.gallery__figure--w-33 {
+        width: 33%;
+    }
+
+    figure.gallery__figure--w-25 {
+        width: 25%;
+    }
 }
 
 p code,
