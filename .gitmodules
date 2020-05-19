@@ -1,3 +1,7 @@
 [submodule "themes/hugo-kg-shortcodes"]
 	path = themes/hugo-kg-shortcodes
 	url = https://github.com/kevingimbel/hugo-kg-shortcodes.git
+
+[submodule "themes/hugo-atom-feed"]
+	path = themes/hugo-atom-feed
+	url = https://github.com/kaushalmodi/hugo-atom-feed.git
