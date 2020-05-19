@@ -13,6 +13,8 @@ tags:
 date: "2020-05-19"
 lastmod: "2020-05-19"
 
+no_featured_image: true
+
 gallery_columns: 2
 
 resources:
