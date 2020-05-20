@@ -24,7 +24,12 @@
             {{ else }}
                 {{ range .Resources.ByType "image" | first 1 }}
                 <figure>
-                    <img src="{{ (.Resize "1600x q75").RelPermalink}}" title="{{ .Name }}" />
+                    <picture>
+                        <source srcset="{{ (.Resize "1200x q100").RelPermalink }}" media="(max-width: 1200px)">
+                        <source srcset="{{ (.Resize "1000x q100").RelPermalink }}" media="(max-width: 1000px)">
+                        <source srcset="{{ (.Resize "760x q100").RelPermalink }}" media="(max-width: 640px)">
+                        <img src="{{ (.Resize "1600x q100").RelPermalink }}" />
+                    </picture>
                     <figcaption>
                         <p>{{ .Name }}</p>
                     </figcaption>
@@ -54,7 +59,12 @@
 
             {{ range .Resources.ByType "image" | first 1 }}
             <figure>
-                <img src="{{ (.Resize "1600x q75").RelPermalink}}" title="{{ .Name }}" />
+                <picture>
+                    <source srcset="{{ (.Resize "1200x q100").RelPermalink }}" media="(max-width: 1200px)">
+                    <source srcset="{{ (.Resize "1000x q100").RelPermalink }}" media="(max-width: 1000px)">
+                    <source srcset="{{ (.Resize "760x q100").RelPermalink }}" media="(max-width: 640px)">
+                    <img src="{{ (.Resize "1600x q100").RelPermalink }}" />
+                </picture>
                 <figcaption>
                     <p>{{ .Name }}</p>
                 </figcaption>
