@@ -1,7 +1,7 @@
 {{ $taxonomy := "tags" }}
 {{ with .Param $taxonomy }}
 <section class="tags">
-    <h3>Tags</h3>
+    <h3>{{ i18n "ui_tags" . }}</h3>
     <ul class="tag-list">
         {{ range $index, $tag := . }}
         {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}

@@ -1,5 +1,6 @@
 baseURL = "https://kevingimbel.de"
 languageCode = "en-us"
+DefaultContentLanguage = "en"
 title = "KevOps"
 theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
 publishDir = "docs"
@@ -7,7 +8,7 @@ publishDir = "docs"
 [params]
     # Doesn't work yet
     avatar_src = "images/general/mask-moshed.jpg"
-    avatar_alt = "A colorful image of me in a club in Budapest. The image has been heavily blured and modified to give it a glitch aesthetic."
+    avatar_alt = "A colorful image of me wearing my DIY mask. The image has a colorful glitch effect."
     # Toggle "template hints" 
     # debug = true
 
@@ -78,3 +79,40 @@ location = "Wiesbaden, Germany"
     section = ["HTML", "RSS", "ATOM"]  # default = ["HTML", "RSS"]
     # <domain>/tags/mytag/atom.xml, <domain>/categories/mycat/atom.xml
     taxonomy = ["HTML", "RSS", "ATOM"] # default = ["HTML", "RSS"]
+
+
+[languages]
+    [languages.en]
+        weight = 1
+        contentDir = "content/en"
+        languageCode = "en_US"
+        languageName = "English"
+    [languages.de]
+        weight = 2
+        contentDir = "content/de"
+        languageCode = "de_DE"
+        languageName = "Deutsch"
+    [languages.de.menu]
+        [[languages.de.menu.main]]
+        identifier = "start"
+        name = "Start"
+        URL = "/de/"
+        Weight = 10
+
+        [[languages.de.menu.main]]
+        identifier = "ueber"
+        name = "Über mich"
+        url = "/de/ueber-mich/"
+        weight = 20
+
+        [[languages.de.menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/de/blog"
+        weight = 30
+
+
+        [languages.de.params]
+        # Doesn't work yet
+        avatar_src = "images/general/mask-moshed.jpg"
+        avatar_alt = "Ein Bild von mir mit meiner DIY Maske. Das Bild ist stark bearbeitet und hat einen Regenbogeneffekt"

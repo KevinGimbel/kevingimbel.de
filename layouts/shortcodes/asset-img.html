@@ -11,7 +11,7 @@
 {{ .Scratch.Set "image" $original }}
 {{ end }}
 {{ $image := .Scratch.Get "image" }}
-{{ $caption := .Inner }}
+{{ $caption := .Inner | markdownify }}
 {{ with $image }}
 <figure class="figure">
     <img class="figure__img" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">

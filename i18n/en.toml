@@ -1,0 +1,105 @@
+[ui_html_published_on]
+other = "<a href=\"{{ .Permalink }}\">{{ .Date.Format \"01/2/2006\" }}</a>"
+
+[ui_published_on]
+other = "Published on {{ .Date.Format \"01/2/2006\" }}"
+
+[ui_html_article_last_updated]
+other = "last <a href=\"#update\" title=\"View update\">updated</a> {{ .Lastmod.Format  \"01/2/2006\" }}"
+
+[ui_categories]
+other = "Categories"
+
+[ui_tags]
+other = "Tags"
+
+[ui_latest_posts]
+one = "Newest post"
+other = "Latest posts"
+
+[ui_latest_photo]
+one = "Newest photo"
+other = "Newest photos"
+
+[ui_view_more_post]
+other = "View full post"
+
+[ui_permalink]
+other = "Permalink"
+
+[ui_continue_reading_about]
+other = "Continue reading about \"{{ .Title }}\""
+
+[ui_view_all_posts]
+other = "View all <a href=\"/blog/\">articles</a>"
+
+[ui_view_all_photos]
+other = "View all <a href=\"/photography/\">photos</a>"
+
+[ui_copyright_footer]
+other = "&copy; 2009 - {{ .Count }} Kevin Gimbel. <a href=\"https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE\" title=\"View License on GitHub.com\">License</a>."
+
+[ui_follow_mastodon]
+other = "Follow me on <a href=\"https://bullgit.party/@kevin\" title=\"Follow my Mastodon Account on bullgit.party\" rel=\"me\">Mastodon @kevin@bullgit.party</a>"
+
+[ui_contact_matrix]
+other = "Got more to say? Contact me on Matrix <a href=\"https://matrix.to/#/@kevingimbel:bullgit.science\" title=\"Contact me via Matrix\">@kevingimbel:bullgit.science</a>"
+
+[ui_found_issue]
+other = "Found an issue? Edit this <a href=\"https://github.com/kevingimbel/kevingimbel.de/tree/master/content/{{ .File }}\">page on GitHub.com</a>"
+
+[ui_imprint]
+other = "Imprint"
+
+[ui_made_width]
+other = "Made in Europe 🇪🇺 with love, <a href=\"/thanks\">open source code</a> and <a href=\"https://gohugo.io/\" title=\"Hugo static site generator\" rel=\"nofollow\">hugo</a>.<span class=\"fg-accent\">&hearts;</span>."
+
+[ui_no_cookies]
+other = "This website does not use cookies."
+
+[ui_lang_available_in]
+other = "Read in: "
+
+[ui_lang_code_en]
+other = "English"
+
+[ui_lang_code_de]
+other = "Deutsch"
+
+[ui_skip_to]
+other = "View articles from"
+
+[ui_back_to_navigation]
+other = "Back to navigation"
+
+[ui_html_subscribe_rss]
+other = "You can subscribe to this section via <a href=\"{{ .RelPermalink }}index.xml\" title=\"Subscribe to all {{ .Section }} posts via RSS\">RSS</a> or <a href=\"{{ .RelPermalink }}atom.xml\" title=\"Subscribe to all {{ .Section }} posts via Atom Feed\">Atom</a>"
+
+[widget_color_changer_keep]
+other = "Keep current color theme"
+
+[widget_color_changer_random]
+other = "Use random color theme"
+
+[widget_author_about]
+other = """
+Kevin Gimbel
+
+**is a DevOps Engineer and avid (Video) Gamer**. He's also interested in Sci-Fi, Cyberpunk, and dystopian books.
+
+_Wearing a mask is a good idea!_
+
+You can find out more [about me](/about/) if you wish.
+"""
+
+[widget_support_headline]
+other = "Like this?"
+
+[widget_support_no_ads]
+other = "This website contains no <em>advertisement</em>, no <em>tracking</em>, no paid articles, and no shady-things-whatsoever. It is just content, provided free of charge and with accessibility in mind."
+
+[widget_support_content]
+other = "If you would like to support me in providing <a href=\"/blog\">content</a> - and <a href=\"https://github.com/kevingimbel\" title=\"View open source code by Kevin Gimbel on GitHub\">code</a> - for free or if this page has helped you or your company, consider supporting me directly."
+
+[widget_support_via]
+other = "You can support me via:"

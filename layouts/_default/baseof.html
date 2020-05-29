@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,8 @@
 </head>
 <body>
     <script type="text/javascript">{{- ((resources.Get "js/theme.js" | minify).Content | safeJS ) }}</script>
-
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">{{ i18n "widget_color_changer_keep" }}</span>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">{{ i18n "widget_color_changer_random" }}</span>
     <header class="intro-text">
         <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
         <span>{{ with .Page.Params.intro_text }}
@@ -59,19 +60,18 @@
 
     <footer class="footer">
         <div class="left">
-            <p>&copy; 2009 - {{ now.Format "2006" }} Kevin Gimbel. See <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View license on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
-            <p><small>Follow me on Mastodon <a href="https://bullgit.party/@kevin" rel="me">kevin@bullgit.party</a></small></p>
-            <p><small>You can contact me on Matrix at <a href="https://matrix.to/#/@kevingimbel:bullgit.science" title="Contact me on Matrix, a decentralised real-time messenger">@kevingimbel:bullgit.science</a></small>
+            <p>{{ i18n "ui_copyright_footer" (now.Format "2006") | safeHTML }} <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>{{ i18n "ui_follow_mastodon" | safeHTML }}</small></p>
+            <p><small>{{ i18n "ui_contact_matrix" | safeHTML }}</a></small>
             </p>
         </div>
         <div class="right">
-            <p><small class="xx-small">Found an issue? <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/{{ .File }}">Edit on
-                        GitHub</a></small></p>
-            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            <p><small class="xx-small">{{ i18n "ui_found_issue" . | safeHTML }}</a></small></p>
+            <p><small class="xx-small">{{ i18n "ui_made_width" . | safeHTML }}</small>
             </p>
-            <p><small class="xx-small"><a href="/legal">Impressum / Imprint</a></small></p>
+            <p><small class="xx-small"><a href="/legal">{{ i18n "ui_imprint" }}</a></small></p>
             <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
-        </div>
+        </div>  
     </footer>
     {{ partial "kg-shortcodes-hook.html" . }}
 </body>

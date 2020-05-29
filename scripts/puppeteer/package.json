@@ -1,0 +1,14 @@
+{
+  "name": "kevingimbel.de-scripts",
+  "version": "1.0.0",
+  "description": "Node-based tooling. :)",
+  "main": "index.js",
+  "scripts": {
+    "screenshot": "node tasks/screenshot.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^3.0.4"
+  }
+}

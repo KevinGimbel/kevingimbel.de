@@ -1,0 +1,116 @@
+[feed_title_on]
+other = "via"
+
+[ui_categories]
+other = "Kategorien"
+
+[ui_tags]
+other = "Tags"
+
+[ui_published_on]
+other = "{{ .Date.Format \"2.01.2006\" }}"
+
+[ui_html_published_on]
+other = "<a href=\"{{ .Permalink }}\">{{ .Date.Format \"2.01.2006\" }}</a>"
+
+[ui_html_article_last_updated]
+other = "aktualisiert am <a href=\"#update\" title=\"View update\">{{ .Lastmod.Format  \"2.01.2006\" }}</a>"
+
+[ui_latest_posts]
+one = "Neuster Beitrag"
+other = "Neuste Beiträge"
+
+[ui_latest_photo]
+one = "Neustes Foto"
+other = "Neuste Fotos"
+
+[ui_view_more_post]
+other = "Ganzen Beitrag ansehen"
+
+[ui_permalink]
+other = "Permalink"
+
+[ui_continue_reading_about]
+other = "Den ganzen Beitrag \"{{ .Title }}\" lesen"
+
+[ui_copyright_footer]
+other = "&copy; 2009 - {{ .Count }} Kevin Gimbel. <a href=\"https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE\" title=\"Lizenz auf Github.com ansehen\">Lizenz</a>."
+
+[ui_follow_mastodon]
+other = "Folge mir auf <a href=\"https://bullgit.party/@kevin\" title=\"Mein Mastodon Account auf bullgit.party\" rel=\"me\">Mastodon @kevin@bullgit.party</a>"
+
+[ui_contact_matrix]
+other = "Mehr zu sagen? Schreibe mir via Matrix an <a href=\"https://matrix.to/#/@kevingimbel:bullgit.science\" title=\"Kontaktiere mich über Matrix\">@kevingimbel:bullgit.science</a>"
+
+[ui_found_issue]
+other = "Fehler gefunden? Diese Seite <a href=\"https://github.com/kevingimbel/kevingimbel.de/tree/master/content/{{ .File }}\"> auf GitHub.com bearbeiten</a>"
+
+[ui_view_all_posts]
+other = "Weiter zu allen <a href=\"/de/blog/\">Artikeln</a>"
+
+[ui_view_all_photos]
+other = "Weiter zu allen <a href=\"/photography/\">Fotos</a>"
+
+[ui_imprint]
+other = "Impressum"
+
+[ui_made_width]
+other = "In Europa 🇪🇺 mit Liebe, <a href=\"/thanks\">Open Source Code</a> und <a href=\"https://gohugo.io/\" title=\"Hugo static site generator\" rel=\"nofollow\">hugo</a> gemacht.<span class=\"fg-accent\">&hearts;</span>."
+
+[ui_no_cookies]
+other = "Diese Website verwendet keine Cookies."
+
+[ui_lang_code_en]
+other = "English"
+
+[ui_lang_code_de]
+other = "German"
+
+[ui_skip_to]
+other = "Artikel aus dem Jahr"
+
+[ui_lang_available_in]
+other = "Weitere Sprachen:"
+
+[ui_back_to_navigation]
+other = "Zurück zur Navigation"
+
+[ui_html_subscribe_rss]
+other = "Diese Kategorie kann über <a href=\"{{ .RelPermalink }}index.xml\" title=\"Alle {{ .Section }} Beiträge abonnieren\">RSS</a> oder <a href=\"{{ .RelPermalink }}atom.xml\" title=\"Alle {{ .Section }} Beiträge abonnieren\">Atom</a> abonniert werden."
+
+[widget_color_changer_keep]
+other = "Aktuelles Farbschema beibehalten"
+
+[widget_color_changer_random]
+other = "Zufälliges Farbschema verwenden"
+
+[widget_author_about]
+other = """
+Kevin Gimbel
+
+ist ein DevOps Engineer und begeisterter (Video)-Spieler. Er ist außerdem interessiert an Sci-Fi Themen, 
+Cyberpunk, dystopischen Büchern, und Technik.
+
+_Eine Maske zu tragen ist zur Zeit eine gute Idee!_
+
+Wer möchte kann gerne mehr [Über mich](/de/ueber-mich/) erfahren.
+"""
+
+[widget_support_headline]
+other = "Dieser Inhalt hat dich weitergebracht?"
+
+[widget_support_no_ads]
+other = """
+Diese Website beinhaltet <em>keine Werbung</em>, kein <em>Tracking</em>, keine <em>bezahlten Reviews</em> 
+und keinen anderen Quatsch, nur Inhalte die kostenfrei und mit Barrierefreiheit im Sinn angeboten werden.
+"""
+
+[widget_support_content]
+other = """
+Wenn du mich in der Bereitstellung von kostenlosen <a href=\"/de/blog/\"> Blog Beiträgen</a> 
+- und <a href=\"https://github.com/kevingimbel\" title=\"Meine Open Source Projekte auf GitHub\">Code</a> 
+oder wenn dieser Beitrag deiner Firma oder dir geholfen hat, freue ich mich über deinen Support - vielleicht spendierst du mir ja einen Kaffee. :)
+"""
+
+[widget_support_via]
+other = "Du kannst mich über folgende Plattformen unterstützen:"
