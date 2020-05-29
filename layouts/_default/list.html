@@ -10,13 +10,17 @@
     {{ partial "subscribe-rss.html" . }}
 
     {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
-    <header class="article-list__header">
-        <h2 id="{{ .Key }}" class="section-headline">{{ .Key }}</h2>
-        <p><a href="#years">Back to navigation</a></p>
-    </header>
-    {{ range .Pages }}
-    {{ .Render "article-preview" }}
-    {{ end }}
+        <header class="article-list__header">
+            <h2 id="{{ .Key }}" class="section-headline">{{ .Key }}</h2>
+            <p><a href="#years">{{ i18n "ui_back_to_navigation" }}</a></p>
+        </header>
+        {{ range .Pages }}
+            {{- if (fileExists (printf "layouts/_default/article-preview-%s.html" .Params.Type)) -}}
+                {{ .Render (printf "article-preview-%s" .Params.Type) }}
+            {{ else }}
+                {{ .Render "article-preview-default" }}
+            {{- end }}
+        {{ end }}
     {{ end }}
 </main>
 {{ end }}

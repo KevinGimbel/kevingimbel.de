@@ -14,7 +14,7 @@ Here's a picture of me, you can [read more about me](/about/) if you wish.
 
 {{< right class="small" is_html="true" >}}
     {{< asset-img "images/general/mask.jpg" Resize "550x" >}}
-    Me with my self-made mask. You should make one, too! 
+Me with my self-made mask. You should make one, too! 
     {{< /asset-img >}}
 {{< /right >}}
 {{< /sidebyside >}}

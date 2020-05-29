@@ -1,5 +1,5 @@
 <nav class="page-nav" id="years" role="navigation" aria-label="Blog list naviation">
-    <span class="page-nav--label">Skip to:</span>
+    <span class="page-nav--label">{{ i18n "ui_skip_to" . }}:</span>
     {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
     <a href="#{{ .Key }}" title="View articles from {{ .Key }}">{{ .Key }}</a>
     {{ end }}

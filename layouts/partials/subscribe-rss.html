@@ -1,4 +1,3 @@
 <section class="subscribe-via">
-<p><small>You can subscibe to this section via
-    <a href="{{ .RelPermalink }}index.xml" title="Subscribe to all {{ .Section }} posts via RSS">RSS</a> or <a href="{{ .RelPermalink }}atom.xml" title="Subscribe to all {{ .Section }} posts via Atom Feed">Atom</a></small></p>
+<p><small>{{ i18n "ui_html_subscribe_rss" . | safeHTML }}</small></p>
 </section>

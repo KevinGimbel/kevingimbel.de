@@ -10,6 +10,4 @@
 </section>
 {{ end }}
 
-<p>Written on <time datetime="{{ .Date }}">{{ $date }}</time> {{ if ne $date $last_updated }}, last <a href="#update"
-        title="View update">updated</a>
-    {{ .Lastmod.Format "02. Jan 2006" }} {{ end }} </p>
+<p>{{ i18n "ui_published_on" . }} {{ if ne $date $last_updated }}, {{ i18n "ui_html_article_last_updated" . }}{{ end }} </p>

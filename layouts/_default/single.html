@@ -3,6 +3,19 @@
 {{ partial "debug.html" "_default/single.html" }}
 {{ end }}
 <main id="main" class="main">
+    <header>
+        {{ if .IsTranslated }}
+        <nav class="language-nav"><span>{{ i18n "ui_lang_available_in" }}</span>
+            <ul>
+                {{ range .Translations }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ i18n (printf "ui_lang_code_%s" .Lang) }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+        {{ end }}
+    </header>
     <article class="article-content">
         {{ .Content }}
     </article>
