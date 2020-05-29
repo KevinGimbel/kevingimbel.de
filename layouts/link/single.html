@@ -5,10 +5,8 @@
 <main id="main" class="main">
     <section class="article-single">
         <article class="article-content">
-            {{ with .Params.intro_text }}
-            <h1>{{ $.Page.Title }}</h1>
-            {{ end }}
             {{ partial "single-header.html" . }}
+            <h3 class="article-preview__heading"><a href="{{ .Params.source }}" title="{{ .Params.source_title }}">{{ .Params.source_title }} &rarr;</a></h3>
             {{ .Content }}
         </article>
     </section>
