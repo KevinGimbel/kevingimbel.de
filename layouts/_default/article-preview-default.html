@@ -2,7 +2,7 @@
 {{ if ne .File.LogicalName "_index.md" }}
 
 <article class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
-    <small class="article-preview__publish-date">{{ i18n "ui_html_published_on" . | safeHTML }}</small>
+    {{ partial "publish_date_list.html" . }}
     <h3 class="article-preview__heading"><a id="article-heading-{{ .File.UniqueID }}" href="{{ .Permalink }}">{{ .Title }}</a></h3>
     {{ with .Params.intro_text }}
     <h4>{{ . | markdownify }}</h4>

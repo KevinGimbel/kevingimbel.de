@@ -75,6 +75,15 @@ other = "Back to navigation"
 [ui_html_subscribe_rss]
 other = "You can subscribe to this section via <a href=\"{{ .RelPermalink }}index.xml\" title=\"Subscribe to all {{ .Section }} posts via RSS\">RSS</a> or <a href=\"{{ .RelPermalink }}atom.xml\" title=\"Subscribe to all {{ .Section }} posts via Atom Feed\">Atom</a>"
 
+[ui_date_he]
+other = "HE"
+
+[ui_date_he_description]
+other = "Holocene Era or Human Era, a adjusted date that starts approximately around the time when humans transitioned from a hunter-gatherer lifestyle to agriculture and fixed settlements"
+
+[ui_date_he_formatted]
+other = "{{ (.Date.AddDate 10000 0 0).Format \"01/2/2006\" }}"
+
 [widget_color_changer_keep]
 other = "Keep current color theme"
 

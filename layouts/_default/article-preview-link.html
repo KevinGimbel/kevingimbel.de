@@ -1,5 +1,5 @@
 <article class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
-    <small class="article-preview__publish-date">{{ i18n "ui_html_published_on" . | safeHTML }}</small>
+    {{ partial "publish_date_list.html" . }}
     <h3 class="article-preview__heading"><a href="{{ .Params.source }}" title="{{ .Params.source_title }}">{{ .Params.source_title }} &rarr;</a></h3>
     <div class="article-note">{{ .Content }}</div>
 </article>

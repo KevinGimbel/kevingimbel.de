@@ -15,7 +15,7 @@ publishDir = "docs"
 [permalinks]
     blog = "/:section/:year/:month/:title/"
     photography = "/:section/:year/:month/:title/"
-    recipes = "/:section/:year/:month/:title/"
+    projects = "/:section/:title/"
     art = "/:section/:year/:month/:title/"
     book = "/:section/:year/:title/"
 
@@ -46,6 +46,12 @@ location = "Wiesbaden, Germany"
     name = "Blog"
     URL = "/blog/"
     Weight = 30
+
+    [[menu.main]]
+    identifier = "project"
+    name = "Projects"
+    URL = "/project/"
+    Weight = 35
 
     [[menu.main]]
     identifier = "photography"

@@ -10,4 +10,4 @@
 </section>
 {{ end }}
 
-<p>{{ i18n "ui_published_on" . }} {{ if ne $date $last_updated }}, {{ i18n "ui_html_article_last_updated" . }}{{ end }} </p>
+{{ partial "publish_date.html" . }}

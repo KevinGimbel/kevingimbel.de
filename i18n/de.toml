@@ -78,6 +78,15 @@ other = "Zurück zur Navigation"
 [ui_html_subscribe_rss]
 other = "Diese Kategorie kann über <a href=\"{{ .RelPermalink }}index.xml\" title=\"Alle {{ .Section }} Beiträge abonnieren\">RSS</a> oder <a href=\"{{ .RelPermalink }}atom.xml\" title=\"Alle {{ .Section }} Beiträge abonnieren\">Atom</a> abonniert werden."
 
+[ui_date_he]
+other = "HE"
+
+[ui_date_he_description]
+other = " Holozän-Kalender, auch Human Era (Menschliche Ära), ist ein angepasster Kalender, der 10.000 Jahre vor dem christlichen Kalender mit einbezieht. Die Zeitrechnung beginnt mit dem Übergang der Menschen von Jägern und Sammlern zu Wohnhaften Bauern und dem erbauen erster Städte."
+
+[ui_date_he_formatted]
+other = "{{ (.Date.AddDate 10000 0 0).Format \"2.01.2006\" }}"
+
 [widget_color_changer_keep]
 other = "Aktuelles Farbschema beibehalten"
 

@@ -1,4 +1,4 @@
 <article class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
-    <small class="article-preview__publish-date">{{ i18n "ui_html_published_on" . | safeHTML }}</small>
+    {{ partial "publish_date_list.html" . }}
     <div class="article-note__content">{{ .Content }}</div>
 </article>
