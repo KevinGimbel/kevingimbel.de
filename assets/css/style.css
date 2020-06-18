@@ -567,7 +567,8 @@ pre {
 blockquote {
     font-size: 110%;
     font-style: italic;
-    text-indent: 2rem;
+    text-indent: 1rem;
     border-left: .25rem solid var(--color-main);
     padding: .25rem 0;
+    padding-left: 1rem;
 }
