@@ -7,7 +7,7 @@ intro_text: ""
 {{< sidebyside >}}
 {{< left >}}
 
-[Kevin Gimbel](/about/) ist ein DevOps Engineer und arbeitet bei der Synoa GmbH. In der dritten Person zu schreiben ist auf super **awkward**.
+[Kevin Gimbel](/about/) ist ein DevOps Engineer und arbeitet bei der Synoa GmbH. In der dritten Person zu schreiben ist super **awkward**.
 
 Hier ist noch ein relativ aktuelles Bild von mir - das gehört zu einer Persönlichen Website nämlich dazu. 
 {{< /left >}}

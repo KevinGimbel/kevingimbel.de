@@ -16,7 +16,7 @@ Me gusta Sci-Fi, músico, libros y videojuegos. Aprendo español en mi tiempo li
 
 Por el momento está página web es mucho vacía. 
 
-Ver mi página web [en inglés](/) o [en aleman](/).
+Ver mi página web [en inglés](/) o [en aleman](/de/).
 {{< /left >}}
 
 {{< right class="small" is_html="true" >}}
