@@ -1,12 +1,12 @@
 {{ define "main" }}
 {{ with .Site.Params.debug }}
-{{ partial "debug.html" "taxonomy/category.html" }}
+{{ partial "debug.html" "taxonomy/series.html" }}
 {{ end }}
 <main id="main" class="main">
     {{ .Content }}
-
+    
     {{ range .Data.Pages }}
-    {{ .Render "article-preview-default" }}
+        {{ .Render "article-preview-default" }}
     {{ end }}
 </main>
 {{ end }}

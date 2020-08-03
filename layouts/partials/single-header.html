@@ -10,4 +10,7 @@
 </section>
 {{ end }}
 
+<h1>{{ .Title }}</h1>
+{{ with .Params.intro_text }}<h2>{{ . }}</h2>{{ end }}
+
 {{ partial "publish_date.html" . }}

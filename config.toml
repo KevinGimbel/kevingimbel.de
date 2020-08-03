@@ -86,6 +86,10 @@ location = "Wiesbaden, Germany"
     # <domain>/tags/mytag/atom.xml, <domain>/categories/mycat/atom.xml
     taxonomy = ["HTML", "RSS", "ATOM"] # default = ["HTML", "RSS"]
 
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
 
 [languages]
     [languages.en]

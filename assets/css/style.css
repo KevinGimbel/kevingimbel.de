@@ -15,6 +15,12 @@ body {
     font: 18px/1.65 monospace;
 }
 
+abbr {
+    cursor: help;
+    text-decoration: none;
+    border-bottom: 2px dotted var(--color-main);
+}
+
 a {
     color: var(--color-main);
     font-weight: bold;
@@ -40,7 +46,7 @@ a {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .article-content h2,
@@ -67,6 +73,7 @@ h1 {
     display: block;
     height: .35em;
     background: var(--color-secondary);
+    opacity: .75;
     bottom: .3em;
     position: absolute;
     left: 0;
@@ -100,8 +107,6 @@ hr {
 }
 
 .main {
-    background: #f1f1f1;
-    border: 1px solid #ddd;
     border-bottom: 0;
     min-height: 100vh;
     padding: 2rem 2rem 0;
@@ -274,7 +279,6 @@ li code {
     width: calc(100% + 4rem);
     background: var(--color-secondary);
     margin: 2rem calc(0rem - 2rem);
-    margin-top: calc(-2rem - 1px);
     padding: 2rem;
 }
 
@@ -304,6 +308,16 @@ li code {
     padding-bottom: 2rem;
 }
 
+.article-single {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.article-header {
+    font-size: 90%;
+}
+
 .article-content ol,
 .article-content ul {
     margin-left: 2rem;
@@ -314,11 +328,29 @@ li code {
 }
 
 .article.article--in-list {
-    padding-bottom: 2rem;
+    padding: 2rem;
+    position: relative;
+    background: var(--color-secondary);
+    z-index: 1;
+    margin-bottom: 6rem;
 }
 
-.article.article--in-list:not(:last-of-type) {
-    margin-bottom: 6rem;
+.article.article--in-list figcaption,
+.article.article--in-list figcaption p {
+    color: var(--color-secondary);
+    background: var(--color-main);
+}
+
+.article.article--in-list:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -1.5rem;
+    top: -1.5rem;
+    z-index: -1;
+    border: 2px solid var(--color-main);
 }
 
 .article-preview__heading {
@@ -381,10 +413,9 @@ pre {
     Why so may numbers? 
     100% is the width of the content
     4 rem is the padding on boths sides (2rem left, 2rem right)
-    2px is the border on both sides
     */
-    width: calc(100% + 4rem + 2px);
-    margin-left: calc(0rem - 2rem - 1px);
+    width: calc(100% + 4rem);
+    margin-left: calc(0rem - 2rem);
 }
 
 .support+.author {
@@ -571,4 +602,102 @@ blockquote {
     border-left: .25rem solid var(--color-main);
     padding: .25rem 0;
     padding-left: 1rem;
+}
+
+.series__box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -1rem;
+    top: -1rem;
+    z-index: -1;
+    border: 2px solid var(--color-main);
+}
+
+.series__box {
+    float: left;
+    padding: 2rem;
+    margin: 2rem;
+    position: relative;
+    background: var(--color-secondary);
+    z-index: 1;
+    display: block;
+    margin-left: -5vw;
+}
+/**
+ * EXPERIMENTAL
+ */
+
+ .tag-list__item {
+    display: inline-block;
+    background: var(--color-secondary);
+    color: var(--color-main);
+    padding: .125rem .25rem;
+    border-radius: 0px;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    position: relative;
+    padding: .25em .5em;
+    z-index: 1;
+}
+
+.tag-list__item:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-main);
+    left: -.45em;
+    top: -.45em;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    transition: all linear .1s;
+}
+
+.tag-list__item:hover::before {
+    top: -.1rem;
+    left: -.1rem;
+}
+
+.tag-list__item a {
+    color: var(--color-main);
+    text-decoration: none;
+}
+
+ul.tag-list, ul.category-list {
+    margin-top: 1rem;
+}
+
+table {
+    background: #fff;
+    border-spacing: unset;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    width: calc(100% + 30rem);
+    margin-left: -15rem;
+}
+
+thead {
+    background: var(--color-main);
+    color: var(--color-secondary);
+}
+
+thead th {
+    text-align: left;
+    padding-left: .5rem;
+}
+
+tbody td {
+    padding: .5rem;
+    border-bottom: 1px solid #333;
+}
+
+.intro-text {
+    display: none;;
+}
+body.section-tags .intro-text,
+body.section-categories .intro-text{
+    display: block;
 }

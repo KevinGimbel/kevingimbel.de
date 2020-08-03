@@ -5,11 +5,23 @@
 <main id="main" class="main">
     <section class="article-single">
         <article class="article-content">
-            {{ with .Params.intro_text }}
-            <h1>{{ $.Page.Title }}</h1>
+            <header class="article-header">
+                {{ partial "single-header.html" . }}
+            </header>
+
+            {{ with .Params.series }}
+                {{ $name := index . 0 | urlize }}
+                {{ $series := index $.Site.Taxonomies.series $name }}
+                <div class="series__box">
+                    <small>More articles in this series</small>
+                    {{ range $series.Pages.ByDate }}
+                        <p><a href="{{.Permalink}}">{{.LinkTitle}}</a></p>
+                    {{end}}
+                </div>
             {{ end }}
-            {{ partial "single-header.html" . }}
-            {{ .Content }}
+            <div class="content">
+                {{ .Content }}
+            </div>
         </article>
     </section>
 
