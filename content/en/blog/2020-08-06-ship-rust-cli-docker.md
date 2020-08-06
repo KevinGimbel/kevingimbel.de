@@ -193,3 +193,11 @@ So what did we learn?
 - Rust binaries can be run in a small image such as `alpine` or even in a blank image using `FROM scratch`
 - We can use an `alias` to comfortably run the long docker command
 - By using `WORKDIR` and volumes we can extract files from the container and save them in the current directory outside the container
+
+The source code of the example Rust CLI can be found on [GitHub at kevingimbel/docker-cli-sample](https://github.com/kevingimbel/docker-cli-sample). A working docker image can be found on [Docker Hub at kevingimbel/rust-docker-cli-sample](https://hub.docker.com/r/kevingimbel/rust-docker-cli-sample). 
+
+The docker sample can be run with 
+
+```bash
+docker run --rm kevingimbel/rust-docker-cli-sample:1.0 hello from docker
+```
