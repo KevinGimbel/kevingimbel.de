@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE"><generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator><title type="html">code via KevOps</title><link href="https://kevingimbel.de/de/categories/code/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/de/categories/code/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/de/categories/code/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-08-06T18:30:32+02:00</updated><id>https://kevingimbel.de/de/categories/code/</id><entry><title type="html">Rust Cli Mit Docker Ausliefern</title><link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</id><published>2020-08-06T00:00:00+00:00</published><updated>2020-08-06T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Vor kurzem habe ich einen Weg gefunden Rust {{ abbr &ldquo;CLI&rdquo; &ldquo;Command Line Interfaces; Programme die in einem Terminal ausgeführt werden&rdquo; }} Programme über Docker auszuliefern. Für meinen Arbeitgeber <a href="https://synoa.de">Synoa</a> habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit <a href="https://brew.sh">Homebrew</a> möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen. Wie das geht erkläre ich in diesem Artikel.</p>
+<h2 id="rust-code">Rust Code</h2>
+<p>Der folgende Beispiel Code zeigt ein kleines Rust Programm, dass die Argumente ausgibt die während der Ausführung übergeben wurden.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::env;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> args: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, args);
+}
+</code></pre></div><p>Der Code muss nicht verstanden werden um die Konzepte aus diesem Artikel zu verstehen! Das Muster ist für alle Binary-Programme gleich, z.B. könnte genauso eine Go App über Docker verteilt werden.</p>
+<h2 id="code-kompilieren---in-docker">Code kompilieren - in Docker</h2>
+<p>Den oben gezeigten Code können wir nun kompilieren, dass heißt ihn zu einer ausführbaren Binär-Datei &ldquo;zusammenfügen&rdquo;. Hierfür verwenden wir einen <a href="https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds">&ldquo;Multi-Stage&rdquo; Build</a> in Docker. So müssen wir und andere Entwickler keine vollständige Rust Umgebung verwalten und außerdem kann jeder Entwickler über Docker in der selben Umgebung Binaries kompilieren.</p>
+<p>Zunächst deklarieren wir einen <code>builder</code> Container. Dieser Container wird genutzt um unseren Rust Code zu kompilieren.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Diese vier Zeilen tun folgendes:</p>
+<ul>
+<li>Erstelle einen Container auf Basis von <a href="https://github.com/clux/muslrust"><code>clux/muslrust</code></a></li>
+<li>Dem Container wird der &ldquo;Name&rdquo; <code>builder</code> gegeben</li>
+<li>Das Arbeitsverzeichnis wird auf <code>/volume</code> gesetzt, damit wird Docker alle Befehle in diesem Verzeichnis ausführen</li>
+<li>Alle Dateien werden aus dem aktuellen Verzeichnis in den Container kopiert</li>
+<li>Das Kommando <code>cargo build --release</code> wird <em>im Container</em> ausgeführt und kompiliert unseren Code</li>
+</ul>
+<h2 id="das-eigentliche-docker-image-erzeugen">Das eigentliche Docker Image erzeugen</h2>
+<p>Nun können wir im selben Dockerfile unser eigentliches Image erzeugen. Dafür wird das kompilierte Binary aus dem <code>builder</code> container kopiert.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Kopiere das kompilierte Binary aus dem builder container</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Alle CLI argumente werden direkt an das Binary übergeben</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Was geschieht hier?</p>
+<ul>
+<li>Zuerst erstellen wir einen neuen Docker Container auf basis des <a href="https://alpinelinux.org/">Alpine Linux</a> Images.</li>
+<li>Dann kopieren wir das kompilierte Binary <em>aus dem builder Container</em> in unseren neuen Container</li>
+<li>Zuletzt sagen wir, dass das Binary als &ldquo;Startpunkt&rdquo; verwendet werden soll. Soll heißen wenn der Container gestartet wird, dann wird dieses Binary ausgeführt</li>
+</ul>
+<p>Warum Alpine Linux? Alpine Linux ist eine kleine auf Sicherheit fokusierte Linux Distribution. Das Alpine Docker image ist nur ca. 3MB groß - kleiner geht kaum!</p>
+<p>Alles zusammen sieht unser Dockerfile nun wie folgt aus:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="image-bauen-und-den-container-ausführen">Image bauen und den Container ausführen</h2>
+<p>Mit dem oben gezeigten Dockerfile können wir nun ein Image bauen. Hierfür benutzen wir folgenden Befehl:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t kevingimbel/rust-docker-cli-sample:1.0 .  
+</code></pre></div><p>Anschließend können wir einen Container ausführen, der das neu erstellte Image benutzt:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run --rm kevingimbel/rust-docker-cli-sample:1.0 -hello -world
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;-hello&#34;</span>, <span style="color:#e6db74">&#34;-world&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="terminal-konfiguration">Terminal konfiguration</h2>
+<p>Damit wir diesen Docker Container wie ein &ldquo;normales&rdquo; binary ausführen können müssen wir im Terminal ein &ldquo;alias&rdquo; setzen. Hierfür kommt folgende in die <code>~/.bashrc</code> bzw. <code>~/.zshrc</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Nun laden wir die Konfigurationsdatei neu oder öffnen ein neues Terminal Fenster und dann kann der Container wie ein normales Script ausgeführt werden.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># bash</span>
+source ~/.bashrc
+<span style="color:#75715e"># zsh</span>
+source ~/.zshrc
+</code></pre></div><p>Danach können wir den Container mit dem Befehl <code>docker-rust-cli</code> starten.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-rust-cli hello from docker
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;from&#34;</span>, <span style="color:#e6db74">&#34;docker&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="fortgeschritten-volumes">Fortgeschritten: Volumes</h2>
+<p>Wir könnten hier fertig sein, aber eine wichtige Funktion fehlt noch: Volumes. Wenn unser CLI tool Dateien erstellt würden diese sonst im Docker container bleiben und der wird standardmäßig gelöscht da wir <code>--rm</code> verwenden.</p>
+<p>Der <code>alias</code> wird also mit einem Volume angepasst.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Mit <code>-v $(pwd):/cmd-root-dir</code> sagen wir Docker, dass das aktuelle Verzeichnis (<code>$(pwd)</code>) im Container als Pfad <code>/cmd-root-dir</code> gemounted werden soll. Jetzt müssen wir nur noch unserem Image sagen, dass es Dateien auch in diesem Verzeichnis ablegen soll. Das geht indem wir in der Dockerfile die <code>WORKDIR</code> setzen.</p>
+<p>Das Dockerfile sieht nun wie folgt aus.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /cmd-root-dir</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p><code>WORKDIR</code> erstellt das Verzeichnis wenn es nicht existiert, wir müssen es also nicht selbst erstellen. Um diese Anpassung zu testen können wir unser Script eine Log Datei schreiben lassen. Dazu verändern wir den Rust Code wie folgt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::env;
+<span style="color:#66d9ef">use</span> std::fs;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">let</span> args: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, args);
+    fs::write(<span style="color:#e6db74">&#34;docker-cli-sample.log&#34;</span>, format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Args: {:?}&#34;</span>, args))<span style="color:#f92672">?</span>;
+    Ok(())
+}
+</code></pre></div><p>Mit <code>fs::write</code> schreiben wir nun alle Argumente auch in die Datei <code>docker-cli-sample.log</code> statt sie nur im Terminal anzuzeigen. Jetzt muss das Verzeichnis nur noch wie oben geschrieben gemounted werden:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Wichtig sind hierbei die einfachen Anführungszeichen (<code>'</code>) - ohne diese würde <code>$(pwd)</code> nur ein Mal ausgeführt werden statt bei jedem Aufruf!</p>
+<p>Wenn wir jetzt den Befehl ausführen wird eine Log Datei in das aktuelle Verzeichnis geschrieben:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-rust-cli
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">]</span>
+$ cat docker-cli-sample.log
+Args: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="fortgeschritten-versionierung">Fortgeschritten: Versionierung</h2>
+<p>Für etwas mehr Komfort können wir eine Variable für den &ldquo;Docker Tag&rdquo;, also die Version unseres Images, nutzen. So kann man später einfach updaten ohne den eigentlichen Befehl anpassen zu müssen.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export MY_CLI_VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>
+alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:$MY_CLI_VERSION&#39;</span>
+</code></pre></div><p>Soll nun Version 1.1 verwendet werden muss lediglich die Variable <code>MY_CLI_VERSION</code> auf <code>1.1</code> geändert werden. Jeder mit Zugriff auf das Docker Image kann nun den Code in die <code>~/.bashrc</code> oder <code>~/.zshrc</code> kopieren und das CLI Programm nutzen.</p>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<ul>
+<li>Wir können mit <a href="https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds" title="Docker Dokumentation über Multi-Stage Builds">Multi-Stage Builds</a> code in Docker kompilieren</li>
+<li>Rust binaries können in kleinen Containern wie z.B. Alpine oder &ldquo;blanken&rdquo; Container ausgeführt werden</li>
+<li>Mit einem <code>alias</code> können wir bequem und komfortable Docker Container ausführen als wären es &ldquo;installiere&rdquo; Binaries</li>
+<li>Indem wir <code>WORKDIR</code> und Volumes nutzen können wir Dateien aus dem Container heraus speichern</li>
+</ul>
+<p>Der Quellcode für dieses Tutorial kann auf <a href="https://github.com/kevingimbel/docker-cli-sample">GitHub unter kevingimbel/docker-cli-sample</a> gefunden werde. Ein funktionierendes Docker Image gibt es auf <a href="https://hub.docker.com/r/kevingimbel/rust-docker-cli-sample">Docker Hub unter kevingimbel/rust-docker-cli-sample</a>.</p>
+<p>Um das Docker Image zu nutzen kann folgender Befehl ausgeführt werden:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --rm kevingimbel/rust-docker-cli-sample:1.0 hello from docker
+</code></pre></div>]]></content><category scheme="https://kevingimbel.de/de/categories/code" term="code" label="code"/><category scheme="https://kevingimbel.de/de/tags/rust" term="rust" label="rust"/><category scheme="https://kevingimbel.de/de/tags/docker" term="docker" label="docker"/><category scheme="https://kevingimbel.de/de/tags/cli" term="cli" label="cli"/></entry></feed>
