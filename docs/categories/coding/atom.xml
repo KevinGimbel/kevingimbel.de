@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator><title type="html">coding on KevOps</title><link href="https://kevingimbel.de/categories/coding/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/categories/coding/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/categories/coding/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-07-01T10:01:44+02:00</updated><id>https://kevingimbel.de/categories/coding/</id><entry><title type="html">Deno 1.0 released</title><link href="https://kevingimbel.de/blog/2020/05/deno-1.0-released/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/03/random-theme/?utm_source=atom_feed" rel="related" type="text/html" title="Random Theme"/><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><id>https://kevingimbel.de/blog/2020/05/deno-1.0-released/</id><published>2020-05-18T00:00:00+00:00</published><updated>2020-05-18T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Deno made its first stable release with the release of v1!</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator><title type="html">coding on KevOps</title><link href="https://kevingimbel.de/categories/coding/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/categories/coding/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/categories/coding/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><updated>2020-08-06T14:26:54+02:00</updated><id>https://kevingimbel.de/categories/coding/</id><entry><title type="html">Shipping Rust CLIs with Docker</title><link href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/project/license/?utm_source=atom_feed" rel="related" type="text/html" title="License"/><link href="https://kevingimbel.de/blog/2020/05/deno-1.0-released/?utm_source=atom_feed" rel="related" type="text/html" title="Deno 1.0 released"/><link href="https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/?utm_source=atom_feed" rel="related" type="text/html" title="Docker Apache Proxy Setup"/><link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="related" type="text/html" title="Terrasave"/><link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws"/><id>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</id><published>2020-08-06T00:00:00+00:00</published><updated>2020-08-06T00:00:00+00:00</updated><content type="html"><![CDATA[<p>I recently found a nice and clean way of building and distributing <a href="https://rust-lang.orf">Rust</a> CLI apps using <a href="https://www.docker.com/">docker</a>. For my work I created a Rust app that wraps some AWS SDK functions to make my day-to-day work with AWS easier. This CLI is very focused on the way we work at <a href="https://synoa.de/">Synoa</a> and therefore unfortunately not open source. The tech does not matter much, as we can just create a tiny example &ldquo;app&rdquo; for this blog post.</p>
+<h2 id="rust-code">Rust code</h2>
+<p>Below is the example Rust code we will use.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::env;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> args: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, args);
+}
+</code></pre></div><p>This code only prints whatever arguments were passed to the script.</p>
+<h2 id="building-the-binary---in-docker">Building the binary - in docker</h2>
+<p>Next we will build the binary in docker using a &ldquo;<a href="https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds">multi-stage build</a>&rdquo; setup. This way we do not need to manage our local Rust environment, for example we don&rsquo;t need to keep our Rust targets up-to-date or make sure other contributors have the same environment setup - the compiling is all done inside Docker.</p>
+<p>We start by declaring a <code>builder</code> container. This container is only used for compiling the binary.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>These four lines do the following:</p>
+<ul>
+<li>Create a container based on <a href="https://github.com/clux/muslrust"><code>clux/muslrust</code></a></li>
+<li>Give it a name of <code>builder</code> (so we can reference it later)</li>
+<li>Declare the working directory to be <code>/volume</code></li>
+<li>Copy over all files from the current directory to <code>/volume</code></li>
+<li>Run the <code>cargo build --release</code> command which builds our Rust binary</li>
+</ul>
+<h2 id="creating-the-docker-image">Creating the docker image</h2>
+<p>Next, in the same Dockerfile, we declare the actual image. This is where we copy the compiled binary from the &ldquo;builder&rdquo; container.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Copy the compiled binary from the builder container</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Pass all arguments etc to binary</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>So what happens here?</p>
+<ul>
+<li>First with <code>FROM alpine</code> we use the slim <a href="https://alpinelinux.org/">Alpine Linux</a> as base image. Depending on what our binary is doing we could also use <code>FROM scratch</code> to not use a base image at all. For my case I chose Alpine because we needed to make HTTPS calls and they didn&rsquo;t work in a &ldquo;scratch&rdquo; image.</li>
+<li><code>COPY</code> copies the binary from the builder container and places it in the root directory of our container</li>
+<li><code>ENTRYPOINT [ &quot;/docker-cli-sample&quot; ]</code> means we execute the <code>docker-cli-sample</code> binary when we run the container</li>
+</ul>
+<p>All together, the Dockerfile looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="building-the-image-and-running-the-container">Building the image and running the container</h2>
+<p>We can build the image now with the <code>docker build</code> command. Open a terminal and type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t kevingimbel/rust-docker-cli-sample:1.0 .  
+</code></pre></div><p>Then run the image in a container. <code>--rm</code> makes sure the container is removed after it is executed, as we do not need it anymore.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run --rm kevingimbel/rust-docker-cli-sample:1.0 -hello -world
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;-hello&#34;</span>, <span style="color:#e6db74">&#34;-world&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="setting-up-the-cli-and-docker">Setting up the CLI and docker</h2>
+<p>To execute this container like a CLI script we add the following to <code>~/.bashrc</code> (for Bash) or <code>~/.zshrc</code> (for zsh).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Source the file by running the following, then test the command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># bash</span>
+source ~/.bashrc
+<span style="color:#75715e"># zsh</span>
+source ~/.zshrc
+</code></pre></div><p>Now we can execute the command just like any other CLI. The arguments are all passed to the script, just as if it was a &ldquo;normal&rdquo; binary somewhere in our <code>$PATH</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-rust-cli hello from docker
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;from&#34;</span>, <span style="color:#e6db74">&#34;docker&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="advanced-volumes">Advanced: volumes</h2>
+<p>We could end this post here, but there&rsquo;s one &ldquo;advanced&rdquo; topic I want to highlight: Volumes. If our script would create or download files we could not access them because they are only inside the container and the container. To prevent this we need to add a volume.</p>
+<p>A volume can be added with <code>-v</code> in the docker command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><h3 id="workdir"><code>WORKDIR</code></h3>
+<p>Now we need to make sure that our cli app puts created files in the <code>/cmd-root-dir</code> directory. This can be done by specifying the <code>WORKDIR</code> in the Dockerfile. To do this we add a new line above <code>ENTRYPOINT</code> as shown below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /cmd-root-dir</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p><code>WORKDIR</code> will create the directory if it doesn&rsquo;t exist. To test the changes, we can adjust the rust script to write to a file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::env;
+<span style="color:#66d9ef">use</span> std::fs;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">let</span> args: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, args);
+    fs::write(<span style="color:#e6db74">&#34;docker-cli-sample.log&#34;</span>, format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Args: {:?}&#34;</span>, args))<span style="color:#f92672">?</span>;
+    Ok(())
+}
+</code></pre></div><p>This will write the arguments into the <code>docker-cli-sample.log</code>. Because we set <code>WORKDIR</code> this will execute in the <code>/cmd-root-dir</code> inside the container. To actually get the log, we can now mount the volume with <code>-v</code> in our alias.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p><code>$(pwd)</code> always evaluates to the current directory. This <strong>only works if</strong> we use sigle-quotes (<code>'</code>) in the alias!</p>
+<p>So finally, running the command now will yield us the log in the current directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-rust-cli
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">]</span>
+$ cat docker-cli-sample.log
+Args: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="advanced-managing-versions">Advanced: managing versions</h2>
+<p>For a bit more comfort we can use a variable for the docker image tag so we can update easier. The <code>.bashrc</code> or <code>.zshrc</code> then looks like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export MY_CLI_VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>
+alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:$MY_CLI_VERSION&#39;</span>
+</code></pre></div><p>And there&rsquo;s that! Everybody else with access to the docker image can now use our CLI by adding the <code>alias</code> and optionally version to their <code>.bashrc</code> or <code>.zshrc</code>.</p>
+<h2 id="recap">Recap</h2>
+<p>So what did we learn?</p>
+<ul>
+<li>We can use <a href="https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds" title="Docker Documentation about multi-stage builds">multi-stage builds</a> to build our code using docker. This is done by creating a container with <code>FROM image:tag as builder</code></li>
+<li>Rust binaries can be run in a small image such as <code>alpine</code> or even in a blank image using <code>FROM scratch</code></li>
+<li>We can use an <code>alias</code> to comfortably run the long docker command</li>
+<li>By using <code>WORKDIR</code> and volumes we can extract files from the container and save them in the current directory outside the container</li>
+</ul>
+]]></content><category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding"/><category scheme="https://kevingimbel.de/tags/rust" term="rust" label="rust"/><category scheme="https://kevingimbel.de/tags/docker" term="docker" label="docker"/><category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli"/></entry><entry><title type="html">Deno 1.0 released</title><link href="https://kevingimbel.de/blog/2020/05/deno-1.0-released/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/blog/2020/03/random-theme/?utm_source=atom_feed" rel="related" type="text/html" title="Random Theme"/><link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/?utm_source=atom_feed" rel="related" type="text/html" title="Writing NodeJS cli tools"/><link href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/?utm_source=atom_feed" rel="related" type="text/html" title="Getting into Performance Measurement"/><link href="https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/?utm_source=atom_feed" rel="related" type="text/html" title="Endless Multi-Dimensional Navigation"/><link href="https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/?utm_source=atom_feed" rel="related" type="text/html" title="A closer look to closure"/><id>https://kevingimbel.de/blog/2020/05/deno-1.0-released/</id><published>2020-05-18T00:00:00+00:00</published><updated>2020-05-18T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Deno made its first stable release with the release of v1!</p>
 <p>I&rsquo;ve heard of Deno in the past but I never really cared for it. My work with JavaScript has always been in the browser and I&rsquo;m not too much of a NodeJS fan - mainly because of the security and sandbox aspects of the runtime (or more, the lack of them). Deno aims to do better and fix some (or all?) of the NodeJS mistakes, like making access to the filesystem and network impossible unless allowed. In NodeJS, a script can read, write, send and receive network packages and basically do whatever it wants - there&rsquo;s little restriction and this has lead to malicious code executions in the past.</p>
 <h2 id="quick-overview">Quick overview</h2>
 <p>Deno is a JavaScript runtime that supports TypeScript out of the box. We can write regular JavaScript and execute it through the Deno toolchain, as the following example shows.</p>
@@ -680,7 +790,7 @@ Your answer: _
 
 
 
-<p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
+<p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1,past_2" data-accessible-colours="">
     <picture>
         <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-variables.webp">
         <source type="image/png" srcset="https://caniuse.bitsofco.de/image/css-variables.png">
@@ -713,7 +823,7 @@ Your answer: _
 
 
 
-<p data-height="256" data-theme-id="dark" data-slug-hash="78d261a36ecded2b75d5260cb7056fce" data-default-tab="html,result" data-user="" data-embed-version="2" data-pen-title="CSS Variables - Cascading &amp; local scope" data-preview="" data-editable="" class="codepen">
+<p data-height="256" data-theme-id="dark" data-slug-hash="78d261a36ecded2b75d5260cb7056fce" data-default-tab="html,result" data-user="kevingimbel" data-embed-version="2" data-pen-title="CSS Variables - Cascading &amp; local scope" data-preview="false" data-editable="true" class="codepen">
     See the Pen <a href="https://codepen.io/kevingimbel/pen/78d261a36ecded2b75d5260cb7056fce/">CSS Variables - Cascading &amp; local scope</a> on <a href="https://codepen.io">CodePen</a>.
 </p>
 
@@ -727,7 +837,7 @@ Your answer: _
 
 
 
-<p data-height="256" data-theme-id="dark" data-slug-hash="5245628703a6a223215cf5a30cf8294d" data-default-tab="html,result" data-user="" data-embed-version="2" data-pen-title="CSS Variables - Changing with JS" data-preview="" data-editable="" class="codepen">
+<p data-height="256" data-theme-id="dark" data-slug-hash="5245628703a6a223215cf5a30cf8294d" data-default-tab="html,result" data-user="kevingimbel" data-embed-version="2" data-pen-title="CSS Variables - Changing with JS" data-preview="false" data-editable="true" class="codepen">
     See the Pen <a href="https://codepen.io/kevingimbel/pen/5245628703a6a223215cf5a30cf8294d/">CSS Variables - Changing with JS</a> on <a href="https://codepen.io">CodePen</a>.
 </p>
 
@@ -829,7 +939,7 @@ Your answer: _
 
 
 
-<p data-height="256" data-theme-id="dark" data-slug-hash="604946ab15c48299b1f7b54b7a758cfb" data-default-tab="html,result" data-user="" data-embed-version="2" data-pen-title="CSS Filter Invert" data-preview="" data-editable="" class="codepen">
+<p data-height="256" data-theme-id="dark" data-slug-hash="604946ab15c48299b1f7b54b7a758cfb" data-default-tab="html,result" data-user="kevingimbel" data-embed-version="2" data-pen-title="CSS Filter Invert" data-preview="false" data-editable="true" class="codepen">
     See the Pen <a href="https://codepen.io/kevingimbel/pen/604946ab15c48299b1f7b54b7a758cfb/">CSS Filter Invert</a> on <a href="https://codepen.io">CodePen</a>.
 </p>
 
