@@ -1,5 +1,5 @@
 ---
-title: "Rust Cli Mit Docker Ausliefern"
+title: "Rust CLI mit Docker ausliefern"
 intro_text: ""
 type: blog
 categories:
@@ -12,7 +12,7 @@ date: "2020-08-06"
 lastmod: "2020-08-06"
 ---
 
-Vor kurzem habe ich einen Weg gefunden Rust {{ abbr "CLI" "Command Line Interfaces; Programme die in einem Terminal ausgeführt werden" }} Programme über Docker auszuliefern. Für meinen Arbeitgeber [Synoa](https://synoa.de) habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit [Homebrew](https://brew.sh) möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen. Wie das geht erkläre ich in diesem Artikel.
+Vor kurzem habe ich einen Weg gefunden Rust {{< abbr "CLI" "Command Line Interfaces; Programme die in einem Terminal ausgeführt werden" >}} Programme über Docker auszuliefern. Für meinen Arbeitgeber [Synoa](https://synoa.de) habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit [Homebrew](https://brew.sh) möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen. Wie das geht erkläre ich in diesem Artikel.
 
 ## Rust Code
 
