@@ -24,4 +24,6 @@ Fall Guys is fun! It's stupid and fun, and I love it. It's like [someone turned 
 
 In general, I enjoyed playing. I played for about an hour last night, and while I had fun I don't really see me playing a lot more since I only have a limited amount of time to play video games and I'd rather play [Elder Scrolls: Online](https://elderscrollsonline.com) or [Valorant](https://playvalorant.com) with friends than Fall Guys, but I guess if you just want to play something without thinking too much Fall Guys is your game. 
 
+You can get Fall Guys on [PS4](https://www.playstation.com/de-de/games/fall-guys-ultimate-knockout-ps4/) and [Steam](https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/). I played on PS4 and got the game free with my PlayStation Plus subscription.
+
 {{< rating 3 >}}
