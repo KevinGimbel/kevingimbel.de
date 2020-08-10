@@ -1,0 +1,13 @@
+<p class="rating">
+    <span style="display: none;">{{ .Get 0}}/5</span>
+    <span class="rating-list" aria-hidden="true">
+        {{- $rate := int (.Get 0) -}}
+        {{- range $i, $sequence :=  (seq 5) -}}
+        {{- if lt $i $rate -}}
+        ★
+        {{- else -}}
+        ☆
+        {{- end -}} 
+    {{- end -}}
+</span>
+</p>

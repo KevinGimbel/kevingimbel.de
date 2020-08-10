@@ -10,7 +10,6 @@
 
         <h2 class="section-headline">{{ i18n "ui_latest_posts" 1 }}</h2>
 
-        <h3>{{ i18n "ui_articles" }}</h3>
         {{ range (where .Site.Pages "Section" "blog") }}
         {{ range first 1 .Pages }}
         {{ if ne .WordCount  0 }}
@@ -49,7 +48,8 @@
         {{ range (where .Site.Pages "Section" "photography") }}
         {{ range first 1 .Pages }}
         {{ if ne .WordCount  0 }}
-        <h3>{{ i18n "ui_latest_photo" 1 }}</h3>
+        <h2 class="section-headline">{{ i18n "ui_latest_photo" 1 }}</h2>
+
         <article class="article article--in-list photography" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
             <h3><a id="article-heading-{{ .File.UniqueID }}" href="{{ .Permalink }}">{{ .Title }}</a></h3>
             {{ with .Params.intro_text }}
