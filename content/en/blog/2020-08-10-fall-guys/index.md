@@ -8,6 +8,7 @@ tags:
     - ps4
     - multiplayer
     - psplus
+    - rating-3
 date: "2020-08-10"
 lastmod: "2020-08-10"
 
