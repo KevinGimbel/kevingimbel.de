@@ -1,5 +1,5 @@
 ---
-title: "Greg Keyes Lord of Souls"
+title: "Lord of Souls"
 intro_text: ""
 type: blog
 categories:
