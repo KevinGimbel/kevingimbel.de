@@ -11,8 +11,10 @@
     {{ if isset .Params "no_featured_image" }} 
     {{ else }}
         {{ range .Resources.ByType "image" | first 1 }}
-        <figure>
-            <a href="{{ $link }}"><img src="{{ (.Resize "1230x q75").RelPermalink}}" /></a>
+        <figure class="article-preview__figure">
+            <a href="{{ $link }}">
+                <img src="{{ (.Resize "1230x q75").RelPermalink }}" alt="{{ . }}"/>
+            </a>
             <figcaption>
                 <p>{{ .Name }}</p>
             </figcaption>
