@@ -11,7 +11,8 @@
       ["#403D58", "#dea584"],
       ["#400E3B", "#DCC78A"],
       ["#17098D", "#EADD1C"],
-      ["#233B07", "#FFDD6D"]
+      ["#233B07", "#FFDD6D"],
+      ["#37059F", "#D1D99F"]
     ]
     var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
     document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
