@@ -4,6 +4,7 @@ DefaultContentLanguage = "en"
 title = "KevOps"
 theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
 publishDir = "docs"
+# ignoreErrors = ["error-output-taxonomy"]
 
 [params]
     # Doesn't work yet
@@ -83,8 +84,6 @@ location = "Wiesbaden, Germany"
     home = ["HTML", "RSS", "ATOM"]     # default = ["HTML", "RSS"]
     # <domain>/posts/atom.xml
     section = ["HTML", "RSS", "ATOM"]  # default = ["HTML", "RSS"]
-    # <domain>/tags/mytag/atom.xml, <domain>/categories/mycat/atom.xml
-    taxonomy = ["HTML", "RSS", "ATOM"] # default = ["HTML", "RSS"]
 
 [taxonomies]
     category = "categories"
