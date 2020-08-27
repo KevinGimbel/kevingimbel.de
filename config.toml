@@ -23,11 +23,15 @@ publishDir = "docs"
 [[params.now]]
 location = "Wiesbaden, Germany"
     [[params.now.doing]]
-    thing = "staying inside as much as possible."
+    thing = "staying inside as much as possible"
     [[params.now.doing]]
-    thing = "playing a lot of [No Man's Sky](https://www.nomanssky.com/) on PS4"
+    thing = "on and off learning Spanish"
     [[params.now.doing]]
-    thing = "starting and abondining lots of projects."
+    thing = "playing [Skyrim](https://elderscrolls.bethesda.net/en/skyrim) on PS4"
+    [[params.now.doing]]
+    thing = "playing [VALORANT](https://playvalorant.com) on PC"
+    [[params.now.doing]]
+    thing = "starting and abandoning lots of projects"
 
 [menu]
     [[menu.main]]
