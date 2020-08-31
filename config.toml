@@ -3,7 +3,7 @@ languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "KevOps"
 theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
-publishDir = "docs"
+# publishDir = "docs"
 # ignoreErrors = ["error-output-taxonomy"]
 
 [params]

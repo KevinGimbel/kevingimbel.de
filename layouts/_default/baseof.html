@@ -9,7 +9,9 @@
     <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
     <meta keywords="{{ with .Params.Tags }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Section }} {{ with .Params.Categories }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Site.Params.Keywords }}">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛸</text></svg>">
-    
+    {{ with $.Params.is_next }}
+    <meta name=“robots“ content=“noindex, nofollow“ />
+    {{ end }}
     <style type="text/css">{{- ((resources.Get "css/style.css" | minify).Content | safeCSS ) }}</style>
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

@@ -1,0 +1,7 @@
+baseURL = "https://next.kevingimbel.de"
+
+[params]
+    # Toggle "template hints" 
+    # debug = true
+    # Changes some templates. Indicates that this is a "next" deployment, e.g. future content or testing.
+    is_next = true
