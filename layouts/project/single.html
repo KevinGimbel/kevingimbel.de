@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "project/single.html" }}
+{{ end }}
+<main id="main" class="main">
+        {{ if .IsTranslated }}
+        <header class="article-page__header">
+            <nav class="language-nav"><span>{{ i18n "ui_lang_available_in" }}</span>
+                <ul>
+                    {{ range .Translations }}
+                    <li>
+                        <a href="{{ .Permalink }}">{{ i18n (printf "ui_lang_code_%s" .Lang) }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </header>
+        {{ end }}
+    <header class="article-content__header">
+        <h1>{{ .Title }}</h1>
+        <p><small>{{ .Params.short_description }}</small></p>
+        {{ with .Params.code_source }}
+            <p><a href="{{ $.Params.code_source }}" title="View source code on  {{ $.Params.code_host }}">View source code on {{ $.Params.code_host }}</a></p>
+        {{ end }}
+        <hr aria-hidden="true">
+    </header>
+    <article class="article-content">
+        {{ .Content }}
+    </article>
+
+    {{ partial "support.html" . }}
+    {{ partial "author.html" . }}
+</main>
+{{ end }}
