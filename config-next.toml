@@ -1,5 +1,5 @@
 baseURL = "https://next.kevingimbel.de"
-
+publishDir = "public"
 [params]
     # Toggle "template hints" 
     # debug = true
