@@ -1,7 +1,7 @@
 ---
 title: "Utopien Für Realisten"
 authors: 
-- "Rutger Bregman"
+- "Hubert Schleichert"
 genres:
     - "non-fiction"
     - "science"
