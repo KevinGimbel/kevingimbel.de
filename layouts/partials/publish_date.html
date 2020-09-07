@@ -1,4 +1,4 @@
 {{ $date := .Date.Format "02. Jan 2006" }}
 {{ $last_updated := .Lastmod.Format "02. Jan 2006" }}
-<p>{{ i18n "ui_published_on" . }} {{ if ne $date $last_updated }}, {{ i18n "ui_html_article_last_updated" . }}{{ end }} | 
+<p>{{ i18n "ui_published_on" . }} {{ if ne $date $last_updated }}, {{ i18n "ui_html_article_last_updated" . | safeHTML }}{{ end }} | 
 {{ (.Date.AddDate 10000 0 0).Format "2.01.2006" }} <abbr title="{{ i18n "ui_date_he_description" }}">{{ i18n "ui_date_he" }}</abbr></p>
