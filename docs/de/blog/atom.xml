@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE"><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><title type="html">Blog via KevOps (%!s(&lt;nil>))</title><link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" hreflang="en" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="en" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="en" title="[%!s(<nil>)] Atom"/><updated>2020-09-07T14:20:07+02:00</updated><id>https://kevingimbel.de/de/blog/</id><entry><title type="html">Rust CLI mit Docker ausliefern</title><link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</id><published>2020-08-06T00:00:00+00:00</published><updated>2020-08-06T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Vor kurzem habe ich einen Weg gefunden Rust <abbr title="Command Line Interfaces; Programme die in einem Terminal ausgeführt werden">CLI</abbr>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE"><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><title type="html">Blog via KevOps (%!s(&lt;nil>))</title><link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" hreflang="en" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="en" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="en" title="[%!s(<nil>)] Atom"/><updated>2020-09-13T14:24:11+02:00</updated><id>https://kevingimbel.de/de/blog/</id><entry><title type="html">Ich buk Sauerteig Brot</title><link href="https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/</id><published>2020-09-13T00:00:00+00:00</published><updated>2020-09-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Inspiriert von <a href="https://twitter.com/oddnina" title="Folgt der guten Nina auf Twitter, es lohnt!">Nina</a> und ihrem <a href="https://twitter.com/OddNina/status/1304023596122148864/photo/1" title="Ein Bild von Ninas Brot auf Twitter">Sauerteig Brot</a> dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &ldquo;pflegen&rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️</p>
+
+<figure >
+  
+
+    <img src="sauerteig-brot-monster.jpg"
+      alt="Brot auf Backpapier, dass sehr weit auseinander gelaufen ist."
+       />
+    
+  
+  <figcaption>
+    <p>
+      Mein Brot, wenn man es denn so nennen möchte.
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Ich habe den Sauerteig ca. sieben Tage in der Küche täglich gefüttert und gerührt und nach sieben Tagen roch er auch sehr sauer. Allerdings war er leider auch sehr flüssig, was wahrscheinlich daran liegt das meine Küche zu kalt ist. Sauerteig braucht 30-40 Grad Celsius und in meiner Küche sind es wahrscheinlich so ca. 20 Grad - keine gute Voraussetzung. Im Internet™ habe ich gelesen, dass bei nicht optimaler Temperatur der Teig etwas länger braucht und säuerlicher wird.</p>
+<p>Das &ldquo;Brot&rdquo; habe ich dann mit Dinkelmehl, dem Weizen-Sauerteig, Salz, und etwas Hefe gebacken. Geschmacklich war es sehr sauer, aber lecker. Leider ist es nicht aufgegangen und war sehr zäh. Ich hatte noch knapp eine halbe Packung Trockenhefe untergemischt - mehr Hefe oder frische Hefe wäre aber besser gewesen.</p>
+<p>Was ich fürs nächste Brot mitnehme:</p>
+<ul>
+<li>Teig an einem warmen Ort gehen lassen</li>
+<li>strikter an Rezepte halten bis ich die Erfahrung habe diese zu variieren</li>
+<li>Mehr Brot backen, generell!</li>
+</ul>
+<p>Als nächstes möchte ich mal wieder Brötchen backen, das macht nämlich Spaß!</p>
+]]></content><category scheme="https://kevingimbel.de/de/categories/backen" term="backen" label="backen"/><category scheme="https://kevingimbel.de/de/tags/brot" term="brot" label="Brot"/><category scheme="https://kevingimbel.de/de/tags/sauerteig" term="sauerteig" label="Sauerteig"/><category scheme="https://kevingimbel.de/de/tags/fehlschlag" term="fehlschlag" label="Fehlschlag"/></entry><entry><title type="html">Rust CLI mit Docker ausliefern</title><link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</id><published>2020-08-06T00:00:00+00:00</published><updated>2020-08-06T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Vor kurzem habe ich einen Weg gefunden Rust <abbr title="Command Line Interfaces; Programme die in einem Terminal ausgeführt werden">CLI</abbr>
  Programme über Docker auszuliefern. Für meinen Arbeitgeber <a href="https://synoa.de">Synoa</a> habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit <a href="https://brew.sh">Homebrew</a> möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen. Wie das geht erkläre ich in diesem Artikel.</p>
 <h2 id="rust-code">Rust Code</h2>
 <p>Der folgende Beispiel Code zeigt ein kleines Rust Programm, dass die Argumente ausgibt die während der Ausführung übergeben wurden.</p>
