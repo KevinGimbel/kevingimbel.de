@@ -12,7 +12,10 @@
 html,
 body {
     box-sizing: border-box;
-    font: 18px/1.65 monospace;
+    font: 18px/1.65 sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 abbr {
