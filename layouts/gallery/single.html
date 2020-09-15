@@ -28,9 +28,10 @@
 <section class="gallery">
     {{ range sort (.Resources.ByType "image") }}
     {{ $img := . }}
+    {{ if ne .Params.render "false" }}
     <figure class="gallery__figure gallery__figure--w-{{ div 100 (int $.Page.Params.gallery_columns | default 1 ) }}">
         {{ if eq $.Page.Params.keep_original "true"}}
-            <img src="{{ $img.RelPermalink }}" alt="{{ if isset $img.Alt }}{{ . }}{{ else }}{{ .Name }}{{ end }}" />
+            <img src="{{ $img.RelPermalink }}" alt="{{.Name }}" />
         {{ else }}
             <picture>
                 <source srcset="{{ ($img.Resize "1000x q100").RelPermalink }}" media="(max-width: 1000px)">
@@ -44,7 +45,7 @@
         </figcaption>
         {{ end }}
     </figure>
-
+    {{ end }}
     {{ end }}
 </section>
 
