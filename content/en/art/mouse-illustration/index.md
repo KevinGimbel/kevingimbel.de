@@ -11,7 +11,7 @@ date: "2020-09-15"
 keep_original: "true"
 no_featured_image: true
 
-gallery_columns: 4
+gallery_columns: 3
 
 resources:
 - name: ""
