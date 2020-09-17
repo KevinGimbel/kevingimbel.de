@@ -1,5 +1,5 @@
 ---
-title: "Lord of Souls"
+title: "The Infernal City"
 authors: 
 - "Greg Keyes"
 genres:
