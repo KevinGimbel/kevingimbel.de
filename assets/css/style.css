@@ -710,3 +710,18 @@ body.section-categories .intro-text{
 .rating-list {
     font-size: 2rem;
 }
+
+.support-cause-list {
+    text-indent: 1rem;
+    margin-bottom: 1rem;
+}
+
+.support-cause-list li {
+    margin-left: 1rem;
+}
+
+.support-cause-list .head {
+    margin-left: -1rem;
+    font-size: 1.25em;
+    list-style: none;
+}
