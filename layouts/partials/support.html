@@ -1,10 +1,16 @@
 <section class="support">
     <h4>{{ i18n "widget_support_headline" . }}</h4>
-    <p>{{ i18n "widget_support_no_ads" . | safeHTML }}</p>
-    <p>{{ i18n "widget_support_content" . | safeHTML }}</p>
-    <p>{{ i18n "widget_support_via" . }}</p>
-    <ul>
-        <li><a href="https://paypal.me/kevingimbel">PayPal</a></li>
-        <li><a href="https://liberapay.com/kevin/">Liberapay</a></li>
+    <p>{{ i18n "widget_support_cause_content" . | safeHTML }}</p>
+    <p>{{ i18n "widget_support_cause" . }}</p>
+    <ul class="support-cause-list">
+        <li class="head"><b>International</b></li>
+        <li><a href="https://donate.doctorswithoutborders.org/onetime.cfm">Doctors without borders</a></li>
+        <li><a href="https://www.amnesty.org/en/donate/">Amnasty International</a></li>
+    </ul>
+    <ul class="support-cause-list">
+        <li class="head"><b>German</b></li>
+        <li><a href="https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/">UNO Flüchtlingshilfe</a></li>
+        <li><a href="https://www.amnesty.de/spenden">Amnesty</a></li>
+        <li><a href="https://www.greenpeace.de/spenden">Greenpeace</a></li>
     </ul>
 </section>

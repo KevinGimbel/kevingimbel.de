@@ -112,3 +112,9 @@ other = "If you would like to support me in providing <a href=\"/blog\">content<
 
 [widget_support_via]
 other = "You can support me via:"
+
+[widget_support_cause_content]
+other = "If this content has helped you or your company, consider making a donation to a good cause."
+
+[widget_support_cause]
+other = "For example, consider donating to the following causes:"

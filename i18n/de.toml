@@ -123,3 +123,10 @@ oder wenn dieser Beitrag deiner Firma oder dir geholfen hat, freue ich mich übe
 
 [widget_support_via]
 other = "Du kannst mich über folgende Plattformen unterstützen:"
+
+
+[widget_support_cause_content]
+other = "Wenn dieser Beitrag deiner Firma oder dir geholfen hat, freue ich mich wenn du eine Spende an eine der folgenden Organisationen machst"
+
+[widget_support_cause]
+other = " "
