@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE"><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><title type="html">Blog via KevOps (%!s(&lt;nil>))</title><link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" hreflang="en" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="en" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="en" title="[%!s(<nil>)] Atom"/><updated>2020-09-26T14:49:44+02:00</updated><id>https://kevingimbel.de/de/blog/</id><entry><title type="html">Ich buk Sauerteig Brot</title><link href="https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/</id><published>2020-09-13T00:00:00+00:00</published><updated>2020-09-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Inspiriert von <a href="https://twitter.com/oddnina" title="Folgt der guten Nina auf Twitter, es lohnt!">Nina</a> und ihrem <a href="https://twitter.com/OddNina/status/1304023596122148864/photo/1" title="Ein Bild von Ninas Brot auf Twitter">Sauerteig Brot</a> dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &ldquo;pflegen&rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE"><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><title type="html">Blog via KevOps (%!s(&lt;nil>))</title><link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" hreflang="en" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="en" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="en" title="[%!s(<nil>)] Atom"/><updated>2020-09-30T12:56:32+02:00</updated><id>https://kevingimbel.de/de/blog/</id><entry><title type="html">Rust Compiler Umgebungsvariablen</title><link href="https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="related" type="text/html" title="Rust CLI mit Docker ausliefern"/><id>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</id><published>2020-09-30T00:00:00+00:00</published><updated>2020-09-30T00:00:00+00:00</updated><content type="html"><![CDATA[<p><a href="https://rust-lang.org">Rust</a> ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &ldquo;schlau&rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens <code>cargo</code> ausgeliefert. Cargo ist ähnlich wie <code>npm</code> oder <code>maven</code> und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</p>
+<h2 id="source-code">Source Code</h2>
+<p>Der gesamte Source Code für diesen Blog-Beitrag kann auf GitHub gefunden werden: <a href="https://github.com/kevingimbel/rust-blog-code/tree/main/env-example">github.com/kevingimbel/rust-blog-code/env-example</a>.</p>
+<p>Einige Code Beispiele können direkt ausgeführt werden. Anweisung wie z.B. <code>cargo run --examples ding</code> in diesem Beitrag führen die verschiedenen Code Beispiele im <code>examples</code> Ordner aus. Um diese zu verwenden, folgende Schritten ausführen:</p>
+<ol>
+<li>Terminal öffnen</li>
+<li>Repo clonen</li>
+<li><code>cd env-example</code></li>
+<li>Befehle ausführen wenn sie im Beitrag vorkommen, z.B. <code>cargo run --example maybe-fn</code></li>
+</ol>
+<h2 id="env-vs-stdenvvar"><code>env!()</code> vs. <code>std::env::var()</code></h2>
+<p>Umgebungsvariablen können auf zwei Arten ausgelesen werden:</p>
+<ul>
+<li><code>env!()</code> Makro</li>
+<li><code>std::env::var()</code> Funktion</li>
+</ul>
+<p>Der wichtige Unterschied ist, dass <code>env!()</code> den <strong>Wert zur Kompilierzeit</strong> ausliest und ins Binary schreibt, während <code>std::env()</code> immer den Wert aus der Umgebung liest. Das lässt sich am folgenden Beispiel gut erkennen:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> env_macro <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_fn <span style="color:#f92672">=</span> std::env::var(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>);
+
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_macro = {}&#34;</span>, env_macro);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_fn = {}&#34;</span>, env_fn);
+}
+</code></pre></div><p>Wenn wir diesen Code kompilieren bekommen wir einen Fehler:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo build 
+   Compiling env-example v0.1.0 <span style="color:#f92672">(</span>rust-blog-code/env-example<span style="color:#f92672">)</span>
+error: environment variable <span style="color:#e6db74">`</span>MY_VAR<span style="color:#e6db74">`</span> not defined
+ --&gt; src/main.rs:2:21
+  |
+<span style="color:#ae81ff">2</span> |     let env_macro <span style="color:#f92672">=</span> env!<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;MY_VAR&#34;</span><span style="color:#f92672">)</span>;
+  |                     ^^^^^^^^^^^^^^
+  |
+  <span style="color:#f92672">=</span> note: this error originates in a macro <span style="color:#f92672">(</span>in Nightly builds, run with -Z macro-backtrace <span style="color:#66d9ef">for</span> more info<span style="color:#f92672">)</span>
+</code></pre></div><p>Es gibt nun zwei Möglichkeiten:</p>
+<ul>
+<li>wir setzen die Environment Variable mit <code>export MY_VAR=42</code></li>
+<li>wir definieren Standardwerte</li>
+</ul>
+<p>Zunächst setzen wir die Variable und können den Code dann kompilieren, später in diesem Beitrag schauen wir uns auch Standardwerte an.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ export MY_VAR<span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>
+$ cargo build
+</code></pre></div><p>Anschließend können wir das Binary ausführen (hier <code>env-example</code> gennant)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./target/debug/env-example
+env_macro <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>
+env_fn <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>
+</code></pre></div><p>Beide Werte sind <code>42</code>. Jetzt setzen wir die Environment Variable neu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export MY_VAR<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>
+$ ./target/debug/env-example
+env_macro <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>
+env_fn <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</code></pre></div><p>Aha! <code>env_macro</code> hat immer noch den Wert, den die Variable zur Kompilierzeit hatte.</p>
+<h3 id="variablen-zur-kompilierzeit">Variablen zur Kompilierzeit</h3>
+<p><code>cargo</code> stellt eine <a href="https://doc.rust-lang.org/cargo/reference/environment-variables.html#environment-variables-cargo-sets-for-crates">Handvoll Umgebungsvariablen</a> während der Kompilierzeit bereit. Diese Variablen können z.B. benutzt werden um die aktuelle Version aus der <code>Cargo.toml</code> Datei auszulesen und in unserem Binary zu hinterlegen. Nehmen wir das <code>env-example</code> script und fügen eine neue Zeile hinzu, die die Aktuelle version aus der <code>Cargo.toml</code> ausliest.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> version <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;CARGO_PKG_VERSION&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_macro <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_fn <span style="color:#f92672">=</span> std::env::var(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>).unwrap();
+
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env-example v{}&#34;</span>, version);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_macro = {}&#34;</span>, env_macro);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_fn = {}&#34;</span>, env_fn);
+}
+</code></pre></div><section class="note ">
+    
+    <p>Wir müssen die neue Variable <code>CARGO_PKG_VERSION</code> <strong>nicht selbst setzen</strong>. Cargo setzt diese Variable für uns.</p> 
+</section>
+<p>Wir kompilieren nun den Code und führen das Binary aus.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo build
+$ ./target/debug/env-example
+env-example v0.1.0
+env_macro <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+env_fn <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</code></pre></div><p>Der Wert <code>0.1.0</code> kommt nun direkt aus der <code>Cargo.toml</code> Datei! Wir können auch den Namen unseres Programms <code>Cargo.toml</code> auslesen:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> version <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;CARGO_PKG_VERSION&#34;</span>);
+    <span style="color:#66d9ef">let</span> name <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;CARGO_PKG_NAME&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_macro <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_fn <span style="color:#f92672">=</span> std::env::var(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>).unwrap();
+
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;name: {}&#34;</span>, name);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;version: {}&#34;</span>, version);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_macro = {}&#34;</span>, env_macro);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_fn = {}&#34;</span>, env_fn);
+}
+</code></pre></div><p>Kompilieren und ausführen (<code>-q</code> unterdrückt die Ausgabe von <code>cargo build</code>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo build -q <span style="color:#f92672">&amp;&amp;</span> ./target/debug/env-example
+name: env-example
+version: 0.1.0
+env_macro <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+env_fn <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</code></pre></div><h2 id="standardwerte">Standardwerte</h2>
+<p><code>std::env::var()</code> bieten Möglichkeiten Standardwerte zu setzen.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> maybe_fn <span style="color:#f92672">=</span> std::env::var(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>).unwrap_or(<span style="color:#ae81ff">22</span>);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;maybe_fn = {}&#34;</span>, maybe_fn);
+} 
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo build -q <span style="color:#f92672">&amp;&amp;</span> ./target/debug/env-example
+</code></pre></div><p><code>env!()</code> bietet diese Möglichkeit nicht, es muss ein Wert gesetzt sein. Wir Können allerdings eine eigene Fehlermeldung als zweiten Parameter angeben.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> maybe_macro <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>, <span style="color:#e6db74">&#34;Bitte MY_VAR setzen, z.B. mit export MY_VAR=21&#34;</span>);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;maybe_macro = {}&#34;</span>, maybe_macro);
+} 
+</code></pre></div><section class="note ">
+    
+    <p><code>cargo run --examples maybe-macro</code></p> 
+</section>
+<p>Wenn wir den Code ausführen bekommen wir folgenden Fehler:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo run --example maybe-macro
+   Compiling env-example v0.1.0 <span style="color:#f92672">(</span>rust-blog-code/env-example<span style="color:#f92672">)</span>
+error: Bitte MY_VAR setzen, z.B. mit export MY_VAR<span style="color:#f92672">=</span><span style="color:#ae81ff">21</span>
+ --&gt; examples/maybe-macro.rs:2:23
+  |
+<span style="color:#ae81ff">2</span> |     let maybe_macro <span style="color:#f92672">=</span> env!<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;MY_VAR&#34;</span>, <span style="color:#e6db74">&#34;Bitte MY_VAR setzen, z.B. mit export MY_VAR=21&#34;</span><span style="color:#f92672">)</span>;
+  |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+</code></pre></div><section class="note ">
+    
+    <p><code>cargo run --examples maybe-macro</code></p> 
+</section>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<ul>
+<li><code>cargo</code> stellt Umgebungsvariablen zur Kompilierzeit bereit</li>
+<li>Umgebungsvariablen können mit dem <code>env!()</code> Makro in unseren Code eingebettet werden</li>
+<li><code>std::env::var()</code> liest Variablen zur Ausführungszeit aus</li>
+<li><code>env!()</code> liest Variablen zur Kompilierzeit</li>
+</ul>
+<h2 id="weiterführende-links">Weiterführende Links</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/cargo/index.html">Cargo Dokumentation</a></li>
+<li><a href="https://github.com/rust-lang/cargo">Cargo GitHub</a></li>
+<li><a href="https://doc.rust-lang.org/stable/std/env/index.html">std::env Dokumentation</a></li>
+</ul>
+]]></content><category scheme="https://kevingimbel.de/de/categories/code" term="code" label="code"/><category scheme="https://kevingimbel.de/de/tags/rust" term="rust" label="rust"/><category scheme="https://kevingimbel.de/de/tags/cargo" term="cargo" label="cargo"/><category scheme="https://kevingimbel.de/de/tags/compiler" term="compiler" label="compiler"/></entry><entry><title type="html">Ich buk Sauerteig Brot</title><link href="https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/</id><published>2020-09-13T00:00:00+00:00</published><updated>2020-09-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Inspiriert von <a href="https://twitter.com/oddnina" title="Folgt der guten Nina auf Twitter, es lohnt!">Nina</a> und ihrem <a href="https://twitter.com/OddNina/status/1304023596122148864/photo/1" title="Ein Bild von Ninas Brot auf Twitter">Sauerteig Brot</a> dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &ldquo;pflegen&rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️</p>
 
 <figure >
   
