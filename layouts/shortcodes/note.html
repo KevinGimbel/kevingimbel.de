@@ -1,5 +1,4 @@
 <section class="note {{ .Get "class"}}">
-    <span class="note__heading">NOTE</span>
     {{ if eq (.Get "is_html") "true" }} {{ .Inner | safeHTML }} {{ else }}
     <p>{{ .Inner | markdownify }}</p> {{ end }}
 </section>
