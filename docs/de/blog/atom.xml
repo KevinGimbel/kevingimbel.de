@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE"><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><title type="html">Blog via KevOps (%!s(&lt;nil>))</title><link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" hreflang="en" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="en" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="en" title="[%!s(<nil>)] Atom"/><updated>2020-09-30T12:56:32+02:00</updated><id>https://kevingimbel.de/de/blog/</id><entry><title type="html">Rust Compiler Umgebungsvariablen</title><link href="https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="related" type="text/html" title="Rust CLI mit Docker ausliefern"/><id>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</id><published>2020-09-30T00:00:00+00:00</published><updated>2020-09-30T00:00:00+00:00</updated><content type="html"><![CDATA[<p><a href="https://rust-lang.org">Rust</a> ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &ldquo;schlau&rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens <code>cargo</code> ausgeliefert. Cargo ist ähnlich wie <code>npm</code> oder <code>maven</code> und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE"><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><title type="html">Blog via KevOps (%!s(&lt;nil>))</title><link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" hreflang="en" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="en" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="en" title="[%!s(<nil>)] Atom"/><updated>2020-10-01T17:23:59+02:00</updated><id>https://kevingimbel.de/de/blog/</id><entry><title type="html">Tagliatelle mit Rote-Beete Feta Dill</title><link href="https://kevingimbel.de/de/blog/2020/10/tagliatelle-mit-rote-beete-feta-dill/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/10/tagliatelle-mit-rote-beete-feta-dill/</id><published>2020-10-01T00:00:00+00:00</published><updated>2020-10-01T00:00:00+00:00</updated><content type="html"><![CDATA[
+<figure >
+  
+
+    <img src="tagliatelle-mit-rote-beete.jpg"
+      alt="Ein Teller Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping. Gehalten in der Hand."
+       />
+    
+  
+</figure>
+
+<p>Heute Mittag kochte ich diese Pasta aus quasi nichts. Das Rezept ist super einfach und schnell und ich bin vom Geschmack sehr begeistert!</p>
+<p>Ohne viel auszuholen folgt hier das Rezept.</p>
+<h2 id="küchengeräte">Küchengeräte</h2>
+<ul>
+<li>1 Topf</li>
+<li>1 Standmixer</li>
+</ul>
+<h2 id="zutaten">Zutaten</h2>
+<p>Für ca. 2-3 Personen</p>
+<ul>
+<li>1 Packung Tagliatelle</li>
+<li>2 Packungen Rote-Beete (in Vakuum verpackt), ca. 1kg</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Chili</li>
+<li>etwas Salz</li>
+</ul>
+<p>Für das Topping</p>
+<ul>
+<li>Frischer Dill</li>
+<li>1 Päckchen Feta Käse</li>
+</ul>
+<h2 id="zubereitung">Zubereitung</h2>
+<ol>
+<li>Tagliatelle nach Packungsanleitung kochen</li>
+<li>Rote-Beete grob in Würfel schneiden</li>
+<li>Chili waschen, Kerne entfernen wenn weniger schärfe gewünscht</li>
+<li>Knoblauch schälen</li>
+<li>Rote-Beete, Chili, und Knoblauch in den Standmixer geben</li>
+<li>Solange mixen bis eine Sauce entsteht (je nach Gerät ca. 5 Minuten)</li>
+<li>Dill hacken und bereitstellen</li>
+</ol>
+<p>Sobald die Tagliatelle fertig sind:</p>
+<ol>
+<li>Tagliatelle und Sauce vermengen</li>
+<li>Auf Teller portionieren</li>
+<li>Feta obendrauf bröseln</li>
+<li>Dill darüber streuen</li>
+</ol>
+<p>Im Bild oben habe ich die Sauce nicht direkt unter die Nudeln gemischt wodurch alles leider etwas kalt wurde bis es auf den Tisch kam. Das Original Rezept ist von <a href="https://de.wikipedia.org/wiki/Nadiya_Hussain">Nadiya Hussain</a> und kommt in ihrer neusten Kochshow auf Netflix vor; Nachgekocht habe ich es nach meinem Gedächtnis-Protokoll und ich glaube, dass ich irgendwas vergessen habe - lecker war es trotzdem!</p>
+]]></content><category scheme="https://kevingimbel.de/de/categories/kochen" term="kochen" label="kochen"/><category scheme="https://kevingimbel.de/de/tags/veggie" term="veggie" label="veggie"/><category scheme="https://kevingimbel.de/de/tags/pasta" term="pasta" label="pasta"/><category scheme="https://kevingimbel.de/de/tags/tagliatelle" term="tagliatelle" label="tagliatelle"/><category scheme="https://kevingimbel.de/de/tags/feta" term="feta" label="feta"/><category scheme="https://kevingimbel.de/de/tags/dill" term="dill" label="dill"/></entry><entry><title type="html">Rust Compiler Umgebungsvariablen</title><link href="https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="related" type="text/html" title="Rust CLI mit Docker ausliefern"/><id>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</id><published>2020-09-30T00:00:00+00:00</published><updated>2020-09-30T00:00:00+00:00</updated><content type="html"><![CDATA[<p><a href="https://rust-lang.org">Rust</a> ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &ldquo;schlau&rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens <code>cargo</code> ausgeliefert. Cargo ist ähnlich wie <code>npm</code> oder <code>maven</code> und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</p>
 <h2 id="source-code">Source Code</h2>
 <p>Der gesamte Source Code für diesen Blog-Beitrag kann auf GitHub gefunden werden: <a href="https://github.com/kevingimbel/rust-blog-code/tree/main/env-example">github.com/kevingimbel/rust-blog-code/env-example</a>.</p>
 <p>Einige Code Beispiele können direkt ausgeführt werden. Anweisung wie z.B. <code>cargo run --examples ding</code> in diesem Beitrag führen die verschiedenen Code Beispiele im <code>examples</code> Ordner aus. Um diese zu verwenden, folgende Schritten ausführen:</p>
