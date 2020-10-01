@@ -1,5 +1,5 @@
 ---
-title: "Tagliatelle mit Rote-Beete Feta Dill"
+title: "Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping"
 intro_text: ""
 type: blog
 categories:
