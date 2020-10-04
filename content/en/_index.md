@@ -1,20 +1,14 @@
 ---
-title: "Home is where 127.0.0.1 is"
+title: "DevOps, automation, and cooking. Sometimes book reviews."
 intro_text: "[Kevin Gimbel](/about/) is a DevOps Engineer working at Synoa GmbH. *This* is his website and writing in third person is **awkward**."
 ---
-
-{{< sidebyside >}}
-{{< left >}}
-## Hello and welcome,
-this is my personal website with [blog posts](/blog/), [photography](/photography), and sometimes [art](/art).
-
-
-Here's a picture of me, you can [read more about me](/about/) if you wish.
-{{< /left >}}
-
-{{< right class="small" is_html="true" >}}
-    {{< asset-img "images/general/mask.jpg" Resize "550x" >}}
-Me with my self-made mask. You should make one, too! 
-    {{< /asset-img >}}
-{{< /right >}}
-{{< /sidebyside >}}
+{{< raw-html >}}
+<div class="intro-splash">
+    <div class="intro-splash__content">
+        <h1 class="txt--ultra-large"><a href="/about">Kevin Gimbel</a> is a <br><span class="wavy-text wavy-text--inline" data-css-text="DevOas Enaineer">DevOps Engineer<br> with a passion for automation.</span></h1>
+        <p class="txt--large">He's been <a href="/blog/" title="Read through my blog posts">blogging</a> on-and-off for the past decade,</p>
+        <p class="txt--medium">and shares code on <a href="https://github.com/kevingimbel">GitHub</a>.</p>
+        <p class="xx-small">Writing in third person is weird.</p>
+    </div>
+</div>
+{{< /raw-html >}}

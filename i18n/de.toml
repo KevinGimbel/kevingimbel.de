@@ -130,3 +130,9 @@ other = "Wenn dieser Beitrag deiner Firma oder dir geholfen hat, freue ich mich 
 
 [widget_support_cause]
 other = " "
+
+[ui_more_sections]
+other = "Weitere Bereiche"
+
+[ui_post_count_in_year]
+other = "{{ len .Pages }} Beiträge"

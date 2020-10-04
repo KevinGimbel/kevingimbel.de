@@ -7,15 +7,25 @@
 :root {
     --color-main: #403D58;
     --color-secondary: #dea584;
+    --color-bg-box: #fefefe;
+    --color-bg-page: #f1f1f1;
+    --color-font-fg: #fff;
 }
 
 html,
 body {
     box-sizing: border-box;
-    font: 18px/1.65 sans-serif;
+    font: 20px/1.65 sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    background: var(--color-bg-page);
+    border: .5em solid var(--color-main);
+}
+
+::selection {
+    background-color: var(--color-main);
+    color: var(--color-secondary);
 }
 
 abbr {
@@ -48,8 +58,28 @@ a {
     font-size: .65rem;
 }
 
+.txt--ultra-large {
+    font-size: 4rem;
+}
+
+.txt--large { 
+    font-size: 2.5rem;
+}
+
+.txt--medium { 
+    font-size: 1.8rem;
+}
+
 h1 {
-    font-size: 2em;
+    font-size: 2.46rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
 }
 
 .article-content h2,
@@ -58,10 +88,22 @@ h1 {
 }
 
 .section-headline {
-    font-size: 2.75em;
+    font-size: 3.75em;
     margin-top: 2rem;
 }
 
+/* Index Page */
+
+.intro-splash {
+    display: block;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* 
 .section-headline, h1, h2 {
     display: inline-block;
     position: relative;
@@ -81,20 +123,17 @@ h1 {
     position: absolute;
     left: 0;
     z-index: -1;
-}
+    text-decoration: underline;
+} */
 
 .intro-text {
     padding: 2rem;
     background: #222;
-    color: #fff;
+    color: var(--color-font-fg);
     font-size: 140%;
 }
 
-.main,
 .footer {
-    max-width: 85rem;
-    width: 100%;
-    margin: 0 auto;
     padding: 2rem;
 }
 
@@ -106,13 +145,12 @@ hr {
 
 .footer {
     background: #222;
-    color: #fff;
+    color: var(--color-font-fg);
 }
 
 .main {
     border-bottom: 0;
     min-height: 100vh;
-    padding: 2rem 2rem 0;
 }
 
 
@@ -152,12 +190,10 @@ hr {
 
 figure img,
 figure picture {
-    margin: 0 auto;
     display: block;
     height: auto;
     width: auto;
-    margin: 0 auto;
-    max-width: calc(101% - 3px);
+    max-width: 100%;
 }
 
 .art figure img,
@@ -172,7 +208,7 @@ figcaption p {
     display: block;
     line-height: 1.65;
     background: var(--color-secondary);
-    color: #fff;
+    color: var(--color-font-fg);
     margin-top: 0;
     padding: .5rem;
     text-align: right;
@@ -196,18 +232,36 @@ figcaption {
 }
 
 figcaption p {
-    margin: 0 !important;
     background: var(--color-secondary);
     color: var(--color-main);
     font-size: .85em;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+figcaption p::before {
+    content: "";
+    width: .15em;
+    height: 10rem;
+    background: var(--color-secondary);
+    position: absolute;
+    left: 0;
+    top: -10rem;
+    z-index: 1;
+}
+
+figure img,
+figure picture {
+    position: relative;
+    z-index: 2;
 }
 
 @media all and (min-width: 800px) {
 
     figure {
-        width: auto;
-        max-width: calc(100% + 4rem + 2px);
-        margin-left: calc(0rem - 2rem - 1px);
+        width: 100%;
+        /* max-width: calc(100% + 4rem + 2px); */
+        /* margin-left: calc(0rem - 2rem - 1px); */
     }
 
     figcaption p {
@@ -262,7 +316,7 @@ li code {
     width: calc(100% + 4rem);
 }
 
-.nav-main {
+/* .nav-main {
     list-style: none;
     width: 100%;
     background: #222;
@@ -275,15 +329,13 @@ li code {
 }
 
 .nav-main li a {
-    color: #fff;
+    color: var(--color-font-fg);
     text-decoration: none;
-}
+} */
 
 .page-nav {
-    width: calc(100% + 4rem);
     background: var(--color-secondary);
-    margin: 2rem calc(0rem - 2rem);
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .page-nav a:not(:last-of-type) {
@@ -291,16 +343,13 @@ li code {
 }
 
 .subscribe-via {
-    width: calc(100% + 4rem);
     background: var(--color-main);
-    color: #fff;
-    margin-left: calc(0rem - 2rem);
-    margin-top: -2rem;
-    padding: .5rem 2rem;
+    color: var(--color-font-fg);
+    padding: .1rem 1rem;
 }
 
 .subscribe-via a {
-    color: #fff;
+    color: var(--color-font-fg);
 }
 
 .page-nav--label {
@@ -310,6 +359,7 @@ li code {
 
 .article-content {
     padding-bottom: 2rem;
+    max-width: 40rem;
 }
 
 .article-single {
@@ -318,8 +368,8 @@ li code {
     margin: 0 auto;
 }
 
-.article-header {
-    font-size: 90%;
+.article-header h1 {
+    font-size: 3.2rem;
 }
 
 .article-content ol,
@@ -331,15 +381,19 @@ li code {
     margin-bottom: 2rem;
 }
 
-.article.article--in-list {
+.article-list__intro,
+.page-content {
+    background: var(--color-bg-box);
     padding: 2rem;
-    position: relative;
-    background: var(--color-secondary);
-    border-left: 1px solid var(--color-secondary);
-    z-index: 1;
-    margin-bottom: 6rem;
+    margin: 3rem 2rem 2rem 0;
 }
 
+.article.article--in-list {
+    position: relative;
+    margin-bottom: 10rem;
+    max-width: 55rem;
+}
+/*
 .article.article--in-list figcaption,
 .article.article--in-list figcaption p {
     color: var(--color-secondary);
@@ -356,12 +410,14 @@ li code {
     top: -1.5rem;
     z-index: -1;
     border: 2px solid var(--color-main);
-}
+} */
 
 .article-preview__heading {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
 }
-
+.publish-date {
+    font-size: .85em;
+}
 .article-preview__publish-date a {
     opacity: .75;
     text-decoration: none;
@@ -412,15 +468,8 @@ pre {
 .author,
 .support {
     background: var(--color-main);
-    color: #fff;
+    color: var(--color-font-fg);
     padding: 4rem 2rem;
-    /* By using calc the offset only works in supporting browsers 
-    Why so may numbers? 
-    100% is the width of the content
-    4 rem is the padding on boths sides (2rem left, 2rem right)
-    */
-    width: calc(100% + 4rem);
-    margin-left: calc(0rem - 2rem);
 }
 
 .support+.author {
@@ -483,9 +532,7 @@ pre {
 
 .tags-categories,
 .license {
-    background: #d3d3d3;
-    width: calc(100% + 4rem + 2px);
-    margin-left: calc(0rem - 2rem - 1px);
+    background: var(--color-bg-box);
     padding: 2rem;
 }
 
@@ -550,7 +597,7 @@ pre {
 
 .note {
     background: var(--color-main);
-    color: #fff;
+    color: var(--color-font-fg);
     padding: 1rem 1rem 1rem 2rem;
     border-left: .5rem solid var(--color-secondary);
     margin: 2rem 1rem;
@@ -711,6 +758,12 @@ body.section-categories .intro-text{
     font-size: 2rem;
 }
 
+.support-cause-list__wrapper {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
 .support-cause-list {
     text-indent: 1rem;
     margin-bottom: 1rem;
@@ -724,4 +777,195 @@ body.section-categories .intro-text{
     margin-left: -1rem;
     font-size: 1.25em;
     list-style: none;
+}
+
+/*
+ * wavy-text requires the data-css-text attribute on the element
+ * <h1 data-css-text="Test">Test</h1>
+ *
+ * Some characters produce ugly gaps so they are replaced in Hugo with
+ * {{ .Name | replaceRE "[gjyqp]" "a" }}
+ */
+.wavy-text {
+    z-index: 1;
+    position: relative;
+    display: block;
+}
+
+.wavy-text::before {
+    content: attr(data-css-text);
+    width: 100%;
+    display: block;
+    color: transparent;
+    top: 0;
+    position: absolute;
+    left: 0;
+    font-size: 110%;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--color-secondary);
+    z-index: 2;
+}
+
+.wavy-text--invert {
+    --tmp-color-main: var(--color-main);
+    --color-main: var(--color-secondary);
+    --color-secondary: var(--tmp-color-main);
+}
+
+.wavy-text--inline {
+    display: inline-block;
+}
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-areas:
+        "sidebar header header"
+        "sidebar content content"
+        "sidebar content content"
+        "support support support"
+        "footer footer footer";
+
+}
+
+.site-header {
+    grid-column-start: sidebar;
+    grid-column-end: sidebar;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.site-main-content {
+    grid-column-start: content;
+    grid-column-end: content;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.site-support {
+    grid-column-start: support;
+    grid-column-end: support;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    display: flex;
+}
+
+.site-footer {
+    grid-column-start: footer;
+    grid-column-end: footer;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+
+@media all and (min-width: 1200px) {
+    .nav-main {
+        display: block;
+        background: none;
+        padding-top: 2rem;
+        padding-left: 3rem;
+    }
+
+    .nav-main li {
+        display: block;
+        margin: 2rem 1rem;
+        font-size: 2rem;
+    }
+    .nav-main li a {
+        color: var(--color-main);
+    }
+}
+
+.nav-item {
+    display: block;
+    position: relative;
+}
+
+.nav-item--active a {
+    font-size: 120%;
+    text-decoration: none;
+}
+
+/* body.section-blog.type-page .site-header {
+    grid-column-start: sidebar;
+    grid-column-end: header;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+body.section-blog.type-page .site-main-content {
+    grid-column-start: sidebar;
+    grid-column-end: content;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+body.section-blog.type-page .nav-main li {
+    display: inline-block;
+} */
+
+@media all and (max-width: 1200px) {
+    .site-header {
+        grid-column-start: sidebar;
+        grid-column-end: header;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .site-main-content {
+        grid-column-start: sidebar;
+        grid-column-end: content;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .site-support {
+        grid-column-start: support;
+        grid-column-end: support;
+        grid-row-start: 4;
+        grid-row-end: 4;
+        flex-direction: column;
+    }
+
+    .author {
+        border: 1px solid var(--color-secondary);
+        border-style: inset;
+    }
+
+    .site-footer {
+        grid-column-start: footer;
+        grid-column-end: footer;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .support-cause-list__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    ul.nav-main {
+        display: block;
+        padding: 1rem;
+    }
+
+    .nav-item {
+        display: inline-block;
+        padding-right: 1rem;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .main-grid {
+        display: block;
+    }
+}
+
+
+
+.nav-footer li {
+    display: inline-block;
+    margin-right: 1rem;
 }

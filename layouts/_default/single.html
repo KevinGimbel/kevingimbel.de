@@ -3,24 +3,22 @@
 {{ partial "debug.html" "_default/single.html" }}
 {{ end }}
 <main id="main" class="main">
-    <header>
+    <article class="page-content">
         {{ if .IsTranslated }}
-        <nav class="language-nav"><span>{{ i18n "ui_lang_available_in" }}</span>
-            <ul>
-                {{ range .Translations }}
-                <li>
-                    <a href="{{ .Permalink }}">{{ i18n (printf "ui_lang_code_%s" .Lang) }}</a>
-                </li>
-                {{ end }}
-            </ul>
-        </nav>
+        <header class="language-menu">
+            <nav class="language-nav"><span>{{ i18n "ui_lang_available_in" }}</span>
+                <ul>
+                    {{ range .Translations }}
+                    <li>
+                        <a href="{{ .Permalink }}">{{ i18n (printf "ui_lang_code_%s" .Lang) }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </header>
         {{ end }}
-    </header>
-    <article class="article-content">
+        
         {{ .Content }}
     </article>
-
-    {{ partial "support.html" . }}
-    {{ partial "author.html" . }}
 </main>
 {{ end }}

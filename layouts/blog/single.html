@@ -4,10 +4,10 @@
 {{ end }}
 <main id="main" class="main">
     <section class="article-single">
+        <header class="article-header">
+            {{ partial "single-header.html" . }}
+        </header>
         <article class="article-content">
-            <header class="article-header">
-                {{ partial "single-header.html" . }}
-            </header>
 
             {{ with .Params.series }}
                 {{ $name := index . 0 | urlize }}
@@ -29,8 +29,11 @@
         {{ partial "categories.html" . }}
         {{ partial "tags.html" . }}
     </section>
-    
+</main>
+{{ end }}
+
+
+{{ define "support" }}
     {{ partial "support.html" . }}
     {{ partial "author.html" . }}
-</main>
 {{ end }}

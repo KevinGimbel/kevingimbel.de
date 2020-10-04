@@ -16,19 +16,15 @@
             </nav>
         </header>
         {{ end }}
-    <header class="article-content__header">
+    <header class="article-content__header page-content">
         <h1>{{ .Title }}</h1>
         <p><small>{{ .Params.short_description }}</small></p>
         {{ with .Params.code_source }}
             <p><a href="{{ $.Params.code_source }}" title="View source code on  {{ $.Params.code_host }}">View source code on {{ $.Params.code_host }}</a></p>
         {{ end }}
-        <hr aria-hidden="true">
     </header>
-    <article class="article-content">
+    <article class="page-content">
         {{ .Content }}
     </article>
-
-    {{ partial "support.html" . }}
-    {{ partial "author.html" . }}
 </main>
 {{ end }}

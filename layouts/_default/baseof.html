@@ -8,7 +8,7 @@
     <meta name="author" content="Kevin Gimbel">
     <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
     <meta keywords="{{ with .Params.Tags }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Section }} {{ with .Params.Categories }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Site.Params.Keywords }}">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛸</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧙‍♂️</text></svg>">
     {{ with $.Params.is_next }}
     <meta name=“robots“ content=“noindex, nofollow“ />
     {{ end }}
@@ -21,44 +21,46 @@
     <script type="text/javascript">{{- ((resources.Get "js/theme.js" | minify).Content | safeJS ) }}</script>
     <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">{{ i18n "widget_color_changer_keep" }}</span>
     <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">{{ i18n "widget_color_changer_random" }}</span>
-    <button id="btn_schema" style="position: absolute;top:10px;right:10px;display:none;"></button>
-    <header class="intro-text">
-        <span>
-        {{ if eq .Title "Categories" }}
-            All categories
-        {{ else if eq .Title "Tags" }}
-            All tags
-        {{ else if eq .Section "tags" }}
-            <p>Content tagged with "{{ .Title }}"</p>
-            <small><a href="/tags/">View all tags</a></small>
-        {{ else if eq .Section "categories" }}
-            <p>Content in category "{{ .Title }}"</p>
-            <small><a href="/categories/">View all categories</a></small>
-        {{ else }}
-        {{ with .Page.Params.intro_text }}
-        {{ else }}
-        {{ .Title }}
-        {{ end }}
-        {{ end }}</span>
-    </header>
-
-
+    <section class="main-grid">
+    <header class="site-header">
     <nav role="navigation" id="navigation" aria-label="Main Navigation">
         <ul class="nav-main">
-            {{- $currentPage := . -}}
-            {{- range $.Site.Menus.main -}}
-            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-                <a href="{{ .URL }}">
-                    <span>{{ .Name }}</span>
-                </a>
+            {{ $currentPage := . }}
+            {{- range .Site.Menus.main -}}
+            {{ $isCurrent := eq .URL $currentPage.RelPermalink }}
+            <li class="nav-item{{ if $isCurrent }} nav-item--active{{ end }}">
+                <a href="{{ .URL }}" {{ if $isCurrent }}class="wavy-text" data-css-text="{{ .Name | replaceRE "[gjyqp]" "a" }}"{{ end }}>{{ .Name }}</a>
             </li>{{- end -}}
         </ul>
     </nav>
+    <button id="btn_schema" style="position: absolute;top:2.5em;right:2.5em;display:none;"></button>
+    </header>
 
-    {{- block "main" . -}}
-    {{- end -}}
+    <section class="site-main-content">
+        {{- block "main" . -}}
+        {{- end -}}
+    </section>
 
-    <footer class="footer">
+    <section class="site-support">
+        {{- block "support" . -}}
+        {{- end -}}
+    </section>
+
+    <footer class="site-footer footer">
+
+        <nav role="navigation" id="footer-navigation" aria-label="Secondary Navigation">
+        <p>{{ i18n "ui_more_sections" }} </p>
+        <ul class="nav-footer">
+            {{ $currentPage := . }}
+            {{- range .Site.Menus.footer -}}
+            {{ $isCurrent := eq .URL $currentPage.RelPermalink }}
+            <li class="nav-item{{ if $isCurrent }} nav-item--active{{ end }}">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>{{- end -}}
+            </ul>
+        </nav>
+
+
         <div class="left">
             <p>{{ i18n "ui_copyright_footer" (now.Format "2006") | safeHTML }} <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
             <p><small>{{ i18n "ui_follow_mastodon" | safeHTML }}</small></p>
@@ -73,6 +75,7 @@
             <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
         </div>  
     </footer>
+    </section>
     {{ partial "kg-shortcodes-hook.html" . }}
 </body>
 

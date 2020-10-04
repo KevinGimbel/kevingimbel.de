@@ -1,7 +1,7 @@
 baseURL = "https://kevingimbel.de"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "KevOps"
+title = "KevOps — DevOps, Cooking, and everything else I want to write about"
 theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
 publishDir = "docs"
 # ignoreErrors = ["error-output-taxonomy"]
@@ -41,22 +41,22 @@ location = "Wiesbaden, Germany"
     Weight = 10
 
     [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 20
-
-    [[menu.main]]
     identifier = "blog"
     name = "Blog"
     URL = "/blog/"
-    Weight = 30
+    Weight = 20
 
     [[menu.main]]
-    identifier = "project"
-    name = "Projects"
-    URL = "/project/"
-    Weight = 35
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+
+    # [[menu.main]]
+    # identifier = "project"
+    # name = "Projects"
+    # URL = "/project/"
+    # Weight = 35
 
     [[menu.main]]
     identifier = "photography"
@@ -64,19 +64,19 @@ location = "Wiesbaden, Germany"
     URL = "/photography/"
     Weight = 40
 
-    [[menu.main]]
+    [[menu.footer]]
     identifier = "reading"
     name = "Reading"
     URL = "/reading/"
     Weight = 45
 
-    [[menu.main]]
+    [[menu.footer]]
     identifier = "Art"
     name = "Art"
     URL = "/art/"
     Weight = 50
 
-    [[menu.main]]
+    [[menu.footer]]
     identifier = "Now"
     name = "Now"
     URL = "/now/"
@@ -118,15 +118,15 @@ location = "Wiesbaden, Germany"
         Weight = 10
 
         [[languages.de.menu.main]]
-        identifier = "ueber"
-        name = "Über mich"
-        url = "/de/ueber-mich/"
-        weight = 20
-
-        [[languages.de.menu.main]]
         identifier = "blog"
         name = "Blog"
         url = "/de/blog"
+        weight = 20
+
+        [[languages.de.menu.main]]
+        identifier = "ueber"
+        name = "Über mich"
+        url = "/de/ueber-mich/"
         weight = 30
 
 

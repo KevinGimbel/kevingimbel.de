@@ -3,7 +3,7 @@
 
 <article class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
     {{ partial "publish_date_list.html" . }}
-    <h3 class="article-preview__heading"><a id="article-heading-{{ .File.UniqueID }}" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <h3 class="wavy-text article-preview__heading"><a id="article-heading-{{ .File.UniqueID }}" href="{{ .Permalink }}">{{ .Title }}</a></h3>
     {{ with .Params.intro_text }}
     <h4>{{ . | markdownify }}</h4>
     {{ end }}
@@ -23,7 +23,7 @@
     {{ end }}
 
     <p id="article-summary-{{ .File.UniqueID }}">{{ .Summary }}</p>
-    <a href="{{ .Permalink }}" title="Continue reading about {{ .Title }}">View full post</a>
+    <a href="{{ .Permalink }}" title="{{ i18n "ui_continue_reading_about" . }}">View full post</a>
 </article>
 {{ end }}
 {{ end }}
