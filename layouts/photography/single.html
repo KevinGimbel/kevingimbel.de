@@ -3,7 +3,7 @@
 {{ partial "debug.html" "photography/single.html" }}
 {{ end }}
 <main id="main" class="main photography">
-    <article class="article-content">
+    <article class="page-content">
         {{ .Content }}
     </article>
     {{ range .Resources.ByType "image" }}
@@ -20,7 +20,15 @@
             </picture>
         {{ end }}
         <figcaption>
-            {{ with $img.Exif }}
+            <p>{{ .Name }}</p>
+        </figcaption>
+    </figure>
+    
+    {{ if isset . "NotDefined" }}
+    
+    @TODO: Add styling for exif data
+        
+        {{ with $img.Exif }}
             <div class="exif">
             <ul>
                 <li><span class="label">ISO</span> {{ .Tags.ISOSpeedRatings }}</li>
@@ -28,10 +36,8 @@
                 <li><span class="label">Aperture</span> f/{{ math.Round .Tags.ApertureValue }}</li>
             </ul>
             </div>
-            {{ end }}
-            <p>{{ .Name }}</p>
-        </figcaption>
-    </figure>
+        {{ end }}
+    {{ end }}
 
     {{ end }}
 
@@ -44,8 +50,10 @@
         {{ partial "categories.html" . }}
         {{ partial "tags.html" . }}
     </section>
+</main>
+{{ end }}
 
+{{ define "support" }}
     {{ partial "support.html" . }}
     {{ partial "author.html" . }}
-</main>
 {{ end }}

@@ -8,9 +8,9 @@ tags:
     - ps4
     - multiplayer
     - psplus
-    - rating-3
+    - rating-5
 date: "2020-08-10"
-lastmod: "2020-08-10"
+lastmod: "2020-10-04"
 
 gallery_columns: 1
 
@@ -27,4 +27,8 @@ In general, I enjoyed playing. I played for about an hour last night, and while 
 
 You can get Fall Guys on [PS4](https://www.playstation.com/de-de/games/fall-guys-ultimate-knockout-ps4/) and [Steam](https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/). I played on PS4 and got the game free with my PlayStation Plus subscription.
 
-{{< rating 3 >}}
+## Update
+
+I previously rated Fall Guys with 3 stars, but I actually played a lot of it with my wife and kids and we're really into it now. Playing Fall Guys with my wife is a lot of fun and we're celebrating every win and laughing about every lost round together. Good times, 7/5.
+
+{{< rating 5 >}}

@@ -3,7 +3,11 @@
 {{ partial "debug.html" "_default/list.html" }}
 {{ end }}
 <main id="main {{ .Section }}" class="main">
-    {{ .Content }}
+    {{ with .Content }}
+    <section class="article-list__intro">
+        {{ . }}
+    </section>
+    {{ end }}
 
     {{ partial "page-nav.html" . }}
 
@@ -12,7 +16,7 @@
     {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
         <header class="article-list__header">
             <h2 id="{{ .Key }}" class="section-headline">{{ .Key }}</h2>
-            <p><a href="#years">{{ i18n "ui_back_to_navigation" }}</a></p>
+            <p>{{ i18n "ui_post_count_in_year" . }} | <a href="#years">{{ i18n "ui_back_to_navigation" }}</a></p>
         </header>
         {{ range .Pages }}
             {{- if (fileExists (printf "layouts/_default/article-preview-%s.html" .Params.Type)) -}}

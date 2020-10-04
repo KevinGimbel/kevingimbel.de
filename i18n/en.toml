@@ -118,3 +118,9 @@ other = "If this content has helped you or your company, consider making a donat
 
 [widget_support_cause]
 other = "For example, consider donating to the following causes:"
+
+[ui_more_sections]
+other = "More sections on this site"
+
+[ui_post_count_in_year]
+other = "{{ len .Pages }} posts"
