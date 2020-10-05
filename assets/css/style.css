@@ -20,7 +20,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     background: var(--color-bg-page);
-    border: .5em solid var(--color-main);
+    border: .5rem solid var(--color-main);
 }
 
 ::selection {
@@ -90,6 +90,7 @@ h3 {
 .section-headline {
     font-size: 3.75em;
     margin-top: 2rem;
+    line-height: 0.75;
 }
 
 /* Index Page */
@@ -184,7 +185,6 @@ hr {
 
     .gallery img {
         max-width: 100%;
-        max-width: calc(100% + 2rem);
     }
 }
 
@@ -201,7 +201,6 @@ figure picture {
 .photography figure img,
 .photography figure picture {
     width: auto;
-    max-width: calc(100% + 2rem + 1px);
 }
 
 figcaption p {
@@ -219,7 +218,6 @@ figcaption p {
 figure {
     position: relative;
     z-index: 1;
-    margin-left: calc(0rem - 2rem);
 }
 
 figure+figure {
@@ -242,11 +240,11 @@ figcaption p {
 figcaption p::before {
     content: "";
     width: .15em;
-    height: 10rem;
+    height: 5rem;
     background: var(--color-secondary);
     position: absolute;
-    left: 0;
-    top: -10rem;
+    left: 1rem;
+    top: -5rem;
     z-index: 1;
 }
 
@@ -309,11 +307,6 @@ li code {
     color: var(--color-main);
     padding: .125rem .25rem;
     border-radius: 3px;
-}
-
-.highlight {
-    margin-left: calc(0rem - 2rem);
-    width: calc(100% + 4rem);
 }
 
 /* .nav-main {
@@ -524,9 +517,6 @@ pre {
     background: #d46767;
     border: .35rem solid firebrick;
     padding: 1rem 2rem;
-    width: calc(100% + 4rem + 2px);
-    margin-left: -2rem;
-    margin-top: -2rem;
     color: #222;
 }
 
@@ -601,7 +591,6 @@ pre {
     padding: 1rem 1rem 1rem 2rem;
     border-left: .5rem solid var(--color-secondary);
     margin: 2rem 1rem;
-    width: calc(100% - 1rem)
 }
 
 .note__heading {
@@ -906,7 +895,18 @@ body.section-blog.type-page .nav-main li {
     display: inline-block;
 } */
 
+
+.btn-color-switch {
+    position: absolute; 
+    top: 2.5em; 
+    right: 2.5em; 
+    display: block;
+}
+
 @media all and (max-width: 1200px) {
+    body {
+        border: .125rem solid var(--color-main);
+    }
     .site-header {
         grid-column-start: sidebar;
         grid-column-end: header;
@@ -954,6 +954,38 @@ body.section-blog.type-page .nav-main li {
     .nav-item {
         display: inline-block;
         padding-right: 1rem;
+    }
+
+    .intro-splash__content .txt--ultra-large {
+        font-size: 1.8rem;
+    }
+
+    .intro-splash__content .txt--large,
+    .intro-splash__content .txt--medium {
+        font-size: 1.2rem;
+    }
+
+    .main {
+        padding: 1rem .5rem;
+    }
+
+    .support-cause-list__wrapper {
+        flex-direction: column;
+    }
+
+    .article-header h1,
+    .article-preview__heading {
+        font-size: 2.2rem;
+    }
+
+    .btn-color-switch {
+        top: .75rem;
+        right: 1rem;
+    }
+
+    .article-list__intro, .page-content {
+        margin: 2rem 0;
+        padding: 1rem;
     }
 }
 
