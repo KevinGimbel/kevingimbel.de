@@ -37,5 +37,44 @@
         window.location = window.location;
       }
     });
-  });
+
+    let resizer = document.querySelector("#resizer");
+    let article_content_el = document.querySelector(".article-single") || document.querySelector(".page-content");
+    let width = window.localStorage.getItem("kgde_theme_width");
+    if (!width) {
+      window.localStorage.setItem("kgde_theme_width", 80);
+      content_update_size(width, article_content_el);
+    }
+
+    if (resizer) {
+      let opts = resizer.querySelectorAll("option");
+      opts.forEach(entry => {
+        entry.selected = entry.value == width;
+      })
+    }
+
+    if (resizer && article_content_el) {
+      if (width) {
+        content_update_size(width, article_content_el);
+      }
+      resizer.addEventListener("change", (event) => {
+        let size = event.target.value;
+        content_update_size(size, article_content_el);
+        window.localStorage.setItem("kgde_theme_width", size);
+      })
+    } else {
+      resizer.parentNode.style.display = "none";
+    }
+  }); // DOMContentLoaded
+
+  function content_update_size(size, element) {
+    switch (size) {
+      case "full":
+        element.style += "";
+        break;
+      default:
+        element.style = `max-width: ${size}rem; margin: 0 auto;`;
+        break;
+    }
+  }
 }(window, document));

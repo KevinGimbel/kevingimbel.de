@@ -3,19 +3,13 @@ title: "\"Zuhause ist, wo 127.0.0.1 ist\", sagt man."
 intro_text: ""
 ---
 
-
-{{< sidebyside >}}
-{{< left >}}
-
-[Kevin Gimbel](/about/) ist ein DevOps Engineer und arbeitet bei der Synoa GmbH. In der dritten Person zu schreiben ist super **awkward**.
-
-Hier ist noch ein relativ aktuelles Bild von mir - das gehört zu einer Persönlichen Website nämlich dazu. 
-{{< /left >}}
-
-{{< right class="small" is_html="true" >}}
-    {{< asset-img "images/general/mask.jpg" Resize "550x" >}}
-Ich mit selbst gemachter Maske. Die Anleitung gibt's im [Blog auf Englisch](/blog/2020/05/diy-face-masks/)
-    {{< /asset-img >}}
-{{< /right >}}
-{{< /sidebyside >}}
+{{< raw-html >}}
+<div class="intro-splash">
+    <div class="intro-splash__content">
+        <h1 class="txt--ultra-large"><a href="/de/ueber-mich">Kevin Gimbel</a> ist ein <br><span class="wavy-text wavy-text--inline" data-css-text="DevOasEnaineer">DevOps Engineer</span><br> der Leidenschaftlich gern Dinge automatisiert.</h1>
+        <p class="txt--large">Außerdem backt, kocht, und zockt er gerne - und manchmal <a href="/de/blog">bloggt er</a> auch.</a>
+        <p class="xx-small">In der dritten Person zu schreiben ist komisch.</p>
+    </div>
+</div>
+{{< /raw-html >}}
 

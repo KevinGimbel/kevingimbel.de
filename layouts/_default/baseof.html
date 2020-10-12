@@ -33,7 +33,24 @@
             </li>{{- end -}}
         </ul>
     </nav>
-    <button id="btn_schema" class="btn-color-switch"></button>
+    <section class="settings">
+        <details>
+            <summary>Settings</summary>
+            <div class="settings-inner">
+                <label for="btn_schema" class="settings-field">Color settings
+                    <button id="btn_schema" class="btn-color-switch"></button>
+                </label>
+                <label for="resizer" class="settings-field">Content width
+                    <select name="resize" id="resizer">
+                        <option value="40">Small</option>
+                        <option value="60">Medium</option>
+                        <option value="80">Large</option>
+                        <option value="full">Full</option>
+                    </select>
+                </label>
+            </div>
+        </details>
+</section>
     </header>
 
     <section class="site-main-content">

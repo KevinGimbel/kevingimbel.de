@@ -110,6 +110,12 @@ location = "Wiesbaden, Germany"
         contentDir = "content/es"
         languageCode = "es_ES"
         languageName = "Español"
+    [languages.es.menu]
+        [[languages.es.menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/es/"
+        weight = 10
     [languages.de.menu]
         [[languages.de.menu.main]]
         identifier = "start"

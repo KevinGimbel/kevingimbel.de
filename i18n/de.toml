@@ -136,3 +136,7 @@ other = "Weitere Bereiche"
 
 [ui_post_count_in_year]
 other = "{{ len .Pages }} Beiträge"
+
+[ui_reading_time]
+one = "Lesezeit etwa 1 Minute"
+other = "Lesezeit etwa {{ .Count }} Minuten"
