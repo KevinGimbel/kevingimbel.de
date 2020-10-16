@@ -124,7 +124,7 @@ location = "Wiesbaden, Germany"
         [[languages.de.menu.main]]
         identifier = "blog"
         name = "Blog"
-        url = "/de/blog"
+        url = "/de/blog/"
         weight = 20
 
         [[languages.de.menu.main]]

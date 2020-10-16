@@ -128,3 +128,9 @@ other = "{{ len .Pages }} posts"
 [ui_reading_time]
 one = "Reading time: 1 minute"
 other = "Reading time: {{ .Count }} minutes"
+
+[ui_settings_color]
+other = "Color"
+
+[ui_settings_content_width]
+other = "Content width"

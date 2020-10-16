@@ -140,3 +140,9 @@ other = "{{ len .Pages }} Beiträge"
 [ui_reading_time]
 one = "Lesezeit etwa 1 Minute"
 other = "Lesezeit etwa {{ .Count }} Minuten"
+
+[ui_settings_color]
+other = "Farben"
+
+[ui_settings_content_width]
+other = "Breite"

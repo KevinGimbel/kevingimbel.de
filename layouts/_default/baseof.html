@@ -29,7 +29,7 @@
             {{- range .Site.Menus.main -}}
             {{ $isCurrent := eq .URL $currentPage.RelPermalink }}
             <li class="nav-item{{ if $isCurrent }} nav-item--active{{ end }}">
-                <a href="{{ .URL }}" {{ if $isCurrent }}class="wavy-text" data-css-text="{{ .Name | replaceRE "[gjyqp]" "a" }}"{{ end }}>{{ .Name }}</a>
+                <a href="{{ .URL }}" data-perm="{{ $currentPage.RelPermalink }}" {{ if $isCurrent }}class="wavy-text" data-css-text="{{ .Name | replaceRE "[gjyqp ]" "a" }}"{{ end }}>{{ .Name }}</a>
             </li>{{- end -}}
         </ul>
     </nav>
@@ -37,10 +37,10 @@
         <details>
             <summary>Settings</summary>
             <div class="settings-inner">
-                <label for="btn_schema" class="settings-field">Color settings
+                <label for="btn_schema" class="settings-field">{{ i18n "ui_settings_color" }}<br>
                     <button id="btn_schema" class="btn-color-switch"></button>
                 </label>
-                <label for="resizer" class="settings-field">Content width
+                <label for="resizer" class="settings-field">{{ i18n "ui_settings_content_width"}}<br>
                     <select name="resize" id="resizer">
                         <option value="40">Small</option>
                         <option value="60">Medium</option>
