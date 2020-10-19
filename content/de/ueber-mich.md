@@ -15,7 +15,7 @@ Generell interessiere ich mich für Technik und Sci-Fi, (Video) Spiele, Dystopie
 
 In letzter Zeit fühle ich mich sehr Ausgebrannt von Social Media, weshalb ich mich entschloss lieber wieder zu bloggen und Inhalte zu erstellen statt nur zu konsumieren. Das mache ich mehr oder weniger Erfolgreich auf [Deutsch](/de/blog/) und [Englisch](/blog/).
 {{</ right >}}
-{{< left class="small">}}
-!["Ein Bild von mir mit Glitch Effekt, entstanden in einem Club in Budapest"](/img/self-2019-small.jpg)
+{{< left class="small" is_html="true">}}
+{{< figure src="/img/smile-pretty-boy.jpg" >}}
 {{</ left >}}
 {{</ sidebyside >}}

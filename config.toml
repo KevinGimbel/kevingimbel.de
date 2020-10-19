@@ -7,9 +7,8 @@ publishDir = "docs"
 # ignoreErrors = ["error-output-taxonomy"]
 
 [params]
-    # Doesn't work yet
-    avatar_src = "images/general/mask-moshed.jpg"
-    avatar_alt = "A colorful image of me wearing my DIY mask. The image has a colorful glitch effect."
+    avatar_src = "images/general/kevin-gimbel-2020.jpg"
+    avatar_alt = "A Selfie of me"
     # Toggle "template hints" 
     # debug = true
 
@@ -135,6 +134,4 @@ location = "Wiesbaden, Germany"
 
 
         [languages.de.params]
-        # Doesn't work yet
-        avatar_src = "images/general/mask-moshed.jpg"
-        avatar_alt = "Ein Bild von mir mit meiner DIY Maske. Das Bild ist stark bearbeitet und hat einen Regenbogeneffekt"
+        avatar_alt = "Ein Bild von mir, sehr nah."

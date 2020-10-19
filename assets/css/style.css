@@ -568,6 +568,7 @@ pre {
 
     .side-by-side .small {
         max-width: 40%;
+        width: 100%;
         padding: 2rem;
     }
 

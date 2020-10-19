@@ -21,7 +21,7 @@ Some years ago I was actively using social media, especially Twitter, but my int
 
 Here's a glitched image of me.
 {{</ right >}}
-{{< left class="small">}}
-!["Image of me in a club in Budapest, highly glitched and edited"](/img/self-2019-small.jpg)
+{{< left class="small" is_html="true" >}}
+{{< figure src="/img/smile-pretty-boy.jpg" >}}
 {{</ left >}}
 {{</ sidebyside >}}
