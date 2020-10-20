@@ -36,11 +36,8 @@ other = "Den ganzen Beitrag \"{{ .Title }}\" lesen"
 [ui_copyright_footer]
 other = "&copy; 2009 - {{ .Count }} Kevin Gimbel. <a href=\"https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE\" title=\"Lizenz auf Github.com ansehen\">Lizenz</a>."
 
-[ui_follow_mastodon]
-other = "Folge mir auf <a href=\"https://bullgit.party/@kevin\" title=\"Mein Mastodon Account auf bullgit.party\" rel=\"me\">Mastodon @kevin@bullgit.party</a>"
-
-[ui_contact_matrix]
-other = "Mehr zu sagen? Schreibe mir via Matrix an <a href=\"https://matrix.to/#/@kevingimbel:bullgit.science\" title=\"Kontaktiere mich über Matrix\">@kevingimbel:bullgit.science</a>"
+[ui_follow_twitter]
+other = "Folge mir auf <a href=\"https://twitter.com/_kevinatari\" title=\"Mein Twitter Account\">Twitter @_kevinatari</a>"
 
 [ui_found_issue]
 other = "Fehler gefunden? Diese Seite <a href=\"https://github.com/kevingimbel/kevingimbel.de/tree/master/content/{{ .File }}\"> auf GitHub.com bearbeiten</a>"
