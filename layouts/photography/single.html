@@ -1,3 +1,16 @@
+{{ define "custom_meta" }}
+{{ $post := . }}
+{{ range .Resources.ByType "image" | first 1 }}
+    {{ $img := . }}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kevingimbel">
+    <meta name="twitter:creator" content="@_kevinatari">
+    <meta name="twitter:title" content="{{ $post.Title }}">
+    <meta name="twitter:description" content="{{ $post.Summary }}">
+    <meta name="twitter:image" content="{{ ($img.Resize "1600x q100").Permalink }}">
+    {{ end }}
+{{ end }}
+
 {{ define "main" }}
 {{ with .Site.Params.debug }}
 {{ partial "debug.html" "photography/single.html" }}

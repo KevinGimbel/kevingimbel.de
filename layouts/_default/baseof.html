@@ -16,6 +16,8 @@
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
+    {{ block "custom_meta" . }}
+    {{ end }}
 </head>
 <body class="{{ with .Kind }}type-{{ . }} {{ end }}{{ with .Section }}section-{{ . }}{{ end }}">
     <script type="text/javascript">{{- ((resources.Get "js/theme.js" | minify).Content | safeJS ) }}</script>
