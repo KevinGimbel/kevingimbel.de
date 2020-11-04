@@ -1,0 +1,29 @@
+
+.page-nav {
+  background: var(--color-secondary);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.page-nav a:not(:last-of-type) {
+  margin-right: .5rem;
+}
+
+.page-nav--label {
+  display: block;
+  font-size: .75em;
+}
+
+.language-nav {
+  font-size: .75rem;
+}
+
+.language-nav ul {
+  display: inline-block; 
+  list-style: none;
+}
+
+.nav-footer li {
+  display: inline-block;
+  margin-right: 1rem;
+}

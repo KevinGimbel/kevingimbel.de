@@ -1,0 +1,136 @@
+
+.settings summary {
+  text-align: right;
+}
+.settings {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.settings-inner {
+  font-size: .85rem;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  background: var(--color-secondary);
+  padding: 1rem;
+  width: 10rem;
+}
+
+.settings details {
+  position: relative;
+}
+
+.settings-field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.btn-color-switch {
+  display: block;
+}
+
+@media all and (max-width: 1200px) {
+  body {
+      border: .125rem solid var(--color-main);
+  }
+  .site-header {
+      grid-column-start: sidebar;
+      grid-column-end: header;
+      grid-row-start: 1;
+      grid-row-end: 1;
+  }
+  .site-main-content {
+      grid-column-start: sidebar;
+      grid-column-end: content;
+      grid-row-start: 1;
+      grid-row-end: 4;
+  }
+
+  .site-support {
+      grid-column-start: support;
+      grid-column-end: support;
+      grid-row-start: 4;
+      grid-row-end: 4;
+      flex-direction: column;
+  }
+
+  .author {
+      border: 1px solid var(--color-secondary);
+      border-style: inset;
+  }
+
+  .site-footer {
+      grid-column-start: footer;
+      grid-column-end: footer;
+      grid-row-start: 5;
+      grid-row-end: 5;
+  }
+
+  .support-cause-list__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+  }
+
+  ul.nav-main {
+      display: block;
+      padding: 1rem;
+  }
+
+  .nav-item {
+      display: inline-block;
+      padding-right: 1rem;
+  }
+
+  .intro-splash__content .txt--ultra-large {
+      font-size: 1.8rem;
+  }
+
+  .intro-splash__content .txt--large,
+  .intro-splash__content .txt--medium {
+      font-size: 1.2rem;
+  }
+
+  .main {
+      padding: 1rem .5rem;
+  }
+
+  .support-cause-list__wrapper {
+      flex-direction: column;
+  }
+
+  .article-header h1,
+  .article-preview__heading {
+      font-size: 2.2rem;
+  }
+
+  .article-list__intro, .page-content {
+      margin: 2rem 0;
+      padding: 1rem;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .main-grid {
+      display: block;
+  }
+
+  .article-content .side-by-side {
+      padding: 0 1rem;
+  }
+}
+
+
+@media all and (min-width: 800px) {
+body.type-page:not(.section-blog) .main {
+  padding-left: 2rem;
+}
+}
+
+@media all and (max-width: 800px) {
+  body.type-page .article-header {
+      padding-left: 1rem;
+      padding-right: 1rem
+  }
+}

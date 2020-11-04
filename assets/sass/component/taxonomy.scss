@@ -1,0 +1,24 @@
+.taxonomy-list {
+  display: flex;
+  padding-bottom: 2rem;
+  align-content: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.taxonomy__item {
+      width: 20%;
+      height: 2rem;
+      display: inline-block;
+      padding: 2rem 0;
+}
+
+.taxonomy__item-inner {
+  padding: 1rem;
+  background: var(--color-main);
+  color: var(--color-secondary);
+}
+
+.taxonomy__item a {
+  color: var(--color-secondary);
+}

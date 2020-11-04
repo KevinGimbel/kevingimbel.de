@@ -37,16 +37,15 @@
             </div>
         </article>
     </section>
-
-    <section class="tags-categories">
-        {{ partial "categories.html" . }}
-        {{ partial "tags.html" . }}
-    </section>
 </main>
 {{ end }}
 
 
 {{ define "support" }}
+<section class="tags-categories">
+    {{ partial "categories.html" . }}
+    {{ partial "tags.html" . }}
+</section>
     {{ partial "support.html" . }}
     {{ partial "author.html" . }}
 {{ end }}

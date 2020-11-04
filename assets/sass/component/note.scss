@@ -1,0 +1,23 @@
+.age-note {
+  background: #d46767;
+  border: .35rem solid firebrick;
+  padding: 1rem 2rem;
+  color: #222;
+}
+
+.note {
+  background: var(--color-main);
+  color: var(--color-font-fg);
+  padding: 1rem 1rem 1rem 2rem;
+  border-left: .5rem solid var(--color-secondary);
+  margin: 2rem 1rem;
+}
+
+.note__heading {
+  font-weight: bold;
+  display: block;
+}
+
+.article-note__content {
+  font-size: 1.3rem;
+}

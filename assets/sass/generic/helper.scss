@@ -1,0 +1,11 @@
+
+/*
+ * Flow utility from https://piccalil.li/quick-tip/flow-css-utility/
+ */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.fg-accent {
+  color: var(--color-secondary);
+}

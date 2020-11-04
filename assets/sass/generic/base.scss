@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-main: #403D58;
+  --color-secondary: #dea584;
+  --color-bg-box: #fefefe;
+  --color-bg-page: #f1f1f1;
+  --color-font-fg: #fff;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font: 20px/1.65 sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: var(--color-bg-page);
+  border: .5rem solid var(--color-main);
+}
+
+::selection {
+  background-color: var(--color-main);
+  color: var(--color-secondary);
+}
+
+abbr {
+  cursor: help;
+  text-decoration: none;
+  border-bottom: 2px dotted var(--color-main);
+}
+
+hr {
+  border: none;
+  background: var(--color-main);
+  height: 2px;
+}

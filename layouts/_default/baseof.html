@@ -12,7 +12,12 @@
     {{ with $.Params.is_next }}
     <meta name=“robots“ content=“noindex, nofollow“ />
     {{ end }}
-    <style type="text/css">{{- ((resources.Get "css/style.css" | minify).Content | safeCSS ) }}</style>
+    {{ $sass := resources.Get "sass/main.scss" }}
+    {{ $style := $sass | resources.ToCSS | minify }}
+    <style>
+        {{ $style.Content | safeCSS }}
+    </style>
+    <!-- <style type="text/css">{{- ((resources.Get "css/style.css" | minify).Content | safeCSS ) }}</style> -->
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}

@@ -1,0 +1,11 @@
+a {
+  color: var(--color-main);
+  font-weight: bold;
+}
+
+.footer a,
+.author a,
+.intro-text a {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
