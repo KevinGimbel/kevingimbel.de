@@ -1,35 +1,3 @@
-
-.settings summary {
-  text-align: right;
-}
-.settings {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-}
-.settings-inner {
-  font-size: .85rem;
-  position: absolute;
-  top: 2rem;
-  right: 0;
-  background: var(--color-secondary);
-  padding: 1rem;
-  width: 10rem;
-}
-
-.settings details {
-  position: relative;
-}
-
-.settings-field {
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.btn-color-switch {
-  display: block;
-}
-
 @media all and (max-width: 1200px) {
   body {
       border: .125rem solid var(--color-main);
@@ -53,11 +21,6 @@
       grid-row-start: 4;
       grid-row-end: 4;
       flex-direction: column;
-  }
-
-  .author {
-      border: 1px solid var(--color-secondary);
-      border-style: inset;
   }
 
   .site-footer {

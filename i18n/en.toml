@@ -43,7 +43,7 @@ other = "&copy; 2009 - {{ .Count }} Kevin Gimbel. <a href=\"https://github.com/k
 other = "Follow me on <a href=\"https://twitter.com/_kevinatari\" title=\"Follow me on Twitter\">Twitter @_kevinatari</a>"
 
 [ui_found_issue]
-other = "Found an issue? Edit this <a href=\"https://github.com/kevingimbel/kevingimbel.de/tree/master/content/{{ .File }}\">page on GitHub.com</a>"
+other = "Found an issue? Edit this <a href=\"https://github.com/kevingimbel/kevingimbel.de/tree/master/content/{{ .Lang }}/{{ .File }}\">page on GitHub.com</a>"
 
 [ui_imprint]
 other = "Imprint"
@@ -131,3 +131,18 @@ other = "Color"
 
 [ui_settings_content_width]
 other = "Content width"
+
+[ui_settings_small]
+other = "Small"
+
+[ui_settings_medium]
+other = "Medium"
+
+[ui_settings_large]
+other = "Large"
+
+[ui_prevnext_next]
+other = "Next article"
+
+[ui_prevnext_previous]
+other = "Previous article"

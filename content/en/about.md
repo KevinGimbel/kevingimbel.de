@@ -17,11 +17,11 @@ I tent to start a lot of things and pursue a lot of different interests when I'm
 
 I love reading books but I never take enough time for it and so it happens that I read multiple books "at the same time" over a year or more. Self care may not be my strong suite, tho it is incredibly important.
 
-Some years ago I was actively using social media, especially Twitter, but my interest has faded over the years. Nowadays the best place to catch me is on [Mastodon](https://bullgit.party/@kevin) tho I'm reading more than writing.
+You may catch me on my private [Twitter @_kevinatari](https://twitter.com/_kevinatari) or my professional [Twitter @kevingimbel](https://twitter.com/kevingimbel).
 
-Here's a glitched image of me.
+Here's a picture of me
 {{</ right >}}
 {{< left class="small" is_html="true" >}}
-{{< figure src="/img/smile-pretty-boy.jpg" >}}
+{{< figure src="/img/smile-pretty-boy.jpg" caption="It's-a me, Kevin!" >}}
 {{</ left >}}
 {{</ sidebyside >}}

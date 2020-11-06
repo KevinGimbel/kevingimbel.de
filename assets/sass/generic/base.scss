@@ -10,6 +10,11 @@
   --color-bg-box: #fefefe;
   --color-bg-page: #f1f1f1;
   --color-font-fg: #fff;
+
+  --border-radius-fancy-1: 12px 24px 6px 48px;
+  --border-radius-fancy-2: 48px 12px 24px 6px;
+  --border-radius-fancy-3: 6px 48px 12px 24px;
+  --border-radius-fancy-4: 24px 6px 48px 12px;
 }
 
 html,
@@ -20,6 +25,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   background: var(--color-bg-page);
+}
+
+body {
   border: .5rem solid var(--color-main);
 }
 

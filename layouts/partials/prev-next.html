@@ -1,0 +1,19 @@
+<section class="article-nextprev">
+  <article class="article__next">
+      <span class="txt--bold">{{ i18n "ui_prevnext_next" }}</span><br>
+  {{ if ne .NextInSection nil }}
+      <a class="txt--medium" href="{{.NextInSection.Permalink}}" title="{{ .NextInSection.Title }}">{{ .NextInSection.Title }}</a>
+  {{ else }}
+      <span class="txt--bold txt--medium">No newer article.</span>
+  {{ end }}
+  </article>
+
+  <article class="article__prev">
+      <span class="txt--bold">{{ i18n "ui_prevnext_previous" }}</span><br>
+  {{ if ne .PrevInSection nil }}
+      <a class="txt--medium" href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}">{{ .PrevInSection.Title }}</a>
+      {{ else }}
+      <span class="txt--bold txt--medium">The End.</span>
+      {{ end }}
+  </article>
+</section>

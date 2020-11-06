@@ -68,13 +68,6 @@
   }); // DOMContentLoaded
 
   function content_update_size(size, element) {
-    switch (size) {
-      case "full":
-        element.style += "";
-        break;
-      default:
-        element.style = `max-width: ${size}rem; margin: 0 auto;`;
-        break;
-    }
+    element.style = `--content-max-width: ${size}rem;`;
   }
 }(window, document));

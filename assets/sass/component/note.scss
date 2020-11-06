@@ -1,8 +1,18 @@
 .age-note {
-  background: #d46767;
-  border: .35rem solid firebrick;
-  padding: 1rem 2rem;
+  background: var(--color-secondary);
   color: #222;
+  font-weight: bold;
+  border-radius: var(--border-radius-fancy-3);
+}
+
+.age-note p {
+  padding: 0 1em 1em;
+}
+
+.age-note h2 {
+  background: var(--color-main);
+  color: var(--color-secondary);
+  padding: .25em .5em;
 }
 
 .note {

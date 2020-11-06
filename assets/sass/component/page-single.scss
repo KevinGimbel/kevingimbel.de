@@ -38,7 +38,9 @@ body.type-page .site-main-content {
 
 body.type-page .article-single,
 body.type-page .article-content {
-  max-width: 100%;
+  max-width: var(--content-max-width, 80rem);
+  border-radius: 13px 57px 13px 31px;
+  border-radius: var(--border-radius-fancy-4);
 }
 
 body.type-page .site-header {
@@ -63,7 +65,15 @@ body.type-page .nav-main li {
   }
   }
   
-  @media all and (max-width: 800px) {
+@media all and (max-width: 800px) {
+    body.type-page .article-content p,
+    body.type-page .article-content h1,
+    body.type-page .article-content h2,
+    body.type-page .article-content h3,
+    body.type-page .article-content h4,
+    body.type-page .article-content h5,
+    body.type-page .article-content h6,
+    body.type-page .article-content ul,
     body.type-page .article-header {
         padding-left: 1rem;
         padding-right: 1rem

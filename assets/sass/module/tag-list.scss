@@ -37,3 +37,10 @@
 ul.tag-list, ul.category-list {
   margin-top: 1rem;
 }
+
+@media all and (max-width: 800px) {
+  // disable hover effect
+  .tag-list__item:before {
+    content: none;
+  }
+}

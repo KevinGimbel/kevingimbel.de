@@ -2,7 +2,10 @@
 .page-nav {
   background: var(--color-secondary);
   padding: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  max-width: 60rem;
+  // border-radius: 32px 67px 32px 42px;
+  border-radius: var(--border-radius-fancy-1);
 }
 
 .page-nav a:not(:last-of-type) {

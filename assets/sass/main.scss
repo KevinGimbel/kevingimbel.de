@@ -1,4 +1,3 @@
-@import "old-styles.scss";
 // generics 
 @import "generic/base.scss";
 @import "generic/grid.scss";
@@ -17,6 +16,8 @@
 @import "component/page-single.scss";
 @import "component/side-by-side.scss";
 @import "component/taxonomy.scss";
+@import "component/settings.scss";
+@import "component/article-nextprev.scss";
 
 // modules
 @import "module/footer.scss";
@@ -27,3 +28,5 @@
 @import "module/tag-list.scss";
 @import "module/tag.scss";
 @import "module/wavy-text.scss";
+
+@import "old-styles.scss";

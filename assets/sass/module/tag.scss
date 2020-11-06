@@ -11,13 +11,18 @@
   color: var(--color-secondary);
 }
 
-.tags-categories,
-.license {
+.tags-categories {
   background: var(--color-bg-box);
   padding: 2rem;
-  max-width: 40vw;
   border-radius: 13px 34px 32px 60px;
-  margin: 2rem 0 2rem;
+  margin: 1rem;
+}
+
+
+@media all and (min-width: 800px) {
+  .tags-categories {
+    max-width: 40vw;
+  }
 }
 
 @media all and (min-width: 640px) {
