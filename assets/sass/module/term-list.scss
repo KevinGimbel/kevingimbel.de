@@ -1,0 +1,16 @@
+.term-wrapper {
+  background: var(--color-bg-box, #fff);
+  max-width: 60rem;
+  margin: 3rem 0;
+  padding: 2rem;
+  border-radius: var(--this-border-radius);
+}
+
+.term-list {
+  margin-top: 0;
+  margin-left: 2rem;
+}
+
+.term__count {
+  opacity: .5;
+}

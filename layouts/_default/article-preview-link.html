@@ -1,6 +1,5 @@
-{{ $b1 := len .Title }}
-{{ $b2 := div (len .RelPermalink) 2 }}
-<article style="--this-border-radius: {{ $b1 }}px {{ $b2 }}px {{ add $b1 $b1 }}px {{ add $b2 $b2 }}px;" class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
+{{- $borderStyle := partial "helper-border-radius.html" . -}}
+<article  {{ printf "style=%q" $borderStyle | safeHTMLAttr }} class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
     {{ partial "publish_date_list.html" . }}
     <h3 class="article-preview__heading"><a href="{{ .Params.source }}" title="{{ .Params.source_title }}">{{ .Params.source_title }} &rarr;</a></h3>
     <div class="article-note">{{ .Content }}</div>

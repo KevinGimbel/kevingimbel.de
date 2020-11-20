@@ -158,3 +158,21 @@ other = "Nächster Artikel"
 
 [ui_prevnext_previous]
 other = "Vorheriger Artikel"
+
+[settings]
+other = "Einstellungen"
+
+[ui_other_languages]
+other = "Andere Sprachen"
+
+[ui_tag_list_intro]
+other = "Alle Tags"
+
+[ui_all_in_category]
+other = "Alle Artikel in Kategorie \"{{ .Title }}\""
+
+[ui_all_in_tag]
+other = "Alle Artikel mit Tag \"{{ .Title }}\""
+
+[ui_enable_dark_mode]
+other = "Dunkles Design"

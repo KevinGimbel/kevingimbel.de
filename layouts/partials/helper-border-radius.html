@@ -1,0 +1,3 @@
+{{- $b1 := len .Title -}}
+{{- $b2 := div (len .Permalink) 2 -}}
+--this-border-radius: {{ $b1 }}px {{ $b2 }}px {{ add $b1 $b1 }}px {{ add $b2 $b2 }}px;

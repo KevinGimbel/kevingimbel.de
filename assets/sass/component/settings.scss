@@ -5,11 +5,7 @@
     cursor: pointer;
   }
 }
-.settings {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-}
+
 .settings-inner {
   font-size: .85rem;
   position: absolute;
@@ -19,6 +15,7 @@
   padding: 1rem;
   width: 10rem;
   border-radius: 37px 0 12px 22px;
+  z-index: 99;
 }
 
 .settings details {
@@ -32,4 +29,15 @@
 
 .btn-color-switch {
   display: block;
+}
+
+@media all and (max-width: 800px) {
+  .settings-label__text {
+    display: none;
+  }
+
+  .settings {
+    height: 3rem;
+    width: 3rem;
+  }
 }

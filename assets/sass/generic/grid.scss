@@ -1,42 +1,42 @@
 .main-grid {
   display: grid;
   grid-template-columns: 2fr 3fr 1fr;
-  grid-template-rows:  1fr 1fr 1fr;
+  grid-template-rows: 3rem auto;
   grid-template-areas:
+      "pre-header pre-header pre-header"
       "sidebar header header"
       "sidebar content content"
       "sidebar content content"
       "support support support"
       "footer footer footer";
-
 }
 
 .site-header {
   grid-column-start: sidebar;
   grid-column-end: sidebar;
-  grid-row-start: 1;
+  grid-row-start: 2;
   grid-row-end: 3;
 }
 .site-main-content {
   grid-column-start: content;
   grid-column-end: content;
-  grid-row-start: 1;
-  grid-row-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
 }
 
 .site-support {
   grid-column-start: support;
   grid-column-end: support;
-  grid-row-start: 4;
-  grid-row-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 5;
   display: flex;
 }
 
 .site-footer {
   grid-column-start: footer;
   grid-column-end: footer;
-  grid-row-start: 5;
-  grid-row-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 6;
 }
 
 

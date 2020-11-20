@@ -6,6 +6,7 @@
   z-index: 1;
 }
 
+
 @media all and (min-width: 800px) {
   .article.article--in-list::before {
     // these are set inline when the element is rendered, falling back to default values.
@@ -13,7 +14,7 @@
     --this-skew: 1deg;
 
     content: "";
-    background: #fff;
+    background: var(--color-bg-box, #fff);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -28,7 +29,7 @@
 
 @media all and (max-width: 800px) {
   .article.article--in-list {
-    background: #fff;
+    background: var(--color-bg-box, #fff);
     padding: 1rem;
   }
 }

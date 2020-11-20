@@ -10,14 +10,18 @@
     <meta keywords="{{ with .Params.Tags }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Section }} {{ with .Params.Categories }}{{ range . }}{{. }} {{ end }}{{ end }} {{ .Site.Params.Keywords }}">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧙‍♂️</text></svg>">
     {{ with $.Params.is_next }}
-    <meta name=“robots“ content=“noindex, nofollow“ />
+    <meta name="robots" content="noindex, nofollow" />
     {{ end }}
     {{ $sass := resources.Get "sass/main.scss" }}
     {{ $style := $sass | resources.ToCSS | minify }}
-    <style>
-        {{ $style.Content | safeCSS }}
-    </style>
-    <!-- <style type="text/css">{{- ((resources.Get "css/style.css" | minify).Content | safeCSS ) }}</style> -->
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    
+    {{ $pageStyle := resources.Get (printf "sass/%s.scss" .Kind) -}}
+    {{- with $pageStyle -}}
+    {{- $pageStyleCss := $pageStyle | resources.ToCSS | minify -}}
+        <link rel="stylesheet" href="{{ $pageStyleCss.Permalink }}">
+    {{- end -}}
+
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
@@ -26,38 +30,35 @@
 </head>
 <body class="{{ with .Kind }}type-{{ . }} {{ end }}{{ with .Section }}section-{{ . }}{{ end }}">
     <script type="text/javascript">{{- ((resources.Get "js/theme.js" | minify).Content | safeJS ) }}</script>
+    
+    <script type="text/javascript" src="{{- ((resources.Get "js/webcomponent.colorswitch.js" | minify).Permalink ) }}"></script>
+    <script type="text/javascript" src="{{- ((resources.Get "js/webcomponent.darkmode.js" | minify).Permalink ) }}"></script>
+    <script type="text/javascript" src="{{- ((resources.Get "js/webcomponent.fontsize.js" | minify).Permalink ) }}"></script>
+    <script type="text/javascript" src="{{- ((resources.Get "js/webcomponent.contentwidth.js" | minify).Permalink ) }}"></script>
     <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">{{ i18n "widget_color_changer_keep" }}</span>
     <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">{{ i18n "widget_color_changer_random" }}</span>
+    
     <section class="main-grid">
-    <header class="site-header">
-    <nav role="navigation" id="navigation" aria-label="Main Navigation">
-        <ul class="nav-main">
-            {{ $currentPage := . }}
-            {{- range .Site.Menus.main -}}
-            {{ $isCurrent := eq .URL $currentPage.RelPermalink }}
-            <li class="nav-item{{ if $isCurrent }} nav-item--active{{ end }}">
-                <a href="{{ .URL }}" data-perm="{{ $currentPage.RelPermalink }}" {{ if $isCurrent }}class="wavy-text" data-css-text="{{ .Name | replaceRE "[gjyqp ]" "a" }}"{{ end }}>{{ .Name }}</a>
-            </li>{{- end -}}
-        </ul>
-    </nav>
-    <section class="settings">
-        <details>
-            <summary>Settings</summary>
-            <div class="settings-inner">
-                <label for="btn_schema" class="settings-field">{{ i18n "ui_settings_color" }}<br>
-                    <button id="btn_schema" class="btn-color-switch"></button>
-                </label>
-                <label for="resizer" class="settings-field">{{ i18n "ui_settings_content_width"}}<br>
-                    <select name="resize" id="resizer">
-                        <option value="40">{{ i18n "ui_settings_small" }}</option>
-                        <option value="60">{{ i18n "ui_settings_medium" }}</option>
-                        <option value="80">{{ i18n "ui_settings_large" }}</option>
-                    </select>
-                </label>
-            </div>
-        </details>
-</section>
-    </header>
+    
+        <header class="pre-header">
+            <kg-colorswitcher>Color theme</kg-colorswitcher>
+            <kg-darkmode>Dark mode</kg-darkmode>
+            <kg-fontsize>Font size</kg-fontsize>
+            <kg-contentwidth>Content width</kg-contentwidth>
+        </header>
+    
+        <header class="site-header">
+            <nav role="navigation" id="navigation" aria-label="Main Navigation">
+                <ul class="nav-main">
+                    {{ $currentPage := . }}
+                    {{- range .Site.Menus.main -}}
+                    {{ $isCurrent := eq .URL $currentPage.RelPermalink }}
+                    <li class="nav-item{{ if $isCurrent }} nav-item--active{{ end }}">
+                        <a href="{{ .URL }}" data-perm="{{ $currentPage.RelPermalink }}" {{ if $isCurrent }}class="wavy-text" data-css-text="{{ .Name | replaceRE "[gjyqp ]" "a" }}"{{ end }}>{{ .Name }}</a>
+                    </li>{{- end -}}
+                </ul>
+            </nav>
+        </header>
 
     <section class="site-main-content">
         {{- block "main" . -}}
@@ -70,18 +71,20 @@
     </section>
 
     <footer class="site-footer footer">
-
+        {{ $footerNav := .Site.Menus.footer }}
+        {{ $currentPage := . }}
+        {{ with $footerNav }}
         <nav role="navigation" id="footer-navigation" aria-label="Secondary Navigation">
         <p>{{ i18n "ui_more_sections" }} </p>
         <ul class="nav-footer">
-            {{ $currentPage := . }}
-            {{- range .Site.Menus.footer -}}
+            {{- range . -}}
             {{ $isCurrent := eq .URL $currentPage.RelPermalink }}
             <li class="nav-item{{ if $isCurrent }} nav-item--active{{ end }}">
                 <a href="{{ .URL }}">{{ .Name }}</a>
             </li>{{- end -}}
             </ul>
         </nav>
+        {{ end }}
 
 
         <div class="left">

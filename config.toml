@@ -5,7 +5,7 @@ title = "KevOps — DevOps, Cooking, and everything else I want to write about"
 theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
 publishDir = "docs"
 # ignoreErrors = ["error-output-taxonomy"]
-
+disableLanguages = ["es"]
 [params]
     avatar_src = "images/general/kevin-gimbel-2020.jpg"
     avatar_alt = "A Selfie of me"

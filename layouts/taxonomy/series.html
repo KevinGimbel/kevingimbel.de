@@ -2,11 +2,30 @@
 {{ with .Site.Params.debug }}
 {{ partial "debug.html" "taxonomy/series.html" }}
 {{ end }}
-<main id="main" class="main">
-    {{ .Content }}
-    
-    {{ range .Data.Pages }}
-        {{ .Render "article-preview-default" }}
+{{- $borderStyle := partial "helper-border-radius.html" . -}}
+<main id="main" {{ printf "style=%q" $borderStyle | safeHTMLAttr }} class="main {{ .Section }}">
+    <section class="article-list__intro">
+        {{ with .Content }}
+            {{ . }}
+        {{ end }}
+        <a href="">Categories</a>
+    </section>
+
+    {{ partial "page-nav.html" . }}
+
+    {{ $pages := .Data.Pages }}
+    {{ range $pages.GroupByDate "2006" }}
+        <header class="article-list__header">
+            <h2 id="{{ .Key }}" class="section-headline">{{ .Key }}</h2>
+            <p>{{ i18n "ui_post_count_in_year" . }} | <a href="#years">{{ i18n "ui_back_to_navigation" }}</a></p>
+        </header>
+        {{ range .Pages }}
+            {{- if (fileExists (printf "layouts/_default/article-preview-%s.html" .Params.Type)) -}}
+                {{ .Render (printf "article-preview-%s" .Params.Type) }}
+            {{ else }}
+                {{ .Render "article-preview-default" }}
+            {{- end }}
+        {{ end }}
     {{ end }}
 </main>
 {{ end }}

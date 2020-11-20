@@ -9,21 +9,17 @@
   margin-bottom: 1.5rem;
 }
 
-.article-list__intro,
 .page-content,
 .article-single {
+  --local-border-radius: var(--this-border-radius, --border-radius-fancy-4);
+
   background: var(--color-bg-box);
   padding: 2rem;
   margin: 1rem 2rem 2rem 0;
   max-width: var(--content-max-width, 80rem);
   margin: 0 auto;
   // border-radius: 4px 29px 7px 26px;
-  border-radius: var(--border-radius-fancy-2);
-}
-
-.article-list__intro {
-  max-width: 60rem;
-  margin: 1rem 0;
+  border-radius: var(--local-border-radius);
 }
 
 p code,
@@ -31,7 +27,7 @@ li code {
   background: var(--color-secondary);
   color: var(--color-main);
   padding: .125rem .25rem;
-  border-radius: 3px;
+  border-radius: 9px 5px 7px 3px;
 }
 
 .publish-date {
@@ -53,7 +49,7 @@ blockquote {
 }
 
 table {
-  background: #fff;
+  background: var(--color-bg-box, #fff);
   border-spacing: unset;
   border-right: 1px solid;
   border-left: 1px solid;

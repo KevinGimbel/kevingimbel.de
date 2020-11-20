@@ -15,8 +15,9 @@
 {{ with .Site.Params.debug }}
 {{ partial "debug.html" "blog/single.html" }}
 {{ end }}
+{{- $borderStyle := partial "helper-border-radius.html" . -}}
 <main id="main" class="main">
-    <section class="article-single">
+<section class="article-single" {{ printf "style=%q" $borderStyle | safeHTMLAttr }}> 
         <header class="article-header">
             {{ partial "single-header.html" . }}
         </header>

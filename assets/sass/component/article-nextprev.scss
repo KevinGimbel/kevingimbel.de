@@ -1,7 +1,7 @@
 .article-nextprev {
   grid-row-start: top-left;
   grid-row-end: top-right;
-  background: #fff;
+  background: var(--color-bg-box, #fff);
   margin: 2rem;
   border-radius: var(--border-radius-fancy-3);
   overflow: hidden;

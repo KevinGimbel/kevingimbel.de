@@ -146,3 +146,21 @@ other = "Next article"
 
 [ui_prevnext_previous]
 other = "Previous article"
+
+[settings]
+other = "Settings"
+
+[ui_other_languages]
+other = "Other languages"
+
+[ui_tag_list_intro]
+other = "All tags"
+
+[ui_all_in_category]
+other = "All articles categorized with \"{{ .Title }}\""
+
+[ui_all_in_tag]
+other = "All articles tagged with \"{{ .Title }}\""
+
+[ui_enable_dark_mode]
+other = "Enable dark mode"

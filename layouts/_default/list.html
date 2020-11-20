@@ -2,7 +2,8 @@
 {{ with .Site.Params.debug }}
 {{ partial "debug.html" "_default/list.html" }}
 {{ end }}
-<main id="main {{ .Section }}" class="main">
+{{- $borderStyle := partial "helper-border-radius.html" . -}}
+<main id="main" {{ printf "style=%q" $borderStyle | safeHTMLAttr }} class="main {{ .Section }}">
     {{ with .Content }}
     <section class="article-list__intro">
         {{ . }}
@@ -12,8 +13,15 @@
     {{ partial "page-nav.html" . }}
 
     {{ partial "subscribe-rss.html" . }}
-
-    {{ range (where .Site.Pages "Section" .Section).GroupByDate "2006" }}
+    {{ $pages := (where .Site.Pages "Section" .Section) }}
+    {{ $currentSection := .Section }}
+    {{ range .Site.Home.AllTranslations }}
+        {{ range (where .Pages "Section" $currentSection ) }}
+            {{ $pages = $pages | lang.Merge .Pages }}
+        {{ end }}
+    {{ end }}
+    
+    {{ range $pages.GroupByDate "2006" }}
         <header class="article-list__header">
             <h2 id="{{ .Key }}" class="section-headline">{{ .Key }}</h2>
             <p>{{ i18n "ui_post_count_in_year" . }} | <a href="#years">{{ i18n "ui_back_to_navigation" }}</a></p>
