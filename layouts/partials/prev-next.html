@@ -4,7 +4,7 @@
   {{ if ne .NextInSection nil }}
       <a class="txt--medium" href="{{.NextInSection.Permalink}}" title="{{ .NextInSection.Title }}">{{ .NextInSection.Title }}</a>
   {{ else }}
-      <span class="txt--bold txt--medium">No newer article.</span>
+      <span class="txt--bold txt--medium">{{ i18n "ui_no_new_article" }}</span>
   {{ end }}
   </article>
 
@@ -13,7 +13,7 @@
   {{ if ne .PrevInSection nil }}
       <a class="txt--medium" href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}">{{ .PrevInSection.Title }}</a>
       {{ else }}
-      <span class="txt--bold txt--medium">The End.</span>
+      <span class="txt--bold txt--medium">{{ i18n "ui_no_older_article" }}</span>
       {{ end }}
   </article>
 </section>

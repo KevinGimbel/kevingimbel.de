@@ -147,6 +147,12 @@ other = "Next article"
 [ui_prevnext_previous]
 other = "Previous article"
 
+[ui_no_new_article]
+other = "No newer article"
+
+[ui_no_older_article]
+other = "The End."
+
 [settings]
 other = "Settings"
 
