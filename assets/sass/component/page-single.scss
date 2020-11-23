@@ -52,7 +52,6 @@ body.type-page .site-header {
 body.type-page .nav-main {
   padding-left: 1rem;
   padding-top: 0;
-  line-height: 0;
 }
 
 body.type-page .nav-main li {
@@ -63,7 +62,13 @@ body.type-page .nav-main li {
   body.type-page:not(.section-blog) .main {
     padding-left: 2rem;
   }
+}
+
+@media all and (min-width: 1200px) {
+  body.type-page .nav-main {
+    line-height: 0;
   }
+}
   
 @media all and (max-width: 800px) {
     body.type-page .article-content p,

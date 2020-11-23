@@ -107,5 +107,7 @@ hr {
 @media all and (max-width: 800px) {
   .pre-header {
     padding: 1rem .5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
