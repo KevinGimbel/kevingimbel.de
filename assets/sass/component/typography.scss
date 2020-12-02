@@ -1,3 +1,5 @@
+// @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+
 .txt--small {
   font-size: 1rem;
 }
@@ -58,4 +60,13 @@ h3 {
   min-height: 90vh;
   display: flex;
   align-items: center;
+}
+
+@font-face {
+  font-family: "Vidaloka";
+  src: url("/font/vidaloka/Vidaloka-Regular.ttf") format("ttf");
+}
+
+h1, h2, h3, h4, .head, .intro-splash, .nav-main {
+  font-family: 'Vidaloka', serif;
 }

@@ -14,15 +14,14 @@ class FontSizer extends HTMLElement {
     this.render();
 
     this.addEventListener("click", this.setFontSizeOnClick);
+  }
 
-    // read and applu theme from local storage
-    document.addEventListener("DOMContentLoaded", () => {
-      let value = window.localStorage.getItem(this.LOCAL_STORAGE_KEY);
-      if (value != null) {
-        this.state.fontSize = value;
-        this.setFontSize();
-      }
-    });
+  connectedCallback() {
+    let value = window.localStorage.getItem(this.LOCAL_STORAGE_KEY);
+    if (value != null) {
+      this.state.fontSize = value;
+      this.setFontSize();
+    }
   }
 
   // helper to get this components css 

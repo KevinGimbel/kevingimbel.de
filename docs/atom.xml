@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><title type="html">DevOps, automation, and cooking. Sometimes book reviews. on KevOps — DevOps, Cooking, and everything else I want to write about (%!s(&lt;nil>))</title><link href="https://kevingimbel.de/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><link href="https://kevingimbel.de/de/" rel="alternate" type="text/html" hreflang="de" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/de/index.xml" rel="alternate" type="application/rss+xml" hreflang="de" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/de/atom.xml" rel="alternate" type="application/atom+xml" hreflang="de" title="[%!s(<nil>)] Atom"/><link href="https://kevingimbel.de/es/" rel="alternate" type="text/html" hreflang="es" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/es/index.xml" rel="alternate" type="application/rss+xml" hreflang="es" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/es/atom.xml" rel="alternate" type="application/atom+xml" hreflang="es" title="[%!s(<nil>)] Atom"/><updated>2020-10-27T09:11:58+01:00</updated><id>https://kevingimbel.de/</id><entry><title type="html">Blog</title><link href="https://kevingimbel.de/blog/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/de/blog/?utm_source=atom_feed" rel="alternate" type="text/html" hreflang="de"/><id>https://kevingimbel.de/blog/</id><published>2020-10-12T00:00:00+00:00</published><updated>2020-10-12T00:00:00+00:00</updated><content type="html"></content></entry></feed>
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US">
+    <generator uri="https://gohugo.io/" version="0.78.2">Hugo</generator><title type="html"><![CDATA[DevOps, automation, and cooking. Sometimes book reviews. on KevOps — DevOps, Cooking, and everything else I want to write about (%!s(<nil>))]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+        
+        
+                <link href="https://kevingimbel.de/de/" rel="alternate" type="text/html" hreflang="de" title="[%!s(<nil>)] HTML" />
+                <link href="https://kevingimbel.de/de/index.xml" rel="alternate" type="application/rss+xml" hreflang="de" title="[%!s(<nil>)] RSS" />
+                <link href="https://kevingimbel.de/de/atom.xml" rel="alternate" type="application/atom+xml" hreflang="de" title="[%!s(<nil>)] Atom" />
+    <updated>2020-11-24T09:34:33+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Blog]]></title>
+            <link href="https://kevingimbel.de/blog/?utm_source=atom_feed" rel="alternate" type="text/html" /><link href="https://kevingimbel.de/de/blog/?utm_source=atom_feed" rel="alternate" type="text/html" hreflang="de" />
+            
+            
+                <id>https://kevingimbel.de/blog/</id>
+            
+            
+            <published>2020-11-02T00:00:00+00:00</published>
+            <updated>2020-11-02T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[]]></content>
+            
+                 
+                    
+                 
+                    
+                 
+                    
+                
+            
+        </entry>
+    
+</feed>

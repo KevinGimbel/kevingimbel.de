@@ -1,43 +1,16 @@
-.settings summary {
-  text-align: right;
-
-  &:hover {
-    cursor: pointer;
-  }
+.btn-preheader-toggle {
+  display: none;
 }
+@media all and (max-width: 1200px) {
+  .btn-preheader-toggle {
+    display: block;
+    padding: .25em .5em;
+    font-size: 1em;
+    float: right;
 
-.settings-inner {
-  font-size: .85rem;
-  position: absolute;
-  top: 2rem;
-  right: 0;
-  background: var(--color-secondary);
-  padding: 1rem;
-  width: 10rem;
-  border-radius: 37px 0 12px 22px;
-  z-index: 99;
-}
-
-.settings details {
-  position: relative;
-}
-
-.settings-field {
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.btn-color-switch {
-  display: block;
-}
-
-@media all and (max-width: 800px) {
-  .settings-label__text {
-    display: none;
-  }
-
-  .settings {
-    height: 3rem;
-    width: 3rem;
+    &:hover, &:active {
+      background: var(--color-main);
+      color: var(--color-secondary);
+    }
   }
 }

@@ -40,7 +40,7 @@
     
     <section class="main-grid">
     
-        <header class="pre-header">
+        <header class="pre-header" id="pre-header">
             <kg-colorswitcher>Color theme</kg-colorswitcher>
             <kg-darkmode>Dark mode</kg-darkmode>
             <kg-fontsize>Font size</kg-fontsize>
@@ -56,8 +56,9 @@
                     <li class="nav-item{{ if $isCurrent }} nav-item--active{{ end }}">
                         <a href="{{ .URL }}" data-perm="{{ $currentPage.RelPermalink }}" {{ if $isCurrent }}class="wavy-text" data-css-text="{{ .Name | replaceRE "[gjyqp ]" "a" }}"{{ end }}>{{ .Name }}</a>
                     </li>{{- end -}}
-                </ul>
-            </nav>
+                    <button id="pre-header-toggle" class="btn-preheader-toggle">Settings</button>
+                    </ul>
+                    </nav>
         </header>
 
     <section class="site-main-content">

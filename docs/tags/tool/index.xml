@@ -1,7 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tool on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/tool/</link><description>Recent content in tool on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/tool/index.xml" rel="self" type="application/rss+xml"/><item><title>Passt</title><link>https://kevingimbel.de/project/passt/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/project/passt/</guid><description>passt is a CLI tool and library that can be used to generate random strings, e.g. for use as passwords. It is very &amp;ldquo;weak&amp;rdquo; in that it doesn&amp;rsquo;t use any &amp;ldquo;real&amp;rdquo; cryptography and should therefor not be used as an actual password generator.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tool on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/tool/</link>
+    <description>Recent content in tool on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grep in Action</title>
+      <link>https://kevingimbel.de/blog/2020/11/grep-in-action/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/11/grep-in-action/</guid>
+      <description>grep is a CLI tool created in 1974 that is pre-installed on any Linux/Unix-like/BSD* system. grep is an acronym and stands for _&amp;ldquo;globally search for a regular expression and print matching lines&amp;rdquo;_ - quite a mouth full but a good description of what grep does. The more I worked in the Sys-/DevOps domain, the more I found myself using grep and awk to select parts of files for further processing. In this article I want to highlight some things grep can do that _I didn&amp;rsquo;t know about but wish I did_ when I started using it.</description>
+    </item>
+    
+    <item>
+      <title>Passt</title>
+      <link>https://kevingimbel.de/project/passt/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/project/passt/</guid>
+      <description>passt is a CLI tool and library that can be used to generate random strings, e.g. for use as passwords. It is very &amp;ldquo;weak&amp;rdquo; in that it doesn&amp;rsquo;t use any &amp;ldquo;real&amp;rdquo; cryptography and should therefor not be used as an actual password generator.
 You can use passt to generate random test input when testing software tho.
 Up to date information can be found on GitHub https://github.com/kevingimbel/passt.
 Usage: CLI Install
-$ cargo install passt Arguments</description></item><item><title>License</title><link>https://kevingimbel.de/project/license/</link><pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/project/license/</guid><description>license is a CLI tool for generation open source license files. It&amp;rsquo;s written in TypeScript and executed with Deno, a secure runtime for JavaScript.
+$ cargo install passt Arguments</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://kevingimbel.de/project/license/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/project/license/</guid>
+      <description>license is a CLI tool for generation open source license files. It&amp;rsquo;s written in TypeScript and executed with Deno, a secure runtime for JavaScript.
 license is the successor of a Golang project of the same name I started years ago and contains more function that I never came around to implement. All features and command can be found on GitHub at kevingimbel/license-cli.
-Highlights Search for a license by keywords The example below shows all licenses matching the keyword &amp;ldquo;public-use&amp;rdquo;</description></item></channel></rss>
+Highlights Search for a license by keywords The example below shows all licenses matching the keyword &amp;ldquo;public-use&amp;rdquo;</description>
+    </item>
+    
+  </channel>
+</rss>

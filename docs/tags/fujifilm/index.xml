@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>fujifilm on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/fujifilm/</link><description>Recent content in fujifilm on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Mon, 19 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/fujifilm/index.xml" rel="self" type="application/rss+xml"/><item><title>Theater car park</title><link>https://kevingimbel.de/photography/2020/10/theater-car-park/</link><pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/10/theater-car-park/</guid><description>I first discovered the Theater car park some months ago when having a walk through Warmer Damm and wanted to photograph it ever since. Sadly, I often forget to take my camera when I leave the house and so it took a while until I finally thought of taking it.
-I&amp;rsquo;m quite pleased with the result, you can find an unedited version on my Instagram @kevingimbel.</description></item><item><title>Foggy City</title><link>https://kevingimbel.de/photography/2020/01/foggy-city/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/foggy-city/</guid><description>The city in thick fog, seen from my kitchen window.</description></item><item><title>Sunny Morning Rainbow</title><link>https://kevingimbel.de/photography/2020/01/sunny-morning-rainbow/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/sunny-morning-rainbow/</guid><description>Just a quick shot from my window. Enjoy your day! :)</description></item><item><title>Fasanerie</title><link>https://kevingimbel.de/photography/2019/10/fasanerie/</link><pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2019/10/fasanerie/</guid><description>&amp;ldquo;Fasanerie&amp;rdquo; is the name of a local wildlife and forest park. It&amp;rsquo;s free to enter and a very nice place to spent a family day.
-All images were edited with Darktable, a free open source Adobe Lightroom alternative.</description></item><item><title>City Walk Wiesbaden</title><link>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</link><pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</guid><description>Some pictures I took while walking through the city of Wiesbaden.
-All images in this post were taken with my Fujifilm X30 camera.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fujifilm on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/fujifilm/</link>
+    <description>Recent content in fujifilm on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Mon, 19 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/fujifilm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Theater car park</title>
+      <link>https://kevingimbel.de/photography/2020/10/theater-car-park/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/10/theater-car-park/</guid>
+      <description>I first discovered the Theater car park some months ago when having a walk through Warmer Damm and wanted to photograph it ever since. Sadly, I often forget to take my camera when I leave the house and so it took a while until I finally thought of taking it.
+I&amp;rsquo;m quite pleased with the result, you can find an unedited version on my Instagram @kevingimbel.</description>
+    </item>
+    
+    <item>
+      <title>Foggy City</title>
+      <link>https://kevingimbel.de/photography/2020/01/foggy-city/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/foggy-city/</guid>
+      <description>The city in thick fog, seen from my kitchen window.</description>
+    </item>
+    
+    <item>
+      <title>Sunny Morning Rainbow</title>
+      <link>https://kevingimbel.de/photography/2020/01/sunny-morning-rainbow/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/sunny-morning-rainbow/</guid>
+      <description>Just a quick shot from my window. Enjoy your day! :)</description>
+    </item>
+    
+    <item>
+      <title>Fasanerie</title>
+      <link>https://kevingimbel.de/photography/2019/10/fasanerie/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2019/10/fasanerie/</guid>
+      <description>&amp;ldquo;Fasanerie&amp;rdquo; is the name of a local wildlife and forest park. It&amp;rsquo;s free to enter and a very nice place to spent a family day.
+All images were edited with Darktable, a free open source Adobe Lightroom alternative.</description>
+    </item>
+    
+    <item>
+      <title>City Walk Wiesbaden</title>
+      <link>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</guid>
+      <description>Some pictures I took while walking through the city of Wiesbaden.
+All images in this post were taken with my Fujifilm X30 camera.</description>
+    </item>
+    
+  </channel>
+</rss>

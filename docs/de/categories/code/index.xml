@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>code on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/de/categories/code/</link><description>Recent content in code on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>de_DE</language><lastBuildDate>Wed, 30 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/de/categories/code/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust Compiler Umgebungsvariablen</title><link>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</link><pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</guid><description>Rust ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &amp;ldquo;schlau&amp;rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens cargo ausgeliefert. Cargo ist ähnlich wie npm oder maven und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</description></item><item><title>Rust CLI mit Docker ausliefern</title><link>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</guid><description>Vor kurzem habe ich einen Weg gefunden Rust CLI Programme über Docker auszuliefern. Für meinen Arbeitgeber Synoa habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit Homebrew möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/de/categories/code/</link>
+    <description>Recent content in code on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de_DE</language>
+    <lastBuildDate>Wed, 30 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/de/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust Compiler Umgebungsvariablen</title>
+      <link>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</guid>
+      <description>Rust ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &amp;ldquo;schlau&amp;rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens cargo ausgeliefert. Cargo ist ähnlich wie npm oder maven und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</description>
+    </item>
+    
+    <item>
+      <title>Rust CLI mit Docker ausliefern</title>
+      <link>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</guid>
+      <description>Vor kurzem habe ich einen Weg gefunden Rust CLI Programme über Docker auszuliefern. Für meinen Arbeitgeber Synoa habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit Homebrew möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen.</description>
+    </item>
+    
+  </channel>
+</rss>

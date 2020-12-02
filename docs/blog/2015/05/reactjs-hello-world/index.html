@@ -1,61 +1,322 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>ReactJS - Hello World! &mdash; KevOps — DevOps, Cooking, and everything else I want to write about</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="react  blog coding tutorial frontend"><link rel=icon href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIj7wn6eZ4oCN4pmC77iPPC90ZXh0Pjwvc3ZnPg=="><style type=text/css>*{margin:0;padding:0;box-sizing:inherit}:root{--color-main: #403D58;--color-secondary: #dea584;--color-bg-box: #fefefe;--color-bg-page: #f1f1f1;--color-font-fg: #fff}html,body{box-sizing:border-box;font:20px/1.65 sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;background:var(--color-bg-page);border:.5rem solid var(--color-main)}::selection{background-color:var(--color-main);color:var(--color-secondary)}abbr{cursor:help;text-decoration:none;border-bottom:2px dotted var(--color-main)}a{color:var(--color-main);font-weight:700}.footer a,.author a,.intro-text a{color:var(--color-secondary);font-weight:700}.fg-accent{color:var(--color-secondary)}.x-small{font-size:.85rem}.xx-small{font-size:.65rem}.txt--ultra-large{font-size:4rem}.txt--large{font-size:2.5rem}.txt--medium{font-size:1.8rem}h1{font-size:2.46rem}h2{font-size:1.8rem}h3{font-size:1.6rem}.article-content h2,.article-content h3{margin-top:2rem}.section-headline{font-size:3.75em;margin-top:2rem;line-height:.75}.intro-splash{display:block;min-height:90vh;display:flex;align-items:center}.intro-text{padding:2rem;background:#222;color:var(--color-font-fg);font-size:140%}.footer{padding:2rem}hr{border:none;background:var(--color-main);height:2px}.footer{background:#222;color:var(--color-font-fg)}.main{padding-top:1.5rem;border-bottom:0;min-height:100vh}.main p{margin-top:1rem;margin-bottom:1.5rem}.exif{padding:.5rem;background:var(--color-secondary)}.exif li{display:inline-block;background:#333;color:#ccc;border-radius:3px;padding:.125rem .5rem;font-size:.8rem}.exif .label{font-size:.75rem}@media all and (max-width:800px){.exif li{margin-top:.5rem}.gallery img{max-width:100%}}figure img,figure picture{display:block;height:auto;width:auto;max-width:100%}.art figure img,.art figure picture,.photography figure img,.photography figure picture{width:auto}figcaption p{display:block;line-height:1.65;background:var(--color-secondary);color:var(--color-font-fg);margin-top:0;padding:.5rem;text-align:right;font-size:var(--font-small,.85rem)}figure{position:relative;z-index:1}figure+figure{margin-top:2rem}figcaption{display:flex;justify-content:flex-end}figcaption p{background:var(--color-secondary);color:var(--color-main);font-size:.85em;margin-top:1.5rem;position:relative}figcaption p::before{content:"";width:.15em;height:5rem;background:var(--color-secondary);position:absolute;left:1rem;top:-5rem;z-index:1}figure img,figure picture{position:relative;z-index:2}@media all and (min-width:800px){figure{width:100%}figcaption p{width:50%}.gallery{display:flex;flex-wrap:wrap;justify-content:flex-start}figure.gallery__figure{margin:0;padding:.25rem}.gallery__figure img,.gallery__figure picture{display:block;height:auto;width:100%;margin:0 auto}figure.gallery__figure--w-100{width:100%}figure.gallery__figure--w-50{width:50%}figure.gallery__figure--w-33{width:33%}figure.gallery__figure--w-25{width:25%}}p code,li code{background:var(--color-secondary);color:var(--color-main);padding:.125rem .25rem;border-radius:3px}.page-nav{background:var(--color-secondary);padding:1rem;margin-top:1rem}.page-nav a:not(:last-of-type){margin-right:.5rem}.subscribe-via{background:var(--color-main);color:var(--color-font-fg);padding:.1rem 1rem}.subscribe-via a{color:var(--color-font-fg)}.page-nav--label{display:block;font-size:.75em}.article-content{padding-bottom:2rem;max-width:40rem}.article-single{width:100%;max-width:60rem;margin:0 auto}.article-header h1{font-size:3.2rem}.article-content ol,.article-content ul{margin-left:2rem}.article-list__header{margin-bottom:2rem}.article-list__intro,.page-content{background:var(--color-bg-box);padding:2rem;margin:1rem 2rem 2rem 0}.article.article--in-list{position:relative;margin-bottom:10rem;max-width:55rem}.article-preview__heading{font-size:2.75rem}.publish-date{font-size:.85em}.article-preview__publish-date a{opacity:.75;text-decoration:none}pre{padding:1rem;overflow:auto}.tag-list__item{display:inline-block;background:var(--color-main);color:var(--color-secondary);border-radius:3px;padding:.125rem .25rem;margin-bottom:.5rem;margin-right:.5rem}.tag-list__item a{color:var(--color-secondary)}@media all and (min-width:800px){.footer,.author,.support{display:flex;justify-content:space-between}.author .left,.support .left,.footer .left{margin-bottom:0}}.author .left,.support .left,.footer .left{margin-bottom:2rem}.author,.support{background:var(--color-main);color:var(--color-font-fg);padding:4rem 2rem}.support+.author{margin-top:0}.support{background:var(--color-secondary);color:var(--color-main);flex-direction:column}.support a{color:var(--color-main)}.author p,.support p{margin-bottom:0}@media all and (min-width:800px){.author .right{padding-left:2rem}.author .avatar{margin-left:2rem}}.author .avatar{max-width:200px;transition:all linear 60s}.author .avatar:hover{animation:avatar-hue linear 15s infinite}@keyframes avatar-hue{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}.age-note{background:#d46767;border:.35rem solid #b22222;padding:1rem 2rem;color:#222}.tags-categories,.license{background:var(--color-bg-box);padding:2rem}.side-by-side img{width:auto;max-width:100%}@media all and (min-width:640px){.tags-categories{display:flex}.tags-categories .tags{margin-left:2rem}.side-by-side{display:flex;flex-direction:row;align-items:center;margin:2rem 0}.side-by-side.align-top{align-items:flex-start}.side-by-side.align-bottom{align-items:flex-end}.side-by-side__first{margin-bottom:3rem}.side-by-side__off-left{margin-left:-20vw}.side-by-side .small{max-width:40%;width:100%;padding:2rem}.side-by-side .bg{background:var(--color-main);color:var(--color-secondary)}.side-by-side .wide{max-width:60%}.w-40{width:40%}.w-50{width:50%}.w-60{width:60%}.side-by-side img,.side-by-side figure{max-width:100%;margin:0}}.note{background:var(--color-main);color:var(--color-font-fg);padding:1rem 1rem 1rem 2rem;border-left:.5rem solid var(--color-secondary);margin:2rem 1rem}.note__heading{font-weight:700;display:block}.taxonomy-list{display:flex;padding-bottom:2rem;align-content:flex-end;justify-content:space-between;flex-wrap:wrap}.taxonomy__item{width:20%;height:2rem;display:inline-block;padding:2rem 0}.taxonomy__item-inner{padding:1rem;background:var(--color-main);color:var(--color-secondary)}.taxonomy__item a{color:var(--color-secondary)}.article-note__content{font-size:1.3rem}.language-nav{font-size:.75rem}.language-nav ul{display:inline-block;list-style:none}blockquote{font-size:110%;font-style:italic;text-indent:1rem;border-left:.25rem solid var(--color-main);padding:.25rem 0;padding-left:1rem}.series__box:before{content:"";display:block;position:absolute;width:100%;height:100%;left:-1rem;top:-1rem;z-index:-1;border:2px solid var(--color-main)}.series__box{float:left;padding:2rem;margin:2rem;position:relative;background:var(--color-secondary);z-index:1;display:block;margin-left:-5vw}.tag-list__item{display:inline-block;background:var(--color-secondary);color:var(--color-main);padding:.125rem .25rem;border-radius:0;margin-bottom:.5rem;margin-right:.5rem;position:relative;padding:.25em .5em;z-index:1}.tag-list__item:before{content:"";width:100%;height:100%;border:2px solid var(--color-main);left:-.45em;top:-.45em;display:block;position:absolute;z-index:-1;transition:all linear .1s}.tag-list__item:hover::before{top:-.1rem;left:-.1rem}.tag-list__item a{color:var(--color-main);text-decoration:none}ul.tag-list,ul.category-list{margin-top:1rem}table{background:#fff;border-spacing:unset;border-right:1px solid;border-left:1px solid;width:calc(100% + 30rem);margin-left:-15rem}thead{background:var(--color-main);color:var(--color-secondary)}thead th{text-align:left;padding-left:.5rem}tbody td{padding:.5rem;border-bottom:1px solid #333}.intro-text{display:none}body.section-tags .intro-text,body.section-categories .intro-text{display:block}.rating-list{font-size:2rem}.support-cause-list__wrapper{display:flex;margin-top:2rem;justify-content:space-between}.support-cause-list{text-indent:1rem;margin-bottom:1rem}.support-cause-list li{margin-left:1rem}.support-cause-list .head{margin-left:-1rem;font-size:1.25em;list-style:none}.wavy-text{z-index:1;position:relative;display:block}.wavy-text::before{content:attr(data-css-text);width:100%;display:block;color:transparent;top:0;position:absolute;left:0;font-size:110%;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--color-secondary);z-index:2}.wavy-text--invert{--tmp-color-main: var(--color-main);--color-main: var(--color-secondary);--color-secondary: var(--tmp-color-main)}.wavy-text--inline{display:inline-block}.main-grid{display:grid;grid-template-columns:2fr 3fr 1fr;grid-template-rows:1fr 1fr 1fr;grid-template-areas:"sidebar header header" "sidebar content content" "sidebar content content" "support support support" "footer footer footer"}.site-header{grid-column-start:sidebar;grid-column-end:sidebar;grid-row-start:1;grid-row-end:3}.site-main-content{grid-column-start:content;grid-column-end:content;grid-row-start:1;grid-row-end:4}.site-support{grid-column-start:support;grid-column-end:support;grid-row-start:4;grid-row-end:4;display:flex}.site-footer{grid-column-start:footer;grid-column-end:footer;grid-row-start:5;grid-row-end:5}@media all and (min-width:1200px){.nav-main{display:block;background:0 0;padding-top:2rem;padding-left:3rem}.nav-main li{display:block;margin:2rem 1rem;font-size:2rem}.nav-main li:first-of-type{margin-top:0}.nav-main li a{color:var(--color-main)}}.nav-item{display:block;position:relative}.nav-item--active a{font-size:120%;text-decoration:none}.settings summary{text-align:right}.settings{position:absolute;top:1.5rem;right:1.5rem}.settings-inner{font-size:.85rem;position:absolute;top:2rem;right:0;background:var(--color-secondary);padding:1rem;width:10rem}.settings details{position:relative}.settings-field{display:block;margin-bottom:1rem}.btn-color-switch{display:block}@media all and (max-width:1200px){body{border:.125rem solid var(--color-main)}.site-header{grid-column-start:sidebar;grid-column-end:header;grid-row-start:1;grid-row-end:1}.site-main-content{grid-column-start:sidebar;grid-column-end:content;grid-row-start:1;grid-row-end:4}.site-support{grid-column-start:support;grid-column-end:support;grid-row-start:4;grid-row-end:4;flex-direction:column}.author{border:1px solid var(--color-secondary);border-style:inset}.site-footer{grid-column-start:footer;grid-column-end:footer;grid-row-start:5;grid-row-end:5}.support-cause-list__wrapper{display:flex;justify-content:space-between;flex-direction:row}ul.nav-main{display:block;padding:1rem}.nav-item{display:inline-block;padding-right:1rem}.intro-splash__content .txt--ultra-large{font-size:1.8rem}.intro-splash__content .txt--large,.intro-splash__content .txt--medium{font-size:1.2rem}.main{padding:1rem .5rem}.support-cause-list__wrapper{flex-direction:column}.article-header h1,.article-preview__heading{font-size:2.2rem}.article-list__intro,.page-content{margin:2rem 0;padding:1rem}}@media all and (max-width:800px){.main-grid{display:block}.article-content .side-by-side{padding:0 1rem}}.nav-footer li{display:inline-block;margin-right:1rem}body.type-page .article-content p,body.type-page .article-content h1,body.type-page .article-content h2,body.type-page .article-content h3,body.type-page .article-content h4,body.type-page .article-content h5,body.type-page .article-content h6,body.type-page .article-content ul,body.type-page .article-header{padding-left:2rem;padding-right:2rem}body.type-page figure{max-width:70rem;max-width:fit-content;margin:0 auto}body.type-page .site-header{grid-column-start:sidebar;grid-column-end:header;grid-row-start:unset;grid-row-end:1}body.type-page .site-main-content{grid-column-start:sidebar;grid-column-end:content;grid-row-start:1;grid-row-end:4}body.type-page .article-single,body.type-page .article-content{max-width:100%}body.type-page .site-header{display:flex;align-items:center;justify-content:space-between}body.type-page .nav-main{padding-left:1rem;padding-top:0}body.type-page .nav-main li{display:inline-block}@media all and (min-width:800px){body.type-page:not(.section-blog) .main{padding-left:2rem}}@media all and (max-width:800px){body.type-page .article-header{padding-left:1rem;padding-right:1rem}}</style><meta name=twitter:card content="summary"><meta name=twitter:site content="@kevingimbel"><meta name=twitter:creator content="@_kevinatari"><meta name=twitter:title content="ReactJS - Hello World!"><meta name=twitter:description content="This article is the first in a series about ReactJS, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ReactJS - Hello World! &mdash; KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="react  blog coding tutorial frontend  ">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧙‍♂️</text></svg>">
+    
+    
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/main.min.css">
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/page.min.css">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kevingimbel">
+    <meta name="twitter:creator" content="@_kevinatari">
+    <meta name="twitter:title" content="ReactJS - Hello World!">
+    <meta name="twitter:description" content="This article is the first in a series about ReactJS, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.
 React itself says one very important and true thing about itself:
- Lots of people use React as the V in MVC."></head><body class="type-page section-blog"><script type=text/javascript>(function(window,document,undefined){let theme=window.localStorage.getItem("kgde_theme");if(theme){var[colorMain,colorSecondary]=JSON.parse(theme).colors;document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}else{let themes=[["#123D3C","#90F072"],["#403D58","#dea584"],["#400E3B","#DCC78A"],["#17098D","#EADD1C"],["#233B07","#FFDD6D"],["#37059F","#D1D99F"]]
-var[colorMain,colorSecondary]=themes[Math.floor(Math.random()*themes.length)];document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}
-document.addEventListener('DOMContentLoaded',function(){let schema_btn=document.querySelector("#btn_schema");let theme=window.localStorage.getItem("kgde_theme");let text_keep=document.querySelector("#widget_color_changer_txt_keep").textContent;let text_random=document.querySelector("#widget_color_changer_txt_random").textContent;if(theme){schema_btn.textContent=text_random;}else{schema_btn.textContent=text_keep;}
-schema_btn.style.display="block";schema_btn.addEventListener('click',function(e){if(theme){window.localStorage.removeItem("kgde_theme");window.location=window.location;}else{window.localStorage.setItem("kgde_theme",JSON.stringify({colors:[colorMain,colorSecondary]}));window.location=window.location;}});let resizer=document.querySelector("#resizer");let article_content_el=document.querySelector(".article-single")||document.querySelector(".page-content");let width=window.localStorage.getItem("kgde_theme_width");if(!width){window.localStorage.setItem("kgde_theme_width",80);content_update_size(width,article_content_el);}
-if(resizer){let opts=resizer.querySelectorAll("option");opts.forEach(entry=>{entry.selected=entry.value==width;})}
-if(resizer&&article_content_el){if(width){content_update_size(width,article_content_el);}
-resizer.addEventListener("change",(event)=>{let size=event.target.value;content_update_size(size,article_content_el);window.localStorage.setItem("kgde_theme_width",size);})}else{resizer.parentNode.style.display="none";}});function content_update_size(size,element){switch(size){case "full":element.style+="";break;default:element.style=`max-width: ${size}rem; margin: 0 auto;`;break;}}}(window,document));</script><span style=display:none aria-hidden=true id=widget_color_changer_txt_keep>Keep current color theme</span>
-<span style=display:none aria-hidden=true id=widget_color_changer_txt_random>Use random color theme</span><section class=main-grid><header class=site-header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li class=nav-item><a href=/ data-perm=/blog/2015/05/reactjs-hello-world/>Home</a></li><li class=nav-item><a href=/blog/ data-perm=/blog/2015/05/reactjs-hello-world/>Blog</a></li><li class=nav-item><a href=/about/ data-perm=/blog/2015/05/reactjs-hello-world/>About</a></li><li class=nav-item><a href=/photography/ data-perm=/blog/2015/05/reactjs-hello-world/>Photography</a></li></ul></nav><section class=settings><details><summary>Settings</summary><div class=settings-inner><label for=btn_schema class=settings-field>Color<br><button id=btn_schema class=btn-color-switch></button></label>
-<label for=resizer class=settings-field>Content width<br><select name=resize id=resizer>
-<option value=40>Small</option>
-<option value=60>Medium</option>
-<option value=80>Large</option>
-<option value=full>Full</option></select></label></div></details></section></header><section class=site-main-content><main id=main class=main><section class=article-single><header class=article-header><section class=age-note><h2>ATTENTION!</h2><p>This article is over 4 years old, it may be outdated!</p></section><h1>ReactJS - Hello World!</h1><p class=publish-date>Published on 05/7/2015</p></header><article class=article-content><div class=content><p>This article is the first in a series about <a href=http://facebook.github.io/react/>ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p><p>React itself says one very important and true thing about itself:</p><blockquote><p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it&rsquo;s easy to try it out on a small feature in an existing project.</p></blockquote><p>Instead of frameworks such as <a href=https://angularjs.org/>Angular</a> or <a href=http://emberjs.com/>Ember</a>, React only covers the visual part and state of an UI. It won&rsquo;t help you structure your applicationit will not do anything other than render DOM parts and control their state. At this, however, React is amazingly good!</p><h3 id=jsx-like-syntax>JSX-like syntax</h3><p>React uses a XML like syntax called JSX. JSX seems horrible at first, at least to me, but becomes really powerful once you&rsquo;re used to it. Here is an example of two <code>div</code>s, one written in React JSX syntax and one in pure JavaScript. We assume the variable <code>dynamicContent</code> will hold some content that is generated before.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>// React JSX DIV
-var myJSXDiv = &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;lorem&#34;</span>&gt;{dynamicContent}&lt;/<span style=color:#f92672>div</span>&gt;;
+ Lots of people use React as the V in MVC.">
+    
+
+</head>
+<body class="type-page section-blog">
+    <script type="text/javascript">(function(document,window,undefined){function css_to_int(cssStyleDeclaration,unitStr){return parseInt(cssStyleDeclaration.replace(unitStr,''));}
+function pre_header_show(element){element.style.setProperty('margin-top',0);element.dataset.shown=true;}
+function pre_header_hide(element){let this_height=window.getComputedStyle(element).height;element.style.setProperty('margin-top',`-${this_height}`);element.dataset.shown=false;}
+function is_element_hidden(element){return['none'].indexOf(window.getComputedStyle(element).display)>-1;}
+document.addEventListener('DOMContentLoaded',()=>{const pre_header_element=document.querySelector('#pre-header');const pre_header_toggle=document.querySelector('#pre-header-toggle');if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}
+pre_header_toggle.addEventListener('click',(event)=>{if(pre_header_element.dataset.shown=="true"){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});window.addEventListener('resize',()=>{if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});});}(document,window));</script>
+    
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.colorswitch.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.darkmode.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.fontsize.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.contentwidth.min.js"></script>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">Keep current color theme</span>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">Use random color theme</span>
+    
+    <section class="main-grid">
+    
+        <header class="pre-header" id="pre-header">
+            <kg-colorswitcher>Color theme</kg-colorswitcher>
+            <kg-darkmode>Dark mode</kg-darkmode>
+            <kg-fontsize>Font size</kg-fontsize>
+            <kg-contentwidth>Content width</kg-contentwidth>
+        </header>
+    
+        <header class="site-header">
+            <nav role="navigation" id="navigation" aria-label="Main Navigation">
+                <ul class="nav-main">
+                    
+                    <li class="nav-item">
+                        <a href="/" data-perm="/blog/2015/05/reactjs-hello-world/" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" data-perm="/blog/2015/05/reactjs-hello-world/" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about/" data-perm="/blog/2015/05/reactjs-hello-world/" >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/photography/" data-perm="/blog/2015/05/reactjs-hello-world/" >Photography</a>
+                    </li><button id="pre-header-toggle" class="btn-preheader-toggle">Settings</button>
+                    </ul>
+                    </nav>
+        </header>
+
+    <section class="site-main-content">
+<main id="main" class="main">
+<section class="article-single" style="--this-border-radius: 22px 28px 44px 56px;"> 
+        <header class="article-header">
+            
+
+
+
+
+
+<section class="age-note">
+    <h2>ATTENTION!</h2>
+    <p>This article is over 4 years old, it may be outdated!</p>
+</section>
+
+
+<h1>ReactJS - Hello World!</h1>
+
+
+
+
+<p class="publish-date">Published on 05/7/2015 </p>
+        </header>
+        <article class="article-content">
+
+            
+            <div class="content">
+                <p>This article is the first in a series about <a href="http://facebook.github.io/react/">ReactJS</a>, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &ldquo;background&rdquo;, featuring administrative screens such as the Ads Managment.</p>
+<p>React itself says one very important and true thing about itself:</p>
+<blockquote>
+<p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it&rsquo;s easy to try it out on a small feature in an existing project.</p>
+</blockquote>
+<p>Instead of frameworks such as <a href="https://angularjs.org/">Angular</a> or <a href="http://emberjs.com/">Ember</a>, React only covers the visual part and state of an UI. It won&rsquo;t help you structure your applicationit will not do anything other than render DOM parts and control their state. At this, however, React is amazingly good!</p>
+<h3 id="jsx-like-syntax">JSX-like syntax</h3>
+<p>React uses a XML like syntax called JSX. JSX seems horrible at first, at least to me, but becomes really powerful once you&rsquo;re used to it. Here is an example of two <code>div</code>s, one written in React JSX syntax and one in pure JavaScript. We assume the variable <code>dynamicContent</code> will hold some content that is generated before.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// React JSX DIV
+var myJSXDiv = &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span>&gt;{dynamicContent}&lt;/<span style="color:#f92672">div</span>&gt;;
 // pure JS DIV
-var myJSDiv = &#39;&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;lorem&#34;</span>&gt;&#39;+ dynamicContent +&#39;&lt;/<span style=color:#f92672>div</span>&gt;&#39;;
-</code></pre></div><p>Weird isn&rsquo;t it? Writing junks of HTML without quotes in a JavaScript file looks totally wrong at first, however React is being compiled to pure JavaScript before it will hit your servers. Therefore, it really only is a way of easy writing - when you create a few DOM Elements in React you&rsquo;ll soon start to love the JSX-like syntax.</p><h3 id=hello-world>Hello World!</h3><p>As in every framework and language, let&rsquo;s start by outputting a <code>Hello World!</code> string. To archive this we will do the following:</p><ul><li>Create a new React Class or Component</li><li>Invoke a <code>render()</code> function within that Component</li><li>Render the Component to the DOM</li></ul><h4 id=reactcreateclass>React.createClass({})</h4><p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I&rsquo;ll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!&rdquo;.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>HelloWorld</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createClass</span>({
-  <span style=color:#a6e22e>render</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>() {
-    <span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>h1</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>Hello</span> <span style=color:#a6e22e>World</span><span style=color:#f92672>!&lt;</span><span style=color:#960050;background-color:#1e0010>/h1&gt;</span>
+var myJSDiv = &#39;&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span>&gt;&#39;+ dynamicContent +&#39;&lt;/<span style="color:#f92672">div</span>&gt;&#39;;
+</code></pre></div><p>Weird isn&rsquo;t it? Writing junks of HTML without quotes in a JavaScript file looks totally wrong at first, however React is being compiled to pure JavaScript before it will hit your servers. Therefore, it really only is a way of easy writing - when you create a few DOM Elements in React you&rsquo;ll soon start to love the JSX-like syntax.</p>
+<h3 id="hello-world">Hello World!</h3>
+<p>As in every framework and language, let&rsquo;s start by outputting a <code>Hello World!</code> string. To archive this we will do the following:</p>
+<ul>
+<li>Create a new React Class or Component</li>
+<li>Invoke a <code>render()</code> function within that Component</li>
+<li>Render the Component to the DOM</li>
+</ul>
+<h4 id="reactcreateclass">React.createClass({})</h4>
+<p>Every Class is created with the <code>React.createClass</code> function that is passed an Object and at least a <code>render</code> function (A Class is basically a UI Component, therefor I&rsquo;ll call it Component from now on). The <code>render</code> function is used to return HTML that will be rendered to the DOM later. Every render function needs a <code>return</code> with some HTML. Below is the React Script to return a <code>h1</code> holding the String &ldquo;Hello World!&rdquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
+  <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span><span style="color:#f92672">!&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
   }
 })
-</code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that&rsquo;ll be passed just like a HTML element: <code>&lt;HelloWorld /></code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// Renders the HelloWorld Component into the Body.
-</span><span style=color:#75715e></span><span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>render</span>(<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>HelloWorld</span> <span style=color:#f92672>/&gt;</span>, document.<span style=color:#a6e22e>body</span>);
-</code></pre></div><p>And here&rsquo;s a working <a href=http://codepen.io>Pen</a> with additional comments.</p><p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn&rsquo;t fun either. So next, we&rsquo;ll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p><h3 id=hello-friend>Hello {friend}!</h3><p>React has its own template-engine-thingy. Instead of typing static strings you can pass data and use it in the return of the Render Function (or in any other function inside the component for that matter). All passed data is accessible via <code>this.props</code> and passed like <code>&lt;HelloWorld name="Kevin" /></code>, which would than be accessed like <code>this.props.name</code>. Here&rsquo;s an example of this in action.</p><p>However, to re-use the <code>HelloWorld</code> component we need to create another Component and use the <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map><code>Array.map</code></a> function to go over an Array of names.</p><p>So what we do now is the following:</p><ul><li>We extend the <code>&lt;HelloWorld /></code> component to accept a property</li><li>We create a new Component that renders multiple instances of <code>&lt;HelloWorld /></code></li><li>We render the new Component into the document</li></ul><p>This sounds complex but it is quite doable so let&rsquo;s start right away by extending the <code>HelloWorld</code> component and re-naming it to <code>Hello</code> since it will greet all kinds of people now.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// The new Hello Component
-</span><span style=color:#75715e></span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Hello</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createClass</span>({
-  <span style=color:#a6e22e>render</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>() {
-    <span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>h1</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>Hello</span> {<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>name</span>}<span style=color:#f92672>!&lt;</span><span style=color:#960050;background-color:#1e0010>/h1&gt;</span>
+</code></pre></div><p>We can invoke out new React Component by calling the <code>React.render()</code> function. This function takes two parameters: first the Component to render and then the DOM Node where it should be rendered. The Component name in this case is the variable <code>HelloWorld</code> that&rsquo;ll be passed just like a HTML element: <code>&lt;HelloWorld /&gt;</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Renders the HelloWorld Component into the Body.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">/&gt;</span>, document.<span style="color:#a6e22e">body</span>);
+</code></pre></div><p>And here&rsquo;s a working <a href="http://codepen.io">Pen</a> with additional comments.</p>
+<!-- raw HTML omitted -->
+<p>So far, we wrote our first ever React Component and rendered it into the DOM. Anyway, rendering static data is not so cool is it? Using a Framework to render junks of DOM Elements and static Markup isn&rsquo;t fun either. So next, we&rsquo;ll see how we can re-use a Component, pass data to it and embed one Component into another Component so it is repeated based on passed data - fun!</p>
+<h3 id="hello-friend">Hello {friend}!</h3>
+<p>React has its own template-engine-thingy. Instead of typing static strings you can pass data and use it in the return of the Render Function (or in any other function inside the component for that matter). All passed data is accessible via <code>this.props</code> and passed like <code>&lt;HelloWorld name=&quot;Kevin&quot; /&gt;</code>, which would than be accessed like <code>this.props.name</code>. Here&rsquo;s an example of this in action.</p>
+<!-- raw HTML omitted -->
+<p>However, to re-use the <code>HelloWorld</code> component we need to create another Component and use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code>Array.map</code></a> function to go over an Array of names.</p>
+<p>So what we do now is the following:</p>
+<ul>
+<li>We extend the <code>&lt;HelloWorld /&gt;</code> component to accept a property</li>
+<li>We create a new Component that renders multiple instances of <code>&lt;HelloWorld /&gt;</code></li>
+<li>We render the new Component into the document</li>
+</ul>
+<p>This sounds complex but it is quite doable so let&rsquo;s start right away by extending the <code>HelloWorld</code> component and re-naming it to <code>Hello</code> since it will greet all kinds of people now.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// The new Hello Component
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
+  <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> {<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">!&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
   }
 });
-</code></pre></div><p>With this simple change we can invoke the Component like <code>&lt;Hello name="Kevin" /></code> and it will return <code>&lt;h1>Hello Kevin!&lt;/h1></code>. However, to create a List of our friends we need a new Component. This Component will be called <code>FriendList</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>FriendList</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createClass</span>({
-  <span style=color:#a6e22e>render</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>() {
-    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>allGreetings</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>folks</span>.<span style=color:#a6e22e>map</span>(<span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>person</span>) {
-      <span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>Hello</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>person</span>} <span style=color:#f92672>/&gt;</span>;
+</code></pre></div><p>With this simple change we can invoke the Component like <code>&lt;Hello name=&quot;Kevin&quot; /&gt;</code> and it will return <code>&lt;h1&gt;Hello Kevin!&lt;/h1&gt;</code>. However, to create a List of our friends we need a new Component. This Component will be called <code>FriendList</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">FriendList</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createClass</span>({
+  <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allGreetings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">folks</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">person</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">person</span>} <span style="color:#f92672">/&gt;</span>;
     });
 
-    <span style=color:#66d9ef>return</span>(
-      <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>{<span style=color:#a6e22e>allGreetings</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+    <span style="color:#66d9ef">return</span>(
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">allGreetings</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
     )
   }
 });
-</code></pre></div><p>Quite a lot going on here. Let&rsquo;s break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that&rsquo;ll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /></code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// this.props.folks.map() goes over every entry in the array
-</span><span style=color:#75715e>// and returns a new Hello Component.
-</span><span style=color:#75715e></span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>allGreetings</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>folks</span>.<span style=color:#a6e22e>map</span>(<span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>person</span>) {
-  <span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>Hello</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>person</span>} <span style=color:#f92672>/&gt;</span>;
+</code></pre></div><p>Quite a lot going on here. Let&rsquo;s break it down. First, we need to get all the greetings together. This is done by assigning them to a new variable called <code>allGreetings</code>. With Array.map() we go through the Array that&rsquo;ll be passed to the <code>FriendList</code> component when it is rendered, we call this property <code>folks</code>, so it is passed like <code>&lt;FriendList folks={friendArray} /&gt;</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// this.props.folks.map() goes over every entry in the array
+</span><span style="color:#75715e">// and returns a new Hello Component.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allGreetings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">folks</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">person</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">person</span>} <span style="color:#f92672">/&gt;</span>;
 });
-</code></pre></div><p>What happens here is:</p><ul><li>we go through all the names in <code>this.props.folks</code></li><li>For each name, we return a new <code>&lt;Hello /></code> Component passing in the name of the person</li><li>All the HTML from all the Components now is assigned to the <code>allGreetings</code> variable</li></ul><p>So we have our HTML but we need to return it, right? Right! So the next line returns the generated HTML from the <code>FriendList</code> Component.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// the two parentese are optional but I like them for
-</span><span style=color:#75715e>// &#34;grouping&#34; the return. The div however is required.
-</span><span style=color:#75715e>// Every return must be wrapped in an DOM Element.
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span>(
-      <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>{<span style=color:#a6e22e>allGreetings</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+</code></pre></div><p>What happens here is:</p>
+<ul>
+<li>we go through all the names in <code>this.props.folks</code></li>
+<li>For each name, we return a new <code>&lt;Hello /&gt;</code> Component passing in the name of the person</li>
+<li>All the HTML from all the Components now is assigned to the <code>allGreetings</code> variable</li>
+</ul>
+<p>So we have our HTML but we need to return it, right? Right! So the next line returns the generated HTML from the <code>FriendList</code> Component.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// the two parentese are optional but I like them for
+</span><span style="color:#75715e">// &#34;grouping&#34; the return. The div however is required.
+</span><span style="color:#75715e">// Every return must be wrapped in an DOM Element.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span>(
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">allGreetings</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
     )
-</code></pre></div><p>So here we return a <code>div</code> holding our generated HTML. The <code>div</code> is required because every React Component must return a HTML Container - and the <code>allGreetings</code> variable holds multiple containers so we need a new one. The parentese are optional but I prefer them for grouping the output. Next, we need to invoke our new Component.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// Here we create an Array of all the people we want to greet. In this
-</span><span style=color:#75715e>// case it&#39;s members from Team bullgit! http://bullg.it
-</span><span style=color:#75715e></span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>allThePeople</span> <span style=color:#f92672>=</span> [
-  <span style=color:#e6db74>&#34;Kevin&#34;</span>, <span style=color:#e6db74>&#34;Luky&#34;</span>, <span style=color:#e6db74>&#34;Jess&#34;</span>, <span style=color:#e6db74>&#34;Felix&#34;</span>, <span style=color:#e6db74>&#34;Max&#34;</span>, <span style=color:#e6db74>&#34;Nika&#34;</span>, <span style=color:#e6db74>&#34;Gregor&#34;</span>, <span style=color:#e6db74>&#34;Tim&#34;</span>, <span style=color:#e6db74>&#34;Jan&#34;</span>
+</code></pre></div><p>So here we return a <code>div</code> holding our generated HTML. The <code>div</code> is required because every React Component must return a HTML Container - and the <code>allGreetings</code> variable holds multiple containers so we need a new one. The parentese are optional but I prefer them for grouping the output. Next, we need to invoke our new Component.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Here we create an Array of all the people we want to greet. In this
+</span><span style="color:#75715e">// case it&#39;s members from Team bullgit! http://bullg.it
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">allThePeople</span> <span style="color:#f92672">=</span> [
+  <span style="color:#e6db74">&#34;Kevin&#34;</span>, <span style="color:#e6db74">&#34;Luky&#34;</span>, <span style="color:#e6db74">&#34;Jess&#34;</span>, <span style="color:#e6db74">&#34;Felix&#34;</span>, <span style="color:#e6db74">&#34;Max&#34;</span>, <span style="color:#e6db74">&#34;Nika&#34;</span>, <span style="color:#e6db74">&#34;Gregor&#34;</span>, <span style="color:#e6db74">&#34;Tim&#34;</span>, <span style="color:#e6db74">&#34;Jan&#34;</span>
 ]
-<span style=color:#75715e>// and then we pass it to the FriendList Component.
-</span><span style=color:#75715e></span><span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>render</span>(<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>FriendList</span> <span style=color:#a6e22e>folks</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>allThePeople</span>}<span style=color:#f92672>/&gt;</span>, document.<span style=color:#a6e22e>body</span>);
-</code></pre></div><p>We create a normal JavaScript Array with our Friends&rsquo; names as strings, then pass it to the React component as the attribute <code>folks</code>. This array will then be accessible as <code>this.props.folks</code> from within the Component. And, as before, here is a Pen showing the output as well as some more comments on the code.</p><p>That&rsquo;s it for creating a Component and re-using it inside another Component. For the next tutorial we&rsquo;ll see how we can use a state to give our Components some interaction. If you&rsquo;ve got any questions or have found an issue, hit me up at <a href=https://twitter.com/_kevinatari>@_kevinatari</a>.</p></div></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tutorial" href=https://kevingimbel.de/categories/tutorial/>tutorial</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under frontend" href=https://kevingimbel.de/categories/frontend/>frontend</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with react" href=https://kevingimbel.de/tags/react/>react</a></li></ul></section></section></main></section><section class=site-support><section class=support><h4>Like this?</h4><p>If this content has helped you or your company, consider making a donation to a good cause.</p><p>For example, consider donating to the following causes:</p><div class=support-cause-list__wrapper><ul class=support-cause-list><li class=head><b>International</b></li><li><a rel=nofollow href=https://donate.doctorswithoutborders.org/onetime.cfm>Doctors without borders</a></li><li><a rel=nofollow href=https://www.amnesty.org/en/donate/>Amnesty International</a></li></ul><ul class=support-cause-list><li class=head><b>Germany</b></li><li><a rel=nofollow href=https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/>UNO Flüchtlingshilfe</a></li><li><a rel=nofollow href=https://www.amnesty.de/spenden>Amnesty</a></li><li><a rel=nofollow href=https://www.greenpeace.de/spenden>Greenpeace</a></li></ul></div></section><section class=author><div class=left><img src=/images/general/kevin-gimbel-2020_hu6d6852ea5f23d3570eb4d6a09e2c1824_341389_200x200_resize_q75_box.jpg alt="A Selfie of me" class=avatar></div><div class=right><p>Kevin Gimbel</p><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He&rsquo;s also interested in Sci-Fi, Cyberpunk, and dystopian books.</p><p><em>Wearing a mask is a good idea!</em></p><p>You can find out more <a href=/about/>about me</a> if you wish.</p></div></section></section><footer class="site-footer footer"><nav role=navigation id=footer-navigation aria-label="Secondary Navigation"><p>More sections on this site</p><ul class=nav-footer><li class=nav-item><a href=/reading/>Reading</a></li><li class=nav-item><a href=/art/>Art</a></li><li class=nav-item><a href=/now/>Now</a></li></ul></nav><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View License on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on <a href=https://twitter.com/_kevinatari title="Follow me on Twitter">Twitter @_kevinatari</a></small></p></p></div><div class=right><p><small class=xx-small>Found an issue? Edit this <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2015-05-07-react-js-tutorial-hello-world.md>page on GitHub.com</a></a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></section></body></html>
+<span style="color:#75715e">// and then we pass it to the FriendList Component.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">FriendList</span> <span style="color:#a6e22e">folks</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">allThePeople</span>}<span style="color:#f92672">/&gt;</span>, document.<span style="color:#a6e22e">body</span>);
+</code></pre></div><p>We create a normal JavaScript Array with our Friends' names as strings, then pass it to the React component as the attribute <code>folks</code>. This array will then be accessible as <code>this.props.folks</code> from within the Component. And, as before, here is a Pen showing the output as well as some more comments on the code.</p>
+<!-- raw HTML omitted -->
+<p>That&rsquo;s it for creating a Component and re-using it inside another Component. For the next tutorial we&rsquo;ll see how we can use a state to give our Components some interaction. If you&rsquo;ve got any questions or have found an issue, hit me up at <a href="https://twitter.com/_kevinatari">@_kevinatari</a>.</p>
+<!-- raw HTML omitted -->
+
+            </div>
+        </article>
+    </section>
+</main>
+</section>
+
+    <section class="site-support">
+<section class="tags-categories">
+    
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under frontend"
+                href="https://kevingimbel.de/categories/frontend/">frontend</a>
+        </li></ul>
+</section>
+
+    
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with react"
+                href="https://kevingimbel.de/tags/react/">react</a>
+        </li></ul>
+</section>
+
+</section>
+    <section class="article-nextprev">
+  <article class="article__next">
+      <span class="txt--bold">Next article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/" title="A Beginners Guide to Drum and Bass">A Beginners Guide to Drum and Bass</a>
+  
+  </article>
+
+  <article class="article__prev">
+      <span class="txt--bold">Previous article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/" title="Getting into Performance Measurement">Getting into Performance Measurement</a>
+      
+  </article>
+</section>
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>If this content has helped you or your company, consider making a donation to a good cause.</p>
+    <p>For example, consider donating to the following causes:</p>
+    <div class="support-cause-list__wrapper">
+        <ul class="support-cause-list">
+            <li class="head"><b>International</b></li>
+            <li><a rel="nofollow" href="https://donate.doctorswithoutborders.org/onetime.cfm">Doctors without borders</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.org/en/donate/">Amnesty International</a></li>
+        </ul>
+        <ul class="support-cause-list">
+            <li class="head"><b>Germany</b></li>
+            <li><a rel="nofollow" href="https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/">UNO Flüchtlingshilfe</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.de/spenden">Amnesty</a></li>
+            <li><a rel="nofollow" href="https://www.greenpeace.de/spenden">Greenpeace</a></li>
+        </ul>
+    </div>
+</section>
+
+    <section class="author">
+    <div class="left">
+        <img src="/images/general/kevin-gimbel-2020_hu6d6852ea5f23d3570eb4d6a09e2c1824_341389_200x200_resize_q75_box.jpg" alt="A Selfie of me" class="avatar">
+    </div>
+    <div class="right">
+        <p>Kevin Gimbel</p>
+<p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He&rsquo;s also interested in Sci-Fi, Cyberpunk, and dystopian books.</p>
+<p><em>Wearing a mask is a good idea!</em></p>
+<p>You can find out more <a href="/about/">about me</a> if you wish.</p>
+
+    </div>
+</section>
+</section>
+
+    <footer class="site-footer footer">
+        
+        
+        
+        <nav role="navigation" id="footer-navigation" aria-label="Secondary Navigation">
+        <p>More sections on this site </p>
+        <ul class="nav-footer">
+            <li class="nav-item">
+                <a href="/reading/">Reading</a>
+            </li>
+            <li class="nav-item">
+                <a href="/art/">Art</a>
+            </li>
+            <li class="nav-item">
+                <a href="/now/">Now</a>
+            </li></ul>
+        </nav>
+        
+
+
+        <div class="left">
+            <p> <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on <a href="https://twitter.com/_kevinatari" title="Follow me on Twitter">Twitter @_kevinatari</a></small></p>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? Edit this <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/en/blog/2015-05-07-react-js-tutorial-hello-world.md">page on GitHub.com</a></a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>  
+    </footer>
+    </section>
+    
+
+
+</body>
+
+</html>

@@ -117,13 +117,13 @@ location = "Wiesbaden, Germany"
         [[languages.de.menu.main]]
         identifier = "start"
         name = "Start"
-        URL = "/de/"
+        URL = "/"
         Weight = 10
 
         [[languages.de.menu.main]]
         identifier = "blog"
         name = "Blog"
-        url = "/de/blog/"
+        url = "/blog/"
         weight = 20
 
         [[languages.de.menu.main]]
@@ -133,5 +133,13 @@ location = "Wiesbaden, Germany"
         weight = 30
 
 
+
+        [[languages.de.menu.main]]
+        identifier = "photography"
+        name = "Fotografie"
+        URL = "/photography/"
+        Weight = 40
+
+
         [languages.de.params]
-        avatar_alt = "Ein Bild von mir, sehr nah."
+        avatar_alt = "Ein Bild von mir. :)"

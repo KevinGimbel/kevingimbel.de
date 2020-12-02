@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>httpd on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/httpd/</link><description>Recent content in httpd on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/httpd/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker Apache Proxy Setup</title><link>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</guid><description>In this post I&amp;rsquo;d like to detail how I am managing docker containers behind an apache2 proxy on a Ubuntu 18.04. server. I&amp;rsquo;m using one Apache server to route traffic from multiple sub-domains to docker containers all running with docker-compose. This setup is not automated and the containers do not need to interact with each other; It&amp;rsquo;s just how I run software for my private usage.
-Overview Let&amp;rsquo;s start with an overview image, because this can be quite confusing.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>httpd on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/httpd/</link>
+    <description>Recent content in httpd on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/httpd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Apache Proxy Setup</title>
+      <link>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</guid>
+      <description>In this post I&amp;rsquo;d like to detail how I am managing docker containers behind an apache2 proxy on a Ubuntu 18.04. server. I&amp;rsquo;m using one Apache server to route traffic from multiple sub-domains to docker containers all running with docker-compose. This setup is not automated and the containers do not need to interact with each other; It&amp;rsquo;s just how I run software for my private usage.
+Overview Let&amp;rsquo;s start with an overview image, because this can be quite confusing.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -10,21 +10,20 @@ class DarkMode extends HTMLElement {
 
     // handle clicks
     this.addEventListener("click", this.changeMode);
+  }
 
-    // update on dom load
-    document.addEventListener("DOMContentLoaded", () => {
-      let darkModeFromLocalStorage = window.localStorage.getItem(this.LOCAL_STORAGE_KEY);
-      if (darkModeFromLocalStorage != null) {
-        let dm = darkModeFromLocalStorage == "true";
-        this.setDarkMode(dm);
-      }
-      if (darkModeFromLocalStorage == null) {
-        // try to get dark mode preference via CSS query
-        let wantDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
-        this.setDarkMode(wantDarkMode.matches || false);
-      }
-      this.render();
-    });
+  connectedCallback() {
+    let darkModeFromLocalStorage = window.localStorage.getItem(this.LOCAL_STORAGE_KEY);
+    if (darkModeFromLocalStorage != null) {
+      let dm = darkModeFromLocalStorage == "true";
+      this.setDarkMode(dm);
+    }
+    if (darkModeFromLocalStorage == null) {
+      // try to get dark mode preference via CSS query
+      let wantDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+      this.setDarkMode(wantDarkMode.matches || false);
+    }
+    this.render();
   }
 
   // helper to get this components css 
@@ -59,9 +58,7 @@ class DarkMode extends HTMLElement {
   changeMode(event) {
     event.stopPropagation()
     let input = event.composedPath()[0];
-    console.log("changeMode - var input = ", input);
     this.state.isDarkMode = input.checked;
-    console.log("changeMode - input.checked", input.checked);
     this.setDarkMode(this.state.isDarkMode);
 
   }

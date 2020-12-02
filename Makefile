@@ -18,4 +18,13 @@ publish: ## Build the static site and push it to the server
 	@make build
 	@make upload
 
+post-photo: ## Create new photography post. Specify title like title="my title"
+	@hugo new photography/$(shell date +%Y)-$(shell echo "${title}" | sed -e 's/ /-/g')
+
+post-blog: ## Create new blog post. Specify title like title="my title"
+	@hugo new blog/$(shell date +%Y-%m-%d)-$(shell echo "${title}" | sed -e 's/ /-/g')/index.md
+
+post-book: ## Create new book post. Specify title like title="my title"
+	@hugo new reading/$(shell date +%Y)/$(shell echo "${title}" | sed -e 's/ /-/g').md
+
 .PHONY: help

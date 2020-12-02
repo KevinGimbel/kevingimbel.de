@@ -1,3 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>google_pixel on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/google_pixel/</link><description>Recent content in google_pixel on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/google_pixel/index.xml" rel="self" type="application/rss+xml"/><item><title>Isolation</title><link>https://kevingimbel.de/photography/2020/04/isolation/</link><pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/04/isolation/</guid><description>The isolation is really getting to my head, but in a moment of creativity this image was captured.
-You can buy a license for this image on EyeEm.com.</description></item><item><title>Saint Elizabeth's Church Wiesbaden</title><link>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</guid><description>One of the sightseeing spots in Wiesbaden is St. Elizabeths Church, a orthodox church located on top the Neroberg.
-I&amp;rsquo;m looking forward to taking some better photos of it in the future.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google_pixel on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/google_pixel/</link>
+    <description>Recent content in google_pixel on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/google_pixel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Isolation</title>
+      <link>https://kevingimbel.de/photography/2020/04/isolation/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/04/isolation/</guid>
+      <description>The isolation is really getting to my head, but in a moment of creativity this image was captured.
+You can buy a license for this image on EyeEm.com.</description>
+    </item>
+    
+    <item>
+      <title>Saint Elizabeth&#39;s Church Wiesbaden</title>
+      <link>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</guid>
+      <description>One of the sightseeing spots in Wiesbaden is St. Elizabeths Church, a orthodox church located on top the Neroberg.
+I&amp;rsquo;m looking forward to taking some better photos of it in the future.</description>
+    </item>
+    
+  </channel>
+</rss>

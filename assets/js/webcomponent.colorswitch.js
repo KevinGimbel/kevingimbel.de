@@ -19,15 +19,14 @@ class ColorSwitcher extends HTMLElement {
     this.render(this.state);
 
     this.addEventListener("click", this.switchColor);
+  }
 
-    // read and applu theme from local storage
-    document.addEventListener("DOMContentLoaded", () => {
-      let theme = window.localStorage.getItem(this.LOCAL_STORAGE_KEY);
-      if (theme != null) {
-        let colors = JSON.parse(theme).colors;
-        this.setThemeOnBody(colors);
-      }
-    });
+  connectedCallback() {
+    let theme = window.localStorage.getItem(this.LOCAL_STORAGE_KEY);
+    if (theme != null) {
+      let colors = JSON.parse(theme).colors;
+      this.setThemeOnBody(colors);
+    }
   }
 
   // helper to get this components css 

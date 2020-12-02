@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vanilla_js on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/vanilla_js/</link><description>Recent content in vanilla_js on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/vanilla_js/index.xml" rel="self" type="application/rss+xml"/><item><title>To infinity and beyond</title><link>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</link><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</guid><description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&amp;rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&amp;rsquo;m doing. Yesterday night&amp;rsquo;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&amp;rsquo;s where the title comes from.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vanilla_js on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/vanilla_js/</link>
+    <description>Recent content in vanilla_js on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/vanilla_js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>To infinity and beyond</title>
+      <link>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</guid>
+      <description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&amp;rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&amp;rsquo;m doing. Yesterday night&amp;rsquo;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&amp;rsquo;s where the title comes from.</description>
+    </item>
+    
+  </channel>
+</rss>

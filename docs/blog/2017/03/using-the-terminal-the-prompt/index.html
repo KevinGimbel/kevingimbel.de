@@ -1,30 +1,451 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Using the Terminal: The Prompt &mdash; KevOps — DevOps, Cooking, and everything else I want to write about</title><meta name=author content="Kevin Gimbel"><meta name=description content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between"><meta keywords="workflow productivity apps  blog coding devops tutorial"><link rel=icon href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIj7wn6eZ4oCN4pmC77iPPC90ZXh0Pjwvc3ZnPg=="><style type=text/css>*{margin:0;padding:0;box-sizing:inherit}:root{--color-main: #403D58;--color-secondary: #dea584;--color-bg-box: #fefefe;--color-bg-page: #f1f1f1;--color-font-fg: #fff}html,body{box-sizing:border-box;font:20px/1.65 sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;background:var(--color-bg-page);border:.5rem solid var(--color-main)}::selection{background-color:var(--color-main);color:var(--color-secondary)}abbr{cursor:help;text-decoration:none;border-bottom:2px dotted var(--color-main)}a{color:var(--color-main);font-weight:700}.footer a,.author a,.intro-text a{color:var(--color-secondary);font-weight:700}.fg-accent{color:var(--color-secondary)}.x-small{font-size:.85rem}.xx-small{font-size:.65rem}.txt--ultra-large{font-size:4rem}.txt--large{font-size:2.5rem}.txt--medium{font-size:1.8rem}h1{font-size:2.46rem}h2{font-size:1.8rem}h3{font-size:1.6rem}.article-content h2,.article-content h3{margin-top:2rem}.section-headline{font-size:3.75em;margin-top:2rem;line-height:.75}.intro-splash{display:block;min-height:90vh;display:flex;align-items:center}.intro-text{padding:2rem;background:#222;color:var(--color-font-fg);font-size:140%}.footer{padding:2rem}hr{border:none;background:var(--color-main);height:2px}.footer{background:#222;color:var(--color-font-fg)}.main{padding-top:1.5rem;border-bottom:0;min-height:100vh}.main p{margin-top:1rem;margin-bottom:1.5rem}.exif{padding:.5rem;background:var(--color-secondary)}.exif li{display:inline-block;background:#333;color:#ccc;border-radius:3px;padding:.125rem .5rem;font-size:.8rem}.exif .label{font-size:.75rem}@media all and (max-width:800px){.exif li{margin-top:.5rem}.gallery img{max-width:100%}}figure img,figure picture{display:block;height:auto;width:auto;max-width:100%}.art figure img,.art figure picture,.photography figure img,.photography figure picture{width:auto}figcaption p{display:block;line-height:1.65;background:var(--color-secondary);color:var(--color-font-fg);margin-top:0;padding:.5rem;text-align:right;font-size:var(--font-small,.85rem)}figure{position:relative;z-index:1}figure+figure{margin-top:2rem}figcaption{display:flex;justify-content:flex-end}figcaption p{background:var(--color-secondary);color:var(--color-main);font-size:.85em;margin-top:1.5rem;position:relative}figcaption p::before{content:"";width:.15em;height:5rem;background:var(--color-secondary);position:absolute;left:1rem;top:-5rem;z-index:1}figure img,figure picture{position:relative;z-index:2}@media all and (min-width:800px){figure{width:100%}figcaption p{width:50%}.gallery{display:flex;flex-wrap:wrap;justify-content:flex-start}figure.gallery__figure{margin:0;padding:.25rem}.gallery__figure img,.gallery__figure picture{display:block;height:auto;width:100%;margin:0 auto}figure.gallery__figure--w-100{width:100%}figure.gallery__figure--w-50{width:50%}figure.gallery__figure--w-33{width:33%}figure.gallery__figure--w-25{width:25%}}p code,li code{background:var(--color-secondary);color:var(--color-main);padding:.125rem .25rem;border-radius:3px}.page-nav{background:var(--color-secondary);padding:1rem;margin-top:1rem}.page-nav a:not(:last-of-type){margin-right:.5rem}.subscribe-via{background:var(--color-main);color:var(--color-font-fg);padding:.1rem 1rem}.subscribe-via a{color:var(--color-font-fg)}.page-nav--label{display:block;font-size:.75em}.article-content{padding-bottom:2rem;max-width:40rem}.article-single{width:100%;max-width:60rem;margin:0 auto}.article-header h1{font-size:3.2rem}.article-content ol,.article-content ul{margin-left:2rem}.article-list__header{margin-bottom:2rem}.article-list__intro,.page-content{background:var(--color-bg-box);padding:2rem;margin:1rem 2rem 2rem 0}.article.article--in-list{position:relative;margin-bottom:10rem;max-width:55rem}.article-preview__heading{font-size:2.75rem}.publish-date{font-size:.85em}.article-preview__publish-date a{opacity:.75;text-decoration:none}pre{padding:1rem;overflow:auto}.tag-list__item{display:inline-block;background:var(--color-main);color:var(--color-secondary);border-radius:3px;padding:.125rem .25rem;margin-bottom:.5rem;margin-right:.5rem}.tag-list__item a{color:var(--color-secondary)}@media all and (min-width:800px){.footer,.author,.support{display:flex;justify-content:space-between}.author .left,.support .left,.footer .left{margin-bottom:0}}.author .left,.support .left,.footer .left{margin-bottom:2rem}.author,.support{background:var(--color-main);color:var(--color-font-fg);padding:4rem 2rem}.support+.author{margin-top:0}.support{background:var(--color-secondary);color:var(--color-main);flex-direction:column}.support a{color:var(--color-main)}.author p,.support p{margin-bottom:0}@media all and (min-width:800px){.author .right{padding-left:2rem}.author .avatar{margin-left:2rem}}.author .avatar{max-width:200px;transition:all linear 60s}.author .avatar:hover{animation:avatar-hue linear 15s infinite}@keyframes avatar-hue{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}.age-note{background:#d46767;border:.35rem solid #b22222;padding:1rem 2rem;color:#222}.tags-categories,.license{background:var(--color-bg-box);padding:2rem}.side-by-side img{width:auto;max-width:100%}@media all and (min-width:640px){.tags-categories{display:flex}.tags-categories .tags{margin-left:2rem}.side-by-side{display:flex;flex-direction:row;align-items:center;margin:2rem 0}.side-by-side.align-top{align-items:flex-start}.side-by-side.align-bottom{align-items:flex-end}.side-by-side__first{margin-bottom:3rem}.side-by-side__off-left{margin-left:-20vw}.side-by-side .small{max-width:40%;width:100%;padding:2rem}.side-by-side .bg{background:var(--color-main);color:var(--color-secondary)}.side-by-side .wide{max-width:60%}.w-40{width:40%}.w-50{width:50%}.w-60{width:60%}.side-by-side img,.side-by-side figure{max-width:100%;margin:0}}.note{background:var(--color-main);color:var(--color-font-fg);padding:1rem 1rem 1rem 2rem;border-left:.5rem solid var(--color-secondary);margin:2rem 1rem}.note__heading{font-weight:700;display:block}.taxonomy-list{display:flex;padding-bottom:2rem;align-content:flex-end;justify-content:space-between;flex-wrap:wrap}.taxonomy__item{width:20%;height:2rem;display:inline-block;padding:2rem 0}.taxonomy__item-inner{padding:1rem;background:var(--color-main);color:var(--color-secondary)}.taxonomy__item a{color:var(--color-secondary)}.article-note__content{font-size:1.3rem}.language-nav{font-size:.75rem}.language-nav ul{display:inline-block;list-style:none}blockquote{font-size:110%;font-style:italic;text-indent:1rem;border-left:.25rem solid var(--color-main);padding:.25rem 0;padding-left:1rem}.series__box:before{content:"";display:block;position:absolute;width:100%;height:100%;left:-1rem;top:-1rem;z-index:-1;border:2px solid var(--color-main)}.series__box{float:left;padding:2rem;margin:2rem;position:relative;background:var(--color-secondary);z-index:1;display:block;margin-left:-5vw}.tag-list__item{display:inline-block;background:var(--color-secondary);color:var(--color-main);padding:.125rem .25rem;border-radius:0;margin-bottom:.5rem;margin-right:.5rem;position:relative;padding:.25em .5em;z-index:1}.tag-list__item:before{content:"";width:100%;height:100%;border:2px solid var(--color-main);left:-.45em;top:-.45em;display:block;position:absolute;z-index:-1;transition:all linear .1s}.tag-list__item:hover::before{top:-.1rem;left:-.1rem}.tag-list__item a{color:var(--color-main);text-decoration:none}ul.tag-list,ul.category-list{margin-top:1rem}table{background:#fff;border-spacing:unset;border-right:1px solid;border-left:1px solid;width:calc(100% + 30rem);margin-left:-15rem}thead{background:var(--color-main);color:var(--color-secondary)}thead th{text-align:left;padding-left:.5rem}tbody td{padding:.5rem;border-bottom:1px solid #333}.intro-text{display:none}body.section-tags .intro-text,body.section-categories .intro-text{display:block}.rating-list{font-size:2rem}.support-cause-list__wrapper{display:flex;margin-top:2rem;justify-content:space-between}.support-cause-list{text-indent:1rem;margin-bottom:1rem}.support-cause-list li{margin-left:1rem}.support-cause-list .head{margin-left:-1rem;font-size:1.25em;list-style:none}.wavy-text{z-index:1;position:relative;display:block}.wavy-text::before{content:attr(data-css-text);width:100%;display:block;color:transparent;top:0;position:absolute;left:0;font-size:110%;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--color-secondary);z-index:2}.wavy-text--invert{--tmp-color-main: var(--color-main);--color-main: var(--color-secondary);--color-secondary: var(--tmp-color-main)}.wavy-text--inline{display:inline-block}.main-grid{display:grid;grid-template-columns:2fr 3fr 1fr;grid-template-rows:1fr 1fr 1fr;grid-template-areas:"sidebar header header" "sidebar content content" "sidebar content content" "support support support" "footer footer footer"}.site-header{grid-column-start:sidebar;grid-column-end:sidebar;grid-row-start:1;grid-row-end:3}.site-main-content{grid-column-start:content;grid-column-end:content;grid-row-start:1;grid-row-end:4}.site-support{grid-column-start:support;grid-column-end:support;grid-row-start:4;grid-row-end:4;display:flex}.site-footer{grid-column-start:footer;grid-column-end:footer;grid-row-start:5;grid-row-end:5}@media all and (min-width:1200px){.nav-main{display:block;background:0 0;padding-top:2rem;padding-left:3rem}.nav-main li{display:block;margin:2rem 1rem;font-size:2rem}.nav-main li:first-of-type{margin-top:0}.nav-main li a{color:var(--color-main)}}.nav-item{display:block;position:relative}.nav-item--active a{font-size:120%;text-decoration:none}.settings summary{text-align:right}.settings{position:absolute;top:1.5rem;right:1.5rem}.settings-inner{font-size:.85rem;position:absolute;top:2rem;right:0;background:var(--color-secondary);padding:1rem;width:10rem}.settings details{position:relative}.settings-field{display:block;margin-bottom:1rem}.btn-color-switch{display:block}@media all and (max-width:1200px){body{border:.125rem solid var(--color-main)}.site-header{grid-column-start:sidebar;grid-column-end:header;grid-row-start:1;grid-row-end:1}.site-main-content{grid-column-start:sidebar;grid-column-end:content;grid-row-start:1;grid-row-end:4}.site-support{grid-column-start:support;grid-column-end:support;grid-row-start:4;grid-row-end:4;flex-direction:column}.author{border:1px solid var(--color-secondary);border-style:inset}.site-footer{grid-column-start:footer;grid-column-end:footer;grid-row-start:5;grid-row-end:5}.support-cause-list__wrapper{display:flex;justify-content:space-between;flex-direction:row}ul.nav-main{display:block;padding:1rem}.nav-item{display:inline-block;padding-right:1rem}.intro-splash__content .txt--ultra-large{font-size:1.8rem}.intro-splash__content .txt--large,.intro-splash__content .txt--medium{font-size:1.2rem}.main{padding:1rem .5rem}.support-cause-list__wrapper{flex-direction:column}.article-header h1,.article-preview__heading{font-size:2.2rem}.article-list__intro,.page-content{margin:2rem 0;padding:1rem}}@media all and (max-width:800px){.main-grid{display:block}.article-content .side-by-side{padding:0 1rem}}.nav-footer li{display:inline-block;margin-right:1rem}body.type-page .article-content p,body.type-page .article-content h1,body.type-page .article-content h2,body.type-page .article-content h3,body.type-page .article-content h4,body.type-page .article-content h5,body.type-page .article-content h6,body.type-page .article-content ul,body.type-page .article-header{padding-left:2rem;padding-right:2rem}body.type-page figure{max-width:70rem;max-width:fit-content;margin:0 auto}body.type-page .site-header{grid-column-start:sidebar;grid-column-end:header;grid-row-start:unset;grid-row-end:1}body.type-page .site-main-content{grid-column-start:sidebar;grid-column-end:content;grid-row-start:1;grid-row-end:4}body.type-page .article-single,body.type-page .article-content{max-width:100%}body.type-page .site-header{display:flex;align-items:center;justify-content:space-between}body.type-page .nav-main{padding-left:1rem;padding-top:0}body.type-page .nav-main li{display:inline-block}@media all and (min-width:800px){body.type-page:not(.section-blog) .main{padding-left:2rem}}@media all and (max-width:800px){body.type-page .article-header{padding-left:1rem;padding-right:1rem}}</style><meta name=twitter:card content="summary"><meta name=twitter:site content="@kevingimbel"><meta name=twitter:creator content="@_kevinatari"><meta name=twitter:title content="Using the Terminal: The Prompt"><meta name=twitter:description content="The Terminal (or bash, shell, console) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &mldr; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already wrote about one custom script named ws which enhances my daily workflows."></head><body class="type-page section-blog"><script type=text/javascript>(function(window,document,undefined){let theme=window.localStorage.getItem("kgde_theme");if(theme){var[colorMain,colorSecondary]=JSON.parse(theme).colors;document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}else{let themes=[["#123D3C","#90F072"],["#403D58","#dea584"],["#400E3B","#DCC78A"],["#17098D","#EADD1C"],["#233B07","#FFDD6D"],["#37059F","#D1D99F"]]
-var[colorMain,colorSecondary]=themes[Math.floor(Math.random()*themes.length)];document.body.style=`--color-main:${colorMain};--color-secondary:${colorSecondary}`;}
-document.addEventListener('DOMContentLoaded',function(){let schema_btn=document.querySelector("#btn_schema");let theme=window.localStorage.getItem("kgde_theme");let text_keep=document.querySelector("#widget_color_changer_txt_keep").textContent;let text_random=document.querySelector("#widget_color_changer_txt_random").textContent;if(theme){schema_btn.textContent=text_random;}else{schema_btn.textContent=text_keep;}
-schema_btn.style.display="block";schema_btn.addEventListener('click',function(e){if(theme){window.localStorage.removeItem("kgde_theme");window.location=window.location;}else{window.localStorage.setItem("kgde_theme",JSON.stringify({colors:[colorMain,colorSecondary]}));window.location=window.location;}});let resizer=document.querySelector("#resizer");let article_content_el=document.querySelector(".article-single")||document.querySelector(".page-content");let width=window.localStorage.getItem("kgde_theme_width");if(!width){window.localStorage.setItem("kgde_theme_width",80);content_update_size(width,article_content_el);}
-if(resizer){let opts=resizer.querySelectorAll("option");opts.forEach(entry=>{entry.selected=entry.value==width;})}
-if(resizer&&article_content_el){if(width){content_update_size(width,article_content_el);}
-resizer.addEventListener("change",(event)=>{let size=event.target.value;content_update_size(size,article_content_el);window.localStorage.setItem("kgde_theme_width",size);})}else{resizer.parentNode.style.display="none";}});function content_update_size(size,element){switch(size){case "full":element.style+="";break;default:element.style=`max-width: ${size}rem; margin: 0 auto;`;break;}}}(window,document));</script><span style=display:none aria-hidden=true id=widget_color_changer_txt_keep>Keep current color theme</span>
-<span style=display:none aria-hidden=true id=widget_color_changer_txt_random>Use random color theme</span><section class=main-grid><header class=site-header><nav role=navigation id=navigation aria-label="Main Navigation"><ul class=nav-main><li class=nav-item><a href=/ data-perm=/blog/2017/03/using-the-terminal-the-prompt/>Home</a></li><li class=nav-item><a href=/blog/ data-perm=/blog/2017/03/using-the-terminal-the-prompt/>Blog</a></li><li class=nav-item><a href=/about/ data-perm=/blog/2017/03/using-the-terminal-the-prompt/>About</a></li><li class=nav-item><a href=/photography/ data-perm=/blog/2017/03/using-the-terminal-the-prompt/>Photography</a></li></ul></nav><section class=settings><details><summary>Settings</summary><div class=settings-inner><label for=btn_schema class=settings-field>Color<br><button id=btn_schema class=btn-color-switch></button></label>
-<label for=resizer class=settings-field>Content width<br><select name=resize id=resizer>
-<option value=40>Small</option>
-<option value=60>Medium</option>
-<option value=80>Large</option>
-<option value=full>Full</option></select></label></div></details></section></header><section class=site-main-content><main id=main class=main><section class=article-single><header class=article-header><h1>Using the Terminal: The Prompt</h1><p class=publish-date>Published on 03/29/2017</p></header><article class=article-content><div class=content><p>The Terminal (or <em>bash</em>, <em>shell</em>, <em>console</em>) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &mldr; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already <a href=/bash-script-ws/>wrote about one custom script named <code>ws</code></a> which enhances my daily workflows. This article marks the first of many to come about using and configuring your terminal. This tutorial is written for MacOS and Linux, though most of it will work on Windows 10 if you use Bash.</p><p>To get started with this tutorial open up your terminal. If you don&rsquo;t know how to open a terminal your first mission is to find out how! (<em>Hint: Google is your friend!</em>). Once the terminal is open we can start with some basic operations.</p><p><em>Note:</em> On newer Windows versions you should use Bash if available! This tutorial will probably not work with older Windows Verisons (XP, 7, maybe even 8) and the Windows Terminal (e.g. CMD).</p><p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it&rsquo;ll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p><h2 id=preface-vim>Preface: VIM</h2><blockquote><p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/
-#the-prompt">skip to the next section</a></p></blockquote><p><a href=http://www.vim.org/>VIM</a> is am incredibly powerful text editor available from the command line. It&rsquo;s a bit weird to get used to at first but once you know your way around you&rsquo;ll become quite productive with it. It&rsquo;s easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p><figure><img src=/images/posts/2017/terminal/prompt/vim-empty-file.png alt="An empty file opened in VIM"><figcaption><p>An empty file opened in VIM</p></figcaption></figure><p>To start writing text we need to enter Input Mode. This is done by typing an <code>i</code>. Afterwards, we can write. VIM has three different modes: Input, Visual and Normal. To leave a mode and return to normal, you need to press <code>ESC</code>. Visual Mode can be used to select multiple lines or copy/paste things around. Insert Mode is mainly used for writing text and Normal Mode is used for navigation, e.g to move to the Top of a file (<code>gg</code>) or bottom of a file (<code>SHIFT+G</code>). VIM works a lot with shortcuts which is why we can edit text files so fast with it. Consider the following example HTML tag.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;some-class-name another-class-name yet more classes&#34;</span>&gt;&lt;/<span style=color:#f92672>div</span>&gt;
-</code></pre></div><p>To remove all classes and add a new class name you would move your mouse to the line, select everything between <code>"</code> and <code>"</code>, and then enter the new class name. In VIM, you can enter Normal Mode, place the cursor inside the element and press <code>ci"</code> (<em>change in &ldquo;</em>). The entrie text will be removed and VIM enters Insert Mode inside the <code>""</code>. To change a word, you write <code>cw</code>. To write text inside the tag, <code>cit</code> (change in tag) and the cursor is placed inside the <code>&lt;div></code>. Additional to the default movement and replacing there are plugins to make this even faster or smarter, like <a href=https://github.com/tpope/vim-surround>surround.vim</a>.</p><p>So, VIM is quite an editor. Get used to it, you&rsquo;ll thank me later! What we need to know for basic file editing and this tutorial is the following:</p><ul><li><code>i</code> is pressed to enter Insert Mode</li><li><code>ESC</code> is pressed to exit a mode, e.g. Insert or Visual</li><li>all commands starting with <code>:</code> are executed by pressing the <code>&lt;Enter></code> key, e.g. <code>:wq&lt;Enter></code></li><li><code>:</code> is pressed to enter a command (literally type a <code>:</code>, e.g. with <code>SHIFT+.</code> or wherever it is on your keyboard)</li><li><code>:w</code> means <code>write</code>. To write a file, press <code>SHIFT+.</code>, then <code>w</code>, then <code>Enter</code>.</li><li>To quit the editor, write <code>:q</code>, then <code>Enter</code>. To force quit without saving, type <code>:q!</code>, then <code>Enter</code></li><li>Moving the cursor is done with UP, DOWN, RIGHT, and LEFT Arrow Keys or <code>h,j,k,l</code> in Normal Mode or Visual Mode<ul><li><code>h</code> = left</li><li><code>j</code> = down</li><li><code>k</code> = up</li><li><code>l</code> = right</li></ul></li></ul><p>Lots of VIM Tips can be found in the <a href=http://vim.wikia.com/wiki/Vim_Tips_Wiki>VIM Wikia</a>.</p><h2 id=the-prompt>The Prompt</h2><p>One your terminal is open you should see a Dollar Sign (<code>$</code>) or similar symbol, like shown below.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>~ $
-</code></pre></div><p>This is the Prompt. The Prompt shows the current directory (<code>~</code>) and most of the time has a fixed sign, e.g. <code>$</code>. Other prompts might use symbols like <code># </code>, <code>%</code> <code>bash-3.2$</code> or <code>kevin@ubuntu: $</code>. The prompt is configurable and comes with different defaults depending on the operating system. So, each line below is how a prompt may look.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>kevin@MacBook-Pro: ~ $
-~/Development #
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Using the Terminal: The Prompt &mdash; KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="workflow productivity apps  blog coding devops tutorial  ">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧙‍♂️</text></svg>">
+    
+    
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/main.min.css">
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/page.min.css">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kevingimbel">
+    <meta name="twitter:creator" content="@_kevinatari">
+    <meta name="twitter:title" content="Using the Terminal: The Prompt">
+    <meta name="twitter:description" content="The Terminal (or bash, shell, console) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already wrote about one custom script named ws which enhances my daily workflows.">
+    
+
+</head>
+<body class="type-page section-blog">
+    <script type="text/javascript">(function(document,window,undefined){function css_to_int(cssStyleDeclaration,unitStr){return parseInt(cssStyleDeclaration.replace(unitStr,''));}
+function pre_header_show(element){element.style.setProperty('margin-top',0);element.dataset.shown=true;}
+function pre_header_hide(element){let this_height=window.getComputedStyle(element).height;element.style.setProperty('margin-top',`-${this_height}`);element.dataset.shown=false;}
+function is_element_hidden(element){return['none'].indexOf(window.getComputedStyle(element).display)>-1;}
+document.addEventListener('DOMContentLoaded',()=>{const pre_header_element=document.querySelector('#pre-header');const pre_header_toggle=document.querySelector('#pre-header-toggle');if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}
+pre_header_toggle.addEventListener('click',(event)=>{if(pre_header_element.dataset.shown=="true"){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});window.addEventListener('resize',()=>{if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});});}(document,window));</script>
+    
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.colorswitch.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.darkmode.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.fontsize.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.contentwidth.min.js"></script>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">Keep current color theme</span>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">Use random color theme</span>
+    
+    <section class="main-grid">
+    
+        <header class="pre-header" id="pre-header">
+            <kg-colorswitcher>Color theme</kg-colorswitcher>
+            <kg-darkmode>Dark mode</kg-darkmode>
+            <kg-fontsize>Font size</kg-fontsize>
+            <kg-contentwidth>Content width</kg-contentwidth>
+        </header>
+    
+        <header class="site-header">
+            <nav role="navigation" id="navigation" aria-label="Main Navigation">
+                <ul class="nav-main">
+                    
+                    <li class="nav-item">
+                        <a href="/" data-perm="/blog/2017/03/using-the-terminal-the-prompt/" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" data-perm="/blog/2017/03/using-the-terminal-the-prompt/" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about/" data-perm="/blog/2017/03/using-the-terminal-the-prompt/" >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/photography/" data-perm="/blog/2017/03/using-the-terminal-the-prompt/" >Photography</a>
+                    </li><button id="pre-header-toggle" class="btn-preheader-toggle">Settings</button>
+                    </ul>
+                    </nav>
+        </header>
+
+    <section class="site-main-content">
+<main id="main" class="main">
+<section class="article-single" style="--this-border-radius: 30px 33px 60px 66px;"> 
+        <header class="article-header">
+            
+
+
+
+
+
+
+<h1>Using the Terminal: The Prompt</h1>
+
+
+
+
+<p class="publish-date">Published on 03/29/2017 </p>
+        </header>
+        <article class="article-content">
+
+            
+            <div class="content">
+                <p>The Terminal (or <em>bash</em>, <em>shell</em>, <em>console</em>) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already <a href="/bash-script-ws/">wrote about one custom script named <code>ws</code></a> which enhances my daily workflows. This article marks the first of many to come about using and configuring your terminal. This tutorial is written for MacOS and Linux, though most of it will work on Windows 10 if you use Bash.</p>
+<p>To get started with this tutorial open up your terminal. If you don&rsquo;t know how to open a terminal your first mission is to find out how! (<em>Hint: Google is your friend!</em>). Once the terminal is open we can start with some basic operations.</p>
+<p><em>Note:</em> On newer Windows versions you should use Bash if available! This tutorial will probably not work with older Windows Verisons (XP, 7, maybe even 8) and the Windows Terminal (e.g. CMD).</p>
+<p>In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it&rsquo;ll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).</p>
+<h2 id="preface-vim">Preface: VIM</h2>
+<blockquote>
+<p>Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, <a href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/
+#the-prompt">skip to the next section</a></p>
+</blockquote>
+<p><a href="http://www.vim.org/">VIM</a> is am incredibly powerful text editor available from the command line. It&rsquo;s a bit weird to get used to at first but once you know your way around you&rsquo;ll become quite productive with it. It&rsquo;s easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the <code>vim</code> command from a terminal which shows the default vim startup screen as seen below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/vim-empty-file.png"
+      alt="An empty file opened in VIM"
+       />
+    
+  
+  <figcaption>
+    <p>
+      An empty file opened in VIM
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>To start writing text we need to enter Input Mode. This is done by typing an <code>i</code>. Afterwards, we can write. VIM has three different modes: Input, Visual and Normal. To leave a mode and return to normal, you need to press <code>ESC</code>. Visual Mode can be used to select multiple lines or copy/paste things around. Insert Mode is mainly used for writing text and Normal Mode is used for navigation, e.g to move to the Top of a file (<code>gg</code>) or bottom of a file (<code>SHIFT+G</code>). VIM works a lot with shortcuts which is why we can edit text files so fast with it. Consider the following example HTML tag.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;some-class-name another-class-name yet more classes&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>To remove all classes and add a new class name you would move your mouse to the line, select everything between <code>&quot;</code> and <code>&quot;</code>, and then enter the new class name. In VIM, you can enter Normal Mode, place the cursor inside the element and press <code>ci&quot;</code> (<em>change in &ldquo;</em>). The entrie text will be removed and VIM enters Insert Mode inside the <code>&quot;&quot;</code>. To change a word, you write <code>cw</code>. To write text inside the tag, <code>cit</code> (change in tag) and the cursor is placed inside the <code>&lt;div&gt;</code>. Additional to the default movement and replacing there are plugins to make this even faster or smarter, like <a href="https://github.com/tpope/vim-surround">surround.vim</a>.</p>
+<p>So, VIM is quite an editor. Get used to it, you&rsquo;ll thank me later! What we need to know for basic file editing and this tutorial is the following:</p>
+<ul>
+<li><code>i</code> is pressed to enter Insert Mode</li>
+<li><code>ESC</code> is pressed to exit a mode, e.g. Insert or Visual</li>
+<li>all commands starting with <code>:</code> are executed by pressing the <code>&lt;Enter&gt;</code> key, e.g. <code>:wq&lt;Enter&gt;</code></li>
+<li><code>:</code> is pressed to enter a command (literally type a <code>:</code>, e.g. with <code>SHIFT+.</code> or wherever it is on your keyboard)</li>
+<li><code>:w</code> means <code>write</code>. To write a file, press <code>SHIFT+.</code>, then <code>w</code>, then <code>Enter</code>.</li>
+<li>To quit the editor, write <code>:q</code>, then <code>Enter</code>. To force quit without saving, type <code>:q!</code>, then <code>Enter</code></li>
+<li>Moving the cursor is done with UP, DOWN, RIGHT, and LEFT Arrow Keys or <code>h,j,k,l</code> in Normal Mode or Visual Mode
+<ul>
+<li><code>h</code> = left</li>
+<li><code>j</code> = down</li>
+<li><code>k</code> = up</li>
+<li><code>l</code> = right</li>
+</ul>
+</li>
+</ul>
+<p>Lots of VIM Tips can be found in the <a href="http://vim.wikia.com/wiki/Vim_Tips_Wiki">VIM Wikia</a>.</p>
+<h2 id="the-prompt">The Prompt</h2>
+<p>One your terminal is open you should see a Dollar Sign (<code>$</code>) or similar symbol, like shown below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~ $
+</code></pre></div><p>This is the Prompt. The Prompt shows the current directory (<code>~</code>) and most of the time has a fixed sign, e.g. <code>$</code>. Other prompts might use symbols like <code># </code>, <code>%</code> <code>bash-3.2$</code> or <code>kevin@ubuntu: $</code>. The prompt is configurable and comes with different defaults depending on the operating system. So, each line below is how a prompt may look.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kevin@MacBook-Pro: ~ $
+~/Development <span style="color:#75715e">#</span>
 /usr/share/docs %
 root@ubuntu: / $
-</code></pre></div><p>The Prompt can be changed by updating the <code>PS1</code> environment variable. Environment variables are available to the entire system and can be used to configure programs or create shortcuts. The <code>PS1</code> is defined inside the <code>.bashrc</code>, <code>.zshrc</code>, or other shell runtime file. If you are not sure which shell your are using, run <code>echo $SHELL</code> which gives back a string like <code>/bin/zsh</code> or <code>/bin/bash</code>. To change the PS1, open the config file (either <code>.bashrc</code> or <code>.zshrc</code>) inside an editor like <code>vim</code> - from the command line.</p><pre><code>$ vim $HOME/.bashrc
-</code></pre><p>If the files is not empty, go to the bottom (<code>SHIFT+G</code> in vim) and enter input mode (press <code>i</code>). Write the following, then save the file and quit:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>export PS1<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;MY CUSTOM PROMPT &#34;</span>
-</code></pre></div><blockquote><p><em>Note:</em> To write a file in VIM, press <code>:</code> and then type <code>w</code> and press enter.</p></blockquote><p>Now we need to reload the configuration file (<code>.bashrc</code>) by typing <code>source ~/.bashrc</code> into the terminal and hitting enter. The prompt now looks like this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>MY CUSTOM PROMPT
-</code></pre></div><p>Congrats, your first custom prompt! That&rsquo;s not a useful prompt, however, because it will always show <code>MY CUSTOM PROMPT</code>. A prompt that shows the current directory would be more useful. As it happens, we can use variables inside the Prompt and there are pre-defined variables which hold informations like the current directory, the current logged-in user, the hostname, and man more! Let&rsquo;s start with the working directory - the directory on the file system we are currently in. The working directory is stored inside the <code>\W</code> variable and we can use it like so</p><pre><code>$ vim ~/.bashrc
+</code></pre></div><p>The Prompt can be changed by updating the <code>PS1</code> environment variable. Environment variables are available to the entire system and can be used to configure programs or create shortcuts. The <code>PS1</code> is defined inside the <code>.bashrc</code>, <code>.zshrc</code>, or other shell runtime file. If you are not sure which shell your are using, run <code>echo $SHELL</code> which gives back a string like <code>/bin/zsh</code> or <code>/bin/bash</code>. To change the PS1, open the config file (either <code>.bashrc</code> or <code>.zshrc</code>) inside an editor like <code>vim</code> - from the command line.</p>
+<pre><code>$ vim $HOME/.bashrc
+</code></pre><p>If the files is not empty, go to the bottom (<code>SHIFT+G</code> in vim) and enter input mode (press <code>i</code>). Write the following, then save the file and quit:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MY CUSTOM PROMPT &#34;</span>
+</code></pre></div><blockquote>
+<p><em>Note:</em> To write a file in VIM, press <code>:</code> and then type <code>w</code> and press enter.</p>
+</blockquote>
+<p>Now we need to reload the configuration file (<code>.bashrc</code>) by typing <code>source ~/.bashrc</code> into the terminal and hitting enter. The prompt now looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">MY CUSTOM PROMPT
+</code></pre></div><p>Congrats, your first custom prompt! That&rsquo;s not a useful prompt, however, because it will always show <code>MY CUSTOM PROMPT</code>. A prompt that shows the current directory would be more useful. As it happens, we can use variables inside the Prompt and there are pre-defined variables which hold informations like the current directory, the current logged-in user, the hostname, and man more! Let&rsquo;s start with the working directory - the directory on the file system we are currently in. The working directory is stored inside the <code>\W</code> variable and we can use it like so</p>
+<pre><code>$ vim ~/.bashrc
 export PS1=&quot;\W $&quot;
-</code></pre><p>Save the fie (<code>:wq</code>) and reload the configuration with <code>source ~/.bashrc</code>. The prompt now looks like shown below.</p><figure><img src=/images/posts/2017/terminal/prompt/prompt-simple-working-directory.png alt="A simple prompt showing the Working Directory"><figcaption><p>A simple prompt showing the Working Directory</p></figcaption></figure><p>The first part before the <code>$</code> will be different for you, depending on where on your computer you currently are. To find out where you are, type <code>pwd</code> which shows the current path. You will see that <code>pwd</code> shows a lot more than what we see in the prompt! That is because the variable <code>\W</code> holds only the current directory without a full path. To get the full path, we need to use <code>\w</code>. Change your <code>.bashrc</code> file so the <code>PS1</code> uses the <code>\w</code> variable, reload the configuration (<code>source ~/.bashrc</code>) and see what happens. Your prompt should look similar to the one below.</p><figure><img src=/images/posts/2017/terminal/prompt/prompt-long-working-directory.png alt="Using \w, we get the full path from the HOME directory"><figcaption><p>Using \w, we get the full path from the HOME directory</p></figcaption></figure><p>The full directory path can be helpful but it can also get really long. I like to have a line break in my <code>PS1</code> so that I can enter text below the directory listing. To have a line break add a <code>\n</code> character before <code>$</code> - the <code>$</code>-symbol will then move to the next line as shown below.</p><figure><img src=/images/posts/2017/terminal/prompt/prompt-with-new-line.png alt="A terminal prompt with a new line"><figcaption><p>A terminal prompt with a new line</p></figcaption></figure><p>Looking good! The last thing we need - or I want - is to have some color in my prompt so that it&rsquo;s easier to recognize the path or see the hostname - to add color we can either use escape characters like <code>\[\033[34m\]</code> or - what I prefer - <code>tput</code>. You can <a href=http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html>read more on escape characters</a> if you wish. I will focus on <a href=https://linux.die.net/man/1/tput><code>tput</code></a>. I like to define my color variables first and then use them later. To define a variable in shell scripting write <code>variableName="value"</code>. If you need to execute a program to get your variable value, you have to surround it with <code>$()</code>. For example to read the content of the file <code>test.txt</code> into the variable <code>content</code>, you&rsquo;d write <code>content="$(cat test.txt)"</code>.</p><p>Define and use colors in <code>.bashrc</code> or <code>.zshrc</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># predefine variables</span>
-ps1_green<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>tput setaf 2<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
-ps1_yellow<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>tput setaf 3<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
-ps1_reset<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>tput sgr0<span style=color:#66d9ef>)</span><span style=color:#e6db74>\e[m&#34;</span>
-export PS1<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span>$ps1_green<span style=color:#e6db74>\w\n</span>$ps1_yellow<span style=color:#e6db74>\$</span>$ps1_reset<span style=color:#e6db74> &#34;</span>
-</code></pre></div><p><em>Note: A great reference for this technique is <a href=http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/>this handy list</a></em></p><p>In my testing I needed to use <code>\e[m</code> to properly reset the new lines. Otherwise commands would sometimes become cluttered when navigating back with <code>arrow up</code>.</p><p>So that&rsquo;s it for the first part of customizing and using the terminal. Below are some of the <code>tput</code> colors from <a href=http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/>linux.101hacks.com</a> - mostly as a reference for myself. 😁</p><table><thead><tr><th>Command</th><th>Output</th></tr></thead><tbody><tr><td><code>tput bold</code></td><td>Turn on <strong>bold</strong> text</td></tr><tr><td><code>tput smul</code></td><td>Begin underline mode</td></tr><tr><td><code>tput rmul</code></td><td>Exit underline mode</td></tr><tr><td><code>tput sgr0</code></td><td>Reset code, turns off all attributes</td></tr><tr><td><code>tput setaf</code></td><td>Set forground color using <a href=https://en.wikipedia.org/wiki/ANSI_escape_code>ANSI escape</a></td></tr><tr><td><code>tput setab</code></td><td>Set background color using <a href=https://en.wikipedia.org/wiki/ANSI_escape_code>ANSI escape</a></td></tr></tbody></table><p>And here are the 8 color codes you can combine with <code>tput setaf</code> and <code>tput setab</code>.</p><table><thead><tr><th>Code</th><th>Color</th></tr></thead><tbody><tr><td><code>0</code></td><td>Black</td></tr><tr><td><code>1</code></td><td>Red</td></tr><tr><td><code>2</code></td><td>Green</td></tr><tr><td><code>3</code></td><td>Yellow</td></tr><tr><td><code>4</code></td><td>Blue</td></tr><tr><td><code>5</code></td><td>Magenta</td></tr><tr><td><code>6</code></td><td>Cyan</td></tr><tr><td><code>7</code></td><td>White</td></tr></tbody></table></div></article></section><section class=tags-categories><section class=categories><h3>Categories</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under coding" href=https://kevingimbel.de/categories/coding/>coding</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under devops" href=https://kevingimbel.de/categories/devops/>devops</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts categorized under tutorial" href=https://kevingimbel.de/categories/tutorial/>tutorial</a></li></ul></section><section class=tags><h3>Tags</h3><ul class=tag-list><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with workflow" href=https://kevingimbel.de/tags/workflow/>workflow</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with productivity" href=https://kevingimbel.de/tags/productivity/>productivity</a></li><li class=tag-list__item><a class=tag-list__link title="View all posts tagged with apps" href=https://kevingimbel.de/tags/apps/>apps</a></li></ul></section></section></main></section><section class=site-support><section class=support><h4>Like this?</h4><p>If this content has helped you or your company, consider making a donation to a good cause.</p><p>For example, consider donating to the following causes:</p><div class=support-cause-list__wrapper><ul class=support-cause-list><li class=head><b>International</b></li><li><a rel=nofollow href=https://donate.doctorswithoutborders.org/onetime.cfm>Doctors without borders</a></li><li><a rel=nofollow href=https://www.amnesty.org/en/donate/>Amnesty International</a></li></ul><ul class=support-cause-list><li class=head><b>Germany</b></li><li><a rel=nofollow href=https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/>UNO Flüchtlingshilfe</a></li><li><a rel=nofollow href=https://www.amnesty.de/spenden>Amnesty</a></li><li><a rel=nofollow href=https://www.greenpeace.de/spenden>Greenpeace</a></li></ul></div></section><section class=author><div class=left><img src=/images/general/kevin-gimbel-2020_hu6d6852ea5f23d3570eb4d6a09e2c1824_341389_200x200_resize_q75_box.jpg alt="A Selfie of me" class=avatar></div><div class=right><p>Kevin Gimbel</p><p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He&rsquo;s also interested in Sci-Fi, Cyberpunk, and dystopian books.</p><p><em>Wearing a mask is a good idea!</em></p><p>You can find out more <a href=/about/>about me</a> if you wish.</p></div></section></section><footer class="site-footer footer"><nav role=navigation id=footer-navigation aria-label="Secondary Navigation"><p>More sections on this site</p><ul class=nav-footer><li class=nav-item><a href=/reading/>Reading</a></li><li class=nav-item><a href=/art/>Art</a></li><li class=nav-item><a href=/now/>Now</a></li></ul></nav><div class=left><p>&copy; 2009 - 2020 Kevin Gimbel. <a href=https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE title="View License on GitHub.com">License</a>. <a href=/blog/2020/01/no-tracking/>No Tracking</a>.</p><p><small>Follow me on <a href=https://twitter.com/_kevinatari title="Follow me on Twitter">Twitter @_kevinatari</a></small></p></p></div><div class=right><p><small class=xx-small>Found an issue? Edit this <a href=https://github.com/kevingimbel/kevingimbel.de/tree/master/content/blog/2017-03-29-using-the-terminal-part-1.md>page on GitHub.com</a></a></small></p><p><small class=xx-small>Made in Europe 🇪🇺 with love, <a href=/thanks>open source code</a> and <a href=https://gohugo.io/ title="Hugo static site generator" rel=nofollow>hugo</a>.<span class=fg-accent>&#9829;</span>.</small></p><p><small class=xx-small><a href=/legal>Imprint</a></small></p><p><small class=xx-small><code>¯\_(ツ)_/¯</code></small></p></div></footer></section></body></html>
+</code></pre><p>Save the fie (<code>:wq</code>) and reload the configuration with <code>source ~/.bashrc</code>. The prompt now looks like shown below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-simple-working-directory.png"
+      alt="A simple prompt showing the Working Directory"
+       />
+    
+  
+  <figcaption>
+    <p>
+      A simple prompt showing the Working Directory
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>The first part before the <code>$</code> will be different for you, depending on where on your computer you currently are. To find out where you are, type <code>pwd</code> which shows the current path. You will see that <code>pwd</code> shows a lot more than what we see in the prompt! That is because the variable <code>\W</code> holds only the current directory without a full path. To get the full path, we need to use <code>\w</code>. Change your <code>.bashrc</code> file so the <code>PS1</code> uses the <code>\w</code> variable, reload the configuration (<code>source ~/.bashrc</code>) and see what happens. Your prompt should look similar to the one below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-long-working-directory.png"
+      alt="Using \w, we get the full path from the HOME directory"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Using \w, we get the full path from the HOME directory
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>The full directory path can be helpful but it can also get really long. I like to have a line break in my <code>PS1</code> so that I can enter text below the directory listing. To have a line break add a <code>\n</code> character before <code>$</code> - the <code>$</code>-symbol will then move to the next line as shown below.</p>
+
+<figure >
+  
+
+    <img src="/images/posts/2017/terminal/prompt/prompt-with-new-line.png"
+      alt="A terminal prompt with a new line"
+       />
+    
+  
+  <figcaption>
+    <p>
+      A terminal prompt with a new line
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Looking good! The last thing we need - or I want - is to have some color in my prompt so that it&rsquo;s easier to recognize the path or see the hostname - to add color we can either use escape characters like <code>\[\033[34m\]</code> or - what I prefer - <code>tput</code>. You can <a href="http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">read more on escape characters</a> if you wish. I will focus on <a href="https://linux.die.net/man/1/tput"><code>tput</code></a>. I like to define my color variables first and then use them later. To define a variable in shell scripting write <code>variableName=&quot;value&quot;</code>. If you need to execute a program to get your variable value, you have to surround it with <code>$()</code>. For example to read the content of the file <code>test.txt</code> into the variable <code>content</code>, you&rsquo;d write <code>content=&quot;$(cat test.txt)&quot;</code>.</p>
+<p>Define and use colors in <code>.bashrc</code> or <code>.zshrc</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># predefine variables</span>
+ps1_green<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput setaf 2<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+ps1_yellow<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput setaf 3<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+ps1_reset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>tput sgr0<span style="color:#66d9ef">)</span><span style="color:#e6db74">\e[m&#34;</span>
+export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$ps1_green<span style="color:#e6db74">\w\n</span>$ps1_yellow<span style="color:#e6db74">\$</span>$ps1_reset<span style="color:#e6db74"> &#34;</span>
+</code></pre></div><p><em>Note: A great reference for this technique is <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">this handy list</a></em></p>
+<p>In my testing I needed to use <code>\e[m</code> to properly reset the new lines. Otherwise commands would sometimes become cluttered when navigating back with <code>arrow up</code>.</p>
+<p>So that&rsquo;s it for the first part of customizing and using the terminal. Below are some of the <code>tput</code> colors from <a href="http://linux.101hacks.com/ps1-examples/prompt-color-using-tput/">linux.101hacks.com</a> - mostly as a reference for myself. 😁</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tput bold</code></td>
+<td>Turn on <strong>bold</strong> text</td>
+</tr>
+<tr>
+<td><code>tput smul</code></td>
+<td>Begin underline mode</td>
+</tr>
+<tr>
+<td><code>tput rmul</code></td>
+<td>Exit underline mode</td>
+</tr>
+<tr>
+<td><code>tput sgr0</code></td>
+<td>Reset code, turns off all attributes</td>
+</tr>
+<tr>
+<td><code>tput setaf</code></td>
+<td>Set forground color using <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape</a></td>
+</tr>
+<tr>
+<td><code>tput setab</code></td>
+<td>Set background color using <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape</a></td>
+</tr>
+</tbody>
+</table>
+<p>And here are the 8 color codes you can combine with <code>tput setaf</code> and <code>tput setab</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>Black</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>Red</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Green</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td>Blue</td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td>Magenta</td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td>Cyan</td>
+</tr>
+<tr>
+<td><code>7</code></td>
+<td>White</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </article>
+    </section>
+</main>
+</section>
+
+    <section class="site-support">
+<section class="tags-categories">
+    
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under devops"
+                href="https://kevingimbel.de/categories/devops/">devops</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li></ul>
+</section>
+
+    
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with workflow"
+                href="https://kevingimbel.de/tags/workflow/">workflow</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with productivity"
+                href="https://kevingimbel.de/tags/productivity/">productivity</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with apps"
+                href="https://kevingimbel.de/tags/apps/">apps</a>
+        </li></ul>
+</section>
+
+</section>
+    <section class="article-nextprev">
+  <article class="article__next">
+      <span class="txt--bold">Next article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/" title="2017, week 10, 11, 12, 13">2017, week 10, 11, 12, 13</a>
+  
+  </article>
+
+  <article class="article__prev">
+      <span class="txt--bold">Previous article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/" title="2017, week 8 and 9">2017, week 8 and 9</a>
+      
+  </article>
+</section>
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>If this content has helped you or your company, consider making a donation to a good cause.</p>
+    <p>For example, consider donating to the following causes:</p>
+    <div class="support-cause-list__wrapper">
+        <ul class="support-cause-list">
+            <li class="head"><b>International</b></li>
+            <li><a rel="nofollow" href="https://donate.doctorswithoutborders.org/onetime.cfm">Doctors without borders</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.org/en/donate/">Amnesty International</a></li>
+        </ul>
+        <ul class="support-cause-list">
+            <li class="head"><b>Germany</b></li>
+            <li><a rel="nofollow" href="https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/">UNO Flüchtlingshilfe</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.de/spenden">Amnesty</a></li>
+            <li><a rel="nofollow" href="https://www.greenpeace.de/spenden">Greenpeace</a></li>
+        </ul>
+    </div>
+</section>
+
+    <section class="author">
+    <div class="left">
+        <img src="/images/general/kevin-gimbel-2020_hu6d6852ea5f23d3570eb4d6a09e2c1824_341389_200x200_resize_q75_box.jpg" alt="A Selfie of me" class="avatar">
+    </div>
+    <div class="right">
+        <p>Kevin Gimbel</p>
+<p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He&rsquo;s also interested in Sci-Fi, Cyberpunk, and dystopian books.</p>
+<p><em>Wearing a mask is a good idea!</em></p>
+<p>You can find out more <a href="/about/">about me</a> if you wish.</p>
+
+    </div>
+</section>
+</section>
+
+    <footer class="site-footer footer">
+        
+        
+        
+        <nav role="navigation" id="footer-navigation" aria-label="Secondary Navigation">
+        <p>More sections on this site </p>
+        <ul class="nav-footer">
+            <li class="nav-item">
+                <a href="/reading/">Reading</a>
+            </li>
+            <li class="nav-item">
+                <a href="/art/">Art</a>
+            </li>
+            <li class="nav-item">
+                <a href="/now/">Now</a>
+            </li></ul>
+        </nav>
+        
+
+
+        <div class="left">
+            <p> <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on <a href="https://twitter.com/_kevinatari" title="Follow me on Twitter">Twitter @_kevinatari</a></small></p>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? Edit this <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/en/blog/2017-03-29-using-the-terminal-part-1.md">page on GitHub.com</a></a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>  
+    </footer>
+    </section>
+    
+
+
+</body>
+
+</html>

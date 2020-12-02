@@ -29,22 +29,21 @@ class ContentWidth extends HTMLElement {
     this.ELEMENT = null;
 
     this.addEventListener("click", this.setContentWidthOnClick);
+  }
 
-    // read and applu theme from local storage
-    document.addEventListener("DOMContentLoaded", () => {
-      this.ELEMENT = document.querySelector(".article-single") || document.querySelector(".page-content");
+  connectedCallback() {
+    this.ELEMENT = document.querySelector(".article-single") || document.querySelector(".page-content");
 
-      if (this.ELEMENT != null) {
-        let value = window.localStorage.getItem(this.LOCAL_STORAGE_KEY);
+    if (this.ELEMENT != null) {
+      let value = window.localStorage.getItem(this.LOCAL_STORAGE_KEY);
 
-        if (value != null) {
-          this.state.contentWidth = value;
-          this.setContentWidth(value);
-        }
-
-        this.render();
+      if (value != null) {
+        this.state.contentWidth = value;
+        this.setContentWidth(value);
       }
-    });
+
+      this.render();
+    }
   }
 
   // helper to get this components css 

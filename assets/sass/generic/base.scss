@@ -102,12 +102,17 @@ hr {
   justify-content: space-between;
   padding: 1rem 2rem;
   font-size: .85rem;
+  position: relative;
+  transition: margin-top linear .2s;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
   .pre-header {
     padding: 1rem .5rem;
     justify-content: space-between;
     flex-wrap: wrap;
+    // These two are totally magic numbers!
+    margin-top: -130px;
+    height: 130px;
   }
 }
