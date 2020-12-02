@@ -1,0 +1,13 @@
+.reading-list {
+  margin: 1rem;
+}
+
+.reading__star {
+  color: var(--color-secondary);
+}
+
+.reading-list__article {
+  border-bottom: .25rem solid var(--color-secondary);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}

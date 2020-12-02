@@ -1,7 +1,7 @@
 {{ if ne .WordCount  0 }}
 {{ if ne .File.LogicalName "_index.md" }}
 {{- $borderStyle := partial "helper-border-radius.html" . -}}
-<article lang="{{ .Language }}" {{ printf "style=%q" $borderStyle | safeHTMLAttr }} class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
+<article lang="{{ .Params.Language | default .Language }}" {{ printf "style=%q" $borderStyle | safeHTMLAttr }} class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
     {{ partial "publish_date_list.html" . }}
     <h3 class="wavy-text article-preview__heading"><a id="article-heading-{{ .File.UniqueID }}" href="{{ .Permalink }}">{{ .Title }}</a></h3>
     {{ with .Params.intro_text }}

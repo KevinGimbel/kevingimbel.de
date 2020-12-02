@@ -5,7 +5,7 @@ title = "KevOps — DevOps, Cooking, and everything else I want to write about"
 theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
 publishDir = "docs"
 # ignoreErrors = ["error-output-taxonomy"]
-disableLanguages = ["es"]
+disableLanguages = ["es", "de"]
 [params]
     avatar_src = "images/general/kevin-gimbel-2020.jpg"
     avatar_alt = "A Selfie of me"
@@ -78,6 +78,12 @@ location = "Wiesbaden, Germany"
     name = "Now"
     URL = "/now/"
     Weight = 60
+
+    [[menu.footer]]
+    identifier = "RSS"
+    name = "RSS"
+    URL = "/rss/"
+    Weight = 70
 
 
 [outputs]

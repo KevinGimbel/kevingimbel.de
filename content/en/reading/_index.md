@@ -3,6 +3,8 @@ title: "Reading"
 intro_text: "Here you can find a list of books I've read, want to read, or am reading."
 aliases:
     - /books/
+# This sets the `type-page` class on the body instead of `type-section`.
+body_type: page
 ---
 
 I'm a slow reader. That's a sad fact and that is what makes me read books for literal months. I sometimes start a book, read a bit, stop reading for weeks, then pick it up again. 

@@ -28,7 +28,7 @@
     {{ block "custom_meta" . }}
     {{ end }}
 </head>
-<body class="{{ with .Kind }}type-{{ . }} {{ end }}{{ with .Section }}section-{{ . }}{{ end }}">
+<body class="{{ if isset .Params "body_type" }}type-{{ .Params.body_type }}{{else }}{{ with .Kind }}type-{{ . }}{{ end }}{{end}} {{ with .Section }}section-{{ . }}{{ end }}">
     <script type="text/javascript">{{- ((resources.Get "js/theme.js" | minify).Content | safeJS ) }}</script>
     
     <script type="text/javascript" src="{{- ((resources.Get "js/webcomponent.colorswitch.js" | minify).Permalink ) }}"></script>

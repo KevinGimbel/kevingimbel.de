@@ -59,9 +59,9 @@ class FontSizer extends HTMLElement {
       let btn = buttons[0];
       let action = btn.dataset.action;
       if (action == "increase") {
-        this.state.fontSize = parseFloat(currentSize) + 0.1;
+        this.state.fontSize = parseFloat(currentSize) + 0.25;
       } else {
-        this.state.fontSize = parseFloat(currentSize) - 0.1;
+        this.state.fontSize = parseFloat(currentSize) - 0.25;
       }
       this.setFontSize()
     } else {

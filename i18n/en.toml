@@ -70,7 +70,7 @@ other = "View articles from"
 other = "Back to navigation"
 
 [ui_html_subscribe_rss]
-other = "You can subscribe to this section via <a href=\"{{ .RelPermalink }}index.xml\" title=\"Subscribe to all {{ .Section }} posts via RSS\">RSS</a> or <a href=\"{{ .RelPermalink }}atom.xml\" title=\"Subscribe to all {{ .Section }} posts via Atom Feed\">Atom</a>"
+other = "You can subscribe via <a href=\"{{ .RelPermalink }}/rss/\" title=\"Subscribe via RSS\">RSS or Atom feeds</a>, click link to see all options. "
 
 [ui_date_he]
 other = "HE"
