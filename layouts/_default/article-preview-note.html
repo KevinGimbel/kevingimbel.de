@@ -1,4 +1,5 @@
-<article class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
+{{- $borderStyle := partial "helper-border-radius.html" . -}}
+<article  {{ printf "style=%q" $borderStyle | safeHTMLAttr }} class="article article--in-list {{ .Section }} article-{{ .Params.Type }}" aria-labelledby="article-heading-{{ .File.UniqueID }}" aria-describedby="article-summary-{{ .File.UniqueID }}">
     {{ partial "publish_date_list.html" . }}
     <div class="article-note__content">{{ .Content }}</div>
 </article>

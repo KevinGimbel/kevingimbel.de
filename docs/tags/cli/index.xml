@@ -1,9 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cli on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/cli/</link><description>Recent content in cli on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Passt</title><link>https://kevingimbel.de/project/passt/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/project/passt/</guid><description>passt is a CLI tool and library that can be used to generate random strings, e.g. for use as passwords. It is very &amp;ldquo;weak&amp;rdquo; in that it doesn&amp;rsquo;t use any &amp;ldquo;real&amp;rdquo; cryptography and should therefor not be used as an actual password generator.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cli on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/cli/</link>
+    <description>Recent content in cli on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grep in Action</title>
+      <link>https://kevingimbel.de/blog/2020/11/grep-in-action/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/11/grep-in-action/</guid>
+      <description>grep is a CLI tool created in 1974 that is pre-installed on any Linux/Unix-like/BSD* system. grep is an acronym and stands for _&amp;ldquo;globally search for a regular expression and print matching lines&amp;rdquo;_ - quite a mouth full but a good description of what grep does. The more I worked in the Sys-/DevOps domain, the more I found myself using grep and awk to select parts of files for further processing. In this article I want to highlight some things grep can do that _I didn&amp;rsquo;t know about but wish I did_ when I started using it.</description>
+    </item>
+    
+    <item>
+      <title>Passt</title>
+      <link>https://kevingimbel.de/project/passt/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/project/passt/</guid>
+      <description>passt is a CLI tool and library that can be used to generate random strings, e.g. for use as passwords. It is very &amp;ldquo;weak&amp;rdquo; in that it doesn&amp;rsquo;t use any &amp;ldquo;real&amp;rdquo; cryptography and should therefor not be used as an actual password generator.
 You can use passt to generate random test input when testing software tho.
 Up to date information can be found on GitHub https://github.com/kevingimbel/passt.
 Usage: CLI Install
-$ cargo install passt Arguments</description></item><item><title>Shipping Rust CLIs with Docker</title><link>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</guid><description>I recently found a nice and clean way of building and distributing Rust CLI apps using docker. For my work I created a Rust app that wraps some AWS SDK functions to make my day-to-day work with AWS easier. This CLI is very focused on the way we work at Synoa and therefore unfortunately not open source. The tech does not matter much, as we can just create a tiny example &amp;ldquo;app&amp;rdquo; for this blog post.</description></item><item><title>License</title><link>https://kevingimbel.de/project/license/</link><pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/project/license/</guid><description>license is a CLI tool for generation open source license files. It&amp;rsquo;s written in TypeScript and executed with Deno, a secure runtime for JavaScript.
+$ cargo install passt Arguments</description>
+    </item>
+    
+    <item>
+      <title>Rust CLI mit Docker ausliefern</title>
+      <link>https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/</guid>
+      <description>Vor kurzem habe ich einen Weg gefunden Rust CLI Programme über Docker auszuliefern. Für meinen Arbeitgeber Synoa habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit Homebrew möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen.</description>
+    </item>
+    
+    <item>
+      <title>Shipping Rust CLIs with Docker</title>
+      <link>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</guid>
+      <description>I recently found a nice and clean way of building and distributing Rust CLI apps using docker. For my work I created a Rust app that wraps some AWS SDK functions to make my day-to-day work with AWS easier. This CLI is very focused on the way we work at Synoa and therefore unfortunately not open source. The tech does not matter much, as we can just create a tiny example &amp;ldquo;app&amp;rdquo; for this blog post.</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://kevingimbel.de/project/license/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/project/license/</guid>
+      <description>license is a CLI tool for generation open source license files. It&amp;rsquo;s written in TypeScript and executed with Deno, a secure runtime for JavaScript.
 license is the successor of a Golang project of the same name I started years ago and contains more function that I never came around to implement. All features and command can be found on GitHub at kevingimbel/license-cli.
-Highlights Search for a license by keywords The example below shows all licenses matching the keyword &amp;ldquo;public-use&amp;rdquo;</description></item><item><title>Terrasave</title><link>https://kevingimbel.de/blog/2020/04/terrasave/</link><pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/04/terrasave/</guid><description>I just released a tiny tool function I&amp;rsquo;ve been using for some time called terrasave. It&amp;rsquo;s a Bash / Fish function that prevents you from running terraform without the -target option.
-Why does this exist? In terraform it is incredibly easy to destroy things with terraform apply. If you run apply terraform shows a huge output and sometimes you may overlook a thing being &amp;ldquo;replaced&amp;rdquo; instead of updated. Once upon a time I destroyed a MongoDB Atlas Cluster this way and lost all its data, because the &amp;ldquo;must be replaced&amp;rdquo; was hidden in a lot of terraform output and I simply didn&amp;rsquo;t see it.</description></item><item><title>Bash script: ws</title><link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link><pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid><description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description></item><item><title>Writing NodeJS cli tools</title><link>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</link><pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</guid><description>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, creating apache vhosts files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.
-Shebang If you already know what a Shebang is skip to the next section</description></item></channel></rss>
+Highlights Search for a license by keywords The example below shows all licenses matching the keyword &amp;ldquo;public-use&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Terrasave</title>
+      <link>https://kevingimbel.de/blog/2020/04/terrasave/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/04/terrasave/</guid>
+      <description>I just released a tiny tool function I&amp;rsquo;ve been using for some time called terrasave. It&amp;rsquo;s a Bash / Fish function that prevents you from running terraform without the -target option.
+Why does this exist? In terraform it is incredibly easy to destroy things with terraform apply. If you run apply terraform shows a huge output and sometimes you may overlook a thing being &amp;ldquo;replaced&amp;rdquo; instead of updated. Once upon a time I destroyed a MongoDB Atlas Cluster this way and lost all its data, because the &amp;ldquo;must be replaced&amp;rdquo; was hidden in a lot of terraform output and I simply didn&amp;rsquo;t see it.</description>
+    </item>
+    
+    <item>
+      <title>Bash script: ws</title>
+      <link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link>
+      <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid>
+      <description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description>
+    </item>
+    
+    <item>
+      <title>Writing NodeJS cli tools</title>
+      <link>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</link>
+      <pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</guid>
+      <description>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, creating apache vhosts files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.
+Shebang  If you already know what a Shebang is skip to the next section</description>
+    </item>
+    
+  </channel>
+</rss>

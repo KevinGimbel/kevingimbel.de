@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>magento on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/categories/magento/</link><description>Recent content in magento on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Wed, 27 Aug 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/categories/magento/index.xml" rel="self" type="application/rss+xml"/><item><title>Magento: Add fields to the Admin Backend</title><link>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</link><pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</guid><description>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely System-&amp;gt;Config-&amp;gt;Catalog where the user could later insert some SKUs to control which products are shown on the home page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a settings page. Not only was this rather complex it was also way too &amp;ldquo;over engineered&amp;rdquo; for a simple thing like a text field.</description></item><item><title>Magento: get and set variables in config.xml</title><link>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</link><pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</guid><description>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&amp;rsquo;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &amp;ldquo;cloned&amp;rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>magento on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/categories/magento/</link>
+    <description>Recent content in magento on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Wed, 27 Aug 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/categories/magento/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Magento: Add fields to the Admin Backend</title>
+      <link>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</guid>
+      <description>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely System-&amp;gt;Config-&amp;gt;Catalog where the user could later insert some SKUs to control which products are shown on the home page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a settings page. Not only was this rather complex it was also way too &amp;ldquo;over engineered&amp;rdquo; for a simple thing like a text field.</description>
+    </item>
+    
+    <item>
+      <title>Magento: get and set variables in config.xml</title>
+      <link>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</link>
+      <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</guid>
+      <description>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&amp;rsquo;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &amp;ldquo;cloned&amp;rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>custom-properties on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/custom-properties/</link><description>Recent content in custom-properties on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/custom-properties/index.xml" rel="self" type="application/rss+xml"/><item><title>New Settings and options!</title><link>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</link><pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</guid><description>Over the weekend I implemented a new settings section for my website (the one you read right now!). You can now choose the width of content for articles and pages to better suite your reading preference. I like smaller content because it makes it easier for me to read, others like full-width content. The new settings UI Click the &amp;ldquo;Settings&amp;rdquo; link in the top right and you&amp;rsquo;ll be able to configure the randomness of the color schema and the width of content.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>custom-properties on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/custom-properties/</link>
+    <description>Recent content in custom-properties on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/custom-properties/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Settings and options!</title>
+      <link>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</guid>
+      <description>Over the weekend I implemented a new settings section for my website (the one you read right now!). You can now choose the width of content for articles and pages to better suite your reading preference. I like smaller content because it makes it easier for me to read, others like full-width content.   The new settings UI    Click the &amp;ldquo;Settings&amp;rdquo; link in the top right and you&amp;rsquo;ll be able to configure the randomness of the color schema and the width of content.</description>
+    </item>
+    
+  </channel>
+</rss>

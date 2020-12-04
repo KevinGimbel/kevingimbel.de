@@ -1,0 +1,36 @@
+
+.page-nav {
+  background: var(--color-secondary);
+  padding: 1rem;
+  margin: 1rem 0;
+  max-width: 60rem;
+  // border-radius: 32px 67px 32px 42px;
+  border-radius: var(--border-radius-fancy-1);
+}
+
+.page-nav a:not(:last-of-type) {
+  margin-right: .5rem;
+}
+
+.page-nav--label {
+  display: block;
+  font-size: .75em;
+}
+
+.language-nav {
+  font-size: .75rem;
+}
+
+.language-nav ul {
+  display: inline-block; 
+  list-style: none;
+}
+
+.nav-footer li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.site-header {
+  margin-top: 1rem;
+}

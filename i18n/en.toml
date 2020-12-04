@@ -37,13 +37,13 @@ other = "View all <a href=\"/blog/\">articles</a>"
 other = "View all <a href=\"/photography/\">photos</a>"
 
 [ui_copyright_footer]
-other = "&copy; 2009 - {{ .Count }} Kevin Gimbel. <a href=\"https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE\" title=\"View License on GitHub.com\">License</a>."
+other = "&copy; 2009 - {{ . }} Kevin Gimbel. <a href=\"https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE\" title=\"View License on GitHub.com\">License</a>."
 
 [ui_follow_twitter]
-other = "Follow me on <a href=\"https://twitter.com/_kevinatari\" title=\"Follow me on Twitter\">Twitter @_kevinatari</a>"
+other = "Follow me on <a href=\"https://twitter.com/kevingimbel\" title=\"Follow me on Twitter\">Twitter @kevingimbel</a>"
 
 [ui_found_issue]
-other = "Found an issue? Edit this <a href=\"https://github.com/kevingimbel/kevingimbel.de/tree/master/content/{{ .File }}\">page on GitHub.com</a>"
+other = "Found an issue? Edit this <a href=\"https://github.com/kevingimbel/kevingimbel.de/tree/master/content/{{ .Lang }}/{{ .File }}\">page on GitHub.com</a>"
 
 [ui_imprint]
 other = "Imprint"
@@ -70,7 +70,7 @@ other = "View articles from"
 other = "Back to navigation"
 
 [ui_html_subscribe_rss]
-other = "You can subscribe to this section via <a href=\"{{ .RelPermalink }}index.xml\" title=\"Subscribe to all {{ .Section }} posts via RSS\">RSS</a> or <a href=\"{{ .RelPermalink }}atom.xml\" title=\"Subscribe to all {{ .Section }} posts via Atom Feed\">Atom</a>"
+other = "You can subscribe via <a href=\"{{ .RelPermalink }}/rss/\" title=\"Subscribe via RSS\">RSS or Atom feeds</a>, click link to see all options. "
 
 [ui_date_he]
 other = "HE"
@@ -131,3 +131,42 @@ other = "Color"
 
 [ui_settings_content_width]
 other = "Content width"
+
+[ui_settings_small]
+other = "Small"
+
+[ui_settings_medium]
+other = "Medium"
+
+[ui_settings_large]
+other = "Large"
+
+[ui_prevnext_next]
+other = "Next article"
+
+[ui_prevnext_previous]
+other = "Previous article"
+
+[ui_no_new_article]
+other = "No newer article"
+
+[ui_no_older_article]
+other = "The End."
+
+[settings]
+other = "Settings"
+
+[ui_other_languages]
+other = "Other languages"
+
+[ui_tag_list_intro]
+other = "All tags"
+
+[ui_all_in_category]
+other = "All articles categorized with \"{{ .Title }}\""
+
+[ui_all_in_tag]
+other = "All articles tagged with \"{{ .Title }}\""
+
+[ui_enable_dark_mode]
+other = "Enable dark mode"

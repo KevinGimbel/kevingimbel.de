@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rust CLI mit Docker ausliefern &mdash; KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="rust docker cli  blog code  ">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧙‍♂️</text></svg>">
+    
+    
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/main.min.css">
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/page.min.css">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kevingimbel">
+    <meta name="twitter:creator" content="@_kevinatari">
+    <meta name="twitter:title" content="Rust CLI mit Docker ausliefern">
+    <meta name="twitter:description" content="Vor kurzem habe ich einen Weg gefunden Rust CLI Programme über Docker auszuliefern. Für meinen Arbeitgeber Synoa habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit Homebrew möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen.">
+    
+
+</head>
+<body class="type-page section-blog">
+    <script type="text/javascript">(function(document,window,undefined){function css_to_int(cssStyleDeclaration,unitStr){return parseInt(cssStyleDeclaration.replace(unitStr,''));}
+function pre_header_show(element){element.style.setProperty('margin-top',0);element.dataset.shown=true;}
+function pre_header_hide(element){let this_height=window.getComputedStyle(element).height;element.style.setProperty('margin-top',`-${this_height}`);element.dataset.shown=false;}
+function is_element_hidden(element){return['none'].indexOf(window.getComputedStyle(element).display)>-1;}
+document.addEventListener('DOMContentLoaded',()=>{const pre_header_element=document.querySelector('#pre-header');const pre_header_toggle=document.querySelector('#pre-header-toggle');if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}
+pre_header_toggle.addEventListener('click',(event)=>{if(pre_header_element.dataset.shown=="true"){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});window.addEventListener('resize',()=>{if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});});}(document,window));</script>
+    
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.colorswitch.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.darkmode.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.fontsize.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.contentwidth.min.js"></script>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">Keep current color theme</span>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">Use random color theme</span>
+    
+    <section class="main-grid">
+    
+        <header class="pre-header" id="pre-header">
+            <kg-colorswitcher>Color theme</kg-colorswitcher>
+            <kg-darkmode>Dark mode</kg-darkmode>
+            
+            <kg-fontsize>Font size</kg-fontsize>
+            <kg-contentwidth>Content width</kg-contentwidth>
+            
+        </header>
+    
+        <header class="site-header">
+            <nav role="navigation" id="navigation" aria-label="Main Navigation">
+                <ul class="nav-main">
+                    
+                    <li class="nav-item">
+                        <a href="/" data-perm="/blog/2020/08/rust-cli-mit-docker-ausliefern/" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" data-perm="/blog/2020/08/rust-cli-mit-docker-ausliefern/" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about/" data-perm="/blog/2020/08/rust-cli-mit-docker-ausliefern/" >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/photography/" data-perm="/blog/2020/08/rust-cli-mit-docker-ausliefern/" >Photography</a>
+                    </li><button id="pre-header-toggle" class="btn-preheader-toggle">Settings</button>
+                    </ul>
+                    </nav>
+        </header>
+
+    <section class="site-main-content">
+<main id="main" class="main">
+<section class="article-single" style="--this-border-radius: 30px 33px 60px 66px;"> 
+        <header class="article-header">
+            
+
+
+
+
+
+
+<h1>Rust CLI mit Docker ausliefern</h1>
+
+
+
+
+<p class="publish-date">Published on 08/6/2020 </p>
+        </header>
+        <article class="article-content">
+
+            
+            <div class="content">
+                <p>Vor kurzem habe ich einen Weg gefunden Rust <abbr title="Command Line Interfaces; Programme die in einem Terminal ausgeführt werden">CLI</abbr>
+ Programme über Docker auszuliefern. Für meinen Arbeitgeber <a href="https://synoa.de">Synoa</a> habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit <a href="https://brew.sh">Homebrew</a> möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen. Wie das geht erkläre ich in diesem Artikel.</p>
+<h2 id="rust-code">Rust Code</h2>
+<p>Der folgende Beispiel Code zeigt ein kleines Rust Programm, dass die Argumente ausgibt die während der Ausführung übergeben wurden.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::env;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> args: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, args);
+}
+</code></pre></div><p>Der Code muss nicht verstanden werden um die Konzepte aus diesem Artikel zu verstehen! Das Muster ist für alle Binary-Programme gleich, z.B. könnte genauso eine Go App über Docker verteilt werden.</p>
+<h2 id="code-kompilieren---in-docker">Code kompilieren - in Docker</h2>
+<p>Den oben gezeigten Code können wir nun kompilieren, dass heißt ihn zu einer ausführbaren Binär-Datei &ldquo;zusammenfügen&rdquo;. Hierfür verwenden wir einen <a href="https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds">&ldquo;Multi-Stage&rdquo; Build</a> in Docker. So müssen wir und andere Entwickler keine vollständige Rust Umgebung verwalten und außerdem kann jeder Entwickler über Docker in der selben Umgebung Binaries kompilieren.</p>
+<p>Zunächst deklarieren wir einen <code>builder</code> Container. Dieser Container wird genutzt um unseren Rust Code zu kompilieren.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Diese vier Zeilen tun folgendes:</p>
+<ul>
+<li>Erstelle einen Container auf Basis von <a href="https://github.com/clux/muslrust"><code>clux/muslrust</code></a></li>
+<li>Dem Container wird der &ldquo;Name&rdquo; <code>builder</code> gegeben</li>
+<li>Das Arbeitsverzeichnis wird auf <code>/volume</code> gesetzt, damit wird Docker alle Befehle in diesem Verzeichnis ausführen</li>
+<li>Alle Dateien werden aus dem aktuellen Verzeichnis in den Container kopiert</li>
+<li>Das Kommando <code>cargo build --release</code> wird <em>im Container</em> ausgeführt und kompiliert unseren Code</li>
+</ul>
+<h2 id="das-eigentliche-docker-image-erzeugen">Das eigentliche Docker Image erzeugen</h2>
+<p>Nun können wir im selben Dockerfile unser eigentliches Image erzeugen. Dafür wird das kompilierte Binary aus dem <code>builder</code> container kopiert.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Kopiere das kompilierte Binary aus dem builder container</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Alle CLI argumente werden direkt an das Binary übergeben</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Was geschieht hier?</p>
+<ul>
+<li>Zuerst erstellen wir einen neuen Docker Container auf basis des <a href="https://alpinelinux.org/">Alpine Linux</a> Images.</li>
+<li>Dann kopieren wir das kompilierte Binary <em>aus dem builder Container</em> in unseren neuen Container</li>
+<li>Zuletzt sagen wir, dass das Binary als &ldquo;Startpunkt&rdquo; verwendet werden soll. Soll heißen wenn der Container gestartet wird, dann wird dieses Binary ausgeführt</li>
+</ul>
+<p>Warum Alpine Linux? Alpine Linux ist eine kleine auf Sicherheit fokusierte Linux Distribution. Das Alpine Docker image ist nur ca. 3MB groß - kleiner geht kaum!</p>
+<p>Alles zusammen sieht unser Dockerfile nun wie folgt aus:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="image-bauen-und-den-container-ausführen">Image bauen und den Container ausführen</h2>
+<p>Mit dem oben gezeigten Dockerfile können wir nun ein Image bauen. Hierfür benutzen wir folgenden Befehl:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t kevingimbel/rust-docker-cli-sample:1.0 .  
+</code></pre></div><p>Anschließend können wir einen Container ausführen, der das neu erstellte Image benutzt:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run --rm kevingimbel/rust-docker-cli-sample:1.0 -hello -world
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;-hello&#34;</span>, <span style="color:#e6db74">&#34;-world&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="terminal-konfiguration">Terminal konfiguration</h2>
+<p>Damit wir diesen Docker Container wie ein &ldquo;normales&rdquo; binary ausführen können müssen wir im Terminal ein &ldquo;alias&rdquo; setzen. Hierfür kommt folgende in die <code>~/.bashrc</code> bzw. <code>~/.zshrc</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Nun laden wir die Konfigurationsdatei neu oder öffnen ein neues Terminal Fenster und dann kann der Container wie ein normales Script ausgeführt werden.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># bash</span>
+source ~/.bashrc
+<span style="color:#75715e"># zsh</span>
+source ~/.zshrc
+</code></pre></div><p>Danach können wir den Container mit dem Befehl <code>docker-rust-cli</code> starten.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-rust-cli hello from docker
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;from&#34;</span>, <span style="color:#e6db74">&#34;docker&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="fortgeschritten-volumes">Fortgeschritten: Volumes</h2>
+<p>Wir könnten hier fertig sein, aber eine wichtige Funktion fehlt noch: Volumes. Wenn unser CLI tool Dateien erstellt würden diese sonst im Docker container bleiben und der wird standardmäßig gelöscht da wir <code>--rm</code> verwenden.</p>
+<p>Der <code>alias</code> wird also mit einem Volume angepasst.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Mit <code>-v $(pwd):/cmd-root-dir</code> sagen wir Docker, dass das aktuelle Verzeichnis (<code>$(pwd)</code>) im Container als Pfad <code>/cmd-root-dir</code> gemounted werden soll. Jetzt müssen wir nur noch unserem Image sagen, dass es Dateien auch in diesem Verzeichnis ablegen soll. Das geht indem wir in der Dockerfile die <code>WORKDIR</code> setzen.</p>
+<p>Das Dockerfile sieht nun wie folgt aus.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /cmd-root-dir</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p><code>WORKDIR</code> erstellt das Verzeichnis wenn es nicht existiert, wir müssen es also nicht selbst erstellen. Um diese Anpassung zu testen können wir unser Script eine Log Datei schreiben lassen. Dazu verändern wir den Rust Code wie folgt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::env;
+<span style="color:#66d9ef">use</span> std::fs;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">let</span> args: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, args);
+    fs::write(<span style="color:#e6db74">&#34;docker-cli-sample.log&#34;</span>, format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Args: {:?}&#34;</span>, args))<span style="color:#f92672">?</span>;
+    Ok(())
+}
+</code></pre></div><p>Mit <code>fs::write</code> schreiben wir nun alle Argumente auch in die Datei <code>docker-cli-sample.log</code> statt sie nur im Terminal anzuzeigen. Jetzt muss das Verzeichnis nur noch wie oben geschrieben gemounted werden:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Wichtig sind hierbei die einfachen Anführungszeichen (<code>'</code>) - ohne diese würde <code>$(pwd)</code> nur ein Mal ausgeführt werden statt bei jedem Aufruf!</p>
+<p>Wenn wir jetzt den Befehl ausführen wird eine Log Datei in das aktuelle Verzeichnis geschrieben:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-rust-cli
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">]</span>
+$ cat docker-cli-sample.log
+Args: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="fortgeschritten-versionierung">Fortgeschritten: Versionierung</h2>
+<p>Für etwas mehr Komfort können wir eine Variable für den &ldquo;Docker Tag&rdquo;, also die Version unseres Images, nutzen. So kann man später einfach updaten ohne den eigentlichen Befehl anpassen zu müssen.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export MY_CLI_VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>
+alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:$MY_CLI_VERSION&#39;</span>
+</code></pre></div><p>Soll nun Version 1.1 verwendet werden muss lediglich die Variable <code>MY_CLI_VERSION</code> auf <code>1.1</code> geändert werden. Jeder mit Zugriff auf das Docker Image kann nun den Code in die <code>~/.bashrc</code> oder <code>~/.zshrc</code> kopieren und das CLI Programm nutzen.</p>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<ul>
+<li>Wir können mit <a href="https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds" title="Docker Dokumentation über Multi-Stage Builds">Multi-Stage Builds</a> code in Docker kompilieren</li>
+<li>Rust binaries können in kleinen Containern wie z.B. Alpine oder &ldquo;blanken&rdquo; Container ausgeführt werden</li>
+<li>Mit einem <code>alias</code> können wir bequem und komfortable Docker Container ausführen als wären es &ldquo;installiere&rdquo; Binaries</li>
+<li>Indem wir <code>WORKDIR</code> und Volumes nutzen können wir Dateien aus dem Container heraus speichern</li>
+</ul>
+<p>Der Quellcode für dieses Tutorial kann auf <a href="https://github.com/kevingimbel/docker-cli-sample">GitHub unter kevingimbel/docker-cli-sample</a> gefunden werde. Ein funktionierendes Docker Image gibt es auf <a href="https://hub.docker.com/r/kevingimbel/rust-docker-cli-sample">Docker Hub unter kevingimbel/rust-docker-cli-sample</a>.</p>
+<p>Um das Docker Image zu nutzen kann folgender Befehl ausgeführt werden:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --rm kevingimbel/rust-docker-cli-sample:1.0 hello from docker
+</code></pre></div>
+            </div>
+        </article>
+    </section>
+</main>
+</section>
+
+    <section class="site-support">
+<section class="tags-categories">
+    
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under code"
+                href="https://kevingimbel.de/categories/code/">code</a>
+        </li></ul>
+</section>
+
+    
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with rust"
+                href="https://kevingimbel.de/tags/rust/">rust</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with docker"
+                href="https://kevingimbel.de/tags/docker/">docker</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with cli"
+                href="https://kevingimbel.de/tags/cli/">cli</a>
+        </li></ul>
+</section>
+
+</section>
+    <section class="article-nextprev">
+  <article class="article__next">
+      <span class="txt--bold">Next article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2020/08/fall-guys/" title="Fall Guys">Fall Guys</a>
+  
+  </article>
+
+  <article class="article__prev">
+      <span class="txt--bold">Previous article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/" title="Shipping Rust CLIs with Docker">Shipping Rust CLIs with Docker</a>
+      
+  </article>
+</section>
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>If this content has helped you or your company, consider making a donation to a good cause.</p>
+    <p>For example, consider donating to the following causes:</p>
+    <div class="support-cause-list__wrapper">
+        <ul class="support-cause-list">
+            <li class="head"><b>International</b></li>
+            <li><a rel="nofollow" href="https://donate.doctorswithoutborders.org/onetime.cfm">Doctors without borders</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.org/en/donate/">Amnesty International</a></li>
+        </ul>
+        <ul class="support-cause-list">
+            <li class="head"><b>Germany</b></li>
+            <li><a rel="nofollow" href="https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/">UNO Flüchtlingshilfe</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.de/spenden">Amnesty</a></li>
+            <li><a rel="nofollow" href="https://www.greenpeace.de/spenden">Greenpeace</a></li>
+        </ul>
+    </div>
+</section>
+
+    <section class="author">
+    <div class="left">
+        <img src="/images/general/kevin-gimbel-2020_hu6d6852ea5f23d3570eb4d6a09e2c1824_341389_200x200_resize_q75_box.jpg" alt="A Selfie of me" class="avatar">
+    </div>
+    <div class="right">
+        <p>Kevin Gimbel</p>
+<p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He&rsquo;s also interested in Sci-Fi, Cyberpunk, and dystopian books.</p>
+<p><em>Wearing a mask is a good idea!</em></p>
+<p>You can find out more <a href="/about/">about me</a> if you wish.</p>
+
+    </div>
+</section>
+</section>
+
+    <footer class="site-footer footer">
+        
+        
+        
+        <nav role="navigation" id="footer-navigation" aria-label="Secondary Navigation">
+        <p>More sections on this site </p>
+        <ul class="nav-footer">
+            <li class="nav-item">
+                <a href="/reading/">Books</a>
+            </li>
+            <li class="nav-item">
+                <a href="/link-list/">Links</a>
+            </li>
+            <li class="nav-item">
+                <a href="/art/">Art</a>
+            </li>
+            <li class="nav-item">
+                <a href="/now/">Now</a>
+            </li>
+            <li class="nav-item">
+                <a href="/rss/">RSS</a>
+            </li></ul>
+        </nav>
+        
+
+
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View License on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on <a href="https://twitter.com/kevingimbel" title="Follow me on Twitter">Twitter @kevingimbel</a></small></p>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? Edit this <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/en/blog/2020-08-06-rust-cli-mit-docker-ausliefern.md">page on GitHub.com</a></a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>  
+    </footer>
+    </section>
+    
+
+
+</body>
+
+</html>

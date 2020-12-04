@@ -1,0 +1,8 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: var(--color-bg-box, #fff);
+  margin: 2rem;
+  border-radius: var(--border-radius-fancy-1);
+}

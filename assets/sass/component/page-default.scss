@@ -1,0 +1,90 @@
+.main {
+  padding-top: 1.5rem;
+  border-bottom: 0;
+  min-height: 100vh;
+}
+
+.main p {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-content,
+.article-single {
+  --local-border-radius: var(--this-border-radius, --border-radius-fancy-4);
+
+  background: var(--color-bg-box);
+  padding: 2rem;
+  margin: 1rem 2rem 2rem 0;
+  max-width: var(--content-max-width, 80rem);
+  margin: 0 auto;
+  // border-radius: 4px 29px 7px 26px;
+  border-radius: var(--local-border-radius);
+}
+
+p code,
+li code {
+  background: var(--color-secondary);
+  color: var(--color-main);
+  padding: .125rem .25rem;
+  border-radius: 9px 5px 7px 3px;
+}
+
+.publish-date {
+  font-size: .85em;
+}
+
+pre {
+  padding: 1rem;
+  overflow: auto;
+}
+
+blockquote {
+  font-size: 110%;
+  font-style: italic;
+  text-indent: .5rem;
+  border-left: .25rem solid var(--color-secondary);
+  padding: .25rem 0;
+  padding-left: 1rem;
+}
+
+table {
+  background: var(--color-bg-box, #fff);
+  border-spacing: unset;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  width: calc(100% + 30rem);
+  margin-left: -15rem;
+}
+
+thead {
+  background: var(--color-main);
+  color: var(--color-secondary);
+}
+
+thead th {
+  text-align: left;
+  padding-left: .5rem;
+}
+
+tbody td {
+  padding: .5rem;
+  border-bottom: 1px solid #333;
+}
+
+.rating-list {
+  font-size: 2rem;
+}
+
+@media all and (max-width: 800px) {
+
+  .main {
+    padding: 0;
+  }
+
+  .article-list__intro,
+  .page-content,
+  .article-single {
+    padding: .5rem;
+  }
+}

@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE"><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><title type="html">Blog via KevOps — DevOps, Cooking, and everything else I want to write about (%!s(&lt;nil>))</title><link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" title="HTML"/><link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS"/><link href="https://kevingimbel.de/de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom"/><link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" hreflang="en" title="[%!s(<nil>)] HTML"/><link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="en" title="[%!s(<nil>)] RSS"/><link href="https://kevingimbel.de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="en" title="[%!s(<nil>)] Atom"/><updated>2020-10-27T09:11:58+01:00</updated><id>https://kevingimbel.de/de/blog/</id><entry><title type="html">Saatenbrot</title><link href="https://kevingimbel.de/de/blog/2020/10/saatenbrot/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/10/saatenbrot/</id><published>2020-10-26T00:00:00+00:00</published><updated>2020-10-26T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Ich habe mal wieder gebacken! Diesmal gab es ein Saatenbrot, bestehend aus Weizenmehl, Weizen-Vollkornmehl, etwas Hefe, und Kürbiskernen, Leinsamen, und Sesam.</p>
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE">
+    <generator uri="https://gohugo.io/" version="0.78.2">Hugo</generator><title type="html"><![CDATA[Blog via KevOps — DevOps, Cooking, and everything else I want to write about (%!s(<nil>))]]></title>
+    
+    
+    
+            <link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+            <link href="https://kevingimbel.de/de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
+        
+        
+                <link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" hreflang="en" title="[%!s(<nil>)] HTML" />
+                <link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="en" title="[%!s(<nil>)] RSS" />
+                <link href="https://kevingimbel.de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="en" title="[%!s(<nil>)] Atom" />
+    <updated>2020-11-24T09:34:33+01:00</updated>
+    
+    
+    
+    
+        <id>https://kevingimbel.de/de/blog/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Saatenbrot]]></title>
+            <link href="https://kevingimbel.de/de/blog/2020/10/saatenbrot/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/de/blog/2020/10/saatenbrot/</id>
+            
+            
+            <published>2020-10-26T00:00:00+00:00</published>
+            <updated>2020-10-26T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Ich habe mal wieder gebacken! Diesmal gab es ein Saatenbrot, bestehend aus Weizenmehl, Weizen-Vollkornmehl, etwas Hefe, und Kürbiskernen, Leinsamen, und Sesam.</p>
 <!-- raw HTML omitted -->
 
 <figure >
@@ -44,7 +78,54 @@
 
 <p>Ich bin mir unsicher in wiefern ich Rezepte teilen kann, wenn diese aus einem kommerziellen Kochbuch kommen - das Rezept stammt aus <a href="https://www.gu.de/produkte/kochen-verwoehnen/backen-und-suessspeisen/brote-ohne-kneten-weber-2017/">&ldquo;BROTE OHNE KNETEN&rdquo;</a> - das Buch kann ich an dieser Stelle wärmstens Empfehlen kann, wenn man mit dem Brotbacken starten will! Allerdings braucht man dazu auf jeden Fall einen Gusseisen-Topf in dem das Brot im Ofen gebacken wird.</p>
 <p>Ich freue mich schon aufs nächste Brot!</p>
-]]></content><category scheme="https://kevingimbel.de/de/categories/backen" term="backen" label="backen"/><category scheme="https://kevingimbel.de/de/tags/brot" term="brot" label="brot"/><category scheme="https://kevingimbel.de/de/tags/hefe" term="hefe" label="hefe"/><category scheme="https://kevingimbel.de/de/tags/vollkorn" term="vollkorn" label="vollkorn"/><category scheme="https://kevingimbel.de/de/tags/gusseisentopf" term="gusseisentopf" label="Gusseisentopf"/></entry><entry><title type="html">Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping</title><link href="https://kevingimbel.de/de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</id><published>2020-10-01T00:00:00+00:00</published><updated>2020-10-01T00:00:00+00:00</updated><content type="html"><![CDATA[
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/categories/backen" term="backen" label="backen" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/brot" term="brot" label="brot" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/hefe" term="hefe" label="hefe" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/vollkorn" term="vollkorn" label="vollkorn" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/gusseisentopf" term="gusseisentopf" label="Gusseisentopf" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping]]></title>
+            <link href="https://kevingimbel.de/de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</id>
+            
+            
+            <published>2020-10-01T00:00:00+00:00</published>
+            <updated>2020-10-01T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[
 <figure >
   
 
@@ -94,7 +175,57 @@
 <li>Dill darüber streuen</li>
 </ol>
 <p>Im Bild oben habe ich die Sauce nicht direkt unter die Nudeln gemischt wodurch alles leider etwas kalt wurde bis es auf den Tisch kam. Das Original Rezept ist von <a href="https://de.wikipedia.org/wiki/Nadiya_Hussain">Nadiya Hussain</a> und kommt in ihrer neusten Kochshow auf Netflix vor; Nachgekocht habe ich es nach meinem Gedächtnis-Protokoll und ich glaube, dass ich irgendwas vergessen habe - lecker war es trotzdem!</p>
-]]></content><category scheme="https://kevingimbel.de/de/categories/kochen" term="kochen" label="kochen"/><category scheme="https://kevingimbel.de/de/tags/veggie" term="veggie" label="veggie"/><category scheme="https://kevingimbel.de/de/tags/pasta" term="pasta" label="pasta"/><category scheme="https://kevingimbel.de/de/tags/tagliatelle" term="tagliatelle" label="tagliatelle"/><category scheme="https://kevingimbel.de/de/tags/feta" term="feta" label="feta"/><category scheme="https://kevingimbel.de/de/tags/dill" term="dill" label="dill"/></entry><entry><title type="html">Rust Compiler Umgebungsvariablen</title><link href="https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/?utm_source=atom_feed" rel="alternate" type="text/html"/><link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="related" type="text/html" title="Rust CLI mit Docker ausliefern"/><id>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</id><published>2020-09-30T00:00:00+00:00</published><updated>2020-09-30T00:00:00+00:00</updated><content type="html"><![CDATA[<p><a href="https://rust-lang.org">Rust</a> ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &ldquo;schlau&rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens <code>cargo</code> ausgeliefert. Cargo ist ähnlich wie <code>npm</code> oder <code>maven</code> und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/categories/kochen" term="kochen" label="kochen" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/veggie" term="veggie" label="veggie" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/pasta" term="pasta" label="pasta" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/tagliatelle" term="tagliatelle" label="tagliatelle" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/feta" term="feta" label="feta" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/dill" term="dill" label="dill" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Rust Compiler Umgebungsvariablen]]></title>
+            <link href="https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="related" type="text/html" title="Rust CLI mit Docker ausliefern" />
+            
+                <id>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</id>
+            
+            
+            <published>2020-09-30T00:00:00+00:00</published>
+            <updated>2020-09-30T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p><a href="https://rust-lang.org">Rust</a> ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &ldquo;schlau&rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens <code>cargo</code> ausgeliefert. Cargo ist ähnlich wie <code>npm</code> oder <code>maven</code> und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</p>
 <h2 id="source-code">Source Code</h2>
 <p>Der gesamte Source Code für diesen Blog-Beitrag kann auf GitHub gefunden werden: <a href="https://github.com/kevingimbel/rust-blog-code/tree/main/env-example">github.com/kevingimbel/rust-blog-code/env-example</a>.</p>
 <p>Einige Code Beispiele können direkt ausgeführt werden. Anweisung wie z.B. <code>cargo run --examples ding</code> in diesem Beitrag führen die verschiedenen Code Beispiele im <code>examples</code> Ordner aus. Um diese zu verwenden, folgende Schritten ausführen:</p>
@@ -227,7 +358,52 @@ error: Bitte MY_VAR setzen, z.B. mit export MY_VAR<span style="color:#f92672">=<
 <li><a href="https://github.com/rust-lang/cargo">Cargo GitHub</a></li>
 <li><a href="https://doc.rust-lang.org/stable/std/env/index.html">std::env Dokumentation</a></li>
 </ul>
-]]></content><category scheme="https://kevingimbel.de/de/categories/code" term="code" label="code"/><category scheme="https://kevingimbel.de/de/tags/rust" term="rust" label="rust"/><category scheme="https://kevingimbel.de/de/tags/cargo" term="cargo" label="cargo"/><category scheme="https://kevingimbel.de/de/tags/compiler" term="compiler" label="compiler"/></entry><entry><title type="html">Ich buk Sauerteig Brot</title><link href="https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/</id><published>2020-09-13T00:00:00+00:00</published><updated>2020-09-13T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Inspiriert von <a href="https://twitter.com/oddnina" title="Folgt der guten Nina auf Twitter, es lohnt!">Nina</a> und ihrem <a href="https://twitter.com/OddNina/status/1304023596122148864/photo/1" title="Ein Bild von Ninas Brot auf Twitter">Sauerteig Brot</a> dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &ldquo;pflegen&rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/categories/code" term="code" label="code" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/rust" term="rust" label="rust" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/cargo" term="cargo" label="cargo" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/compiler" term="compiler" label="compiler" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Ich buk Sauerteig Brot]]></title>
+            <link href="https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/</id>
+            
+            
+            <published>2020-09-13T00:00:00+00:00</published>
+            <updated>2020-09-13T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Inspiriert von <a href="https://twitter.com/oddnina" title="Folgt der guten Nina auf Twitter, es lohnt!">Nina</a> und ihrem <a href="https://twitter.com/OddNina/status/1304023596122148864/photo/1" title="Ein Bild von Ninas Brot auf Twitter">Sauerteig Brot</a> dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &ldquo;pflegen&rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️</p>
 
 <figure >
   
@@ -257,7 +433,52 @@ error: Bitte MY_VAR setzen, z.B. mit export MY_VAR<span style="color:#f92672">=<
 <li>Mehr Brot backen, generell!</li>
 </ul>
 <p>Als nächstes möchte ich mal wieder Brötchen backen, das macht nämlich Spaß!</p>
-]]></content><category scheme="https://kevingimbel.de/de/categories/backen" term="backen" label="backen"/><category scheme="https://kevingimbel.de/de/tags/brot" term="brot" label="Brot"/><category scheme="https://kevingimbel.de/de/tags/sauerteig" term="sauerteig" label="Sauerteig"/><category scheme="https://kevingimbel.de/de/tags/fehlschlag" term="fehlschlag" label="Fehlschlag"/></entry><entry><title type="html">Rust CLI mit Docker ausliefern</title><link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</id><published>2020-08-06T00:00:00+00:00</published><updated>2020-08-06T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Vor kurzem habe ich einen Weg gefunden Rust <abbr title="Command Line Interfaces; Programme die in einem Terminal ausgeführt werden">CLI</abbr>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/categories/backen" term="backen" label="backen" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/brot" term="brot" label="Brot" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/sauerteig" term="sauerteig" label="Sauerteig" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/fehlschlag" term="fehlschlag" label="Fehlschlag" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Rust CLI mit Docker ausliefern]]></title>
+            <link href="https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</id>
+            
+            
+            <published>2020-08-06T00:00:00+00:00</published>
+            <updated>2020-08-06T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Vor kurzem habe ich einen Weg gefunden Rust <abbr title="Command Line Interfaces; Programme die in einem Terminal ausgeführt werden">CLI</abbr>
  Programme über Docker auszuliefern. Für meinen Arbeitgeber <a href="https://synoa.de">Synoa</a> habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit <a href="https://brew.sh">Homebrew</a> möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen. Wie das geht erkläre ich in diesem Artikel.</p>
 <h2 id="rust-code">Rust Code</h2>
 <p>Der folgende Beispiel Code zeigt ein kleines Rust Programm, dass die Argumente ausgibt die während der Ausführung übergeben wurden.</p>
@@ -371,15 +592,133 @@ alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6d
 <p>Der Quellcode für dieses Tutorial kann auf <a href="https://github.com/kevingimbel/docker-cli-sample">GitHub unter kevingimbel/docker-cli-sample</a> gefunden werde. Ein funktionierendes Docker Image gibt es auf <a href="https://hub.docker.com/r/kevingimbel/rust-docker-cli-sample">Docker Hub unter kevingimbel/rust-docker-cli-sample</a>.</p>
 <p>Um das Docker Image zu nutzen kann folgender Befehl ausgeführt werden:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --rm kevingimbel/rust-docker-cli-sample:1.0 hello from docker
-</code></pre></div>]]></content><category scheme="https://kevingimbel.de/de/categories/code" term="code" label="code"/><category scheme="https://kevingimbel.de/de/tags/rust" term="rust" label="rust"/><category scheme="https://kevingimbel.de/de/tags/docker" term="docker" label="docker"/><category scheme="https://kevingimbel.de/de/tags/cli" term="cli" label="cli"/></entry><entry><title type="html">Corona Warn App</title><link href="https://kevingimbel.de/de/blog/2020/06/corona-warn-app/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/06/corona-warn-app/</id><published>2020-06-18T00:00:00+00:00</published><updated>2020-06-18T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Die <a href="https://www.coronawarn.app/de/">Corona Warn App</a> wurde veröffentlicht und erstaunlicherweise ist sie gut! Die App läuft mit minimalen Berechtigungen, verbraucht wenig Strom da sie <a href="https://de.wikipedia.org/wiki/Bluetooth_Low_Energy">Bluetooth Low Energy</a> verwendet, ist komplett dezentralisiert, und zu alledem auch noch Open Source: der Code für die Apps, die Website, und den Backend Server ist <a href="https://github.com/corona-warn-app">auf GitHub verfügbar</a>.</p>
+</code></pre></div>]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/categories/code" term="code" label="code" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/rust" term="rust" label="rust" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/docker" term="docker" label="docker" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/cli" term="cli" label="cli" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Corona Warn App]]></title>
+            <link href="https://kevingimbel.de/de/blog/2020/06/corona-warn-app/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/de/blog/2020/06/corona-warn-app/</id>
+            
+            
+            <published>2020-06-18T00:00:00+00:00</published>
+            <updated>2020-06-18T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Die <a href="https://www.coronawarn.app/de/">Corona Warn App</a> wurde veröffentlicht und erstaunlicherweise ist sie gut! Die App läuft mit minimalen Berechtigungen, verbraucht wenig Strom da sie <a href="https://de.wikipedia.org/wiki/Bluetooth_Low_Energy">Bluetooth Low Energy</a> verwendet, ist komplett dezentralisiert, und zu alledem auch noch Open Source: der Code für die Apps, die Website, und den Backend Server ist <a href="https://github.com/corona-warn-app">auf GitHub verfügbar</a>.</p>
 <p>Auch <a href="https://linus-neumann.de/">Linus Neumann</a> vom <a href="https://ccc.de/">Chaos Computer Club</a> lobt die Umsetzung in <a href="https://www.youtube.com/watch?v=_80-rl9UZJA">diesem Video</a> der Tagesschau, nachdem er und andere zuvor lange Zeit für eine dezentralisierte Lösung plädiert haben. Im Video wird auch weiter auf die Funktion der App eingegenagen und Nutzer-Fragen beantwortet. Meiner Meinung nach ist es auch ein großer Schritt, dass die App und alle dazugehörigen Komponenten Open Source sind (siehe oben).</p>
 <p>Einige Android User waren zunächst besorgt da &ldquo;Location Services&rdquo; angefragt werden, in den FAQ <a href="https://www.coronawarn.app/de/faq/#android_location">wird erklärt</a>, warum dies nötig ist:</p>
 <blockquote>
 <p>[&hellip;] Die Meldung geht auf eine Besonderheit von Android zurück: Bluetooth-Geräte in Deiner Nähe können grundsätzlich nur gefunden werden, wenn die Standortverwendung allgemein auf Deinem Gerät aktiviert ist [&hellip;]</p>
 </blockquote>
 <p>Die Corona Warn App ist für <a href="https://apps.apple.com/de/app/corona-warn-app/id1512595757">iOS</a> und <a href="https://play.google.com/store/apps/details?id=de.rki.coronawarnapp">Android</a> verfügbar und es gibt wirklich <em>keinen Grund sie nicht zu installieren</em>.</p>
-]]></content><category scheme="https://kevingimbel.de/de/categories/allgemein" term="allgemein" label="allgemein"/><category scheme="https://kevingimbel.de/de/tags/corona" term="corona" label="corona"/><category scheme="https://kevingimbel.de/de/tags/app" term="app" label="app"/></entry><entry><title type="html">Hallo, Welt!</title><link href="https://kevingimbel.de/de/blog/2020/05/hallo-welt/?utm_source=atom_feed" rel="alternate" type="text/html"/><id>https://kevingimbel.de/de/blog/2020/05/hallo-welt/</id><published>2020-05-20T00:00:00+00:00</published><updated>2020-05-20T00:00:00+00:00</updated><content type="html"><![CDATA[<p>Hallo!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/categories/allgemein" term="allgemein" label="allgemein" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/corona" term="corona" label="corona" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/app" term="app" label="app" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Hallo, Welt!]]></title>
+            <link href="https://kevingimbel.de/de/blog/2020/05/hallo-welt/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/de/blog/2020/05/hallo-welt/</id>
+            
+            
+            <published>2020-05-20T00:00:00+00:00</published>
+            <updated>2020-05-20T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Hallo!</p>
 <p>Dieser Blog hat ab jetzt auch eine Deutsche &hellip; Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter <code>/de/</code> allen Deutschen <del>Content</del> Inhalt.</p>
 <p>Schauen wir mal wie&rsquo;s wird. 🤷‍♀️</p>
 <p>Danke für eure Aufmerksamkeit!</p>
-]]></content><category scheme="https://kevingimbel.de/de/categories/notiz" term="notiz" label="notiz"/><category scheme="https://kevingimbel.de/de/tags/blog" term="blog" label="blog"/><category scheme="https://kevingimbel.de/de/tags/in-eigener-sache" term="in-eigener-sache" label="in-eigener-sache"/></entry></feed>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/categories/notiz" term="notiz" label="notiz" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/blog" term="blog" label="blog" />
+                             
+                                <category scheme="https://kevingimbel.de/de/tags/in-eigener-sache" term="in-eigener-sache" label="in-eigener-sache" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

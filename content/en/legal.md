@@ -12,8 +12,7 @@ This website is managed by:
 **Kevin Gimbel** \
 Wiesbaden, Germany \
 Mail: [hallo+webadmin@kevingimbel.com](mailto:hallo+webadmin@kevingimbel.com) \
-Mastodon: [bullgit.party/@kevin](https://bullgit.party/@kevin) \
-Matrix: [@kevingimbel:bullgit.science](https://matrix.to/#/@kevingimbel:bullgit.science)
+Twitter: [@KevinGimbel](https://twitter.com/kevingimbel)
 
 ## Privacy information
 

@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>review on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/review/</link><description>Recent content in review on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Sun, 02 Apr 2017 13:34:13 +0100</lastBuildDate><atom:link href="https://kevingimbel.de/tags/review/index.xml" rel="self" type="application/rss+xml"/><item><title>2017, week 10, 11, 12, 13</title><link>https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/</link><pubDate>Sun, 02 Apr 2017 13:34:13 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/</guid><description>Time sure does fly sometimes! I just realized the last &amp;ldquo;weekly&amp;rdquo; review post was from the beginning of march, namely week 8 and 9, so one month ago. In the meantime I played a lot of The Legend Of Zelda: Breath Of The Wild, worked on a Go thing, and went to a concert.
-Breath Of The Wild Link looking onto Death Mountain I am absolutely in love with Breath Of The Wild.</description></item><item><title>2017, week 8 and 9</title><link>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</link><pubDate>Sun, 05 Mar 2017 19:43:16 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</guid><description>It turns out that a lot of my time is actually spent working or playing games - so there&amp;rsquo;s not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the Nintendo Switch and The Legend Of Zelda: Breath of the Wild were released.</description></item><item><title>2017, week seven</title><link>https://kevingimbel.de/blog/2017/02/2017-week-seven/</link><pubDate>Sat, 18 Feb 2017 14:03:26 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/02/2017-week-seven/</guid><description>In week six nothing happened so it was skipped. Quite nice, actually. In the second half of week six and through week seven I prepared a workshop which I gave on Friday at the Coding Night. This Coding Night was a special one: The topic was &amp;ldquo;CodingNight feat. CodeDoor feat. Refugees&amp;rdquo; which was a collaboration between CodingNight and CodeDoor. CodeDoor is a project which teaches Refugees coding skills, how to build projects and how to get a Job in the programming field.</description></item><item><title>2017, week five</title><link>https://kevingimbel.de/blog/2017/02/2017-week-five/</link><pubDate>Wed, 08 Feb 2017 08:51:13 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/02/2017-week-five/</guid><description>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&amp;rsquo;m only 6 months late to do so because I kept saying &amp;ldquo;I&amp;rsquo;ll call next week&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it when I&amp;rsquo;m back from Amsterdam&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it after Christmas&amp;rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</description></item><item><title>2017, week four</title><link>https://kevingimbel.de/blog/2017/01/2017-week-four/</link><pubDate>Sun, 29 Jan 2017 12:44:43 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2017-week-four/</guid><description>It&amp;rsquo;s the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there&amp;rsquo;s not much to say so this will be a quick read with some reading recommendations at the end.
-dep The Go language has released a alpha version of dep - their dependency management tool.</description></item><item><title>2017, week three</title><link>https://kevingimbel.de/blog/2017/01/2017-week-three/</link><pubDate>Sun, 22 Jan 2017 11:44:43 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2017-week-three/</guid><description>Another week another short review! The third week of 2017 had a lot of travel because I attended an Elasticsearch training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it&amp;rsquo;s a great reference to look at.</description></item><item><title>2017, week two</title><link>https://kevingimbel.de/blog/2017/01/2017-week-two/</link><pubDate>Sun, 15 Jan 2017 17:05:13 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2017-week-two/</guid><description>This week I spent a lot of time with Amazon Web Services, or AWS, and made myself familiar with the backend and the way server / instance management works on AWS. While doing so I also learned that AWS instances are by default not accessible from the internet - they have no open ports and each instance needs a &amp;ldquo;Security Group&amp;rdquo; which defines ways to access the instance. They also do not have Shell access by default.</description></item><item><title>2017, week one</title><link>https://kevingimbel.de/blog/2017/01/2017-week-one/</link><pubDate>Sun, 08 Jan 2017 18:02:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2017-week-one/</guid><description>German blogger, designer, and YouTuber Marcel Wichmann started a weekly-review blog series which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &amp;ldquo;easy&amp;rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I&amp;rsquo;ll keep it up for each week but I will try.</description></item><item><title>2016, a short review</title><link>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</link><pubDate>Sun, 01 Jan 2017 14:37:28 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</guid><description>2016 has been an odd year in regards to world events and deaths - quite depressing actually. For me personal it has been the exact opposite. Overall, for me 2016 has been an excellent year.
-January View from the hotel in Fuerteventura. January started with what we call a &amp;ldquo;Braincamp&amp;rdquo;. A Braincamp is a company trip to a remote location where we at Synoa GmbH take time outside the office and come up with ideas and projects to do for the year.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>review on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/review/</link>
+    <description>Recent content in review on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Sun, 02 Apr 2017 13:34:13 +0100</lastBuildDate><atom:link href="https://kevingimbel.de/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2017, week 10, 11, 12, 13</title>
+      <link>https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/</link>
+      <pubDate>Sun, 02 Apr 2017 13:34:13 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/</guid>
+      <description>Time sure does fly sometimes! I just realized the last &amp;ldquo;weekly&amp;rdquo; review post was from the beginning of march, namely week 8 and 9, so one month ago. In the meantime I played a lot of The Legend Of Zelda: Breath Of The Wild, worked on a Go thing, and went to a concert.
+Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love with Breath Of The Wild.</description>
+    </item>
+    
+    <item>
+      <title>2017, week 8 and 9</title>
+      <link>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</link>
+      <pubDate>Sun, 05 Mar 2017 19:43:16 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</guid>
+      <description>It turns out that a lot of my time is actually spent working or playing games - so there&amp;rsquo;s not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the Nintendo Switch and The Legend Of Zelda: Breath of the Wild were released.</description>
+    </item>
+    
+    <item>
+      <title>2017, week seven</title>
+      <link>https://kevingimbel.de/blog/2017/02/2017-week-seven/</link>
+      <pubDate>Sat, 18 Feb 2017 14:03:26 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/02/2017-week-seven/</guid>
+      <description>In week six nothing happened so it was skipped. Quite nice, actually. In the second half of week six and through week seven I prepared a workshop which I gave on Friday at the Coding Night. This Coding Night was a special one: The topic was &amp;ldquo;CodingNight feat. CodeDoor feat. Refugees&amp;rdquo; which was a collaboration between CodingNight and CodeDoor. CodeDoor is a project which teaches Refugees coding skills, how to build projects and how to get a Job in the programming field.</description>
+    </item>
+    
+    <item>
+      <title>2017, week five</title>
+      <link>https://kevingimbel.de/blog/2017/02/2017-week-five/</link>
+      <pubDate>Wed, 08 Feb 2017 08:51:13 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/02/2017-week-five/</guid>
+      <description>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&amp;rsquo;m only 6 months late to do so because I kept saying &amp;ldquo;I&amp;rsquo;ll call next week&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it when I&amp;rsquo;m back from Amsterdam&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it after Christmas&amp;rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</description>
+    </item>
+    
+    <item>
+      <title>2017, week four</title>
+      <link>https://kevingimbel.de/blog/2017/01/2017-week-four/</link>
+      <pubDate>Sun, 29 Jan 2017 12:44:43 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2017-week-four/</guid>
+      <description>It&amp;rsquo;s the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there&amp;rsquo;s not much to say so this will be a quick read with some reading recommendations at the end.
+dep The Go language has released a alpha version of dep - their dependency management tool.</description>
+    </item>
+    
+    <item>
+      <title>2017, week three</title>
+      <link>https://kevingimbel.de/blog/2017/01/2017-week-three/</link>
+      <pubDate>Sun, 22 Jan 2017 11:44:43 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2017-week-three/</guid>
+      <description>Another week another short review! The third week of 2017 had a lot of travel because I attended an Elasticsearch training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it&amp;rsquo;s a great reference to look at.</description>
+    </item>
+    
+    <item>
+      <title>2017, week two</title>
+      <link>https://kevingimbel.de/blog/2017/01/2017-week-two/</link>
+      <pubDate>Sun, 15 Jan 2017 17:05:13 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2017-week-two/</guid>
+      <description>This week I spent a lot of time with Amazon Web Services, or AWS, and made myself familiar with the backend and the way server / instance management works on AWS. While doing so I also learned that AWS instances are by default not accessible from the internet - they have no open ports and each instance needs a &amp;ldquo;Security Group&amp;rdquo; which defines ways to access the instance. They also do not have Shell access by default.</description>
+    </item>
+    
+    <item>
+      <title>2017, week one</title>
+      <link>https://kevingimbel.de/blog/2017/01/2017-week-one/</link>
+      <pubDate>Sun, 08 Jan 2017 18:02:48 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2017-week-one/</guid>
+      <description>German blogger, designer, and YouTuber Marcel Wichmann started a weekly-review blog series which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &amp;ldquo;easy&amp;rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I&amp;rsquo;ll keep it up for each week but I will try.</description>
+    </item>
+    
+    <item>
+      <title>2016, a short review</title>
+      <link>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</link>
+      <pubDate>Sun, 01 Jan 2017 14:37:28 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</guid>
+      <description>2016 has been an odd year in regards to world events and deaths - quite depressing actually. For me personal it has been the exact opposite. Overall, for me 2016 has been an excellent year.
+January   View from the hotel in Fuerteventura.   January started with what we call a &amp;ldquo;Braincamp&amp;rdquo;. A Braincamp is a company trip to a remote location where we at Synoa GmbH take time outside the office and come up with ideas and projects to do for the year.</description>
+    </item>
+    
+  </channel>
+</rss>

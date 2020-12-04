@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/git/</link><description>Recent content in git on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Tue, 17 Jan 2017 21:28:38 +0100</lastBuildDate><atom:link href="https://kevingimbel.de/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploy a static site with git</title><link>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</link><pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</guid><description>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to Hugo hosted on Uberspace. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed ($ hugo) it compiles the site from Markdown and HTML templates into a public directory with lots of folders and HTML files.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/git/</link>
+    <description>Recent content in git on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apply a patch from a Github PR</title>
+      <link>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</guid>
+      <description>Ever found yourself needing that one fix from a PR on GitHub that hasn&amp;rsquo;t been released yet? How can you get the code, for example a Magento fix, into your code base? Copy-paste it? That might work for small changes, but for large and complex changes copy-pasting is no solution. Luckily, we can use GitHub to generate a patch file, which can then be applied with either the git or patch command.</description>
+    </item>
+    
+    <item>
+      <title>Deploy a static site with git</title>
+      <link>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</link>
+      <pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</guid>
+      <description>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to Hugo hosted on Uberspace. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed ($ hugo) it compiles the site from Markdown and HTML templates into a public directory with lots of folders and HTML files.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,22 +1,39 @@
+{{ define "custom_meta" }}
+{{ $post := . }}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kevingimbel">
+    <meta name="twitter:creator" content="@_kevinatari">
+    <meta name="twitter:title" content="{{ $post.Title }}">
+    <meta name="twitter:description" content="{{ $post.Summary }}">
+{{ end }}
+
 {{ define "main" }}
 {{ with .Site.Params.debug }}
-{{ partial "debug.html" "link/single.html" }}
+{{ partial "debug.html" "blog/single.html" }}
 {{ end }}
+{{- $borderStyle := partial "helper-border-radius.html" . -}}
 <main id="main" class="main">
-    <section class="article-single">
-        <article class="article-content">
-            {{ partial "single-header.html" . }}
-            <h3 class="article-preview__heading"><a href="{{ .Params.source }}" title="{{ .Params.source_title }}">{{ .Params.source_title }} &rarr;</a></h3>
+<section class="article-single" {{ printf "style=%q" $borderStyle | safeHTMLAttr }}> 
+        <header class="article-header">
+            <h1><a href="{{ .Params.source }}" title="{{ .Params.source_title }}">{{ .Params.source_title }} <span class="icon--external-link">[↗]</span></a></h1>
             {{ .Content }}
+        </header>
+        <article class="article-content">
+            <div class="content">
+                {{ .Content }}
+            </div>
         </article>
     </section>
+</main>
+{{ end }}
 
-    <section class="tags-categories">
-        {{ partial "categories.html" . }}
-        {{ partial "tags.html" . }}
-    </section>
-    
+
+{{ define "support" }}
+<section class="tags-categories">
+    {{ partial "categories.html" . }}
+    {{ partial "tags.html" . }}
+</section>
+    {{ partial "prev-next.html" . }}
     {{ partial "support.html" . }}
     {{ partial "author.html" . }}
-</main>
 {{ end }}

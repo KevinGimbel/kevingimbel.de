@@ -1,0 +1,35 @@
+.exif {
+  padding: .5rem;
+  background: var(--color-secondary);
+}
+
+.exif li {
+  display: inline-block;
+  background: #333;
+  color:#ccc;
+  border-radius: 3px;
+  padding: .125rem .5rem;
+  font-size: .8rem;
+}
+
+.exif .label {
+  font-size: .75rem;
+}
+
+@media all and (max-width: 800px) {
+  .exif li {
+      margin-top: .5rem;
+  }
+
+  .gallery img {
+      max-width: 100%;
+  }
+}
+
+.license  {
+  background: var(--color-bg-box);
+  padding: 2rem;
+  border-radius: 23px 14px 19px 48px;
+  border-radius: var(--border-radius-fancy-3);
+  margin: 1rem;
+}

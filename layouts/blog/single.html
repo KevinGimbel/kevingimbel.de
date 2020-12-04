@@ -15,8 +15,9 @@
 {{ with .Site.Params.debug }}
 {{ partial "debug.html" "blog/single.html" }}
 {{ end }}
+{{- $borderStyle := partial "helper-border-radius.html" . -}}
 <main id="main" class="main">
-    <section class="article-single">
+<section class="article-single" {{ printf "style=%q" $borderStyle | safeHTMLAttr }}> 
         <header class="article-header">
             {{ partial "single-header.html" . }}
         </header>
@@ -37,16 +38,16 @@
             </div>
         </article>
     </section>
-
-    <section class="tags-categories">
-        {{ partial "categories.html" . }}
-        {{ partial "tags.html" . }}
-    </section>
 </main>
 {{ end }}
 
 
 {{ define "support" }}
+<section class="tags-categories">
+    {{ partial "categories.html" . }}
+    {{ partial "tags.html" . }}
+</section>
+    {{ partial "prev-next.html" . }}
     {{ partial "support.html" . }}
     {{ partial "author.html" . }}
 {{ end }}

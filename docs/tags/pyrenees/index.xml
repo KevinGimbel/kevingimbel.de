@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pyrenees on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/tags/pyrenees/</link><description>Recent content in pyrenees on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Tue, 05 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/pyrenees/index.xml" rel="self" type="application/rss+xml"/><item><title>Pau</title><link>https://kevingimbel.de/photography/2012/06/pau/</link><pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2012/06/pau/</guid><description>I spent one month in France working in a IT shop in Pau as part of my school education. I don&amp;rsquo;t speak a word french so this was quite fun and challenging.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pyrenees on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/pyrenees/</link>
+    <description>Recent content in pyrenees on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Tue, 05 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/pyrenees/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pau</title>
+      <link>https://kevingimbel.de/photography/2012/06/pau/</link>
+      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2012/06/pau/</guid>
+      <description>I spent one month in France working in a IT shop in Pau as part of my school education. I don&amp;rsquo;t speak a word french so this was quite fun and challenging.</description>
+    </item>
+    
+  </channel>
+</rss>

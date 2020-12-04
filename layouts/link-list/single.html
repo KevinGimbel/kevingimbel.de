@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ with .Site.Params.debug }}
+{{ partial "debug.html" "link-list/single.html" }}
+{{ end }}
+<main id="main" class="main">
+    {{- $borderStyle := partial "helper-border-radius.html" . -}}
+    <article  {{ printf "style=%q" $borderStyle | safeHTMLAttr }} class="page-content">
+        {{ .Content }}
+      
+      <hr class="divider">
+
+      {{ $pages := (where .Site.Pages "Section" "blog") }}
+      {{ range $pages }}
+        {{ if eq .Type "link" }}
+          {{ if in (.Param "categories") "link-list" }}
+            {{ .Render (printf "article-preview-%s" .Params.Type) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+  </article>
+</main>
+{{ end }}

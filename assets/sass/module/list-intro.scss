@@ -1,0 +1,16 @@
+.article-list__intro {
+  --local-border-radius: var(--this-border-radius, --border-radius-fancy-4);
+
+  background: var(--color-bg-box);
+  padding: 2rem;
+  margin: 1rem 2rem 2rem 0;
+  max-width: var(--content-max-width, 80rem);
+  margin: 0 auto;
+  // border-radius: 4px 29px 7px 26px;
+  border-radius: var(--local-border-radius);
+}
+
+.article-list__intro {
+  max-width: 60rem;
+  margin: 1rem 0;
+}

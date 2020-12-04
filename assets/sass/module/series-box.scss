@@ -1,0 +1,22 @@
+.series__box:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -1rem;
+  top: -1rem;
+  z-index: -1;
+  border: 2px solid var(--color-main);
+}
+
+.series__box {
+  float: left;
+  padding: 2rem;
+  margin: 2rem;
+  position: relative;
+  background: var(--color-secondary);
+  z-index: 1;
+  display: block;
+  margin-left: -5vw;
+}

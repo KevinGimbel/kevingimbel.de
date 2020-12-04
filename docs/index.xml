@@ -1,109 +1,1616 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DevOps, automation, and cooking. Sometimes book reviews. on KevOps — DevOps, Cooking, and everything else I want to write about</title><link>https://kevingimbel.de/</link><description>Recent content in DevOps, automation, and cooking. Sometimes book reviews. on KevOps — DevOps, Cooking, and everything else I want to write about</description><generator>Hugo -- gohugo.io</generator><language>en_US</language><lastBuildDate>Mon, 19 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Theater car park</title><link>https://kevingimbel.de/photography/2020/10/theater-car-park/</link><pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/10/theater-car-park/</guid><description>I first discovered the Theater car park some months ago when having a walk through Warmer Damm and wanted to photograph it ever since. Sadly, I often forget to take my camera when I leave the house and so it took a while until I finally thought of taking it.
-I&amp;rsquo;m quite pleased with the result, you can find an unedited version on my Instagram @kevingimbel.</description></item><item><title>New Settings and options!</title><link>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</link><pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</guid><description>Over the weekend I implemented a new settings section for my website (the one you read right now!). You can now choose the width of content for articles and pages to better suite your reading preference. I like smaller content because it makes it easier for me to read, others like full-width content. The new settings UI Click the &amp;ldquo;Settings&amp;rdquo; link in the top right and you&amp;rsquo;ll be able to configure the randomness of the color schema and the width of content.</description></item><item><title>Keychron K2</title><link>https://kevingimbel.de/blog/2020/09/keychron-k2/</link><pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/09/keychron-k2/</guid><description>Yesterday I got my Keychron K2 keyboard! It&amp;rsquo;s my first time getting a mechanical keyboard and also the first time using an ANSI layout instead of the german ISO layout. It&amp;rsquo;s also the first time using such a small keyboard so I&amp;rsquo;ll need to get used to the position of keys again, especially since I am not typing with 10 fingers (tho I should really learn to!).
-I&amp;rsquo;ll need a few weeks before I can give a review but so far I am very happy.</description></item><item><title>Mouse illustration</title><link>https://kevingimbel.de/art/2020/09/mouse-illustration/</link><pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/art/2020/09/mouse-illustration/</guid><description>I made this illustration for my son to hang up in his room. Feel free to print it out for your kids, too if you want! The illustration files are also available in two formats and can be downloaded from the links below:
-Sketch SVG It appears that the SVG has different border rendering settings so borders are not inset. You may need to clean it up a bit.</description></item><item><title>Die Tyrannei des Schmetterlings</title><link>https://kevingimbel.de/blog/2020/09/die-tyrannei-des-schmetterlings/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/09/die-tyrannei-des-schmetterlings/</guid><description>Where do I start with this? I tried really hard to like it but I just cannot.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps, automation, and cooking. Sometimes book reviews. on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/</link>
+    <description>Recent content in DevOps, automation, and cooking. Sometimes book reviews. on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apply a patch from a Github PR</title>
+      <link>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</guid>
+      <description>Ever found yourself needing that one fix from a PR on GitHub that hasn&amp;rsquo;t been released yet? How can you get the code, for example a Magento fix, into your code base? Copy-paste it? That might work for small changes, but for large and complex changes copy-pasting is no solution. Luckily, we can use GitHub to generate a patch file, which can then be applied with either the git or patch command.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Snake Clone in Rust</title>
+      <link>https://kevingimbel.de/blog/2020/12/creating-a-snake-clone-in-rust/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/12/creating-a-snake-clone-in-rust/</guid>
+      <description>Amazing step-by-step tutorial on how to create a Snake clone using Rust and the Bevy Game Engine. Definitely an article to bookmark!</description>
+    </item>
+    
+    <item>
+      <title>Make a Language</title>
+      <link>https://kevingimbel.de/blog/2020/12/make-a-language/</link>
+      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/12/make-a-language/</guid>
+      <description>A blog series about making a language using Rust. I really enjoyed this series which is packed with good patterns and ideas on how to parse text into something meaningful.</description>
+    </item>
+    
+    <item>
+      <title>Die Linke Hand Der Dunkelheit</title>
+      <link>https://kevingimbel.de/reading/2020/die-linke-hand-der-dunkelheit/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2020/die-linke-hand-der-dunkelheit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Die linke Hand der Dunkelheit</title>
+      <link>https://kevingimbel.de/blog/2020/11/die-linke-hand-der-dunkelheit/</link>
+      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/11/die-linke-hand-der-dunkelheit/</guid>
+      <description>Die Linke Hand der Dunkelheit   &amp;ldquo;Die linke Hand der Dunkelheit&amp;rdquo; von Ursula K. Le Guin war schon eine ganze Weile auf meiner langen Liste der (retro) Sci-Fi Bücher die ich noch lesen möchte. Ich habe es vor einiger Zeit auf Reddit in einer &amp;ldquo;Must-Read&amp;rdquo; Liste gesehen und fand den Klappentext sehr ansprechend, Zitat:
+ Die Bewohner des Planeten Gethen sind uns Menschen verblüffend ähnlich - mit einem Unterschied: Sie kennen keine zwei Geschlechter.</description>
+    </item>
+    
+    <item>
+      <title>Grep in Action</title>
+      <link>https://kevingimbel.de/blog/2020/11/grep-in-action/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/11/grep-in-action/</guid>
+      <description>grep is a CLI tool created in 1974 that is pre-installed on any Linux/Unix-like/BSD* system. grep is an acronym and stands for _&amp;ldquo;globally search for a regular expression and print matching lines&amp;rdquo;_ - quite a mouth full but a good description of what grep does. The more I worked in the Sys-/DevOps domain, the more I found myself using grep and awk to select parts of files for further processing. In this article I want to highlight some things grep can do that _I didn&amp;rsquo;t know about but wish I did_ when I started using it.</description>
+    </item>
+    
+    <item>
+      <title>Saatenbrot</title>
+      <link>https://kevingimbel.de/blog/2020/10/saatenbrot/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/10/saatenbrot/</guid>
+      <description>Ich habe mal wieder gebacken! Diesmal gab es ein Saatenbrot, bestehend aus Weizenmehl, Weizen-Vollkornmehl, etwas Hefe, und Kürbiskernen, Leinsamen, und Sesam.
+  Der Teigling in seinem Gärkörbchen   Ich mag Hefeteig nicht, aber dieses Brot schmeckte mir sehr gut! Die Hefe war sehr dezent und wurde vom Saaten-Mix übertönt.
+Dank der Backtechnik im Gusseisen-Topf war das Brot auch optisch ein Hingucker und sah viel besser aus, als mein Sauerteig Monster.</description>
+    </item>
+    
+    <item>
+      <title>Theater car park</title>
+      <link>https://kevingimbel.de/photography/2020/10/theater-car-park/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/10/theater-car-park/</guid>
+      <description>I first discovered the Theater car park some months ago when having a walk through Warmer Damm and wanted to photograph it ever since. Sadly, I often forget to take my camera when I leave the house and so it took a while until I finally thought of taking it.
+I&amp;rsquo;m quite pleased with the result, you can find an unedited version on my Instagram @kevingimbel.</description>
+    </item>
+    
+    <item>
+      <title>New Settings and options!</title>
+      <link>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</guid>
+      <description>Over the weekend I implemented a new settings section for my website (the one you read right now!). You can now choose the width of content for articles and pages to better suite your reading preference. I like smaller content because it makes it easier for me to read, others like full-width content.   The new settings UI    Click the &amp;ldquo;Settings&amp;rdquo; link in the top right and you&amp;rsquo;ll be able to configure the randomness of the color schema and the width of content.</description>
+    </item>
+    
+    <item>
+      <title>Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping</title>
+      <link>https://kevingimbel.de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</guid>
+      <description>Heute Mittag kochte ich diese Pasta aus quasi nichts. Das Rezept ist super einfach und schnell und ich bin vom Geschmack sehr begeistert!
+Ohne viel auszuholen folgt hier das Rezept.
+Küchengeräte  1 Topf 1 Standmixer  Zutaten Für ca. 2-3 Personen
+ 1 Packung Tagliatelle 2 Packungen Rote-Beete (in Vakuum verpackt), ca. 1kg 2 Knoblauchzehen 1 Chili etwas Salz  Für das Topping
+ Frischer Dill 1 Päckchen Feta Käse  Zubereitung  Tagliatelle nach Packungsanleitung kochen Rote-Beete grob in Würfel schneiden Chili waschen, Kerne entfernen wenn weniger schärfe gewünscht Knoblauch schälen Rote-Beete, Chili, und Knoblauch in den Standmixer geben Solange mixen bis eine Sauce entsteht (je nach Gerät ca.</description>
+    </item>
+    
+    <item>
+      <title>Rust Compiler Umgebungsvariablen</title>
+      <link>https://kevingimbel.de/blog/2020/09/rust-compiler-umgebungsvariablen/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/09/rust-compiler-umgebungsvariablen/</guid>
+      <description>Rust ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &amp;ldquo;schlau&amp;rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens cargo ausgeliefert. Cargo ist ähnlich wie npm oder maven und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</description>
+    </item>
+    
+    <item>
+      <title>Keychron K2</title>
+      <link>https://kevingimbel.de/blog/2020/09/keychron-k2/</link>
+      <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/09/keychron-k2/</guid>
+      <description>Yesterday I got my Keychron K2 keyboard! It&amp;rsquo;s my first time getting a mechanical keyboard and also the first time using an ANSI layout instead of the german ISO layout. It&amp;rsquo;s also the first time using such a small keyboard so I&amp;rsquo;ll need to get used to the position of keys again, especially since I am not typing with 10 fingers (tho I should really learn to!).
+I&amp;rsquo;ll need a few weeks before I can give a review but so far I am very happy.</description>
+    </item>
+    
+    <item>
+      <title>Mouse illustration</title>
+      <link>https://kevingimbel.de/art/2020/09/mouse-illustration/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/art/2020/09/mouse-illustration/</guid>
+      <description>I made this illustration for my son to hang up in his room. Feel free to print it out for your kids, too if you want! The illustration files are also available in two formats and can be downloaded from the links below:
+ Sketch SVG  It appears that the SVG has different border rendering settings so borders are not inset. You may need to clean it up a bit.</description>
+    </item>
+    
+    <item>
+      <title>Ich buk Sauerteig Brot</title>
+      <link>https://kevingimbel.de/blog/2020/09/ich-buk-sauerteig-brot/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/09/ich-buk-sauerteig-brot/</guid>
+      <description>Inspiriert von Nina und ihrem Sauerteig Brot dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &amp;ldquo;pflegen&amp;rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️
+  Mein Brot, wenn man es denn so nennen möchte.</description>
+    </item>
+    
+    <item>
+      <title>Die Tyrannei des Schmetterlings</title>
+      <link>https://kevingimbel.de/blog/2020/09/die-tyrannei-des-schmetterlings/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/09/die-tyrannei-des-schmetterlings/</guid>
+      <description>Where do I start with this? I tried really hard to like it but I just cannot.
 Before you continue reading, I want to say that I did not finish the book - I stopped half-way through
-The story is not really new or engaging and moves very slowly. The writing style is too detailed for me to form a good image in my mind, every time I have an image of a scene the author adds more and more details and it just keeps changing; It&amp;rsquo;s too much of hard world building for me.</description></item><item><title>Hannah Gadsby - Douglas</title><link>https://kevingimbel.de/blog/2020/09/hannah-gadsby-douglas/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/09/hannah-gadsby-douglas/</guid><description>Last night my wife and I watched Hannah Gadsbys newest stand-up show called &amp;ldquo;Douglas&amp;rdquo; and within the first minute I was out of breath and laughing because she just hits my humor spot on. Absolutely loved this show! It&amp;rsquo;s a good hour of laughing with serious topics wrapped into jokes, but never feels too uncomfortable.
-From the topics and the overall feeling it&amp;rsquo;s not as hard as Nanette, which just left me sobbing during the last half and was a constant rollercoaster because it is very harsh and real and touches a lot of very personal topics; If you haven&amp;rsquo;t watched it I don&amp;rsquo;t want to spoil - just take an hour and watch it on Netflix.</description></item><item><title>Passt</title><link>https://kevingimbel.de/project/passt/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/project/passt/</guid><description>passt is a CLI tool and library that can be used to generate random strings, e.g. for use as passwords. It is very &amp;ldquo;weak&amp;rdquo; in that it doesn&amp;rsquo;t use any &amp;ldquo;real&amp;rdquo; cryptography and should therefor not be used as an actual password generator.
+The story is not really new or engaging and moves very slowly. The writing style is too detailed for me to form a good image in my mind, every time I have an image of a scene the author adds more and more details and it just keeps changing; It&amp;rsquo;s too much of hard world building for me.</description>
+    </item>
+    
+    <item>
+      <title>Hannah Gadsby - Douglas</title>
+      <link>https://kevingimbel.de/blog/2020/09/hannah-gadsby-douglas/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/09/hannah-gadsby-douglas/</guid>
+      <description>Last night my wife and I watched Hannah Gadsbys newest stand-up show called &amp;ldquo;Douglas&amp;rdquo; and within the first minute I was out of breath and laughing because she just hits my humor spot on. Absolutely loved this show! It&amp;rsquo;s a good hour of laughing with serious topics wrapped into jokes, but never feels too uncomfortable.
+From the topics and the overall feeling it&amp;rsquo;s not as hard as Nanette, which just left me sobbing during the last half and was a constant rollercoaster because it is very harsh and real and touches a lot of very personal topics; If you haven&amp;rsquo;t watched it I don&amp;rsquo;t want to spoil - just take an hour and watch it on Netflix.</description>
+    </item>
+    
+    <item>
+      <title>Passt</title>
+      <link>https://kevingimbel.de/project/passt/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/project/passt/</guid>
+      <description>passt is a CLI tool and library that can be used to generate random strings, e.g. for use as passwords. It is very &amp;ldquo;weak&amp;rdquo; in that it doesn&amp;rsquo;t use any &amp;ldquo;real&amp;rdquo; cryptography and should therefor not be used as an actual password generator.
 You can use passt to generate random test input when testing software tho.
 Up to date information can be found on GitHub https://github.com/kevingimbel/passt.
 Usage: CLI Install
-$ cargo install passt Arguments</description></item><item><title>self portrait</title><link>https://kevingimbel.de/photography/2020/08/self-portrait/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/08/self-portrait/</guid><description>The other day I had to wait for some code to deploy so I grabbed my camera and took a few self portraits. I actually liked this one a lot, even if it&amp;rsquo;s a bit too close. Shot with my old Canon EOS 1000D and 50mm/f1.8 lense.
-I was very surprised by the quality of this image. I usually don&amp;rsquo;t use my Canon EOS 1000D much because images tent to have a lot of noise and too much red - which is fine since I&amp;rsquo;ve taken probably close to 100.</description></item><item><title>Lord of Souls</title><link>https://kevingimbel.de/blog/2020/08/lord-of-souls/</link><pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/08/lord-of-souls/</guid><description>Similar to The Infernal City, I also had Lord of Souls by Greg Keyes standing in my bookshelf for years, and after finishing and loving &amp;ldquo;The Infernal City&amp;rdquo; I was very excited to continue the journey with Lord of Souls.
-The two books connect seamlessly and Lord of Souls finishes the storylines which all somewhat interconnect at the end. From first to last page it is incredibly exciting and expends the lore of Umbriel, the floating city that kills everything below it just to raise the corpse as an undead army that marches towards the Imperial City.</description></item><item><title>The Infernal City</title><link>https://kevingimbel.de/blog/2020/08/the-infernal-city/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/08/the-infernal-city/</guid><description>I finally came around to read The Infernal City by Greg Keys. As a huge fan of Elder Scrolls I&amp;rsquo;ve wanted to read this book in a long time and in fact had it in my bookshelf for the past 3-4ish years, but I just never took the time to read it.
-I absolutely absorbed this book and loved it front to back! It fits quite well into the lore and doesn&amp;rsquo;t feel &amp;ldquo;off&amp;rdquo; or wrong.</description></item><item><title>Fall Guys</title><link>https://kevingimbel.de/blog/2020/08/fall-guys/</link><pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/08/fall-guys/</guid><description>Fall Guys is fun! It&amp;rsquo;s stupid and fun, and I love it. It&amp;rsquo;s like someone turned Takeshi&amp;rsquo;s Castle into a video game. You run around parkours with 60 other people, all controlling one of the little blobby-folks seen in the screenshots. There&amp;rsquo;s costumes and multiple rounds, some rounds are team-based like playing soccer with a huge ball, other rounds are all-vs-all.
-In general, I enjoyed playing. I played for about an hour last night, and while I had fun I don&amp;rsquo;t really see me playing a lot more since I only have a limited amount of time to play video games and I&amp;rsquo;d rather play Elder Scrolls: Online or Valorant with friends than Fall Guys, but I guess if you just want to play something without thinking too much Fall Guys is your game.</description></item><item><title>Shipping Rust CLIs with Docker</title><link>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</guid><description>I recently found a nice and clean way of building and distributing Rust CLI apps using docker. For my work I created a Rust app that wraps some AWS SDK functions to make my day-to-day work with AWS easier. This CLI is very focused on the way we work at Synoa and therefore unfortunately not open source. The tech does not matter much, as we can just create a tiny example &amp;ldquo;app&amp;rdquo; for this blog post.</description></item><item><title>The Infernal City</title><link>https://kevingimbel.de/reading/2020/the-infernal-city/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2020/the-infernal-city/</guid><description/></item><item><title>Lord of Souls</title><link>https://kevingimbel.de/reading/2020/lord-of-souls/</link><pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2020/lord-of-souls/</guid><description/></item><item><title>Mip</title><link>https://kevingimbel.de/project/mip/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/project/mip/</guid><description>mip gets the local IP address by requesting http://httpbin.org/ip (or a custom endpoint) and parsing the returned output.
+$ cargo install passt Arguments</description>
+    </item>
+    
+    <item>
+      <title>self portrait</title>
+      <link>https://kevingimbel.de/photography/2020/08/self-portrait/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/08/self-portrait/</guid>
+      <description>The other day I had to wait for some code to deploy so I grabbed my camera and took a few self portraits. I actually liked this one a lot, even if it&amp;rsquo;s a bit too close. Shot with my old Canon EOS 1000D and 50mm/f1.8 lense.
+I was very surprised by the quality of this image. I usually don&amp;rsquo;t use my Canon EOS 1000D much because images tent to have a lot of noise and too much red - which is fine since I&amp;rsquo;ve taken probably close to 100.</description>
+    </item>
+    
+    <item>
+      <title>Lord of Souls</title>
+      <link>https://kevingimbel.de/blog/2020/08/lord-of-souls/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/08/lord-of-souls/</guid>
+      <description>Similar to The Infernal City, I also had Lord of Souls by Greg Keyes standing in my bookshelf for years, and after finishing and loving &amp;ldquo;The Infernal City&amp;rdquo; I was very excited to continue the journey with Lord of Souls.
+The two books connect seamlessly and Lord of Souls finishes the storylines which all somewhat interconnect at the end. From first to last page it is incredibly exciting and expends the lore of Umbriel, the floating city that kills everything below it just to raise the corpse as an undead army that marches towards the Imperial City.</description>
+    </item>
+    
+    <item>
+      <title>The Infernal City</title>
+      <link>https://kevingimbel.de/blog/2020/08/the-infernal-city/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/08/the-infernal-city/</guid>
+      <description>I finally came around to read The Infernal City by Greg Keys. As a huge fan of Elder Scrolls I&amp;rsquo;ve wanted to read this book in a long time and in fact had it in my bookshelf for the past 3-4ish years, but I just never took the time to read it.
+I absolutely absorbed this book and loved it front to back! It fits quite well into the lore and doesn&amp;rsquo;t feel &amp;ldquo;off&amp;rdquo; or wrong.</description>
+    </item>
+    
+    <item>
+      <title>Fall Guys</title>
+      <link>https://kevingimbel.de/blog/2020/08/fall-guys/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/08/fall-guys/</guid>
+      <description>Fall Guys is fun! It&amp;rsquo;s stupid and fun, and I love it. It&amp;rsquo;s like someone turned Takeshi&amp;rsquo;s Castle into a video game. You run around parkours with 60 other people, all controlling one of the little blobby-folks seen in the screenshots. There&amp;rsquo;s costumes and multiple rounds, some rounds are team-based like playing soccer with a huge ball, other rounds are all-vs-all.
+In general, I enjoyed playing. I played for about an hour last night, and while I had fun I don&amp;rsquo;t really see me playing a lot more since I only have a limited amount of time to play video games and I&amp;rsquo;d rather play Elder Scrolls: Online or Valorant with friends than Fall Guys, but I guess if you just want to play something without thinking too much Fall Guys is your game.</description>
+    </item>
+    
+    <item>
+      <title>Rust CLI mit Docker ausliefern</title>
+      <link>https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/</guid>
+      <description>Vor kurzem habe ich einen Weg gefunden Rust CLI Programme über Docker auszuliefern. Für meinen Arbeitgeber Synoa habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit Homebrew möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen.</description>
+    </item>
+    
+    <item>
+      <title>Shipping Rust CLIs with Docker</title>
+      <link>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</guid>
+      <description>I recently found a nice and clean way of building and distributing Rust CLI apps using docker. For my work I created a Rust app that wraps some AWS SDK functions to make my day-to-day work with AWS easier. This CLI is very focused on the way we work at Synoa and therefore unfortunately not open source. The tech does not matter much, as we can just create a tiny example &amp;ldquo;app&amp;rdquo; for this blog post.</description>
+    </item>
+    
+    <item>
+      <title>The Infernal City</title>
+      <link>https://kevingimbel.de/reading/2020/the-infernal-city/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2020/the-infernal-city/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lord of Souls</title>
+      <link>https://kevingimbel.de/reading/2020/lord-of-souls/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2020/lord-of-souls/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Corona Warn App</title>
+      <link>https://kevingimbel.de/blog/2020/06/corona-warn-app/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/06/corona-warn-app/</guid>
+      <description>Die Corona Warn App wurde veröffentlicht und erstaunlicherweise ist sie gut! Die App läuft mit minimalen Berechtigungen, verbraucht wenig Strom da sie Bluetooth Low Energy verwendet, ist komplett dezentralisiert, und zu alledem auch noch Open Source: der Code für die Apps, die Website, und den Backend Server ist auf GitHub verfügbar.
+Auch Linus Neumann vom Chaos Computer Club lobt die Umsetzung in diesem Video der Tagesschau, nachdem er und andere zuvor lange Zeit für eine dezentralisierte Lösung plädiert haben.</description>
+    </item>
+    
+    <item>
+      <title>Mip</title>
+      <link>https://kevingimbel.de/project/mip/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/project/mip/</guid>
+      <description>mip gets the local IP address by requesting http://httpbin.org/ip (or a custom endpoint) and parsing the returned output.
 It has 0 dependencies and only relies on the Rust std lib.
 Usage Add the following to Cargo.toml.
 [dependencies] mip = &amp;#34;0.4.0 Then use it like
-use mip::IP; fn main() { println!(&amp;#34;My IP is {}&amp;#34;, IP::is()); } Or without use fn main() { println!(&amp;#34;My IP is {}&amp;#34;, mip::IP::is()); } Custom Endpoint Instead of using httpbin.</description></item><item><title>Yip</title><link>https://kevingimbel.de/project/yip/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/project/yip/</guid><description>A Rust TCP server that responds with callers&amp;rsquo; IPv4 address
-About This server is the counter part to mip. It responds with the callers&amp;rsquo; IP address on request. That&amp;rsquo;s it.
+use mip::IP; fn main() { println!(&amp;#34;My IP is {}&amp;#34;, IP::is()); } Or without use fn main() { println!(&amp;#34;My IP is {}&amp;#34;, mip::IP::is()); } Custom Endpoint Instead of using httpbin.</description>
+    </item>
+    
+    <item>
+      <title>Yip</title>
+      <link>https://kevingimbel.de/project/yip/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/project/yip/</guid>
+      <description>A Rust TCP server that responds with callers&#39; IPv4 address
+About This server is the counter part to mip. It responds with the callers&#39; IP address on request. That&amp;rsquo;s it.
 Usage Cargo Run the server with cargo run, then connect to it on port 8111.
 Binary Build the binary for your system with cargo.
-$ cargo build --release Then copy the binary from target/release/yip to some place in your $PATH. Afterwards the server can be started by running yip.</description></item><item><title>Can I Use</title><link>https://kevingimbel.de/de/documentation/caniuse/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/de/documentation/caniuse/</guid><description>Dieser Shortcode ermöglicht die einfache Einbindung eines &amp;ldquo;CanIUse.com&amp;rdquo; widgets auf der eigenen Website. Hierfür wird der Open Source Service caniuse embed script von Ire Aderinokun verwendet.
+$ cargo build --release Then copy the binary from target/release/yip to some place in your $PATH. Afterwards the server can be started by running yip.</description>
+    </item>
+    
+    <item>
+      <title>Can I Use</title>
+      <link>https://kevingimbel.de/de/documentation/caniuse/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/de/documentation/caniuse/</guid>
+      <description>Dieser Shortcode ermöglicht die einfache Einbindung eines &amp;ldquo;CanIUse.com&amp;rdquo; widgets auf der eigenen Website. Hierfür wird der Open Source Service caniuse embed script von Ire Aderinokun verwendet.
 Anleitung Globale Konfiguration In der config.toml oder config.yaml können Globale Werte für diesen Shortcode hinterlegt werden:
-accessible_colors: Aktiviert Barrierefreie Farben für alle Einbettungen (außer wenn explizit deaktiviert) script_src: Lädt Script aus eigener Quelle statt von https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js YAML config
-params: kg_shortcodes: caniuse: accessible_colors: true script_src: &amp;#34;/caniuse-emebd.</description></item><item><title>Can I Use</title><link>https://kevingimbel.de/en/documentation/caniuse/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/en/documentation/caniuse/</guid><description>This will load the caniuse embed script every time a caniuse shortcode has been used. This shortcode uses the excellent caniuse embed script by Ire Aderinokun.
+ accessible_colors: Aktiviert Barrierefreie Farben für alle Einbettungen (außer wenn explizit deaktiviert) script_src: Lädt Script aus eigener Quelle statt von https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js  YAML config
+params: kg_shortcodes: caniuse: accessible_colors: true script_src: &amp;#34;/caniuse-emebd.</description>
+    </item>
+    
+    <item>
+      <title>Can I Use</title>
+      <link>https://kevingimbel.de/en/documentation/caniuse/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/en/documentation/caniuse/</guid>
+      <description>This will load the caniuse embed script every time a caniuse shortcode has been used. This shortcode uses the excellent caniuse embed script by Ire Aderinokun.
 Usage Global config In the config.toml or config.yaml global values for the following variables can be set:
-accessible_colors: Enable accessible colors for all embeds unless disabled when embedding script_src: Load embed script from different source, defaults to https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js YAML config
-params: kg_shortcodes: caniuse: accessible_colors: true script_src: &amp;#34;/caniuse-emebd.</description></item><item><title>CodePen</title><link>https://kevingimbel.de/de/documentation/codepen/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/de/documentation/codepen/</guid><description>Dieser Shortcode lädt das CodePen Embed JavaScript und erzeugt den HTML Code für das Einbetten von CodePen &amp;ldquo;Pens&amp;rdquo;.
+ accessible_colors: Enable accessible colors for all embeds unless disabled when embedding script_src: Load embed script from different source, defaults to https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js  YAML config
+params: kg_shortcodes: caniuse: accessible_colors: true script_src: &amp;#34;/caniuse-emebd.</description>
+    </item>
+    
+    <item>
+      <title>CodePen</title>
+      <link>https://kevingimbel.de/de/documentation/codepen/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/de/documentation/codepen/</guid>
+      <description>Dieser Shortcode lädt das CodePen Embed JavaScript und erzeugt den HTML Code für das Einbetten von CodePen &amp;ldquo;Pens&amp;rdquo;.
 Anleitung Globale Konfiguration In der config.toml oder config.yaml können Globale Werte für diesen Shortcode hinterlegt werden:
-user: Standard User für den CodePens eingebettet werden sollen editable: Gibt an ob eingebettete Pens editierbar sind preview: Gibt an ob Pens automatisch ausgeführt werden oder der Nutzer auf &amp;ldquo;Run Pen&amp;rdquo; klicken muss (true: Nutzer muss auf &amp;ldquo;Run Pen&amp;rdquo; klicken, false: Pen wird automatisch ausgeführt) script_src: Kann benutzt werden um Embed Script aus einer anderen Quelle zu laden.</description></item><item><title>CodePen</title><link>https://kevingimbel.de/en/documentation/codepen/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/en/documentation/codepen/</guid><description>This will load the CodePen embed script everytime a CodePen shortcode has been used.
-Usage Global config This shortcodes supports global configs that can be loaded from the Sites&amp;rsquo; params object. user, editable and preview should be set and will act as a default. script_src can be used to load the embed script from a custom source instead of https://production-assets.codepen.io/assets/embed/ei.js
-In the config.toml or config.yaml global values for the following variables can be set:</description></item><item><title>Mastodon</title><link>https://kevingimbel.de/de/documentation/mastodon/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/de/documentation/mastodon/</guid><description>Der Mastodon Shortcode kann verwendet werden um einen Mastodon Status einzubinden. Es ist dabei egal auf welcher Instanz der Beitrag veröffentlich wurde.
+ user: Standard User für den CodePens eingebettet werden sollen editable: Gibt an ob eingebettete Pens editierbar sind preview: Gibt an ob Pens automatisch ausgeführt werden oder der Nutzer auf &amp;ldquo;Run Pen&amp;rdquo; klicken muss (true: Nutzer muss auf &amp;ldquo;Run Pen&amp;rdquo; klicken, false: Pen wird automatisch ausgeführt) script_src: Kann benutzt werden um Embed Script aus einer anderen Quelle zu laden.</description>
+    </item>
+    
+    <item>
+      <title>CodePen</title>
+      <link>https://kevingimbel.de/en/documentation/codepen/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/en/documentation/codepen/</guid>
+      <description>This will load the CodePen embed script everytime a CodePen shortcode has been used.
+Usage Global config This shortcodes supports global configs that can be loaded from the Sites&#39; params object. user, editable and preview should be set and will act as a default. script_src can be used to load the embed script from a custom source instead of https://production-assets.codepen.io/assets/embed/ei.js
+In the config.toml or config.yaml global values for the following variables can be set:</description>
+    </item>
+    
+    <item>
+      <title>Mastodon</title>
+      <link>https://kevingimbel.de/de/documentation/mastodon/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/de/documentation/mastodon/</guid>
+      <description>Der Mastodon Shortcode kann verwendet werden um einen Mastodon Status einzubinden. Es ist dabei egal auf welcher Instanz der Beitrag veröffentlich wurde.
 Anleitung Globale Konfiguration In der config.toml oder config.yaml können Globale Werte für diesen Shortcode hinterlegt werden:
-script_src: Quelle für Embed JavaScript, Standard ist das Script von https://mastodon.social/embed.js - jede Mastodon Instanz stellt das Embed Script unter /embed.js bereit, somit kann einfach das Script einer eigenen Instanz verwendet werden.</description></item><item><title>Mastodon</title><link>https://kevingimbel.de/en/documentation/mastodon/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/en/documentation/mastodon/</guid><description>Usage Global config Globale Konfiguration In the config.toml or config.yaml global values for the following variables can be set:
-script_src: The source from where the embed JavaScript will be loaded, defaults to https://mastodon.social/embed.js YAML config
+ script_src: Quelle für Embed JavaScript, Standard ist das Script von https://mastodon.social/embed.js - jede Mastodon Instanz stellt das Embed Script unter /embed.js bereit, somit kann einfach das Script einer eigenen Instanz verwendet werden.</description>
+    </item>
+    
+    <item>
+      <title>Mastodon</title>
+      <link>https://kevingimbel.de/en/documentation/mastodon/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/en/documentation/mastodon/</guid>
+      <description>Usage Global config Globale Konfiguration In the config.toml or config.yaml global values for the following variables can be set:
+ script_src: The source from where the embed JavaScript will be loaded, defaults to https://mastodon.social/embed.js  YAML config
 params: kg_shortcodes: mastodon: script_src: &amp;#34;https://beispiel-instanz.de/embed.js&amp;#34; TOML config
 [params.kg_shortcodes.mastodon] script_src = &amp;#34;https://beispiel-instanz.de/embed.js&amp;#34; Parameters The Mastodon shortcode takes the following arguments.
-Argument Default Value Values Description status - String  Status ID taken from the URL of a toot.</description></item><item><title>Berlin Berlin</title><link>https://kevingimbel.de/blog/2020/05/berlin-berlin/</link><pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/berlin-berlin/</guid><description>In April one of my favorite Artists, Ira Atari (Facebook), released her new Song &amp;ldquo;Berlin Berlin&amp;rdquo;. I love the song and the video with all it&amp;rsquo;s glitched visuals! Content wise the song hits close home, as I&amp;rsquo;ve had panic attacks, too, and especially the following line is something I can relate to
-I may stop by the club but to many people stand in line so I can&amp;rsquo;t drop by - I&amp;rsquo;m so sorry guys</description></item><item><title>License</title><link>https://kevingimbel.de/project/license/</link><pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/project/license/</guid><description>license is a CLI tool for generation open source license files. It&amp;rsquo;s written in TypeScript and executed with Deno, a secure runtime for JavaScript.
+   Argument Default Value Values Description     status - String  Status ID taken from the URL of a toot.</description>
+    </item>
+    
+    <item>
+      <title>Berlin Berlin</title>
+      <link>https://kevingimbel.de/blog/2020/05/berlin-berlin/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/berlin-berlin/</guid>
+      <description>In April one of my favorite Artists, Ira Atari (Facebook), released her new Song &amp;ldquo;Berlin Berlin&amp;rdquo;. I love the song and the video with all it&amp;rsquo;s glitched visuals! Content wise the song hits close home, as I&amp;rsquo;ve had panic attacks, too, and especially the following line is something I can relate to
+ I may stop by the club but to many people stand in line so I can&amp;rsquo;t drop by - I&amp;rsquo;m so sorry guys</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://kevingimbel.de/project/license/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/project/license/</guid>
+      <description>license is a CLI tool for generation open source license files. It&amp;rsquo;s written in TypeScript and executed with Deno, a secure runtime for JavaScript.
 license is the successor of a Golang project of the same name I started years ago and contains more function that I never came around to implement. All features and command can be found on GitHub at kevingimbel/license-cli.
-Highlights Search for a license by keywords The example below shows all licenses matching the keyword &amp;ldquo;public-use&amp;rdquo;</description></item><item><title>Untold History Arkane</title><link>https://kevingimbel.de/blog/2020/05/untold-history-arkane/</link><pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/untold-history-arkane/</guid><description>&amp;ldquo;The Untold History of Arkane: Dishonored / Prey / Ravenholm / LMNO / The Crossing&amp;rdquo; is a documentation by NoClip about Arkane Studios, one of my absolute favorite game studios! Lately they gained popularity with daring AAA games like Dishonored and Prey. This documentation explores the 20 years of history that made Arkane what they are today and contains never seen footage of a Half-Life Game developed by Arkane which got cancelled.</description></item><item><title>Dan Dubuque Slide Guitarist</title><link>https://kevingimbel.de/blog/2020/05/dan-dubuque-slide-guitarist/</link><pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/dan-dubuque-slide-guitarist/</guid><description>I just discovered Dan Dubuque&amp;rsquo;s YouTube channel because the video &amp;ldquo;Dan Dubuque covering RAGE AGAINST THE MACHINE&amp;rsquo;s &amp;ldquo;Killing In The Name Of&amp;rdquo; on Weissenborn Slide Guitar&amp;rdquo; caught my attention. First off, I love Rage Against The Machine, and second what the fuck is a Slide Guitar? While I know the sound of it, I&amp;rsquo;ve never heard the name before. The cover is really good and the channel seems to be new (only one month old).</description></item><item><title>DIY Face Masks</title><link>https://kevingimbel.de/blog/2020/05/diy-face-masks/</link><pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/diy-face-masks/</guid><description>In light of COVID-19 and the resulting changes to public life I decided to take up a needle and sew some face masks! It&amp;rsquo;s actually fun to do and I wouldn&amp;rsquo;t have thought that I could actually do it!
-I got the layout from Nina (German blog post), who in turn got it from Jess Dang&amp;rsquo;s Video on YouTube (English video). Jess&amp;rsquo; masks look way better and cleaner than mine, but for my first few tries I&amp;rsquo;m incredibly happy with how they turned out.</description></item><item><title>Deno 1.0 released</title><link>https://kevingimbel.de/blog/2020/05/deno-1.0-released/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/deno-1.0-released/</guid><description>Deno made its first stable release with the release of v1!
-I&amp;rsquo;ve heard of Deno in the past but I never really cared for it. My work with JavaScript has always been in the browser and I&amp;rsquo;m not too much of a NodeJS fan - mainly because of the security and sandbox aspects of the runtime (or more, the lack of them). Deno aims to do better and fix some (or all?</description></item><item><title>Unreal Engine 5 Demo</title><link>https://kevingimbel.de/blog/2020/05/unreal-engine-5-demo/</link><pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/unreal-engine-5-demo/</guid><description>Unreal Engine posted a Video on Vimeo showing Unreal Engine 5 running live on a PlayStation 5.
-The demo is truly mind-blowing, especially considering it is running on a console and not on a high-end, custom build PC. I knew the PlayStation 5 and the XBox Series X (or whatever the next XBox is called, horrible naming again from XBox 🙄) are powerful and truly next-gen game changing consoles, but this demo just surprised me with its details.</description></item><item><title>Docker Apache Proxy Setup</title><link>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</guid><description>In this post I&amp;rsquo;d like to detail how I am managing docker containers behind an apache2 proxy on a Ubuntu 18.04. server. I&amp;rsquo;m using one Apache server to route traffic from multiple sub-domains to docker containers all running with docker-compose. This setup is not automated and the containers do not need to interact with each other; It&amp;rsquo;s just how I run software for my private usage.
-Overview Let&amp;rsquo;s start with an overview image, because this can be quite confusing.</description></item><item><title>DIY Iced Tea</title><link>https://kevingimbel.de/blog/2020/04/diy-iced-tea/</link><pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/04/diy-iced-tea/</guid><description>A few days ago I made my own Iced Tea and I thought I&amp;rsquo;d share this quick &amp;lsquo;n easy recipe on the blog.
-Ingredients for 1 liter Half a lemon A bit of Agave syrup (1-2 table spoon) 300ml fresh brewed black tea (I used a cheap Earl Grey) 700ml water (I used with gas, can also be without!) Steps Boil water and make black tea, let it sit for longer, we need it to be strong (~10-15min) Cut lemon and squeeze out juice Mix lemon and Black Tea, e.</description></item><item><title>Isolation</title><link>https://kevingimbel.de/photography/2020/04/isolation/</link><pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/04/isolation/</guid><description>The isolation is really getting to my head, but in a moment of creativity this image was captured.
-You can buy a license for this image on EyeEm.com.</description></item><item><title>Night on Earth</title><link>https://kevingimbel.de/blog/2020/04/night-on-earth/</link><pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/04/night-on-earth/</guid><description>Last weekend I finished &amp;ldquo;Night on Earth&amp;rdquo; a Netflix documentation about animal life during the night, filmed with super light sensitive cameras making the darkest night look like early evening; It&amp;rsquo;s an interesting look into the night and quite entertaining and educating.
+Highlights Search for a license by keywords The example below shows all licenses matching the keyword &amp;ldquo;public-use&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Untold History Arkane</title>
+      <link>https://kevingimbel.de/blog/2020/05/untold-history-arkane/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/untold-history-arkane/</guid>
+      <description>&amp;ldquo;The Untold History of Arkane: Dishonored / Prey / Ravenholm / LMNO / The Crossing&amp;rdquo; is a documentation by NoClip about Arkane Studios, one of my absolute favorite game studios! Lately they gained popularity with daring AAA games like Dishonored and Prey. This documentation explores the 20 years of history that made Arkane what they are today and contains never seen footage of a Half-Life Game developed by Arkane which got cancelled.</description>
+    </item>
+    
+    <item>
+      <title>Dan Dubuque Slide Guitarist</title>
+      <link>https://kevingimbel.de/blog/2020/05/dan-dubuque-slide-guitarist/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/dan-dubuque-slide-guitarist/</guid>
+      <description>I just discovered Dan Dubuque&amp;rsquo;s YouTube channel because the video &amp;ldquo;Dan Dubuque covering RAGE AGAINST THE MACHINE&amp;rsquo;s &amp;ldquo;Killing In The Name Of&amp;rdquo; on Weissenborn Slide Guitar&amp;rdquo; caught my attention. First off, I love Rage Against The Machine, and second what the fuck is a Slide Guitar? While I know the sound of it, I&amp;rsquo;ve never heard the name before. The cover is really good and the channel seems to be new (only one month old).</description>
+    </item>
+    
+    <item>
+      <title>Hallo, Welt!</title>
+      <link>https://kevingimbel.de/blog/2020/05/hallo-welt/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/hallo-welt/</guid>
+      <description>Hallo!
+Dieser Blog hat ab jetzt auch eine Deutsche &amp;hellip; Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter /de/ allen Deutschen Content Inhalt.
+Schauen wir mal wie&amp;rsquo;s wird. 🤷‍♀️
+Danke für eure Aufmerksamkeit!</description>
+    </item>
+    
+    <item>
+      <title>DIY Face Masks</title>
+      <link>https://kevingimbel.de/blog/2020/05/diy-face-masks/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/diy-face-masks/</guid>
+      <description>In light of COVID-19 and the resulting changes to public life I decided to take up a needle and sew some face masks! It&amp;rsquo;s actually fun to do and I wouldn&amp;rsquo;t have thought that I could actually do it!
+I got the layout from Nina (German blog post), who in turn got it from Jess Dang&amp;rsquo;s Video on YouTube (English video). Jess&#39; masks look way better and cleaner than mine, but for my first few tries I&amp;rsquo;m incredibly happy with how they turned out.</description>
+    </item>
+    
+    <item>
+      <title>Deno 1.0 released</title>
+      <link>https://kevingimbel.de/blog/2020/05/deno-1.0-released/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/deno-1.0-released/</guid>
+      <description>Deno made its first stable release with the release of v1!
+I&amp;rsquo;ve heard of Deno in the past but I never really cared for it. My work with JavaScript has always been in the browser and I&amp;rsquo;m not too much of a NodeJS fan - mainly because of the security and sandbox aspects of the runtime (or more, the lack of them). Deno aims to do better and fix some (or all?</description>
+    </item>
+    
+    <item>
+      <title>Unreal Engine 5 Demo</title>
+      <link>https://kevingimbel.de/blog/2020/05/unreal-engine-5-demo/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/unreal-engine-5-demo/</guid>
+      <description>Unreal Engine posted a Video on Vimeo showing Unreal Engine 5 running live on a PlayStation 5.
+The demo is truly mind-blowing, especially considering it is running on a console and not on a high-end, custom build PC. I knew the PlayStation 5 and the XBox Series X (or whatever the next XBox is called, horrible naming again from XBox 🙄) are powerful and truly next-gen game changing consoles, but this demo just surprised me with its details.</description>
+    </item>
+    
+    <item>
+      <title>Docker Apache Proxy Setup</title>
+      <link>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/</guid>
+      <description>In this post I&amp;rsquo;d like to detail how I am managing docker containers behind an apache2 proxy on a Ubuntu 18.04. server. I&amp;rsquo;m using one Apache server to route traffic from multiple sub-domains to docker containers all running with docker-compose. This setup is not automated and the containers do not need to interact with each other; It&amp;rsquo;s just how I run software for my private usage.
+Overview Let&amp;rsquo;s start with an overview image, because this can be quite confusing.</description>
+    </item>
+    
+    <item>
+      <title>DIY Iced Tea</title>
+      <link>https://kevingimbel.de/blog/2020/04/diy-iced-tea/</link>
+      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/04/diy-iced-tea/</guid>
+      <description>A few days ago I made my own Iced Tea and I thought I&amp;rsquo;d share this quick &amp;lsquo;n easy recipe on the blog.
+Ingredients for 1 liter  Half a lemon A bit of Agave syrup (1-2 table spoon) 300ml fresh brewed black tea (I used a cheap Earl Grey) 700ml water (I used with gas, can also be without!)  Steps  Boil water and make black tea, let it sit for longer, we need it to be strong (~10-15min) Cut lemon and squeeze out juice Mix lemon and Black Tea, e.</description>
+    </item>
+    
+    <item>
+      <title>Isolation</title>
+      <link>https://kevingimbel.de/photography/2020/04/isolation/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/04/isolation/</guid>
+      <description>The isolation is really getting to my head, but in a moment of creativity this image was captured.
+You can buy a license for this image on EyeEm.com.</description>
+    </item>
+    
+    <item>
+      <title>Night on Earth</title>
+      <link>https://kevingimbel.de/blog/2020/04/night-on-earth/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/04/night-on-earth/</guid>
+      <description>Last weekend I finished &amp;ldquo;Night on Earth&amp;rdquo; a Netflix documentation about animal life during the night, filmed with super light sensitive cameras making the darkest night look like early evening; It&amp;rsquo;s an interesting look into the night and quite entertaining and educating.
 You can find the documentation here on Netflix
-★★★★☆</description></item><item><title>Terrasave</title><link>https://kevingimbel.de/blog/2020/04/terrasave/</link><pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/04/terrasave/</guid><description>I just released a tiny tool function I&amp;rsquo;ve been using for some time called terrasave. It&amp;rsquo;s a Bash / Fish function that prevents you from running terraform without the -target option.
-Why does this exist? In terraform it is incredibly easy to destroy things with terraform apply. If you run apply terraform shows a huge output and sometimes you may overlook a thing being &amp;ldquo;replaced&amp;rdquo; instead of updated. Once upon a time I destroyed a MongoDB Atlas Cluster this way and lost all its data, because the &amp;ldquo;must be replaced&amp;rdquo; was hidden in a lot of terraform output and I simply didn&amp;rsquo;t see it.</description></item><item><title>Random Theme</title><link>https://kevingimbel.de/blog/2020/03/random-theme/</link><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/03/random-theme/</guid><description>I&amp;rsquo;ve decided to add some randomness to this website! You may noticed that the two main colors change on every page reload - there&amp;rsquo;s a fixed number of &amp;ldquo;themes&amp;rdquo; available and they change at random.
+★★★★☆</description>
+    </item>
+    
+    <item>
+      <title>Terrasave</title>
+      <link>https://kevingimbel.de/blog/2020/04/terrasave/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/04/terrasave/</guid>
+      <description>I just released a tiny tool function I&amp;rsquo;ve been using for some time called terrasave. It&amp;rsquo;s a Bash / Fish function that prevents you from running terraform without the -target option.
+Why does this exist? In terraform it is incredibly easy to destroy things with terraform apply. If you run apply terraform shows a huge output and sometimes you may overlook a thing being &amp;ldquo;replaced&amp;rdquo; instead of updated. Once upon a time I destroyed a MongoDB Atlas Cluster this way and lost all its data, because the &amp;ldquo;must be replaced&amp;rdquo; was hidden in a lot of terraform output and I simply didn&amp;rsquo;t see it.</description>
+    </item>
+    
+    <item>
+      <title>Random Theme</title>
+      <link>https://kevingimbel.de/blog/2020/03/random-theme/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/03/random-theme/</guid>
+      <description>I&amp;rsquo;ve decided to add some randomness to this website! You may noticed that the two main colors change on every page reload - there&amp;rsquo;s a fixed number of &amp;ldquo;themes&amp;rdquo; available and they change at random.
 To accomplish this I used the following JavaScript.
-(function(window, document, undefined) { let theme = window.localStorage.getItem(&amp;#34;kgde_theme&amp;#34;); console.log(theme); if (theme) { var [colorMain, colorSecondary] = JSON.parse(theme).colors; document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`; } else { // [dark-color, light-color] // Color combinations taken from https://botsin.</description></item><item><title>Utopien Für Realisten</title><link>https://kevingimbel.de/reading/2020/utopien-fur-realisten/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2020/utopien-fur-realisten/</guid><description/></item><item><title>No Tracking</title><link>https://kevingimbel.de/blog/2020/01/no-tracking/</link><pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/no-tracking/</guid><description>I don&amp;rsquo;t track you. That&amp;rsquo;s a promise and a statement, this website works without Tracking.
+(function(window, document, undefined) { let theme = window.localStorage.getItem(&amp;#34;kgde_theme&amp;#34;); console.log(theme); if (theme) { var [colorMain, colorSecondary] = JSON.parse(theme).colors; document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`; } else { // [dark-color, light-color]  // Color combinations taken from https://botsin.</description>
+    </item>
+    
+    <item>
+      <title>Utopien Für Realisten</title>
+      <link>https://kevingimbel.de/reading/2020/utopien-fur-realisten/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2020/utopien-fur-realisten/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>No Tracking</title>
+      <link>https://kevingimbel.de/blog/2020/01/no-tracking/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/no-tracking/</guid>
+      <description>I don&amp;rsquo;t track you. That&amp;rsquo;s a promise and a statement, this website works without Tracking.
 Inspired by Laura Kalbag, who was inspired by the footer text on Karolina Szczur’s website.
 Why The reason I do not use tracking is an idealistic one. I no longer want to collect data for Google, and I do not want to support trackable users across websites.
-Data sharing on the web is absolutely crazy, as this example of USAToday shows - GDPR is saving us Europeans again tho.</description></item><item><title>Two Factor Auth, Password managers, and cloud sync</title><link>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</link><pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</guid><description>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when 2FA became a more common thing I was enabling that on all services I could. 2FA (Two Factor Authentication) is a method of authentication where two parts are needed: A Password and a generated token, this token can be hardware based (e.</description></item><item><title>Fujifilm X30</title><link>https://kevingimbel.de/photography/2020/01/fujifilm-x30/</link><pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/fujifilm-x30/</guid><description>A picture of my Fujifilm X30, taken with an iPhone in low light and not edited. I kinda liked the result.
-Right now the Fujifilm X30 is my main camera which I try to carry with me at all times. It&amp;rsquo;s a great camera for quick snapshots and day-to-day photography. I&amp;rsquo;m thinking about getting another camera with switchable lenses, but I cannot decide on one. It&amp;rsquo;ll probably be either a Fujifilm X-T2 or Canon EOS 5D Mark 2 - right now I have a strong preference for the Fujifilm.</description></item><item><title>Merl</title><link>https://kevingimbel.de/photography/2020/01/merl/</link><pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/merl/</guid><description>Shortly after snapping this image the Merl had enough of me starring at it and flew off.</description></item><item><title>Foggy City</title><link>https://kevingimbel.de/photography/2020/01/foggy-city/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/foggy-city/</guid><description>The city in thick fog, seen from my kitchen window.</description></item><item><title>Saint Elizabeth's Church Wiesbaden</title><link>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</guid><description>One of the sightseeing spots in Wiesbaden is St. Elizabeths Church, a orthodox church located on top the Neroberg.
-I&amp;rsquo;m looking forward to taking some better photos of it in the future.</description></item><item><title>Sunny Morning Rainbow</title><link>https://kevingimbel.de/photography/2020/01/sunny-morning-rainbow/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2020/01/sunny-morning-rainbow/</guid><description>Just a quick shot from my window. Enjoy your day! :)</description></item><item><title>Auto SSL With apache2</title><link>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</link><pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</guid><description>Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&amp;rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
-This guide assumes the operating system is Ubuntu! If you use a different distro some commands may be different.</description></item><item><title>Using Archetypes in Hugo</title><link>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</link><pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</guid><description>For the longest time I completely ignored archetypes in hugo. I&amp;rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
+Data sharing on the web is absolutely crazy, as this example of USAToday shows - GDPR is saving us Europeans again tho.</description>
+    </item>
+    
+    <item>
+      <title>Two Factor Auth, Password managers, and cloud sync</title>
+      <link>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/</guid>
+      <description>For years I have not given much thought to passwords, security, or how to manage my passwords efficiently and securely. I usually would either save them in the browser or just re-use passwords (which of course is the worst). Around 7-8ish years ago I began to use password managers and password generators, and when 2FA became a more common thing I was enabling that on all services I could. 2FA (Two Factor Authentication) is a method of authentication where two parts are needed: A Password and a generated token, this token can be hardware based (e.</description>
+    </item>
+    
+    <item>
+      <title>Merl</title>
+      <link>https://kevingimbel.de/photography/2020/01/merl/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/merl/</guid>
+      <description>Shortly after snapping this image the Merl had enough of me starring at it and flew off.</description>
+    </item>
+    
+    <item>
+      <title>Foggy City</title>
+      <link>https://kevingimbel.de/photography/2020/01/foggy-city/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/foggy-city/</guid>
+      <description>The city in thick fog, seen from my kitchen window.</description>
+    </item>
+    
+    <item>
+      <title>Saint Elizabeth&#39;s Church Wiesbaden</title>
+      <link>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/saint-elizabeths-church-wiesbaden/</guid>
+      <description>One of the sightseeing spots in Wiesbaden is St. Elizabeths Church, a orthodox church located on top the Neroberg.
+I&amp;rsquo;m looking forward to taking some better photos of it in the future.</description>
+    </item>
+    
+    <item>
+      <title>Sunny Morning Rainbow</title>
+      <link>https://kevingimbel.de/photography/2020/01/sunny-morning-rainbow/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/01/sunny-morning-rainbow/</guid>
+      <description>Just a quick shot from my window. Enjoy your day! :)</description>
+    </item>
+    
+    <item>
+      <title>Auto SSL With apache2</title>
+      <link>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/auto-ssl-with-apache2/</guid>
+      <description>Apache 2.4.30 and later supports an experimental module called mod_md which allows automatic SSL certificate management with Let&amp;rsquo;s Encrypt as standard provider. This greatly simplifies the management of SSL certificates. Instead of setting up certbot and cronjobs to automatically renew certs server administrators now only need to add a few lines to their virtual host files.
+This guide assumes the operating system is Ubuntu! If you use a different distro some commands may be different.</description>
+    </item>
+    
+    <item>
+      <title>Using Archetypes in Hugo</title>
+      <link>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/using-archetypes-in-hugo/</guid>
+      <description>For the longest time I completely ignored archetypes in hugo. I&amp;rsquo;d always copy over the front-matter from the last blog post I wrote and then fill in the things I needed - leading to some mistakes (e.g. using category instead of categories) over time.
 Archetypes are easy to use, for example to create this post I ran the following command
-$ hugo new blog/2020-01-07-using-archetypes-in-hugo.md This copied over the archetype file from archetypes/blog.</description></item><item><title>Hugo aliases and redirects</title><link>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</link><pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</guid><description>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title Hello world would be available at kevingimbel.de/hello-world. With the new format this includes the section, year, and month, so for example kevingimbel.de/blog/2020/01/hello-world.
-To prevent all old URLs from failing with a 404 I added aliases to all old posts.</description></item><item><title>Hugo: ignore _index.md in list templates</title><link>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</link><pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</guid><description>While creating my new website I also added more sections, namely a blog, photography, and art section. All of these use list templates and render &amp;ldquo;article&amp;rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named _index.md for that. This file can be used to create index pages for lists.
-When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my article-preview.</description></item><item><title>Hugo: compare dates to flag old content</title><link>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</link><pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</guid><description>With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo Math function and Date values it can be accomplished in automated-enough fashion.
-Partial First I created a new partial named single-header.</description></item><item><title>Mastodon Headers</title><link>https://kevingimbel.de/art/2020/01/mastodon-headers/</link><pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/art/2020/01/mastodon-headers/</guid><description>Below are some Mastodon headers I made for my Mastodon profile. All color schemes are taken from the @accessibleColors bot which posts random matching accessible colors on Mastodon.
-Feel free to use these headers for any non-commercial thing you want.</description></item><item><title>Safe calc usage in CSS</title><link>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</link><pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</guid><description>calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
-The problem with calc is that if it doesn&amp;rsquo;t work you may get a unexpected result. Take the following code for example:</description></item><item><title>Fahrenheit 451</title><link>https://kevingimbel.de/reading/2019/fahrenheit-451/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2019/fahrenheit-451/</guid><description/></item><item><title>Foggy Forest</title><link>https://kevingimbel.de/photography/2019/11/foggy-forest/</link><pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2019/11/foggy-forest/</guid><description>A foggy view of a foggy forrest, taken from my balcony with my old Canon 1000D and Sigma 18-200mm F3,5-6,3.</description></item><item><title>We</title><link>https://kevingimbel.de/reading/2019/we/</link><pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2019/we/</guid><description/></item><item><title>Fasanerie</title><link>https://kevingimbel.de/photography/2019/10/fasanerie/</link><pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2019/10/fasanerie/</guid><description>&amp;ldquo;Fasanerie&amp;rdquo; is the name of a local wildlife and forest park. It&amp;rsquo;s free to enter and a very nice place to spent a family day.
-All images were edited with Darktable, a free open source Adobe Lightroom alternative.</description></item><item><title>City Walk Wiesbaden</title><link>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</link><pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</guid><description>Some pictures I took while walking through the city of Wiesbaden.
-All images in this post were taken with my Fujifilm X30 camera.</description></item><item><title>A brief history of time</title><link>https://kevingimbel.de/reading/2019/a-brief-history-of-time/</link><pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2019/a-brief-history-of-time/</guid><description/></item><item><title>Biochips</title><link>https://kevingimbel.de/reading/2018/biochips/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2018/biochips/</guid><description/></item><item><title>Fallout 76: B.E.T.A</title><link>https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/</link><pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/</guid><description>If you know me you&amp;rsquo;ll probably know that I am a huge Fallout fan. I absolutely love the games (all of them basically, maybe not Tactics) and I&amp;rsquo;ve played Fallout 3 and Fallout New Vegas countless times on XBox 360 and PC. When Fallout 76 was announced via a mysterious live stream in anticipation of E3 2018 I spent an entire evening on Twitch watching - nothing. It was a bit frustrating at the time but checking Reddit and Twitter for all kinds of hints as to what this stream could mean and speculation with the amazing r/Fallout community was a lot of fun.</description></item><item><title>Die Daten, die ich rief: Wie wir unsere Freiheit an Großkonzerne verkaufen</title><link>https://kevingimbel.de/reading/2018/die-daten-die-ich-rief/</link><pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2018/die-daten-die-ich-rief/</guid><description/></item><item><title>Mastodon Embed Shortcode for hugo</title><link>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</link><pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</guid><description>You may know that I made some shortcodes for Hugo, the static site generator I am using to create this website. So far I made a shortcode for caniuse.com and codepen.io which allow to embed CodePen and &amp;ldquo;Can I Use&amp;rdquo; embeds easily with Hugos build-in Shortcode system.
+$ hugo new blog/2020-01-07-using-archetypes-in-hugo.md This copied over the archetype file from archetypes/blog.</description>
+    </item>
+    
+    <item>
+      <title>Hugo aliases and redirects</title>
+      <link>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/hugo-aliases-and-redirects/</guid>
+      <description>With the recent redesign and re-structuring of my website I decided to include year and month in URLs. I previously only used the post title as URL key, so a post with title Hello world would be available at kevingimbel.de/hello-world. With the new format this includes the section, year, and month, so for example kevingimbel.de/blog/2020/01/hello-world.
+To prevent all old URLs from failing with a 404 I added aliases to all old posts.</description>
+    </item>
+    
+    <item>
+      <title>Hugo: ignore _index.md in list templates</title>
+      <link>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/hugo-ignore-_index.md-in-list-templates/</guid>
+      <description>While creating my new website I also added more sections, namely a blog, photography, and art section. All of these use list templates and render &amp;ldquo;article&amp;rdquo;-like content previews. I wanted to add some content to these lists and Hugo has a special file named _index.md for that. This file can be used to create index pages for lists.
+When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my article-preview.</description>
+    </item>
+    
+    <item>
+      <title>Hugo: compare dates to flag old content</title>
+      <link>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</guid>
+      <description>With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo Math function and Date values it can be accomplished in automated-enough fashion.
+Partial First I created a new partial named single-header.</description>
+    </item>
+    
+    <item>
+      <title>Mastodon Headers</title>
+      <link>https://kevingimbel.de/art/2020/01/mastodon-headers/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/art/2020/01/mastodon-headers/</guid>
+      <description>Below are some Mastodon headers I made for my Mastodon profile. All color schemes are taken from the @accessibleColors bot which posts random matching accessible colors on Mastodon.
+Feel free to use these headers for any non-commercial thing you want.</description>
+    </item>
+    
+    <item>
+      <title>Safe calc usage in CSS</title>
+      <link>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/01/safe-calc-usage-in-css/</guid>
+      <description>calc is a great CSS function to calculate values, e.g. margins or widths. What makes it especially great is that it can combine different values, for example calc(100% - 4rem - 1px) is valid and works in modern browsers - in simpler words: Calc works with different units like em, %, px, etc.
+The problem with calc is that if it doesn&amp;rsquo;t work you may get a unexpected result. Take the following code for example:</description>
+    </item>
+    
+    <item>
+      <title>Fahrenheit 451</title>
+      <link>https://kevingimbel.de/reading/2019/fahrenheit-451/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2019/fahrenheit-451/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Foggy Forest</title>
+      <link>https://kevingimbel.de/photography/2019/11/foggy-forest/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2019/11/foggy-forest/</guid>
+      <description>A foggy view of a foggy forrest, taken from my balcony with my old Canon 1000D and Sigma 18-200mm F3,5-6,3.</description>
+    </item>
+    
+    <item>
+      <title>We</title>
+      <link>https://kevingimbel.de/reading/2019/we/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2019/we/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fasanerie</title>
+      <link>https://kevingimbel.de/photography/2019/10/fasanerie/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2019/10/fasanerie/</guid>
+      <description>&amp;ldquo;Fasanerie&amp;rdquo; is the name of a local wildlife and forest park. It&amp;rsquo;s free to enter and a very nice place to spent a family day.
+All images were edited with Darktable, a free open source Adobe Lightroom alternative.</description>
+    </item>
+    
+    <item>
+      <title>City Walk Wiesbaden</title>
+      <link>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2019/08/city-walk-wiesbaden/</guid>
+      <description>Some pictures I took while walking through the city of Wiesbaden.
+All images in this post were taken with my Fujifilm X30 camera.</description>
+    </item>
+    
+    <item>
+      <title>A brief history of time</title>
+      <link>https://kevingimbel.de/reading/2019/a-brief-history-of-time/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2019/a-brief-history-of-time/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Biochips</title>
+      <link>https://kevingimbel.de/reading/2018/biochips/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2018/biochips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fallout 76: B.E.T.A</title>
+      <link>https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2018/11/fallout-76-b.e.t.a/</guid>
+      <description>If you know me you&amp;rsquo;ll probably know that I am a huge Fallout fan. I absolutely love the games (all of them basically, maybe not Tactics) and I&amp;rsquo;ve played Fallout 3 and Fallout New Vegas countless times on XBox 360 and PC. When Fallout 76 was announced via a mysterious live stream in anticipation of E3 2018 I spent an entire evening on Twitch watching - nothing. It was a bit frustrating at the time but checking Reddit and Twitter for all kinds of hints as to what this stream could mean and speculation with the amazing r/Fallout community was a lot of fun.</description>
+    </item>
+    
+    <item>
+      <title>Die Daten, die ich rief: Wie wir unsere Freiheit an Großkonzerne verkaufen </title>
+      <link>https://kevingimbel.de/reading/2018/die-daten-die-ich-rief/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2018/die-daten-die-ich-rief/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mastodon Embed Shortcode for hugo</title>
+      <link>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2018/09/mastodon-embed-shortcode-for-hugo/</guid>
+      <description>You may know that I made some shortcodes for Hugo, the static site generator I am using to create this website. So far I made a shortcode for caniuse.com and codepen.io which allow to embed CodePen and &amp;ldquo;Can I Use&amp;rdquo; embeds easily with Hugos build-in Shortcode system.
 Today I made another one which allows embeds from Mastodon, the decentralized Twitter-like social network. An example embed is shown below.
-The Source Code can be found on GitHub.</description></item><item><title>Imbiss</title><link>https://kevingimbel.de/photography/2018/07/imbiss/</link><pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2018/07/imbiss/</guid><description>Neon sign at night, taken during some festivities in Mainz, Germany.</description></item><item><title>TIL: Bash select</title><link>https://kevingimbel.de/blog/2018/04/til-bash-select/</link><pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2018/04/til-bash-select/</guid><description>I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&amp;rsquo;s the real TIL here!
-[&amp;hellip;] PS3 is shown when the select command is waiting for input [&amp;hellip;]
-So the PS3 prompt is shown when a bash program is waiting for user input, and it turns out that the select bash command is used for creating a &amp;ldquo;choice&amp;rdquo; UI in bash.</description></item><item><title>Die Neuromancer-Trilogie</title><link>https://kevingimbel.de/reading/2018/neuromancer-triologie/</link><pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2018/neuromancer-triologie/</guid><description/></item><item><title>Thing Explainer: Complicated Stuff in Simple Words</title><link>https://kevingimbel.de/reading/2017/thing-explainer/</link><pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2017/thing-explainer/</guid><description/></item><item><title>CSS Custom Properties and a new look</title><link>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</link><pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</guid><description>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (aka CSS variables).</description></item><item><title>Die Zeitmaschine</title><link>https://kevingimbel.de/reading/2017/die-zeitmaschine/</link><pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2017/die-zeitmaschine/</guid><description/></item><item><title>What If?: Serious Scientific Answers to Absurd Hypothetical Questions</title><link>https://kevingimbel.de/reading/2017/what-if/</link><pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2017/what-if/</guid><description/></item><item><title>2017, week 10, 11, 12, 13</title><link>https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/</link><pubDate>Sun, 02 Apr 2017 13:34:13 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/</guid><description>Time sure does fly sometimes! I just realized the last &amp;ldquo;weekly&amp;rdquo; review post was from the beginning of march, namely week 8 and 9, so one month ago. In the meantime I played a lot of The Legend Of Zelda: Breath Of The Wild, worked on a Go thing, and went to a concert.
-Breath Of The Wild Link looking onto Death Mountain I am absolutely in love with Breath Of The Wild.</description></item><item><title>Using the Terminal: The Prompt</title><link>https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/</link><pubDate>Wed, 29 Mar 2017 18:34:37 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/</guid><description>The Terminal (or bash, shell, console) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &amp;hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already wrote about one custom script named ws which enhances my daily workflows.</description></item><item><title>2017, week 8 and 9</title><link>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</link><pubDate>Sun, 05 Mar 2017 19:43:16 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</guid><description>It turns out that a lot of my time is actually spent working or playing games - so there&amp;rsquo;s not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the Nintendo Switch and The Legend Of Zelda: Breath of the Wild were released.</description></item><item><title>2017, week seven</title><link>https://kevingimbel.de/blog/2017/02/2017-week-seven/</link><pubDate>Sat, 18 Feb 2017 14:03:26 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/02/2017-week-seven/</guid><description>In week six nothing happened so it was skipped. Quite nice, actually. In the second half of week six and through week seven I prepared a workshop which I gave on Friday at the Coding Night. This Coding Night was a special one: The topic was &amp;ldquo;CodingNight feat. CodeDoor feat. Refugees&amp;rdquo; which was a collaboration between CodingNight and CodeDoor. CodeDoor is a project which teaches Refugees coding skills, how to build projects and how to get a Job in the programming field.</description></item><item><title>2017, week five</title><link>https://kevingimbel.de/blog/2017/02/2017-week-five/</link><pubDate>Wed, 08 Feb 2017 08:51:13 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/02/2017-week-five/</guid><description>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&amp;rsquo;m only 6 months late to do so because I kept saying &amp;ldquo;I&amp;rsquo;ll call next week&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it when I&amp;rsquo;m back from Amsterdam&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it after Christmas&amp;rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</description></item><item><title>The Illustrated A Brief History of Time: Updated and Expanded Edition</title><link>https://kevingimbel.de/reading/2017/illustrated-history-of-time/</link><pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2017/illustrated-history-of-time/</guid><description/></item><item><title>2017, week four</title><link>https://kevingimbel.de/blog/2017/01/2017-week-four/</link><pubDate>Sun, 29 Jan 2017 12:44:43 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2017-week-four/</guid><description>It&amp;rsquo;s the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there&amp;rsquo;s not much to say so this will be a quick read with some reading recommendations at the end.
-dep The Go language has released a alpha version of dep - their dependency management tool.</description></item><item><title>2017, week three</title><link>https://kevingimbel.de/blog/2017/01/2017-week-three/</link><pubDate>Sun, 22 Jan 2017 11:44:43 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2017-week-three/</guid><description>Another week another short review! The third week of 2017 had a lot of travel because I attended an Elasticsearch training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it&amp;rsquo;s a great reference to look at.</description></item><item><title>Deploy a static site with git</title><link>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</link><pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</guid><description>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to Hugo hosted on Uberspace. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed ($ hugo) it compiles the site from Markdown and HTML templates into a public directory with lots of folders and HTML files.</description></item><item><title>2017, week two</title><link>https://kevingimbel.de/blog/2017/01/2017-week-two/</link><pubDate>Sun, 15 Jan 2017 17:05:13 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2017-week-two/</guid><description>This week I spent a lot of time with Amazon Web Services, or AWS, and made myself familiar with the backend and the way server / instance management works on AWS. While doing so I also learned that AWS instances are by default not accessible from the internet - they have no open ports and each instance needs a &amp;ldquo;Security Group&amp;rdquo; which defines ways to access the instance. They also do not have Shell access by default.</description></item><item><title>Bash script: ws</title><link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link><pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid><description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description></item><item><title>Writing NodeJS cli tools</title><link>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</link><pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</guid><description>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, creating apache vhosts files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.
-Shebang If you already know what a Shebang is skip to the next section</description></item><item><title>2017, week one</title><link>https://kevingimbel.de/blog/2017/01/2017-week-one/</link><pubDate>Sun, 08 Jan 2017 18:02:48 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2017-week-one/</guid><description>German blogger, designer, and YouTuber Marcel Wichmann started a weekly-review blog series which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &amp;ldquo;easy&amp;rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I&amp;rsquo;ll keep it up for each week but I will try.</description></item><item><title>2016, a short review</title><link>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</link><pubDate>Sun, 01 Jan 2017 14:37:28 +0100</pubDate><guid>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</guid><description>2016 has been an odd year in regards to world events and deaths - quite depressing actually. For me personal it has been the exact opposite. Overall, for me 2016 has been an excellent year.
-January View from the hotel in Fuerteventura. January started with what we call a &amp;ldquo;Braincamp&amp;rdquo;. A Braincamp is a company trip to a remote location where we at Synoa GmbH take time outside the office and come up with ideas and projects to do for the year.</description></item><item><title>A Beginner's Guide to Losing Your Mind: Survival Techniques for Staying Sane</title><link>https://kevingimbel.de/reading/2017/a-beginners-guide-to-losing-your-mind/</link><pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2017/a-beginners-guide-to-losing-your-mind/</guid><description/></item><item><title>Goodbye Ubuntu, Hello Mac</title><link>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</link><pubDate>Tue, 27 Dec 2016 15:05:59 +0100</pubDate><guid>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</guid><description>Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it&amp;rsquo;s odd to switch to MacOS.</description></item><item><title>Gotcha: dockerignore</title><link>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</link><pubDate>Wed, 21 Dec 2016 18:02:42 +0100</pubDate><guid>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</guid><description>Today I was caught off-guard by a docker &amp;ldquo;bug&amp;rdquo; - or so I thought at first. I tried to boot up a project with docker-compose up like I do since switching to a Mac. Unusual was that docker-compose stopped at the build step and would not finish the boot. After some confusion and after checking the projects docker-compose.yml configuration file I went to GitHub to see the newest docker for mac issues because I was using the beta release and thought a recent update might broke a thing or two.</description></item><item><title>Simulacron-3: Welt am Draht</title><link>https://kevingimbel.de/reading/2016/welt-am-draht/</link><pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2016/welt-am-draht/</guid><description/></item><item><title>Farewell Jekyll, Hello Hugo</title><link>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</link><pubDate>Wed, 16 Nov 2016 19:04:42 +0100</pubDate><guid>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</guid><description>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.
-This very site you read right now is build with Hugo, a static site generator build by Steve Francia, Bjørn Erik Pedersen and a lot of contributors.</description></item><item><title>Speed up your Jekyll workflow</title><link>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</link><pubDate>Wed, 16 Dec 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</guid><description>Lately I had a hard time working with my own website. Whenever I wanted to make some updates, write a post or fix a little buggy thing it only took a few minutes of &amp;ldquo;work&amp;rdquo; to get me really frustrated. Jekyll, despite my love for it, has become horribly slow. My site, which I consider rather &amp;ldquo;simple&amp;rdquo;, took 17-20 seconds to build on every change! Changing the CSS? Rebuild entire site.</description></item><item><title>Von Der Erde Zum Mond</title><link>https://kevingimbel.de/reading/2015/von-der-erde-zum-mond/</link><pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2015/von-der-erde-zum-mond/</guid><description/></item><item><title>A Beginners Guide to Drum and Bass</title><link>https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/</link><pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/</guid><description>It&amp;rsquo;s been quite a while since I last posted a Mixtape but luckily I just happened to create one the other day for a friend, hoping to get her into Drum and Bass. So here it is, &amp;ldquo;A Beginners Guide to Drum and Bass&amp;rdquo; with a selection of tracks from liquid to harder Drum and Bass. Enjoy!
-See all Mixtapes</description></item><item><title>ReactJS - Hello World!</title><link>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</link><pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</guid><description>This article is the first in a series about ReactJS, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &amp;ldquo;background&amp;rdquo;, featuring administrative screens such as the Ads Managment.
+ The Source Code can be found on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Imbiss</title>
+      <link>https://kevingimbel.de/photography/2018/07/imbiss/</link>
+      <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2018/07/imbiss/</guid>
+      <description>Neon sign at night, taken during some festivities in Mainz, Germany.</description>
+    </item>
+    
+    <item>
+      <title>TIL: Bash select</title>
+      <link>https://kevingimbel.de/blog/2018/04/til-bash-select/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2018/04/til-bash-select/</guid>
+      <description>I was recently researching different bash prompts and stumbled upon an StackExchange answer which explains the different prompt types (PS1, PS2, PS3, and PS4). The answer explains how the PS3 prompt is used for commands like select. I did not know about select before, so that&amp;rsquo;s the real TIL here!
+ [&amp;hellip;] PS3 is shown when the select command is waiting for input [&amp;hellip;]
+ So the PS3 prompt is shown when a bash program is waiting for user input, and it turns out that the select bash command is used for creating a &amp;ldquo;choice&amp;rdquo; UI in bash.</description>
+    </item>
+    
+    <item>
+      <title>Die Neuromancer-Trilogie</title>
+      <link>https://kevingimbel.de/reading/2018/neuromancer-triologie/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2018/neuromancer-triologie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thing Explainer: Complicated Stuff in Simple Words</title>
+      <link>https://kevingimbel.de/reading/2017/thing-explainer/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2017/thing-explainer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS Custom Properties and a new look</title>
+      <link>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</link>
+      <pubDate>Sun, 26 Nov 2017 10:56:13 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/11/css-custom-properties-and-a-new-look/</guid>
+      <description>You may have noticed that some things changed on this website. I completly re-wrote the Front-End and created a new theme with a focus on accessibility and well-structured content. On the web, Accessibility is enabled by default; All you need is a good HTML structure and your website is almost ready to go! A second important part of accessibility is color and contrast as well as font sizing. I decided to let users choose their own color scheme, font-size, and dark or light mode - all done with CSS Custom Properties (aka CSS variables).</description>
+    </item>
+    
+    <item>
+      <title>Die Zeitmaschine</title>
+      <link>https://kevingimbel.de/reading/2017/die-zeitmaschine/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2017/die-zeitmaschine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What If?: Serious Scientific Answers to Absurd Hypothetical Questions </title>
+      <link>https://kevingimbel.de/reading/2017/what-if/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2017/what-if/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2017, week 10, 11, 12, 13</title>
+      <link>https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/</link>
+      <pubDate>Sun, 02 Apr 2017 13:34:13 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/04/2017-week-10-11-12-13/</guid>
+      <description>Time sure does fly sometimes! I just realized the last &amp;ldquo;weekly&amp;rdquo; review post was from the beginning of march, namely week 8 and 9, so one month ago. In the meantime I played a lot of The Legend Of Zelda: Breath Of The Wild, worked on a Go thing, and went to a concert.
+Breath Of The Wild   Link looking onto Death Mountain   I am absolutely in love with Breath Of The Wild.</description>
+    </item>
+    
+    <item>
+      <title>Using the Terminal: The Prompt</title>
+      <link>https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/</link>
+      <pubDate>Wed, 29 Mar 2017 18:34:37 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/</guid>
+      <description>The Terminal (or bash, shell, console) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, &amp;hellip; - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already wrote about one custom script named ws which enhances my daily workflows.</description>
+    </item>
+    
+    <item>
+      <title>2017, week 8 and 9</title>
+      <link>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</link>
+      <pubDate>Sun, 05 Mar 2017 19:43:16 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/03/2017-week-8-and-9/</guid>
+      <description>It turns out that a lot of my time is actually spent working or playing games - so there&amp;rsquo;s not too much to tell and weekly updates become hard-ish to write. I am going to go with bi-weekly or even monthly updates from now on. So this post is week eight and week nine - week nine being the week the Nintendo Switch and The Legend Of Zelda: Breath of the Wild were released.</description>
+    </item>
+    
+    <item>
+      <title>2017, week seven</title>
+      <link>https://kevingimbel.de/blog/2017/02/2017-week-seven/</link>
+      <pubDate>Sat, 18 Feb 2017 14:03:26 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/02/2017-week-seven/</guid>
+      <description>In week six nothing happened so it was skipped. Quite nice, actually. In the second half of week six and through week seven I prepared a workshop which I gave on Friday at the Coding Night. This Coding Night was a special one: The topic was &amp;ldquo;CodingNight feat. CodeDoor feat. Refugees&amp;rdquo; which was a collaboration between CodingNight and CodeDoor. CodeDoor is a project which teaches Refugees coding skills, how to build projects and how to get a Job in the programming field.</description>
+    </item>
+    
+    <item>
+      <title>2017, week five</title>
+      <link>https://kevingimbel.de/blog/2017/02/2017-week-five/</link>
+      <pubDate>Wed, 08 Feb 2017 08:51:13 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/02/2017-week-five/</guid>
+      <description>Another week passed, another personal review. This week I finally got a appointment with my tattoo artist to finish up my tattoo. I&amp;rsquo;m only 6 months late to do so because I kept saying &amp;ldquo;I&amp;rsquo;ll call next week&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it when I&amp;rsquo;m back from Amsterdam&amp;rdquo;, &amp;ldquo;I&amp;rsquo;ll do it after Christmas&amp;rdquo; - and so on. I am really bad with managing time and work-life balance. If you have any tips on how you manage the things you have to do, hit me up on twitter @_kevinatari.</description>
+    </item>
+    
+    <item>
+      <title>The Illustrated A Brief History of Time: Updated and Expanded Edition </title>
+      <link>https://kevingimbel.de/reading/2017/illustrated-history-of-time/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2017/illustrated-history-of-time/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2017, week four</title>
+      <link>https://kevingimbel.de/blog/2017/01/2017-week-four/</link>
+      <pubDate>Sun, 29 Jan 2017 12:44:43 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2017-week-four/</guid>
+      <description>It&amp;rsquo;s the last week of the first month already - weird how fast time seems to tick! This week has been rather stressful and loaded with work which is why I did not write any posts or did any programming in my free time. Looking back at the week there&amp;rsquo;s not much to say so this will be a quick read with some reading recommendations at the end.
+dep The Go language has released a alpha version of dep - their dependency management tool.</description>
+    </item>
+    
+    <item>
+      <title>2017, week three</title>
+      <link>https://kevingimbel.de/blog/2017/01/2017-week-three/</link>
+      <pubDate>Sun, 22 Jan 2017 11:44:43 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2017-week-three/</guid>
+      <description>Another week another short review! The third week of 2017 had a lot of travel because I attended an Elasticsearch training course in Munich to learn more about Elasticsearch hands-on. The two day course was exiting and I enjoyed my time, learning quite a lot about the different features of Elasticsearch and Kibana. Part of the course material is a 500 page PDF file which is a copy of the presentation held during the two days - I am glad I got it because it&amp;rsquo;s a great reference to look at.</description>
+    </item>
+    
+    <item>
+      <title>Deploy a static site with git</title>
+      <link>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</link>
+      <pubDate>Tue, 17 Jan 2017 21:28:38 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/</guid>
+      <description>If you follow my blog you might recall that I switched from Jekyll hosted on GitHub to Hugo hosted on Uberspace. Beside the fact I had to create a custom Hugo theme for myself and learn how to run a Hugo blog/website I also had to think about how I am going to deploy my website. Hugo is a static site generator and when executed ($ hugo) it compiles the site from Markdown and HTML templates into a public directory with lots of folders and HTML files.</description>
+    </item>
+    
+    <item>
+      <title>2017, week two</title>
+      <link>https://kevingimbel.de/blog/2017/01/2017-week-two/</link>
+      <pubDate>Sun, 15 Jan 2017 17:05:13 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2017-week-two/</guid>
+      <description>This week I spent a lot of time with Amazon Web Services, or AWS, and made myself familiar with the backend and the way server / instance management works on AWS. While doing so I also learned that AWS instances are by default not accessible from the internet - they have no open ports and each instance needs a &amp;ldquo;Security Group&amp;rdquo; which defines ways to access the instance. They also do not have Shell access by default.</description>
+    </item>
+    
+    <item>
+      <title>Bash script: ws</title>
+      <link>https://kevingimbel.de/blog/2017/01/bash-script-ws/</link>
+      <pubDate>Thu, 12 Jan 2017 19:22:48 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/bash-script-ws/</guid>
+      <description>For the past year or so I had a little function in my .bash_profile file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called ws and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the ~/Development directory. If I want to get to a project I would normally navigate like cd ~/Development/private/github/kevingimbel/kevingimbel.</description>
+    </item>
+    
+    <item>
+      <title>Writing NodeJS cli tools</title>
+      <link>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</link>
+      <pubDate>Mon, 09 Jan 2017 18:02:48 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</guid>
+      <description>Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, creating apache vhosts files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.
+Shebang  If you already know what a Shebang is skip to the next section</description>
+    </item>
+    
+    <item>
+      <title>2017, week one</title>
+      <link>https://kevingimbel.de/blog/2017/01/2017-week-one/</link>
+      <pubDate>Sun, 08 Jan 2017 18:02:48 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2017-week-one/</guid>
+      <description>German blogger, designer, and YouTuber Marcel Wichmann started a weekly-review blog series which I find quite interesting! Reviewing in short what happened in each week of the year is a nice and &amp;ldquo;easy&amp;rdquo; way to recap everything that happened - and it also helps writing this years big review post at the end of the year. I am not sure if I&amp;rsquo;ll keep it up for each week but I will try.</description>
+    </item>
+    
+    <item>
+      <title>2016, a short review</title>
+      <link>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</link>
+      <pubDate>Sun, 01 Jan 2017 14:37:28 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2017/01/2016-a-short-review/</guid>
+      <description>2016 has been an odd year in regards to world events and deaths - quite depressing actually. For me personal it has been the exact opposite. Overall, for me 2016 has been an excellent year.
+January   View from the hotel in Fuerteventura.   January started with what we call a &amp;ldquo;Braincamp&amp;rdquo;. A Braincamp is a company trip to a remote location where we at Synoa GmbH take time outside the office and come up with ideas and projects to do for the year.</description>
+    </item>
+    
+    <item>
+      <title>A Beginner&#39;s Guide to Losing Your Mind: Survival Techniques for Staying Sane</title>
+      <link>https://kevingimbel.de/reading/2017/a-beginners-guide-to-losing-your-mind/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2017/a-beginners-guide-to-losing-your-mind/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Goodbye Ubuntu, Hello Mac</title>
+      <link>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</link>
+      <pubDate>Tue, 27 Dec 2016 15:05:59 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2016/12/goodbye-ubuntu-hello-mac/</guid>
+      <description>Christmas came earlier this year! Since my co-workers switched to MacBooks over the year I got a MacBook, too. I got my new PC last year so I was not due to a hardware change for at least another year but - to my luck - I also got a new PC so we all have the same hardware. After three years of Ubuntu and Linux/GNU it&amp;rsquo;s odd to switch to MacOS.</description>
+    </item>
+    
+    <item>
+      <title>Gotcha: dockerignore</title>
+      <link>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</link>
+      <pubDate>Wed, 21 Dec 2016 18:02:42 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</guid>
+      <description>Today I was caught off-guard by a docker &amp;ldquo;bug&amp;rdquo; - or so I thought at first. I tried to boot up a project with docker-compose up like I do since switching to a Mac. Unusual was that docker-compose stopped at the build step and would not finish the boot. After some confusion and after checking the projects docker-compose.yml configuration file I went to GitHub to see the newest docker for mac issues because I was using the beta release and thought a recent update might broke a thing or two.</description>
+    </item>
+    
+    <item>
+      <title>Simulacron-3: Welt am Draht</title>
+      <link>https://kevingimbel.de/reading/2016/welt-am-draht/</link>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2016/welt-am-draht/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Farewell Jekyll, Hello Hugo</title>
+      <link>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</link>
+      <pubDate>Wed, 16 Nov 2016 19:04:42 +0100</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2016/11/farewell-jekyll-hello-hugo/</guid>
+      <description>If you have visited my website in the past few weeks you might have notices a few things. First of all it looks different. Second, it is now served over HTTPS which is possible because I moved away from GitHub Pages and back to self-hosting my website. Third, and possible most important, I also moved away from Jekyll after using it for three years.
+This very site you read right now is build with Hugo, a static site generator build by Steve Francia, Bjørn Erik Pedersen and a lot of contributors.</description>
+    </item>
+    
+    <item>
+      <title>Speed up your Jekyll workflow</title>
+      <link>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</link>
+      <pubDate>Wed, 16 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2015/12/speed-up-your-jekyll-workflow/</guid>
+      <description>Lately I had a hard time working with my own website. Whenever I wanted to make some updates, write a post or fix a little buggy thing it only took a few minutes of &amp;ldquo;work&amp;rdquo; to get me really frustrated. Jekyll, despite my love for it, has become horribly slow. My site, which I consider rather &amp;ldquo;simple&amp;rdquo;, took 17-20 seconds to build on every change! Changing the CSS? Rebuild entire site.</description>
+    </item>
+    
+    <item>
+      <title>Von Der Erde Zum Mond</title>
+      <link>https://kevingimbel.de/reading/2015/von-der-erde-zum-mond/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2015/von-der-erde-zum-mond/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Beginners Guide to Drum and Bass</title>
+      <link>https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/</link>
+      <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2015/08/a-beginners-guide-to-drum-and-bass/</guid>
+      <description>It&amp;rsquo;s been quite a while since I last posted a Mixtape but luckily I just happened to create one the other day for a friend, hoping to get her into Drum and Bass. So here it is, &amp;ldquo;A Beginners Guide to Drum and Bass&amp;rdquo; with a selection of tracks from liquid to harder Drum and Bass. Enjoy!
+See all Mixtapes</description>
+    </item>
+    
+    <item>
+      <title>ReactJS - Hello World!</title>
+      <link>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2015/05/reactjs-hello-world/</guid>
+      <description>This article is the first in a series about ReactJS, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &amp;ldquo;background&amp;rdquo;, featuring administrative screens such as the Ads Managment.
 React itself says one very important and true thing about itself:
-Lots of people use React as the V in MVC.</description></item><item><title>Getting into Performance Measurement</title><link>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</link><pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</guid><description>I&amp;rsquo;ve spent the past week developing some features for our own website at work. We&amp;rsquo;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&amp;rsquo;s way easier to keep an overview and with a good overview of data flow and available data it&amp;rsquo;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</description></item><item><title>Snippet: SASS Source Maps with Gulp</title><link>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</link><pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid><description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&amp;rsquo;s bigger!</description></item><item><title>Getting into vim - again</title><link>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</link><pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</guid><description>It&amp;rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&amp;rsquo;ve already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp;amp; pasted everything I found on the Internet into my .</description></item><item><title>Reise Nach Dem Mittelpunkt Der Erde</title><link>https://kevingimbel.de/reading/2015/reise-nach-dem-mittelpunkt-der-erde/</link><pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2015/reise-nach-dem-mittelpunkt-der-erde/</guid><description/></item><item><title>Metro 2034</title><link>https://kevingimbel.de/reading/2014/metro-2034/</link><pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2014/metro-2034/</guid><description/></item><item><title>Snippet: theme-color for Android 5.0</title><link>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</link><pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</guid><description>Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with this multi-tasking. In fact, all recently opened tabs are available via the multi-tasking button (square to the down right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you can switch between apps and websites seamlessly you can also set your own status bar colors for chrome which are used on the page and in the multi-tasking overview.</description></item><item><title>Animal Farm</title><link>https://kevingimbel.de/reading/2014/animal-farm/</link><pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2014/animal-farm/</guid><description/></item><item><title>Magento: Add fields to the Admin Backend</title><link>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</link><pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</guid><description>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely System-&amp;gt;Config-&amp;gt;Catalog where the user could later insert some SKUs to control which products are shown on the home page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a settings page. Not only was this rather complex it was also way too &amp;ldquo;over engineered&amp;rdquo; for a simple thing like a text field.</description></item><item><title>Endless Multi-Dimensional Navigation</title><link>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</link><pubDate>Fri, 22 Aug 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</guid><description>The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on CodePen. My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an open class). The JavaScript for this looks like this:
-var d = document, trigger = d.</description></item><item><title>Javascript: The Good Parts</title><link>https://kevingimbel.de/reading/2014/javascript-the-good-parts/</link><pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2014/javascript-the-good-parts/</guid><description/></item><item><title>Conditional CSS</title><link>https://kevingimbel.de/blog/2014/07/conditional-css/</link><pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/07/conditional-css/</guid><description>While there&amp;rsquo;s a lot of talking about CSS writing styles, organization styles and if it&amp;rsquo;s maybe better or not to avoid pre-processors or frameworks there&amp;rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&amp;rsquo;d like to talk a bit about conditional CSS that I&amp;rsquo;ve been using in production and that I think can improve the overall logic of CSS.</description></item><item><title>A closer look to closure</title><link>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</link><pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</guid><description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&amp;rsquo;s good to have at least basic understanding of JavaScript.
-So before I start I&amp;rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description></item><item><title>Noobish VIM</title><link>https://kevingimbel.de/blog/2014/07/noobish-vim/</link><pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/07/noobish-vim/</guid><description>Since I&amp;rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &amp;ldquo;good&amp;rdquo; way to integrate it into my daily workflow. Since I&amp;rsquo;m working in a relativley small company it&amp;rsquo;s most of the time stressy to get all things done and to keep an overview - so long story short: There&amp;rsquo;s not much time for new tools that don&amp;rsquo;t increase my workflow directly. VIM is one of these tools that don&amp;rsquo;t fully support my workflow at the moment.</description></item><item><title>Useful Web Developer Tools</title><link>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</link><pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</guid><description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&amp;rsquo;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
-Browser-based The following tools are all for Chrome because I use Chrome for most of my development.</description></item><item><title>Magento: get and set variables in config.xml</title><link>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</link><pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</guid><description>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&amp;rsquo;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &amp;ldquo;cloned&amp;rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</description></item><item><title>Vim - first impression</title><link>https://kevingimbel.de/blog/2014/05/vim-first-impression/</link><pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/05/vim-first-impression/</guid><description>When I first looked at Vim it was a very short experience that was literally as follows
-# from the command line vim test.md *vim opens* &amp;#34;What&amp;#39;s that?&amp;#34; *CTRL + C* &amp;#34;How do I even close this?!&amp;#34; *opens browser, googles &amp;#34;how to close VIM&amp;#34;* ESC + :q That was it and that was my Vim experience for quite some time. However, lately I see more and more people talking about Vim being the single best editor for everything - no matter what language one writes.</description></item><item><title>Passing Arguments in JavaScript</title><link>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</link><pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</guid><description>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &amp;ldquo;Secrets of the JavaScript Ninja&amp;rdquo; by the amazing John Resig and try to play around with JavaScript whenever I&amp;rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&amp;rsquo;t check for every possible thingy. Anyway, I&amp;rsquo;ll cover this in a small write-up aka a blog post.</description></item><item><title>Mixtape: February 2014</title><link>https://kevingimbel.de/blog/2014/03/mixtape-february-2014/</link><pubDate>Sun, 02 Mar 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/03/mixtape-february-2014/</guid><description>Another month passed and a new mixtape arrived. My favorites of February 2014. Enjoy!</description></item><item><title>Pure JavaScript slider</title><link>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</link><pubDate>Sat, 22 Feb 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</guid><description>The great thing when you&amp;rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&amp;rsquo;m very proud of my back to top script even though it&amp;rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&amp;rsquo;t be that much fun. However, I made another JavaScript thing I&amp;rsquo;m proud of: A pure JavaScript slider.</description></item><item><title>Fatboy Slim - Why Try Harder</title><link>https://kevingimbel.de/blog/2014/01/fatboy-slim-why-try-harder/</link><pubDate>Mon, 13 Jan 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/01/fatboy-slim-why-try-harder/</guid><description>Start your day right and listen to the best of the best of the best from Fatboy Slim - Free on SoundCloud!</description></item><item><title>Digitalism - Boiler Room at MELT! 2013</title><link>https://kevingimbel.de/blog/2014/01/digitalism-boiler-room-at-melt-2013/</link><pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/01/digitalism-boiler-room-at-melt-2013/</guid><description>I really like Digitalism and I really love electronic music so this DJ Set recorded at MELT! festival in Germany is just perfect. I can highliy recommend to follow Digitalism and Boiler Room on SoundCloud.</description></item><item><title>Labels in GMail</title><link>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</link><pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</guid><description>In case your company is using GMail Business there&amp;rsquo;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;ldquo;View&amp;rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</description></item><item><title>Bullgit loves Jekyll</title><link>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</link><pubDate>Mon, 06 Jan 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</guid><description>After having a static HTML Page for about 6 months, we at bullgit just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:
-Jekyll is built-in GitHub pages Jekyll is easy-to-learn and easy to maintain No-Database handling of Data (see the list of members we use) Everyone can clone the repo and run it locally So basically, as soon as you have a Project on GitHub or an organization like bullgit you can use the power of Jekyll to make your page easy to use and easy to change even for new members.</description></item><item><title>Mixtape: 2013</title><link>https://kevingimbel.de/blog/2014/01/mixtape-2013/</link><pubDate>Sun, 05 Jan 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/01/mixtape-2013/</guid><description>I like to make Mixtapes (or playlists) on SoundCloud and this one is my &amp;ldquo;Best of 2013&amp;rdquo; Mixtape featuring my favorites of Drum and Bass, Electro and Dubstep. Enjoy!</description></item><item><title>Web Development in 2014</title><link>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</link><pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</guid><description>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&amp;rsquo;s one thing that I&amp;rsquo;d like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&amp;rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</description></item><item><title>Brackets vs. Sublime Text</title><link>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</link><pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</guid><description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&amp;rsquo;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&amp;rsquo;ve been using for the last two years or so.</description></item><item><title>How I got employed</title><link>https://kevingimbel.de/blog/2013/12/how-i-got-employed/</link><pubDate>Sun, 22 Dec 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/12/how-i-got-employed/</guid><description>About 1 year ago I joined a tlk.io Chat created by Tim Pietrusky. It was my first time ever I joined a group of other devs and I was more then nervouse about because I - at this time - considered my self more of a Hobby-Dev who&amp;rsquo;s not that skilled. I just started using CodePen a few months before and did some fun demos and experiments there like drawing images with CSS and stuff.</description></item><item><title>Menschliches Allzumenschliches</title><link>https://kevingimbel.de/reading/2012/menschliches-allzumenschliches/</link><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/menschliches-allzumenschliches/</guid><description/></item><item><title>Metro 2033</title><link>https://kevingimbel.de/reading/2013/metro-2033/</link><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2013/metro-2033/</guid><description/></item><item><title>Pseudo Product Flags</title><link>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</link><pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</guid><description>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &amp;ldquo;Problem&amp;rdquo; with this task was that it&amp;rsquo;s not only a few different length, it&amp;rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &amp;ldquo;fixed&amp;rdquo; solution, like applying a max-width of let&amp;rsquo;s say 20em, isn&amp;rsquo;t the best solution for this so I ended up creating a flexible solution.</description></item><item><title>To infinity and beyond</title><link>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</link><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</guid><description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&amp;rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&amp;rsquo;m doing. Yesterday night&amp;rsquo;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&amp;rsquo;s where the title comes from.</description></item><item><title>Custom Radio Buttons</title><link>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</link><pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</guid><description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&amp;rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
-A few years ago I had to do this once and I remember doing it with an image and background-position but as of today I really love pseudo elements and &amp;ldquo;Look-Ma-No-Image!</description></item><item><title>Ghost in the shell</title><link>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</link><pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</guid><description>Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&amp;rsquo;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&amp;rsquo;d be my birthday while unpacking the *.</description></item><item><title>i-js</title><link>https://kevingimbel.de/blog/2013/10/i-js/</link><pubDate>Mon, 14 Oct 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/10/i-js/</guid><description>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.
-After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to I and here comes the fun part: While learning JS I build i.</description></item><item><title>Join a Dev Group</title><link>https://kevingimbel.de/blog/2013/10/join-a-dev-group/</link><pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/10/join-a-dev-group/</guid><description>Earlier this year I joined a Dev Group. It was the best decision I made this year and I want to tell you why. After doing more experiments on CodePen and right after I got to know Tim Pietrusky he opened a tlk.io Chat called #CodePen. For those who&amp;rsquo;re not familiar with tlk: it&amp;rsquo;s an open web chat. You can create a room, everyone can join and all things are open to everyone who knows the URL.</description></item><item><title>From 0 To Sass</title><link>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</link><pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</guid><description>If you&amp;rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&amp;rsquo;s fair to say that they&amp;rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
-Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</description></item><item><title>A bit sticky</title><link>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</link><pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</guid><description>I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it&amp;rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
+ Lots of people use React as the V in MVC.</description>
+    </item>
+    
+    <item>
+      <title>Getting into Performance Measurement</title>
+      <link>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</link>
+      <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2015/03/getting-into-performance-measurement/</guid>
+      <description>I&amp;rsquo;ve spent the past week developing some features for our own website at work. We&amp;rsquo;re using WordPress and I almost always enjoy working with WordPress beside Magento projects, it&amp;rsquo;s way easier to keep an overview and with a good overview of data flow and available data it&amp;rsquo;s easier to measure and find performance bottleneck. In the following post I want to examine my workflow and the way I refactored our code base to increase the speed and overall performance of our site.</description>
+    </item>
+    
+    <item>
+      <title>Snippet: SASS Source Maps with Gulp</title>
+      <link>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</guid>
+      <description>Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the later compiled CSS - so inside the Dev Tools you can see for every line of CSS from which Sass file it comes - this is super handy once your project get&amp;rsquo;s bigger!</description>
+    </item>
+    
+    <item>
+      <title>Getting into vim - again</title>
+      <link>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2015/01/getting-into-vim-again/</guid>
+      <description>It&amp;rsquo;s been some time since I first got my fingers on VIM. My first impression was - as everyones I guess - pretty bad. VIM is not that easy to understand, yet a powerful, shortcut-based, distraction free editor. I&amp;rsquo;ve already written about turning Sublime Text into VIM mode and my very first VIM impression, but back then I just copy &amp;amp; pasted everything I found on the Internet into my .</description>
+    </item>
+    
+    <item>
+      <title>Reise Nach Dem Mittelpunkt Der Erde</title>
+      <link>https://kevingimbel.de/reading/2015/reise-nach-dem-mittelpunkt-der-erde/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2015/reise-nach-dem-mittelpunkt-der-erde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metro 2034</title>
+      <link>https://kevingimbel.de/reading/2014/metro-2034/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2014/metro-2034/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Snippet: theme-color for Android 5.0</title>
+      <link>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</link>
+      <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5.0/</guid>
+      <description>Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with this multi-tasking. In fact, all recently opened tabs are available via the multi-tasking button (square to the down right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you can switch between apps and websites seamlessly you can also set your own status bar colors for chrome which are used on the page and in the multi-tasking overview.</description>
+    </item>
+    
+    <item>
+      <title>Animal Farm</title>
+      <link>https://kevingimbel.de/reading/2014/animal-farm/</link>
+      <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2014/animal-farm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Magento: Add fields to the Admin Backend</title>
+      <link>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</guid>
+      <description>Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely System-&amp;gt;Config-&amp;gt;Catalog where the user could later insert some SKUs to control which products are shown on the home page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a settings page. Not only was this rather complex it was also way too &amp;ldquo;over engineered&amp;rdquo; for a simple thing like a text field.</description>
+    </item>
+    
+    <item>
+      <title>Endless Multi-Dimensional Navigation</title>
+      <link>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</link>
+      <pubDate>Fri, 22 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/08/endless-multi-dimensional-navigation/</guid>
+      <description>The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on CodePen. My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an open class). The JavaScript for this looks like this:
+var d = document, trigger = d.</description>
+    </item>
+    
+    <item>
+      <title>Javascript: The Good Parts</title>
+      <link>https://kevingimbel.de/reading/2014/javascript-the-good-parts/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2014/javascript-the-good-parts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conditional CSS</title>
+      <link>https://kevingimbel.de/blog/2014/07/conditional-css/</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/07/conditional-css/</guid>
+      <description>While there&amp;rsquo;s a lot of talking about CSS writing styles, organization styles and if it&amp;rsquo;s maybe better or not to avoid pre-processors or frameworks there&amp;rsquo;s one very powerful thing that gets pretty much no attention at all: Conditional CSS, i.e. pieces of CSS that serve one specific task the easiest and most known is .active given to, well, active elements. I&amp;rsquo;d like to talk a bit about conditional CSS that I&amp;rsquo;ve been using in production and that I think can improve the overall logic of CSS.</description>
+    </item>
+    
+    <item>
+      <title>A closer look to closure</title>
+      <link>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</link>
+      <pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/07/a-closer-look-to-closure/</guid>
+      <description>Closure is a very interesting concept in JavaScript. It basically determinse where and how variables or functions are accessable and where not. Since this is an essential part of JavaScript and one can run into quite some problems I want to try and give short introduction to closure and what it can be good for. It&amp;rsquo;s good to have at least basic understanding of JavaScript.
+So before I start I&amp;rsquo;d like to say that I consider myself a JavaScript beginner and this is how I understand closure and scopes at the moment.</description>
+    </item>
+    
+    <item>
+      <title>Noobish VIM</title>
+      <link>https://kevingimbel.de/blog/2014/07/noobish-vim/</link>
+      <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/07/noobish-vim/</guid>
+      <description>Since I&amp;rsquo;m still trying to really get why so many (Front-End) Devs love VIM I tried to find a &amp;ldquo;good&amp;rdquo; way to integrate it into my daily workflow. Since I&amp;rsquo;m working in a relativley small company it&amp;rsquo;s most of the time stressy to get all things done and to keep an overview - so long story short: There&amp;rsquo;s not much time for new tools that don&amp;rsquo;t increase my workflow directly. VIM is one of these tools that don&amp;rsquo;t fully support my workflow at the moment.</description>
+    </item>
+    
+    <item>
+      <title>Useful Web Developer Tools</title>
+      <link>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</link>
+      <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/06/useful-web-developer-tools/</guid>
+      <description>I myself always like to see what other developers use in their workflow: What tools? What plugin? Live-Reload, Pre-Processors, shortcuts - all that stuff. It&amp;rsquo;s always great to save some time, especially for repeating tasks or challenges. Today I want to share my list of tool that I use on a daily base for all kinds of things.
+Browser-based The following tools are all for Chrome because I use Chrome for most of my development.</description>
+    </item>
+    
+    <item>
+      <title>Magento: get and set variables in config.xml</title>
+      <link>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</link>
+      <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config.xml/</guid>
+      <description>The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&amp;rsquo;m working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for), however this form should be &amp;ldquo;cloned&amp;rdquo; to be present on 4 pages with different email addresses. Since Magentos Core is MVC-like I believed there would be an easy way to pass email addresses to the Controller.</description>
+    </item>
+    
+    <item>
+      <title>Vim - first impression</title>
+      <link>https://kevingimbel.de/blog/2014/05/vim-first-impression/</link>
+      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/05/vim-first-impression/</guid>
+      <description>When I first looked at Vim it was a very short experience that was literally as follows
+# from the command line vim test.md *vim opens* &amp;#34;What&amp;#39;s that?&amp;#34; *CTRL + C* &amp;#34;How do I even close this?!&amp;#34; *opens browser, googles &amp;#34;how to close VIM&amp;#34;* ESC + :q That was it and that was my Vim experience for quite some time. However, lately I see more and more people talking about Vim being the single best editor for everything - no matter what language one writes.</description>
+    </item>
+    
+    <item>
+      <title>Passing Arguments in JavaScript</title>
+      <link>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</link>
+      <pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</guid>
+      <description>One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &amp;ldquo;Secrets of the JavaScript Ninja&amp;rdquo; by the amazing John Resig and try to play around with JavaScript whenever I&amp;rsquo;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&amp;rsquo;t check for every possible thingy. Anyway, I&amp;rsquo;ll cover this in a small write-up aka a blog post.</description>
+    </item>
+    
+    <item>
+      <title>Mixtape: February 2014</title>
+      <link>https://kevingimbel.de/blog/2014/03/mixtape-february-2014/</link>
+      <pubDate>Sun, 02 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/03/mixtape-february-2014/</guid>
+      <description>Another month passed and a new mixtape arrived. My favorites of February 2014. Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>Pure JavaScript slider</title>
+      <link>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</link>
+      <pubDate>Sat, 22 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</guid>
+      <description>The great thing when you&amp;rsquo;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&amp;rsquo;m very proud of my back to top script even though it&amp;rsquo;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&amp;rsquo;t be that much fun. However, I made another JavaScript thing I&amp;rsquo;m proud of: A pure JavaScript slider.</description>
+    </item>
+    
+    <item>
+      <title>Fatboy Slim - Why Try Harder</title>
+      <link>https://kevingimbel.de/blog/2014/01/fatboy-slim-why-try-harder/</link>
+      <pubDate>Mon, 13 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/01/fatboy-slim-why-try-harder/</guid>
+      <description>Start your day right and listen to the best of the best of the best from Fatboy Slim - Free on SoundCloud!</description>
+    </item>
+    
+    <item>
+      <title>Digitalism - Boiler Room at MELT! 2013</title>
+      <link>https://kevingimbel.de/blog/2014/01/digitalism-boiler-room-at-melt-2013/</link>
+      <pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/01/digitalism-boiler-room-at-melt-2013/</guid>
+      <description>I really like Digitalism and I really love electronic music so this DJ Set recorded at MELT! festival in Germany is just perfect. I can highliy recommend to follow Digitalism and Boiler Room on SoundCloud.</description>
+    </item>
+    
+    <item>
+      <title>Labels in GMail</title>
+      <link>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</link>
+      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</guid>
+      <description>In case your company is using GMail Business there&amp;rsquo;s one thing that comes to your daily work-life I really love about GMail: Labels. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;ldquo;View&amp;rdquo; inside GMail - on Desktop as well as Mobile which makes them even better!</description>
+    </item>
+    
+    <item>
+      <title>Bullgit loves Jekyll</title>
+      <link>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</link>
+      <pubDate>Mon, 06 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/01/bullgit-loves-jekyll/</guid>
+      <description>After having a static HTML Page for about 6 months, we at bullgit just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:
+ Jekyll is built-in GitHub pages Jekyll is easy-to-learn and easy to maintain No-Database handling of Data (see the list of members we use) Everyone can clone the repo and run it locally  So basically, as soon as you have a Project on GitHub or an organization like bullgit you can use the power of Jekyll to make your page easy to use and easy to change even for new members.</description>
+    </item>
+    
+    <item>
+      <title>Mixtape: 2013</title>
+      <link>https://kevingimbel.de/blog/2014/01/mixtape-2013/</link>
+      <pubDate>Sun, 05 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/01/mixtape-2013/</guid>
+      <description>I like to make Mixtapes (or playlists) on SoundCloud and this one is my &amp;ldquo;Best of 2013&amp;rdquo; Mixtape featuring my favorites of Drum and Bass, Electro and Dubstep. Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>Web Development in 2014</title>
+      <link>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</link>
+      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2014/01/web-development-in-2014/</guid>
+      <description>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there&amp;rsquo;s one thing that I&amp;rsquo;d like everyone to do in 2014: At least basic responsive web development to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There&amp;rsquo;s nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back).</description>
+    </item>
+    
+    <item>
+      <title>Brackets vs. Sublime Text</title>
+      <link>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</link>
+      <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</guid>
+      <description>I first tried Brackets back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside VIM it is the editor I read quite a lot about latly. My first impression was: &amp;ldquo;Wow, that&amp;rsquo;s a simple, clean editor!&amp;rdquo; - exactly the thing I liked so much about Sublime Text 2 which I&amp;rsquo;ve been using for the last two years or so.</description>
+    </item>
+    
+    <item>
+      <title>How I got employed</title>
+      <link>https://kevingimbel.de/blog/2013/12/how-i-got-employed/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/12/how-i-got-employed/</guid>
+      <description>About 1 year ago I joined a tlk.io Chat created by Tim Pietrusky. It was my first time ever I joined a group of other devs and I was more then nervouse about because I - at this time - considered my self more of a Hobby-Dev who&amp;rsquo;s not that skilled. I just started using CodePen a few months before and did some fun demos and experiments there like drawing images with CSS and stuff.</description>
+    </item>
+    
+    <item>
+      <title>Menschliches Allzumenschliches</title>
+      <link>https://kevingimbel.de/reading/2012/menschliches-allzumenschliches/</link>
+      <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/menschliches-allzumenschliches/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metro 2033</title>
+      <link>https://kevingimbel.de/reading/2013/metro-2033/</link>
+      <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2013/metro-2033/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pseudo Product Flags</title>
+      <link>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</link>
+      <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/11/pseudo-product-flags/</guid>
+      <description>For a recent client Project I had to create Product Flags that are displayed at the top of each product. The Flags should have different colors and different values (which also have different lengths). The values are applied via the data Attribute and the colors are also controlled via a data Attribute. The &amp;ldquo;Problem&amp;rdquo; with this task was that it&amp;rsquo;s not only a few different length, it&amp;rsquo;s a multi-language system and therefore can end up in a lot of different width of the product flags - a &amp;ldquo;fixed&amp;rdquo; solution, like applying a max-width of let&amp;rsquo;s say 20em, isn&amp;rsquo;t the best solution for this so I ended up creating a flexible solution.</description>
+    </item>
+    
+    <item>
+      <title>To infinity and beyond</title>
+      <link>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/11/to-infinity-and-beyond/</guid>
+      <description>While I was re-designing my Website I decided to finally add some JavaScript to it. I&amp;rsquo;m learning JavaScript for like 2 months now and - to be honest - I finally understand most of the things I&amp;rsquo;m doing. Yesterday night&amp;rsquo;s topic was a &amp;ldquo;Back to Top&amp;rdquo; Button written in Vanilla JS. Actually the code behind it is kinda simple, however, I wrote an endless function that got to infinity and beyond (that&amp;rsquo;s where the title comes from.</description>
+    </item>
+    
+    <item>
+      <title>Custom Radio Buttons</title>
+      <link>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</link>
+      <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/10/custom-radio-buttons/</guid>
+      <description>Today I thought about a project I had in mind for some time, it has to do with ratings of different contents and the first thing I thought about was: What&amp;rsquo;s the easiest or best way to create a rating form with custom buttons (stars, hearts, whatever).
+A few years ago I had to do this once and I remember doing it with an image and background-position but as of today I really love pseudo elements and &amp;ldquo;Look-Ma-No-Image!</description>
+    </item>
+    
+    <item>
+      <title>Ghost in the shell</title>
+      <link>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</link>
+      <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/10/ghost-in-the-shell/</guid>
+      <description>Finally Ghost launched to the public! I waited for this CMS since I first heard of, at this time my blog was running on WordPress which always felt overloaded. WordPress has a lot of functions and stuff I don&amp;rsquo;t need when publishing a few articles a month to the Internet. However, I switched to Jekyll as you may know and now there is Ghost. It felt like it&amp;rsquo;d be my birthday while unpacking the *.</description>
+    </item>
+    
+    <item>
+      <title>i-js</title>
+      <link>https://kevingimbel.de/blog/2013/10/i-js/</link>
+      <pubDate>Mon, 14 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/10/i-js/</guid>
+      <description>Today I decided to dig deeper into JavaScript and experiment a bit with scope, query selection and the general manipulation of the DOM. To do so I set up an object to store all my functions - this is not necessary but definitely more fun.
+After naming my Object $ (because I new this from jQuery and I thought it would look cool) I renamed it to I and here comes the fun part: While learning JS I build i.</description>
+    </item>
+    
+    <item>
+      <title>Join a Dev Group</title>
+      <link>https://kevingimbel.de/blog/2013/10/join-a-dev-group/</link>
+      <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/10/join-a-dev-group/</guid>
+      <description>Earlier this year I joined a Dev Group. It was the best decision I made this year and I want to tell you why. After doing more experiments on CodePen and right after I got to know Tim Pietrusky he opened a tlk.io Chat called #CodePen. For those who&amp;rsquo;re not familiar with tlk: it&amp;rsquo;s an open web chat. You can create a room, everyone can join and all things are open to everyone who knows the URL.</description>
+    </item>
+    
+    <item>
+      <title>From 0 To Sass</title>
+      <link>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/10/from-0-to-sass/</guid>
+      <description>If you&amp;rsquo;re a Front-End Developer you may have already heard about Pre-Processors such as Sass, LESS or Stylus. It&amp;rsquo;s fair to say that they&amp;rsquo;re all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).
+Even though Pre-Processors are easy to use and setup some people are still confused: Do I have to run them on a server?</description>
+    </item>
+    
+    <item>
+      <title>A bit sticky</title>
+      <link>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</link>
+      <pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/09/a-bit-sticky/</guid>
+      <description>I just stumbled upon a very handy CSS Property: position:sticky. As far as I found out it&amp;rsquo;s only working in Chrome and Chromium with the experimental Webkit Features Flag enabled (see at chrome://flags/#enable-experimental-webkit-features).
 position:sticky is a pretty handy feature that allows you to stick an element to the top of the page (or wherever you want) until the parent element is moved out of the screen.
-Basic Markup To get an idea of how position:sticky works I made some basic markup.</description></item><item><title>Endless scrolling</title><link>https://kevingimbel.de/blog/2013/09/endless-scrolling/</link><pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/09/endless-scrolling/</guid><description>If you see Apps (no matter if native or web) and websites like I do, you&amp;rsquo;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&amp;rsquo;t offer a way to get back to top on their website nor do they on Facebook for Android.
-On Android you can simply hit the menu button and the sidebar-like menu will fade in, so there is no problem with not having an &amp;ldquo;scroll to top&amp;rdquo; action because there is no need to get back to the top.</description></item><item><title>Is this :valid?</title><link>https://kevingimbel.de/blog/2013/08/is-this-valid/</link><pubDate>Fri, 16 Aug 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/08/is-this-valid/</guid><description>I recently stumbled upon the :valid and :invalid class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not validate the input, the entered email for example can still be formated wrong.</description></item><item><title>px vs em</title><link>https://kevingimbel.de/blog/2013/08/px-vs-em/</link><pubDate>Thu, 15 Aug 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/08/px-vs-em/</guid><description>Recently Tim Pietrusky wrote and article about px vs em that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.
-I was using pixel like forever and I couldn&amp;rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: em is more responsive and it is scalable. In fact when you switch from pixel to em you&amp;rsquo;ll feel like working on a completely new Level.</description></item><item><title>Hello World</title><link>https://kevingimbel.de/blog/2013/08/hello-world/</link><pubDate>Mon, 12 Aug 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/blog/2013/08/hello-world/</guid><description>Recently I decided to redesign and redefine my online appearance and the way I publish content to the internet. I switched from using 2 domains as Blog and Portfolio to one new Domain for both: kevingimbel.com
+Basic Markup To get an idea of how position:sticky works I made some basic markup.</description>
+    </item>
+    
+    <item>
+      <title>Endless scrolling</title>
+      <link>https://kevingimbel.de/blog/2013/09/endless-scrolling/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/09/endless-scrolling/</guid>
+      <description>If you see Apps (no matter if native or web) and websites like I do, you&amp;rsquo;ll probably now the worst thing that can happen to an endless scrolling page: No shortcut to get back to top. Even Facebook doesn&amp;rsquo;t offer a way to get back to top on their website nor do they on Facebook for Android.
+On Android you can simply hit the menu button and the sidebar-like menu will fade in, so there is no problem with not having an &amp;ldquo;scroll to top&amp;rdquo; action because there is no need to get back to the top.</description>
+    </item>
+    
+    <item>
+      <title>Is this :valid?</title>
+      <link>https://kevingimbel.de/blog/2013/08/is-this-valid/</link>
+      <pubDate>Fri, 16 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/08/is-this-valid/</guid>
+      <description>I recently stumbled upon the :valid and :invalid class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not validate the input, the entered email for example can still be formated wrong.</description>
+    </item>
+    
+    <item>
+      <title>px vs em</title>
+      <link>https://kevingimbel.de/blog/2013/08/px-vs-em/</link>
+      <pubDate>Thu, 15 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/08/px-vs-em/</guid>
+      <description>Recently Tim Pietrusky wrote and article about px vs em that contains a few links on resources that explain why you should use em instead of px as measure unit on websites.
+I was using pixel like forever and I couldn&amp;rsquo;t think of any reason to switch to a new unit until Tim explained why em is better: em is more responsive and it is scalable. In fact when you switch from pixel to em you&amp;rsquo;ll feel like working on a completely new Level.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://kevingimbel.de/blog/2013/08/hello-world/</link>
+      <pubDate>Mon, 12 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2013/08/hello-world/</guid>
+      <description>Recently I decided to redesign and redefine my online appearance and the way I publish content to the internet. I switched from using 2 domains as Blog and Portfolio to one new Domain for both: kevingimbel.com
 This page is build with Jekyll a blog-aware static site generator you&amp;rsquo;re going to love. I wrote a Guide to get started - so if you consider doing so give it a look.
-Beside switching to a new domain I also switched my hoster.</description></item><item><title>1984</title><link>https://kevingimbel.de/reading/2013/1984/</link><pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2013/1984/</guid><description/></item><item><title>Brave New World</title><link>https://kevingimbel.de/reading/2013/brave-new-world/</link><pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2013/brave-new-world/</guid><description/></item><item><title>Der Antichrist</title><link>https://kevingimbel.de/reading/2013/der-antichrist/</link><pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2013/der-antichrist/</guid><description/></item><item><title>Roadhouse</title><link>https://kevingimbel.de/photography/2012/08/roadhouse/</link><pubDate>Fri, 03 Aug 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2012/08/roadhouse/</guid><description>On my way to Berlin I snapped this image of a roadhouse at night.</description></item><item><title>Mond</title><link>https://kevingimbel.de/photography/2012/08/mond/</link><pubDate>Thu, 02 Aug 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2012/08/mond/</guid><description>A picture of the moon I took from my window when I was younger.</description></item><item><title>Pau</title><link>https://kevingimbel.de/photography/2012/06/pau/</link><pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2012/06/pau/</guid><description>I spent one month in France working in a IT shop in Pau as part of my school education. I don&amp;rsquo;t speak a word french so this was quite fun and challenging.</description></item><item><title>Berlin Gothic: Der Versteckte Wille</title><link>https://kevingimbel.de/reading/2012/berlin-gothic-der-versteckte-wille/</link><pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/berlin-gothic-der-versteckte-wille/</guid><description/></item><item><title>Berlin Gothic: Die Versteckte Bedeutung</title><link>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-bedeutung/</link><pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-bedeutung/</guid><description/></item><item><title>Berlin Gothic: Nachts Bei Max</title><link>https://kevingimbel.de/reading/2012/berlin-gothic-nachts-bei-max/</link><pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/berlin-gothic-nachts-bei-max/</guid><description/></item><item><title>Colza Field</title><link>https://kevingimbel.de/photography/2012/05/colza-field/</link><pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/photography/2012/05/colza-field/</guid><description>Walking through the fields of a small town is always a good idea, you never know what you&amp;rsquo;ll find.</description></item><item><title>Berlin Gothic</title><link>https://kevingimbel.de/reading/2012/berlin-gothic/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/berlin-gothic/</guid><description/></item><item><title>Berlin Gothic: Die Versteckte Stadt</title><link>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-stadt/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-stadt/</guid><description/></item><item><title>Berlin Gothic: Gottmaschine</title><link>https://kevingimbel.de/reading/2012/berlin-gothic-gottmaschine/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/berlin-gothic-gottmaschine/</guid><description/></item><item><title>Berlin Gothic: Xavers Ende</title><link>https://kevingimbel.de/reading/2012/berlin-gothic-xavers-ende/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/berlin-gothic-xavers-ende/</guid><description/></item><item><title>Fairies and Folks of Ireland</title><link>https://kevingimbel.de/reading/2012/fairies-and-folks-of-ireland/</link><pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/reading/2012/fairies-and-folks-of-ireland/</guid><description/></item><item><title>About</title><link>https://kevingimbel.de/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/about/</guid><description>Hello unknown reader,
+Beside switching to a new domain I also switched my hoster.</description>
+    </item>
+    
+    <item>
+      <title>1984</title>
+      <link>https://kevingimbel.de/reading/2013/1984/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2013/1984/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brave New World</title>
+      <link>https://kevingimbel.de/reading/2013/brave-new-world/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2013/brave-new-world/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Der Antichrist</title>
+      <link>https://kevingimbel.de/reading/2013/der-antichrist/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2013/der-antichrist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Roadhouse</title>
+      <link>https://kevingimbel.de/photography/2012/08/roadhouse/</link>
+      <pubDate>Fri, 03 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2012/08/roadhouse/</guid>
+      <description>On my way to Berlin I snapped this image of a roadhouse at night.</description>
+    </item>
+    
+    <item>
+      <title>Mond</title>
+      <link>https://kevingimbel.de/photography/2012/08/mond/</link>
+      <pubDate>Thu, 02 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2012/08/mond/</guid>
+      <description>A picture of the moon I took from my window when I was younger.</description>
+    </item>
+    
+    <item>
+      <title>Pau</title>
+      <link>https://kevingimbel.de/photography/2012/06/pau/</link>
+      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2012/06/pau/</guid>
+      <description>I spent one month in France working in a IT shop in Pau as part of my school education. I don&amp;rsquo;t speak a word french so this was quite fun and challenging.</description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Der Versteckte Wille</title>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-der-versteckte-wille/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-der-versteckte-wille/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Die Versteckte Bedeutung</title>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-bedeutung/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-bedeutung/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Nachts Bei Max</title>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-nachts-bei-max/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-nachts-bei-max/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Colza Field</title>
+      <link>https://kevingimbel.de/photography/2012/05/colza-field/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2012/05/colza-field/</guid>
+      <description>Walking through the fields of a small town is always a good idea, you never know what you&amp;rsquo;ll find.</description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic</title>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Die Versteckte Stadt</title>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-stadt/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-die-versteckte-stadt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Gottmaschine</title>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-gottmaschine/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-gottmaschine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin Gothic: Xavers Ende</title>
+      <link>https://kevingimbel.de/reading/2012/berlin-gothic-xavers-ende/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/berlin-gothic-xavers-ende/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fairies and Folks of Ireland</title>
+      <link>https://kevingimbel.de/reading/2012/fairies-and-folks-of-ireland/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/reading/2012/fairies-and-folks-of-ireland/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://kevingimbel.de/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/about/</guid>
+      <description>Hello unknown reader,
 my name is Kevin Gimbel and you&amp;rsquo;ve reached my corner of the world wide web. 👴
 I&amp;rsquo;m actually not that old tho, I&amp;rsquo;m in my mid twenties and I somehow ended up in the world of (cloud) computing. I&amp;rsquo;m interested in Rust (a safe and fast programming language), Sci-Fi, dystopia books, fantasy worlds (Divinity, Elder Scrolls, Dungeons &amp;amp; Dragons), and video and boardgames.
-I tent to start a lot of things and pursue a lot of different interests when I&amp;rsquo;m in a rush, but usually not much of it stays with me; Over the past year I briefly started manufacturing solid perfumes, for example.</description></item><item><title>Imprint / Legal information</title><link>https://kevingimbel.de/legal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/legal/</guid><description>Impressum / Legal / Imprint Contact information This website is managed by:
+I tent to start a lot of things and pursue a lot of different interests when I&amp;rsquo;m in a rush, but usually not much of it stays with me; Over the past year I briefly started manufacturing solid perfumes, for example.</description>
+    </item>
+    
+    <item>
+      <title>Imprint / Legal information</title>
+      <link>https://kevingimbel.de/legal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/legal/</guid>
+      <description>Impressum / Legal / Imprint Contact information This website is managed by:
 Kevin Gimbel
 Wiesbaden, Germany
 Mail: hallo+webadmin@kevingimbel.com
-Mastodon: bullgit.party/@kevin
-Matrix: @kevingimbel:bullgit.science
+Twitter: @KevinGimbel
 Privacy information This website does not use tracking or analytic tools. It is hosted on GitHub Pages.
-No dynamic programming language or database is used, it&amp;rsquo;s all static HTML pages generated and then served with a HTTP server. The code is fully open source and available on github.com/kevingimbel/kevingimbel.de, so you can look around the source code if you wish.</description></item><item><title>Now</title><link>https://kevingimbel.de/now/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/now/</guid><description/></item><item><title>Simple Pancakes</title><link>https://kevingimbel.de/recipes/2019-12-01-simple-pancakes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/recipes/2019-12-01-simple-pancakes/</guid><description>Mix all, then fry.</description></item><item><title>Thanks</title><link>https://kevingimbel.de/thanks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kevingimbel.de/thanks/</guid><description>This site covers some tools, template helpers, etc. which I use to create this website. Building and maintaining this site would&amp;rsquo;ve been harder without the work of others, so thank you for your open source contributions.
-The open source projects mentioned here are in no particular order.
+No dynamic programming language or database is used, it&amp;rsquo;s all static HTML pages generated and then served with a HTTP server. The code is fully open source and available on github.com/kevingimbel/kevingimbel.de, so you can look around the source code if you wish.</description>
+    </item>
+    
+    <item>
+      <title>Link collection</title>
+      <link>https://kevingimbel.de/link-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/link-list/</guid>
+      <description>This page collects links I want to share, e.g. to articles I found interesting.</description>
+    </item>
+    
+    <item>
+      <title>Now</title>
+      <link>https://kevingimbel.de/now/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/now/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RSS</title>
+      <link>https://kevingimbel.de/rss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/rss/</guid>
+      <description>You can subscribe to various RSS feeds for my website.
+ Full feed (all articles) RSS | ATOM Only tech articles RSS | ATOM  You can also subscribe to a specific category or even a tag! The URL structure is /categories/{categoryName}/index.xml for RSS and /categories/{categoryName}/atom.xml for atom. Some examples:
+ All reviews I publish: https://kevingimbel.de/categories/review/index.xml All Rust articles I publish https://kevingimbel.de/tags/rust/index.xml  </description>
+    </item>
+    
+    <item>
+      <title>Simple Pancakes</title>
+      <link>https://kevingimbel.de/recipes/2019-12-01-simple-pancakes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/recipes/2019-12-01-simple-pancakes/</guid>
+      <description>Mix all, then fry.</description>
+    </item>
+    
+    <item>
+      <title>Thanks</title>
+      <link>https://kevingimbel.de/thanks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/thanks/</guid>
+      <description>This site covers some tools, template helpers, etc. which I use to create this website. Building and maintaining this site would&amp;rsquo;ve been harder without the work of others, so thank you for your open source contributions.
+The projects mentioned here are in no particular order.
 Hugo https://gohugo.io/
 Blazing fast, open-source static-site generator. Thanks to everyone contributing and bep for leading the Hugo development.
 Hugo Atom Feed https://github.com/kaushalmodi/hugo-atom-feed
-Super easy and straight-forward way of setting up Atom feeds in Hugo.</description></item></channel></rss>
+Super easy and straight-forward way of setting up Atom feeds in Hugo.</description>
+    </item>
+    
+  </channel>
+</rss>

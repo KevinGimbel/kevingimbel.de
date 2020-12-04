@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Vidaloka";
+  src: url("/font/vidaloka/Vidaloka-Regular.ttf") format("ttf");
+}
+
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/font/plex/IBMPlexMono-Regular") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: bold;
+  src: url("/font/plex/IBMPlexMono-Bold") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/font/plex/IBMPlexMono-BoldItalic") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: italic;
+  src: url("/font/plex/IBMPlexMono-Italic") format("ttf");
+}
+
+.txt--small {
+  font-size: 1rem;
+}
+
+.x-small,
+.txt--xsmall {
+  font-size: .85rem;
+}
+
+.xx-small,
+.txt--xxsmall {
+  font-size: .65rem;
+}
+
+.txt--ultra-large {
+  font-size: 4rem;
+}
+
+.txt--large { 
+  font-size: 2.5rem;
+}
+
+.txt--medium { 
+  font-size: 1.8rem;
+}
+
+.txt--bold {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.46rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+.article-content h2,
+.article-content h3 {
+  margin-top: 2rem;
+}
+
+.section-headline {
+  font-size: 3.75em;
+  margin-top: 2rem;
+  line-height: 0.75;
+}
+
+/* Index Page */
+
+.intro-splash {
+  display: block;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.icon--external-link {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+h1, h2, h3, h4, .head, .intro-splash, .nav-main {
+  font-family: 'Vidaloka', serif;
+}
+
+
+code, pre, .highlight {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+@media all and (max-width: 1000px) {
+  h1, h2, .section-headline, .article-preview__heading {
+    font-size: 2.25rem !important;
+  }
+}

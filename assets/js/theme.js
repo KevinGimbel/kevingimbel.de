@@ -1,80 +1,54 @@
-(function (window, document, undefined) {
-  let theme = window.localStorage.getItem("kgde_theme");
-  if (theme) {
-    var [colorMain, colorSecondary] = JSON.parse(theme).colors;
-    document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
-  } else {
-    // [dark-color, light-color]
-    // Color combinations taken from https://botsin.space/@accessibleColors
-    let themes = [
-      ["#123D3C", "#90F072"],
-      ["#403D58", "#dea584"],
-      ["#400E3B", "#DCC78A"],
-      ["#17098D", "#EADD1C"],
-      ["#233B07", "#FFDD6D"],
-      ["#37059F", "#D1D99F"]
-    ]
-    var [colorMain, colorSecondary] = themes[Math.floor(Math.random() * themes.length)];
-    document.body.style = `--color-main:${colorMain};--color-secondary:${colorSecondary}`;
+/* PRE HEADER */
+(function (document, window, undefined) {
+
+  function css_to_int(cssStyleDeclaration, unitStr) {
+    return parseInt(cssStyleDeclaration.replace(unitStr, ''));
   }
-  document.addEventListener('DOMContentLoaded', function () {
-    let schema_btn = document.querySelector("#btn_schema");
-    let theme = window.localStorage.getItem("kgde_theme");
-    let text_keep = document.querySelector("#widget_color_changer_txt_keep").textContent;
-    let text_random = document.querySelector("#widget_color_changer_txt_random").textContent;
-    if (theme) {
-      schema_btn.textContent = text_random;
-    } else {
-      schema_btn.textContent = text_keep;
+
+  // set margin-top to 0 so the element comes "back" into view
+  function pre_header_show(element) {
+    element.style.setProperty('margin-top', 0);
+    element.dataset.shown = true;
+  }
+
+  // set margin-top to -$this_height so the element comes goes out of view
+  function pre_header_hide(element) {
+    let this_height = window.getComputedStyle(element).height;
+    element.style.setProperty('margin-top', `-${this_height}`);
+    element.dataset.shown = false;
+  }
+
+  function is_element_hidden(element) {
+    return ['none'].indexOf(window.getComputedStyle(element).display) > -1;
+  }
+
+  // Wait for DOM to load
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get pre-header and toggle
+    const pre_header_element = document.querySelector('#pre-header');
+    const pre_header_toggle = document.querySelector('#pre-header-toggle');
+
+    // cheap way to check if the small screen CSS has hidden the menu!
+    if (!is_element_hidden(pre_header_toggle)) {
+      pre_header_hide(pre_header_element);
     }
-    schema_btn.style.display = "block";
-    schema_btn.addEventListener('click', function (e) {
-      if (theme) {
-        window.localStorage.removeItem("kgde_theme");
-        window.location = window.location;
+
+    pre_header_toggle.addEventListener('click', (event) => {
+      // Need to do a string comparison because the attribute is a string!
+      if (pre_header_element.dataset.shown == "true") {
+        pre_header_hide(pre_header_element);
       } else {
-        window.localStorage.setItem("kgde_theme", JSON.stringify({ colors: [colorMain, colorSecondary] }));
-        window.location = window.location;
+        pre_header_show(pre_header_element);
       }
     });
 
-    let resizer = document.querySelector("#resizer");
-    let article_content_el = document.querySelector(".article-single") || document.querySelector(".page-content");
-    let width = window.localStorage.getItem("kgde_theme_width");
-    if (!width) {
-      window.localStorage.setItem("kgde_theme_width", 80);
-      content_update_size(width, article_content_el);
-    }
-
-    if (resizer) {
-      let opts = resizer.querySelectorAll("option");
-      opts.forEach(entry => {
-        entry.selected = entry.value == width;
-      })
-    }
-
-    if (resizer && article_content_el) {
-      if (width) {
-        content_update_size(width, article_content_el);
+    window.addEventListener('resize', () => {
+      // cheap way to check if the small screen CSS has hidden the menu!
+      if (!is_element_hidden(pre_header_toggle)) {
+        pre_header_hide(pre_header_element);
+      } else {
+        pre_header_show(pre_header_element);
       }
-      resizer.addEventListener("change", (event) => {
-        let size = event.target.value;
-        content_update_size(size, article_content_el);
-        window.localStorage.setItem("kgde_theme_width", size);
-      })
-    } else {
-      resizer.parentNode.style.display = "none";
-    }
-  }); // DOMContentLoaded
-
-  function content_update_size(size, element) {
-    switch (size) {
-      case "full":
-        element.style += "";
-        break;
-      default:
-        element.style = `max-width: ${size}rem; margin: 0 auto;`;
-        break;
-    }
-  }
-}(window, document));
+    });
+  });
+}(document, window));

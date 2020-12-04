@@ -5,12 +5,12 @@ title = "KevOps — DevOps, Cooking, and everything else I want to write about"
 theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
 publishDir = "docs"
 # ignoreErrors = ["error-output-taxonomy"]
-
+disableLanguages = ["es", "de"]
 [params]
     avatar_src = "images/general/kevin-gimbel-2020.jpg"
     avatar_alt = "A Selfie of me"
     # Toggle "template hints" 
-    # debug = true
+    debug = false
 
 [permalinks]
     blog = "/:section/:year/:month/:title/"
@@ -26,9 +26,7 @@ location = "Wiesbaden, Germany"
     [[params.now.doing]]
     thing = "on and off learning Spanish"
     [[params.now.doing]]
-    thing = "playing [Fall Guys](https://fallguys.com) on PS4 with my wife"
-    [[params.now.doing]]
-    thing = "starting and abandoning lots of projects"
+    thing = "playing [The Surge](https://www.focus-home.com/en-us/games/the-surge) on PS4"
 
 [menu]
     [[menu.main]]
@@ -61,11 +59,18 @@ location = "Wiesbaden, Germany"
     URL = "/photography/"
     Weight = 40
 
+    # Footer Menu
     [[menu.footer]]
     identifier = "reading"
-    name = "Reading"
+    name = "Books"
     URL = "/reading/"
     Weight = 45
+
+    [[menu.footer]]
+    identifier = "Links"
+    name = "Links"
+    URL = "/link-list/"
+    Weight = 46
 
     [[menu.footer]]
     identifier = "Art"
@@ -78,6 +83,12 @@ location = "Wiesbaden, Germany"
     name = "Now"
     URL = "/now/"
     Weight = 60
+
+    [[menu.footer]]
+    identifier = "RSS"
+    name = "RSS"
+    URL = "/rss/"
+    Weight = 70
 
 
 [outputs]
@@ -117,13 +128,13 @@ location = "Wiesbaden, Germany"
         [[languages.de.menu.main]]
         identifier = "start"
         name = "Start"
-        URL = "/de/"
+        URL = "/"
         Weight = 10
 
         [[languages.de.menu.main]]
         identifier = "blog"
         name = "Blog"
-        url = "/de/blog/"
+        url = "/blog/"
         weight = 20
 
         [[languages.de.menu.main]]
@@ -133,5 +144,13 @@ location = "Wiesbaden, Germany"
         weight = 30
 
 
+
+        [[languages.de.menu.main]]
+        identifier = "photography"
+        name = "Fotografie"
+        URL = "/photography/"
+        Weight = 40
+
+
         [languages.de.params]
-        avatar_alt = "Ein Bild von mir, sehr nah."
+        avatar_alt = "Ein Bild von mir. :)"

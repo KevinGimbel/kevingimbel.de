@@ -58,15 +58,14 @@
         <p>All images &copy; Kevin Gimbel. If you want to buy any of my photos you can do so on <a
                 href="https://www.eyeem.com/u/kevingimbel/market" title="Buy my photographs on EyeEm.com">EyeEm</a>.</p>
     </section>
-
-    <section class="tags-categories">
-        {{ partial "categories.html" . }}
-        {{ partial "tags.html" . }}
-    </section>
 </main>
 {{ end }}
 
 {{ define "support" }}
+<section class="tags-categories">
+    {{ partial "categories.html" . }}
+    {{ partial "tags.html" . }}
+</section>
     {{ partial "support.html" . }}
     {{ partial "author.html" . }}
 {{ end }}

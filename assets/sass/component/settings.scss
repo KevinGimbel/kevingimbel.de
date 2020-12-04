@@ -1,0 +1,16 @@
+.btn-preheader-toggle {
+  display: none;
+}
+@media all and (max-width: 1200px) {
+  .btn-preheader-toggle {
+    display: block;
+    padding: .25em .5em;
+    font-size: 1em;
+    float: right;
+
+    &:hover, &:active {
+      background: var(--color-main);
+      color: var(--color-secondary);
+    }
+  }
+}

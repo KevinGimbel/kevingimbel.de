@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Corona Warn App &mdash; KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="corona app  blog allgemein  ">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧙‍♂️</text></svg>">
+    
+    
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/main.min.css">
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/page.min.css">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kevingimbel">
+    <meta name="twitter:creator" content="@_kevinatari">
+    <meta name="twitter:title" content="Corona Warn App">
+    <meta name="twitter:description" content="Die Corona Warn App wurde veröffentlicht und erstaunlicherweise ist sie gut! Die App läuft mit minimalen Berechtigungen, verbraucht wenig Strom da sie Bluetooth Low Energy verwendet, ist komplett dezentralisiert, und zu alledem auch noch Open Source: der Code für die Apps, die Website, und den Backend Server ist auf GitHub verfügbar.
+Auch Linus Neumann vom Chaos Computer Club lobt die Umsetzung in diesem Video der Tagesschau, nachdem er und andere zuvor lange Zeit für eine dezentralisierte Lösung plädiert haben.">
+    
+
+</head>
+<body class="type-page section-blog">
+    <script type="text/javascript">(function(document,window,undefined){function css_to_int(cssStyleDeclaration,unitStr){return parseInt(cssStyleDeclaration.replace(unitStr,''));}
+function pre_header_show(element){element.style.setProperty('margin-top',0);element.dataset.shown=true;}
+function pre_header_hide(element){let this_height=window.getComputedStyle(element).height;element.style.setProperty('margin-top',`-${this_height}`);element.dataset.shown=false;}
+function is_element_hidden(element){return['none'].indexOf(window.getComputedStyle(element).display)>-1;}
+document.addEventListener('DOMContentLoaded',()=>{const pre_header_element=document.querySelector('#pre-header');const pre_header_toggle=document.querySelector('#pre-header-toggle');if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}
+pre_header_toggle.addEventListener('click',(event)=>{if(pre_header_element.dataset.shown=="true"){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});window.addEventListener('resize',()=>{if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});});}(document,window));</script>
+    
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.colorswitch.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.darkmode.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.fontsize.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.contentwidth.min.js"></script>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">Keep current color theme</span>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">Use random color theme</span>
+    
+    <section class="main-grid">
+    
+        <header class="pre-header" id="pre-header">
+            <kg-colorswitcher>Color theme</kg-colorswitcher>
+            <kg-darkmode>Dark mode</kg-darkmode>
+            
+            <kg-fontsize>Font size</kg-fontsize>
+            <kg-contentwidth>Content width</kg-contentwidth>
+            
+        </header>
+    
+        <header class="site-header">
+            <nav role="navigation" id="navigation" aria-label="Main Navigation">
+                <ul class="nav-main">
+                    
+                    <li class="nav-item">
+                        <a href="/" data-perm="/blog/2020/06/corona-warn-app/" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" data-perm="/blog/2020/06/corona-warn-app/" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about/" data-perm="/blog/2020/06/corona-warn-app/" >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/photography/" data-perm="/blog/2020/06/corona-warn-app/" >Photography</a>
+                    </li><button id="pre-header-toggle" class="btn-preheader-toggle">Settings</button>
+                    </ul>
+                    </nav>
+        </header>
+
+    <section class="site-main-content">
+<main id="main" class="main">
+<section class="article-single" style="--this-border-radius: 15px 26px 30px 52px;"> 
+        <header class="article-header">
+            
+
+
+
+
+
+
+<h1>Corona Warn App</h1>
+
+
+
+
+<p class="publish-date">Published on 06/18/2020 </p>
+        </header>
+        <article class="article-content">
+
+            
+            <div class="content">
+                <p>Die <a href="https://www.coronawarn.app/de/">Corona Warn App</a> wurde veröffentlicht und erstaunlicherweise ist sie gut! Die App läuft mit minimalen Berechtigungen, verbraucht wenig Strom da sie <a href="https://de.wikipedia.org/wiki/Bluetooth_Low_Energy">Bluetooth Low Energy</a> verwendet, ist komplett dezentralisiert, und zu alledem auch noch Open Source: der Code für die Apps, die Website, und den Backend Server ist <a href="https://github.com/corona-warn-app">auf GitHub verfügbar</a>.</p>
+<p>Auch <a href="https://linus-neumann.de/">Linus Neumann</a> vom <a href="https://ccc.de/">Chaos Computer Club</a> lobt die Umsetzung in <a href="https://www.youtube.com/watch?v=_80-rl9UZJA">diesem Video</a> der Tagesschau, nachdem er und andere zuvor lange Zeit für eine dezentralisierte Lösung plädiert haben. Im Video wird auch weiter auf die Funktion der App eingegenagen und Nutzer-Fragen beantwortet. Meiner Meinung nach ist es auch ein großer Schritt, dass die App und alle dazugehörigen Komponenten Open Source sind (siehe oben).</p>
+<p>Einige Android User waren zunächst besorgt da &ldquo;Location Services&rdquo; angefragt werden, in den FAQ <a href="https://www.coronawarn.app/de/faq/#android_location">wird erklärt</a>, warum dies nötig ist:</p>
+<blockquote>
+<p>[&hellip;] Die Meldung geht auf eine Besonderheit von Android zurück: Bluetooth-Geräte in Deiner Nähe können grundsätzlich nur gefunden werden, wenn die Standortverwendung allgemein auf Deinem Gerät aktiviert ist [&hellip;]</p>
+</blockquote>
+<p>Die Corona Warn App ist für <a href="https://apps.apple.com/de/app/corona-warn-app/id1512595757">iOS</a> und <a href="https://play.google.com/store/apps/details?id=de.rki.coronawarnapp">Android</a> verfügbar und es gibt wirklich <em>keinen Grund sie nicht zu installieren</em>.</p>
+
+            </div>
+        </article>
+    </section>
+</main>
+</section>
+
+    <section class="site-support">
+<section class="tags-categories">
+    
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under allgemein"
+                href="https://kevingimbel.de/categories/allgemein/">allgemein</a>
+        </li></ul>
+</section>
+
+    
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with corona"
+                href="https://kevingimbel.de/tags/corona/">corona</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with app"
+                href="https://kevingimbel.de/tags/app/">app</a>
+        </li></ul>
+</section>
+
+</section>
+    <section class="article-nextprev">
+  <article class="article__next">
+      <span class="txt--bold">Next article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/" title="Shipping Rust CLIs with Docker">Shipping Rust CLIs with Docker</a>
+  
+  </article>
+
+  <article class="article__prev">
+      <span class="txt--bold">Previous article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2020/05/berlin-berlin/" title="Berlin Berlin">Berlin Berlin</a>
+      
+  </article>
+</section>
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>If this content has helped you or your company, consider making a donation to a good cause.</p>
+    <p>For example, consider donating to the following causes:</p>
+    <div class="support-cause-list__wrapper">
+        <ul class="support-cause-list">
+            <li class="head"><b>International</b></li>
+            <li><a rel="nofollow" href="https://donate.doctorswithoutborders.org/onetime.cfm">Doctors without borders</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.org/en/donate/">Amnesty International</a></li>
+        </ul>
+        <ul class="support-cause-list">
+            <li class="head"><b>Germany</b></li>
+            <li><a rel="nofollow" href="https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/">UNO Flüchtlingshilfe</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.de/spenden">Amnesty</a></li>
+            <li><a rel="nofollow" href="https://www.greenpeace.de/spenden">Greenpeace</a></li>
+        </ul>
+    </div>
+</section>
+
+    <section class="author">
+    <div class="left">
+        <img src="/images/general/kevin-gimbel-2020_hu6d6852ea5f23d3570eb4d6a09e2c1824_341389_200x200_resize_q75_box.jpg" alt="A Selfie of me" class="avatar">
+    </div>
+    <div class="right">
+        <p>Kevin Gimbel</p>
+<p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He&rsquo;s also interested in Sci-Fi, Cyberpunk, and dystopian books.</p>
+<p><em>Wearing a mask is a good idea!</em></p>
+<p>You can find out more <a href="/about/">about me</a> if you wish.</p>
+
+    </div>
+</section>
+</section>
+
+    <footer class="site-footer footer">
+        
+        
+        
+        <nav role="navigation" id="footer-navigation" aria-label="Secondary Navigation">
+        <p>More sections on this site </p>
+        <ul class="nav-footer">
+            <li class="nav-item">
+                <a href="/reading/">Books</a>
+            </li>
+            <li class="nav-item">
+                <a href="/link-list/">Links</a>
+            </li>
+            <li class="nav-item">
+                <a href="/art/">Art</a>
+            </li>
+            <li class="nav-item">
+                <a href="/now/">Now</a>
+            </li>
+            <li class="nav-item">
+                <a href="/rss/">RSS</a>
+            </li></ul>
+        </nav>
+        
+
+
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View License on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on <a href="https://twitter.com/kevingimbel" title="Follow me on Twitter">Twitter @kevingimbel</a></small></p>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? Edit this <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/en/blog/2020-06-18-corona-warn-app.md">page on GitHub.com</a></a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>  
+    </footer>
+    </section>
+    
+
+
+</body>
+
+</html>

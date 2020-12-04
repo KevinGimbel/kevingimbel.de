@@ -1,0 +1,113 @@
+figure img,
+figure picture {
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.art figure img,
+.art figure picture,
+.photography figure img,
+.photography figure picture {
+  width: auto;
+}
+
+figcaption p {
+  display: block;
+  line-height: 1.65;
+  background: var(--color-secondary);
+  color: var(--color-font-fg);
+  margin-top: 0;
+  padding: .5rem;
+  text-align: right;
+  font-size: var(--font-small, .85rem);
+}
+
+
+figure {
+  position: relative;
+  z-index: 1;
+}
+
+figure+figure {
+  margin-top: 2rem;
+}
+
+figcaption {
+  display: flex;
+  justify-content: flex-end;
+}
+
+figcaption p {
+  background: var(--color-secondary);
+  color: var(--color-main);
+  font-size: .85em;
+  margin-top: 1.5rem;
+  position: relative;
+  border-radius: var(--border-radius-fancy-1);
+}
+
+figcaption p::before {
+  content: "";
+  width: .15em;
+  height: 5rem;
+  background: var(--color-secondary);
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 1;
+}
+
+figure img,
+figure picture {
+  position: relative;
+  z-index: 2;
+}
+
+@media all and (min-width: 800px) {
+
+  figure {
+      width: 100%;
+      /* max-width: calc(100% + 4rem + 2px); */
+      /* margin-left: calc(0rem - 2rem - 1px); */
+  }
+
+  figcaption p {
+      width: 50%;
+  }
+
+  .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+  }
+
+  figure.gallery__figure {
+      margin: 0;
+      padding: .25rem;
+  }
+
+  .gallery__figure img, .gallery__figure picture {
+      display: block;
+      height: auto;
+      width: 100%;
+      margin: 2rem auto;
+  }
+
+  figure.gallery__figure--w-100 {
+      width: 100%;
+  }
+
+  figure.gallery__figure--w-50 {
+      width: 50%;
+  }
+
+  figure.gallery__figure--w-33 {
+      width: 33%;
+  }
+
+  figure.gallery__figure--w-25 {
+      width: 25%;
+  }
+}

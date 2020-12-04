@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-main: #403D58;
+  --color-secondary: #dea584;
+  --color-bg-box: #fefefe;
+  --color-bg-page: #f1f1f1;
+  --color-font-fg: #222;
+  --color-font-fg-light: #f1f1f1;
+
+  --border-radius-fancy-1: 12px 24px 6px 48px;
+  --border-radius-fancy-2: 48px 12px 24px 6px;
+  --border-radius-fancy-3: 6px 48px 12px 24px;
+  --border-radius-fancy-4: 24px 6px 48px 12px;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font: 20px/1.65 sans-serif;
+  font-size: var(--root-font-size, 20px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: var(--color-bg-page);
+  color: var(--color-font-fg);
+}
+
+body {
+  border: .5rem solid var(--color-main);
+}
+
+body.dark-theme {
+    --color-bg-box: rgb(46, 43, 51);
+    --color-bg-page: rgb(11, 10, 19);
+    --color-font-fg: #ccc;
+}
+
+::selection {
+  background-color: var(--color-main);
+  color: var(--color-secondary);
+}
+
+abbr {
+  cursor: help;
+  text-decoration: none;
+  border-bottom: 2px dotted var(--color-main);
+}
+
+hr {
+  border: none;
+  background: var(--color-main);
+  height: 2px;
+}
+
+.pre-header {
+  grid-row-end: pre-header;
+  grid-column-end: pre-header;
+  grid-column-start: pre-header;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: .85rem;
+  position: relative;
+  transition: margin-top linear .2s;
+}
+
+@media all and (max-width: 1200px) {
+  .pre-header {
+    padding: 1rem .5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // These two are totally magic numbers!
+    margin-top: -130px;
+    height: 130px;
+  }
+}
+
+.divider {
+  margin: var(--this-margin, 2rem) 0;
+  background: var(--this-color, var(--color-secondary));
+}
+
+body.dark-theme {
+  a {
+    color: var(--color-secondary);
+  }
+  .nav-main li a {
+    color: var(--color-secondary);
+  }
+
+  .pre-header a {
+    color: var(--color-secondary);
+  }
+
+  .page-nav, .page-nav a {
+    color: var(--color-bg-page);
+  }
+
+  .support a {
+    color: var(--color-main);
+  }
+
+  .settings-inner {
+    color: var(--color-main);
+  }
+
+
+  .article__next {
+    background: var(--color-secondary);
+  
+    a, span { color: var(--color-main); }
+  }
+  .article__prev {
+    background:  var(--color-main);
+  
+    a, span { color: var(--color-secondary); }
+  }
+
+
+  abbr {
+    border-bottom: 2px dotted var(--color-secondary);
+  }
+} // dark-theme

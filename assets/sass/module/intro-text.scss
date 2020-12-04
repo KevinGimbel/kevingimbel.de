@@ -1,0 +1,7 @@
+.intro-text {
+  display: none;;
+}
+body.section-tags .intro-text,
+body.section-categories .intro-text{
+  display: block;
+}

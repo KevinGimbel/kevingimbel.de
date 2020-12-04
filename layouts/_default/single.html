@@ -3,7 +3,8 @@
 {{ partial "debug.html" "_default/single.html" }}
 {{ end }}
 <main id="main" class="main">
-    <article class="page-content">
+    {{- $borderStyle := partial "helper-border-radius.html" . -}}
+    <article  {{ printf "style=%q" $borderStyle | safeHTMLAttr }} class="page-content">
         {{ if .IsTranslated }}
         <header class="language-menu">
             <nav class="language-nav"><span>{{ i18n "ui_lang_available_in" }}</span>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unix on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/unix/</link>
+    <description>Recent content in unix on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grep in Action</title>
+      <link>https://kevingimbel.de/blog/2020/11/grep-in-action/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/11/grep-in-action/</guid>
+      <description>grep is a CLI tool created in 1974 that is pre-installed on any Linux/Unix-like/BSD* system. grep is an acronym and stands for _&amp;ldquo;globally search for a regular expression and print matching lines&amp;rdquo;_ - quite a mouth full but a good description of what grep does. The more I worked in the Sys-/DevOps domain, the more I found myself using grep and awk to select parts of files for further processing. In this article I want to highlight some things grep can do that _I didn&amp;rsquo;t know about but wish I did_ when I started using it.</description>
+    </item>
+    
+  </channel>
+</rss>

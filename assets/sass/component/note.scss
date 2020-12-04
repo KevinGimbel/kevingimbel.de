@@ -1,0 +1,33 @@
+.age-note {
+  background: var(--color-secondary);
+  color: var(--color-font-fg);
+  font-weight: bold;
+  border-radius: var(--border-radius-fancy-3);
+}
+
+.age-note p {
+  padding: 0 1em 1em;
+}
+
+.age-note h2 {
+  background: var(--color-main);
+  color: var(--color-secondary);
+  padding: .25em .5em;
+}
+
+.note {
+  background: var(--color-main);
+  color: var(--color-font-fg);
+  padding: 1rem 1rem 1rem 2rem;
+  border-left: .5rem solid var(--color-secondary);
+  margin: 2rem 1rem;
+}
+
+.note__heading {
+  font-weight: bold;
+  display: block;
+}
+
+.article-note__content {
+  font-size: 1.3rem;
+}
