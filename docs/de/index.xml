@@ -1,95 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>&#34;Zuhause ist, wo 127.0.0.1 ist&#34;, sagt man. on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <title>hugo-kg-shortcodes Dokumentation on KevOps — DevOps, Cooking, and everything else I want to write about</title>
     <link>https://kevingimbel.de/de/</link>
-    <description>Recent content in &#34;Zuhause ist, wo 127.0.0.1 ist&#34;, sagt man. on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <description>Recent content in hugo-kg-shortcodes Dokumentation on KevOps — DevOps, Cooking, and everything else I want to write about</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>de_DE</language>
-    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/de/index.xml" rel="self" type="application/rss+xml" />
+    <language>en_US</language>
+    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/de/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Saatenbrot</title>
-      <link>https://kevingimbel.de/de/blog/2020/10/saatenbrot/</link>
-      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
+      <title>Can I Use</title>
+      <link>https://kevingimbel.de/de/documentation/caniuse/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/de/blog/2020/10/saatenbrot/</guid>
-      <description>Ich habe mal wieder gebacken! Diesmal gab es ein Saatenbrot, bestehend aus Weizenmehl, Weizen-Vollkornmehl, etwas Hefe, und Kürbiskernen, Leinsamen, und Sesam.
-  Der Teigling in seinem Gärkörbchen   Ich mag Hefeteig nicht, aber dieses Brot schmeckte mir sehr gut! Die Hefe war sehr dezent und wurde vom Saaten-Mix übertönt.
-Dank der Backtechnik im Gusseisen-Topf war das Brot auch optisch ein Hingucker und sah viel besser aus, als mein Sauerteig Monster.</description>
+      <guid>https://kevingimbel.de/de/documentation/caniuse/</guid>
+      <description>Dieser Shortcode ermöglicht die einfache Einbindung eines &amp;ldquo;CanIUse.com&amp;rdquo; widgets auf der eigenen Website. Hierfür wird der Open Source Service caniuse embed script von Ire Aderinokun verwendet.
+Anleitung Globale Konfiguration In der config.toml oder config.yaml können Globale Werte für diesen Shortcode hinterlegt werden:
+ accessible_colors: Aktiviert Barrierefreie Farben für alle Einbettungen (außer wenn explizit deaktiviert) script_src: Lädt Script aus eigener Quelle statt von https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js  YAML config
+params: kg_shortcodes: caniuse: accessible_colors: true script_src: &amp;#34;/caniuse-emebd.</description>
     </item>
     
     <item>
-      <title>Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping</title>
-      <link>https://kevingimbel.de/de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      <title>CodePen</title>
+      <link>https://kevingimbel.de/de/documentation/codepen/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</guid>
-      <description>Heute Mittag kochte ich diese Pasta aus quasi nichts. Das Rezept ist super einfach und schnell und ich bin vom Geschmack sehr begeistert!
-Ohne viel auszuholen folgt hier das Rezept.
-Küchengeräte  1 Topf 1 Standmixer  Zutaten Für ca. 2-3 Personen
- 1 Packung Tagliatelle 2 Packungen Rote-Beete (in Vakuum verpackt), ca. 1kg 2 Knoblauchzehen 1 Chili etwas Salz  Für das Topping
- Frischer Dill 1 Päckchen Feta Käse  Zubereitung  Tagliatelle nach Packungsanleitung kochen Rote-Beete grob in Würfel schneiden Chili waschen, Kerne entfernen wenn weniger schärfe gewünscht Knoblauch schälen Rote-Beete, Chili, und Knoblauch in den Standmixer geben Solange mixen bis eine Sauce entsteht (je nach Gerät ca.</description>
+      <guid>https://kevingimbel.de/de/documentation/codepen/</guid>
+      <description>Dieser Shortcode lädt das CodePen Embed JavaScript und erzeugt den HTML Code für das Einbetten von CodePen &amp;ldquo;Pens&amp;rdquo;.
+Anleitung Globale Konfiguration In der config.toml oder config.yaml können Globale Werte für diesen Shortcode hinterlegt werden:
+ user: Standard User für den CodePens eingebettet werden sollen editable: Gibt an ob eingebettete Pens editierbar sind preview: Gibt an ob Pens automatisch ausgeführt werden oder der Nutzer auf &amp;ldquo;Run Pen&amp;rdquo; klicken muss (true: Nutzer muss auf &amp;ldquo;Run Pen&amp;rdquo; klicken, false: Pen wird automatisch ausgeführt) script_src: Kann benutzt werden um Embed Script aus einer anderen Quelle zu laden.</description>
     </item>
     
     <item>
-      <title>Rust Compiler Umgebungsvariablen</title>
-      <link>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</link>
-      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      <title>Mastodon</title>
+      <link>https://kevingimbel.de/de/documentation/mastodon/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kevingimbel.de/de/blog/2020/09/rust-compiler-umgebungsvariablen/</guid>
-      <description>Rust ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &amp;ldquo;schlau&amp;rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens cargo ausgeliefert. Cargo ist ähnlich wie npm oder maven und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</description>
-    </item>
-    
-    <item>
-      <title>Ich buk Sauerteig Brot</title>
-      <link>https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/</link>
-      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/de/blog/2020/09/ich-buk-sauerteig-brot/</guid>
-      <description>Inspiriert von Nina und ihrem Sauerteig Brot dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &amp;ldquo;pflegen&amp;rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️
-  Mein Brot, wenn man es denn so nennen möchte.</description>
-    </item>
-    
-    <item>
-      <title>Rust CLI mit Docker ausliefern</title>
-      <link>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/de/blog/2020/08/rust-cli-mit-docker-ausliefern/</guid>
-      <description>Vor kurzem habe ich einen Weg gefunden Rust CLI Programme über Docker auszuliefern. Für meinen Arbeitgeber Synoa habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit Homebrew möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen.</description>
-    </item>
-    
-    <item>
-      <title>Corona Warn App</title>
-      <link>https://kevingimbel.de/de/blog/2020/06/corona-warn-app/</link>
-      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/de/blog/2020/06/corona-warn-app/</guid>
-      <description>Die Corona Warn App wurde veröffentlicht und erstaunlicherweise ist sie gut! Die App läuft mit minimalen Berechtigungen, verbraucht wenig Strom da sie Bluetooth Low Energy verwendet, ist komplett dezentralisiert, und zu alledem auch noch Open Source: der Code für die Apps, die Website, und den Backend Server ist auf GitHub verfügbar.
-Auch Linus Neumann vom Chaos Computer Club lobt die Umsetzung in diesem Video der Tagesschau, nachdem er und andere zuvor lange Zeit für eine dezentralisierte Lösung plädiert haben.</description>
-    </item>
-    
-    <item>
-      <title>Hallo, Welt!</title>
-      <link>https://kevingimbel.de/de/blog/2020/05/hallo-welt/</link>
-      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/de/blog/2020/05/hallo-welt/</guid>
-      <description>Hallo!
-Dieser Blog hat ab jetzt auch eine Deutsche &amp;hellip; Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter /de/ allen Deutschen Content Inhalt.
-Schauen wir mal wie&amp;rsquo;s wird. 🤷‍♀️
-Danke für eure Aufmerksamkeit!</description>
-    </item>
-    
-    <item>
-      <title>Über mich</title>
-      <link>https://kevingimbel.de/de/ueber-mich/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/de/ueber-mich/</guid>
-      <description>Hallo! Mein Name ist Kevin Gimbel und das hier ist meine Ecke des Internets. 👴
-Ich mache schon seit einigen Jahren (~12-13?) Dinge mit dem Internet, vor allem Websites (HTML, CSS, JavaScript, usw.) aber in den letzten 3 Jahren auch mehr Ops, vor allem AWS, Terraform, und Ansible.
-Generell interessiere ich mich für Technik und Sci-Fi, (Video) Spiele, Dystopien und allen möglichen anderen Kram. Ich fange gerne Dinge an und probiere neues aus, seien es Technologien, Apps, Websites, oder aber auch die Herstellung eigener Parfüme.</description>
+      <guid>https://kevingimbel.de/de/documentation/mastodon/</guid>
+      <description>Der Mastodon Shortcode kann verwendet werden um einen Mastodon Status einzubinden. Es ist dabei egal auf welcher Instanz der Beitrag veröffentlich wurde.
+Anleitung Globale Konfiguration In der config.toml oder config.yaml können Globale Werte für diesen Shortcode hinterlegt werden:
+ script_src: Quelle für Embed JavaScript, Standard ist das Script von https://mastodon.social/embed.js - jede Mastodon Instanz stellt das Embed Script unter /embed.js bereit, somit kann einfach das Script einer eigenen Instanz verwendet werden.</description>
     </item>
     
   </channel>

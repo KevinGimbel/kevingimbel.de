@@ -6,13 +6,49 @@
     <description>Recent content in Categories on KevOps — DevOps, Cooking, and everything else I want to write about</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en_US</language>
-    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>coding</title>
       <link>https://kevingimbel.de/categories/coding/</link>
-      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://kevingimbel.de/categories/tutorial/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>link-list</title>
+      <link>https://kevingimbel.de/categories/link-list/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/link-list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://kevingimbel.de/categories/review/</link>
+      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backen</title>
+      <link>https://kevingimbel.de/categories/backen/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/backen/</guid>
       <description></description>
     </item>
     
@@ -35,20 +71,29 @@
     </item>
     
     <item>
+      <title>kochen</title>
+      <link>https://kevingimbel.de/categories/kochen/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/kochen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>https://kevingimbel.de/categories/code/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>art</title>
       <link>https://kevingimbel.de/categories/art/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/art/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>review</title>
-      <link>https://kevingimbel.de/categories/review/</link>
-      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/categories/review/</guid>
       <description></description>
     </item>
     
@@ -67,6 +112,15 @@
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/gaming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>allgemein</title>
+      <link>https://kevingimbel.de/categories/allgemein/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/allgemein/</guid>
       <description></description>
     </item>
     
@@ -112,6 +166,15 @@
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notiz</title>
+      <link>https://kevingimbel.de/categories/notiz/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/categories/notiz/</guid>
       <description></description>
     </item>
     
@@ -166,15 +229,6 @@
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/categories/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://kevingimbel.de/categories/tutorial/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/categories/tutorial/</guid>
       <description></description>
     </item>
     

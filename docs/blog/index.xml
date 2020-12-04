@@ -6,7 +6,44 @@
     <description>Recent content in Blog on KevOps — DevOps, Cooking, and everything else I want to write about</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en_US</language>
-    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apply a patch from a Github PR</title>
+      <link>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</guid>
+      <description>Ever found yourself needing that one fix from a PR on GitHub that hasn&amp;rsquo;t been released yet? How can you get the code, for example a Magento fix, into your code base? Copy-paste it? That might work for small changes, but for large and complex changes copy-pasting is no solution. Luckily, we can use GitHub to generate a patch file, which can then be applied with either the git or patch command.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Snake Clone in Rust</title>
+      <link>https://kevingimbel.de/blog/2020/12/creating-a-snake-clone-in-rust/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/12/creating-a-snake-clone-in-rust/</guid>
+      <description>Amazing step-by-step tutorial on how to create a Snake clone using Rust and the Bevy Game Engine. Definitely an article to bookmark!</description>
+    </item>
+    
+    <item>
+      <title>Make a Language</title>
+      <link>https://kevingimbel.de/blog/2020/12/make-a-language/</link>
+      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/12/make-a-language/</guid>
+      <description>A blog series about making a language using Rust. I really enjoyed this series which is packed with good patterns and ideas on how to parse text into something meaningful.</description>
+    </item>
+    
+    <item>
+      <title>Die linke Hand der Dunkelheit</title>
+      <link>https://kevingimbel.de/blog/2020/11/die-linke-hand-der-dunkelheit/</link>
+      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/11/die-linke-hand-der-dunkelheit/</guid>
+      <description>Die Linke Hand der Dunkelheit   &amp;ldquo;Die linke Hand der Dunkelheit&amp;rdquo; von Ursula K. Le Guin war schon eine ganze Weile auf meiner langen Liste der (retro) Sci-Fi Bücher die ich noch lesen möchte. Ich habe es vor einiger Zeit auf Reddit in einer &amp;ldquo;Must-Read&amp;rdquo; Liste gesehen und fand den Klappentext sehr ansprechend, Zitat:
+ Die Bewohner des Planeten Gethen sind uns Menschen verblüffend ähnlich - mit einem Unterschied: Sie kennen keine zwei Geschlechter.</description>
+    </item>
+    
     <item>
       <title>Grep in Action</title>
       <link>https://kevingimbel.de/blog/2020/11/grep-in-action/</link>
@@ -14,6 +51,17 @@
       
       <guid>https://kevingimbel.de/blog/2020/11/grep-in-action/</guid>
       <description>grep is a CLI tool created in 1974 that is pre-installed on any Linux/Unix-like/BSD* system. grep is an acronym and stands for _&amp;ldquo;globally search for a regular expression and print matching lines&amp;rdquo;_ - quite a mouth full but a good description of what grep does. The more I worked in the Sys-/DevOps domain, the more I found myself using grep and awk to select parts of files for further processing. In this article I want to highlight some things grep can do that _I didn&amp;rsquo;t know about but wish I did_ when I started using it.</description>
+    </item>
+    
+    <item>
+      <title>Saatenbrot</title>
+      <link>https://kevingimbel.de/blog/2020/10/saatenbrot/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/10/saatenbrot/</guid>
+      <description>Ich habe mal wieder gebacken! Diesmal gab es ein Saatenbrot, bestehend aus Weizenmehl, Weizen-Vollkornmehl, etwas Hefe, und Kürbiskernen, Leinsamen, und Sesam.
+  Der Teigling in seinem Gärkörbchen   Ich mag Hefeteig nicht, aber dieses Brot schmeckte mir sehr gut! Die Hefe war sehr dezent und wurde vom Saaten-Mix übertönt.
+Dank der Backtechnik im Gusseisen-Topf war das Brot auch optisch ein Hingucker und sah viel besser aus, als mein Sauerteig Monster.</description>
     </item>
     
     <item>
@@ -26,6 +74,28 @@
     </item>
     
     <item>
+      <title>Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping</title>
+      <link>https://kevingimbel.de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</guid>
+      <description>Heute Mittag kochte ich diese Pasta aus quasi nichts. Das Rezept ist super einfach und schnell und ich bin vom Geschmack sehr begeistert!
+Ohne viel auszuholen folgt hier das Rezept.
+Küchengeräte  1 Topf 1 Standmixer  Zutaten Für ca. 2-3 Personen
+ 1 Packung Tagliatelle 2 Packungen Rote-Beete (in Vakuum verpackt), ca. 1kg 2 Knoblauchzehen 1 Chili etwas Salz  Für das Topping
+ Frischer Dill 1 Päckchen Feta Käse  Zubereitung  Tagliatelle nach Packungsanleitung kochen Rote-Beete grob in Würfel schneiden Chili waschen, Kerne entfernen wenn weniger schärfe gewünscht Knoblauch schälen Rote-Beete, Chili, und Knoblauch in den Standmixer geben Solange mixen bis eine Sauce entsteht (je nach Gerät ca.</description>
+    </item>
+    
+    <item>
+      <title>Rust Compiler Umgebungsvariablen</title>
+      <link>https://kevingimbel.de/blog/2020/09/rust-compiler-umgebungsvariablen/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/09/rust-compiler-umgebungsvariablen/</guid>
+      <description>Rust ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &amp;ldquo;schlau&amp;rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens cargo ausgeliefert. Cargo ist ähnlich wie npm oder maven und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</description>
+    </item>
+    
+    <item>
       <title>Keychron K2</title>
       <link>https://kevingimbel.de/blog/2020/09/keychron-k2/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
@@ -33,6 +103,16 @@
       <guid>https://kevingimbel.de/blog/2020/09/keychron-k2/</guid>
       <description>Yesterday I got my Keychron K2 keyboard! It&amp;rsquo;s my first time getting a mechanical keyboard and also the first time using an ANSI layout instead of the german ISO layout. It&amp;rsquo;s also the first time using such a small keyboard so I&amp;rsquo;ll need to get used to the position of keys again, especially since I am not typing with 10 fingers (tho I should really learn to!).
 I&amp;rsquo;ll need a few weeks before I can give a review but so far I am very happy.</description>
+    </item>
+    
+    <item>
+      <title>Ich buk Sauerteig Brot</title>
+      <link>https://kevingimbel.de/blog/2020/09/ich-buk-sauerteig-brot/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/09/ich-buk-sauerteig-brot/</guid>
+      <description>Inspiriert von Nina und ihrem Sauerteig Brot dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &amp;ldquo;pflegen&amp;rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️
+  Mein Brot, wenn man es denn so nennen möchte.</description>
     </item>
     
     <item>
@@ -87,12 +167,31 @@ In general, I enjoyed playing. I played for about an hour last night, and while 
     </item>
     
     <item>
+      <title>Rust CLI mit Docker ausliefern</title>
+      <link>https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/</guid>
+      <description>Vor kurzem habe ich einen Weg gefunden Rust CLI Programme über Docker auszuliefern. Für meinen Arbeitgeber Synoa habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit Homebrew möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen.</description>
+    </item>
+    
+    <item>
       <title>Shipping Rust CLIs with Docker</title>
       <link>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</link>
       <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</guid>
       <description>I recently found a nice and clean way of building and distributing Rust CLI apps using docker. For my work I created a Rust app that wraps some AWS SDK functions to make my day-to-day work with AWS easier. This CLI is very focused on the way we work at Synoa and therefore unfortunately not open source. The tech does not matter much, as we can just create a tiny example &amp;ldquo;app&amp;rdquo; for this blog post.</description>
+    </item>
+    
+    <item>
+      <title>Corona Warn App</title>
+      <link>https://kevingimbel.de/blog/2020/06/corona-warn-app/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/06/corona-warn-app/</guid>
+      <description>Die Corona Warn App wurde veröffentlicht und erstaunlicherweise ist sie gut! Die App läuft mit minimalen Berechtigungen, verbraucht wenig Strom da sie Bluetooth Low Energy verwendet, ist komplett dezentralisiert, und zu alledem auch noch Open Source: der Code für die Apps, die Website, und den Backend Server ist auf GitHub verfügbar.
+Auch Linus Neumann vom Chaos Computer Club lobt die Umsetzung in diesem Video der Tagesschau, nachdem er und andere zuvor lange Zeit für eine dezentralisierte Lösung plädiert haben.</description>
     </item>
     
     <item>
@@ -121,6 +220,18 @@ In general, I enjoyed playing. I played for about an hour last night, and while 
       
       <guid>https://kevingimbel.de/blog/2020/05/dan-dubuque-slide-guitarist/</guid>
       <description>I just discovered Dan Dubuque&amp;rsquo;s YouTube channel because the video &amp;ldquo;Dan Dubuque covering RAGE AGAINST THE MACHINE&amp;rsquo;s &amp;ldquo;Killing In The Name Of&amp;rdquo; on Weissenborn Slide Guitar&amp;rdquo; caught my attention. First off, I love Rage Against The Machine, and second what the fuck is a Slide Guitar? While I know the sound of it, I&amp;rsquo;ve never heard the name before. The cover is really good and the channel seems to be new (only one month old).</description>
+    </item>
+    
+    <item>
+      <title>Hallo, Welt!</title>
+      <link>https://kevingimbel.de/blog/2020/05/hallo-welt/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/05/hallo-welt/</guid>
+      <description>Hallo!
+Dieser Blog hat ab jetzt auch eine Deutsche &amp;hellip; Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter /de/ allen Deutschen Content Inhalt.
+Schauen wir mal wie&amp;rsquo;s wird. 🤷‍♀️
+Danke für eure Aufmerksamkeit!</description>
     </item>
     
     <item>

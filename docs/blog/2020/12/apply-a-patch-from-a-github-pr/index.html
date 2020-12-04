@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apply a patch from a Github PR &mdash; KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="github patch git release  blog coding tutorial  ">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧙‍♂️</text></svg>">
+    
+    
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/main.min.css">
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/page.min.css">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kevingimbel">
+    <meta name="twitter:creator" content="@_kevinatari">
+    <meta name="twitter:title" content="Apply a patch from a Github PR">
+    <meta name="twitter:description" content="Ever found yourself needing that one fix from a PR on GitHub that hasn&rsquo;t been released yet? How can you get the code, for example a Magento fix, into your code base? Copy-paste it? That might work for small changes, but for large and complex changes copy-pasting is no solution. Luckily, we can use GitHub to generate a patch file, which can then be applied with either the git or patch command.">
+    
+
+</head>
+<body class="type-page section-blog">
+    <script type="text/javascript">(function(document,window,undefined){function css_to_int(cssStyleDeclaration,unitStr){return parseInt(cssStyleDeclaration.replace(unitStr,''));}
+function pre_header_show(element){element.style.setProperty('margin-top',0);element.dataset.shown=true;}
+function pre_header_hide(element){let this_height=window.getComputedStyle(element).height;element.style.setProperty('margin-top',`-${this_height}`);element.dataset.shown=false;}
+function is_element_hidden(element){return['none'].indexOf(window.getComputedStyle(element).display)>-1;}
+document.addEventListener('DOMContentLoaded',()=>{const pre_header_element=document.querySelector('#pre-header');const pre_header_toggle=document.querySelector('#pre-header-toggle');if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}
+pre_header_toggle.addEventListener('click',(event)=>{if(pre_header_element.dataset.shown=="true"){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});window.addEventListener('resize',()=>{if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});});}(document,window));</script>
+    
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.colorswitch.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.darkmode.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.fontsize.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.contentwidth.min.js"></script>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">Keep current color theme</span>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">Use random color theme</span>
+    
+    <section class="main-grid">
+    
+        <header class="pre-header" id="pre-header">
+            <kg-colorswitcher>Color theme</kg-colorswitcher>
+            <kg-darkmode>Dark mode</kg-darkmode>
+            
+            <kg-fontsize>Font size</kg-fontsize>
+            <kg-contentwidth>Content width</kg-contentwidth>
+            
+        </header>
+    
+        <header class="site-header">
+            <nav role="navigation" id="navigation" aria-label="Main Navigation">
+                <ul class="nav-main">
+                    
+                    <li class="nav-item">
+                        <a href="/" data-perm="/blog/2020/12/apply-a-patch-from-a-github-pr/" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" data-perm="/blog/2020/12/apply-a-patch-from-a-github-pr/" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about/" data-perm="/blog/2020/12/apply-a-patch-from-a-github-pr/" >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/photography/" data-perm="/blog/2020/12/apply-a-patch-from-a-github-pr/" >Photography</a>
+                    </li><button id="pre-header-toggle" class="btn-preheader-toggle">Settings</button>
+                    </ul>
+                    </nav>
+        </header>
+
+    <section class="site-main-content">
+<main id="main" class="main">
+<section class="article-single" style="--this-border-radius: 30px 33px 60px 66px;"> 
+        <header class="article-header">
+            
+
+
+
+
+
+
+<h1>Apply a patch from a Github PR</h1>
+
+
+
+
+<p class="publish-date">Published on 12/4/2020 </p>
+        </header>
+        <article class="article-content">
+
+            
+            <div class="content">
+                <p>Ever found yourself needing that one fix from a PR on GitHub that hasn&rsquo;t been released yet? How can you get the code, for example a Magento fix, into your code base? Copy-paste it? That might work for small changes, but for large and complex changes copy-pasting is no solution. Luckily, we can use GitHub to generate a patch file, which can then be applied with either the <code>git</code> or <code>patch</code> command.</p>
+<h2 id="patch-file-what">patch-file what?</h2>
+<p>A patch file is a text file containing instructions on how to apply a change to files. If you run <code>git diff</code> and see the changed files with <code>+/-</code> in front of lines that were added (<code>+</code>) or removed (<code>-</code>) you are looking at a patch file.</p>
+<h2 id="example-code">Example code</h2>
+<p>For illustration purpose I created a example repo: <a href="https://github.com/KevinGimbel/blog-patch-example">https://github.com/KevinGimbel/blog-patch-example</a>.</p>
+<p>You can clone the main branch and then apply the patch from the <a href="https://github.com/KevinGimbel/blog-patch-example/pull/1">Pull Request</a> to it, if you want to follow along.</p>
+<h2 id="getting-the-patch-file">Getting the patch file</h2>
+<p>First we will need to get the patch file. GitHub makes this easy, but for some reason hides it from us. You can <strong>append .patch to the URL of any pull request to get the patch file</strong>. So for the example above, open the URL <a href="https://github.com/KevinGimbel/blog-patch-example/pull/1.patch">https://github.com/KevinGimbel/blog-patch-example/pull/1.patch</a> to see the plain text patch file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">From 6da12536ff4da0efdabdf1a4dd55ded127fa247c Mon Sep 17 00:00:00 2001
+From: Kevin Gimbel &lt;hallo@kevingimbel.com&gt;
+Date: Fri, 4 Dec 2020 16:31:30 +0100
+Subject: [PATCH] docs: add actual URL
+
+<span style="color:#f92672">---
+</span><span style="color:#f92672"></span> README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index 0fe5e72..7f6398a 100644
+<span style="color:#f92672">--- a/README.md
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/README.md
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -2,4 +2,4 @@
+</span><span style="color:#75715e"></span> 
+ This repo is part of a Blog Post on how to get and apply patch files from GitHub.com
+ 
+<span style="color:#f92672">-You can read the full post here: ENTER_URL_HERE
+</span><span style="color:#f92672"></span>\ No newline at end of file
+<span style="color:#a6e22e">+You can read the full post here: [https://kevingimbel.de/blog/2020/12/apply-patch-from-github-pr/](https://kevingimbel.de/blog/2020/12/apply-patch-from-github-pr/)
+</span><span style="color:#a6e22e"></span>\ No newline at end of file
+</code></pre></div><p>The patch file is both human and machine readable. Now to continue, get the patchfile!</p>
+<ol>
+<li>Open a terminal and navigate to the repo you cloned earlier (<code>github.com/KevinGimbel/blog-patch-example</code>)</li>
+<li>Download the patch file with <code>wget</code>:</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget <span style="color:#e6db74">&#34;https://github.com/KevinGimbel/blog-patch-example/pull/1.patch&#34;</span>
+</code></pre></div><p>This downloads a file named <code>1.patch</code> into the current directory, which we can verify by running <code>ls -l</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -l
+total <span style="color:#ae81ff">16</span>
+-rw-r--r--@ <span style="color:#ae81ff">1</span> kevingimbel  staff  <span style="color:#ae81ff">733</span> Dec  <span style="color:#ae81ff">4</span> 16:33 1.patch  <span style="color:#75715e"># 👈 there it is</span>
+-rw-r--r--  <span style="color:#ae81ff">1</span> kevingimbel  staff  <span style="color:#ae81ff">155</span> Dec  <span style="color:#ae81ff">4</span> 16:33 README.md
+</code></pre></div><p>You can look at the file if you want to, it contains the same text as the example in this article.</p>
+<h2 id="applying-a-patch-with-git">Applying a patch with <code>git</code></h2>
+<p>We can use <code>git</code> to apply the patch. For manual patching git has the <code>apply</code> command:
+If we want to test the changes to see if they can be applied but don&rsquo;t want to change any files yet, we can use the <code>--check</code> and <code>-v</code> (verbose) flag:</p>
+<pre><code>$ git apply -v --check 1.patch
+Checking patch README.md...
+</code></pre><p>To really apply the patch, we remove the <code>--check</code> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git apply -v 1.patch
+Checking patch README.md...
+Applied patch README.md cleanly.
+</code></pre></div><p>Now check the <code>README.md</code> file and you&rsquo;ll see the new content!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat README.md 
+<span style="color:#75715e"># blog-patch-example</span>
+
+This repo is part of a Blog Post on how to get and apply patch files from GitHub.com
+
+You can read the full post here: <span style="color:#f92672">[</span>https://kevingimbel.de/blog/2020/12/apply-patch-from-github-pr/<span style="color:#f92672">](</span>https://kevingimbel.de/blog/2020/12/apply-patch-from-github-pr/<span style="color:#f92672">)</span>
+</code></pre></div><h2 id="patching-without-git">Patching without git</h2>
+<p>Sometimes you may not have git available, especially when patching software running on some server that - for whatever reasons - has no deployment process (no judging here!) or version control.</p>
+<p>Even without the <code>git</code> command the patch can still be applied by using the <code>patch</code> tool installed on most (all?) Linux systems.
+To do this, follow these steps:</p>
+<ol>
+<li>Get the patch from the <abbr title="Pull Request">PR</abbr>
+ by appending <code>.patch</code> to the URL</li>
+<li>Apply the patch with the <code>patch</code> command</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ patch -p <span style="color:#ae81ff">1</span> &lt; filename.patch
+<span style="color:#75715e"># To try out changes first, use `--dry-run`</span>
+$ patch -p <span style="color:#ae81ff">1</span> --dry-run &lt; filename.patch
+</code></pre></div><p>And that&rsquo;s it for today! Feel free to create PRs in the repo <a href="https://github.com/KevinGimbel/blog-patch-example/">https://github.com/KevinGimbel/blog-patch-example/</a> if you want to play around with patching.</p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://linux.die.net/man/1/patch">patch man page</a></li>
+<li><a href="https://git-scm.com/docs/git-apply">git apply documentation</a></li>
+</ul>
+
+            </div>
+        </article>
+    </section>
+</main>
+</section>
+
+    <section class="site-support">
+<section class="tags-categories">
+    
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under tutorial"
+                href="https://kevingimbel.de/categories/tutorial/">tutorial</a>
+        </li></ul>
+</section>
+
+    
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with github"
+                href="https://kevingimbel.de/tags/github/">github</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with patch"
+                href="https://kevingimbel.de/tags/patch/">patch</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with git"
+                href="https://kevingimbel.de/tags/git/">git</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with release"
+                href="https://kevingimbel.de/tags/release/">release</a>
+        </li></ul>
+</section>
+
+</section>
+    <section class="article-nextprev">
+  <article class="article__next">
+      <span class="txt--bold">Next article</span><br>
+  
+      <span class="txt--bold txt--medium">No newer article</span>
+  
+  </article>
+
+  <article class="article__prev">
+      <span class="txt--bold">Previous article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2020/12/creating-a-snake-clone-in-rust/" title="Creating a Snake Clone in Rust">Creating a Snake Clone in Rust</a>
+      
+  </article>
+</section>
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>If this content has helped you or your company, consider making a donation to a good cause.</p>
+    <p>For example, consider donating to the following causes:</p>
+    <div class="support-cause-list__wrapper">
+        <ul class="support-cause-list">
+            <li class="head"><b>International</b></li>
+            <li><a rel="nofollow" href="https://donate.doctorswithoutborders.org/onetime.cfm">Doctors without borders</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.org/en/donate/">Amnesty International</a></li>
+        </ul>
+        <ul class="support-cause-list">
+            <li class="head"><b>Germany</b></li>
+            <li><a rel="nofollow" href="https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/">UNO Flüchtlingshilfe</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.de/spenden">Amnesty</a></li>
+            <li><a rel="nofollow" href="https://www.greenpeace.de/spenden">Greenpeace</a></li>
+        </ul>
+    </div>
+</section>
+
+    <section class="author">
+    <div class="left">
+        <img src="/images/general/kevin-gimbel-2020_hu6d6852ea5f23d3570eb4d6a09e2c1824_341389_200x200_resize_q75_box.jpg" alt="A Selfie of me" class="avatar">
+    </div>
+    <div class="right">
+        <p>Kevin Gimbel</p>
+<p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He&rsquo;s also interested in Sci-Fi, Cyberpunk, and dystopian books.</p>
+<p><em>Wearing a mask is a good idea!</em></p>
+<p>You can find out more <a href="/about/">about me</a> if you wish.</p>
+
+    </div>
+</section>
+</section>
+
+    <footer class="site-footer footer">
+        
+        
+        
+        <nav role="navigation" id="footer-navigation" aria-label="Secondary Navigation">
+        <p>More sections on this site </p>
+        <ul class="nav-footer">
+            <li class="nav-item">
+                <a href="/reading/">Books</a>
+            </li>
+            <li class="nav-item">
+                <a href="/link-list/">Links</a>
+            </li>
+            <li class="nav-item">
+                <a href="/art/">Art</a>
+            </li>
+            <li class="nav-item">
+                <a href="/now/">Now</a>
+            </li>
+            <li class="nav-item">
+                <a href="/rss/">RSS</a>
+            </li></ul>
+        </nav>
+        
+
+
+        <div class="left">
+            <p>&copy; 2009 - 2020 Kevin Gimbel. <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View License on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on <a href="https://twitter.com/kevingimbel" title="Follow me on Twitter">Twitter @kevingimbel</a></small></p>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? Edit this <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/en/blog/2020-12-04-apply-patch-from-github-pr/index.md">page on GitHub.com</a></a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>  
+    </footer>
+    </section>
+    
+
+
+</body>
+
+</html>

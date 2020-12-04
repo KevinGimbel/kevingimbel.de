@@ -1,23 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US">
-    <generator uri="https://gohugo.io/" version="0.78.2">Hugo</generator><title type="html"><![CDATA[Blog on KevOps — DevOps, Cooking, and everything else I want to write about (%!s(<nil>))]]></title>
+    <generator uri="https://gohugo.io/" version="0.78.2">Hugo</generator><title type="html"><![CDATA[Blog on KevOps — DevOps, Cooking, and everything else I want to write about]]></title>
     
     
     
             <link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-        
-        
-                <link href="https://kevingimbel.de/de/blog/" rel="alternate" type="text/html" hreflang="de" title="[%!s(<nil>)] HTML" />
-                <link href="https://kevingimbel.de/de/blog/index.xml" rel="alternate" type="application/rss+xml" hreflang="de" title="[%!s(<nil>)] RSS" />
-                <link href="https://kevingimbel.de/de/blog/atom.xml" rel="alternate" type="application/atom+xml" hreflang="de" title="[%!s(<nil>)] Atom" />
-    <updated>2020-11-24T09:34:33+01:00</updated>
+    <updated>2020-12-04T17:29:47+01:00</updated>
     
     
     
     
         <id>https://kevingimbel.de/blog/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Apply a patch from a Github PR]]></title>
+            <link href="https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2017/01/deploy-a-static-site-with-git/?utm_source=atom_feed" rel="related" type="text/html" title="Deploy a static site with git" />
+            
+                <id>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</id>
+            
+            
+            <published>2020-12-04T00:00:00+00:00</published>
+            <updated>2020-12-04T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Ever found yourself needing that one fix from a PR on GitHub that hasn&rsquo;t been released yet? How can you get the code, for example a Magento fix, into your code base? Copy-paste it? That might work for small changes, but for large and complex changes copy-pasting is no solution. Luckily, we can use GitHub to generate a patch file, which can then be applied with either the <code>git</code> or <code>patch</code> command.</p>
+<h2 id="patch-file-what">patch-file what?</h2>
+<p>A patch file is a text file containing instructions on how to apply a change to files. If you run <code>git diff</code> and see the changed files with <code>+/-</code> in front of lines that were added (<code>+</code>) or removed (<code>-</code>) you are looking at a patch file.</p>
+<h2 id="example-code">Example code</h2>
+<p>For illustration purpose I created a example repo: <a href="https://github.com/KevinGimbel/blog-patch-example">https://github.com/KevinGimbel/blog-patch-example</a>.</p>
+<p>You can clone the main branch and then apply the patch from the <a href="https://github.com/KevinGimbel/blog-patch-example/pull/1">Pull Request</a> to it, if you want to follow along.</p>
+<h2 id="getting-the-patch-file">Getting the patch file</h2>
+<p>First we will need to get the patch file. GitHub makes this easy, but for some reason hides it from us. You can <strong>append .patch to the URL of any pull request to get the patch file</strong>. So for the example above, open the URL <a href="https://github.com/KevinGimbel/blog-patch-example/pull/1.patch">https://github.com/KevinGimbel/blog-patch-example/pull/1.patch</a> to see the plain text patch file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">From 6da12536ff4da0efdabdf1a4dd55ded127fa247c Mon Sep 17 00:00:00 2001
+From: Kevin Gimbel &lt;hallo@kevingimbel.com&gt;
+Date: Fri, 4 Dec 2020 16:31:30 +0100
+Subject: [PATCH] docs: add actual URL
+
+<span style="color:#f92672">---
+</span><span style="color:#f92672"></span> README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index 0fe5e72..7f6398a 100644
+<span style="color:#f92672">--- a/README.md
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/README.md
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -2,4 +2,4 @@
+</span><span style="color:#75715e"></span> 
+ This repo is part of a Blog Post on how to get and apply patch files from GitHub.com
+ 
+<span style="color:#f92672">-You can read the full post here: ENTER_URL_HERE
+</span><span style="color:#f92672"></span>\ No newline at end of file
+<span style="color:#a6e22e">+You can read the full post here: [https://kevingimbel.de/blog/2020/12/apply-patch-from-github-pr/](https://kevingimbel.de/blog/2020/12/apply-patch-from-github-pr/)
+</span><span style="color:#a6e22e"></span>\ No newline at end of file
+</code></pre></div><p>The patch file is both human and machine readable. Now to continue, get the patchfile!</p>
+<ol>
+<li>Open a terminal and navigate to the repo you cloned earlier (<code>github.com/KevinGimbel/blog-patch-example</code>)</li>
+<li>Download the patch file with <code>wget</code>:</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget <span style="color:#e6db74">&#34;https://github.com/KevinGimbel/blog-patch-example/pull/1.patch&#34;</span>
+</code></pre></div><p>This downloads a file named <code>1.patch</code> into the current directory, which we can verify by running <code>ls -l</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -l
+total <span style="color:#ae81ff">16</span>
+-rw-r--r--@ <span style="color:#ae81ff">1</span> kevingimbel  staff  <span style="color:#ae81ff">733</span> Dec  <span style="color:#ae81ff">4</span> 16:33 1.patch  <span style="color:#75715e"># 👈 there it is</span>
+-rw-r--r--  <span style="color:#ae81ff">1</span> kevingimbel  staff  <span style="color:#ae81ff">155</span> Dec  <span style="color:#ae81ff">4</span> 16:33 README.md
+</code></pre></div><p>You can look at the file if you want to, it contains the same text as the example in this article.</p>
+<h2 id="applying-a-patch-with-git">Applying a patch with <code>git</code></h2>
+<p>We can use <code>git</code> to apply the patch. For manual patching git has the <code>apply</code> command:
+If we want to test the changes to see if they can be applied but don&rsquo;t want to change any files yet, we can use the <code>--check</code> and <code>-v</code> (verbose) flag:</p>
+<pre><code>$ git apply -v --check 1.patch
+Checking patch README.md...
+</code></pre><p>To really apply the patch, we remove the <code>--check</code> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git apply -v 1.patch
+Checking patch README.md...
+Applied patch README.md cleanly.
+</code></pre></div><p>Now check the <code>README.md</code> file and you&rsquo;ll see the new content!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat README.md 
+<span style="color:#75715e"># blog-patch-example</span>
+
+This repo is part of a Blog Post on how to get and apply patch files from GitHub.com
+
+You can read the full post here: <span style="color:#f92672">[</span>https://kevingimbel.de/blog/2020/12/apply-patch-from-github-pr/<span style="color:#f92672">](</span>https://kevingimbel.de/blog/2020/12/apply-patch-from-github-pr/<span style="color:#f92672">)</span>
+</code></pre></div><h2 id="patching-without-git">Patching without git</h2>
+<p>Sometimes you may not have git available, especially when patching software running on some server that - for whatever reasons - has no deployment process (no judging here!) or version control.</p>
+<p>Even without the <code>git</code> command the patch can still be applied by using the <code>patch</code> tool installed on most (all?) Linux systems.
+To do this, follow these steps:</p>
+<ol>
+<li>Get the patch from the <abbr title="Pull Request">PR</abbr>
+ by appending <code>.patch</code> to the URL</li>
+<li>Apply the patch with the <code>patch</code> command</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ patch -p <span style="color:#ae81ff">1</span> &lt; filename.patch
+<span style="color:#75715e"># To try out changes first, use `--dry-run`</span>
+$ patch -p <span style="color:#ae81ff">1</span> --dry-run &lt; filename.patch
+</code></pre></div><p>And that&rsquo;s it for today! Feel free to create PRs in the repo <a href="https://github.com/KevinGimbel/blog-patch-example/">https://github.com/KevinGimbel/blog-patch-example/</a> if you want to play around with patching.</p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://linux.die.net/man/1/patch">patch man page</a></li>
+<li><a href="https://git-scm.com/docs/git-apply">git apply documentation</a></li>
+</ul>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                             
+                                <category scheme="https://kevingimbel.de/categories/tutorial" term="tutorial" label="tutorial" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/github" term="github" label="github" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/patch" term="patch" label="patch" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/git" term="git" label="git" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/release" term="release" label="release" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Die linke Hand der Dunkelheit]]></title>
+            <link href="https://kevingimbel.de/blog/2020/11/die-linke-hand-der-dunkelheit/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2020/08/lord-of-souls/?utm_source=atom_feed" rel="related" type="text/html" title="Lord of Souls" />
+                <link href="https://kevingimbel.de/blog/2020/08/the-infernal-city/?utm_source=atom_feed" rel="related" type="text/html" title="The Infernal City" />
+                <link href="https://kevingimbel.de/blog/2020/09/die-tyrannei-des-schmetterlings/?utm_source=atom_feed" rel="related" type="text/html" title="Die Tyrannei des Schmetterlings" />
+                <link href="https://kevingimbel.de/blog/2020/09/hannah-gadsby-douglas/?utm_source=atom_feed" rel="related" type="text/html" title="Hannah Gadsby - Douglas" />
+                <link href="https://kevingimbel.de/blog/2020/08/fall-guys/?utm_source=atom_feed" rel="related" type="text/html" title="Fall Guys" />
+            
+                <id>https://kevingimbel.de/blog/2020/11/die-linke-hand-der-dunkelheit/</id>
+            
+            
+            <published>2020-11-30T00:00:00+00:00</published>
+            <updated>2020-11-30T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[
+<figure >
+  
+
+    <img src="die-linke-hand-der-dunkelheit-cover.jpg"
+      alt="Das Buch Die Linke Hand der Dunkelheit gehalten vor einen blau-grünen Muster Hintergrund."
+       />
+    
+  
+  <figcaption>
+    <p>
+      Die Linke Hand der Dunkelheit
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>&ldquo;Die linke Hand der Dunkelheit&rdquo; von Ursula K. Le Guin war schon eine ganze Weile auf meiner langen Liste der (retro) Sci-Fi Bücher die ich noch lesen möchte. Ich habe es vor einiger Zeit auf Reddit in einer &ldquo;Must-Read&rdquo; Liste gesehen und fand den Klappentext sehr ansprechend, Zitat:</p>
+<blockquote>
+<p>Die Bewohner des Planeten Gethen sind uns Menschen verblüffend ähnlich - mit einem Unterschied: Sie kennen keine zwei Geschlechter. Deshalb sind in ihrer Kultur geschlechtsspezifische Machtkämpfe, wie wir sie kennen, nicht möglich. Doch es gibt andere Formen von Macht.</p>
+</blockquote>
+<p>Die Geschichte wird aus Sicht eines &ldquo;Gesandten&rdquo; der Ökumene, einem Interplanetaren Verbands aus 84 Welten, erzählt dessen Mission es ist Kontakt mit den Bewohnern von Gethen, durch extreme Kälte auch Winter genannt, herzustellen, sodass diese als 85. Planet der Ökumene beitreten können. Erzählt wird die Geschichte in einer Art Bericht, also einer Art Nacherzählung der Ereignisse. Das erinnerte mich sehr an &ldquo;<a href="https://de.wikipedia.org/wiki/Wir_(Roman)">WIR</a>&rdquo; von <a href="https://de.wikipedia.org/wiki/Jewgeni_Iwanowitsch_Samjatin">Jewgeni Samjatin</a>.</p>
+<p>Die große Besonderheit an Winter ist, dass die Menschen dort keine fixen, binären Geschlechter haben. Eine Person ist weder Mann noch Frau, sondern kommt ein Mal im Moment in einen &ldquo;Kemmer&rdquo; genannten Zustand. In diesem Zustand - und nur in diesem Zustand! - ist es Bewohnern von Winter möglich Sex zu haben und sich fortzupflanzen. Einer nimmt dabei die biologische Rolle der Frau ein, der andere die Rolle des Mannes. Die &ldquo;Frau&rdquo; kann anschließend das Kind gebären und geht danach wieder in den &ldquo;neutralen&rdquo; Zustand über. Allein wegen dieses Unterschiedes funktioniert die Gesellschaft auf Winter komplett anders was beim Leser das Denken über Geschlechter und Geschlechterrollen in Gang bring. Das Buch geht an vielen Stellen auf die Unterschiede zwischen Menschen des Planeten Terra (Erde) und des Planeten Winter ein, auch im persönlichen Unbehagen des Gesandten, eines Mannes vom Planeten Erde, der mit seinem Zwei-Geschlechter-Denken immer wieder in Konflikt kommt.</p>
+<p><strong>Ich empfehlen jedem dieses Buch zu lesen</strong> und packe es in meine Top 5 der Sci-Fi Bücher die ich gelesen habe. &ldquo;Die Linke Hand Der Dunkelheit&rdquo; ist das vierte Buch des lose zusammenhängenden <a href="https://de.wikipedia.org/wiki/Hainish-Zyklus">Hainisch-Zyklus</a> und weil es mich so begeistert hat, habe ich mir direkt noch zwei weitere gekauft: <em>Stadt der Illusionen</em> und <em>Das Wort für Welt ist Wald</em>. Da es offenbar nur &ldquo;Die Linke Hand der Dunkelheit&rdquo; in einer neueren Version gibt sind die anderen beiden gebraucht und von eBay. Mal sehen ob ich die fehlenden Bücher <em>Rocannons Welt (1977)</em>, <em>Das zehnte Jahr (1978)</em>, <em>Planet der Habenichtse ()</em>, <em>Four Ways to Forgiveness (1995)</em> (scheinbar nicht auf Deutsch erschienen?), und <em>Die Erzähler (2000)</em> noch irgendwie bekomme. <em>Planet der Habenichtse</em> scheint es in einer neueren Fassung unter dem Titel <em>Freie Denker</em> zu geben - naja, das zusammensuchen ist ja auch Teil des Spaßes, den alte Bücher lesen mit sich bringt. :)</p>
+<p class="rating">
+    <span style="display: none;">5/5</span>
+    <span class="rating-list" aria-hidden="true">★★★★★</span>
+</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/review" term="review" label="review" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/rating-5" term="rating-5" label="rating-5" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/scifi" term="scifi" label="scifi" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/fantasy" term="fantasy" label="fantasy" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/book" term="book" label="book" />
+                            
+                        
+                    
+                
+            
+        </entry>
     
         
         <entry>
@@ -27,8 +230,8 @@
                 <link href="https://kevingimbel.de/project/license/?utm_source=atom_feed" rel="related" type="text/html" title="License" />
                 <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
                 <link href="https://kevingimbel.de/project/passt/?utm_source=atom_feed" rel="related" type="text/html" title="Passt" />
+                <link href="https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="related" type="text/html" title="Rust CLI mit Docker ausliefern" />
                 <link href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/?utm_source=atom_feed" rel="related" type="text/html" title="Shipping Rust CLIs with Docker" />
-                <link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="related" type="text/html" title="Terrasave" />
             
                 <id>https://kevingimbel.de/blog/2020/11/grep-in-action/</id>
             
@@ -77,6 +280,7 @@ some text to be used
 with the grep surrounding
 example so we need to fill
 </code></pre></div><p><code>-B</code> and <code>-A</code> are incredibly useful when we care for the surroundings of a match.</p>
+<p>And that&rsquo;s it for today! I hope any of the tips above have been helpful.</p>
 ]]></content>
             
                  
@@ -106,6 +310,99 @@ example so we need to fill
                                 <category scheme="https://kevingimbel.de/tags/automation" term="automation" label="automation" />
                              
                                 <category scheme="https://kevingimbel.de/tags/scripting" term="scripting" label="scripting" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Saatenbrot]]></title>
+            <link href="https://kevingimbel.de/blog/2020/10/saatenbrot/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/blog/2020/10/saatenbrot/</id>
+            
+            
+            <published>2020-10-26T00:00:00+00:00</published>
+            <updated>2020-10-26T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Ich habe mal wieder gebacken! Diesmal gab es ein Saatenbrot, bestehend aus Weizenmehl, Weizen-Vollkornmehl, etwas Hefe, und Kürbiskernen, Leinsamen, und Sesam.</p>
+<!-- raw HTML omitted -->
+
+<figure >
+  
+
+    <img src="teigling-im-gaerkorb.jpg"
+      alt="Der Teigling in seinem Gärkörbchen"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Der Teigling in seinem Gärkörbchen
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Ich mag Hefeteig nicht, aber dieses Brot schmeckte mir sehr gut! Die Hefe war sehr dezent und wurde vom Saaten-Mix übertönt.</p>
+<p>Dank der Backtechnik im Gusseisen-Topf war das Brot auch optisch ein Hingucker und sah viel besser aus, als mein <a href="/de/blog/2020/09/ich-buk-sauerteig-brot/">Sauerteig Monster</a>.</p>
+
+<figure >
+  
+
+    <img src="fertiges-saatenbrot.jpg"
+      alt="Das fertige Brot kann sich sehen lassen!"
+       />
+    
+  
+  <figcaption>
+    <p>
+      Das fertige Brot kann sich sehen lassen!
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Ich bin mir unsicher in wiefern ich Rezepte teilen kann, wenn diese aus einem kommerziellen Kochbuch kommen - das Rezept stammt aus <a href="https://www.gu.de/produkte/kochen-verwoehnen/backen-und-suessspeisen/brote-ohne-kneten-weber-2017/">&ldquo;BROTE OHNE KNETEN&rdquo;</a> - das Buch kann ich an dieser Stelle wärmstens Empfehlen kann, wenn man mit dem Brotbacken starten will! Allerdings braucht man dazu auf jeden Fall einen Gusseisen-Topf in dem das Brot im Ofen gebacken wird.</p>
+<p>Ich freue mich schon aufs nächste Brot!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/backen" term="backen" label="backen" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/brot" term="brot" label="brot" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/hefe" term="hefe" label="hefe" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/vollkorn" term="vollkorn" label="vollkorn" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/gusseisentopf" term="gusseisentopf" label="Gusseisentopf" />
                             
                         
                     
@@ -172,6 +469,286 @@ example so we need to fill
                                 <category scheme="https://kevingimbel.de/tags/css" term="css" label="css" />
                              
                                 <category scheme="https://kevingimbel.de/tags/custom-properties" term="custom-properties" label="custom-properties" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping]]></title>
+            <link href="https://kevingimbel.de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/blog/2020/10/tagliatelle-mit-rote-beete-sauce-und-feta-dill-topping/</id>
+            
+            
+            <published>2020-10-01T00:00:00+00:00</published>
+            <updated>2020-10-01T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[
+<figure >
+  
+
+    <img src="tagliatelle-mit-rote-beete.jpg"
+      alt="Ein Teller Tagliatelle mit Rote-Beete-Sauce und Feta-Dill Topping. Gehalten in der Hand."
+       />
+    
+  
+</figure>
+
+<p>Heute Mittag kochte ich diese Pasta aus quasi nichts. Das Rezept ist super einfach und schnell und ich bin vom Geschmack sehr begeistert!</p>
+<p>Ohne viel auszuholen folgt hier das Rezept.</p>
+<h2 id="küchengeräte">Küchengeräte</h2>
+<ul>
+<li>1 Topf</li>
+<li>1 Standmixer</li>
+</ul>
+<h2 id="zutaten">Zutaten</h2>
+<p>Für ca. 2-3 Personen</p>
+<ul>
+<li>1 Packung Tagliatelle</li>
+<li>2 Packungen Rote-Beete (in Vakuum verpackt), ca. 1kg</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Chili</li>
+<li>etwas Salz</li>
+</ul>
+<p>Für das Topping</p>
+<ul>
+<li>Frischer Dill</li>
+<li>1 Päckchen Feta Käse</li>
+</ul>
+<h2 id="zubereitung">Zubereitung</h2>
+<ol>
+<li>Tagliatelle nach Packungsanleitung kochen</li>
+<li>Rote-Beete grob in Würfel schneiden</li>
+<li>Chili waschen, Kerne entfernen wenn weniger schärfe gewünscht</li>
+<li>Knoblauch schälen</li>
+<li>Rote-Beete, Chili, und Knoblauch in den Standmixer geben</li>
+<li>Solange mixen bis eine Sauce entsteht (je nach Gerät ca. 5 Minuten)</li>
+<li>Dill hacken und bereitstellen</li>
+</ol>
+<p>Sobald die Tagliatelle fertig sind:</p>
+<ol>
+<li>Tagliatelle und Sauce vermengen</li>
+<li>Auf Teller portionieren</li>
+<li>Feta obendrauf bröseln</li>
+<li>Dill darüber streuen</li>
+</ol>
+<p>Im Bild oben habe ich die Sauce nicht direkt unter die Nudeln gemischt wodurch alles leider etwas kalt wurde bis es auf den Tisch kam. Das Original Rezept ist von <a href="https://de.wikipedia.org/wiki/Nadiya_Hussain">Nadiya Hussain</a> und kommt in ihrer neusten Kochshow auf Netflix vor; Nachgekocht habe ich es nach meinem Gedächtnis-Protokoll und ich glaube, dass ich irgendwas vergessen habe - lecker war es trotzdem!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/kochen" term="kochen" label="kochen" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/veggie" term="veggie" label="veggie" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/pasta" term="pasta" label="pasta" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/tagliatelle" term="tagliatelle" label="tagliatelle" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/feta" term="feta" label="feta" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/dill" term="dill" label="dill" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Rust Compiler Umgebungsvariablen]]></title>
+            <link href="https://kevingimbel.de/blog/2020/09/rust-compiler-umgebungsvariablen/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="related" type="text/html" title="Rust CLI mit Docker ausliefern" />
+                <link href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/?utm_source=atom_feed" rel="related" type="text/html" title="Shipping Rust CLIs with Docker" />
+                <link href="https://kevingimbel.de/blog/2020/05/deno-1.0-released/?utm_source=atom_feed" rel="related" type="text/html" title="Deno 1.0 released" />
+            
+                <id>https://kevingimbel.de/blog/2020/09/rust-compiler-umgebungsvariablen/</id>
+            
+            
+            <published>2020-09-30T00:00:00+00:00</published>
+            <updated>2020-09-30T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p><a href="https://rust-lang.org">Rust</a> ist eine wunderbare Programmiersprache mit einem gut durchdachten Compiler. Das Rust Team hat sich die Bürde auferlegt, den Compiler so &ldquo;schlau&rdquo; wie möglich zu machen um so viele Fehler schon während dem kompilieren des Codes zu erkennen. Außerdem wird Rust mit einem mächtigen Tool namens <code>cargo</code> ausgeliefert. Cargo ist ähnlich wie <code>npm</code> oder <code>maven</code> und stellt verschiedenste Funktionen bereit, zum Beispiel zum bauen, testen, oder veröffentlichen von Rust Code. In diesem Blog-Beitrag möchte ich auf ein Build Feature von Cargo eingehen: Environment Variables.</p>
+<h2 id="source-code">Source Code</h2>
+<p>Der gesamte Source Code für diesen Blog-Beitrag kann auf GitHub gefunden werden: <a href="https://github.com/kevingimbel/rust-blog-code/tree/main/env-example">github.com/kevingimbel/rust-blog-code/env-example</a>.</p>
+<p>Einige Code Beispiele können direkt ausgeführt werden. Anweisung wie z.B. <code>cargo run --examples ding</code> in diesem Beitrag führen die verschiedenen Code Beispiele im <code>examples</code> Ordner aus. Um diese zu verwenden, folgende Schritten ausführen:</p>
+<ol>
+<li>Terminal öffnen</li>
+<li>Repo clonen</li>
+<li><code>cd env-example</code></li>
+<li>Befehle ausführen wenn sie im Beitrag vorkommen, z.B. <code>cargo run --example maybe-fn</code></li>
+</ol>
+<h2 id="env-vs-stdenvvar"><code>env!()</code> vs. <code>std::env::var()</code></h2>
+<p>Umgebungsvariablen können auf zwei Arten ausgelesen werden:</p>
+<ul>
+<li><code>env!()</code> Makro</li>
+<li><code>std::env::var()</code> Funktion</li>
+</ul>
+<p>Der wichtige Unterschied ist, dass <code>env!()</code> den <strong>Wert zur Kompilierzeit</strong> ausliest und ins Binary schreibt, während <code>std::env()</code> immer den Wert aus der Umgebung liest. Das lässt sich am folgenden Beispiel gut erkennen:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> env_macro <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_fn <span style="color:#f92672">=</span> std::env::var(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>);
+
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_macro = {}&#34;</span>, env_macro);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_fn = {}&#34;</span>, env_fn);
+}
+</code></pre></div><p>Wenn wir diesen Code kompilieren bekommen wir einen Fehler:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo build 
+   Compiling env-example v0.1.0 <span style="color:#f92672">(</span>rust-blog-code/env-example<span style="color:#f92672">)</span>
+error: environment variable <span style="color:#e6db74">`</span>MY_VAR<span style="color:#e6db74">`</span> not defined
+ --&gt; src/main.rs:2:21
+  |
+<span style="color:#ae81ff">2</span> |     let env_macro <span style="color:#f92672">=</span> env!<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;MY_VAR&#34;</span><span style="color:#f92672">)</span>;
+  |                     ^^^^^^^^^^^^^^
+  |
+  <span style="color:#f92672">=</span> note: this error originates in a macro <span style="color:#f92672">(</span>in Nightly builds, run with -Z macro-backtrace <span style="color:#66d9ef">for</span> more info<span style="color:#f92672">)</span>
+</code></pre></div><p>Es gibt nun zwei Möglichkeiten:</p>
+<ul>
+<li>wir setzen die Environment Variable mit <code>export MY_VAR=42</code></li>
+<li>wir definieren Standardwerte</li>
+</ul>
+<p>Zunächst setzen wir die Variable und können den Code dann kompilieren, später in diesem Beitrag schauen wir uns auch Standardwerte an.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ export MY_VAR<span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>
+$ cargo build
+</code></pre></div><p>Anschließend können wir das Binary ausführen (hier <code>env-example</code> gennant)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./target/debug/env-example
+env_macro <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>
+env_fn <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>
+</code></pre></div><p>Beide Werte sind <code>42</code>. Jetzt setzen wir die Environment Variable neu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export MY_VAR<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>
+$ ./target/debug/env-example
+env_macro <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>
+env_fn <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</code></pre></div><p>Aha! <code>env_macro</code> hat immer noch den Wert, den die Variable zur Kompilierzeit hatte.</p>
+<h3 id="variablen-zur-kompilierzeit">Variablen zur Kompilierzeit</h3>
+<p><code>cargo</code> stellt eine <a href="https://doc.rust-lang.org/cargo/reference/environment-variables.html#environment-variables-cargo-sets-for-crates">Handvoll Umgebungsvariablen</a> während der Kompilierzeit bereit. Diese Variablen können z.B. benutzt werden um die aktuelle Version aus der <code>Cargo.toml</code> Datei auszulesen und in unserem Binary zu hinterlegen. Nehmen wir das <code>env-example</code> script und fügen eine neue Zeile hinzu, die die Aktuelle version aus der <code>Cargo.toml</code> ausliest.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> version <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;CARGO_PKG_VERSION&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_macro <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_fn <span style="color:#f92672">=</span> std::env::var(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>).unwrap();
+
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env-example v{}&#34;</span>, version);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_macro = {}&#34;</span>, env_macro);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_fn = {}&#34;</span>, env_fn);
+}
+</code></pre></div><section class="note ">
+    
+    <p>Wir müssen die neue Variable <code>CARGO_PKG_VERSION</code> <strong>nicht selbst setzen</strong>. Cargo setzt diese Variable für uns.</p> 
+</section>
+<p>Wir kompilieren nun den Code und führen das Binary aus.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo build
+$ ./target/debug/env-example
+env-example v0.1.0
+env_macro <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+env_fn <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</code></pre></div><p>Der Wert <code>0.1.0</code> kommt nun direkt aus der <code>Cargo.toml</code> Datei! Wir können auch den Namen unseres Programms <code>Cargo.toml</code> auslesen:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> version <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;CARGO_PKG_VERSION&#34;</span>);
+    <span style="color:#66d9ef">let</span> name <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;CARGO_PKG_NAME&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_macro <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>);
+    <span style="color:#66d9ef">let</span> env_fn <span style="color:#f92672">=</span> std::env::var(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>).unwrap();
+
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;name: {}&#34;</span>, name);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;version: {}&#34;</span>, version);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_macro = {}&#34;</span>, env_macro);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;env_fn = {}&#34;</span>, env_fn);
+}
+</code></pre></div><p>Kompilieren und ausführen (<code>-q</code> unterdrückt die Ausgabe von <code>cargo build</code>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo build -q <span style="color:#f92672">&amp;&amp;</span> ./target/debug/env-example
+name: env-example
+version: 0.1.0
+env_macro <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+env_fn <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</code></pre></div><h2 id="standardwerte">Standardwerte</h2>
+<p><code>std::env::var()</code> bieten Möglichkeiten Standardwerte zu setzen.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> maybe_fn <span style="color:#f92672">=</span> std::env::var(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>).unwrap_or(<span style="color:#ae81ff">22</span>);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;maybe_fn = {}&#34;</span>, maybe_fn);
+} 
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo build -q <span style="color:#f92672">&amp;&amp;</span> ./target/debug/env-example
+</code></pre></div><p><code>env!()</code> bietet diese Möglichkeit nicht, es muss ein Wert gesetzt sein. Wir Können allerdings eine eigene Fehlermeldung als zweiten Parameter angeben.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> maybe_macro <span style="color:#f92672">=</span> env<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;MY_VAR&#34;</span>, <span style="color:#e6db74">&#34;Bitte MY_VAR setzen, z.B. mit export MY_VAR=21&#34;</span>);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;maybe_macro = {}&#34;</span>, maybe_macro);
+} 
+</code></pre></div><section class="note ">
+    
+    <p><code>cargo run --examples maybe-macro</code></p> 
+</section>
+<p>Wenn wir den Code ausführen bekommen wir folgenden Fehler:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cargo run --example maybe-macro
+   Compiling env-example v0.1.0 <span style="color:#f92672">(</span>rust-blog-code/env-example<span style="color:#f92672">)</span>
+error: Bitte MY_VAR setzen, z.B. mit export MY_VAR<span style="color:#f92672">=</span><span style="color:#ae81ff">21</span>
+ --&gt; examples/maybe-macro.rs:2:23
+  |
+<span style="color:#ae81ff">2</span> |     let maybe_macro <span style="color:#f92672">=</span> env!<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;MY_VAR&#34;</span>, <span style="color:#e6db74">&#34;Bitte MY_VAR setzen, z.B. mit export MY_VAR=21&#34;</span><span style="color:#f92672">)</span>;
+  |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+</code></pre></div><section class="note ">
+    
+    <p><code>cargo run --examples maybe-macro</code></p> 
+</section>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<ul>
+<li><code>cargo</code> stellt Umgebungsvariablen zur Kompilierzeit bereit</li>
+<li>Umgebungsvariablen können mit dem <code>env!()</code> Makro in unseren Code eingebettet werden</li>
+<li><code>std::env::var()</code> liest Variablen zur Ausführungszeit aus</li>
+<li><code>env!()</code> liest Variablen zur Kompilierzeit</li>
+</ul>
+<h2 id="weiterführende-links">Weiterführende Links</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/cargo/index.html">Cargo Dokumentation</a></li>
+<li><a href="https://github.com/rust-lang/cargo">Cargo GitHub</a></li>
+<li><a href="https://doc.rust-lang.org/stable/std/env/index.html">std::env Dokumentation</a></li>
+</ul>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/code" term="code" label="code" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/rust" term="rust" label="rust" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/cargo" term="cargo" label="cargo" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/compiler" term="compiler" label="compiler" />
                             
                         
                     
@@ -261,6 +838,81 @@ example so we need to fill
                                 <category scheme="https://kevingimbel.de/tags/keychron" term="keychron" label="keychron" />
                              
                                 <category scheme="https://kevingimbel.de/tags/equipment" term="equipment" label="equipment" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Ich buk Sauerteig Brot]]></title>
+            <link href="https://kevingimbel.de/blog/2020/09/ich-buk-sauerteig-brot/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/blog/2020/09/ich-buk-sauerteig-brot/</id>
+            
+            
+            <published>2020-09-13T00:00:00+00:00</published>
+            <updated>2020-09-13T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Inspiriert von <a href="https://twitter.com/oddnina" title="Folgt der guten Nina auf Twitter, es lohnt!">Nina</a> und ihrem <a href="https://twitter.com/OddNina/status/1304023596122148864/photo/1" title="Ein Bild von Ninas Brot auf Twitter">Sauerteig Brot</a> dachte ich mir, ich könnte ja auch mal Sauerteig Brot backen! Ich liebe Sauerteig Brot aber bisher habe ich mich noch nie getraut den Sauerteig aufzusetzen und zu &ldquo;pflegen&rdquo;, da mir das alles immer sehr kompliziert und aufwendig vorkam. Irgendwie ist es das auch, denn mein erster Versuch ist furchtbar schief gelaufen! 🤷‍♀️</p>
+
+<figure >
+  
+
+    <img src="sauerteig-brot-monster.jpg"
+      alt="Brot auf Backpapier, dass sehr weit auseinander gelaufen ist."
+       />
+    
+  
+  <figcaption>
+    <p>
+      Mein Brot, wenn man es denn so nennen möchte.
+      
+        
+        
+    </p> 
+  </figcaption>
+  
+</figure>
+
+<p>Ich habe den Sauerteig ca. sieben Tage in der Küche täglich gefüttert und gerührt und nach sieben Tagen roch er auch sehr sauer. Allerdings war er leider auch sehr flüssig, was wahrscheinlich daran liegt das meine Küche zu kalt ist. Sauerteig braucht 30-40 Grad Celsius und in meiner Küche sind es wahrscheinlich so ca. 20 Grad - keine gute Voraussetzung. Im Internet™ habe ich gelesen, dass bei nicht optimaler Temperatur der Teig etwas länger braucht und säuerlicher wird.</p>
+<p>Das &ldquo;Brot&rdquo; habe ich dann mit Dinkelmehl, dem Weizen-Sauerteig, Salz, und etwas Hefe gebacken. Geschmacklich war es sehr sauer, aber lecker. Leider ist es nicht aufgegangen und war sehr zäh. Ich hatte noch knapp eine halbe Packung Trockenhefe untergemischt - mehr Hefe oder frische Hefe wäre aber besser gewesen.</p>
+<p>Was ich fürs nächste Brot mitnehme:</p>
+<ul>
+<li>Teig an einem warmen Ort gehen lassen</li>
+<li>strikter an Rezepte halten bis ich die Erfahrung habe diese zu variieren</li>
+<li>Mehr Brot backen, generell!</li>
+</ul>
+<p>Als nächstes möchte ich mal wieder Brötchen backen, das macht nämlich Spaß!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/backen" term="backen" label="backen" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/brot" term="brot" label="Brot" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/sauerteig" term="sauerteig" label="Sauerteig" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/fehlschlag" term="fehlschlag" label="Fehlschlag" />
                             
                         
                     
@@ -530,14 +1182,178 @@ example so we need to fill
     
         
         <entry>
-            <title type="html"><![CDATA[Shipping Rust CLIs with Docker]]></title>
-            <link href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            <title type="html"><![CDATA[Rust CLI mit Docker ausliefern]]></title>
+            <link href="https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
+                <link href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/?utm_source=atom_feed" rel="related" type="text/html" title="Shipping Rust CLIs with Docker" />
                 <link href="https://kevingimbel.de/project/license/?utm_source=atom_feed" rel="related" type="text/html" title="License" />
                 <link href="https://kevingimbel.de/blog/2020/05/deno-1.0-released/?utm_source=atom_feed" rel="related" type="text/html" title="Deno 1.0 released" />
                 <link href="https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/?utm_source=atom_feed" rel="related" type="text/html" title="Docker Apache Proxy Setup" />
                 <link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="related" type="text/html" title="Terrasave" />
-                <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/?utm_source=atom_feed" rel="related" type="text/html" title="Bash script: ws" />
+            
+                <id>https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/</id>
+            
+            
+            <published>2020-08-06T00:00:00+00:00</published>
+            <updated>2020-08-06T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Vor kurzem habe ich einen Weg gefunden Rust <abbr title="Command Line Interfaces; Programme die in einem Terminal ausgeführt werden">CLI</abbr>
+ Programme über Docker auszuliefern. Für meinen Arbeitgeber <a href="https://synoa.de">Synoa</a> habe ich in den letzten Monaten ein CLI Tool erstellt, dass mir - und anderen - die Arbeit mit AWS erleichtert. Diese CLI im Team zu verteilen gestaltete sich als schwierig da weder jeder Rust installiert hat noch eine einfache Integration mit <a href="https://brew.sh">Homebrew</a> möglich war da der Code in einem privaten Repository ist. Die einfachste Lösung war am Ende, die CLI in einen Docker Container zu packen und so zu verteilen. Wie das geht erkläre ich in diesem Artikel.</p>
+<h2 id="rust-code">Rust Code</h2>
+<p>Der folgende Beispiel Code zeigt ein kleines Rust Programm, dass die Argumente ausgibt die während der Ausführung übergeben wurden.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::env;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> args: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, args);
+}
+</code></pre></div><p>Der Code muss nicht verstanden werden um die Konzepte aus diesem Artikel zu verstehen! Das Muster ist für alle Binary-Programme gleich, z.B. könnte genauso eine Go App über Docker verteilt werden.</p>
+<h2 id="code-kompilieren---in-docker">Code kompilieren - in Docker</h2>
+<p>Den oben gezeigten Code können wir nun kompilieren, dass heißt ihn zu einer ausführbaren Binär-Datei &ldquo;zusammenfügen&rdquo;. Hierfür verwenden wir einen <a href="https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds">&ldquo;Multi-Stage&rdquo; Build</a> in Docker. So müssen wir und andere Entwickler keine vollständige Rust Umgebung verwalten und außerdem kann jeder Entwickler über Docker in der selben Umgebung Binaries kompilieren.</p>
+<p>Zunächst deklarieren wir einen <code>builder</code> Container. Dieser Container wird genutzt um unseren Rust Code zu kompilieren.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Diese vier Zeilen tun folgendes:</p>
+<ul>
+<li>Erstelle einen Container auf Basis von <a href="https://github.com/clux/muslrust"><code>clux/muslrust</code></a></li>
+<li>Dem Container wird der &ldquo;Name&rdquo; <code>builder</code> gegeben</li>
+<li>Das Arbeitsverzeichnis wird auf <code>/volume</code> gesetzt, damit wird Docker alle Befehle in diesem Verzeichnis ausführen</li>
+<li>Alle Dateien werden aus dem aktuellen Verzeichnis in den Container kopiert</li>
+<li>Das Kommando <code>cargo build --release</code> wird <em>im Container</em> ausgeführt und kompiliert unseren Code</li>
+</ul>
+<h2 id="das-eigentliche-docker-image-erzeugen">Das eigentliche Docker Image erzeugen</h2>
+<p>Nun können wir im selben Dockerfile unser eigentliches Image erzeugen. Dafür wird das kompilierte Binary aus dem <code>builder</code> container kopiert.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Kopiere das kompilierte Binary aus dem builder container</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Alle CLI argumente werden direkt an das Binary übergeben</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Was geschieht hier?</p>
+<ul>
+<li>Zuerst erstellen wir einen neuen Docker Container auf basis des <a href="https://alpinelinux.org/">Alpine Linux</a> Images.</li>
+<li>Dann kopieren wir das kompilierte Binary <em>aus dem builder Container</em> in unseren neuen Container</li>
+<li>Zuletzt sagen wir, dass das Binary als &ldquo;Startpunkt&rdquo; verwendet werden soll. Soll heißen wenn der Container gestartet wird, dann wird dieses Binary ausgeführt</li>
+</ul>
+<p>Warum Alpine Linux? Alpine Linux ist eine kleine auf Sicherheit fokusierte Linux Distribution. Das Alpine Docker image ist nur ca. 3MB groß - kleiner geht kaum!</p>
+<p>Alles zusammen sieht unser Dockerfile nun wie folgt aus:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="image-bauen-und-den-container-ausführen">Image bauen und den Container ausführen</h2>
+<p>Mit dem oben gezeigten Dockerfile können wir nun ein Image bauen. Hierfür benutzen wir folgenden Befehl:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t kevingimbel/rust-docker-cli-sample:1.0 .  
+</code></pre></div><p>Anschließend können wir einen Container ausführen, der das neu erstellte Image benutzt:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run --rm kevingimbel/rust-docker-cli-sample:1.0 -hello -world
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;-hello&#34;</span>, <span style="color:#e6db74">&#34;-world&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="terminal-konfiguration">Terminal konfiguration</h2>
+<p>Damit wir diesen Docker Container wie ein &ldquo;normales&rdquo; binary ausführen können müssen wir im Terminal ein &ldquo;alias&rdquo; setzen. Hierfür kommt folgende in die <code>~/.bashrc</code> bzw. <code>~/.zshrc</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Nun laden wir die Konfigurationsdatei neu oder öffnen ein neues Terminal Fenster und dann kann der Container wie ein normales Script ausgeführt werden.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># bash</span>
+source ~/.bashrc
+<span style="color:#75715e"># zsh</span>
+source ~/.zshrc
+</code></pre></div><p>Danach können wir den Container mit dem Befehl <code>docker-rust-cli</code> starten.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-rust-cli hello from docker
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;from&#34;</span>, <span style="color:#e6db74">&#34;docker&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="fortgeschritten-volumes">Fortgeschritten: Volumes</h2>
+<p>Wir könnten hier fertig sein, aber eine wichtige Funktion fehlt noch: Volumes. Wenn unser CLI tool Dateien erstellt würden diese sonst im Docker container bleiben und der wird standardmäßig gelöscht da wir <code>--rm</code> verwenden.</p>
+<p>Der <code>alias</code> wird also mit einem Volume angepasst.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Mit <code>-v $(pwd):/cmd-root-dir</code> sagen wir Docker, dass das aktuelle Verzeichnis (<code>$(pwd)</code>) im Container als Pfad <code>/cmd-root-dir</code> gemounted werden soll. Jetzt müssen wir nur noch unserem Image sagen, dass es Dateien auch in diesem Verzeichnis ablegen soll. Das geht indem wir in der Dockerfile die <code>WORKDIR</code> setzen.</p>
+<p>Das Dockerfile sieht nun wie folgt aus.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> clux/muslrust:1.45.0-stable as builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /volume</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> cargo build --release<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /volume/target/x86_64-unknown-linux-musl/release/docker-cli-sample .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /cmd-root-dir</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [ <span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p><code>WORKDIR</code> erstellt das Verzeichnis wenn es nicht existiert, wir müssen es also nicht selbst erstellen. Um diese Anpassung zu testen können wir unser Script eine Log Datei schreiben lassen. Dazu verändern wir den Rust Code wie folgt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::env;
+<span style="color:#66d9ef">use</span> std::fs;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">let</span> args: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, args);
+    fs::write(<span style="color:#e6db74">&#34;docker-cli-sample.log&#34;</span>, format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Args: {:?}&#34;</span>, args))<span style="color:#f92672">?</span>;
+    Ok(())
+}
+</code></pre></div><p>Mit <code>fs::write</code> schreiben wir nun alle Argumente auch in die Datei <code>docker-cli-sample.log</code> statt sie nur im Terminal anzuzeigen. Jetzt muss das Verzeichnis nur noch wie oben geschrieben gemounted werden:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:1.0&#39;</span>
+</code></pre></div><p>Wichtig sind hierbei die einfachen Anführungszeichen (<code>'</code>) - ohne diese würde <code>$(pwd)</code> nur ein Mal ausgeführt werden statt bei jedem Aufruf!</p>
+<p>Wenn wir jetzt den Befehl ausführen wird eine Log Datei in das aktuelle Verzeichnis geschrieben:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-rust-cli
+<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">]</span>
+$ cat docker-cli-sample.log
+Args: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/docker-cli-sample&#34;</span>, <span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="fortgeschritten-versionierung">Fortgeschritten: Versionierung</h2>
+<p>Für etwas mehr Komfort können wir eine Variable für den &ldquo;Docker Tag&rdquo;, also die Version unseres Images, nutzen. So kann man später einfach updaten ohne den eigentlichen Befehl anpassen zu müssen.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export MY_CLI_VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>
+alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -v $(pwd):/cmd-root-dir kevingimbel/rust-docker-cli-sample:$MY_CLI_VERSION&#39;</span>
+</code></pre></div><p>Soll nun Version 1.1 verwendet werden muss lediglich die Variable <code>MY_CLI_VERSION</code> auf <code>1.1</code> geändert werden. Jeder mit Zugriff auf das Docker Image kann nun den Code in die <code>~/.bashrc</code> oder <code>~/.zshrc</code> kopieren und das CLI Programm nutzen.</p>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<ul>
+<li>Wir können mit <a href="https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds" title="Docker Dokumentation über Multi-Stage Builds">Multi-Stage Builds</a> code in Docker kompilieren</li>
+<li>Rust binaries können in kleinen Containern wie z.B. Alpine oder &ldquo;blanken&rdquo; Container ausgeführt werden</li>
+<li>Mit einem <code>alias</code> können wir bequem und komfortable Docker Container ausführen als wären es &ldquo;installiere&rdquo; Binaries</li>
+<li>Indem wir <code>WORKDIR</code> und Volumes nutzen können wir Dateien aus dem Container heraus speichern</li>
+</ul>
+<p>Der Quellcode für dieses Tutorial kann auf <a href="https://github.com/kevingimbel/docker-cli-sample">GitHub unter kevingimbel/docker-cli-sample</a> gefunden werde. Ein funktionierendes Docker Image gibt es auf <a href="https://hub.docker.com/r/kevingimbel/rust-docker-cli-sample">Docker Hub unter kevingimbel/rust-docker-cli-sample</a>.</p>
+<p>Um das Docker Image zu nutzen kann folgender Befehl ausgeführt werden:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --rm kevingimbel/rust-docker-cli-sample:1.0 hello from docker
+</code></pre></div>]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/code" term="code" label="code" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/rust" term="rust" label="rust" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/docker" term="docker" label="docker" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/cli" term="cli" label="cli" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Shipping Rust CLIs with Docker]]></title>
+            <link href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2020/08/rust-cli-mit-docker-ausliefern/?utm_source=atom_feed" rel="related" type="text/html" title="Rust CLI mit Docker ausliefern" />
+                <link href="https://kevingimbel.de/project/license/?utm_source=atom_feed" rel="related" type="text/html" title="License" />
+                <link href="https://kevingimbel.de/blog/2020/05/deno-1.0-released/?utm_source=atom_feed" rel="related" type="text/html" title="Deno 1.0 released" />
+                <link href="https://kevingimbel.de/blog/2020/05/docker-apache-proxy-setup/?utm_source=atom_feed" rel="related" type="text/html" title="Docker Apache Proxy Setup" />
+                <link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="related" type="text/html" title="Terrasave" />
             
                 <id>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</id>
             
@@ -693,6 +1509,56 @@ alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6d
     
         
         <entry>
+            <title type="html"><![CDATA[Corona Warn App]]></title>
+            <link href="https://kevingimbel.de/blog/2020/06/corona-warn-app/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/blog/2020/06/corona-warn-app/</id>
+            
+            
+            <published>2020-06-18T00:00:00+00:00</published>
+            <updated>2020-06-18T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Die <a href="https://www.coronawarn.app/de/">Corona Warn App</a> wurde veröffentlicht und erstaunlicherweise ist sie gut! Die App läuft mit minimalen Berechtigungen, verbraucht wenig Strom da sie <a href="https://de.wikipedia.org/wiki/Bluetooth_Low_Energy">Bluetooth Low Energy</a> verwendet, ist komplett dezentralisiert, und zu alledem auch noch Open Source: der Code für die Apps, die Website, und den Backend Server ist <a href="https://github.com/corona-warn-app">auf GitHub verfügbar</a>.</p>
+<p>Auch <a href="https://linus-neumann.de/">Linus Neumann</a> vom <a href="https://ccc.de/">Chaos Computer Club</a> lobt die Umsetzung in <a href="https://www.youtube.com/watch?v=_80-rl9UZJA">diesem Video</a> der Tagesschau, nachdem er und andere zuvor lange Zeit für eine dezentralisierte Lösung plädiert haben. Im Video wird auch weiter auf die Funktion der App eingegenagen und Nutzer-Fragen beantwortet. Meiner Meinung nach ist es auch ein großer Schritt, dass die App und alle dazugehörigen Komponenten Open Source sind (siehe oben).</p>
+<p>Einige Android User waren zunächst besorgt da &ldquo;Location Services&rdquo; angefragt werden, in den FAQ <a href="https://www.coronawarn.app/de/faq/#android_location">wird erklärt</a>, warum dies nötig ist:</p>
+<blockquote>
+<p>[&hellip;] Die Meldung geht auf eine Besonderheit von Android zurück: Bluetooth-Geräte in Deiner Nähe können grundsätzlich nur gefunden werden, wenn die Standortverwendung allgemein auf Deinem Gerät aktiviert ist [&hellip;]</p>
+</blockquote>
+<p>Die Corona Warn App ist für <a href="https://apps.apple.com/de/app/corona-warn-app/id1512595757">iOS</a> und <a href="https://play.google.com/store/apps/details?id=de.rki.coronawarnapp">Android</a> verfügbar und es gibt wirklich <em>keinen Grund sie nicht zu installieren</em>.</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/allgemein" term="allgemein" label="allgemein" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/corona" term="corona" label="corona" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/app" term="app" label="app" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
             <title type="html"><![CDATA[Dan Dubuque Slide Guitarist]]></title>
             <link href="https://kevingimbel.de/blog/2020/05/dan-dubuque-slide-guitarist/?utm_source=atom_feed" rel="alternate" type="text/html" />
             
@@ -737,6 +1603,53 @@ alias docker-rust-cli<span style="color:#f92672">=</span><span style="color:#e6d
                                 <category scheme="https://kevingimbel.de/tags/cover" term="cover" label="cover" />
                              
                                 <category scheme="https://kevingimbel.de/tags/youtube" term="youtube" label="youtube" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[Hallo, Welt!]]></title>
+            <link href="https://kevingimbel.de/blog/2020/05/hallo-welt/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+            
+                <id>https://kevingimbel.de/blog/2020/05/hallo-welt/</id>
+            
+            
+            <published>2020-05-20T00:00:00+00:00</published>
+            <updated>2020-05-20T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>Hallo!</p>
+<p>Dieser Blog hat ab jetzt auch eine Deutsche &hellip; Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter <code>/de/</code> allen Deutschen <del>Content</del> Inhalt.</p>
+<p>Schauen wir mal wie&rsquo;s wird. 🤷‍♀️</p>
+<p>Danke für eure Aufmerksamkeit!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/notiz" term="notiz" label="notiz" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/blog" term="blog" label="blog" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/in-eigener-sache" term="in-eigener-sache" label="in-eigener-sache" />
                             
                         
                     
