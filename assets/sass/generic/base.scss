@@ -40,43 +40,6 @@ body.dark-theme {
     --color-font-fg: #ccc;
 }
 
-body.dark-theme {
-  a {
-    color: var(--color-secondary);
-  }
-  .nav-main li a {
-    color: var(--color-secondary);
-  }
-
-  .pre-header a {
-    color: var(--color-secondary);
-  }
-
-  .page-nav, .page-nav a {
-    color: var(--color-bg-page);
-  }
-
-  .support a {
-    color: var(--color-main);
-  }
-
-  .settings-inner {
-    color: var(--color-main);
-  }
-
-
-  .article__next {
-    background: var(--color-secondary);
-  
-    a, span { color: var(--color-main); }
-  }
-  .article__prev {
-    background:  var(--color-main);
-  
-    a, span { color: var(--color-secondary); }
-  }
-} // dark-theme
-
 ::selection {
   background-color: var(--color-main);
   color: var(--color-secondary);
@@ -121,3 +84,45 @@ hr {
   margin: var(--this-margin, 2rem) 0;
   background: var(--this-color, var(--color-secondary));
 }
+
+body.dark-theme {
+  a {
+    color: var(--color-secondary);
+  }
+  .nav-main li a {
+    color: var(--color-secondary);
+  }
+
+  .pre-header a {
+    color: var(--color-secondary);
+  }
+
+  .page-nav, .page-nav a {
+    color: var(--color-bg-page);
+  }
+
+  .support a {
+    color: var(--color-main);
+  }
+
+  .settings-inner {
+    color: var(--color-main);
+  }
+
+
+  .article__next {
+    background: var(--color-secondary);
+  
+    a, span { color: var(--color-main); }
+  }
+  .article__prev {
+    background:  var(--color-main);
+  
+    a, span { color: var(--color-secondary); }
+  }
+
+
+  abbr {
+    border-bottom: 2px dotted var(--color-secondary);
+  }
+} // dark-theme

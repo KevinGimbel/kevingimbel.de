@@ -43,8 +43,13 @@
         <header class="pre-header" id="pre-header">
             <kg-colorswitcher>Color theme</kg-colorswitcher>
             <kg-darkmode>Dark mode</kg-darkmode>
+            {{ if eq .Kind "page" }}
             <kg-fontsize>Font size</kg-fontsize>
             <kg-contentwidth>Content width</kg-contentwidth>
+            {{ else }}
+            <span aria-hidden="true"><!-- :) --></span>
+            <span aria-hidden="true"><!-- :) --></span>
+            {{ end }}
         </header>
     
         <header class="site-header">
