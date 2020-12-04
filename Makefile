@@ -27,4 +27,7 @@ post-blog: ## Create new blog post. Specify title like title="my title"
 post-book: ## Create new book post. Specify title like title="my title"
 	@hugo new reading/$(shell date +%Y)/$(shell echo "${title}" | sed -e 's/ /-/g').md
 
+post-link: ## Create new link post. Specify title like title="my title"
+	@hugo new -k link blog/$(shell date +%Y-%m-%d)-$(shell echo "${title}" | sed -e 's/ /-/g').md
+
 .PHONY: help

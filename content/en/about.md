@@ -3,6 +3,9 @@ title: "About"
 intro_text: "Over a decade on *the internets* and I still don't know how to write *about me*"
 layout: single
 translationKey: "about"
+aliases:
+  - "kevin"
+  - "kevin-gimbel"
 ---
 
 {{< sidebyside >}}

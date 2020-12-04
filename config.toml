@@ -10,7 +10,7 @@ disableLanguages = ["es", "de"]
     avatar_src = "images/general/kevin-gimbel-2020.jpg"
     avatar_alt = "A Selfie of me"
     # Toggle "template hints" 
-    # debug = true
+    debug = false
 
 [permalinks]
     blog = "/:section/:year/:month/:title/"
@@ -26,9 +26,7 @@ location = "Wiesbaden, Germany"
     [[params.now.doing]]
     thing = "on and off learning Spanish"
     [[params.now.doing]]
-    thing = "playing [Fall Guys](https://fallguys.com) on PS4 with my wife"
-    [[params.now.doing]]
-    thing = "starting and abandoning lots of projects"
+    thing = "playing [The Surge](https://www.focus-home.com/en-us/games/the-surge) on PS4"
 
 [menu]
     [[menu.main]]
@@ -61,11 +59,18 @@ location = "Wiesbaden, Germany"
     URL = "/photography/"
     Weight = 40
 
+    # Footer Menu
     [[menu.footer]]
     identifier = "reading"
-    name = "Reading"
+    name = "Books"
     URL = "/reading/"
     Weight = 45
+
+    [[menu.footer]]
+    identifier = "Links"
+    name = "Links"
+    URL = "/link-list/"
+    Weight = 46
 
     [[menu.footer]]
     identifier = "Art"

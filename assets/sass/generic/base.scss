@@ -116,3 +116,8 @@ hr {
     height: 130px;
   }
 }
+
+.divider {
+  margin: var(--this-margin, 2rem) 0;
+  background: var(--this-color, var(--color-secondary));
+}

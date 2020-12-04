@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "Vidaloka";
+  src: url("/font/vidaloka/Vidaloka-Regular.ttf") format("ttf");
+}
+
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/font/plex/IBMPlexMono-Regular") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: bold;
+  src: url("/font/plex/IBMPlexMono-Bold") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/font/plex/IBMPlexMono-BoldItalic") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: italic;
+  src: url("/font/plex/IBMPlexMono-Italic") format("ttf");
+}
+
 .txt--small {
   font-size: 1rem;
 }
@@ -60,38 +90,14 @@ h3 {
   align-items: center;
 }
 
-@font-face {
-  font-family: "Vidaloka";
-  src: url("/font/vidaloka/Vidaloka-Regular.ttf") format("ttf");
+.icon--external-link {
+  font-family: "IBM Plex Mono", monospace;
 }
 
 h1, h2, h3, h4, .head, .intro-splash, .nav-main {
   font-family: 'Vidaloka', serif;
 }
 
-@font-face {
-  font-family: "IBM Plex Mono";
-  src: url("/font/plex/IBMPlexMono-Regular") format("ttf");
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  font-weight: bold;
-  src: url("/font/plex/IBMPlexMono-Bold") format("ttf");
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  font-weight: bold;
-  font-style: italic;
-  src: url("/font/plex/IBMPlexMono-BoldItalic") format("ttf");
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  font-style: italic;
-  src: url("/font/plex/IBMPlexMono-Italic") format("ttf");
-}
 
 code, pre, .highlight {
   font-family: "IBM Plex Mono", monospace;
