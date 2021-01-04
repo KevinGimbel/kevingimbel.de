@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mobile on KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <link>https://kevingimbel.de/tags/mobile/</link>
+    <description>Recent content in mobile on KevOps — DevOps, Cooking, and everything else I want to write about</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en_US</language>
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture</title>
+      <link>https://kevingimbel.de/photography/2020/12/architecture/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/photography/2020/12/architecture/</guid>
+      <description>Taken with Google Pixel (first gen), edited with VSCO on Android. You can find the unedited original on my private twitter account @_kevinatari.</description>
+    </item>
+    
+  </channel>
+</rss>

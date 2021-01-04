@@ -6,7 +6,88 @@
     <description>Recent content in Tags on KevOps — DevOps, Cooking, and everything else I want to write about</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en_US</language>
-    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>google</title>
+      <link>https://kevingimbel.de/tags/google/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google_pixel</title>
+      <link>https://kevingimbel.de/tags/google_pixel/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/google_pixel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mobile</title>
+      <link>https://kevingimbel.de/tags/mobile/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible</title>
+      <link>https://kevingimbel.de/tags/ansible/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>https://kevingimbel.de/tags/configuration/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://kevingimbel.de/tags/devops/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sysadmin</title>
+      <link>https://kevingimbel.de/tags/sysadmin/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/sysadmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sysops</title>
+      <link>https://kevingimbel.de/tags/sysops/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/sysops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tool</title>
+      <link>https://kevingimbel.de/tags/tool/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/tags/tool/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>git</title>
       <link>https://kevingimbel.de/tags/git/</link>
@@ -130,15 +211,6 @@
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/scripting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tool</title>
-      <link>https://kevingimbel.de/tags/tool/</link>
-      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/tool/</guid>
       <description></description>
     </item>
     
@@ -935,15 +1007,6 @@
     </item>
     
     <item>
-      <title>google_pixel</title>
-      <link>https://kevingimbel.de/tags/google_pixel/</link>
-      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/google_pixel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>phone</title>
       <link>https://kevingimbel.de/tags/phone/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
@@ -994,15 +1057,6 @@
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>devops</title>
-      <link>https://kevingimbel.de/tags/devops/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/devops/</guid>
       <description></description>
     </item>
     
@@ -1165,15 +1219,6 @@
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kevingimbel.de/tags/germany/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google</title>
-      <link>https://kevingimbel.de/tags/google/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kevingimbel.de/tags/google/</guid>
       <description></description>
     </item>
     

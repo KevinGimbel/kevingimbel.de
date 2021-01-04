@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5 Things Ansible Can Do for You &mdash; KevOps — DevOps, Cooking, and everything else I want to write about</title>
+    <meta name="author" content="Kevin Gimbel">
+    <meta name="description" content="Personal website of Kevin Gimbel, DevOps Engineer, about photography, books, coding, devops, gaming, and whatever comes in between">
+    <meta keywords="ansible configuration tool devops sysops sysadmin  blog coding  ">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧙‍♂️</text></svg>">
+    
+    
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/main.min.css">
+    
+    <link rel="stylesheet" href="https://kevingimbel.de/sass/page.min.css">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kevingimbel">
+    <meta name="twitter:creator" content="@_kevinatari">
+    <meta name="twitter:title" content="5 Things Ansible Can Do for You">
+    <meta name="twitter:description" content="In this post I want to highlight 5 things that Ansible can do you may not know about. When I started with Ansible I was quite overwhelmed by all the new things, and my first custom roles and playbooks weren&rsquo;t that great (in fact, they were really bad!). It took time to get to a comfortable level and to establish rules in the team at work, and we constantly iterate and improve over our Ansible usage.">
+    
+
+</head>
+<body class="type-page section-blog">
+    <script type="text/javascript">(function(document,window,undefined){function css_to_int(cssStyleDeclaration,unitStr){return parseInt(cssStyleDeclaration.replace(unitStr,''));}
+function pre_header_show(element){element.style.setProperty('margin-top',0);element.dataset.shown=true;}
+function pre_header_hide(element){let this_height=window.getComputedStyle(element).height;element.style.setProperty('margin-top',`-${this_height}`);element.dataset.shown=false;}
+function is_element_hidden(element){return['none'].indexOf(window.getComputedStyle(element).display)>-1;}
+document.addEventListener('DOMContentLoaded',()=>{const pre_header_element=document.querySelector('#pre-header');const pre_header_toggle=document.querySelector('#pre-header-toggle');if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}
+pre_header_toggle.addEventListener('click',(event)=>{if(pre_header_element.dataset.shown=="true"){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});window.addEventListener('resize',()=>{if(!is_element_hidden(pre_header_toggle)){pre_header_hide(pre_header_element);}else{pre_header_show(pre_header_element);}});});}(document,window));</script>
+    
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.colorswitch.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.darkmode.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.fontsize.min.js"></script>
+    <script type="text/javascript" src="https://kevingimbel.de/js/webcomponent.contentwidth.min.js"></script>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_keep">Keep current color theme</span>
+    <span style="display: none;" aria-hidden="true" id="widget_color_changer_txt_random">Use random color theme</span>
+    
+    <section class="main-grid">
+    
+        <header class="pre-header" id="pre-header">
+            <kg-colorswitcher>Color theme</kg-colorswitcher>
+            <kg-darkmode>Dark mode</kg-darkmode>
+            
+            <kg-fontsize>Font size</kg-fontsize>
+            <kg-contentwidth>Content width</kg-contentwidth>
+            
+        </header>
+    
+        <header class="site-header">
+            <nav role="navigation" id="navigation" aria-label="Main Navigation">
+                <ul class="nav-main">
+                    
+                    <li class="nav-item">
+                        <a href="/" data-perm="/blog/2020/12/5-things-ansible-can-do-for-you/" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" data-perm="/blog/2020/12/5-things-ansible-can-do-for-you/" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about/" data-perm="/blog/2020/12/5-things-ansible-can-do-for-you/" >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/photography/" data-perm="/blog/2020/12/5-things-ansible-can-do-for-you/" >Photography</a>
+                    </li><button id="pre-header-toggle" class="btn-preheader-toggle">Settings</button>
+                    </ul>
+                    </nav>
+        </header>
+
+    <section class="site-main-content">
+<main id="main" class="main">
+<section class="article-single" style="--this-border-radius: 31px 34px 62px 68px;"> 
+        <header class="article-header">
+            
+
+
+
+
+
+
+<h1>5 Things Ansible Can Do for You</h1>
+
+
+
+
+<p class="publish-date">Published on 12/8/2020 </p>
+        </header>
+        <article class="article-content">
+
+            
+            <div class="content">
+                <p>In this post I want to highlight 5 things that Ansible can do you may not know about. When I started with Ansible I was quite overwhelmed by all the new things, and my first custom roles and playbooks weren&rsquo;t that great (in fact, they were really bad!). It took time to get to a comfortable level and to establish rules in the team at work, and we constantly iterate and improve over our Ansible usage.</p>
+<p>Some code examples for this blog post can be found on GitHub at <a href="https://github.com/KevinGimbel/blog-ansible-tips">KevinGimbel/blog-ansible-tips</a>. Feel free to clone the repo and test things along the way!</p>
+<h2 id="ansible-can-encrypt-and-decrypt-variable-files">Ansible can encrypt and decrypt variable files</h2>
+<p>Ansible comes with a command named <code>ansible-vault</code> that can be used to encrypt and decrypt files! This makes it super easy and secure to commit config files into source control like git.</p>
+<p>To use <code>ansible-vault</code> we first need a <code>ansible.cfg</code> configuration file. Chances are you already got one in your playbook, but if you haven&rsquo;t here&rsquo;s an example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[defaults]</span>
+<span style="color:#a6e22e">vault_password_file</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/some/directory/my.vault.password</span>
+</code></pre></div><section class="note info">
+    
+    <p>I removed everything that isn&rsquo;t relevant from the config file! A config file in your project will likely have more fields</p> 
+</section>
+<p>By configuring <code>vault_password_file</code> we tell ansible in which file it can find a password to encrypt and decrypt our files. This file contains only the password, like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">fHd0M5wWuYRqstyI7rw4WvwP10xnkvhNLHo3BC2O4bhVuT7hNhtOnfWtjgIySKhzWHNUr3Z6Nn9uU93yDbmqymGXFmUkjGhXCBmCc468rwrQsEg2HMt1h0Pmqj5yVTkN
+</code></pre></div><p>With this config in place encrypt and decrypt files with the <code>ansible-vault</code> cli. Assuming we have all secrets in a <code>vault_vars.yml</code> file inside <code>inventories/production/group_vars/magento2</code> directory:</p>
+<ul>
+<li>ansible-vault encrypt inventories/production/group_vars/magento2/vault_vars.yml</li>
+<li>ansible-vault decrypt inventories/production/group_vars/magento2/vault_vars.yml</li>
+</ul>
+<p>You can also view the file without decrypting it:</p>
+<ul>
+<li>ansible-vault view inventories/production/group_vars/magento2/vault_vars.yml</li>
+</ul>
+<section class="note ">
+    
+    <p><p><strong>Pro tip</strong>: If you are using a shared cloud drive like Nextcloud, OwnCloud or AWS S3, you can share the vault password files with your team and have them automatically synced into some directory on everyones computer, like <code>~/work/ansible-password/</code> so everybody can decrypt the files with no additional setup steps.</p>
+<p>Alternatively you can share the password with a traditional password manager but then everybody needs to setup the files first!</p>
+</p> 
+</section>
+<h2 id="ansible-can-run-commands-against-localhost">Ansible can run commands against localhost</h2>
+<p>Ansible by default connects via SSH to a remote server and then runs commands through Python, but sometimes we do not need this. If we talk to a API (see below), we may not want to run the code on a server and instead just want to execute code through Ansible. For this the special <code>localhost</code> host keyword exists!</p>
+<p>Take the following playbook</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- <span style="color:#f92672">hosts</span>: <span style="color:#ae81ff">localhost</span>
+  <span style="color:#f92672">tasks</span>:
+    - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;get hostname&#34;</span>
+      <span style="color:#f92672">command</span>: <span style="color:#e6db74">&#34;hostname&#34;</span>
+      <span style="color:#f92672">register</span>: <span style="color:#ae81ff">local_name</span>
+    - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;show hostname&#34;</span>
+      <span style="color:#f92672">debug</span>:
+        <span style="color:#f92672">msg</span>: <span style="color:#e6db74">&#34;{{ local_name.stdout }}&#34;</span>
+</code></pre></div><p>If we run this playbook with <code>ansible-playbook tip-2-local.yml</code> it will not connect to any remote server and just show the host name of the local computer.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook tip-2-local.yml
+
+PLAY <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> **************************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> ********************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>get hostname<span style="color:#f92672">]</span> ***********************************************************************************************
+changed: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>show hostname<span style="color:#f92672">]</span> **********************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;msg&#34;</span>: <span style="color:#e6db74">&#34;kevins-mbp.lan&#34;</span>
+<span style="color:#f92672">}</span>
+
+PLAY RECAP ********************************************************************************************************
+localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>   
+
+</code></pre></div><h2 id="ansible-can-simulate-changes">Ansible can simulate changes</h2>
+<p>When working on a playbook or deploying a new role for the first time, it can be nice to get an overview of what would change before doing any change at all. For this, Ansible has the <code>--check</code> flag.</p>
+<p>All tasks will be marked as &ldquo;skipped&rdquo; and Ansible will not make any changes at all!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook --check tip-3-check.yml
+
+PLAY <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> **************************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> ********************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>move file<span style="color:#f92672">]</span> **************************************************************************************************
+skipping: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+PLAY RECAP ********************************************************************************************************
+localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>   
+
+</code></pre></div><h2 id="ansible-can-run-only-a-subset-of-tasks">Ansible can run only a subset of tasks</h2>
+<p>Ansible can also run a subset of all tasks. This is especially helpful when the changes do not require a full deployment / check. Think of a Apache role where the user maybe wants to update a virtual host but has no interest in running other tasks such as checking the installed version or enabling modules. In such a case we can use tags on our tasks when writing an ansible role.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;test tags&#34;</span>
+  <span style="color:#f92672">debug</span>:
+    <span style="color:#f92672">msg</span>: <span style="color:#e6db74">&#34;I only run with -t test1&#34;</span>
+  <span style="color:#f92672">tags</span>:
+    - <span style="color:#ae81ff">test1</span>
+- <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;test tags 2&#34;</span>
+  <span style="color:#f92672">debug</span>:
+    <span style="color:#f92672">msg</span>: <span style="color:#e6db74">&#34;I only run with -t test2&#34;</span>
+  <span style="color:#f92672">tags</span>:
+    - <span style="color:#ae81ff">test2</span>
+</code></pre></div><p>If we now run ansible-playbook with <code>--tags</code> or <code>-t</code> flag only the matching tasks will be executed. If we run <em>without specifying tags</em>, all tasks will run!</p>
+
+            </div>
+        </article>
+    </section>
+</main>
+</section>
+
+    <section class="site-support">
+<section class="tags-categories">
+    
+
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts categorized under coding"
+                href="https://kevingimbel.de/categories/coding/">coding</a>
+        </li></ul>
+</section>
+
+    
+
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="tag-list">
+        
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with ansible"
+                href="https://kevingimbel.de/tags/ansible/">ansible</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with configuration"
+                href="https://kevingimbel.de/tags/configuration/">configuration</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with tool"
+                href="https://kevingimbel.de/tags/tool/">tool</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with devops"
+                href="https://kevingimbel.de/tags/devops/">devops</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with sysops"
+                href="https://kevingimbel.de/tags/sysops/">sysops</a>
+        </li>
+        <li class="tag-list__item">
+            <a class="tag-list__link" title="View all posts tagged with sysadmin"
+                href="https://kevingimbel.de/tags/sysadmin/">sysadmin</a>
+        </li></ul>
+</section>
+
+</section>
+    <section class="article-nextprev">
+  <article class="article__next">
+      <span class="txt--bold">Next article</span><br>
+  
+      <span class="txt--bold txt--medium">No newer article</span>
+  
+  </article>
+
+  <article class="article__prev">
+      <span class="txt--bold">Previous article</span><br>
+  
+      <a class="txt--medium" href="https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/" title="Apply a patch from a Github PR">Apply a patch from a Github PR</a>
+      
+  </article>
+</section>
+    <section class="support">
+    <h4>Like this?</h4>
+    <p>If this content has helped you or your company, consider making a donation to a good cause.</p>
+    <p>For example, consider donating to the following causes:</p>
+    <div class="support-cause-list__wrapper">
+        <ul class="support-cause-list">
+            <li class="head"><b>International</b></li>
+            <li><a rel="nofollow" href="https://donate.doctorswithoutborders.org/onetime.cfm">Doctors without borders</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.org/en/donate/">Amnesty International</a></li>
+        </ul>
+        <ul class="support-cause-list">
+            <li class="head"><b>Germany</b></li>
+            <li><a rel="nofollow" href="https://www.uno-fluechtlingshilfe.de/unterstuetzen/spenden/jetzt-spenden/">UNO Flüchtlingshilfe</a></li>
+            <li><a rel="nofollow" href="https://www.amnesty.de/spenden">Amnesty</a></li>
+            <li><a rel="nofollow" href="https://www.greenpeace.de/spenden">Greenpeace</a></li>
+        </ul>
+    </div>
+</section>
+
+    <section class="author">
+    <div class="left">
+        <img src="/images/general/kevin-gimbel-2020_hu6d6852ea5f23d3570eb4d6a09e2c1824_341389_200x200_resize_q75_box.jpg" alt="A Selfie of me" class="avatar">
+    </div>
+    <div class="right">
+        <p>Kevin Gimbel</p>
+<p><strong>is a DevOps Engineer and avid (Video) Gamer</strong>. He&rsquo;s also interested in Sci-Fi, Cyberpunk, and dystopian books.</p>
+<p><em>Wearing a mask is a good idea!</em></p>
+<p>You can find out more <a href="/about/">about me</a> if you wish.</p>
+
+    </div>
+</section>
+</section>
+
+    <footer class="site-footer footer">
+        
+        
+        
+        <nav role="navigation" id="footer-navigation" aria-label="Secondary Navigation">
+        <p>More sections on this site </p>
+        <ul class="nav-footer">
+            <li class="nav-item">
+                <a href="/reading/">Books</a>
+            </li>
+            <li class="nav-item">
+                <a href="/link-list/">Links</a>
+            </li>
+            <li class="nav-item">
+                <a href="/art/">Art</a>
+            </li>
+            <li class="nav-item">
+                <a href="/now/">Now</a>
+            </li>
+            <li class="nav-item">
+                <a href="/rss/">RSS</a>
+            </li></ul>
+        </nav>
+        
+
+
+        <div class="left">
+            <p>&copy; 2009 - 2021 Kevin Gimbel. <a href="https://github.com/kevingimbel/kevingimbel.de/blob/master/LICENSE" title="View License on GitHub.com">License</a>. <a href="/blog/2020/01/no-tracking/">No Tracking</a>.</p>
+            <p><small>Follow me on <a href="https://twitter.com/kevingimbel" title="Follow me on Twitter">Twitter @kevingimbel</a></small></p>
+            </p>
+        </div>
+        <div class="right">
+            <p><small class="xx-small">Found an issue? Edit this <a href="https://github.com/kevingimbel/kevingimbel.de/tree/master/content/en/blog/2020-12-08-5-things-ansible-can-do-for-you/index.md">page on GitHub.com</a></a></small></p>
+            <p><small class="xx-small">Made in Europe 🇪🇺 with love, <a href="/thanks">open source code</a> and <a href="https://gohugo.io/" title="Hugo static site generator" rel="nofollow">hugo</a>.<span class="fg-accent">&hearts;</span>.</small>
+            </p>
+            <p><small class="xx-small"><a href="/legal">Imprint</a></small></p>
+            <p><small class="xx-small"><code>¯\_(ツ)_/¯</code></small></p>
+        </div>  
+    </footer>
+    </section>
+    
+
+
+</body>
+
+</html>

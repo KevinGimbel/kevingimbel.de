@@ -3,27 +3,97 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</loc>
-    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/blog/</loc>
-    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <loc>https://kevingimbel.de/photography/2020/12/architecture/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/categories/</loc>
-    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/categories/coding/</loc>
-    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kevingimbel.de/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/google/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/google_pixel/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/mobile/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/photography/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/photography/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/blog/2020/12/5-things-ansible-can-do-for-you/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/ansible/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/blog/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/categories/coding/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/configuration/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/devops/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/sysadmin/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/sysops/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/tags/tool/</loc>
+    <lastmod>2020-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevingimbel.de/blog/2020/12/apply-a-patch-from-a-github-pr/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,11 +114,6 @@
   
   <url>
     <loc>https://kevingimbel.de/tags/release/</loc>
-    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -148,11 +213,6 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/tool/</loc>
-    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/tags/unix/</loc>
     <lastmod>2020-11-02T00:00:00+00:00</lastmod>
   </url>
@@ -204,16 +264,6 @@
   
   <url>
     <loc>https://kevingimbel.de/tags/fujifilm_x30/</loc>
-    <lastmod>2020-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/photography/</loc>
-    <lastmod>2020-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/categories/photography/</loc>
     <lastmod>2020-10-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -898,11 +948,6 @@
   </url>
   
   <url>
-    <loc>https://kevingimbel.de/tags/google_pixel/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevingimbel.de/photography/2020/04/isolation/</loc>
     <lastmod>2020-04-28T00:00:00+00:00</lastmod>
   </url>
@@ -944,11 +989,6 @@
   
   <url>
     <loc>https://kevingimbel.de/tags/bash/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/devops/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -1084,11 +1124,6 @@
   
   <url>
     <loc>https://kevingimbel.de/tags/germany/</loc>
-    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevingimbel.de/tags/google/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   

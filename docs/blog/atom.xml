@@ -7,12 +7,156 @@
             <link href="https://kevingimbel.de/blog/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://kevingimbel.de/blog/index.xml" rel="alternate" type="application/rss+xml" title="RSS" />
             <link href="https://kevingimbel.de/blog/atom.xml" rel="self" type="application/atom+xml" title="Atom" />
-    <updated>2020-12-04T17:29:47+01:00</updated>
+    <updated>2021-01-04T14:39:09+01:00</updated>
     
     
     
     
         <id>https://kevingimbel.de/blog/</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[5 Things Ansible Can Do for You]]></title>
+            <link href="https://kevingimbel.de/blog/2020/12/5-things-ansible-can-do-for-you/?utm_source=atom_feed" rel="alternate" type="text/html" />
+            
+                <link href="https://kevingimbel.de/blog/2020/11/grep-in-action/?utm_source=atom_feed" rel="related" type="text/html" title="Grep in Action" />
+                <link href="https://kevingimbel.de/project/passt/?utm_source=atom_feed" rel="related" type="text/html" title="Passt" />
+                <link href="https://kevingimbel.de/project/license/?utm_source=atom_feed" rel="related" type="text/html" title="License" />
+                <link href="https://kevingimbel.de/blog/2020/04/terrasave/?utm_source=atom_feed" rel="related" type="text/html" title="Terrasave" />
+            
+                <id>https://kevingimbel.de/blog/2020/12/5-things-ansible-can-do-for-you/</id>
+            
+            
+            <published>2020-12-08T00:00:00+00:00</published>
+            <updated>2020-12-08T00:00:00+00:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>In this post I want to highlight 5 things that Ansible can do you may not know about. When I started with Ansible I was quite overwhelmed by all the new things, and my first custom roles and playbooks weren&rsquo;t that great (in fact, they were really bad!). It took time to get to a comfortable level and to establish rules in the team at work, and we constantly iterate and improve over our Ansible usage.</p>
+<p>Some code examples for this blog post can be found on GitHub at <a href="https://github.com/KevinGimbel/blog-ansible-tips">KevinGimbel/blog-ansible-tips</a>. Feel free to clone the repo and test things along the way!</p>
+<h2 id="ansible-can-encrypt-and-decrypt-variable-files">Ansible can encrypt and decrypt variable files</h2>
+<p>Ansible comes with a command named <code>ansible-vault</code> that can be used to encrypt and decrypt files! This makes it super easy and secure to commit config files into source control like git.</p>
+<p>To use <code>ansible-vault</code> we first need a <code>ansible.cfg</code> configuration file. Chances are you already got one in your playbook, but if you haven&rsquo;t here&rsquo;s an example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[defaults]</span>
+<span style="color:#a6e22e">vault_password_file</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/some/directory/my.vault.password</span>
+</code></pre></div><section class="note info">
+    
+    <p>I removed everything that isn&rsquo;t relevant from the config file! A config file in your project will likely have more fields</p> 
+</section>
+<p>By configuring <code>vault_password_file</code> we tell ansible in which file it can find a password to encrypt and decrypt our files. This file contains only the password, like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">fHd0M5wWuYRqstyI7rw4WvwP10xnkvhNLHo3BC2O4bhVuT7hNhtOnfWtjgIySKhzWHNUr3Z6Nn9uU93yDbmqymGXFmUkjGhXCBmCc468rwrQsEg2HMt1h0Pmqj5yVTkN
+</code></pre></div><p>With this config in place encrypt and decrypt files with the <code>ansible-vault</code> cli. Assuming we have all secrets in a <code>vault_vars.yml</code> file inside <code>inventories/production/group_vars/magento2</code> directory:</p>
+<ul>
+<li>ansible-vault encrypt inventories/production/group_vars/magento2/vault_vars.yml</li>
+<li>ansible-vault decrypt inventories/production/group_vars/magento2/vault_vars.yml</li>
+</ul>
+<p>You can also view the file without decrypting it:</p>
+<ul>
+<li>ansible-vault view inventories/production/group_vars/magento2/vault_vars.yml</li>
+</ul>
+<section class="note ">
+    
+    <p><p><strong>Pro tip</strong>: If you are using a shared cloud drive like Nextcloud, OwnCloud or AWS S3, you can share the vault password files with your team and have them automatically synced into some directory on everyones computer, like <code>~/work/ansible-password/</code> so everybody can decrypt the files with no additional setup steps.</p>
+<p>Alternatively you can share the password with a traditional password manager but then everybody needs to setup the files first!</p>
+</p> 
+</section>
+<h2 id="ansible-can-run-commands-against-localhost">Ansible can run commands against localhost</h2>
+<p>Ansible by default connects via SSH to a remote server and then runs commands through Python, but sometimes we do not need this. If we talk to a API (see below), we may not want to run the code on a server and instead just want to execute code through Ansible. For this the special <code>localhost</code> host keyword exists!</p>
+<p>Take the following playbook</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- <span style="color:#f92672">hosts</span>: <span style="color:#ae81ff">localhost</span>
+  <span style="color:#f92672">tasks</span>:
+    - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;get hostname&#34;</span>
+      <span style="color:#f92672">command</span>: <span style="color:#e6db74">&#34;hostname&#34;</span>
+      <span style="color:#f92672">register</span>: <span style="color:#ae81ff">local_name</span>
+    - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;show hostname&#34;</span>
+      <span style="color:#f92672">debug</span>:
+        <span style="color:#f92672">msg</span>: <span style="color:#e6db74">&#34;{{ local_name.stdout }}&#34;</span>
+</code></pre></div><p>If we run this playbook with <code>ansible-playbook tip-2-local.yml</code> it will not connect to any remote server and just show the host name of the local computer.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook tip-2-local.yml
+
+PLAY <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> **************************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> ********************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>get hostname<span style="color:#f92672">]</span> ***********************************************************************************************
+changed: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>show hostname<span style="color:#f92672">]</span> **********************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;msg&#34;</span>: <span style="color:#e6db74">&#34;kevins-mbp.lan&#34;</span>
+<span style="color:#f92672">}</span>
+
+PLAY RECAP ********************************************************************************************************
+localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>   
+
+</code></pre></div><h2 id="ansible-can-simulate-changes">Ansible can simulate changes</h2>
+<p>When working on a playbook or deploying a new role for the first time, it can be nice to get an overview of what would change before doing any change at all. For this, Ansible has the <code>--check</code> flag.</p>
+<p>All tasks will be marked as &ldquo;skipped&rdquo; and Ansible will not make any changes at all!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook --check tip-3-check.yml
+
+PLAY <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> **************************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> ********************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>move file<span style="color:#f92672">]</span> **************************************************************************************************
+skipping: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+PLAY RECAP ********************************************************************************************************
+localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>   
+
+</code></pre></div><h2 id="ansible-can-run-only-a-subset-of-tasks">Ansible can run only a subset of tasks</h2>
+<p>Ansible can also run a subset of all tasks. This is especially helpful when the changes do not require a full deployment / check. Think of a Apache role where the user maybe wants to update a virtual host but has no interest in running other tasks such as checking the installed version or enabling modules. In such a case we can use tags on our tasks when writing an ansible role.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;test tags&#34;</span>
+  <span style="color:#f92672">debug</span>:
+    <span style="color:#f92672">msg</span>: <span style="color:#e6db74">&#34;I only run with -t test1&#34;</span>
+  <span style="color:#f92672">tags</span>:
+    - <span style="color:#ae81ff">test1</span>
+- <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;test tags 2&#34;</span>
+  <span style="color:#f92672">debug</span>:
+    <span style="color:#f92672">msg</span>: <span style="color:#e6db74">&#34;I only run with -t test2&#34;</span>
+  <span style="color:#f92672">tags</span>:
+    - <span style="color:#ae81ff">test2</span>
+</code></pre></div><p>If we now run ansible-playbook with <code>--tags</code> or <code>-t</code> flag only the matching tasks will be executed. If we run <em>without specifying tags</em>, all tasks will run!</p>
+]]></content>
+            
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/categories/coding" term="coding" label="coding" />
+                            
+                        
+                    
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://kevingimbel.de/tags/ansible" term="ansible" label="ansible" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/configuration" term="configuration" label="configuration" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/tool" term="tool" label="tool" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/devops" term="devops" label="devops" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/sysops" term="sysops" label="sysops" />
+                             
+                                <category scheme="https://kevingimbel.de/tags/sysadmin" term="sysadmin" label="sysadmin" />
+                            
+                        
+                    
+                
+            
+        </entry>
     
         
         <entry>

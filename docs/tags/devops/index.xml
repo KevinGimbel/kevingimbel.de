@@ -6,7 +6,16 @@
     <description>Recent content in devops on KevOps — DevOps, Cooking, and everything else I want to write about</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en_US</language>
-    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kevingimbel.de/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 Things Ansible Can Do for You</title>
+      <link>https://kevingimbel.de/blog/2020/12/5-things-ansible-can-do-for-you/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevingimbel.de/blog/2020/12/5-things-ansible-can-do-for-you/</guid>
+      <description>In this post I want to highlight 5 things that Ansible can do you may not know about. When I started with Ansible I was quite overwhelmed by all the new things, and my first custom roles and playbooks weren&amp;rsquo;t that great (in fact, they were really bad!). It took time to get to a comfortable level and to establish rules in the team at work, and we constantly iterate and improve over our Ansible usage.</description>
+    </item>
+    
     <item>
       <title>Terrasave</title>
       <link>https://kevingimbel.de/blog/2020/04/terrasave/</link>
