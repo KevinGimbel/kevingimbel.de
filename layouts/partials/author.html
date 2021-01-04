@@ -1,6 +1,6 @@
 <section class="author">
     <div class="left">
-        <img src="{{ ((resources.Get (.Site.Params.avatar_src)).Resize "200x200" ).RelPermalink }}" alt="{{ .Site.Params.avatar_alt }}" class="avatar">
+        <img src="{{ ((resources.Get (.Site.Params.avatar_src)).Resize "200x200 q75" ).RelPermalink }}" alt="{{ .Site.Params.avatar_alt }}" class="avatar">
     </div>
     <div class="right">
         {{ i18n "widget_author_about" . | markdownify }}

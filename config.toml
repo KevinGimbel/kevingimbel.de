@@ -6,6 +6,12 @@ theme = ["hugo-atom-feed", "hugo-kg-shortcodes"]
 publishDir = "docs"
 # ignoreErrors = ["error-output-taxonomy"]
 disableLanguages = ["es", "de"]
+
+[imaging]
+# Highest quality option, significantly increases build time!
+resampleFilter = "lanczos"
+quality = 100
+
 [params]
     avatar_src = "images/general/kevin-gimbel-2020.jpg"
     avatar_alt = "A Selfie of me"
