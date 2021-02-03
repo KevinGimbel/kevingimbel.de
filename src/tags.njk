@@ -1,0 +1,15 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+layout: single
+---
+<h1>Tagged "{{ tag }}"</h1>
+
+<ul class="post-list">
+{% for post in collections[ tag ] | reverse %}
+  <li class="post-listing mb0"><header class="post-listing__header"><time class="post__date">{{ post.date | toFormattedDate }}</time></header> <a href="{{ post.url }}">{{ post.data.title }}</a></li>
+{% endfor %}
+</ul>

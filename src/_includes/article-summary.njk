@@ -1,0 +1,23 @@
+<article class="mb2">
+  {% if post.data.type == "micro" %}
+      <div class="post__micro">
+        {{ post.data.content | safe }}
+      </div>
+  {% else %}
+    <{{ headingLevel if headingLevel else 'h2' }} class="mb0">
+    <a href="{{ post.url if post.data.type != "link" else post.data.source }}" class="post-heading__link post-heading__link--{{ post.data.type }}">{{ post.data.title }}</a>
+    </{{ headingLevel if headingLevel else 'h2'  }}>
+    {% if post.data.subtitle %}<p class="mt0 post-heading__subtitle">{{ post.data.subtitle }}</p>{% endif %}
+  {% endif %}
+
+    <header class="post-listing__header">
+      <time class="post__date">{{ post.date | toFormattedDate }}</time> | <a href="{{ post.url }}" title="Link to post {{ title }}">Permalink</a> {% if post.data.source %} | <span>External link</span>{% endif %}{% if post.data.language == "de" %} | <b>German</b>{% endif %}
+      {% if post.data.tags %}| {% for tag in post.data.tags %}<a href="/tags/{{ tag }}">#{{ tag }}</a> {% endfor -%}{% endif %}
+    </header>
+  
+    {% if post.templateContent %}
+      {% if post.data.type != "micro" %}
+        <p>{{ post.templateContent | striptags(true) | truncate(280) }} <a href="{{ post.url }}">Continue reading </a></p>
+      {% endif %}
+    {% endif %} 
+</article>

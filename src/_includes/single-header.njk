@@ -1,0 +1,18 @@
+{% if svg_title %}
+  <h1 class="svg-title" aria-label="{{ title }}">{{ svg_title | safe }}</h1>
+{% endif %}
+
+<header class="post-header{{ ' post-header__svg-title' if svg_title }}">
+
+{% if not svg_title %}
+  <div class="break-full-width">
+    <h1 class="mb0">{{ title }}</h1>
+    <p class="post-heading__subtitle h2  mb2 mt0">{{ subtitle }}</p>
+  </div>
+{% endif %}
+  {% if not exclude_author_info %}
+  <div class="post-header__inner">
+    <p>Written by <a href="/about"><b>{{ pkg.author }}</b></a> on <span itemprop="datePublished">{{ page.date | toFormattedDate }}</span>, {{ content | emojiReadTime }}</p>
+  </div>
+  {% endif %}
+</header>

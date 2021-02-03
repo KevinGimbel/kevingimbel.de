@@ -1,0 +1,5 @@
+<section class="gallery">
+{% for resource in resources %}
+  {% figure resource.src, resource.name %}
+{% endfor %}
+</section>

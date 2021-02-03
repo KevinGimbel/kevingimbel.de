@@ -1,0 +1,9 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<article class="post">
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+</article>
+{% endblock %}

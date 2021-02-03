@@ -1,0 +1,8 @@
+<svg width="50" height="50" viewBox="0 0 100 100" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1.56696,0,0,1.56696,-27.7261,-25.8245)">
+        <path id="side__top__8" d="M62.621,47.565L22.159,31.27C27.831,27.341 60.086,17.037 64.204,17.959L62.621,47.565Z" style="fill:var(--logo-dice-fill-color, #000);fill-opacity:0.5;stroke:black;stroke-width:0.64px;"/>
+        <path id="side__right__5" d="M64.221,17.99L62.867,47.364L76.028,61.239C72.854,46.851 69.214,31.901 64.221,17.99Z" style="fill:var(--logo-dice-fill-color, #000);fill-opacity:0.75;stroke:black;stroke-width:0.64px;"/>
+        <path id="side__bottom__2" d="M76.012,61.253L62.755,47.623L36.622,79.172C41.177,78.93 61.738,70.763 76.012,61.253Z" style="fill:var(--logo-dice-fill-color, #000);stroke:black;stroke-width:0.64px;"/>
+        <path id="side__left__3" d="M36.499,79.142C31.205,62.65 24.166,44.211 22.177,31.336L62.552,47.662L36.499,79.142Z" style="fill:var(--logo-dice-fill-color, #000);fill-opacity:0.75;stroke:black;stroke-width:0.64px;"/>
+    </g>
+</svg>

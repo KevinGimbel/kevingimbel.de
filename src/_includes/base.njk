@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+  {{ head | safe }}
+  {% block head %}{% endblock %}
+</head>
+<body class="dark-mode">
+  <header class="site-header">
+  <div class="header-logo__wrap">
+      <a href="/" title="KevinGimbel.de" class="flex">
+        {% include "../assets/logo-dice.svg" %}
+        {% include "../assets/logo-hand-written.svg" %}
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Main">
+      <a class="{{ 'active' if '/' == page.url }}" title="Return to home page" href="/">home</a>
+      <a class="{{ 'active' if '/blog' in page.url }}" title="View all blog posts" href="/blog">blog</a>
+      <a class="{{ 'active' if '/about' in page.url }}" title="Learn more about me" href="/about">about</a>
+      <a href="/feed.xml" title="Subscribe via RSS/Atom">RSS</a>
+    </nav>
+  </header>
+  <div class="header-wave">
+    <svg width="100%" height="100%" viewBox="0 0 1440 120"><path d="M-7.397,22.752c85.366,24.066 343.52,34.381 501.939,34.72c151.87,0.324 301.032,-44.228 452.753,-50.937c192.025,-8.491 332.048,39.858 493.378,58.105l0.992,-68.444l-1445.91,1.218c0,0 -25.068,19.159 -3.148,25.338Z" style="fill:var(--color-header-wave);"/></svg>
+  </div>
+
+  <main class="content">
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </main>
+
+  <div class="footer-wave" style="--color-header-wave: var(--color-footer-wave); transform: rotate(180deg)">
+    <svg width="100%" height="100%" viewBox="0 0 1440 120"><path d="M-7.397,22.752c85.366,24.066 343.52,34.381 501.939,34.72c151.87,0.324 301.032,-44.228 452.753,-50.937c192.025,-8.491 332.048,39.858 493.378,58.105l0.992,-68.444l-1445.91,1.218c0,0 -25.068,19.159 -3.148,25.338Z" style="fill:var(--color-header-wave);"/></svg>
+  </div>
+
+  <footer class="site-footer">
+  <div class="footer-block">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/photography" title="View some of my photography">photography</a> &bullet;
+        <a href="/about" title="Learn more about me">about</a> &bullet;
+        <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
+        <a href="/feed.xml" title="Subscribe via RSS/Atom">RSS</a>
+      </nav>
+      <p>&copy; 2009 - 2021 Kevin Gimbel</p>
+    </div>
+    
+    <div class="footer-block">
+      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
+    </div>
+    
+    <div class="footer-block">
+      <p><small>Forever work in progress</small></p>
+      <small><a href="https://github.com/KevinGimbel/kevingimbel.de/blob/main/{{ page.inputPath }}">Edit this page on GitHub</a></small>
+    </div>
+  </footer>
+  {% caniuse_js %}
+  {% codepen_js %}
+  {{ foot | safe }}
+  {% block foot %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "eleventy-plugin-social-images",
+  "version": "1.0.0",
+  "description": "Create social images from 11ty content via node-canvas",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevingimbel/eleventy-plugin-social-images.git"
+  },
+  "keywords": [
+    "11ty-plugin",
+    "eleventy-plugin",
+    "canvas"
+  ],
+  "author": "Kevin Gimbel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevingimbel/eleventy-plugin-social-images/issues"
+  },
+  "homepage": "https://github.com/kevingimbel/eleventy-plugin-social-images#readme",
+  "dependencies": {
+    "canvas": "^2.6.1"
+  }
+}

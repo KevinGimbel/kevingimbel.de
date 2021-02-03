@@ -1,0 +1,16 @@
+{% set currentYear = "" %}
+<ul class="post-list">
+  {%- for post in postslist | reverse -%}
+    {% if showYear %}
+      {% set postYear = post.date.getFullYear() %}
+      {% if currentYear != postYear %}
+      {% set currentYear = postYear %}
+        <li class="post-listing__headline"><h2 id="year-{{ postYear }}">{{ postYear }}</h2></li>
+    {% endif %}
+    {% endif %}
+
+    <li class="post-listing" {% if post.data.language %}lang="{{ post.data.language }}"{% endif %}>
+      {% include "article-summary.njk" %}
+    </li>
+  {%- endfor -%}
+</ul>
