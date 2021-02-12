@@ -9,6 +9,7 @@ type: blog
 categories:
     - coding
 tags:
+    - code
     - link
     - tumblr-imported
 

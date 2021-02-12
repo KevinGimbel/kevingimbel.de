@@ -11,6 +11,8 @@ tags:
     - cli
     - bash
     - fish
+    - code
+
 date: "2020-04-24"
 lastmod: "2020-04-24"
 ---

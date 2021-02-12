@@ -8,6 +8,8 @@ tags:
     - rust
     - docker
     - cli
+    - code
+
 date: "2020-08-06"
 lastmod: "2020-08-06"
 ---

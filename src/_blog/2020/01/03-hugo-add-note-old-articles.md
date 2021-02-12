@@ -10,6 +10,7 @@ tags:
     - hugo
     - cms
     - ssg
+    - code
 date: "2020-01-02"
 lastmod: "2020-01-02"
 ---

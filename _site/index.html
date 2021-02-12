@@ -22,6 +22,10 @@
   :root {
     --content-width: 80vw;
   }
+
+  .flex__boxed {
+    --padding: 1em 0 !important;
+  }
 }
 </style>
 
@@ -56,21 +60,100 @@
   <main class="content">
     
 <article class="post">
-  <div class="post-body">
+  <div class="post-body stack" style="--stack-margin: 3rem;">
     <section class="pop-box">
-<div class="[ flex flex--space-around flex--centered ]  [ small--flex__column ]">
+<div class="[ flex flex--space-around flex--centered ]  [ small-flex__column ]">
   <div class="flex__boxed" style="--padding: 4rem 0 2rem">
-    <img src="/assets/img/kevin-avatar-w200.jpg" class="author__avatar" style="max-width: 200px;">
+    <img src="/assets/img/kevin-avatar-w200.jpg" alt="Avatar, a picture of Kevin Gimbel" class="author__avatar" style="max-width: 200px;">
   </div>
   <div class="flex__boxed" style="--padding: 2rem 0 2rem 2rem">
     <h1 class="mb0 mt0">Hi, I'm <a href="/about/">Kevin</a>.</h1>
+    <p>I'm a <b>DevOps Engineer</b> with a focus on <i class="t-accent">automation</i> and security.</p>
   </div>
 </div>
-    <p class="h4">A <i class="t-accent">DevOps Engineer</i> with a background in Front-End Development, passionated Gamer both digital and tabletop, <br>& a <i class="t-accent">husband/dad</i>.</p>
+  <p>Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
+  <p>You can find out more <a href="/about">on the about page</a>.</p>
 </section>
-<p class="h4">The last thing I blogged about was:<br>
-<span class="h1"><a href="/blog/2021/02/implementing-the-from-trait-in-rust/">Implementing the From trait in Rust</a></span></p>
-<p><a href="/blog">View all articles</a></p>
+<section class="break-left">
+<h2 class="h1 pl2">The last things I wrote about</h2>
+<div class="home__last-posts">
+  <article class="post-teaser post-teaser-0">
+  <a href="/blog/2021/02/the-electric-state/" title="Continue reading The Electric State">
+  <h3 class="post-teaser__headline">The Electric State</h3>
+  <p class="h4 post-teaser__sub-headline">Beautiful sci-fi illustration and a story set in a moody, dystopian 1990s USA - what&#39;s not to love?</p>
+  </a>
+  <span class="post-teaser__category">#review</span> 
+  </article> 
+  <article class="post-teaser post-teaser-1">
+  <a href="/blog/2021/02/three-songs/" title="Continue reading Three songs">
+  <h3 class="post-teaser__headline">Three songs</h3>
+  <p class="h4 post-teaser__sub-headline">That get me through the day</p>
+  </a>
+  <span class="post-teaser__category">#playlist</span> 
+  </article> 
+  <article class="post-teaser post-teaser-2">
+  <a href="/blog/2021/02/sea-of-thieves/" title="Continue reading Sea of Thieves">
+  <h3 class="post-teaser__headline">Sea of Thieves</h3>
+  <p class="h4 post-teaser__sub-headline">A short anecdote about the good in multiplayer games</p>
+  </a>
+  <span class="post-teaser__category">#gaming</span> 
+  </article> 
+<div class="post-teaser__view-all">
+  <p><a href="/blog">View all articles</a> 👉</p>
+</div>
+</div>
+</section>
+    
+
+<hr>
+<section class="break-full-width pl2">
+<h3>Latest images from Pixelfed</h3>
+<p>Follow me at <a href="https://pixelfed.social/kevingimbel">@kevingimbel@pixelfed.social</a><br><small>Scroll right for more images 👉</small></p>
+  <div class="pixelfed flex" style="overflow: auto;">
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/35964"><img src="/assets/img/pixelfed/f85a34bd-400.jpeg" width="400" height="225" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/70130090989719552"><img src="/assets/img/pixelfed/5d5d6bda-400.jpeg" width="400" height="225" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/264326393083596800"><img src="/assets/img/pixelfed/5393acd-400.jpeg" width="400" height="534" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/36224"><img src="/assets/img/pixelfed/ddcc8b62-400.jpeg" width="400" height="300" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/89689605070262272"><img src="/assets/img/pixelfed/e1188e4c-400.jpeg" width="400" height="225" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/70129462674591744"><img src="/assets/img/pixelfed/ac9c2e85-400.jpeg" width="400" height="225" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/260685144833265664"><img src="/assets/img/pixelfed/b2e404-400.jpeg" width="400" height="299" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/35223"><img src="/assets/img/pixelfed/e9702fc4-360.jpeg" width="360" height="640" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/263996088598532096"><img src="/assets/img/pixelfed/e3245544-400.jpeg" width="400" height="299" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+    <div class="img-boxed">
+      <a href="https://pixelfed.social/p/kevingimbel/42842"><img src="/assets/img/pixelfed/575fafa5-400.jpeg" width="400" height="400" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    
+  </div>
+</section>
+
   </div>
 </article>
 
@@ -80,19 +163,20 @@
     <svg width="100%" height="100%" viewBox="0 0 1440 120"><path d="M-7.397,22.752c85.366,24.066 343.52,34.381 501.939,34.72c151.87,0.324 301.032,-44.228 452.753,-50.937c192.025,-8.491 332.048,39.858 493.378,58.105l0.992,-68.444l-1445.91,1.218c0,0 -25.068,19.159 -3.148,25.338Z" style="fill:var(--color-header-wave);"/></svg>
   </div>
 
-  <footer class="site-footer">
+  <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
         <a href="/photography" title="View some of my photography">photography</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
+        <a href="/uses" title="# Tools, equipment, hardware, etc. I use and like">uses</a> &bullet;
         <a href="/feed.xml" title="Subscribe via RSS/Atom">RSS</a>
       </nav>
       <p>&copy; 2009 - 2021 Kevin Gimbel</p>
     </div>
     
     <div class="footer-block">
-      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
+      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!" rel="me">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com" rel="me">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
     </div>
     
     <div class="footer-block">

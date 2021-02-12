@@ -4,7 +4,7 @@
   "description": "Web Development, DevOps, Baking, and everything else.",
   "main": "index.js",
   "scripts": {
-    "dev": "eleventy --serve --incremental",
+    "dev": "eleventy --serve",
     "build": "eleventy --input=./src --output=./_site"
   },
   "repository": {
@@ -18,9 +18,13 @@
   },
   "homepage": "https://github.com/kevingimbel/kevingimbel.de#readme",
   "devDependencies": {
+    "@11ty/eleventy-cache-assets": "^2.1.0",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
-    "image-size": "^0.9.3"
+    "@sindresorhus/slugify": "^1.1.0",
+    "html-minifier": "^4.0.0",
+    "image-size": "^0.9.3",
+    "rss-parser": "^3.11.0"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^0.7.8",
@@ -30,6 +34,7 @@
     "@kevingimbel/eleventy-plugin-emoji-rating": "^1.0.0",
     "concurrently": "^5.3.0",
     "eleventy-plugin-page-assets": "^0.3.0",
-    "markdown-it": "^12.0.4"
+    "markdown-it": "^12.0.4",
+    "node-html-parser": "^2.1.0"
   }
 }

@@ -5,6 +5,7 @@ type: blog
 categories:
     - kochen
 tags:
+    - kochen
     - veggie
     - pasta
     - tagliatelle

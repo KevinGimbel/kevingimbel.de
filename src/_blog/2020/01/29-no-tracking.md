@@ -8,6 +8,8 @@ tags:
     - security
     - surveillance
     - capitalism
+    - code
+
 date: "2020-01-29"
 lastmod: "2020-01-29"
 ---

@@ -10,6 +10,7 @@ tags:
     - unix
     - tool
     - cli
+    - code
     - terminal
 date: "2020-12-03"
 lastmod: "2020-12-03"

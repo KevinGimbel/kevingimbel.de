@@ -22,7 +22,7 @@ head: |
     {% set src = post.template.parsed.dir + '/' + post.data.resources[0].src %}
     <a href="{{ post.url }}" class="mt0 mb0 db">{% image src, post.data.resources[0].name, post.url %}</a>
     <header class="post-listing__header">
-      <time class="post__date">{{ post.date | toFormattedDate }}</time>{% if post.data.source %} | <span>External link</span>{% endif %}{% if post.data.language == "de" %} | <b>German</b> {% endif %}
+      <span class="post__date">{{ post.date | toFormattedDate }}</span>{% if post.data.source %} | <span>External link</span>{% endif %}{% if post.data.language == "de" %} | <b>German</b> {% endif %}
       | {% for tag in post.data.tags %}<a href="/tags/{{ tag }}">#{{ tag }}</a> {% endfor -%}
     </header>
     </article>

@@ -8,10 +8,12 @@ const pageAssetsPlugin = require('eleventy-plugin-page-assets');
 const Image = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const path = require("path");
-const sizeOf = require('image-size');
+const slugify = require("@sindresorhus/slugify");
+
 // Helper
 const markdown = require("markdown-it")({ html: true });
 const inspect = require("util").inspect;
+const htmlmin = require("html-minifier");
 
 // This shortcode is taken from the official docs at 11ty.dev/docs/plugins/image/#use-this-in-your-templates
 async function imageShortcode(src, alt, url) {
@@ -50,6 +52,35 @@ async function imageShortcode(src, alt, url) {
 }
 
 module.exports = function (eleventyConfig) {
+
+
+  // ======================================== Custom content collections
+  //
+  //
+  // blog collection
+  eleventyConfig.addCollection("blog", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.page.inputPath.substr(2, 9) == 'src/_blog' && (process.env.NODE_ENV == 'production' ? item.data.draft != true : true);
+    }).sort((a, b) => a.date - b.date);
+  });
+
+  // photography content
+  eleventyConfig.addCollection("photography", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.page.inputPath.substr(2, 16) == 'src/_photography' && item.data.draft != true;
+    }).sort((a, b) => a.date - b.date);
+  });
+
+  // books content
+  eleventyConfig.addCollection("books", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.page.inputPath.substr(2, 10) == 'src/_books';
+    }).sort((a, b) => a.date - b.date);
+  });
+
+
+
+
 
   // image shortcode
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
@@ -138,6 +169,14 @@ module.exports = function (eleventyConfig) {
     return `<a href="${last_post.data.page.url}">${last_post.data.title}</a>`;
   });
 
+
+  eleventyConfig.addPairedShortcode("sidebyside", function (content, css_classes = "") {
+    return `<section class="side-by-side ${css_classes}">${content}</section>`;
+  });
+  eleventyConfig.addPairedShortcode("side", function (content, side = "", css_classes = "") {
+    return `<div class="side__${side} ${css_classes}">${content}</div>`;
+  });
+
   // Copy `assets/css` to `_site/assets/css`
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/img");
@@ -147,30 +186,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" });
 
 
-  // ======================================== Custom content collections
-  //
-  //
-  // blog collection
-  eleventyConfig.addCollection("blog", function (collectionApi) {
-    return collectionApi.getAll().filter(function (item) {
-      return item.data.page.inputPath.substr(2, 9) == 'src/_blog' && (process.env.NODE_ENV == 'production' ? item.data.draft != true : true);
-    }).sort((a, b) => a.date - b.date);
-  });
-
-  // photography content
-  eleventyConfig.addCollection("photography", function (collectionApi) {
-    return collectionApi.getAll().filter(function (item) {
-      return item.data.page.inputPath.substr(2, 16) == 'src/_photography' && item.data.draft != true;
-    }).sort((a, b) => a.date - b.date);
-  });
-
-  // books content
-  eleventyConfig.addCollection("books", function (collectionApi) {
-    return collectionApi.getAll().filter(function (item) {
-      return item.data.page.inputPath.substr(2, 10) == 'src/_books' && item.data.draft != true;
-    }).sort((a, b) => a.date - b.date);
-  });
-
   // @TODO(kevingimbel): 11ty complains that this shortcode is slow. Refactor.
   eleventyConfig.addFilter("toFormattedDate", function (date) {
     if (!date) {
@@ -178,6 +193,27 @@ module.exports = function (eleventyConfig) {
     }
     return date.toLocaleDateString('de-DE', { year: 'numeric', month: '2-digit', day: '2-digit' });
   });
+
+
+  eleventyConfig.addFilter('slugify', function (str) {
+    return slugify(str);
+  });
+
+  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+  //   // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+  //   if (outputPath.endsWith(".html")) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true
+  //     });
+  //     return minified;
+  //   }
+
+  //   return content;
+  // });
+
+
 
   return {
     dir: {

@@ -59,7 +59,7 @@
   
 </header>
 
-  <div itemtype="articleBody" class="post-body">
+  <div itemtype="articleBody" class="post-body stack">
     <p><code>grep</code> is a CLI tool created in 1974 that is pre-installed on any Linux/Unix-like/BSD* system. <code>grep</code> is an acronym and stands for <em>&quot;globally search for a regular expression and print matching lines&quot;</em> - quite a mouth full but a good description of what <code>grep</code> does. The more I worked in the Sys-/DevOps domain, the more I found myself using <code>grep</code> and <code>awk</code> to select parts of files for further processing. In this article I want to highlight some things <code>grep</code> can do that <em>I didn't know about but wish I did</em> when I started using it.</p>
 <h3>1. Grep can open files</h3>
 <p>Contrary to popular believe, you do not need <code>cat file.txt | grep pattern</code> - <code>grep</code> can open files just fine!</p>
@@ -98,21 +98,24 @@ a few lines.
 
   </div>
 
-  <footer class="post-footer">
+  <footer class="post-footer stack">
     <hr>
     
-    <span>Find similar content under:</span>
+    <p>Find similar content under:
       
-        <a href="/tags/tool">#tool</a>
+        <a href="/tags/tool">#tool</a> &bull; 
       
-        <a href="/tags/unix">#unix</a>
+        <a href="/tags/unix">#unix</a> &bull; 
       
-        <a href="/tags/cli">#cli</a>
+        <a href="/tags/cli">#cli</a> &bull; 
       
-        <a href="/tags/automation">#automation</a>
+        <a href="/tags/automation">#automation</a> &bull; 
       
-        <a href="/tags/scripting">#scripting</a>
+        <a href="/tags/scripting">#scripting</a> &bull; 
       
+        <a href="/tags/code">#code</a> &bull; 
+      
+    </p>
     <div class="flex" style="--padding: 1rem 0; justify-content: space-between;">
     <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2020/10/saatenbrot/">Saatenbrot</a></div>
     <div class="flex__boxed"><b>Next post</b><br><a class="h5" href="/blog/2020/11/die-linke-hand-der-dunkelheit/">Die linke Hand der Dunkelheit</a></div>
@@ -123,7 +126,7 @@ a few lines.
 <div class="flex  [ small-flex__column-reverse ]">
   <div class="flex__boxed" style="max-width: 75%; --padding: 2em 2em 0 0;">
     <p class="h4 mt0">Hi, I'm Kevin!</p>
-    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and distributed systems. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
+    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and security. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
   </div>
   <div class="flex__boxed" style="--padding: 2em 0 0 0;">
     <img src="/assets/img/kevin-avatar-w200.jpg" class="author__avatar" alt="Image of Kevin Gimbel, Author of this website"/>
@@ -139,19 +142,20 @@ a few lines.
     <svg width="100%" height="100%" viewBox="0 0 1440 120"><path d="M-7.397,22.752c85.366,24.066 343.52,34.381 501.939,34.72c151.87,0.324 301.032,-44.228 452.753,-50.937c192.025,-8.491 332.048,39.858 493.378,58.105l0.992,-68.444l-1445.91,1.218c0,0 -25.068,19.159 -3.148,25.338Z" style="fill:var(--color-header-wave);"/></svg>
   </div>
 
-  <footer class="site-footer">
+  <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
         <a href="/photography" title="View some of my photography">photography</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
+        <a href="/uses" title="# Tools, equipment, hardware, etc. I use and like">uses</a> &bullet;
         <a href="/feed.xml" title="Subscribe via RSS/Atom">RSS</a>
       </nav>
       <p>&copy; 2009 - 2021 Kevin Gimbel</p>
     </div>
     
     <div class="footer-block">
-      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
+      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!" rel="me">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com" rel="me">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
     </div>
     
     <div class="footer-block">

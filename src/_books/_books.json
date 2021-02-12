@@ -1,0 +1,3 @@
+{
+  "permalink": "/book/{{ title | slug }}/"
+}

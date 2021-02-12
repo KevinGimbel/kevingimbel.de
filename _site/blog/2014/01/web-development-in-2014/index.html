@@ -59,7 +59,7 @@
   
 </header>
 
-  <div itemtype="articleBody" class="post-body">
+  <div itemtype="articleBody" class="post-body stack">
     <p>As soon as you start to really dig into web development it feels like things would change daily - at least I feel that way. But there's one thing that I'd like everyone to do in 2014: At least <strong>basic responsive web development</strong> to ensure your site - at least - looks good and is usable on whatever screen it will be displayed. There's nothing I hate more than scrolling websites around on my phone when I want to read an article (to be honest, I mostly leave the site and never come back). However, I'll give you a short look into basic responsive design/development patterns.</p>
 <h3>Planning</h3>
 <p>First of all make sure what your site is about and what your content is like. <strong>Never hide content!</strong> Hiding content is the last resort and I prefer to avoid this. Make sure your site displays all the information you need the user to have in a order that makes sense: Do I want to scroll through your header, sidebar and a small advertisement area before I can find the article I'm searching for? No, I don't. Good responsive, scalable design starts with mark up and there are a few tricks to archive a good looking, usable website. Before we start to look at the code: I'll focus on blog-like websites here and will cover more complex things later in another post.</p>
@@ -104,16 +104,17 @@
 
   </div>
 
-  <footer class="post-footer">
+  <footer class="post-footer stack">
     <hr>
     
-    <span>Find similar content under:</span>
+    <p>Find similar content under:
       
-        <a href="/tags/css">#css</a>
+        <a href="/tags/css">#css</a> &bull; 
       
+    </p>
     <div class="flex" style="--padding: 1rem 0; justify-content: space-between;">
-    <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2013/12/brackets-vs.-sublime-text/">Brackets vs. Sublime Text</a></div>
-    <div class="flex__boxed"><b>Next post</b><br><a class="h5" href="/blog/2014/01/mixtape:-2013/">Mixtape: 2013</a></div>
+    <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2013/12/brackets-vs-sublime-text/">Brackets vs. Sublime Text</a></div>
+    <div class="flex__boxed"><b>Next post</b><br><a class="h5" href="/blog/2014/01/mixtape-2013/">Mixtape: 2013</a></div>
     </div>
   </footer>
 
@@ -121,7 +122,7 @@
 <div class="flex  [ small-flex__column-reverse ]">
   <div class="flex__boxed" style="max-width: 75%; --padding: 2em 2em 0 0;">
     <p class="h4 mt0">Hi, I'm Kevin!</p>
-    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and distributed systems. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
+    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and security. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
   </div>
   <div class="flex__boxed" style="--padding: 2em 0 0 0;">
     <img src="/assets/img/kevin-avatar-w200.jpg" class="author__avatar" alt="Image of Kevin Gimbel, Author of this website"/>
@@ -137,19 +138,20 @@
     <svg width="100%" height="100%" viewBox="0 0 1440 120"><path d="M-7.397,22.752c85.366,24.066 343.52,34.381 501.939,34.72c151.87,0.324 301.032,-44.228 452.753,-50.937c192.025,-8.491 332.048,39.858 493.378,58.105l0.992,-68.444l-1445.91,1.218c0,0 -25.068,19.159 -3.148,25.338Z" style="fill:var(--color-header-wave);"/></svg>
   </div>
 
-  <footer class="site-footer">
+  <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
         <a href="/photography" title="View some of my photography">photography</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
+        <a href="/uses" title="# Tools, equipment, hardware, etc. I use and like">uses</a> &bullet;
         <a href="/feed.xml" title="Subscribe via RSS/Atom">RSS</a>
       </nav>
       <p>&copy; 2009 - 2021 Kevin Gimbel</p>
     </div>
     
     <div class="footer-block">
-      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
+      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!" rel="me">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com" rel="me">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
     </div>
     
     <div class="footer-block">

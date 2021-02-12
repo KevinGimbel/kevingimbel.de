@@ -3,13 +3,25 @@ layout: single
 title: "About"
 ---
 
-{{ abbr "tl;dr" "too long, didn't read" }}
+{% breakout "full-width" %}
+
+{% sidebyside %}
+{% side "left" "wide" %}
+<img src="/assets/img/kevin-avatar.jpg" title="Image of Kevin Gimbel" class="img--fancy-border">
+{% endside %}
+
+{% side "right" "small bg h4" %}
 
 Hello unknown reader,
 
 my name is **Kevin Gimbel** and you've reached my corner of the world wide web. 👴
 
-I'm actually not that old tho, I'm in my late twenties and I somehow ended up in the world of (cloud) computing. I'm interested in [Rust](https://rust-lang.org) (a safe and fast programming language), Sci-Fi, dystopia books, fantasy worlds (Divinity, Elder Scrolls, Dungeons & Dragons), and video and boardgames.
+I'm actually not that old tho, I'm in my late twenties and I somehow ended up in the world of (cloud) computing. I'm interested in [Rust](https://rust-lang.org) (_a safe and fast programming language_), Sci-Fi, dystopia books, fantasy worlds (_Divinity, Elder Scrolls, Dungeons & Dragons_), and video and boardgames.
+{% endside %}
+{% endsidebyside %}
+
+{% endbreakout %}
+
 
 I tent to start a lot of things and pursue a lot of different interests when I'm in a rush, but usually not much of it stays with me; Over the past year I briefly started manufacturing solid perfumes, for example. I usually always have something to do, be it a side-project or family life; Somethings's always up.
 

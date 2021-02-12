@@ -10,6 +10,8 @@ tags:
     - web
     - css
     - javascript
+    - code
+
 date: "2020-03-24"
 lastmod: "2020-03-24"
 ---

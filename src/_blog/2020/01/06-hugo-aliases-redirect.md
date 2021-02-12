@@ -9,6 +9,7 @@ tags:
     - hugo
     - ssg
     - seo
+    - code
 date: "2020-01-06"
 lastmod: "2020-01-06"
 ---

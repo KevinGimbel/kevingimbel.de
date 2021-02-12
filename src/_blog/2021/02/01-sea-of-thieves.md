@@ -15,6 +15,4 @@ foot: null
 exclude_from: 
     - "home"
 ---
-While playing Sea of Thieves and unloading cargo in a port, two random guys came swimming from the open sea shouting "Don't shoot, don't shoot", then entered our ship, and started drinking and dancing. After a few minutes of us dancing together, they entered the canons and shot themselves off into the sea.
-
-Such a beautiful and weird game!
+While unloading some ~~stolen goods~~ cargo in Sea of Thieves, two random guys came swimming from the open sea shouting "Don't shoot, don't shoot", then entered our ship, and started drinking and dancing. After a few minutes of us dancing together, they entered the canons and shot themselves off into the sea.

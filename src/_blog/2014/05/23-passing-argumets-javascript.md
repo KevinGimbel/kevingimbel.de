@@ -7,6 +7,7 @@ categories:
 date: 2014-05-23T00:00:00Z
 tags:
     - javascript
+    - code
 title: Passing Arguments in JavaScript
 
 aliases:

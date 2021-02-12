@@ -9,17 +9,18 @@
   
   {% include "./single-header.njk" %}
 
-  <div itemtype="articleBody" class="post-body">
+  <div itemtype="articleBody" class="post-body stack">
     {{ content | safe }}
   </div>
 
-  <footer class="post-footer">
+  <footer class="post-footer stack">
     <hr>
     {% if tags %}
-    <span>Find similar content under:</span>
+    <p>Find similar content under:
       {% for tag in tags %}
-        <a href="/tags/{{ tag }}">#{{ tag }}</a>
+        <a href="/tags/{{ tag }}">#{{ tag }}</a> &bull; 
       {% endfor %}
+    </p>
     {% endif %}
 
     {%- set previousPost = collections.blog | getPreviousCollectionItem(page) -%}

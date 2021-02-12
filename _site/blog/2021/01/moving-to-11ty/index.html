@@ -60,12 +60,12 @@
 
   
   <div class="post-header__inner">
-    <p>Written by <a href="/about"><b>Kevin Gimbel</b></a> on <span itemprop="datePublished">24.01.2021</span>, 🍿  6 min. read</p>
+    <p>Written by <a href="/about"><b>Kevin Gimbel</b></a> on <span itemprop="datePublished">24.01.2021</span>, 🍿  7 min. read</p>
   </div>
   
 </header>
 
-  <div itemtype="articleBody" class="post-body">
+  <div itemtype="articleBody" class="post-body stack">
     <p>In this article I want to discuss my reasons for moving my personal website and blog (the very site you're reading right now!) from <a href="https://gohugo.io">Hugo</a> to <a href="https://www.11ty.dev/">11ty</a>, a static-site generator written in JavaScript. I'll also highlight some adjustments and configs I needed to make in order to get 11ty working with my existing articles that I've used with Hugo, and before that Jekyll, and most importantly, how I ported a ton of custom shortcodes! I will write this article as I move along with the transformation as to capture my experience and thoughts immediately.</p>
 <h2>Why move?</h2>
 <p><em>&quot;Why move?&quot;</em> is a valid question because there's nothing in particular wrong with Hugo - it's a great static site generator. I've started working on a redesign and figured out that it takes a huge amount of time to redesign my relatively small blog. I also found that I've also felt a lack of flexibility when it came to hugo and in the last days of creating a new theme the reloading / recompile pipeline was acting up so that I could no longer get the latest versions of CSS or JS in the browser and needed to constantly restart the dev server.</p>
@@ -83,11 +83,18 @@
 <p>For me the most important thing when moving to any new <abbr title="a tool that creates a HTML website from content and config files">static site generator</abbr> is the ability to configure permalinks. I do not want to break all old links and I do not want to create some rewrite or redirect magic. I want to continue using permalinks as I've been doing with Hugo.</p>
 <p>I wasn't able to find a solution in the docs, but found the solution in <a href="https://hugogiraudel.com/2020/11/30/from-jekyll-to-11ty/#posts-permalinks">an article on moving to 11ty by Kitty</a>. They also struggled with the permalink structure and then found out that creating a JSON file named after the collection with configs for permalink and layout is the solution.</p>
 <p>So I placed a <code>_blog.json</code> file in my <code>_blog</code> directory (because the collection in eleventy is also called <code>blog</code>).</p>
-<pre class="language-js"><code class="language-js"><span class="token punctuation">{</span><br>  <span class="token string">"layout"</span><span class="token operator">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span><br>  <span class="token string">"permalink"</span><span class="token operator">:</span> <span class="token string">"/blog/2021/01/moving-to-11ty/"</span><br><span class="token punctuation">}</span></code></pre>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>  <span class="token property">"layout"</span><span class="token operator">:</span> <span class="token string">"post"</span><span class="token punctuation">,</span><br>  <span class="token property">"permalink"</span><span class="token operator">:</span> <span class="token string">"/blog/2021/01/moving-to-11ty/"</span><br><span class="token punctuation">}</span></code></pre>
 <p>In here we can use the filters provided by 11ty like <code>date</code> to format the date and <code>slug</code> to turn the post title into a URL. <code>slug</code> will replace some characters in the <code>title</code>, for example spaces with dashes (<code>-</code>).</p>
 <h2>Static assets</h2>
 <p>Next up is static assets. The first that comes to my mind is CSS and JS files.</p>
 <p>@TODO: Finish this section!</p>
+<h2>Filters</h2>
+<p>I added a few filters. Filters can be used like <code>{{ post.url | myFilter }}</code>. The most important one is <code>slugify</code>.</p>
+<h3>slugify</h3>
+<p><code>slugify</code> uses the <a href="https://www.npmjs.com/package/@sindresorhus/slugify">@sindresorhus/slugify</a> module. To include it into 11ty, I added it in <code>.eleventy.js</code> like so:</p>
+<pre class="language-js"><code class="language-js">eleventyConfig<span class="token punctuation">.</span><span class="token function">addFilter</span><span class="token punctuation">(</span><span class="token string">'slugify'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">return</span> <span class="token function">slugify</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Then I could use it in my <code>_blog.json</code> config file:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>  <span class="token property">"layout"</span><span class="token operator">:</span> <span class="token string">"post"</span><span class="token punctuation">,</span><br>  <span class="token property">"permalink"</span><span class="token operator">:</span> <span class="token string">"/blog/2021/01/moving-to-11ty/"</span><br><span class="token punctuation">}</span></code></pre>
 <h2>Plugins</h2>
 <h3>eleventy-plugin-syntaxhighlight</h3>
 <p>I'm using the <code>@11ty/eleventy-plugin-syntaxhighlight</code> plugin to add syntax highlighting. The plugin works at build time so no additional JavaScript is required. The plugin is added into the <code>.eleventy.js</code> config file like so</p>
@@ -147,21 +154,24 @@
 
   </div>
 
-  <footer class="post-footer">
+  <footer class="post-footer stack">
     <hr>
     
-    <span>Find similar content under:</span>
+    <p>Find similar content under:
       
-        <a href="/tags/javascript">#javascript</a>
+        <a href="/tags/javascript">#javascript</a> &bull; 
       
-        <a href="/tags/node">#node</a>
+        <a href="/tags/node">#node</a> &bull; 
       
-        <a href="/tags/ssg">#ssg</a>
+        <a href="/tags/ssg">#ssg</a> &bull; 
       
-        <a href="/tags/blog">#blog</a>
+        <a href="/tags/code">#code</a> &bull; 
       
+        <a href="/tags/blog">#blog</a> &bull; 
+      
+    </p>
     <div class="flex" style="--padding: 1rem 0; justify-content: space-between;">
-    <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2021/01/5-things-ansible-can-do-for-you/">5 Things Ansible Can Do for You</a></div>
+    <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2020/12/apply-a-patch-from-a-github-pr/">Apply a patch from a Github PR</a></div>
     <div class="flex__boxed"><b>Next post</b><br><a class="h5" href="/blog/2021/01/this-week-on-the-internetz/">This week on the internetz</a></div>
     </div>
   </footer>
@@ -170,7 +180,7 @@
 <div class="flex  [ small-flex__column-reverse ]">
   <div class="flex__boxed" style="max-width: 75%; --padding: 2em 2em 0 0;">
     <p class="h4 mt0">Hi, I'm Kevin!</p>
-    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and distributed systems. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
+    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and security. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
   </div>
   <div class="flex__boxed" style="--padding: 2em 0 0 0;">
     <img src="/assets/img/kevin-avatar-w200.jpg" class="author__avatar" alt="Image of Kevin Gimbel, Author of this website"/>
@@ -186,19 +196,20 @@
     <svg width="100%" height="100%" viewBox="0 0 1440 120"><path d="M-7.397,22.752c85.366,24.066 343.52,34.381 501.939,34.72c151.87,0.324 301.032,-44.228 452.753,-50.937c192.025,-8.491 332.048,39.858 493.378,58.105l0.992,-68.444l-1445.91,1.218c0,0 -25.068,19.159 -3.148,25.338Z" style="fill:var(--color-header-wave);"/></svg>
   </div>
 
-  <footer class="site-footer">
+  <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
         <a href="/photography" title="View some of my photography">photography</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
+        <a href="/uses" title="# Tools, equipment, hardware, etc. I use and like">uses</a> &bullet;
         <a href="/feed.xml" title="Subscribe via RSS/Atom">RSS</a>
       </nav>
       <p>&copy; 2009 - 2021 Kevin Gimbel</p>
     </div>
     
     <div class="footer-block">
-      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
+      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!" rel="me">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com" rel="me">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
     </div>
     
     <div class="footer-block">

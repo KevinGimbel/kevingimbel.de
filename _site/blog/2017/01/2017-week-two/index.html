@@ -59,7 +59,7 @@
   
 </header>
 
-  <div itemtype="articleBody" class="post-body">
+  <div itemtype="articleBody" class="post-body stack">
     <p>This week I spent a lot of time with Amazon Web Services, or AWS, and made myself familiar with the backend and the way server / instance management works on AWS. While doing so I also learned that AWS instances are by default not accessible from the internet - they have no open ports and each instance needs a &quot;Security Group&quot; which defines ways to access the instance. They also do not have Shell access by default. When you've never worked with AWS the pure amount of options is overwhelming. I felt like endlessly reading through documentations until I had everything setup correctly. It was quite a task and I'm sure the next time I need to setup an AWS instance it will go smoother. I might cover what I've learned in a blog post once I am &quot;done&quot;.</p>
 <p>I played a bit of recore and Dragon Age: Inquisition but I am not in the mood to play too much video games at the moment. After spending hundreds of hours in The Elder Scrolls: Online last year I feel it's good to have my controller rest for a while. I did spent time watching Star Trek tho. I am almost finished with The Original Series and in fact it's the first time ever I watched it episode by episode.</p>
 <p><img src="https://i.giphy.com/l2R03nrt5LDkpc6VG.gif" alt="&quot;Spock jamming in space&quot;"></p>
@@ -79,17 +79,18 @@ I also <a href="https://github.com/kevingimbel/kevingimbel.com/issues?utf8=%E2%9
 
   </div>
 
-  <footer class="post-footer">
+  <footer class="post-footer stack">
     <hr>
     
-    <span>Find similar content under:</span>
+    <p>Find similar content under:
       
-        <a href="/tags/review">#review</a>
+        <a href="/tags/review">#review</a> &bull; 
       
-        <a href="/tags/personal">#personal</a>
+        <a href="/tags/personal">#personal</a> &bull; 
       
+    </p>
     <div class="flex" style="--padding: 1rem 0; justify-content: space-between;">
-    <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2017/01/bash-script:-ws/">Bash script: ws</a></div>
+    <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2017/01/bash-script-ws/">Bash script: ws</a></div>
     <div class="flex__boxed"><b>Next post</b><br><a class="h5" href="/blog/2017/01/deploy-a-static-site-with-git/">Deploy a static site with git</a></div>
     </div>
   </footer>
@@ -98,7 +99,7 @@ I also <a href="https://github.com/kevingimbel/kevingimbel.com/issues?utf8=%E2%9
 <div class="flex  [ small-flex__column-reverse ]">
   <div class="flex__boxed" style="max-width: 75%; --padding: 2em 2em 0 0;">
     <p class="h4 mt0">Hi, I'm Kevin!</p>
-    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and distributed systems. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
+    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and security. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
   </div>
   <div class="flex__boxed" style="--padding: 2em 0 0 0;">
     <img src="/assets/img/kevin-avatar-w200.jpg" class="author__avatar" alt="Image of Kevin Gimbel, Author of this website"/>
@@ -114,19 +115,20 @@ I also <a href="https://github.com/kevingimbel/kevingimbel.com/issues?utf8=%E2%9
     <svg width="100%" height="100%" viewBox="0 0 1440 120"><path d="M-7.397,22.752c85.366,24.066 343.52,34.381 501.939,34.72c151.87,0.324 301.032,-44.228 452.753,-50.937c192.025,-8.491 332.048,39.858 493.378,58.105l0.992,-68.444l-1445.91,1.218c0,0 -25.068,19.159 -3.148,25.338Z" style="fill:var(--color-header-wave);"/></svg>
   </div>
 
-  <footer class="site-footer">
+  <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
         <a href="/photography" title="View some of my photography">photography</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
+        <a href="/uses" title="# Tools, equipment, hardware, etc. I use and like">uses</a> &bullet;
         <a href="/feed.xml" title="Subscribe via RSS/Atom">RSS</a>
       </nav>
       <p>&copy; 2009 - 2021 Kevin Gimbel</p>
     </div>
     
     <div class="footer-block">
-      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
+      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!" rel="me">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com" rel="me">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
     </div>
     
     <div class="footer-block">

@@ -8,6 +8,7 @@ tags:
     - hugo
     - ssg
     - automation
+    - code
 date: "2020-01-07"
 lastmod: "2020-01-07"
 ---

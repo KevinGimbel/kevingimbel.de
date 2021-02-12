@@ -1,5 +1,5 @@
 ---
-title: "Implementing the From trait in Rust"
+title: "Learning Rust: Traits"
 
 type: blog
 categories:
@@ -9,15 +9,21 @@ tags:
     - tutorial
     - trait
     - pattern
+    - code
+    - learning-by-doing
 date: "2021-02-03"
 lastmod: "2021-02-03"
 language: "en"
 draft: true
+
+head: null
+foot: null
+svg_title: null
 ---
 
-Traits can be confusing. In essence, Traits are a way of blueprinting functionality similar to Interfaces in other languages. The Rust core language provides a lot of traits and some of them can even be automatically implemented using the `#[derive]` feature. You probably have written `#[derive(Debug)]` in the past when creating structs - **this** is a Trait which was automatically implemented. In this article we look deeper into the `From` trait which can be used to construct a `struct` from types like `&str`, or `String`, or `i32`. 
+Traits can be confusing. In essence, Traits are similar to interfaces in other programming languages, but a lot more flexible. A Trait defines one or more functions that can be implemented for custom structs. The Rust core language provides a lot of traits and some of them can even be automatically implemented using the `#[derive]` feature. You probably have written `#[derive(Debug)]` in the past when creating structs - **this** is a Trait which was automatically implemented. In this article we look deeper into the `From` trait to understand how Traits are implemented.
 
-To get started, let's  define an struct, in this case `Paragraph` which will represent a paragraph of text.
+To get started, let's  define a struct named `Paragraph` which will represent a paragraph of text. 
 
 ```rust
 #[derive(Debug)]

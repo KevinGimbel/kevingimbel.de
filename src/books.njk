@@ -1,6 +1,7 @@
 ---
 title: "Books"
 layout: single
+permalink: "/books/"
 ---
 
 {% markdown %}
@@ -22,7 +23,7 @@ This section is still being put together, not all books have been added yet and 
    {% set postYear = book.date.getFullYear() %}
       {% if currentYear != postYear %}
       {% set currentYear = postYear %}
-        <li style="list-style: none;"><h2 id="year-{{ postYear }}">{{ postYear }}</h2></li>
+        <li class="post-listing__headline"><h3 id="year-{{ postYear }}">{{ postYear }}</h3></li>
     {% endif %}
     <li><small class="mr1">{% if book.data.in_progress %}Currently reading: {% else %}{% rating book.data.rating, "★", "☆" %}{% endif %}</small> <b>{{ book.data.title }}</b> by <i>{% for author in book.data.authors %}{{ author }} {% endfor %}</i></li>
   {% endfor %}

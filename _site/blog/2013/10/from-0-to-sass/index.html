@@ -59,7 +59,7 @@
   
 </header>
 
-  <div itemtype="articleBody" class="post-body">
+  <div itemtype="articleBody" class="post-body stack">
     <p>If you're a Front-End Developer you may have already heard about Pre-Processors such as <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org/">LESS</a> or <a href="http://learnboost.github.io/stylus/">Stylus</a>. It's fair to say that they're all good and which one you use is up to you or your team. I prefer Sass with the SCSS Syntax (= keeps semicolons and brackets).</p>
 <p>Even though Pre-Processors are easy to use and setup some people are still confused: <em>Do I have to run them on a server? How do I install them? Why should I use them?</em> - I want to answer all these questions in this article: Getting from 0 to Sass in X Steps!</p>
 <p><strong>Notice:</strong> This guide covers the installation on Linux and Mac only, for Windows support please take a look at <a href="http://www.impressivewebs.com/sass-on-windows/">this tutorial</a>.</p>
@@ -125,17 +125,18 @@ If you want to have an example what the <code>style.scss</code> would look like,
 
   </div>
 
-  <footer class="post-footer">
+  <footer class="post-footer stack">
     <hr>
     
-    <span>Find similar content under:</span>
+    <p>Find similar content under:
       
-        <a href="/tags/css">#css</a>
+        <a href="/tags/css">#css</a> &bull; 
       
-        <a href="/tags/sass">#sass</a>
+        <a href="/tags/sass">#sass</a> &bull; 
       
-        <a href="/tags/tooling">#tooling</a>
+        <a href="/tags/tooling">#tooling</a> &bull; 
       
+    </p>
     <div class="flex" style="--padding: 1rem 0; justify-content: space-between;">
     <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2013/09/a-bit-sticky/">A bit sticky</a></div>
     <div class="flex__boxed"><b>Next post</b><br><a class="h5" href="/blog/2013/10/join-a-dev-group/">Join a Dev Group</a></div>
@@ -146,7 +147,7 @@ If you want to have an example what the <code>style.scss</code> would look like,
 <div class="flex  [ small-flex__column-reverse ]">
   <div class="flex__boxed" style="max-width: 75%; --padding: 2em 2em 0 0;">
     <p class="h4 mt0">Hi, I'm Kevin!</p>
-    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and distributed systems. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
+    <p>I'm a <b>DevOps Engineer</b> with a focus on automation and security. Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
   </div>
   <div class="flex__boxed" style="--padding: 2em 0 0 0;">
     <img src="/assets/img/kevin-avatar-w200.jpg" class="author__avatar" alt="Image of Kevin Gimbel, Author of this website"/>
@@ -162,19 +163,20 @@ If you want to have an example what the <code>style.scss</code> would look like,
     <svg width="100%" height="100%" viewBox="0 0 1440 120"><path d="M-7.397,22.752c85.366,24.066 343.52,34.381 501.939,34.72c151.87,0.324 301.032,-44.228 452.753,-50.937c192.025,-8.491 332.048,39.858 493.378,58.105l0.992,-68.444l-1445.91,1.218c0,0 -25.068,19.159 -3.148,25.338Z" style="fill:var(--color-header-wave);"/></svg>
   </div>
 
-  <footer class="site-footer">
+  <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
         <a href="/photography" title="View some of my photography">photography</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
+        <a href="/uses" title="# Tools, equipment, hardware, etc. I use and like">uses</a> &bullet;
         <a href="/feed.xml" title="Subscribe via RSS/Atom">RSS</a>
       </nav>
       <p>&copy; 2009 - 2021 Kevin Gimbel</p>
     </div>
     
     <div class="footer-block">
-      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
+      <p><a href="https://twitter.com/KevinGimbel" title="Follow me on Twitter!" rel="me">Twitter</a> | <a href="https://github.com/KevinGimbel" title="See my open source code on GitHub.com" rel="me">GitHub</a> | <a href="https://www.eyeem.com/u/kevingimbel" title="View or purchase my photographs on EyeEm.com">EyeEm</a></p>
     </div>
     
     <div class="footer-block">

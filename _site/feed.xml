@@ -4,7 +4,7 @@
   <subtitle>Web Development, DevOps, Baking, and everything else.</subtitle>
   <link href="https://kevingimbel.de/feed.xml" rel="self"/>
   <link href="https://kevingimbel.de/"/>
-  <updated>2021-02-03T00:00:00Z</updated>
+  <updated>2021-02-06T00:00:00Z</updated>
   <id>https://kevingimbel.de/</id>
   <author>
     <name>Kevin Gimbel</name>
@@ -12,24 +12,10 @@
   </author>
   
   <entry>
-    <title>::selection</title>
-    <link href="https://kevingimbel.de/blog/2012/10/::selection/"/>
-    <updated>2012-10-14T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2012/10/::selection/</id>
-    <content type="html">&lt;p&gt;Using &lt;code&gt;::selection&lt;/code&gt; for fancy selection colors.&lt;/p&gt;
-&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;::selection&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#279&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#fff&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token selector&quot;&gt;::-moz-selection&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#279&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#fff&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token selector&quot;&gt;::-webkit-selection&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#279&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#fff&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;span class=&quot;demo-1&quot;&gt;Try to select this text, the background will be #279 the color will be #fff.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;demo-2&quot;&gt;Also try to select this text. The color will be pink, the background will be black.&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;em&gt;This post was imported from my old Tumblr blog I used in 2012.&lt;/em&gt;&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
     <title>Switching to Notepad++</title>
-    <link href="https://kevingimbel.de/blog/2012/10/switching-to-notepad++/"/>
+    <link href="https://kevingimbel.de/blog/2012/10/switching-to-notepad/"/>
     <updated>2012-10-14T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2012/10/switching-to-notepad++/</id>
+    <id>https://kevingimbel.de/blog/2012/10/switching-to-notepad/</id>
     <content type="html">&lt;p&gt;I decided to use this small blog for any personal thing I think needs to be documented. Well, some weeks ago I decided to switch from Adobe Dreamweaver to Notepad++ for all webstuff I create. Some reasons are:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;it&#39;s faster&lt;/li&gt;
@@ -41,6 +27,20 @@
 &lt;li&gt;it&#39;s free - go try it&lt;/li&gt;
 &lt;li&gt;I feel much better using this software. I love it.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This post was imported from my old Tumblr blog I used in 2012.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>::selection</title>
+    <link href="https://kevingimbel.de/blog/2012/10/selection/"/>
+    <updated>2012-10-14T00:00:00Z</updated>
+    <id>https://kevingimbel.de/blog/2012/10/selection/</id>
+    <content type="html">&lt;p&gt;Using &lt;code&gt;::selection&lt;/code&gt; for fancy selection colors.&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;::selection&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#279&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#fff&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token selector&quot;&gt;::-moz-selection&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#279&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#fff&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token selector&quot;&gt;::-webkit-selection&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#279&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;#fff&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span class=&quot;demo-1&quot;&gt;Try to select this text, the background will be #279 the color will be #fff.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;demo-2&quot;&gt;Also try to select this text. The color will be pink, the background will be black.&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;em&gt;This post was imported from my old Tumblr blog I used in 2012.&lt;/em&gt;&lt;/p&gt;
 </content>
@@ -87,9 +87,9 @@ So if you create a new responsive website, and you should always do so, do your 
   
   <entry>
     <title>Is this :valid?</title>
-    <link href="https://kevingimbel.de/blog/2013/08/is-this-:valid/"/>
+    <link href="https://kevingimbel.de/blog/2013/08/is-this-valid/"/>
     <updated>2013-08-16T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2013/08/is-this-:valid/</id>
+    <id>https://kevingimbel.de/blog/2013/08/is-this-valid/</id>
     <content type="html">&lt;p&gt;I recently stumbled upon the &lt;code&gt;:valid&lt;/code&gt; and &lt;code&gt;:invalid&lt;/code&gt; class for input fields. It gives you the ability to use visual feedback on inputs that show the user whether the input is - guess what? - valid or not. This is, in fact, a very handy pseudo class in case of UI and UX Design because you can easily give a feedback on input without using JavaScript. Anyway, this pseudo element does not &lt;strong&gt;validate the input&lt;/strong&gt;, the entered email for example can still be formated wrong.&lt;/p&gt;
 &lt;p&gt;Anyway I thought this is a handy little helper that I could give a try so I started working around with it, checking what I can do and what I can&#39;t.&lt;/p&gt;
 &lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.contact__form--email&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt; &lt;br /&gt;  &lt;span class=&quot;token selector&quot;&gt;&amp;amp;:valid&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;green&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;  &lt;span class=&quot;token selector&quot;&gt;&amp;amp;:invalid&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;red&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -402,9 +402,9 @@ So, he got me into a Company and wanted to work with me, I accepted and on Janua
   
   <entry>
     <title>Brackets vs. Sublime Text</title>
-    <link href="https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/"/>
+    <link href="https://kevingimbel.de/blog/2013/12/brackets-vs-sublime-text/"/>
     <updated>2013-12-25T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2013/12/brackets-vs.-sublime-text/</id>
+    <id>https://kevingimbel.de/blog/2013/12/brackets-vs-sublime-text/</id>
     <content type="html">&lt;p&gt;I first tried &lt;a href=&quot;http://brackets.io/&quot;&gt;Brackets&lt;/a&gt; back in my Windows time. It was a very early version, kinda heavy and wonky and not what I wanted from an editor I use on a daily base at all. Just today I decided to give it a second look because beside &lt;a href=&quot;http://www.vim.org/&quot;&gt;VIM&lt;/a&gt; it is &lt;em&gt;the&lt;/em&gt; editor I read quite a lot about latly. My first impression was: &amp;quot;&lt;em&gt;Wow, that&#39;s a simple, clean editor!&lt;/em&gt;&amp;quot; - exactly the thing I liked so much about Sublime Text 2 which I&#39;ve been using for the last two years or so.&lt;/p&gt;
 &lt;h2&gt;Functionality&lt;/h2&gt;
 &lt;h3&gt;Highlighting&lt;/h3&gt;
@@ -481,9 +481,9 @@ I&#39;m pretty sure there&#39;s a Sublime Text Plugin for this, too but having i
   
   <entry>
     <title>Mixtape: 2013</title>
-    <link href="https://kevingimbel.de/blog/2014/01/mixtape:-2013/"/>
+    <link href="https://kevingimbel.de/blog/2014/01/mixtape-2013/"/>
     <updated>2014-01-05T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/01/mixtape:-2013/</id>
+    <id>https://kevingimbel.de/blog/2014/01/mixtape-2013/</id>
     <content type="html">&lt;p&gt;I like to make Mixtapes (or playlists) on SoundCloud and this one is my &amp;quot;Best of 2013&amp;quot; Mixtape featuring my favorites of Drum and Bass, Electro and Dubstep. Enjoy!&lt;/p&gt;
 &lt;iframe width=&quot;100%&quot; height=&quot;450&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; ,=&quot;&quot; &quot;https:=&quot;&quot; w.soundcloud.com=&quot;&quot; player=&quot;&quot; ?url=&quot;https%3A//api.soundcloud.com/playlists/17883496&amp;amp;color=ff6600&amp;amp;auto_play=false&amp;amp;show_artwork=true&amp;quot;&quot;&gt;&lt;/iframe&gt;
 </content>
@@ -525,9 +525,9 @@ I&#39;m pretty sure there&#39;s a Sublime Text Plugin for this, too but having i
   
   <entry>
     <title>Labels in GMail</title>
-    <link href="https://kevingimbel.de/blog/2014/01/labels-in-gmail/"/>
+    <link href="https://kevingimbel.de/blog/2014/01/labels-in-g-mail/"/>
     <updated>2014-01-08T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/01/labels-in-gmail/</id>
+    <id>https://kevingimbel.de/blog/2014/01/labels-in-g-mail/</id>
     <content type="html">&lt;p&gt;In case your company is using &lt;a href=&quot;http://www.google.com/intx/de/enterprise/apps/business/campaign/business-email-by-google-de.html?utm_campaign=emea-smb-apps-bkws-de&amp;amp;utm_medium=cpc&amp;amp;utm_source=google&amp;amp;utm_term=gmail%20business&quot;&gt;GMail Business&lt;/a&gt; there&#39;s one thing that comes to your daily work-life I really love about GMail: &lt;strong&gt;Labels&lt;/strong&gt;. Labels are used to sort eMails automatically and - what I really love about - without removing them from the Inbox into 1000 folders. Instead they just get a Label and their own &amp;quot;View&amp;quot; inside GMail - on Desktop as well as Mobile which makes them even better!&lt;/p&gt;
 &lt;p&gt;Unfortunately they&#39;re kinda hidden and not really promoted by Google. To set up automatic labels you first you need to click the &lt;strong&gt;gear&lt;/strong&gt; in the upper right, then &lt;strong&gt;Settings&lt;/strong&gt; and then, in the top navigation just below the search input &lt;strong&gt;Filters&lt;/strong&gt;. Now there&#39;s a &amp;quot;Create new Filter&amp;quot; link you should click. (I personally always search for this link because it is not highlighted in any way).&lt;/p&gt;
 &lt;p&gt;However, a dialog pops up where you can enter a bunch of stuff: From, To, Subject, Has words, Has not words, Has Attachment and Don&#39;t include chats. Pretty obvious what can be done here, right? Indeed but the thing is: When you work with a CallTracker system most of the input emails are not from a specific eMail so filtering after an eMail address is not an option. I currently stick with filtering the Subject Line for everything project. I&#39;ll give a example:&lt;/p&gt;
@@ -547,9 +547,9 @@ To enhance the features of sorting your inbox with Labels I found it useful for 
   
   <entry>
     <title>Digitalism - Boiler Room at MELT! 2013</title>
-    <link href="https://kevingimbel.de/blog/2014/01/digitalism-boiler-room-at-melt!-2013/"/>
+    <link href="https://kevingimbel.de/blog/2014/01/digitalism-boiler-room-at-melt-2013/"/>
     <updated>2014-01-10T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/01/digitalism-boiler-room-at-melt!-2013/</id>
+    <id>https://kevingimbel.de/blog/2014/01/digitalism-boiler-room-at-melt-2013/</id>
     <content type="html">&lt;p&gt;I really like Digitalism and I really love electronic music so this DJ Set recorded at MELT! festival in Germany is just perfect. I can highliy recommend to follow &lt;a href=&quot;https://soundcloud.com/digitalism_official&quot;&gt;Digitalism&lt;/a&gt; and &lt;a href=&quot;https://soundcloud.com/platform&quot;&gt;Boiler Room&lt;/a&gt; on SoundCloud.&lt;/p&gt;
 &lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; ,=&quot;&quot; &quot;https:=&quot;&quot; w.soundcloud.com=&quot;&quot; player=&quot;&quot; ?url=&quot;https%3A//api.soundcloud.com/tracks/101860747&amp;amp;color=ff6600&amp;amp;auto_play=false&amp;amp;show_artwork=true&amp;quot;&quot;&gt;&lt;/iframe&gt;
 </content>
@@ -567,9 +567,9 @@ To enhance the features of sorting your inbox with Labels I found it useful for 
   
   <entry>
     <title>Pure JavaScript slider</title>
-    <link href="https://kevingimbel.de/blog/2014/02/pure-javascript-slider/"/>
+    <link href="https://kevingimbel.de/blog/2014/02/pure-java-script-slider/"/>
     <updated>2014-02-22T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/02/pure-javascript-slider/</id>
+    <id>https://kevingimbel.de/blog/2014/02/pure-java-script-slider/</id>
     <content type="html">&lt;p&gt;The great thing when you&#39;re a beginner in any programming language (or in anything in general) is, that even small successes make you happy and proud of what you did. I&#39;m very  proud of my &lt;a href=&quot;http://kevingimbel.com/to-infinity-and-beyond/&quot;&gt;back to top script&lt;/a&gt; even though it&#39;s not perfect at all. I could make a back to top button with jQuery in a few minutes but it wouldn&#39;t be that much fun. However, I made another JavaScript thing I&#39;m proud of: A pure JavaScript slider.&lt;/p&gt;
 &lt;p data-height=&quot;500&quot; data-theme-id=&quot;647&quot; data-slug-hash=&quot;BxflH&quot; data-default-tab=&quot;result&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/kevingimbel/pen/BxflH&quot;&gt;BxflH&lt;/a&gt; by Kevin (&lt;a href=&quot;http://codepen.io/kevingimbel&quot;&gt;@kevingimbel&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async=&quot;&quot; &quot;=&quot;&quot; codepen.io=&quot;&quot; assets=&quot;&quot; embed=&quot;&quot; ei.js&quot;=&quot;&quot;&gt;&lt;/script&gt;
@@ -590,9 +590,9 @@ To enhance the features of sorting your inbox with Labels I found it useful for 
   
   <entry>
     <title>Mixtape: February 2014</title>
-    <link href="https://kevingimbel.de/blog/2014/03/mixtape:-february-2014/"/>
+    <link href="https://kevingimbel.de/blog/2014/03/mixtape-february-2014/"/>
     <updated>2014-03-02T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/03/mixtape:-february-2014/</id>
+    <id>https://kevingimbel.de/blog/2014/03/mixtape-february-2014/</id>
     <content type="html">&lt;p&gt;Another month passed and a new mixtape arrived. My favorites of February 2014. Enjoy!&lt;/p&gt;
 &lt;iframe width=&quot;100%&quot; height=&quot;450&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; ,=&quot;&quot; &quot;https:=&quot;&quot; w.soundcloud.com=&quot;&quot; player=&quot;&quot; ?url=&quot;https%3A//api.soundcloud.com/playlists/22172425%3Fsecret_token%3Ds-tPeCl&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;visual=true&amp;quot;&quot;&gt;&lt;/iframe&gt;
 </content>
@@ -600,9 +600,9 @@ To enhance the features of sorting your inbox with Labels I found it useful for 
   
   <entry>
     <title>Passing Arguments in JavaScript</title>
-    <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/"/>
+    <link href="https://kevingimbel.de/blog/2014/05/passing-arguments-in-java-script/"/>
     <updated>2014-05-23T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/05/passing-arguments-in-javascript/</id>
+    <id>https://kevingimbel.de/blog/2014/05/passing-arguments-in-java-script/</id>
     <content type="html">&lt;p&gt;One of my favorite aspects of JavaScript is that it is unbelievable flexible. I am currently reading &amp;quot;Secrets of the JavaScript Ninja&amp;quot; by the amazing &lt;a href=&quot;http://ejohn.org/&quot;&gt;John Resig&lt;/a&gt; and try to play around with JavaScript whenever I&#39;ve the time to do so. Just yesteday I needed to pass as many arguments to a function as the user wants which means I can&#39;t check for every possible thingy. Anyway, I&#39;ll cover this in a small write-up aka a blog post. Yay!&lt;/p&gt;
 &lt;p&gt;First of all we should have some use case or scenario. I needed the a variable number of options for my &lt;a href=&quot;https://github.com/bullgit/Bulllog&quot;&gt;Bulllog&lt;/a&gt; script that takes any number of CSS oroperty-value pairs and applies them to your console.logs (Chrome only, sadly). Anyway, CSS is a good example in my opinion so we&#39;ll write a small css() function that can be applies to an element.&lt;/p&gt;
 &lt;p&gt;First of all, what should this function do? It should:&lt;/p&gt;
@@ -699,9 +699,9 @@ visible - this makes a long &lt;code&gt;.vimrc&lt;/code&gt; a lot more readable.
   
   <entry>
     <title>Magento: get and set variables in config.xml</title>
-    <link href="https://kevingimbel.de/blog/2014/05/magento:-get-and-set-variables-in-config.xml/"/>
+    <link href="https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config-xml/"/>
     <updated>2014-05-27T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/05/magento:-get-and-set-variables-in-config.xml/</id>
+    <id>https://kevingimbel.de/blog/2014/05/magento-get-and-set-variables-in-config-xml/</id>
     <content type="html">&lt;p&gt;The other day I had a kind of easy problem in Magento that still took me quite some time to solve. In the shop I&#39;m
 working on we had a contact form module that sents and validates emails which worked perfectly fine on one page (the one it was made for),
 however this form should be &amp;quot;cloned&amp;quot; to be present on 4 pages with different email addresses. Since Magentos Core is
@@ -962,9 +962,9 @@ very similar to &lt;code&gt;this&lt;/code&gt;, yet even more flexible!&lt;/p&gt;
   
   <entry>
     <title>Magento: Add fields to the Admin Backend</title>
-    <link href="https://kevingimbel.de/blog/2014/08/magento:-add-fields-to-the-admin-backend/"/>
+    <link href="https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/"/>
     <updated>2014-08-27T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/08/magento:-add-fields-to-the-admin-backend/</id>
+    <id>https://kevingimbel.de/blog/2014/08/magento-add-fields-to-the-admin-backend/</id>
     <content type="html">&lt;p&gt;Today I had a task at work that first sounded rather easy: Add a field to the Admin backend, namely
 &lt;em&gt;System-&amp;gt;Config-&amp;gt;Catalog&lt;/em&gt; where the user could later insert some SKUs to control which products are shown on the home
 page. The first resources I found on how to edit the Backend where all suggesting to create a Module and then create a
@@ -1024,9 +1024,9 @@ structure of Magento.&lt;/p&gt;
   
   <entry>
     <title>Snippet: theme-color for Android 5.0</title>
-    <link href="https://kevingimbel.de/blog/2014/11/snippet:-theme-color-for-android-5.0/"/>
+    <link href="https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5-0/"/>
     <updated>2014-11-21T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2014/11/snippet:-theme-color-for-android-5.0/</id>
+    <id>https://kevingimbel.de/blog/2014/11/snippet-theme-color-for-android-5-0/</id>
     <content type="html">&lt;p&gt;Just yesterday I got my Android 5.0 update which also features a new way multi-tasking works and Chrome interacts with
 this multi-tasking. In fact, all recently opened tabs are available via the multi-tasking button (square to the down
 right on Stock Android) instead of an in-app button like it used to be. This not only is very handy actually since you
@@ -1118,9 +1118,9 @@ return to my beloved Sublime Text 3.&lt;/p&gt;
   
   <entry>
     <title>Snippet: SASS Source Maps with Gulp</title>
-    <link href="https://kevingimbel.de/blog/2015/01/snippet:-sass-source-maps-with-gulp/"/>
+    <link href="https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/"/>
     <updated>2015-01-22T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2015/01/snippet:-sass-source-maps-with-gulp/</id>
+    <id>https://kevingimbel.de/blog/2015/01/snippet-sass-source-maps-with-gulp/</id>
     <content type="html">&lt;p&gt;Yesterday I finally took a few moments to implement Source Maps with Gulp for one of our client projects at work. I
 wanted to use the benefits of Source Maps for quite some time but never actually found the time to wrap my head around
 it (aka throw in another Gulp plugin). Source Maps are used to connect your pre-compiled files, like Sass, with the
@@ -1306,9 +1306,9 @@ on which we don&#39;t have any influence.&lt;/p&gt;
   
   <entry>
     <title>ReactJS - Hello World!</title>
-    <link href="https://kevingimbel.de/blog/2015/05/reactjs-hello-world!/"/>
+    <link href="https://kevingimbel.de/blog/2015/05/react-js-hello-world/"/>
     <updated>2015-05-07T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2015/05/reactjs-hello-world!/</id>
+    <id>https://kevingimbel.de/blog/2015/05/react-js-hello-world/</id>
     <content type="html">&lt;p&gt;This article is the first in a series about &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;ReactJS&lt;/a&gt;, a JavaScript library for building user interfaces. It is actively developed at Facebook and Instagram, while Instagram uses React to build their web app. At Facebook, however, React plays a role in the &amp;quot;background&amp;quot;, featuring administrative screens such as the Ads Managment.&lt;/p&gt;
 &lt;p&gt;React itself says one very important and true thing about itself:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1420,9 +1420,9 @@ For me personally Go provides a lot of new challenges and things to learn. I wor
   
   <entry>
     <title>Gotcha: dockerignore</title>
-    <link href="https://kevingimbel.de/blog/2016/12/gotcha:-dockerignore/"/>
+    <link href="https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/"/>
     <updated>2016-12-21T17:02:42Z</updated>
-    <id>https://kevingimbel.de/blog/2016/12/gotcha:-dockerignore/</id>
+    <id>https://kevingimbel.de/blog/2016/12/gotcha-dockerignore/</id>
     <content type="html">&lt;p&gt;Today I was caught off-guard by a docker &amp;quot;bug&amp;quot; - or so I thought at first. I tried to boot up a project with &lt;code&gt;docker-compose up&lt;/code&gt; like I do since &lt;a href=&quot;https://kevingimbel.de/goodbye-ubuntu-hello-mac&quot;&gt;switching to a Mac&lt;/a&gt;. Unusual was that &lt;code&gt;docker-compose&lt;/code&gt; stopped at the build step and would not finish the boot. After some confusion and after checking the projects &lt;code&gt;docker-compose.yml&lt;/code&gt; configuration file I went to GitHub to see the newest &lt;a href=&quot;https://github.com/docker/for-mac/issues&quot;&gt;docker for mac issues&lt;/a&gt; because I was using the beta release and thought a recent update might broke a thing or two. Looking at the issues I found a similar &lt;a href=&quot;https://github.com/docker/for-mac/issues/1063&quot;&gt;issue in docker/for-mac&lt;/a&gt; and commented with my setup and output of &lt;code&gt;docker-compose --verbose up&lt;/code&gt; only to realize a good 30 minutes later my setup was the problem all along.&lt;/p&gt;
 &lt;p&gt;While the configuration files were all correct, I made a mistake and did not provide a &lt;code&gt;.dockerignore&lt;/code&gt; file. Without the &lt;code&gt;.dockerignore&lt;/code&gt; two 6GB SQL dumps in the same directory which were mounted into the docker container which made the docker daemon crash / hang up. The simple solution was to create the following &lt;code&gt;.dockerignore&lt;/code&gt; file.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# database directory on the host
@@ -1540,9 +1540,9 @@ Also in April I went to see &lt;a href=&quot;http://www.museumangewandtekunst.de
   
   <entry>
     <title>Writing NodeJS cli tools</title>
-    <link href="https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/"/>
+    <link href="https://kevingimbel.de/blog/2017/01/writing-node-js-cli-tools/"/>
     <updated>2017-01-09T17:02:48Z</updated>
-    <id>https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/</id>
+    <id>https://kevingimbel.de/blog/2017/01/writing-node-js-cli-tools/</id>
     <content type="html">&lt;p&gt;Over 2015 and 2016 I got more and more interested in automating my daily workflows with scripts. For this purpose I learned Bash Scripting (or Shell Scripting) and started writing my first scripts to automate repeating tasks, &lt;a href=&quot;https://github.com/kevingimbel/vhost&quot;&gt;creating apache vhosts&lt;/a&gt; files for example. Recently I started exploring how to implement command line tools in NodeJS and this post should give an overview.&lt;/p&gt;
 &lt;h3&gt;Shebang&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -1553,22 +1553,22 @@ Also in April I went to see &lt;a href=&quot;http://www.museumangewandtekunst.de
 echo &amp;quot;Hello World!&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;When it is executed from the command line (cli) with &lt;code&gt;./hello.sh&lt;/code&gt; the operating system executes the script (&lt;code&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/code&gt;) with &lt;code&gt;/bin/bash&lt;/code&gt;. Equally, you could run &lt;code&gt;/bin/bash ./hello.sh&lt;/code&gt;. When programming a bash script you can also set it to exit on every error, either with &lt;code&gt;set -e&lt;/code&gt; or with a shebang similar to &lt;code&gt;#!/bin/bash -e&lt;/code&gt;. The screenshot below demonstrates the difference when running a invalid shell script &lt;code&gt;bad.sh&lt;/code&gt;.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/Executing%20a%20invalid%20bash%20script%20without%20shebang%20and%20with%20shebang%20and%20-e%20flag&quot; alt=&quot;/images/posts/2017/node-cli/shell-shebang-example.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/node-cli/shell-shebang-example.png&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/writing-node-js-cli-tools/Executing%20a%20invalid%20bash%20script%20without%20shebang%20and%20with%20shebang%20and%20-e%20flag&quot; alt=&quot;/images/posts/2017/node-cli/shell-shebang-example.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/node-cli/shell-shebang-example.png&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;As you can see without the &lt;code&gt;#!/bin/bash -e&lt;/code&gt; shebang the script will execute even after an error occurred - this might not be intended behavior. Anyway, the topic of this post is node and the Shebang in node is essential. NodeJS Scripts are JavaScript and cannot be run - like shell scripts - without an Shebang to tell the system to invoke them with node. The NodeJS Shebang looks a bit different and specifies the &amp;quot;environment&amp;quot; or &lt;code&gt;env&lt;/code&gt; with &lt;code&gt;/usr/bin/env&lt;/code&gt;. The Shebang then reads &lt;code&gt;#!/usr/bin/env node&lt;/code&gt;. Without the Shebang NodeJS scripts will fail immediately after being invoked as seen in the following screenshot.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/Node%20Script%20executed%20with%20and%20without%20shebang&quot; alt=&quot;/images/posts/2017/node-cli/node-without-and-with-shebang.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/node-cli/node-without-and-with-shebang.png&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/writing-node-js-cli-tools/Node%20Script%20executed%20with%20and%20without%20shebang&quot; alt=&quot;/images/posts/2017/node-cli/node-without-and-with-shebang.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/node-cli/node-without-and-with-shebang.png&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;While it is not necessarily needed for scripts written in in Shell/Bash the Shebang cannot be omitted from NodeJS scripts intended to be run as command line program.&lt;/p&gt;
 &lt;p&gt;Well, that has been a fun excursion into the world of shell scripting. Back to node!&lt;/p&gt;
 &lt;h3&gt;Writing a tiny node cli script&lt;/h3&gt;
 &lt;p&gt;Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let&#39;s keep it simple. We will greet the person executing the script.&lt;/p&gt;
 &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;#&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;usr&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;bin&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;env node&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;sayHello&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Hello, &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;sayHello&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let&#39;s save the script and run it with &lt;code&gt;$ node hello.js&lt;/code&gt; from the command line.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/Running%20the%20hello.js%20script&quot; alt=&quot;/images/posts/2017/node-cli/node-running-hello-js.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/node-cli/node-running-hello-js.png&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/writing-node-js-cli-tools/Running%20the%20hello.js%20script&quot; alt=&quot;/images/posts/2017/node-cli/node-running-hello-js.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/node-cli/node-running-hello-js.png&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Now that&#39;s interesting: The script greets the currently logged-in user! That&#39;s the case because we make use of the &lt;code&gt;process&lt;/code&gt; variable which holds information about the current environment - the &lt;code&gt;env&lt;/code&gt; object for example holds your environment variables. Add a new function to &lt;code&gt;hello.js&lt;/code&gt; to see the output.&lt;/p&gt;
 &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;printEnv&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;printEnv&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You will see the &lt;code&gt;USER&lt;/code&gt; variable is part of the environment object and holds the name of the logged-in user. This way node scripts can access terminal variables and use them. Run &lt;code&gt;export _test=123&lt;/code&gt; and then &lt;code&gt;node hello.js&lt;/code&gt; - &lt;code&gt;_test&lt;/code&gt; is now part of the environment. By using the Environment we can make a script execute different tasks depending on the environment, as seen in the next snippet.&lt;/p&gt;
 &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;message&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; level &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NODE_ENV&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;production&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token function&quot;&gt;writeLogFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;message&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; level&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;message&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;writeLogFile&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;message&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; level&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Not implemented&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;This is a test!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here we have a log function which either runs the &lt;code&gt;writeLogFile&lt;/code&gt; function when in production mode or logs to the console if we are in any other mode (development for example.)&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/writing-nodejs-cli-tools/Making%20use%20of%20the%20environment%20in%20a%20node%20cli%20script&quot; alt=&quot;/images/posts/2017/node-cli/node-using-process-environment.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/node-cli/node-using-process-environment.png&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/writing-node-js-cli-tools/Making%20use%20of%20the%20environment%20in%20a%20node%20cli%20script&quot; alt=&quot;/images/posts/2017/node-cli/node-using-process-environment.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/node-cli/node-using-process-environment.png&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;As you can see in the screenshot depending on the &lt;code&gt;NODE_ENV&lt;/code&gt; variable a different function is executed. The environment can be set inline (&lt;code&gt;$ export NODE_ENV=production&lt;/code&gt;) for the duration of the shell session or it can be set permanent, e.g. by adding it to the shell runtime file (&lt;code&gt;~/.zshrc&lt;/code&gt; or &lt;code&gt;~/.bashrc&lt;/code&gt;). You may also noticed the &lt;code&gt;process.exit(1)&lt;/code&gt; inside the &lt;code&gt;writeLogFile&lt;/code&gt; function. The &lt;code&gt;exit&lt;/code&gt; function enables us to use exit codes to indicate if our script ended successful or not to other processes. If a script exits with &lt;code&gt;0&lt;/code&gt; it was successful, everything else is considered an error. To see how a script exits you can run &lt;code&gt;echo $?&lt;/code&gt; inside a terminal.&lt;/p&gt;
 &lt;p&gt;You can read more about exit codes in &lt;a href=&quot;http://www.tldp.org/LDP/abs/html/exit-status.html&quot;&gt;the resources of TLDP&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;So far we learned that Node CLI scripts:&lt;/p&gt;
@@ -1585,9 +1585,9 @@ echo &amp;quot;Hello World!&amp;quot;
   
   <entry>
     <title>Bash script: ws</title>
-    <link href="https://kevingimbel.de/blog/2017/01/bash-script:-ws/"/>
+    <link href="https://kevingimbel.de/blog/2017/01/bash-script-ws/"/>
     <updated>2017-01-12T18:22:48Z</updated>
-    <id>https://kevingimbel.de/blog/2017/01/bash-script:-ws/</id>
+    <id>https://kevingimbel.de/blog/2017/01/bash-script-ws/</id>
     <content type="html">&lt;p&gt;For the past year or so I had a little function in my &lt;code&gt;.bash_profile&lt;/code&gt; file which made my interaction with the terminal roughly 9001% better - yeah, over 9000! This little function is called &lt;code&gt;ws&lt;/code&gt; and makes switching between projects inside my workspace a lot easier. Both my private and work projects are inside the &lt;code&gt;~/Development&lt;/code&gt; directory. If I want to get to a project I would normally navigate like &lt;code&gt;cd ~/Development/private/github/kevingimbel/kevingimbel.com&lt;/code&gt; - even with tab completion I am too lazy to type this every time I want to work on my website, so I wrote a script for it!&lt;/p&gt;
 &lt;h3&gt;The script: &lt;code&gt;ws&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The script is actually a shell function and it looks like this.&lt;/p&gt;
@@ -1604,7 +1604,7 @@ echo &amp;quot;Hello World!&amp;quot;
 &lt;p&gt;&lt;code&gt;$workspace_path&lt;/code&gt; now holds whatever directory was found - or nothing. This is why we check if it is empty (&lt;code&gt;-z &amp;quot;$workspace_path&amp;quot;&lt;/code&gt;) in the &lt;code&gt;if&lt;/code&gt; block.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;  -z &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$workspace_path&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Directory &#39;&lt;span class=&quot;token variable&quot;&gt;$target_dir&lt;/span&gt;&#39; not found. Changing to &lt;span class=&quot;token variable&quot;&gt;$workspace&lt;/span&gt;&quot;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$workspace_path&lt;/span&gt;&quot;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This reads: If &lt;code&gt;$workspace_path&lt;/code&gt; is empty, then &lt;code&gt;echo&lt;/code&gt; the directory was not found and notify the user we changed to &lt;code&gt;$workspace&lt;/code&gt; with the &lt;code&gt;cd $workspace&lt;/code&gt; earlier. Else, &lt;code&gt;cd&lt;/code&gt; into the found directory. And that&#39;s it! Some examples can be seen in the screenshot below.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/bash-script:-ws/Using%20the%20ws%20function%20to%20navigate%20through%20my%20workspace&quot; alt=&quot;/images/posts/2017/bash-ws/bash-ws-function-in-use.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/bash-ws/bash-ws-function-in-use.png&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2017/01/bash-script-ws/Using%20the%20ws%20function%20to%20navigate%20through%20my%20workspace&quot; alt=&quot;/images/posts/2017/bash-ws/bash-ws-function-in-use.png&quot; /&gt;&lt;figcaption&gt;/images/posts/2017/bash-ws/bash-ws-function-in-use.png&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;I am sure the &lt;code&gt;ws&lt;/code&gt; function can be improved more but it has served my needs well so far. One optimisation might be to use the second argument, &lt;code&gt;$2&lt;/code&gt;, as parameter for &lt;code&gt;-maxdepth&lt;/code&gt;.&lt;/p&gt;
 </content>
   </entry>
@@ -1809,16 +1809,16 @@ done
   
   <entry>
     <title>Using the Terminal: The Prompt</title>
-    <link href="https://kevingimbel.de/blog/2017/03/using-the-terminal:-the-prompt/"/>
+    <link href="https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/"/>
     <updated>2017-03-29T17:34:37Z</updated>
-    <id>https://kevingimbel.de/blog/2017/03/using-the-terminal:-the-prompt/</id>
+    <id>https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/</id>
     <content type="html">&lt;p&gt;The Terminal (or &lt;em&gt;bash&lt;/em&gt;, &lt;em&gt;shell&lt;/em&gt;, &lt;em&gt;console&lt;/em&gt;) is an incredibly powerful program available on (almost) all operating systems such as Mac OS, Windows, or Linux Distributions like Ubuntu, Mint, Fedora, CentOS, ... - you get the picture. Using the terminal in an efficient way to navigate the computer or writing your own programs and snippets to enhance your workflows is incredibly powerful. I already &lt;a href=&quot;https://kevingimbel.de/bash-script-ws/&quot;&gt;wrote about one custom script named &lt;code&gt;ws&lt;/code&gt;&lt;/a&gt; which enhances my daily workflows. This article marks the first of many to come about using and configuring your terminal. This tutorial is written for MacOS and Linux, though most of it will work on Windows 10 if you use Bash.&lt;/p&gt;
 &lt;p&gt;To get started with this tutorial open up your terminal. If you don&#39;t know how to open a terminal your first mission is to find out how! (&lt;em&gt;Hint: Google is your friend!&lt;/em&gt;). Once the terminal is open we can start with some basic operations.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; On newer Windows versions you should use Bash if available! This tutorial will probably not work with older Windows Verisons (XP, 7, maybe even 8) and the Windows Terminal (e.g. CMD).&lt;/p&gt;
 &lt;p&gt;In this tutorial we will customize the Prompt. To do so, we will use VIM, a command-line Editor available in most systems (including servers) - VIM is powerful but horribly unfamiliar at first. If you prefer to use a different editor do so, but I highly recomment to learn the basics of VIM - it&#39;ll help you once you start interacting with systems that do not have a graphical user interface (e.g. Servers, Containers).&lt;/p&gt;
 &lt;h2&gt;Preface: VIM&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, &lt;a href=&quot;https://kevingimbel.de/blog/2017/03/using-the-terminal:-the-prompt/#the-prompt&quot;&gt;skip to the next section&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Below I explain some basics for using VIM, which is used throughout this tutorial to edit files. If you know how to use VIM, &lt;a href=&quot;https://kevingimbel.de/blog/2017/03/using-the-terminal-the-prompt/#the-prompt&quot;&gt;skip to the next section&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.vim.org/&quot;&gt;VIM&lt;/a&gt; is am incredibly powerful text editor available from the command line. It&#39;s a bit weird to get used to at first but once you know your way around you&#39;ll become quite productive with it. It&#39;s easier to edit config files with VIM compared to opening them in a Editor like Atom or Sublime Text. VIM can be used by executing the &lt;code&gt;vim&lt;/code&gt; command from a terminal which shows the default vim startup screen as seen below.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/images/posts/2017/terminal/prompt/vim-empty-file.png&quot; alt=&quot;An empty file opened in VIM&quot; /&gt;&lt;figcaption&gt;An empty file opened in VIM&lt;/figcaption&gt;&lt;/figure&gt;
@@ -2055,9 +2055,9 @@ export PS1=&amp;quot;\W $&amp;quot;
   
   <entry>
     <title>TIL: Bash select</title>
-    <link href="https://kevingimbel.de/blog/2018/04/til:-bash-select/"/>
+    <link href="https://kevingimbel.de/blog/2018/04/til-bash-select/"/>
     <updated>2018-04-18T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2018/04/til:-bash-select/</id>
+    <id>https://kevingimbel.de/blog/2018/04/til-bash-select/</id>
     <content type="html">&lt;p&gt;I was recently researching different bash prompts and stumbled upon an &lt;a href=&quot;https://unix.stackexchange.com/a/193660/136550&quot; title=&quot;StackExchange answer for question &#39;In which situations are PS2, PS3, PS4 used as the prompt?&#39;&quot;&gt;StackExchange answer&lt;/a&gt; which explains the different prompt types (&lt;code&gt;PS1&lt;/code&gt;, &lt;code&gt;PS2&lt;/code&gt;, &lt;code&gt;PS3&lt;/code&gt;, and &lt;code&gt;PS4&lt;/code&gt;). The answer explains how the PS3 prompt is used for commands like &lt;code&gt;select&lt;/code&gt;. I did not know about select before, so that&#39;s the real &lt;abbr title=&quot;Today I learned&quot;&gt;TIL&lt;/abbr&gt; here!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[...] PS3 is shown when the select command is waiting for input [...]&lt;/p&gt;
@@ -2159,9 +2159,9 @@ Your answer: _
   
   <entry>
     <title>Hugo: compare dates to flag old content</title>
-    <link href="https://kevingimbel.de/blog/2020/01/hugo:-compare-dates-to-flag-old-content/"/>
+    <link href="https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/"/>
     <updated>2020-01-02T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/01/hugo:-compare-dates-to-flag-old-content/</id>
+    <id>https://kevingimbel.de/blog/2020/01/hugo-compare-dates-to-flag-old-content/</id>
     <content type="html">&lt;p&gt;With the recent redesign of my website I also wanted to add a note to old articles. The IT world is changing fast and information can quickly be outdated, so I decided to add an automatically generated note to every post that is older than 4 years. Using the Hugo &lt;a href=&quot;https://gohugo.io/functions/math/&quot;&gt;Math&lt;/a&gt; function and &lt;a href=&quot;https://gohugo.io/variables/page/#page-variables&quot;&gt;Date&lt;/a&gt; values it can be accomplished in automated-enough fashion.&lt;/p&gt;
 &lt;h3&gt;Partial&lt;/h3&gt;
 &lt;p&gt;First I created a new partial named &lt;code&gt;single-header.html&lt;/code&gt; and added it to all my &lt;code&gt;single.html&lt;/code&gt; templates. The file contains the following code which I will explain step by step.&lt;/p&gt;
@@ -2178,9 +2178,9 @@ Your answer: _
   
   <entry>
     <title>Hugo: ignore _index.md in list templates</title>
-    <link href="https://kevingimbel.de/blog/2020/01/hugo:-ignore-_index.md-in-list-templates/"/>
+    <link href="https://kevingimbel.de/blog/2020/01/hugo-ignore-index-md-in-list-templates/"/>
     <updated>2020-01-03T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/01/hugo:-ignore-_index.md-in-list-templates/</id>
+    <id>https://kevingimbel.de/blog/2020/01/hugo-ignore-index-md-in-list-templates/</id>
     <content type="html">&lt;p&gt;While creating my new website I also added more sections, namely a &lt;a href=&quot;https://kevingimbel.de/blog/&quot;&gt;blog&lt;/a&gt;, &lt;a href=&quot;https://kevingimbel.de/photography/&quot;&gt;photography&lt;/a&gt;, and &lt;a href=&quot;https://kevingimbel.de/art/&quot;&gt;art&lt;/a&gt; section. All of these use list templates and render &amp;quot;article&amp;quot;-like content previews. I wanted to add some content to these lists and Hugo has a special file named &lt;code&gt;_index.md&lt;/code&gt; for that. This file can be used to create index pages for lists.&lt;/p&gt;
 &lt;p&gt;When I did that I somehow also included the index files in the post listings which was not what I wanted, so I added a if statement to my &lt;code&gt;article-preview.html&lt;/code&gt; template that is used to render article previews.&lt;/p&gt;
 &lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;br /&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;article&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;article article--in-list&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;aria-labelledby&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;article-heading-&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;    [...]&lt;br /&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;article&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -2544,9 +2544,9 @@ CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined
   
   <entry>
     <title>Deno 1.0 released</title>
-    <link href="https://kevingimbel.de/blog/2020/05/deno-1.0-released/"/>
+    <link href="https://kevingimbel.de/blog/2020/05/deno-1-0-released/"/>
     <updated>2020-05-18T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/05/deno-1.0-released/</id>
+    <id>https://kevingimbel.de/blog/2020/05/deno-1-0-released/</id>
     <content type="html">&lt;p&gt;Deno made its first stable release with the release of v1!&lt;/p&gt;
 &lt;p&gt;I&#39;ve heard of Deno in the past but I never really cared for it. My work with JavaScript has always been in the browser and I&#39;m not too much of a NodeJS fan - mainly because of the security and sandbox aspects of the runtime (or more, the lack of them). Deno aims to do better and fix some (or all?) of the NodeJS mistakes, like making access to the filesystem and network impossible unless allowed. In NodeJS, a script can read, write, send and receive network packages and basically do whatever it wants - there&#39;s little restriction and this has lead to malicious code executions in the past.&lt;/p&gt;
 &lt;h2&gt;Quick overview&lt;/h2&gt;
@@ -2628,9 +2628,9 @@ CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined
   
   <entry>
     <title>Hallo, Welt!</title>
-    <link href="https://kevingimbel.de/blog/2020/05/hallo-welt!/"/>
+    <link href="https://kevingimbel.de/blog/2020/05/hallo-welt/"/>
     <updated>2020-05-20T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/05/hallo-welt!/</id>
+    <id>https://kevingimbel.de/blog/2020/05/hallo-welt/</id>
     <content type="html">&lt;p&gt;Hallo!&lt;/p&gt;
 &lt;p&gt;Dieser Blog hat ab jetzt auch eine Deutsche ... Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter &lt;code&gt;/de/&lt;/code&gt; allen Deutschen &lt;s&gt;Content&lt;/s&gt; Inhalt.&lt;/p&gt;
 &lt;p&gt;Schauen wir mal wie&#39;s wird. 🤷‍♀️&lt;/p&gt;
@@ -2766,9 +2766,9 @@ CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined
   
   <entry>
     <title>Shipping Rust CLIs with Docker</title>
-    <link href="https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/"/>
+    <link href="https://kevingimbel.de/blog/2020/08/shipping-rust-cl-is-with-docker/"/>
     <updated>2020-08-06T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/08/shipping-rust-clis-with-docker/</id>
+    <id>https://kevingimbel.de/blog/2020/08/shipping-rust-cl-is-with-docker/</id>
     <content type="html">&lt;p&gt;I recently found a nice and clean way of building and distributing &lt;a href=&quot;https://rust-lang.orf/&quot;&gt;Rust&lt;/a&gt; CLI apps using &lt;a href=&quot;https://www.docker.com/&quot;&gt;docker&lt;/a&gt;. For my work I created a Rust app that wraps some AWS SDK functions to make my day-to-day work with AWS easier. This CLI is very focused on the way we work at &lt;a href=&quot;https://synoa.de/&quot;&gt;Synoa&lt;/a&gt; and therefore unfortunately not open source. The tech does not matter much, as we can just create a tiny example &amp;quot;app&amp;quot; for this blog post.&lt;/p&gt;
 &lt;h2&gt;Rust code&lt;/h2&gt;
 &lt;p&gt;Below is the example Rust code we will use.&lt;/p&gt;
@@ -3067,11 +3067,11 @@ CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined
   
   <entry>
     <title>New Settings and options!</title>
-    <link href="https://kevingimbel.de/blog/2020/10/new-settings-and-options!/"/>
+    <link href="https://kevingimbel.de/blog/2020/10/new-settings-and-options/"/>
     <updated>2020-10-12T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/10/new-settings-and-options!/</id>
+    <id>https://kevingimbel.de/blog/2020/10/new-settings-and-options/</id>
     <content type="html">&lt;p&gt;Over the weekend I implemented a new settings section for my website (the one you read right now!). You can now choose the width of content for articles and pages to better suite your reading preference. I like smaller content because it makes it easier for me to read, others like full-width content.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2020/10/new-settings-and-options!/settings-detail.png&quot; alt=&quot;The settings menu with options for color randomness and content width&quot; /&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2020/10/new-settings-and-options/settings-detail.png&quot; alt=&quot;The settings menu with options for color randomness and content width&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;Click the &amp;quot;Settings&amp;quot; link in the top right and you&#39;ll be able to configure the randomness of the color schema and the width of content. These settings are persistent and stored in &lt;a href=&quot;https://developer.mozilla.org/de/docs/Web/API/Window/localStorage&quot;&gt;LocalStorage&lt;/a&gt; directly in the browser.&lt;/p&gt;
 &lt;p&gt;For the future I want to have an option to increase font sizes and choose color schemes (or individual colors), but the next big thing I want to get done first is a Dark Mode.&lt;/p&gt;
 </content>
@@ -3164,25 +3164,6 @@ a few lines.
   </entry>
   
   <entry>
-    <title>View Logs With Journalctl</title>
-    <link href="https://kevingimbel.de/blog/2020/12/view-logs-with-journalctl/"/>
-    <updated>2020-12-03T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/12/view-logs-with-journalctl/</id>
-    <content type="html">&lt;p&gt;When running any sort of software on a server there&#39;s a high chance you&#39;ll find yourself looking at logs to figure out why something isn&#39;t working. Logs are usually stored in &lt;code&gt;/var/log/&lt;/code&gt; or sometimes in the application root, e.g. &lt;code&gt;/var/www/html/var/logs&lt;/code&gt; or similar for web applications. Finding the right directory for logs can be annoying and tiresome, so today we will look at a another way to view logs on Linux systems: &lt;code&gt;journalctl&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;What is journalctl?&lt;/h2&gt;
-&lt;h2&gt;Basic usage&lt;/h2&gt;
-&lt;h2&gt;Configuration&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;/etc/systemd/journalctl.conf&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Additional resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;A&lt;/li&gt;
-&lt;li&gt;B&lt;/li&gt;
-&lt;li&gt;C&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  
-  <entry>
     <title>Creating a Snake Clone in Rust</title>
     <link href="https://kevingimbel.de/blog/2020/12/creating-a-snake-clone-in-rust/"/>
     <updated>2020-12-03T00:00:00Z</updated>
@@ -3243,50 +3224,6 @@ To do this, follow these steps:&lt;/p&gt;
   </entry>
   
   <entry>
-    <title>5 Things Ansible Can Do for You</title>
-    <link href="https://kevingimbel.de/blog/2021/01/5-things-ansible-can-do-for-you/"/>
-    <updated>2021-01-12T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2021/01/5-things-ansible-can-do-for-you/</id>
-    <content type="html">&lt;p&gt;In this post I want to highlight 5 things that Ansible can do you may not know about. When I started with Ansible I was quite overwhelmed by all the new things, and my first custom roles and playbooks weren&#39;t that great (in fact, they were really bad!). It took time to get to a comfortable level and to establish rules in the team at work, and we constantly iterate and improve over our Ansible usage.&lt;/p&gt;
-&lt;p&gt;Some code examples for this blog post can be found on GitHub at &lt;a href=&quot;https://github.com/KevinGimbel/blog-ansible-tips&quot;&gt;KevinGimbel/blog-ansible-tips&lt;/a&gt;. Feel free to clone the repo and test things along the way!&lt;/p&gt;
-&lt;h2&gt;Ansible can encrypt and decrypt variable files&lt;/h2&gt;
-&lt;p&gt;Ansible comes with a command named &lt;code&gt;ansible-vault&lt;/code&gt; that can be used to encrypt and decrypt files! This makes it super easy and secure to commit config files into source control like git.&lt;/p&gt;
-&lt;p&gt;To use &lt;code&gt;ansible-vault&lt;/code&gt; we first need a &lt;code&gt;ansible.cfg&lt;/code&gt; configuration file. Chances are you already got one in your playbook, but if you haven&#39;t here&#39;s an example:&lt;/p&gt;
-&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;[defaults]&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token constant&quot;&gt;vault_password_file&lt;/span&gt; &lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; /some/directory/my.vault.password&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;I removed everything that isn&#39;t relevant from the config file! A config file in your project will likely have more fields&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;By configuring &lt;code&gt;vault_password_file&lt;/code&gt; we tell ansible in which file it can find a password to encrypt and decrypt our files. This file contains only the password, like so:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;fHd0M5wWuYRqstyI7rw4WvwP10xnkvhNLHo3BC2O4bhVuT7hNhtOnfWtjgIySKhzWHNUr3Z6Nn9uU93yDbmqymGXFmUkjGhXCBmCc468rwrQsEg2HMt1h0Pmqj5yVTkN&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;With this config in place encrypt and decrypt files with the &lt;code&gt;ansible-vault&lt;/code&gt; cli. Assuming we have all secrets in a &lt;code&gt;vault_vars.yml&lt;/code&gt; file inside &lt;code&gt;inventories/production/group_vars/magento2&lt;/code&gt; directory:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ansible-vault encrypt inventories/production/group_vars/magento2/vault_vars.yml&lt;/li&gt;
-&lt;li&gt;ansible-vault decrypt inventories/production/group_vars/magento2/vault_vars.yml&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You can also view the file without decrypting it:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ansible-vault view inventories/production/group_vars/magento2/vault_vars.yml&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;note &quot;&gt;&lt;p&gt;&lt;strong&gt;Pro tip&lt;/strong&gt;: If you are using a shared cloud drive like Nextcloud, OwnCloud or AWS S3, you can share the vault password files with your team and have them automatically synced into some directory on everyones computer, like &lt;code&gt;~/work/ansible-password/&lt;/code&gt; so everybody can decrypt the files with no additional setup steps.&lt;/p&gt;
-&lt;p&gt;Alternatively you can share the password with a traditional password manager but then everybody needs to setup the files first!&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2&gt;Ansible can run commands against localhost&lt;/h2&gt;
-&lt;p&gt;Ansible by default connects via SSH to a remote server and then runs commands through Python, but sometimes we do not need this. If we talk to a API (see below), we may not want to run the code on a server and instead just want to execute code through Ansible. For this the special &lt;code&gt;localhost&lt;/code&gt; host keyword exists!&lt;/p&gt;
-&lt;p&gt;Take the following playbook&lt;/p&gt;
-&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;hosts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; localhost&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;get hostname&quot;&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token key atrule&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;hostname&quot;&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token key atrule&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; local_name&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;show hostname&quot;&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token key atrule&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If we run this playbook with &lt;code&gt;ansible-playbook tip-2-local.yml&lt;/code&gt; it will not connect to any remote server and just show the host name of the local computer.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ ansible-playbook tip-2-local.yml&lt;br /&gt;&lt;br /&gt;PLAY &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;localhost&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; **************************************************************************************************&lt;br /&gt;&lt;br /&gt;TASK &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Gathering Facts&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; ********************************************************************************************&lt;br /&gt;ok: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;localhost&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;TASK &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;get hostname&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; ***********************************************************************************************&lt;br /&gt;changed: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;localhost&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;TASK &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;show hostname&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; **********************************************************************************************&lt;br /&gt;ok: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;localhost&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token string&quot;&gt;&quot;msg&quot;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;kevins-mbp.lan&quot;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;PLAY RECAP ********************************************************************************************************&lt;br /&gt;localhost                  &lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;ok&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;changed&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;unreachable&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;failed&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;skipped&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;rescued&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;ignored&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;   &lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Ansible can simulate changes&lt;/h2&gt;
-&lt;p&gt;When working on a playbook or deploying a new role for the first time, it can be nice to get an overview of what would change before doing any change at all. For this, Ansible has the &lt;code&gt;--check&lt;/code&gt; flag.&lt;/p&gt;
-&lt;p&gt;All tasks will be marked as &amp;quot;skipped&amp;quot; and Ansible will not make any changes at all!&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ ansible-playbook --check tip-3-check.yml&lt;br /&gt;&lt;br /&gt;PLAY &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;localhost&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; **************************************************************************************************&lt;br /&gt;&lt;br /&gt;TASK &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Gathering Facts&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; ********************************************************************************************&lt;br /&gt;ok: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;localhost&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;TASK &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;move file&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; **************************************************************************************************&lt;br /&gt;skipping: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;localhost&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;PLAY RECAP ********************************************************************************************************&lt;br /&gt;localhost                  &lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;ok&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;changed&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;unreachable&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;failed&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;skipped&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;rescued&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token assign-left variable&quot;&gt;ignored&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;   &lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Ansible can run only a subset of tasks&lt;/h2&gt;
-&lt;p&gt;Ansible can also run a subset of all tasks. This is especially helpful when the changes do not require a full deployment / check. Think of a Apache role where the user maybe wants to update a virtual host but has no interest in running other tasks such as checking the installed version or enabling modules. In such a case we can use tags on our tasks when writing an ansible role.&lt;/p&gt;
-&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;test tags&quot;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token key atrule&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;I only run with -t test1&quot;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; test1&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;test tags 2&quot;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token key atrule&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;I only run with -t test2&quot;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; test2&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If we now run ansible-playbook with &lt;code&gt;--tags&lt;/code&gt; or &lt;code&gt;-t&lt;/code&gt; flag only the matching tasks will be executed. If we run &lt;em&gt;without specifying tags&lt;/em&gt;, all tasks will run!&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
     <title>Moving to 11ty</title>
     <link href="https://kevingimbel.de/blog/2021/01/moving-to-11ty/"/>
     <updated>2021-01-24T00:00:00Z</updated>
@@ -3308,11 +3245,18 @@ To do this, follow these steps:&lt;/p&gt;
 &lt;p&gt;For me the most important thing when moving to any new &lt;abbr title=&quot;a tool that creates a HTML website from content and config files&quot;&gt;static site generator&lt;/abbr&gt; is the ability to configure permalinks. I do not want to break all old links and I do not want to create some rewrite or redirect magic. I want to continue using permalinks as I&#39;ve been doing with Hugo.&lt;/p&gt;
 &lt;p&gt;I wasn&#39;t able to find a solution in the docs, but found the solution in &lt;a href=&quot;https://hugogiraudel.com/2020/11/30/from-jekyll-to-11ty/#posts-permalinks&quot;&gt;an article on moving to 11ty by Kitty&lt;/a&gt;. They also struggled with the permalink structure and then found out that creating a JSON file named after the collection with configs for permalink and layout is the solution.&lt;/p&gt;
 &lt;p&gt;So I placed a &lt;code&gt;_blog.json&lt;/code&gt; file in my &lt;code&gt;_blog&lt;/code&gt; directory (because the collection in eleventy is also called &lt;code&gt;blog&lt;/code&gt;).&lt;/p&gt;
-&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token string&quot;&gt;&quot;layout&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;blog&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token string&quot;&gt;&quot;permalink&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/blog/2021/01/moving-to-11ty/&quot;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token property&quot;&gt;&quot;layout&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;post&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token property&quot;&gt;&quot;permalink&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/blog/2021/01/moving-to-11ty/&quot;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In here we can use the filters provided by 11ty like &lt;code&gt;date&lt;/code&gt; to format the date and &lt;code&gt;slug&lt;/code&gt; to turn the post title into a URL. &lt;code&gt;slug&lt;/code&gt; will replace some characters in the &lt;code&gt;title&lt;/code&gt;, for example spaces with dashes (&lt;code&gt;-&lt;/code&gt;).&lt;/p&gt;
 &lt;h2&gt;Static assets&lt;/h2&gt;
 &lt;p&gt;Next up is static assets. The first that comes to my mind is CSS and JS files.&lt;/p&gt;
 &lt;p&gt;@TODO: Finish this section!&lt;/p&gt;
+&lt;h2&gt;Filters&lt;/h2&gt;
+&lt;p&gt;I added a few filters. Filters can be used like &lt;code&gt;{{ post.url | myFilter }}&lt;/code&gt;. The most important one is &lt;code&gt;slugify&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;slugify&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;slugify&lt;/code&gt; uses the &lt;a href=&quot;https://www.npmjs.com/package/@sindresorhus/slugify&quot;&gt;@sindresorhus/slugify&lt;/a&gt; module. To include it into 11ty, I added it in &lt;code&gt;.eleventy.js&lt;/code&gt; like so:&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;eleventyConfig&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addFilter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;slugify&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;slugify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then I could use it in my &lt;code&gt;_blog.json&lt;/code&gt; config file:&lt;/p&gt;
+&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token property&quot;&gt;&quot;layout&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;post&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token property&quot;&gt;&quot;permalink&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/blog/2021/01/moving-to-11ty/&quot;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Plugins&lt;/h2&gt;
 &lt;h3&gt;eleventy-plugin-syntaxhighlight&lt;/h3&gt;
 &lt;p&gt;I&#39;m using the &lt;code&gt;@11ty/eleventy-plugin-syntaxhighlight&lt;/code&gt; plugin to add syntax highlighting. The plugin works at build time so no additional JavaScript is required. The plugin is added into the &lt;code&gt;.eleventy.js&lt;/code&gt; config file like so&lt;/p&gt;
@@ -3410,18 +3354,34 @@ In addition to targeting users via social engineering, we have also observed sev
     <link href="https://kevingimbel.de/blog/2021/02/sea-of-thieves/"/>
     <updated>2021-02-01T00:00:00Z</updated>
     <id>https://kevingimbel.de/blog/2021/02/sea-of-thieves/</id>
-    <content type="html">&lt;p&gt;While playing Sea of Thieves and unloading cargo in a port, two random guys came swimming from the open sea shouting &amp;quot;Don&#39;t shoot, don&#39;t shoot&amp;quot;, then entered our ship, and started drinking and dancing. After a few minutes of us dancing together, they entered the canons and shot themselves off into the sea.&lt;/p&gt;
-&lt;p&gt;Such a beautiful and weird game!&lt;/p&gt;
+    <content type="html">&lt;p&gt;While unloading some &lt;s&gt;stolen goods&lt;/s&gt; cargo in Sea of Thieves, two random guys came swimming from the open sea shouting &amp;quot;Don&#39;t shoot, don&#39;t shoot&amp;quot;, then entered our ship, and started drinking and dancing. After a few minutes of us dancing together, they entered the canons and shot themselves off into the sea.&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
-    <title>Implementing the From trait in Rust</title>
-    <link href="https://kevingimbel.de/blog/2021/02/implementing-the-from-trait-in-rust/"/>
-    <updated>2021-02-03T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2021/02/implementing-the-from-trait-in-rust/</id>
-    <content type="html">&lt;p&gt;Traits are one of the things that make Rust fun and flexible, but they can be hard to understand when getting started. In this article we look into the &lt;code&gt;From&lt;/code&gt; trait which can be used to construct a &lt;code&gt;struct&lt;/code&gt; from a type. &lt;code&gt;T&lt;/code&gt; can be a &lt;code&gt;&amp;amp;str&lt;/code&gt;, or &lt;code&gt;String, or &lt;/code&gt;i32&lt;code&gt;. To get started, let&#39;s  define an struct, in this case &lt;/code&gt;Paragraph` which will represent a paragraph of text.&lt;/p&gt;
-&lt;pre class=&quot;language-rust&quot;&gt;&lt;code class=&quot;language-rust&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;token type-definition class-name&quot;&gt;Paragraph&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  content&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;  content_length&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;i64&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;  explicit&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;bool&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+    <title>Three songs</title>
+    <link href="https://kevingimbel.de/blog/2021/02/three-songs/"/>
+    <updated>2021-02-04T00:00:00Z</updated>
+    <id>https://kevingimbel.de/blog/2021/02/three-songs/</id>
+    <content type="html">&lt;p&gt;Here&#39;s three songs that get me through the day.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://open.spotify.com/track/2k58ZnbykfhiidQiAS5Kh0?si=kyu3gAVhRqeEFa9dCKC0kg&quot;&gt;John B - Get Stuffed&lt;/a&gt; (Drum n&#39; Bass)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=rPIJk0MKSWM&quot;&gt;Lana Del Rey - Heart-Shaped Box&lt;/a&gt; (Live, Nirvana Cover)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://open.spotify.com/track/134IgRBV74jw5R5pYysYk9?si=x4o-y38hRfeakbJlQzz5-w&quot;&gt;The Armed - Night City Aliens&lt;/a&gt; (Cyberpunk 2077 Soundtrack)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>The Electric State</title>
+    <link href="https://kevingimbel.de/blog/2021/02/the-electric-state/"/>
+    <updated>2021-02-06T00:00:00Z</updated>
+    <id>https://kevingimbel.de/blog/2021/02/the-electric-state/</id>
+    <content type="html">&lt;figure&gt;&lt;img src=&quot;https://kevingimbel.de/blog/2021/02/the-electric-state/the-electric-state.jpg&quot; alt=&quot;The Electric State held in hand in front of a book shelve&quot; /&gt;&lt;figcaption&gt;The Electric State held in hand in front of a book shelve&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;I just finished reading &amp;quot;The Electric State&amp;quot; by Simon Stålenhag and I think it is the first graphic novel I&#39;ve ever read. I really liked the mood and the writing style. It&#39;s not that long, 143 pages with about half of them being beautifully eery images of a dystopian USA.&lt;/p&gt;
+&lt;p&gt;The images mixed with the short texts on each page tell the story of a young women and a robot traveling together through a almost post-apocalyptic landscape, slowly unraveling hat happened to the world and to the protagonist.&lt;/p&gt;
+&lt;p&gt;I won&#39;t spoil the story of course. I can recommend the book and I&#39;m looking forward to read the other two graphic novels by Simon Stålenhag: &lt;em&gt;Tales from the Loop&lt;/em&gt; and &lt;em&gt;Things from the Flood&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;rating &quot; role=&quot;img&quot; aria-label=&quot;Rating: 4 of 5&quot;&gt;4/5 &lt;span class=&quot;rating--icon&quot; aria-hidden=&quot;true&quot;&gt;🤖&lt;/span&gt;&lt;span class=&quot;rating--icon&quot; aria-hidden=&quot;true&quot;&gt;🤖&lt;/span&gt;&lt;span class=&quot;rating--icon&quot; aria-hidden=&quot;true&quot;&gt;🤖&lt;/span&gt;&lt;span class=&quot;rating--icon&quot; aria-hidden=&quot;true&quot;&gt;🤖&lt;/span&gt;&lt;span class=&quot;rating--icon-inactive&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>

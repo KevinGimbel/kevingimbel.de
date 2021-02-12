@@ -5,6 +5,7 @@ type: blog
 categories:
     - backen
 tags:
+    - backen
     - Brot
     - Sauerteig
     - Fehlschlag

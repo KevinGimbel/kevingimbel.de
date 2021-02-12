@@ -8,6 +8,7 @@ tags:
     - javascript
     - node
     - ssg
+    - code
     - blog
 date: "2021-01-24"
 lastmod: "2021-01-24"
@@ -74,10 +75,10 @@ I wasn't able to find a solution in the docs, but found the solution in [an arti
 
 So I placed a `_blog.json` file in my `_blog` directory (because the collection in eleventy is also called `blog`).
 
-```js
+```json
 {
-  "layout": "blog",
-  "permalink": "/blog/{{ page.date | date: '%Y/%m' }}/{{ title | slug }}/"
+  "layout": "post",
+  "permalink": "/blog/{{ page.date | date: '%Y/%m' }}/{{ title | slugify }}/"
 }
 ```
 
@@ -88,6 +89,30 @@ In here we can use the filters provided by 11ty like `date` to format the date a
 Next up is static assets. The first that comes to my mind is CSS and JS files.
 
 @TODO: Finish this section!
+
+## Filters
+
+I added a few filters. Filters can be used like `{% raw %}{{ post.url | myFilter }}{% endraw %}`. The most important one is `slugify`.
+
+### slugify
+
+`slugify` uses the [@sindresorhus/slugify](https://www.npmjs.com/package/@sindresorhus/slugify) module. To include it into 11ty, I added it in `.eleventy.js` like so: 
+
+```js
+eleventyConfig.addFilter('slugify', function (str) {
+    return slugify(str);
+  });
+```
+
+Then I could use it in my `_blog.json` config file:
+
+```json
+{
+  "layout": "post",
+  "permalink": "/blog/{{ page.date | date: '%Y/%m' }}/{{ title | slugify }}/"
+}
+```
+
 
 ## Plugins
 

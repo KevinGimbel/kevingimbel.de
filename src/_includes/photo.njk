@@ -10,11 +10,11 @@
 {% endblock %}
 
 {% block content %}
-<article class="post" itemscope itemtype="https://schema.org/Article" {% if language%}lang="{{ language }}"{% endif %}>
+<article class="post stack" itemscope itemtype="https://schema.org/Article" {% if language%}lang="{{ language }}"{% endif %}>
   {% set exclude_author_info = true %}
   {% include "single-header.njk" %}
 
-  <div itemtype="articleBody" class="post-body">
+  <div itemtype="articleBody" class="post-body stack">
     {{ content | safe }}
   
     <div class="break-full-width">
