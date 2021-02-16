@@ -469,8 +469,47 @@ blockquote::after {
 pre {
   overflow: auto;
   padding: 1.5em;
-  border-radius: 0.3em;
-  background: rgb(26, 39, 54);
+  border-radius: .6em;
+  background: var(--color-dark-bg);
+  color: var(--color-dark-fg);
+  position: relative;
+}
+
+pre::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-accent);
+  padding: .25em;
+  border-bottom-left-radius: .6em;
+  letter-spacing: .1em;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+pre.language-svg::after {
+  content: "SVG";
+}
+
+pre.language-bash::after {
+  content: "SHELL";
+}
+
+pre.language-rust::after {
+  content: "RUST";
+}
+
+pre.language-html::after {
+  content: "HTML";
+}
+
+pre.language-css::after {
+  content: "CSS";
+}
+
+pre.language-javascript::after,
+pre.language-js::after {
+  content: "JS";
 }
 
 p > code {
@@ -556,7 +595,7 @@ p > code {
 }
 
 .author__avatar {
-  width: 200px;
+  width: 325px;
 }
 
 .author__avatar, .img--fancy-border {
@@ -578,6 +617,10 @@ figcaption {
 figcaption::before {
   content: "Figure " counter(figure) ": ";
   font-weight: bold;
+}
+
+.break-left figcaption {
+  padding-left: var(--stack-margin, 1rem);
 }
 
 /* ******************************* PICTURE */
@@ -1045,6 +1088,16 @@ mark.highlight-line-active {
   background: rgba(0,0,0,0.8);
   padding: .25em;
 }
+
+.post-teaser__has-bg-img a {
+  color: var(--color-dark-fg);
+}
+
+.post-teaser__has-bg-img .post-teaser__body {
+  background: var(--color-dark-bg);
+  padding: var(--padding, 1.5rem);
+}
+
 
 @media all and (max-width: 900px) {
   .pixelfed {

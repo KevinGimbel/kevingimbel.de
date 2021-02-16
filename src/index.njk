@@ -24,17 +24,19 @@ head: |
   }
   </style>
 
-hide_page_title: true
+hide_page_title: "true"
 ---
 
 <section class="pop-box">
 <div class="[ flex flex--space-around flex--centered ]  [ small-flex__column ]">
   <div class="flex__boxed" style="--padding: 4rem 0 2rem">
-    <img src="/assets/img/kevin-avatar-w200.jpg" alt="Avatar, a picture of Kevin Gimbel" class="author__avatar" style="max-width: 200px;">
+    <div class="author__avatar" style="max-width: 250px; background: var(--color-secondary); padding-top: .5em; overflow: hidden;">
+      <img src="/assets/img/kevin-avatar-nobg.svg" alt="Hand-made vector avatar of Kevin Gimbel" style="margin-bottom: -.5rem;"/>
+    </div>
   </div>
   <div class="flex__boxed" style="--padding: 2rem 0 2rem 2rem">
     <h1 class="mb0 mt0">Hi, I'm <a href="/about/">Kevin</a>.</h1>
-    <p>I'm a <b>DevOps Engineer</b> with a focus on <i class="t-accent">automation</i> and security.</p>
+    <p>I'm a <b><i class="t-accent">DevOps Engineer</i></b> with a focus on automation and security.</p>
   </div>
 </div>
   <p>Before shifting into DevOps and cloud computing I worked as <i class="t-accent">Front-End Developer</i>, which is still a hobby and field of interest for me.</p>
@@ -52,16 +54,22 @@ hide_page_title: true
 
 {% for post in posts %}
   {% if current < limit %}
-  <article class="post-teaser post-teaser-{{ current }}">
+    {% if post.data.resources %}
+      <article class="post-teaser post-teaser-{{ current }} post-teaser__has-bg-img" style="background-image: url('{{ post.url }}/{{ post.data.resources[0].src }}'); background-size: cover;">
+    {% else %}
+      <article class="post-teaser post-teaser-{{ current }}">
+    {% endif %}
   <a href="{{ post.url }}" title="Continue reading {{ post.data.title }}">
-  <h3 class="post-teaser__headline">{{ post.data.title }}</h3>
-  {% if post.data.subtitle %}
-  <p class="h4 post-teaser__sub-headline">{{ post.data.subtitle }}</p>
-  {% else %}
-  <p>{{ post.templateContent | striptags(true) | safe | truncate(280) }}</p>
-  {% endif %}
+    <div class="post-teaser__body">
+      <h3 class="post-teaser__headline">{{ post.data.title }}</h3>
+      {% if post.data.subtitle %}
+        <p class="h4 post-teaser__sub-headline">{{ post.data.subtitle }}</p>
+      {% else %}
+        <p>{{ post.templateContent | striptags(true) | safe | truncate(280) }}</p>
+      {% endif %}
+    </div>
   </a>
-  {% for category in post.data.categories %}<span class="post-teaser__category">#{{ category }}</span> {% endfor %}
+
   </article> 
   {% endif %}
   {% set current = current + 1 %}
