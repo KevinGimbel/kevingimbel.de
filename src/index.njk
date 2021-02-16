@@ -1,7 +1,6 @@
 ---
 title: "Home"
-layout: home
-templateEngineOverride: "md,njk"
+layout: single
 head: |
   <style>
   :root {
@@ -24,6 +23,8 @@ head: |
     }
   }
   </style>
+
+hide_page_title: true
 ---
 
 <section class="pop-box">
@@ -42,8 +43,8 @@ head: |
 </section>
 
 
-<section class="break-left">
-<h2 class="h1 pl2">The last things I wrote about</h2>
+<section class="break-full-width home__last-posts-wrap">
+<h2 class="h1">The last things I wrote about</h2>
 <div class="home__last-posts">
 {% set limit = 3 %}
 {% set current = 0 %}
@@ -71,3 +72,5 @@ head: |
 </div>
 </div>
 </section>
+
+{% include "pixelfed.njk" %}

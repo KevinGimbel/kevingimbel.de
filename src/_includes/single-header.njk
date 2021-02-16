@@ -6,8 +6,10 @@
 
 {% if not svg_title %}
   <div class="break-full-width">
-    <h1 class="mb0">{{ title }}</h1>
-    <p class="post-heading__subtitle h2  mb2 mt0">{{ subtitle }}</p>
+    <hgroup>
+      <h1 class="mb0">{{ title }}</h1>
+      <p class="post-heading__subtitle h2  mb2 mt0">{{ subtitle }}</p>
+    </hgroup>
   </div>
 {% endif %}
   {% if not exclude_author_info %}

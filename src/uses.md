@@ -30,7 +30,3 @@ It's build on Chromium and offers Brave Rewards, which is a way to earn the BAT 
 * [andOTP](https://github.com/andOTP/andOTP) is my Two-Factor Auth token generator 
 
 I wrote about my [2FA and Password Manager setup](/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/) in the past.
-
-## Finances
-
-* [bitpanda](https://www.bitpanda.com/) is where I trade cryptocurrencies _but I've no idea what I'm doing_ 🙃

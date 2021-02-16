@@ -143,9 +143,11 @@ hr {
 /* ******************************* TYPOGRAPHY */
 h1, .h1 {
   font-size: 3.25rem;
+  font-size: clamp(5vw, 3.5rem, 5rem);
 }
 h2, .h2 {
   font-size: 2.75rem;
+  font-size: clamp(2rem, 2vw, 2.75rem);
 }
 h3, .h3 {
   font-size: 2.5rem;
@@ -438,7 +440,7 @@ blockquote::after {
 }
 
 .post h1 {
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 4vw, 5rem);
   line-height: 1;
   font-style: italic;
 }
@@ -542,6 +544,11 @@ p > code {
   font-style: italic;
 }
 
+@media all and (max-width: 900px) {
+  .post__prev-next {
+    flex-direction: column;
+  }
+}
 /* ******************************* AUTHOR COMPONENT */
 
 .author__bio {
@@ -951,32 +958,29 @@ mark.highlight-line-active {
 
 /* Totally stolen from Wes Bos. https://wesbos.com/ */
 @media (min-width: 2500px) {
-body::after {
-    content: "Wow you have a big monitor!";
-    display: block;
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    right: 3rem;
-    font-size: 6.5vh;
-    pointer-events: none;
-    transform: rotate(90deg);
-    text-shadow: var(--color-accent) 2px 2px 0px;
-    color: #000;
+  body::after {
+      content: "Wow you have a big monitor!";
+      display: block;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      right: 3rem;
+      font-size: 6.5vh;
+      pointer-events: none;
+      transform: rotate(90deg);
+      text-shadow: var(--color-accent) 2px 2px 0px;
+      color: #000;
+  }
 }
+.pixelfed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-
-
-/* Totally stolen from Wes Bos. https://wesbos.com/ */
 .pixelfed .img-boxed {
-  display: flex;
-  align-items: center;
-  margin: .5em;
-  padding: .5em;
-  max-height: 300px;
-  overflow: hidden;
-  min-width: 400px;
+  grid-area: auto;
+  grid-row: auto;
+  grid-column: auto;
 }
 
 .post-teaser {
@@ -986,10 +990,12 @@ body::after {
 @media all and (min-width: 900px) {
   .home__last-posts {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(minmax(10rem, 1fr));
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 2rem;
-    padding-left: 2rem;
+    grid-gap: 4rem;
+  }
+  .home__last-posts-wrap {
+    padding: 4rem;
   }
 }
 .post-teaser.post-teaser-0 {

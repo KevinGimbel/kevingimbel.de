@@ -50,6 +50,7 @@ module.exports = async function () {
   });
 
   return {
-    images: sorted_images
+    images: sorted_images,
+    hello: "Tim"
   };
 };

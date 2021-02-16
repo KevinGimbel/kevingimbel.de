@@ -42,7 +42,7 @@
   <header class="post-header">
     <h1 class="mt0">Bullgit loves Jekyll</h1>
   </header>
-  <div class="post-body stack">
+  <section class="post-body stack">
     <p>After having a static HTML Page for about 6 months, we at <a href="http://bullg.it">bullgit</a> just switched to a brand-new Jekyll page that uses the GitHub API to display all our repos as well as a list of members with images and links and there are a few reasons why we made this switch:</p>
 <ul>
 <li>Jekyll is built-in GitHub pages</li>
@@ -70,7 +70,7 @@
 <pre class="language-javascript"><code class="language-javascript">    <span class="token comment">// Add a script element as a child of the body</span><br>    <span class="token keyword">function</span> <span class="token function">downloadJSAtOnload</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        <span class="token keyword">var</span> element <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'script'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        element<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'assets/js/main.js'</span><span class="token punctuation">;</span><br>        document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><br><br>    <span class="token comment">// Check for browser support of event handling capability</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"load"</span><span class="token punctuation">,</span> downloadJSAtOnload<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        window<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"onload"</span><span class="token punctuation">,</span> downloadJSAtOnload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>        window<span class="token punctuation">.</span>onload <span class="token operator">=</span> downloadJSAtOnload<span class="token punctuation">;</span><br>    <span class="token punctuation">}</span></code></pre>
 <p>Those are just a few of the benefits of Jekyll and, because we're a &quot;GitHub only&quot; organization we switched so it's easier to scale the site. Building a Blog would now only take a some time because we're already running Jekyll and just have to add one more layout. That's it, the basics of our brand-new <a href="http://bullg.it">bullgit</a> page.</p>
 
-  </div>
+  </section>
 </article>
 
   </main>
@@ -83,6 +83,7 @@
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
         <a href="/photography" title="View some of my photography">photography</a> &bullet;
+        <a href="/art" title="View some of my art">art</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
         <a href="/uses" title="# Tools, equipment, hardware, etc. I use and like">uses</a> &bullet;

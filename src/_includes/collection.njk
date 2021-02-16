@@ -7,7 +7,7 @@
   </header>
   <div class="post-body stack">
     {{ content | safe }}
-    {% set postslist = collections.blog %}
+    {% set postslist = collections[collection] if collection else collections['blog'] %}
     {% set showYear = true %}
     {% set headingLevel = 'h3' %}
     {% include "postslist.njk" %}
