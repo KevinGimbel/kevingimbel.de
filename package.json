@@ -1,11 +1,11 @@
 {
   "name": "kevingimbel.de",
   "version": "1.0.0",
-  "description": "Web Development, DevOps, Baking, and everything else.",
+  "description": "Web Development, DevOps, and everything in between.",
   "main": "index.js",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy --input=./src --output=./_site"
+    "build": "eleventy --input=./src --output=./docs"
   },
   "repository": {
     "type": "git",

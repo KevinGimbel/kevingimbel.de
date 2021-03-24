@@ -11,7 +11,7 @@ build: ## Clear local public folder and build site
 	NODE_ENV=production npm run build
 
 upload: ## Upload the public directory to the remote server
-	rsync -vhr _site/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_REMOTE_DIR}" --force --delete
+	rsync -vhr docs/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_REMOTE_DIR}" --force --delete
 
 publish: ## Build the static site and push it to the server
 	@make build
