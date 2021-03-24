@@ -71,19 +71,20 @@ module.exports = function (eleventyConfig) {
     }).sort((a, b) => a.date - b.date);
   });
 
-  // books content
-  eleventyConfig.addCollection("books", function (collectionApi) {
-    return collectionApi.getAll().filter(function (item) {
-      return item.data.page.inputPath.substr(2, 10) == 'src/_books';
-    }).sort((a, b) => a.date - b.date);
-  });
+  // moved to journal.kevingimbel.de
+  // // books content
+  // eleventyConfig.addCollection("books", function (collectionApi) {
+  //   return collectionApi.getAll().filter(function (item) {
+  //     return item.data.page.inputPath.substr(2, 10) == 'src/_books';
+  //   }).sort((a, b) => a.date - b.date);
+  // });
 
-  // art collection
-  eleventyConfig.addCollection("art", function (collectionApi) {
-    return collectionApi.getAll().filter(function (item) {
-      return item.data.page.inputPath.substr(2, 8) == 'src/_art' && (process.env.NODE_ENV == 'production' ? item.data.draft != true : true);
-    }).sort((a, b) => a.date - b.date);
-  });
+  // // art collection
+  // eleventyConfig.addCollection("art", function (collectionApi) {
+  //   return collectionApi.getAll().filter(function (item) {
+  //     return item.data.page.inputPath.substr(2, 8) == 'src/_art' && (process.env.NODE_ENV == 'production' ? item.data.draft != true : true);
+  //   }).sort((a, b) => a.date - b.date);
+  // });
 
 
 

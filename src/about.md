@@ -3,7 +3,7 @@ layout: single
 title: "About"
 ---
 
-{% breakout "full-width" %}
+{% breakout "left" %}
 
 {% sidebyside %}
 {% side "left" "wide" %}

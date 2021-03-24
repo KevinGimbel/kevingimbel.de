@@ -1,25 +1,31 @@
 :root {
-  --color-accent: #24d;
-  --color-accent-fg: #fff;
-  /* --color-secondary: #ebc9eb; */
-  --color-secondary: #f1cce1;
-  --color-contrast: #221853;
-
-
-  --color-page-bg: #d6e6ff;
-  --color-page-fg: #222;
-
-  --color-dark-bg: #111;
-  --color-dark-fg: #ccc;
-
-  --color-header-wave: #f1f5f7;
-  --color-footer-wave: #111;
-
-  --logo-dice-fill-color: var(--color-accent);
-  
   --content-width: 50rem;
 }
 
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-accent: #24d;
+    --color-accent-fg: #fff;
+    /* --color-secondary: #ebc9eb; */
+    --color-secondary: #f1cce1;
+    --color-secondary-fg: #222;
+    
+    --color-contrast: #221853;
+    --color-contrast-fg: #d6e6ff;
+
+    --color-page-bg: #d6e6ff;
+    --color-page-fg: #222;
+
+    --color-dark-bg: #111;
+    --color-dark-fg: #ccc;
+
+    --color-header-wave: #f1f5f7;
+    --color-footer-wave: #111;
+
+    --logo-dice-fill-color: var(--color-accent);
+  }
+}
 @font-face {
   font-family: "IBM Plex Mono";
   src: url("/assets/font/plex/IBMPlexMono-Regular.ttf") format("ttf");
@@ -61,8 +67,8 @@ body {
   background: var(--color-page-bg, #ebc9eb);
 }
 
-body.dark-mode {
-
+@media (prefers-color-scheme: dark) {
+  :root {
   --color-accent: hotpink;
   --color-accent-fg: #222;
   
@@ -88,32 +94,8 @@ body.dark-mode {
   /* Colors for pop-box component */
   --color-left: var(--color-accent);
   --color-right: var(--color-secondary);
-
-
-  /*
-  --color-accent: rgb(167, 117, 248);
-  --color-accent-fg: rgb(0, 0, 0);
-    /* --color-secondary: #ebc9eb; * /
-    --color-secondary: #3f2b36;
-    --color-contrast: #f5c8ef;
-  
-  
-    --color-page-bg: #262a31;
-    --color-page-fg: rgb(211, 221, 248);
-  
-    --color-dark-bg: #111;
-    --color-dark-fg: #ccc;
-  
-    --color-header-wave: #39233b;
-    --color-footer-wave: #111;
-  
-    --logo-dice-fill-color: var(--color-accent);
-    --logo-writing-fill-color: white;
-
-    --color-left: rgb(46, 19, 19);
-    --color-right: rgb(10, 10, 58);
-    */
-}
+  }
+} 
 
 a, a:visited {
   color: var(--color-accent, #24d);
@@ -583,6 +565,10 @@ p > code {
   font-style: italic;
 }
 
+.post__prev-next {
+  justify-content: space-between;
+}
+
 @media all and (max-width: 900px) {
   .post__prev-next {
     flex-direction: column;
@@ -804,13 +790,14 @@ code, pre {
   }
 
   .side-by-side .small {
-      max-width: 40%;
+      max-width: 38%;
       width: 100%;
-      padding: 2rem;
+      padding: var(--stack-margin, 2rem);
   }
 
   .side-by-side .wide {
-      max-width: 60%;
+      max-width: 58%;
+      padding: var(--stack-margin, 2rem);
   }
 
   .side-by-side img,
@@ -1087,6 +1074,10 @@ mark.highlight-line-active {
   font-size: 3rem;
   background: rgba(0,0,0,0.8);
   padding: .25em;
+}
+
+.post-teaser__view-all a {
+  color: var(--color-dark-fg);
 }
 
 .post-teaser__has-bg-img a {

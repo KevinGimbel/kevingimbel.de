@@ -11,7 +11,7 @@ tags:
     - graphic-novel
 date: "2021-02-06"
 lastmod: "2021-02-06"
-
+draft: true
 resources:
     - name: "The Electric State"
       src: "the-electric-state.jpg"
