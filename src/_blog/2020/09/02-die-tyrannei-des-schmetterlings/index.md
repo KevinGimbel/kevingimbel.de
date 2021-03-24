@@ -12,7 +12,7 @@ date: "2020-09-02"
 lastmod: "2020-09-02"
 
 resources:
-    - src: tyrannei-des-schmetterlings.jpeg
+    - src: tyrannei-des-schmetterlings.jpg
       name: "Cover of Die Tyrannei des Schmetterlings"
 ---
 {% figure "tyrannei-des-schmetterlings.jpg" "" "Image of the book Die Die Tyrannei des Schmetterlings being held in hand in front of a computer monitor" %}
