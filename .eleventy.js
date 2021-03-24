@@ -60,7 +60,14 @@ module.exports = function (eleventyConfig) {
   // blog collection
   eleventyConfig.addCollection("blog", function (collectionApi) {
     return collectionApi.getAll().filter(function (item) {
-      return item.data.page.inputPath.substr(2, 9) == 'src/_blog' && (process.env.NODE_ENV == 'production' ? item.data.draft != true : true);
+      let is_draft = item.data.page.inputPath.substr(2, 17) == 'src/_blog/_drafts';
+      let is_prod = process.env.NODE_ENV == 'production';
+
+      if (is_prod) {
+        return item.data.page.inputPath.substr(2, 9) == 'src/_blog' && !is_draft;
+      }
+
+      return item.data.page.inputPath.substr(2, 9) == 'src/_blog';
     }).sort((a, b) => a.date - b.date);
   });
 

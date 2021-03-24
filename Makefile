@@ -8,7 +8,7 @@ help: ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##/\&/' | column -s\& -t
 
 build: ## Clear local public folder and build site
-	npm run build
+	NODE_ENV=production npm run build
 
 upload: ## Upload the public directory to the remote server
 	rsync -vhr _site/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_REMOTE_DIR}" --force --delete
