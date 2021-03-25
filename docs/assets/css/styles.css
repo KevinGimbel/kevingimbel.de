@@ -986,6 +986,11 @@ mark.highlight-line-active {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0)) !important;
 }
 
+pre.mermaid {
+  background: #fff;
+  color: #000;
+}
+
 /* Totally stolen from Wes Bos. https://wesbos.com/ */
 @media (min-width: 2500px) {
   body::after {
