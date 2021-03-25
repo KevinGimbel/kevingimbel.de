@@ -1,12 +1,16 @@
 // Plugins 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const Image = require("@11ty/eleventy-img");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
+
 const caniuse = require("@kevingimbel/eleventy-plugin-caniuse");
 const codepenEmbed = require("@kevingimbel/eleventy-plugin-codepen");
 const ratingPlugin = require("@kevingimbel/eleventy-plugin-emoji-rating");
+const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
+
 const pageAssetsPlugin = require('eleventy-plugin-page-assets');
-const Image = require("@11ty/eleventy-img");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
 const path = require("path");
 const slugify = require("@sindresorhus/slugify");
 
@@ -78,6 +82,11 @@ module.exports = function (eleventyConfig) {
     }).sort((a, b) => a.date - b.date);
   });
 
+  eleventyConfig.addCollection("projects", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.page.inputPath.substr(2, 12) == 'src/_project' && item.data.draft != true;
+    }).sort((a, b) => a.date - b.date);
+  });
   // moved to journal.kevingimbel.de
   // // books content
   // eleventyConfig.addCollection("books", function (collectionApi) {
@@ -125,6 +134,10 @@ module.exports = function (eleventyConfig) {
 
   // syntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
+  // Mermaid graphs
+  eleventyConfig.addPlugin(pluginMermaid, {
+    mermaid_js_src: '/assets/js/mermaid.min.js'
+  });
   // RSS
   eleventyConfig.addPlugin(pluginRss);
 
@@ -195,6 +208,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/img");
   eleventyConfig.addPassthroughCopy("src/assets/font");
+  eleventyConfig.addPassthroughCopy("src/assets/js");
 
   // legacy support for old static assets from 2017 and earlier
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" });

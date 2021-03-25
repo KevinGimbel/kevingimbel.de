@@ -52,31 +52,56 @@ hide_page_title: "true"
 {% set current = 0 %}
 {% set posts = collections.blog | reverse %}
 
-{% for post in posts %}
-  {% if current < limit %}
-    {% if post.data.resources %}
-      <article class="post-teaser post-teaser-{{ current }} post-teaser__has-bg-img" style="background-image: url('{{ post.url }}/{{ post.data.resources[0].src }}'); background-size: cover;">
-    {% else %}
-      <article class="post-teaser post-teaser-{{ current }}">
-    {% endif %}
-  <a href="{{ post.url }}" title="Continue reading {{ post.data.title }}">
-    <div class="post-teaser__body">
-      <h3 class="post-teaser__headline">{{ post.data.title }}</h3>
-      {% if post.data.subtitle %}
-        <p class="h4 post-teaser__sub-headline">{{ post.data.subtitle }}</p>
+  {% for post in posts %}
+    {% if current < limit %}
+      {% if post.data.resources %}
+        <article class="post-teaser post-teaser-{{ current }} post-teaser__has-bg-img" style="background-image: url('{{ post.url }}/{{ post.data.resources[0].src }}'); background-size: cover;">
       {% else %}
-        <p>{{ post.templateContent | striptags(true) | safe | truncate(280) }}</p>
+        <article class="post-teaser post-teaser-{{ current }}">
       {% endif %}
-    </div>
-  </a>
+    <a href="{{ post.url }}" title="Continue reading {{ post.data.title }}">
+      <div class="post-teaser__body">
+        <h3 class="post-teaser__headline">{{ post.data.title }}</h3>
+        {% if post.data.subtitle %}
+          <p class="h4 post-teaser__sub-headline">{{ post.data.subtitle }}</p>
+        {% else %}
+          <p>{{ post.templateContent | striptags(true) | safe | truncate(280) }}</p>
+        {% endif %}
+      </div>
+    </a>
 
-  </article> 
-  {% endif %}
-  {% set current = current + 1 %}
-{% endfor %}
+    </article> 
+    {% endif %}
+    {% set current = current + 1 %}
+  {% endfor %}
 
-<div class="post-teaser__view-all">
-  <p><a href="/blog">View all articles</a> 👉</p>
-</div>
+  <div class="post-teaser__view-all">
+    <p><a href="/blog">View all articles</a> 👉</p>
+  </div>
 </div>
 </section>
+
+<section class="break-full-width home__last-posts-wrap">
+<h2 class="h1">The last projects I worked on for fun</h2>
+<div class="home__last-posts">
+
+  {% set posts = collections.projects | reverse %}
+  {% set current = 0 %}
+
+    {% for post in posts %}
+      {% if current < limit %}
+        <article class="post-teaser post-teaser-{{ current }}">
+          <a href="{{ post.url }}" title="Continue reading {{ post.data.title }}">
+            <div class="post-teaser__body">
+              <h3 class="post-teaser__headline">{{ post.data.title }}</h3>
+              {% if post.data.subtitle %}
+                <p class="h4 post-teaser__sub-headline">{{ post.data.subtitle }}</p>
+              {% endif %}
+            </div>
+          </a>
+        </article> 
+      {% endif %}
+      {% set current = current + 1 %}
+    {% endfor %}
+</section>
+</div>
