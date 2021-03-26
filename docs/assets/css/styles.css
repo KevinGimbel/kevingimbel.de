@@ -986,7 +986,7 @@ mark.highlight-line-active {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0)) !important;
 }
 
-pre.mermaid {
+.mermaid {
   background: #fff;
   color: #000;
 }
