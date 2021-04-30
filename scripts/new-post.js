@@ -33,7 +33,7 @@ svg_title: null
 draft: true
 ---`;
 // construct the path with date and slugified title
-let out_path = `./src/_blog/${year}/${month}/${day}-${slugify(title)}`;
+let out_path = `src/_blog/${year}/${month}/${day}-${slugify(title)}`;
 
 // create out directory if it doesn't exists
 if (!fs.existsSync(out_path)) {

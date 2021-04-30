@@ -8,17 +8,23 @@ help: ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##/\&/' | column -s\& -t
 
 build: ## Clear local public folder and build site
-	NODE_ENV=production npm run build
+	npm run build
 
 upload: ## Upload the public directory to the remote server
 	rsync -vhr docs/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_REMOTE_DIR}" --force --delete
 
-publish: ## Build the static site and push it to the server
-	@make build
+publish-next: ## Build the static site and push it to the server
+	@NODE_ENV= make build
 	@make upload
 
-# post-photo: ## Create new photography post. Specify title like title="my title"
-# 	@hugo new photography/$(shell date +%Y)-$(shell echo "${title}" | sed -e 's/ /-/g')
+publish-prod: ## Build the static site and push it to the server
+	@NODE_ENV=production make build
+	@git add .
+	@git commit -m "chore: build site"
+	@git push origin main
+
+post: ## Create new photography post. Specify title like title="my title"
+	@node scripts/new-post "${title}"
 
 # post-blog: ## Create new blog post. Specify title like title="my title"
 # 	@hugo new blog/$(shell date +%Y-%m-%d)-$(shell echo "${title}" | sed -e 's/ /-/g')/index.md
