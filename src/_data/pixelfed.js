@@ -44,13 +44,16 @@ async function get_pixelfed_images() {
 
 
 module.exports = async function () {
-  let data = await get_pixelfed_images();
-  let sorted_images = data.images.sort((a, b) => {
-    return new Date(b.date) - new Date(a.date)
-  });
-
+  // not used right now, may use later
   return {
-    images: sorted_images,
-    hello: "Tim"
-  };
+    images: []
+  }
+  // let data = await get_pixelfed_images();
+  // let sorted_images = data.images.sort((a, b) => {
+  //   return new Date(b.date) - new Date(a.date)
+  // });
+
+  // return {
+  //   images: sorted_images
+  // };
 };

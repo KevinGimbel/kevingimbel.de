@@ -8,7 +8,8 @@
   <div class="post-body stack">
     {{ content | safe }}
     {% set postslist = collections[collection] if collection else collections['blog'] %}
-    {% set showYear = true %}
+    {% set showYear = include_year if include_year else true  %}
+    {% set showPreviewImage = include_preview_images %}
     {% set headingLevel = 'h3' %}
     {% include "postslist.njk" %}
   </div>

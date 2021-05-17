@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy --input=./src --output=./docs"
+    "build": "eleventy --quiet --input=./src --output=./docs"
   },
   "repository": {
     "type": "git",

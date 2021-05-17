@@ -65,7 +65,7 @@
     <p>In this post I'd like to detail how I am managing docker containers behind an apache2 proxy on a Ubuntu 18.04. server. I'm using one Apache server to route traffic from multiple sub-domains to docker containers all running with docker-compose. This setup is <em>not</em> automated and the containers do not need to interact with each other; It's just how I run software for my private usage.</p>
 <h2>Overview</h2>
 <p>Let's start with an overview image, because this can be quite confusing.</p>
-<figure><img src="/images/posts/2020/docker-apache-proxy/apache-docker-server-diagram.svg" alt="A diagram showing how traffic comes through Apache and is routed to different docker containers exposing services on different TCP ports" /><figcaption>A diagram showing how traffic comes through Apache and is routed to different docker containers exposing services on different TCP ports</figcaption></figure>
+<figure><img lazy="true" src="/images/posts/2020/docker-apache-proxy/apache-docker-server-diagram.svg" alt="A diagram showing how traffic comes through Apache and is routed to different docker containers exposing services on different TCP ports" /><figcaption>A diagram showing how traffic comes through Apache and is routed to different docker containers exposing services on different TCP ports</figcaption></figure>
 <p>The diagram shows how traffic comes from the public internet and hits Apache. This happens for example when you type https://kevingimbel.de into your browser and hit enter. Apache then decides which service running should respond to the request, in most scenarios this will be some PHP code (like WordPress). When we want to use NodeJS or run software from docker we usually do not bind to port 80 (HTTP) or 443 (HTTPS) directly. Instead we need to proxy the request.</p>
 <p>In order to make our services accessible without knowing the ports of each container we'll setup a virtual host in Apache.</p>
 <p>The goal is:</p>
@@ -155,8 +155,8 @@ CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined
 <pre class="language-bash"><code class="language-bash">$ <span class="token function">sudo</span> a2ensite fakedata-server.conf domains.conf</code></pre>
 <p>and then restart the apache2 server.</p>
 <pre class="language-bash"><code class="language-bash">$ <span class="token function">sudo</span> systemctl restart apache2</code></pre>
-<div class="note "><p>It appears that apache needs to be <em>restarted</em> not just <em>reloaded</em> when a new subdomain is added to the certificate!</p>
-</div>
+<div class="note "><em><p>It appears that apache needs to be <em>restarted</em> not just <em>reloaded</em> when a new subdomain is added to the certificate!</p>
+</em></div>
 <p>Now you should be able to access the docker container on a subdomain. For example, <a href="https://fs.bullgit.science/">fs.bullgit.science</a>.</p>
 
   </div>
@@ -210,7 +210,7 @@ CustomLog ${APACHE_LOG_DIR}/fs.bullgit.science-access.log combined
   <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
-        <a href="/photography" title="View some of my photography">photography</a> &bullet;
+        
         <a href="/art" title="View some of my art">art</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;

@@ -19,8 +19,10 @@
     </header>
 
     {% if post.data.resources %}
-    {% set img_url = post.url + "" + post.data.resources[0].src %}
-    {% figure img_url, post.data.resources[0].name %}
+      {% if showPreviewImage %}
+        {% set img_url = post.url + "" + post.data.resources[0].src %}
+        {% figure img_url, post.data.resources[0].name %}
+      {% endif %}
     {% endif %}
   
     {% if post.templateContent %}

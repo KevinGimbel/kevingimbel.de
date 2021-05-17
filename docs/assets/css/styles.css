@@ -495,8 +495,8 @@ pre.language-js::after {
 }
 
 p > code {
-  color: #1d1f21;
-  background: #c5c8c6;
+  color: #000;
+  background: rgba(255,255,255, 0.5);
   padding: .125em;
   border-radius: 3px;
   box-shadow:0 2px 4px rgba(0,0,0,0.4);
@@ -1083,6 +1083,8 @@ mark.highlight-line-active {
 
 .post-teaser__view-all a {
   color: var(--color-dark-fg);
+  font-style: italic;
+  font-weight: bold;
 }
 
 .post-teaser__has-bg-img a {

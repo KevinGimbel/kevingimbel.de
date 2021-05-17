@@ -68,8 +68,8 @@
 <p>Ansible comes with a command named <code>ansible-vault</code> that can be used to encrypt and decrypt files! This makes it super easy and secure to commit config files into source control like git.</p>
 <p>To use <code>ansible-vault</code> we first need a <code>ansible.cfg</code> configuration file. Chances are you already got one in your playbook, but if you haven't here's an example:</p>
 <pre class="language-ini"><code class="language-ini"><span class="token selector">[defaults]</span><br><span class="token constant">vault_password_file</span> <span class="token attr-value"><span class="token punctuation">=</span> /some/directory/my.vault.password</span></code></pre>
-<div class="note info"><p>I removed everything that isn't relevant from the config file! A config file in your project will likely have more fields</p>
-</div>
+<div class="note info"><em><p>I removed everything that isn't relevant from the config file! A config file in your project will likely have more fields</p>
+</em></div>
 <p>By configuring <code>vault_password_file</code> we tell ansible in which file it can find a password to encrypt and decrypt our files. This file contains only the password, like so:</p>
 <pre class="language-bash"><code class="language-bash">fHd0M5wWuYRqstyI7rw4WvwP10xnkvhNLHo3BC2O4bhVuT7hNhtOnfWtjgIySKhzWHNUr3Z6Nn9uU93yDbmqymGXFmUkjGhXCBmCc468rwrQsEg2HMt1h0Pmqj5yVTkN</code></pre>
 <p>With this config in place encrypt and decrypt files with the <code>ansible-vault</code> cli. Assuming we have all secrets in a <code>vault_vars.yml</code> file inside <code>inventories/production/group_vars/magento2</code> directory:</p>
@@ -81,9 +81,9 @@
 <ul>
 <li>ansible-vault view inventories/production/group_vars/magento2/vault_vars.yml</li>
 </ul>
-<div class="note "><p><strong>Pro tip</strong>: If you are using a shared cloud drive like Nextcloud, OwnCloud or AWS S3, you can share the vault password files with your team and have them automatically synced into some directory on everyones computer, like <code>~/work/ansible-password/</code> so everybody can decrypt the files with no additional setup steps.</p>
+<div class="note "><em><p><strong>Pro tip</strong>: If you are using a shared cloud drive like Nextcloud, OwnCloud or AWS S3, you can share the vault password files with your team and have them automatically synced into some directory on everyones computer, like <code>~/work/ansible-password/</code> so everybody can decrypt the files with no additional setup steps.</p>
 <p>Alternatively you can share the password with a traditional password manager but then everybody needs to setup the files first!</p>
-</div>
+</em></div>
 <h2>Ansible can run commands against localhost</h2>
 <p>Ansible by default connects via SSH to a remote server and then runs commands through Python, but sometimes we do not need this. If we talk to a API (see below), we may not want to run the code on a server and instead just want to execute code through Ansible. For this the special <code>localhost</code> host keyword exists!</p>
 <p>Take the following playbook</p>
@@ -152,7 +152,7 @@
   <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
-        <a href="/photography" title="View some of my photography">photography</a> &bullet;
+        
         <a href="/art" title="View some of my art">art</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;

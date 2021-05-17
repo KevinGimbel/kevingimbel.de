@@ -77,14 +77,21 @@ module.exports = function (eleventyConfig) {
 
   // photography content
   eleventyConfig.addCollection("photography", function (collectionApi) {
-    return collectionApi.getAll().filter(function (item) {
-      return item.data.page.inputPath.substr(2, 16) == 'src/_photography' && item.data.draft != true;
-    }).sort((a, b) => a.date - b.date);
+    return []
+    // return collectionApi.getAll().filter(function (item) {
+    //   return item.data.page.inputPath.substr(2, 16) == 'src/_photography' && item.data.draft != true;
+    // }).sort((a, b) => a.date - b.date);
   });
 
   eleventyConfig.addCollection("projects", function (collectionApi) {
     return collectionApi.getAll().filter(function (item) {
       return item.data.page.inputPath.substr(2, 12) == 'src/_project' && item.data.draft != true;
+    }).sort((a, b) => a.date - b.date);
+  });
+
+  eleventyConfig.addCollection("wishlists", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.page.inputPath.substr(2, 14) == 'src/_wishlists' && item.data.draft != true;
     }).sort((a, b) => a.date - b.date);
   });
   // moved to journal.kevingimbel.de
@@ -149,9 +156,8 @@ module.exports = function (eleventyConfig) {
 
   // figure, this is used _a lot_
   eleventyConfig.addShortcode("figure", function (src, caption, alt) {
-    // @TODO: find way to retrieve image width and height here
     let figcaption_html = (caption != "") ? `<figcaption>${markdown.renderInline(caption)}</figcaption>` : '';
-    return `<figure><img src="${src}" alt="${alt ? alt : (caption ? caption : '')}" />${figcaption_html}</figure>`;
+    return `<figure><img lazy="true" src="${src}" alt="${alt ? alt : (caption ? caption : '')}" />${figcaption_html}</figure>`;
   });
 
   // beautiful quotes, used for "this week on the internetz" -> https://kevingimbel.de/tags/this-week-on-the-internetz/
@@ -168,7 +174,7 @@ module.exports = function (eleventyConfig) {
 
   // TODO(kevingimbel): Refactor 
   eleventyConfig.addPairedShortcode("note", function (content, css_class = '') {
-    return `<div class="note ${css_class}">${markdown.render(content)}</div>`;
+    return `<div class="note ${css_class}"><em>${markdown.render(content)}</em></div>`;
   });
 
   // allow content to "break-out" to the right and left from the page grid
@@ -227,19 +233,19 @@ module.exports = function (eleventyConfig) {
     return slugify(str);
   });
 
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
+  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+  //   // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+  //   if (outputPath.endsWith(".html")) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true
+  //     });
+  //     return minified;
+  //   }
 
-    return content;
-  });
+  //   return content;
+  // });
 
 
 

@@ -82,8 +82,8 @@ http_status{job=&quot;customer-prd&quot;,instance=&quot;https://some-api.link/se
 </code></pre>
 <h2>Wildcards in queries</h2>
 <p>Coming from MySQL you may think a wildcard could look like <code>http_status{job=&quot;customer-*&quot;}</code>, but that's not the case with Prometheus. Prometheus uses a Regex-like pattern and the wildcard character is <code>.+</code> (read: dot plus) combined with tilde character (<code>~</code>) instead of just the equal sign (<code>=</code>). So the query becomes  <code>http_status{job~=&quot;customer-.+&quot;}</code>. In the example below using the <code>.+</code> wildcard character we search for metrics where the <code>instance</code> label <em>ends with service-c</em>.</p>
-<div class="note info"><p>Prometheus uses the tilde character <code>~</code> to indicate a query contains a wildcard. Inside the label-query the &quot;dot plus&quot; (<code>.+</code>) character combination is used where all characters are accepted.</p>
-</div>
+<div class="note info"><em><p>Prometheus uses the tilde character <code>~</code> to indicate a query contains a wildcard. Inside the label-query the &quot;dot plus&quot; (<code>.+</code>) character combination is used where all characters are accepted.</p>
+</em></div>
 <p>Prometheus Query</p>
 <pre><code>http_status{instance=~&quot;.+service-c&quot;}
 </code></pre>
@@ -118,7 +118,7 @@ http_status{job=&quot;customer-prd&quot;,instance=&quot;https://some-api.link/se
     </p>
     <div class="flex [ post__prev-next ]" style="--padding: 1rem 0;">
     <div class="flex__boxed"><b>Previous post</b><br><a class="h5" href="/blog/2021/01/this-week-on-the-internetz/">This week on the internetz</a></div>
-    <div class="flex__boxed"></div>
+    <div class="flex__boxed"><b>Next post</b><br><a class="h5" href="/blog/2021/05/gotcha-dots-in-etc-sudoers-d-filenames/">Gotcha: Dots in /etc/sudoers.d filenames</a></div>
     </div>
   </footer>
 
@@ -147,7 +147,7 @@ http_status{job=&quot;customer-prd&quot;,instance=&quot;https://some-api.link/se
   <footer class="site-footer  [ small-flex__column ]">
   <div class="footer-block">
       <nav class="footer-nav" aria-label="Footer">
-        <a href="/photography" title="View some of my photography">photography</a> &bullet;
+        
         <a href="/art" title="View some of my art">art</a> &bullet;
         <a href="/about" title="Learn more about me">about</a> &bullet;
         <a href="/legal" title="Impressum, Imprint, Legal info">impressum</a> &bullet;
