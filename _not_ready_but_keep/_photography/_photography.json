@@ -1,0 +1,4 @@
+{
+  "layout": "photo",
+  "permalink": "/photography/{{ page.date | date: '%Y/%m' }}/{{ title | slug }}/"
+}

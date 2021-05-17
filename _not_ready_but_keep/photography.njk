@@ -1,0 +1,34 @@
+---
+layout: base
+title: "Photography"
+head: |
+  <style>
+    figcaption::before {
+      content: "";
+    }
+  </style>
+---
+
+<h2>Photography posts are not available at the moment.</h2>
+
+{# 
+<article class="post">
+  <header class="post-header">
+    <h1>{{ title }}</h1>
+  </header>
+  <div class="post-body">
+    <p>Listing all {{ collections.photography | length }} photography posts</p>
+    {% set postslist = collections.photography %}
+    {%- for post in postslist | reverse -%}
+    <hr>
+    <article class="mb2 mt2">
+    {% set src = post.template.parsed.dir + '/' + post.data.resources[0].src %}
+    <a href="{{ post.url }}" class="mt0 mb0 db">{% image src, post.data.resources[0].name, post.url %}</a>
+    <header class="post-listing__header">
+      <span class="post__date">{{ post.date | toFormattedDate }}</span>{% if post.data.source %} | <span>External link</span>{% endif %}{% if post.data.language == "de" %} | <b>German</b> {% endif %}
+      | {% for tag in post.data.tags %}<a href="/tags/{{ tag }}">#{{ tag }}</a> {% endfor -%}
+    </header>
+    </article>
+  {%- endfor -%}
+  </div>
+</article> #}

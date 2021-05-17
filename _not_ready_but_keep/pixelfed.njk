@@ -1,0 +1,15 @@
+{% if pixelfed.images %}
+
+<hr>
+<section class="break-full-width pl2">
+<h3>Latest images from Pixelfed</h3>
+<p>Follow me at <a href="https://pixelfed.social/kevingimbel">@kevingimbel@pixelfed.social</a><br><small>Scroll right for more images 👉</small></p>
+  <div class="pixelfed flex" style="overflow: auto;">
+    {% for img in pixelfed.images %}
+    <div class="img-boxed">
+      <a href="{{ img.href }}"><img src="/assets/img/pixelfed/{{ img.src.jpeg[0].filename }}" width="{{ img.src.jpeg[0].width }}" height="{{ img.src.jpeg[0].height }}" alt="Image from pixelfed.social, no alt text available"/></a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
