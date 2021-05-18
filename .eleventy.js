@@ -233,21 +233,23 @@ module.exports = function (eleventyConfig) {
     return slugify(str);
   });
 
-  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-  //   // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-  //   if (outputPath.endsWith(".html")) {
-  //     let minified = htmlmin.minify(content, {
-  //       useShortDoctype: true,
-  //       removeComments: true,
-  //       collapseWhitespace: true
-  //     });
-  //     return minified;
-  //   }
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+    if( outputPath && outputPath.endsWith(".html") ) {
+      try {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        });
+        return minified;
+      } catch (err) {
+        console.log("Error with file", outputPath);
+      }
+    }
 
-  //   return content;
-  // });
-
-
+    return content;
+  });
 
   return {
     dir: {
