@@ -10,7 +10,7 @@ This page lists tools, apps, services, hardware, and other stuff I use in no par
 - [Visual Studio Code](https://code.visualstudio.com/) is my go-to editor for all development (Rust, web dev, bash scripting, Terraform, Ansible, ...)
 - [IBM Plex Mono](https://www.ibm.com/plex/) is my monospace font in Visual Studio Code
 - [iTerm 2](https://iterm2.com/) is my terminal
-- [zsh](https://www.zsh.org/) is my shell
+- [fish](https://fishshell.com/) is my shell
 
 ## Browser
 
