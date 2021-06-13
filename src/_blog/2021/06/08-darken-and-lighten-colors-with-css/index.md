@@ -13,8 +13,6 @@ lastmod: "2021-06-08"
 head: null
 foot: null
 svg_title: null
-
-draft: true
 ---
 
 The technique shown in this post uses the `hsl` color format in combination with the `calc` CSS function to calculate darker or lighter shades of a base color.
