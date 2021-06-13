@@ -204,8 +204,12 @@ p, .p, li {
 
 /* ******************************* NOTE COMPONENT */
 .note {
-  padding: 1em;
-  /* margin: 1rem 0; */
+  padding: 1.25em;
+  margin: 1.5em 0;
+}
+
+.note a {
+  color: var(--color-contrast-fg);
 }
 
 .note.warn {    
@@ -450,7 +454,6 @@ blockquote::after {
 
 pre {
   overflow: auto;
-  padding: 1.5em;
   border-radius: .6em;
   background: var(--color-dark-bg);
   color: var(--color-dark-fg);
@@ -466,7 +469,11 @@ pre::after {
   border-bottom-left-radius: .6em;
   letter-spacing: .1em;
   font-family: monospace;
-  font-size: 1.1rem;
+  font-size: .95rem;
+}
+
+pre:hover::after {
+  display: none;
 }
 
 pre.language-svg::after {
@@ -489,9 +496,21 @@ pre.language-css::after {
   content: "CSS";
 }
 
+pre.language-hcl::after {
+  content: "HCL";
+}
+
 pre.language-javascript::after,
 pre.language-js::after {
   content: "JS";
+}
+
+code[class*="language-"],
+pre > code {
+  width: 100%;
+  display: block;
+  overflow: auto;
+  padding: 1em;
 }
 
 p > code {
@@ -852,7 +871,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 1em;
   margin: .5em 0;
   overflow: auto;
 }
