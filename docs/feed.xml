@@ -4,12 +4,36 @@
   <subtitle>Web Development, DevOps, Baking, and everything else.</subtitle>
   <link href="https://kevingimbel.de/feed.xml" rel="self"/>
   <link href="https://kevingimbel.de/"/>
-  <updated>2021-06-11T00:00:00Z</updated>
+  <updated>2021-06-24T00:00:00Z</updated>
   <id>https://kevingimbel.de/</id>
   <author>
     <name>Kevin Gimbel</name>
     <email>blog@kevingimbel.de</email>
   </author>
+  
+  <entry>
+    <title>Proxy websocket connections with Apache2</title>
+    <link href="https://kevingimbel.de/blog/2021/06/proxy-websocket-connections-with-apache2/"/>
+    <updated>2021-06-24T00:00:00Z</updated>
+    <id>https://kevingimbel.de/blog/2021/06/proxy-websocket-connections-with-apache2/</id>
+    <content type="html">&lt;p&gt;Recently I had to adjust an Apache Virtual Host to allow proxying of Web Socket requests to a service running on localhost which would also accept HTTP requests on the same port.&lt;/p&gt;
+&lt;h2&gt;The problem&lt;/h2&gt;
+&lt;p&gt;The service in question was &lt;a href=&quot;https://grafana.com/oss/loki/&quot;&gt;Loki&lt;/a&gt;, the &lt;em&gt;&amp;quot;Prometheus, but for logs&amp;quot;&lt;/em&gt; from Grafana. At &lt;a href=&quot;https://synoa.de/&quot;&gt;Synoa&lt;/a&gt; we&#39;ve grown to love Prometheus and Grafana, so the choice to do our centralized log management with Loki came naturally; Especially since Loki is a lot simpler in its architecture and easier to operate with a small ops team; But that&#39;s stuff for another blog post. :)&lt;/p&gt;
+&lt;p&gt;Without the Socket proxy the &amp;quot;Live View&amp;quot; on incoming logs and the &amp;quot;Show Context&amp;quot; button which shows surrounding lines of a log in Grafana didn&#39;t work; Since I&#39;ve had no experience with Web Sockets it took some time to figure out  that the problem was the sockets didn&#39;t reach the backend service running on &lt;code&gt;127.0.0.1:3000&lt;/code&gt; behind Apache2.&lt;/p&gt;
+&lt;h2&gt;The solution&lt;/h2&gt;
+&lt;p&gt;The solution was to configure Apache so it would proxy the web socket request to the websocket service (&lt;code&gt;ws://127.0.0.1:3000/&lt;/code&gt;) explicitly if the request is marked as such with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade&quot;&gt;&lt;code&gt;Upgrade&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection&quot;&gt;&lt;code&gt;Connection&lt;/code&gt;&lt;/a&gt; headers.&lt;/p&gt;
+&lt;p&gt;For this to work, we first need the &lt;code&gt;proxy_wstunnel&lt;/code&gt; module.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Enable module on Ubuntu&lt;/span&gt;&lt;br /&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; a2enmod proxy_wstunnel&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, we can adjust the vhost configuration file to include a rewrite rule (lines 4 to 7):&lt;/p&gt;
+&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;VirtualHost&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;*:&lt;/span&gt;443&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;  ServerName my.server.tld&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;  SSLEngine On&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;mark class=&quot;highlight-line highlight-line-active&quot;&gt;  RewriteEngine On&lt;/mark&gt;&lt;br /&gt;&lt;mark class=&quot;highlight-line highlight-line-active&quot;&gt;  RewriteCond %{HTTP:Upgrade} websocket [NC]&lt;/mark&gt;&lt;br /&gt;&lt;mark class=&quot;highlight-line highlight-line-active&quot;&gt;  RewriteCond %{HTTP:Connection} upgrade [NC]&lt;/mark&gt;&lt;br /&gt;&lt;mark class=&quot;highlight-line highlight-line-active&quot;&gt;  RewriteRule ^/?(.*) &quot;ws://127.0.0.1:3000/$1&quot; [P,L]&lt;/mark&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;  ProxyPreserveHost On&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;  ProxyPass / http://127.0.0.1:3000/&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;  ProxyPassReverse / http://127.0.0.1:3000/&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;  ProxyRequests off&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;VirtualHost&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After making these changes and reloading Apache2, the Grafana Live Log view and Loki &amp;quot;Show Context&amp;quot; function was working again.&lt;/p&gt;
+&lt;h2&gt;Further reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;&lt;a href=&quot;https://noqqe.de/blog/2018/04/21/apache2-websockets/&quot;&gt;Apache2 Websockets&lt;/a&gt;&amp;quot; on noqqe.de (in German)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://httpd.apache.org/docs/2.4/mod/mod_proxy_wstunnel.html&quot;&gt;mod_proxy_wstunnel module documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Validating variables in terraform</title>
