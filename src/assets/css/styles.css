@@ -1121,3 +1121,24 @@ mark.highlight-line-active {
     width: calc(100vw - .15rem);
   }
 }
+
+.go-vote {
+  background: #145F32;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.go-vote a {
+  color: #FFE100;
+}
+
+.go-vote-action {
+  background: #FFE100;
+  color: #145F32;
+  padding: .1em .25em;
+  font-weight: bold;
+}
+
+.go-vote--header {
+  padding: .75rem 1.5rem;
+}

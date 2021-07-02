@@ -22,10 +22,34 @@ head: |
       --padding: 1em 0 !important;
     }
   }
+
+  .go-vote--home {
+    box-shadow: 3em 3em 0 #FFE100, -3rem -3rem 0 #46962b;
+    padding: 2rem;
+  }
+  
+  .go-vote h1 {
+    font-variant: small-caps;
+    background: #145F32;
+    color: #FFE100;
+  }
+  .go-vote h1 span {
+    font-variant: none;
+    font-style: none;
+  }
   </style>
 
 hide_page_title: "true"
 ---
+
+<header class="go-vote go-vote--home">
+  <h1>Zeit, was zu ändern.<span>🌻</span></h1>
+  <p>Am 26. September 2021 ist Bundestagswahl in Deutschland, wählt <a href="https://www.gruene.de/leute/annalena-baerbock" title="Mehr infos über Annalena Baerbock auf gruene.de">Annalena Baerbock</a> für zukunftssichere Klima-, Digital- und Sozialpolitik.</p>
+  <p>Mehr zum <a href="https://www.gruene.de/artikel/wahlprogramm-zur-bundestagswahl-2021" title="Gute Übersicht zum Wahlprogramm mit Stichpunkten zu verschiedenen Themen">Wahlprogramm</a> und generell zur Informationen zum <a href="https://www.gruene.de/bundestagswahl2021" title="Kampagnen Startseite mit Links und Infos">Bundestagswahl 2021</a> auf www.gruene.de</p>
+  <p><span class="go-vote-action">Geht wählen!</span></p>
+</header>
+
+<hr style="margin-top: 6rem;">
 
 <section class="pop-box">
 <div class="[ flex flex--space-around flex--centered ]  [ small-flex__column ]">
@@ -35,7 +59,7 @@ hide_page_title: "true"
     </div>
   </div>
   <div class="flex__boxed" style="--padding: 2rem 0 2rem 2rem">
-    <h1 class="mb0 mt0">Hi, I'm <a href="/about/">Kevin</a>.</h1>
+    <h2 class="mb0 mt0">Hi, I'm <a href="/about/">Kevin</a>.</h2>
     <p>I'm a <b><i class="t-accent">DevOps Engineer</i></b> with a focus on automation and security.</p>
   </div>
 </div>
