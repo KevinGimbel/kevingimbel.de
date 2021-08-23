@@ -2,20 +2,19 @@
   --content-width: 50rem;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     --color-accent: #24d;
     --color-accent-fg: #fff;
-    /* --color-secondary: #ebc9eb; */
+
     --color-secondary: #f1cce1;
-    --color-secondary-fg: #222;
+    --color-secondary-fg: #111;
     
     --color-contrast: #221853;
     --color-contrast-fg: #d6e6ff;
 
-    --color-page-bg: #d6e6ff;
-    --color-page-fg: #222;
+    --color-page-bg: #fae2fa;
+    --color-page-fg: #111;
 
     --color-dark-bg: #111;
     --color-dark-fg: #ccc;
@@ -24,8 +23,43 @@
     --color-footer-wave: #111;
 
     --logo-dice-fill-color: var(--color-accent);
+
+    /* Colors for pop-box component */
+    --color-left: var(--color-accent);
+    --color-right: var(--color-secondary);
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --color-accent: hotpink;
+  --color-accent-fg: #111;
+  
+  --color-secondary: #7fa4e4;
+  --color-secondary-fg: #111;
+  
+  --color-contrast: #e4e474;
+  --color-contrast-fg: #111;
+
+  --color-page-bg: #111;
+  --color-page-fg: rgb(211, 221, 248);
+  
+  --color-dark-bg: #111;;
+  --color-dark-fg: rgb(211, 221, 248);
+  
+  --color-header-wave: #51478b;
+  --color-footer-wave: #111;
+
+  /* SVG logo colors */
+  --logo-dice-fill-color: var(--color-accent);
+  --logo-writing-fill-color: rgb(229, 235, 251);
+  
+  /* Colors for pop-box component */
+  --color-left: var(--color-accent);
+  --color-right: var(--color-secondary);
+  }
+} 
+
 @font-face {
   font-family: "IBM Plex Mono";
   src: url("/assets/font/plex/IBMPlexMono-Regular.ttf") format("ttf");
@@ -67,36 +101,6 @@ body {
   background: var(--color-page-bg, #ebc9eb);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  --color-accent: hotpink;
-  --color-accent-fg: #222;
-  
-  --color-secondary: #7fa4e4;
-  --color-secondary-fg: #222;
-  
-  --color-contrast: #e4e474;
-  --color-contrast-fg: #222;
-
-  --color-page-bg: #222;
-  --color-page-fg: rgb(211, 221, 248);
-  
-  --color-dark-bg: #222;;
-  --color-dark-fg: rgb(211, 221, 248);
-  
-  --color-header-wave: #211177;
-  --color-footer-wave: #111;
-
-  /* SVG logo colors */
-  --logo-dice-fill-color: var(--color-accent);
-  --logo-writing-fill-color: rgb(211, 221, 248);
-  
-  /* Colors for pop-box component */
-  --color-left: var(--color-accent);
-  --color-right: var(--color-secondary);
-  }
-} 
-
 a, a:visited {
   color: var(--color-accent, #24d);
 }
@@ -131,15 +135,30 @@ h2, .h2 {
   font-size: 2.75rem;
   font-size: clamp(2rem, 2vw, 2.75rem);
 }
+
 h3, .h3 {
   font-size: 2.5rem;
 }
+
 h4, .h4 {
   font-size: 2rem;
 }
 
 h5, .h5 {
   font-size: 1.5rem;
+}
+
+h1, h2,
+.h1, .h2,
+h3 a {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(-70deg,var(--color-accent), var(--color-contrast));
+  background: -webkit-linear-gradient(-70deg,var(--color-accent), var(--color-contrast));
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 p, .p, li {
@@ -171,7 +190,7 @@ p, .p, li {
   padding: 2rem;
   flex-direction: column;
   background: var(--color-header-wave);
-  min-height: 10vh;
+  min-height: 15vh;
 }
 
 .site-header svg {
@@ -193,6 +212,7 @@ p, .p, li {
 
 .site-nav a:hover {
   outline: .1em dashed var(--color-accent);
+  cursor: pointer;
 }
 
 .site-nav a.active {
@@ -337,6 +357,7 @@ blockquote::after {
 
 .content {
   min-height: 50vh;
+  padding-top: 4rem;
 }
 
 .site-footer {
@@ -390,11 +411,12 @@ blockquote::after {
   grid-template-columns: 1fr var(--content-width) 1fr;
   grid-gap: 0;
   word-break: break-word; 
+  padding: 0 2rem;
 }
 
 .post-header {
   padding: 0 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .post-body *,
@@ -427,7 +449,7 @@ blockquote::after {
 
 .post h1 {
   font-size: clamp(2.5rem, 4vw, 5rem);
-  line-height: 1;
+  line-height: 1.5;
   font-style: italic;
 }
 
@@ -440,17 +462,6 @@ blockquote::after {
 .post img {
   max-width: 100%;
 }
-/* @TODO: needs rework
-.post-body h2,
-.post-body h3,
-.post-body h4 {
-  position: sticky;
-  top: 0;
-  background: var(--color-page-bg);
-  padding: .25em;
-  width: 100vw;
-  overflow: hidden;
-} */
 
 pre {
   overflow: auto;
@@ -646,8 +657,6 @@ picture img {
 }
 
 /* ******************************* SMALL SCREENS */
-
-
 @media all and (max-width: 900px) {
 
   .site-nav {
@@ -782,9 +791,10 @@ code, pre {
 }
 
 .side-by-side .bg {
-  background: var(--color-accent, #000);
+  background: linear-gradient(-70deg,var(--color-accent), var(--color-contrast));
   color: var(--color-accent-fg, #f1f1f1);
 }
+
 .side-by-side .bg a {
   color: var(--color-accent-fg, #f1f1f1);
   font-weight: bold;
@@ -1053,7 +1063,7 @@ mark.highlight-line-active {
 }
 .post-teaser.post-teaser-0 {
   grid-column: 1 / span 3;
-  background: var(--color-accent);
+  background: linear-gradient(45deg, var(--color-accent), var(--color-contrast));
   color: var(--color-accent-fg);
 }
 
@@ -1064,7 +1074,7 @@ mark.highlight-line-active {
 .post-teaser.post-teaser-1 {
   grid-column: 3;
   grid-row: 2 / span 2;
-  background: var(--color-secondary);
+  background: linear-gradient(to bottom, var(--color-secondary), var(--color-contrast));
   color: var(--color-secondary-fg);
 }
 
@@ -1076,6 +1086,7 @@ mark.highlight-line-active {
   grid-row: 2;
   grid-column: 1 / span 2;
   background: var(--color-contrast);
+  background: linear-gradient(45deg, var(--color-contrast), var(--color-accent));
   color: var(--color-contrast-fg);
 }
 

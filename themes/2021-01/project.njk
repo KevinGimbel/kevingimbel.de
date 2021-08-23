@@ -1,0 +1,19 @@
+{% extends "base.njk" %}
+
+{% block head %}
+  {{ page.data.head | safe }}
+{% endblock %}
+
+{% block content %}
+<article class="post stack" itemscope itemtype="https://schema.org/Article" {% if language%}lang="{{ language }}"{% endif %}>
+  {% set exclude_author_info = true %}
+  {% include "single-header.njk" %}
+
+  <div itemtype="articleBody" class="post-body stack">
+    <header class="article-header">
+      {% if repo_url %}<a href="{{ repo_url }}">View on GitHub</a>{% if npm_url%} | {% endif %}{% endif %} {% if npm_url %}<a href="{{ npm_url }}">View on NPM</a>{% endif %}
+    </header>
+    {{ content | safe }}
+  </div>
+</article>
+{% endblock %} 

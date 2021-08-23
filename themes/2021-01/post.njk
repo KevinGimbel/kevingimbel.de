@@ -1,0 +1,37 @@
+{% extends "base.njk" %}
+
+{% block head %}
+  {{ page.data.head | safe }}
+{% endblock %}
+
+{% block content %}
+<article class="post" itemscope itemtype="https://schema.org/Article" {% if language%}lang="{{ language }}"{% endif %}>
+  
+  {% include "./single-header.njk" %}
+
+  <div itemtype="articleBody" class="post-body stack">
+    {{ content | safe }}
+  </div>
+
+  <footer class="post-footer stack">
+    <hr>
+    {% if tags %}
+    <p>Find similar content under:
+      {% for tag in tags %}
+        <a href="/tags/{{ tag }}">#{{ tag }}</a> {% if not loop.last %} &bull; {% endif %}
+      {% endfor %}
+    </p>
+    {% endif %}
+
+    {%- set previousPost = collections.blog | getPreviousCollectionItem(page) -%}
+    {%- set nextPost = collections.blog | getNextCollectionItem(page) -%}
+
+    <div class="flex [ post__prev-next ]" style="--padding: 1rem 0;">
+    <div class="flex__boxed">{% if previousPost %}<b>Previous post</b><br><a class="h5" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}</div>
+    <div class="flex__boxed">{% if nextPost %}<b>Next post</b><br><a class="h5" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}</div>
+    </div>
+  </footer>
+
+{% include "author.njk" %}
+</article>
+{% endblock %} 

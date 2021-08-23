@@ -7,7 +7,7 @@ title: "About"
 
 {% sidebyside %}
 {% side "left" "wide" %}
-<img src="/assets/img/kevin-avatar.jpg" title="Image of Kevin Gimbel" class="img--fancy-border">
+<img src="/assets/img/kevin-in-a-mirror.jpg" title="Image of Kevin Gimbel" class="img--fancy-border">
 {% endside %}
 
 {% side "right" "small bg h4" %}

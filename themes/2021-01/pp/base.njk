@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#ebc9eb">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title if title else 'No title (:' }} | kevingimbel.de &mdash; {{ pkg.description }}</title>
+  <link rel="icon" href="/assets/img/kevin-avatar.jpg">
+  <link rel="stylesheet" href="/assets/css/pnp/styles.css">
+
+  {{ head | safe }}
+  {% block head %}{% endblock %}
+</head>
+<body>
+<header class="pre-header">
+  <nav>
+    <a href="/pen-paper/">Startseite</a> | <a href="/">Zurück zu kevingimbel.de</a>
+  </nav>
+</header>
+  <header class="site-header">
+    <h1 class="mt0">{{ title }}</h1>
+    {% if subtitle -%}
+    <p>{{ subtitle }}</p>
+    {%- endif %}
+    <hr>
+  </header>
+
+  <main class="main content">
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </main>
+
+  <footer class="site-footer  [ small-flex__column ]">
+    <div class="footer-block">
+      <p>&copy; 2009 - 2021 Kevin Gimbel</p>
+    </div>
+  </footer>
+  {{ foot | safe }}
+  {% block foot %}{% endblock %}
+</body>
+</html>

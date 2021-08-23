@@ -1,0 +1,42 @@
+{% extends "base.njk" %}
+
+{% block head %}
+  {{ page.data.head | safe }}
+  <style>
+    .post-header {
+      text-align: center;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<article class="post stack" itemscope itemtype="https://schema.org/Article" {% if language%}lang="{{ language }}"{% endif %}>
+  {% set exclude_author_info = true %}
+  {% include "single-header.njk" %}
+
+  <div itemtype="articleBody" class="post-body stack">
+    {{ content | safe }}
+  
+    <div class="break-full-width">
+    {% set page_url = page.url %}
+    {% for resource in resources %}
+      {% set src = 'src' + page.filePathStem.replace('index', '') + resource.src %}
+      {% image src, resource.name, page_url %}
+    {% endfor %} 
+  </div>
+  </div>
+
+
+  <footer class="post-footer">
+    {% if tags %}
+    <hr>
+    <span>Find similar content under:</span>
+      {% for tag in tags %}
+        #<a href="/tags/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+    {% endif %}
+  </footer>
+
+{% include "author.njk" %}
+</article>
+{% endblock %} 

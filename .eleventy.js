@@ -94,6 +94,14 @@ module.exports = function (eleventyConfig) {
       return item.data.page.inputPath.substr(2, 14) == 'src/_wishlists' && item.data.draft != true;
     }).sort((a, b) => a.date - b.date);
   });
+
+
+  eleventyConfig.addCollection("penpaper", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.page.inputPath.substr(2, 14) == 'src/_pen-paper' && item.data.draft != true;
+    }).sort((a, b) => a.date - b.date);
+  });
+
   // moved to journal.kevingimbel.de
   // // books content
   // eleventyConfig.addCollection("books", function (collectionApi) {
@@ -233,9 +241,9 @@ module.exports = function (eleventyConfig) {
     return slugify(str);
   });
 
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if( outputPath && outputPath.endsWith(".html") ) {
+    if (outputPath && outputPath.endsWith(".html")) {
       try {
         let minified = htmlmin.minify(content, {
           useShortDoctype: true,

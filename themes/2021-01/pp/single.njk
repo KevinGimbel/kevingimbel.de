@@ -1,0 +1,10 @@
+pp/single
+{% extends "pp/base.njk" %}
+
+{% block content %}
+<article class="post">
+  <section class="post-body stack">
+    {{ content | safe }}
+  </section>
+</article>
+{% endblock %}
