@@ -27,6 +27,29 @@ It's build on Chromium and offers Brave Rewards, which is a way to earn the BAT 
 
 * [KeePassXC](https://keepassxc.org) is my password manager on macOS
 * [Keepass2Android](https://github.com/PhilippC/keepass2android) is my password manager on Android
-* [andOTP](https://github.com/andOTP/andOTP) is my Two-Factor Auth token generator 
+* [andOTP](https://github.com/andOTP/andOTP) is my Two-Factor Auth token generator
 
 I wrote about my [2FA and Password Manager setup](/blog/2020/01/two-factor-auth-password-managers-and-cloud-sync/) in the past.
+
+## Computer equipment
+
+* [Keychron K2 Mechanical Keyboard](https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard)
+* [Anker Wireless Vertical Ergonomic Optical Mouse](https://us.anker.com/collections/wireless-equipment/products/a7852)
+
+## Sport
+
+* [DownDog Yoga App](https://www.downdogapp.com/)
+* [DownDog Meditation App](https://www.downdogapp.com/)
+
+## Music
+
+* [Spotify](https://spotify.com) for regular music
+* [PocketCast](https://www.pocketcasts.com/) for podcasts on Android and Web
+* [brain.fm](https://brain.fm) for focusing on work and chores such as housework
+
+## Photography
+
+Editing
+
+- [VSCO](https://vsco.co)
+- Snapseed ([Play Store](https://play.google.com/store/apps/details?id=com.niksoftware.snapseed&hl=de&gl=US) | [Apple Store](https://apps.apple.com/de/app/snapseed/id439438619))

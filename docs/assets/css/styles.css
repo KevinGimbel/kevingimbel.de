@@ -1,26 +1,28 @@
 :root {
   --content-width: 50rem;
 }
-
+/*
+  The colors are based on the bi and non-binary flags.
+ */
 @media (prefers-color-scheme: light) {
   :root {
-    --color-accent: #24d;
-    --color-accent-fg: #fff;
+    --color-accent: #d60270;
+    --color-accent-fg: #FCFCFC;
 
-    --color-secondary: #f1cce1;
-    --color-secondary-fg: #111;
+    --color-secondary:#0038a8;
+    --color-secondary-fg: #FCFCFC;
     
-    --color-contrast: #221853;
-    --color-contrast-fg: #d6e6ff;
+    --color-contrast: #734F96;
+    --color-contrast-fg: #FCFCFC;
 
-    --color-page-bg: #fae2fa;
-    --color-page-fg: #111;
+    --color-page-bg: #FCFCFC;
+    --color-page-fg: #2C2C2C;
 
-    --color-dark-bg: #111;
-    --color-dark-fg: #ccc;
+    --color-dark-bg: #2C2C2C;
+    --color-dark-fg: #FCF434;
 
-    --color-header-wave: #f1f5f7;
-    --color-footer-wave: #111;
+    --color-header-wave:#FCF434;
+    --color-footer-wave: #9C59D1;
 
     --logo-dice-fill-color: var(--color-accent);
 
@@ -32,31 +34,29 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --color-accent: hotpink;
-  --color-accent-fg: #111;
-  
-  --color-secondary: #7fa4e4;
-  --color-secondary-fg: #111;
-  
-  --color-contrast: #e4e474;
-  --color-contrast-fg: #111;
+    --color-accent: #d60270;
+    --color-accent-fg: #FCFCFC;
 
-  --color-page-bg: #111;
-  --color-page-fg: rgb(211, 221, 248);
-  
-  --color-dark-bg: #111;;
-  --color-dark-fg: rgb(211, 221, 248);
-  
-  --color-header-wave: #51478b;
-  --color-footer-wave: #111;
+    --color-secondary:#0038a8;
+    --color-secondary-fg: #FCFCFC;
+    
+    --color-contrast-bg: #734F96;
+    --color-contrast: #FCFCFC;
 
-  /* SVG logo colors */
-  --logo-dice-fill-color: var(--color-accent);
-  --logo-writing-fill-color: rgb(229, 235, 251);
-  
-  /* Colors for pop-box component */
-  --color-left: var(--color-accent);
-  --color-right: var(--color-secondary);
+    --color-page-fg: #FCFCFC;
+    --color-page-bg: #2C2C2C;
+
+    --color-dark-fg: #2C2C2C;
+    --color-dark-bg: #FCF434;
+
+    --color-header-wave:#FCF434;
+    --color-footer-wave: #9C59D1;
+
+    --logo-dice-fill-color: var(--color-accent);
+    
+    /* Colors for pop-box component */
+    --color-left: var(--color-accent);
+    --color-right: var(--color-secondary);
   }
 } 
 
@@ -110,8 +110,8 @@ a, a:visited {
 }
 
 ::selection {
-  background-color: var(--color-contrast, #000);
-  color: var(--color-contrast-fg, #fff);
+  background-color: var(--color-accent, #000);
+  color: var(--color-accent-fg, #fff);
 }
 
 .stack > * + * {
@@ -187,7 +187,7 @@ p, .p, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   flex-direction: column;
   background: var(--color-header-wave);
   min-height: 15vh;
@@ -196,6 +196,12 @@ p, .p, li {
 .site-header svg {
   max-width: 230px;
   max-height: 100px;
+}
+
+@media all and (max-width: 900px) {
+  .site-header svg {
+    max-width: 130px;
+  }
 }
 
 /* ******************************* SITE NAVIGATION */
@@ -217,10 +223,19 @@ p, .p, li {
 
 .site-nav a.active {
   outline: .1em solid;
-  background: var(--color-page-fg);
-  color: var(--color-page-bg);
+  background: var(--color-contrast-fg);
+  color: var(--color-contrast);
   text-decoration: none;
 }
+
+
+@media all and (max-width: 900px) {
+  .site-nav {
+    font-size: 1.15rem;
+    text-align: center;
+  }
+}
+
 
 /* ******************************* NOTE COMPONENT */
 .note {
@@ -232,7 +247,7 @@ p, .p, li {
   color: var(--color-contrast-fg);
 }
 
-.note.warn {    
+.note.warn {
   background: var(--color-contrast, #fff);
   color: var(--color-contrast-fg, #000);
   border-radius: 6px;
@@ -800,14 +815,18 @@ code, pre {
   font-weight: bold;
 }
 
+.side-by-side .small,
+.side-by-side .wide {
+  padding: var(--stack-margin, 1rem);
+}
+
 @media all and (min-width: 640px) {
   .side-by-side {
     --stack-margin: 2rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      /* margin: 2rem 0; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .side-by-side.align-top {

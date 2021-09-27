@@ -6,14 +6,31 @@ head: |
   <style>
   :root {
     --color-header-wave: var(--color-page-pg);
+    --logo-writing-fill-color: var(--color-page-fg);
   }
   </style>
+foot: |
+  <script type="text/javascript">
+    let music =  document.querySelector("#listen");
+    let reading = document.querySelector("#reading");
+    fetch('http://localhost:8000').then(res => {
+      return res.json();
+    }).then(json => {
+      music.innerHTML = `I was just listening to "<i>${json.music.song}</i>" by ${json.music.artist}.`;
+      reading.innerHTML = `I'm reading <a href="${json.book.link}">"${json.book.title}"</a> at the moment.`;
+    }).catch(err => {
+      console.log(err);
+      music.textContent = "";
+      reading.textContent = "";
+    });
+  </script>
 ---
 <section class="break-full-width">
-  <section class="side-by-side">
+  <section class="side-by-side align-top">
     <div class="wide">
-      <h2>Hi, I'm Kevin &mdash; a DevOps Engineer with a passion for automation and monitoring</h2>
+      <h2>Hi, I'm Kevin &mdash; a DevOps Engineer with a passion for automation and monitoring.</h2>
       <p>I work at <a href="https://synoa.de/" rel="nofollow">Synoa GmbH</a> where I'm responsible for the systems that run our Product <a href="https://synoa.de/konekti/" title="Learn more about Konekti" rel="nofollow">Konekti</a> as well as the systems that build and test our code.</p>
+      <p><span id="listen">This gibberish will be replaced with what I currently listen to unless JavaScript is disabled.</span><br><span id="reading">And here it says what I'm reading at the moment.</span></p>
       <p>You can find out more <a href="/about">on the about page</a>.</p>
     </div>
     <div class="small">
