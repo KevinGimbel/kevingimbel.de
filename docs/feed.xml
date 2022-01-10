@@ -922,18 +922,6 @@ a few lines.
   </entry>
   
   <entry>
-    <title>Hallo, Welt!</title>
-    <link href="https://kevingimbel.de/blog/2020/05/hallo-welt/"/>
-    <updated>2020-05-20T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/05/hallo-welt/</id>
-    <content type="html">&lt;p&gt;Hallo!&lt;/p&gt;
-&lt;p&gt;Dieser Blog hat ab jetzt auch eine Deutsche ... Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter &lt;code&gt;/de/&lt;/code&gt; allen Deutschen &lt;s&gt;Content&lt;/s&gt; Inhalt.&lt;/p&gt;
-&lt;p&gt;Schauen wir mal wie&#39;s wird. 🤷‍♀️&lt;/p&gt;
-&lt;p&gt;Danke für eure Aufmerksamkeit!&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
     <title>Dan Dubuque Slide Guitarist</title>
     <link href="https://kevingimbel.de/blog/2020/05/dan-dubuque-slide-guitarist/"/>
     <updated>2020-05-20T00:00:00Z</updated>
@@ -946,6 +934,18 @@ a few lines.
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=2C-8W3oiPiA&quot;&gt;Dan Dubuque covering NIRVANA&#39;s &amp;quot;Heart Shaped Box&amp;quot; from IN UTERO&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I&#39;m really glad people share their music and covers on the web, please tell me all about your favorite cover artists so I can enjoy more covered music!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Hallo, Welt!</title>
+    <link href="https://kevingimbel.de/blog/2020/05/hallo-welt/"/>
+    <updated>2020-05-20T00:00:00Z</updated>
+    <id>https://kevingimbel.de/blog/2020/05/hallo-welt/</id>
+    <content type="html">&lt;p&gt;Hallo!&lt;/p&gt;
+&lt;p&gt;Dieser Blog hat ab jetzt auch eine Deutsche ... Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter &lt;code&gt;/de/&lt;/code&gt; allen Deutschen &lt;s&gt;Content&lt;/s&gt; Inhalt.&lt;/p&gt;
+&lt;p&gt;Schauen wir mal wie&#39;s wird. 🤷‍♀️&lt;/p&gt;
+&lt;p&gt;Danke für eure Aufmerksamkeit!&lt;/p&gt;
 </content>
   </entry>
   
