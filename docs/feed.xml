@@ -4,12 +4,44 @@
   <subtitle>Web Development, DevOps, Baking, and everything else.</subtitle>
   <link href="https://kevingimbel.de/feed.xml" rel="self"/>
   <link href="https://kevingimbel.de/"/>
-  <updated>2021-12-30T00:00:00Z</updated>
+  <updated>2022-01-11T00:00:00Z</updated>
   <id>https://kevingimbel.de/</id>
   <author>
     <name>Kevin Gimbel</name>
     <email>blog@kevingimbel.de</email>
   </author>
+  
+  <entry>
+    <title>How to extend and reuse configs in Gitlab CI</title>
+    <link href="https://kevingimbel.de/blog/2022/01/how-to-extend-and-reuse-configs-in-gitlab-ci/"/>
+    <updated>2022-01-11T00:00:00Z</updated>
+    <id>https://kevingimbel.de/blog/2022/01/how-to-extend-and-reuse-configs-in-gitlab-ci/</id>
+    <content type="html">&lt;p&gt;When I began using Gitlab CI the first thing I wanted to know was how to reuse configs. I know that we&#39;ll have changing requirements at work and that we&#39;ll have hundreds of repositories using basically-the-same configurations so I wanted to make sure we&#39;d have a central place to make changes to these.&lt;/p&gt;
+&lt;p&gt;I found two ways to archive reusable configurations which I&#39;ll explain below.&lt;/p&gt;
+&lt;h2&gt;Extends&lt;/h2&gt;
+&lt;p&gt;First of we have the &lt;code&gt;extends&lt;/code&gt; keyword. This makes a config section of the CI yaml reuse another section, as illustrated below.&lt;/p&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-base-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-other-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;base&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;block&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Gitlab combines this into the following YAML:&lt;/p&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-base-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-other-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;base&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;block&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So far so good! But there&#39;s one downside to &lt;code&gt;extends&lt;/code&gt;: If &lt;code&gt;my-other-block&lt;/code&gt; has its own script, it will overwrite the original script, as shown below.&lt;/p&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-base-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-other-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;base&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;block&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Bye&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Merged YAML:&lt;/p&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-base-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-other-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Bye&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;base&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;block&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that&#39;s not what we want, the &lt;code&gt;script&lt;/code&gt; field was overwritten! Good for us that Gitlab has a solution: &lt;code&gt;!reference[]&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;!reference&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;!reference[]&lt;/code&gt; is an extension to YAML Gitlab provides, it allows us to reference another block and key which will be - well - referenced!&lt;/p&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-base-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-other-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;base&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;block&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;!reference&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;base&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;block&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; script&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Bye&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And the merged YAML:&lt;/p&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-base-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;my-other-block&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; deploy&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; echo &quot;Bye&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Gitlab CI&lt;span class=&quot;token tag&quot;&gt;!&lt;/span&gt;&quot;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;base&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;block&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we have both script parts! I&#39;m exited to explore Gitlab further in the future, so far my experience with it has been a real pleasure. 🧡&lt;/p&gt;
+&lt;p&gt;Thanks for coming to my TED Talk!&lt;/p&gt;
+&lt;h2&gt;Further reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#reference-tags&quot;&gt;Official Gitlab Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.gitlab.com/ee/ci/yaml/&quot;&gt;Full .gitlab-ci YAML reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Replace git URLs in Gitlab CI</title>
@@ -922,6 +954,18 @@ a few lines.
   </entry>
   
   <entry>
+    <title>Hallo, Welt!</title>
+    <link href="https://kevingimbel.de/blog/2020/05/hallo-welt/"/>
+    <updated>2020-05-20T00:00:00Z</updated>
+    <id>https://kevingimbel.de/blog/2020/05/hallo-welt/</id>
+    <content type="html">&lt;p&gt;Hallo!&lt;/p&gt;
+&lt;p&gt;Dieser Blog hat ab jetzt auch eine Deutsche ... Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter &lt;code&gt;/de/&lt;/code&gt; allen Deutschen &lt;s&gt;Content&lt;/s&gt; Inhalt.&lt;/p&gt;
+&lt;p&gt;Schauen wir mal wie&#39;s wird. 🤷‍♀️&lt;/p&gt;
+&lt;p&gt;Danke für eure Aufmerksamkeit!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>Dan Dubuque Slide Guitarist</title>
     <link href="https://kevingimbel.de/blog/2020/05/dan-dubuque-slide-guitarist/"/>
     <updated>2020-05-20T00:00:00Z</updated>
@@ -934,18 +978,6 @@ a few lines.
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=2C-8W3oiPiA&quot;&gt;Dan Dubuque covering NIRVANA&#39;s &amp;quot;Heart Shaped Box&amp;quot; from IN UTERO&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I&#39;m really glad people share their music and covers on the web, please tell me all about your favorite cover artists so I can enjoy more covered music!&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>Hallo, Welt!</title>
-    <link href="https://kevingimbel.de/blog/2020/05/hallo-welt/"/>
-    <updated>2020-05-20T00:00:00Z</updated>
-    <id>https://kevingimbel.de/blog/2020/05/hallo-welt/</id>
-    <content type="html">&lt;p&gt;Hallo!&lt;/p&gt;
-&lt;p&gt;Dieser Blog hat ab jetzt auch eine Deutsche ... Seite(?). Auf jeden Fall dachte ich mir, es gibt durchaus auch das ein oder andere was ich vielleicht mal auf Deutsch bloggen möchte, gemischte Sprachen in einer großen Blog Liste finde ich aber nicht so super. Deswegen gibt es jetzt unter &lt;code&gt;/de/&lt;/code&gt; allen Deutschen &lt;s&gt;Content&lt;/s&gt; Inhalt.&lt;/p&gt;
-&lt;p&gt;Schauen wir mal wie&#39;s wird. 🤷‍♀️&lt;/p&gt;
-&lt;p&gt;Danke für eure Aufmerksamkeit!&lt;/p&gt;
 </content>
   </entry>
   
